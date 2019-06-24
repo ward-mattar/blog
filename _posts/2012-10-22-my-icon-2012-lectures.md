@@ -1,24 +1,21 @@
 ---
 id: 2214
-title: ההרצאות שלי בפסטיבל אייקון 2012
-date: 2012-10-22T20:02:21+00:00
-author: gadial
+title: "ההרצאות שלי בפסטיבל אייקון 2012"
+date: 2012-10-22 20:02:21
 layout: post
-guid: http://www.gadial.net/?p=2214
-permalink: /2012/10/22/my-icon-2012-lectures/
-categories:
+categories: 
   - ההיסטוריה של המתמטיקה
   - כללי
   - מתמטיקה בראי התקשורת
   - קריפטולוגיה
-tags:
+tags: 
   - אייקון
   - גאומטריה אוקלידית
   - גאומטריה לא אוקלידית
   - וידאו
   - קריפטוגרפיה
 ---
-בשעה טובה עלו לאינטרנט סרטוני וידאו של ההרצאות שלי בפסטיבל אייקון, ש[הזכרתי כאן](http://www.gadial.net/2012/08/25/math-takes-over-icon-2012/).
+בשעה טובה עלו לאינטרנט סרטוני וידאו של ההרצאות שלי בפסטיבל אייקון, ש<a href="http://www.gadial.net/2012/08/25/math-takes-over-icon-2012/">הזכרתי כאן</a>.
 
 שתי ההרצאות מיועדות לקהל הרחב, כלומר אינן מניחות שום ידע קודם במתמטיקה. אני מקווה שהן גם הצילחו לעמוד בייעוד הזה. מבין שתיהן, ההרצאה על הגיאומטריות הלא-אוקלידיות זכתה לתגובות טובות יותר.
 
@@ -26,8 +23,5 @@ tags:
 
 אני מצרף גם את המצגות שהשתמשתי בהן בהרצאות.
 
-** גיאומטריה לא אוקלידית: מלובצ'בסקי ועד קת'ולהו: **[מצגת](http://gadial.net/Presentations/NoneuclideanGeometry.pdf) ו[וידאו](http://www.iconfestival.org.il/2012/geometry/).
-
-<p dir="RTL">
-  <strong>הצופן המדעי – קריפטוגרפיה במדע הבדיוני:</strong> <a href="http://gadial.net/Presentations/Crypto.pdf">מצגת</a> ו<a href="http://www.iconfestival.org.il/2012/cryptography/">וידאו</a>.
-</p>
+<strong> גיאומטריה לא אוקלידית: מלובצ'בסקי ועד קת'ולהו: </strong><a href="http://gadial.net/Presentations/NoneuclideanGeometry.pdf">מצגת</a> ו<a href="http://www.iconfestival.org.il/2012/geometry/">וידאו</a>.
+<p dir="RTL"><strong>הצופן המדעי – קריפטוגרפיה במדע הבדיוני:</strong> <a href="http://gadial.net/Presentations/Crypto.pdf">מצגת</a> ו<a href="http://www.iconfestival.org.il/2012/cryptography/">וידאו</a>.</p>
