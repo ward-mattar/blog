@@ -8,4 +8,14 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
 </head>
