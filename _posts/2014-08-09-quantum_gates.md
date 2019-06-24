@@ -14,31 +14,31 @@ tags:
 
 וכעת נעבור לבעיה אחרת, שהיא גם כן בגבול שבין אינפורמציה קוונטית וחישוב קוונטי. יש לנו את אליס ובוב, כרגיל, אבל הם מרוחקים זה מזו. אין להם ערוץ תקשורת קוונטי, אבל כן יש להם חיבור אינטרנט. בידי אליס מצוי קיוביט במצב כללי כלשהו. האם היא מסוגלת להעביר את הקיוביט הזה לבוב? כמובן, את היצור הפיזיקלי שממדל את הקיוביט אליס לא תוכל להעביר - אין לה, כאמור, ערוץ להעברת אינפורמציה קוונטית - אבל האם היא מסוגלת לעשות קסם בעזרת ערוץ התקשורת הרגיל (שיודע לשלוח רק ביטים) שאחריו יהיה בידי בוב את המצב הקוונטי של אליס?
 
-ובכן, לא, לא בלי שפן נוסף שאפשר לשלוף מהכובע - והשפן הנוסף הזה הוא משהו שאליס ובוב שיתפו ביניהם לפני שנפרדו - זוג קיוביטים שזורים, במצב $latex \frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$ החביב עלינו. אני טוען שבעזרת הזוג הזה, וערוץ התקשורת הרגיל ביניהם, אליס יכולה לשלוח לבוב מצב קוונטי $latex \left|\psi\right\rangle $ שרירותי לגמרי. איך זה לא סותר את משפט ה-No Cloning? פשוט מאוד - כחלק מתהליך השליחה הזה אליס תתעלל בקיוביט שלה בצורה שתגרום ל<strong>הרס</strong> המצב הקוונטי אצלה.
+ובכן, לא, לא בלי שפן נוסף שאפשר לשלוף מהכובע - והשפן הנוסף הזה הוא משהו שאליס ובוב שיתפו ביניהם לפני שנפרדו - זוג קיוביטים שזורים, במצב $latex \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$ החביב עלינו. אני טוען שבעזרת הזוג הזה, וערוץ התקשורת הרגיל ביניהם, אליס יכולה לשלוח לבוב מצב קוונטי $latex \left\|\psi\right\rangle $ שרירותי לגמרי. איך זה לא סותר את משפט ה-No Cloning? פשוט מאוד - כחלק מתהליך השליחה הזה אליס תתעלל בקיוביט שלה בצורה שתגרום ל<strong>הרס</strong> המצב הקוונטי אצלה.
 
 התהליך הזה נקרא בשם המאוד מפוצץ "העתקה קוונטית", או "טלפורטציה קוונטית". למה מפוצץ? כי זה גורם לנו לחשוב על המשגר של "מסע בין כוכבים". אבל שימו לב שמדובר על מעבר של אינפורמציה קוונטית בלבד - הקיוביט של אליס לא משתגר לקצה השני של היקום; רק המידע שהיה "מקודד" בו ואבד. אני אשאיר לכם את ההחלטה מה המשמעויות הפילוסופיות של קיום טלפורטציה קוונטית שכזו (אבל קיומה לא שנוי במחלוקת; כבר הצליחו לממש טלפורטציה קוונטית בניסויים).
 
-איך זה עובד בפועל? הנה התהליך ממעוף הציפור. בהתחלה לאליס יש את $latex \left|\psi\right\rangle $ שאסמן $latex \left|\psi\right\rangle =a\left|0\right\rangle +b\left|1\right\rangle $ וזאת בנוסף לקיוביטים השזורים שלה ושל בוב, שנמצאים במצב $latex \left|\varphi\right\rangle =\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$. המערכת המשולבת של זוג הקיוביטים הללו יחד עם המצב הקוונטי שיש לאליס היא $latex \left|\varphi\right\rangle \otimes\left|\psi\right\rangle $ - כי מכפלה טנזורית היא מה שמתאר את מצב המערכת המשולבת כשאין עדיין קורלציה קוונטית כלשהי בין המערכות השונות.
+איך זה עובד בפועל? הנה התהליך ממעוף הציפור. בהתחלה לאליס יש את $latex \left\|\psi\right\rangle $ שאסמן $latex \left\|\psi\right\rangle =a\left\|0\right\rangle +b\left\|1\right\rangle $ וזאת בנוסף לקיוביטים השזורים שלה ושל בוב, שנמצאים במצב $latex \left\|\varphi\right\rangle =\frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$. המערכת המשולבת של זוג הקיוביטים הללו יחד עם המצב הקוונטי שיש לאליס היא $latex \left\|\varphi\right\rangle \otimes\left\|\psi\right\rangle $ - כי מכפלה טנזורית היא מה שמתאר את מצב המערכת המשולבת כשאין עדיין קורלציה קוונטית כלשהי בין המערכות השונות.
 
 בואו נכתוב בצורה מפורשת איך המערכת הזו נראית:
 
-$latex \frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|100\right\rangle +b\left|111\right\rangle \right)$
+$latex \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|100\right\rangle +b\left\|111\right\rangle \right)$
 
 הביט הראשון מבין השלושה מתאים לקיוביט שאליס רוצה לשלוח, הביט האמצעי מתאים לקיוביט של אליס, והביט השלישי מתאים לקיוביט של בוב. נסו לוודא לעצמכם שאתם מבינים למה זה אכן מצב המערכת המשולבת.
 
 הדבר הבא שאליס עושה הוא להפעיל קסם על המערכת. וכשאני אומר "קסם", אני מתכוון לטרנספורמציה אוניטרית שמעבירה את המערכת למצב הבא:
 
-$latex \frac{1}{2}\left|00\right\rangle \left(a\left|0\right\rangle +b\left|1\right\rangle \right)+\frac{1}{2}\left|01\right\rangle \left(a\left|1\right\rangle +b\left|0\right\rangle \right)+$
+$latex \frac{1}{2}\left\|00\right\rangle \left(a\left\|0\right\rangle +b\left\|1\right\rangle \right)+\frac{1}{2}\left\|01\right\rangle \left(a\left\|1\right\rangle +b\left\|0\right\rangle \right)+$
 
-$latex \frac{1}{2}\left|10\right\rangle \left(a\left|0\right\rangle -b\left|1\right\rangle \right)+\frac{1}{2}\left|11\right\rangle \left(a\left|1\right\rangle -b\left|0\right\rangle \right)$
+$latex \frac{1}{2}\left\|10\right\rangle \left(a\left\|0\right\rangle -b\left\|1\right\rangle \right)+\frac{1}{2}\left\|11\right\rangle \left(a\left\|1\right\rangle -b\left\|0\right\rangle \right)$
 
-כאן הרשיתי לעצמי "לפרק" ביטוי כמו $latex \left|101\right\rangle $ ל-$latex \left|10\right\rangle \left|1\right\rangle $, מתוך מטרה לשמר את הקריאות של הביטוי ושנבין מה הולך פה. השאלה הראשונה שנשאלת, כמובן, היא מה הקסם שבזכותו אליס הצליחה להגיע למצב הזה; בכך נעסוק בהמשך - הרי כל עניין הטלפורטציה מיועד לתת לי מוטיבציה לתאר את הקסם. השאלה השניה היא מה זה עזר לנו.
+כאן הרשיתי לעצמי "לפרק" ביטוי כמו $latex \left\|101\right\rangle $ ל-$latex \left\|10\right\rangle \left\|1\right\rangle $, מתוך מטרה לשמר את הקריאות של הביטוי ושנבין מה הולך פה. השאלה הראשונה שנשאלת, כמובן, היא מה הקסם שבזכותו אליס הצליחה להגיע למצב הזה; בכך נעסוק בהמשך - הרי כל עניין הטלפורטציה מיועד לתת לי מוטיבציה לתאר את הקסם. השאלה השניה היא מה זה עזר לנו.
 
-עכשיו מגיע הפאנץ': אליס מודדת את שני הקיוביטים שלה. את זה ששזור עם הקיוביט של בוב ("הביט האמצעי") ואת זה שהיא רצתה לשלוח את המצב הקוונטי שלו ("הביט השמאלי"). כל אחת מארבע התוצאות האפשריות - $latex \left|00\right\rangle ,\left|01\right\rangle ,\left|10\right\rangle ,\left|11\right\rangle $ היא סבירה באותה מידה, אבל ההסתברות לא מעניינת את אליס; מה שמעניין אותה הוא רק מה היו תוצאות המדידה. התוצאות הללו הן שני ביטים של מידע; את המידע הזה אליס שולחת לבוב באינטרנט.
+עכשיו מגיע הפאנץ': אליס מודדת את שני הקיוביטים שלה. את זה ששזור עם הקיוביט של בוב ("הביט האמצעי") ואת זה שהיא רצתה לשלוח את המצב הקוונטי שלו ("הביט השמאלי"). כל אחת מארבע התוצאות האפשריות - $latex \left\|00\right\rangle ,\left\|01\right\rangle ,\left\|10\right\rangle ,\left\|11\right\rangle $ היא סבירה באותה מידה, אבל ההסתברות לא מעניינת את אליס; מה שמעניין אותה הוא רק מה היו תוצאות המדידה. התוצאות הללו הן שני ביטים של מידע; את המידע הזה אליס שולחת לבוב באינטרנט.
 
-עכשיו, נניח שאליס קיבלה $latex \left|00\right\rangle $. מה זה אומר? זה אומר שאחרי המדידה שלה, המערכת קרסה למצב $latex \left|00\right\rangle \left(a\left|0\right\rangle +b\left|1\right\rangle \right)$ . בפרט, הקיוביט של בוב הוא עכשיו במצב $latex  a\left|0\right\rangle +b\left|1\right\rangle $, שזה בדיוק הקיוביט שהיה לאליס בהתחלה! קסם! בוב בעצם לא צריך לעשות כלום, וסיימנו!
+עכשיו, נניח שאליס קיבלה $latex \left\|00\right\rangle $. מה זה אומר? זה אומר שאחרי המדידה שלה, המערכת קרסה למצב $latex \left\|00\right\rangle \left(a\left\|0\right\rangle +b\left\|1\right\rangle \right)$ . בפרט, הקיוביט של בוב הוא עכשיו במצב $latex  a\left\|0\right\rangle +b\left\|1\right\rangle $, שזה בדיוק הקיוביט שהיה לאליס בהתחלה! קסם! בוב בעצם לא צריך לעשות כלום, וסיימנו!
 
-ונניח שאליס קיבלה $latex \left|01\right\rangle $. מה זה אומר? שהקיוביט של בוב קרס למצב $latex a\left|1\right\rangle +b\left|0\right\rangle $. זה כמעט המצב שרצינו, אבל התפקידים של $latex a,b$ התהפכו. העניין הוא שבוב יכול <strong>לתקן</strong> את ההתהפכות הזו על ידי הפעלת טרנספורמציה אוניטרית מתאימה. באופן דומה גם לכל תוצאה אחרת של אליס בוב יוכל לתקן את הקיוביט שלו כך שיהיה זהה לקיוביט שאליס התחילה ממנו - אבל בוב <strong>צריך לדעת</strong> מה משובש בקיוביט שלו - לכן הוא חייב לחכות לתקשורת-דרך-האינטרנט של אליס.
+ונניח שאליס קיבלה $latex \left\|01\right\rangle $. מה זה אומר? שהקיוביט של בוב קרס למצב $latex a\left\|1\right\rangle +b\left\|0\right\rangle $. זה כמעט המצב שרצינו, אבל התפקידים של $latex a,b$ התהפכו. העניין הוא שבוב יכול <strong>לתקן</strong> את ההתהפכות הזו על ידי הפעלת טרנספורמציה אוניטרית מתאימה. באופן דומה גם לכל תוצאה אחרת של אליס בוב יוכל לתקן את הקיוביט שלו כך שיהיה זהה לקיוביט שאליס התחילה ממנו - אבל בוב <strong>צריך לדעת</strong> מה משובש בקיוביט שלו - לכן הוא חייב לחכות לתקשורת-דרך-האינטרנט של אליס.
 
 אם כן, העניין כולו פשוט מאוד למעט ה"קסם" שדיברתי עליו. הקסם הזה הוא דוגמה ל<strong>חישוב קוונטי</strong> - אנחנו מתחילים עם מערכת של כמה קיוביטים, מבצעים עליה מניפולציות ומקבלים פלט שהוא קיוביטים אחרים. השאלה המרכזית היא איך לבצע את החישוב הזה. אפשר פשוט לתת את הטרנספורמציה האוניטרית, אבל מה הכיף בזה? כל הרעיון הוא להציג חישובים באמצעות סדרה של פעולות <strong>בסיסיות</strong>, כאלו שהן שימושיות בהקשרים שונים ומשונים ולא רק כדי לפתור בעיות אד-הוקיות.
 
@@ -48,37 +48,37 @@ $latex \frac{1}{2}\left|10\right\rangle \left(a\left|0\right\rangle -b\left|1\ri
 
 כדי לתאר שער קוונטי, צריך לתאר את האופרטור האוניטרי שמתאים לו, כלומר לתת מטריצה, או לתת תיאור של האופן שבו האופרטור הזה מטפל, נאמר, בבסיס הסטנדרטי. בואו נתחיל מלהציג את שני השערים שבהם אליס תשתמש ב"קסם" שלה.
 
-השער הראשון מסומן בתור $latex H$, מלשון "הדמאר" (המתמטיקאי). עזבו אתכם כרגע מהשאלה למה. מה שהוא עושה פשוט למדי, מבחינה רעיונית: הוא מעביר את הבסיס הסטנדרטי לבסיס $latex \left|+\right\rangle ,\left|-\right\rangle $ שראינו בפוסט הקודם כמה הוא מועיל. למי שלא קרא את הפוסט הקודם, נזכיר את ההגדרות:
+השער הראשון מסומן בתור $latex H$, מלשון "הדמאר" (המתמטיקאי). עזבו אתכם כרגע מהשאלה למה. מה שהוא עושה פשוט למדי, מבחינה רעיונית: הוא מעביר את הבסיס הסטנדרטי לבסיס $latex \left\|+\right\rangle ,\left\|-\right\rangle $ שראינו בפוסט הקודם כמה הוא מועיל. למי שלא קרא את הפוסט הקודם, נזכיר את ההגדרות:
 
-$latex \left|+\right\rangle =\frac{\left|0\right\rangle +\left|1\right\rangle }{\sqrt{2}}$
+$latex \left\|+\right\rangle =\frac{\left\|0\right\rangle +\left\|1\right\rangle }{\sqrt{2}}$
 
-$latex \left|-\right\rangle =\frac{\left|0\right\rangle -\left|1\right\rangle }{\sqrt{2}}$
+$latex \left\|-\right\rangle =\frac{\left\|0\right\rangle -\left\|1\right\rangle }{\sqrt{2}}$
 
-שני הוקטורים הללו מהווים בסיס אלטרנטיבי למרחב שמתאר את הקיוביט, והבסיס הזה מקיים את התכונה היפה שאם מודדים את $latex \left|+\right\rangle $ או את $latex \left|-\right\rangle $ ביחס לבסיס הסטנדרטי, כל אחת משתי התוצאות מתקבלת באותה הסתברות. הייתי אומר שהבסיס החדש הזה הוא "מאונך" לבסיס הסטנדרטי אם הייתה לכך משמעות מתמטית כלשהי.
+שני הוקטורים הללו מהווים בסיס אלטרנטיבי למרחב שמתאר את הקיוביט, והבסיס הזה מקיים את התכונה היפה שאם מודדים את $latex \left\|+\right\rangle $ או את $latex \left\|-\right\rangle $ ביחס לבסיס הסטנדרטי, כל אחת משתי התוצאות מתקבלת באותה הסתברות. הייתי אומר שהבסיס החדש הזה הוא "מאונך" לבסיס הסטנדרטי אם הייתה לכך משמעות מתמטית כלשהי.
 
 אז פורמלית, $latex H$ מוגדר כך:
 
-$latex \left|0\right\rangle \mapsto\left|+\right\rangle $
+$latex \left\|0\right\rangle \mapsto\left\|+\right\rangle $
 
-$latex \left|1\right\rangle \mapsto\left|-\right\rangle $
+$latex \left\|1\right\rangle \mapsto\left\|-\right\rangle $
 
-אינטואיטבית, $latex H$ מעביר את $latex \left|0\right\rangle $ אל הסופרפוזיציה "הכי סימטרית" שקיימת עבור קיוביט בודד. לכן כשמפעילים את $latex H$ על אוסף של כמה קיוביטים התוצאה היא הסופרפוזיציה "הכי סימטרית" עבור המערכת שמורכבת מהקיוביטים הללו. פורמלית:
+אינטואיטבית, $latex H$ מעביר את $latex \left\|0\right\rangle $ אל הסופרפוזיציה "הכי סימטרית" שקיימת עבור קיוביט בודד. לכן כשמפעילים את $latex H$ על אוסף של כמה קיוביטים התוצאה היא הסופרפוזיציה "הכי סימטרית" עבור המערכת שמורכבת מהקיוביטים הללו. פורמלית:
 
-$latex \left(H\otimes H\otimes\dots\otimes H\right)\left|00\dots0\right\rangle =\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\left|x\right\rangle $
+$latex \left(H\otimes H\otimes\dots\otimes H\right)\left\|00\dots0\right\rangle =\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\left\|x\right\rangle $
 
-כאשר כאן $latex \left|x\right\rangle $ הוא סימון מוסכם לכתיב של $latex x$ בבסיס בינארי עם בדיוק $latex n$ ספרות, עם אפסים מובילים (כלומר, אם $latex x=3$ ו-$latex n=4$ אז $latex \left|x\right\rangle $ הוא סימון מקוצר ל-$latex \left|0011\right\rangle $).
+כאשר כאן $latex \left\|x\right\rangle $ הוא סימון מוסכם לכתיב של $latex x$ בבסיס בינארי עם בדיוק $latex n$ ספרות, עם אפסים מובילים (כלומר, אם $latex x=3$ ו-$latex n=4$ אז $latex \left\|x\right\rangle $ הוא סימון מקוצר ל-$latex \left\|0011\right\rangle $).
 
 הסופרפוזיציה הזו תהיה קריטית בהמשך, באלגוריתמים רציניים יותר - זו הדרך שבה בחישוב קוונטי אנחנו מבצעים את ה"חישוב סופר דופר מקבילי" שאוהבים לדבר עליו: אנחנו בונים מערכת שנמצאת בסופרפוזיציה של כל האפשרויות בו זמנית, ואז מחשבים פונקציה כלשהי של כל האפשרויות הללו. אבל אני מקדים את המאוחר (אני רק רוצה להזהיר שוב, כפי שעשיתי בפוסט המבוא, שחישוב קוונטי הוא ממש <strong>לא</strong> סתם "חישוב סופר דופר מקבילי" כפי שזה אולי עשוי להיראות כרגע).
 
 האופרטור השני שאני רוצה להציג כרגע הוא סוג של שער NOT שמערב שני קיוביטים ולא קיוביט בודד (לא שכחנו מה-NOT של קיוביט בודד והוא יחזור בהמשך). הוא מכונה $latex C_{not}$, קיצור של Controlled not, שכן עקרון הפעולה שלו על אברי בסיס הוא זה: אם הקיוביט הראשון הוא 0 אז לא לעשות כלום, ואם הקיוביט הראשון הוא 1, אז לשמש בתור NOT של הקיוביט השני. פורמלית:
 
-$latex \left|00\right\rangle \mapsto\left|00\right\rangle $
+$latex \left\|00\right\rangle \mapsto\left\|00\right\rangle $
 
-$latex \left|01\right\rangle \mapsto\left|01\right\rangle $
+$latex \left\|01\right\rangle \mapsto\left\|01\right\rangle $
 
-$latex \left|10\right\rangle \mapsto\left|11\right\rangle $
+$latex \left\|10\right\rangle \mapsto\left\|11\right\rangle $
 
-$latex \left|11\right\rangle \mapsto\left|10\right\rangle $
+$latex \left\|11\right\rangle \mapsto\left\|10\right\rangle $
 
 לא קשה לראות שזו טרנספורמציה אוניטרית (היא גם הצמוד של עצמה וגם ההופכית של עצמה).
 
@@ -86,27 +86,27 @@ $latex \left|11\right\rangle \mapsto\left|10\right\rangle $
 
 בואו נראה למה זה עובד. כזכור, בהתחלה מצב המערכת כולה הוא
 
-$latex \frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|100\right\rangle +b\left|111\right\rangle \right)$
+$latex \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|100\right\rangle +b\left\|111\right\rangle \right)$
 
 ואז באה אליס ומפעילה את $latex C_{not}$, או ליתר דיוק את $latex C_{not}\otimes I$ כי בקיוביט השלישי היא לא נוגעת. אם כן, אנו עוברים למצב
 
-$latex \frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|110\right\rangle +b\left|101\right\rangle \right)$
+$latex \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|110\right\rangle +b\left\|101\right\rangle \right)$
 
-עכשיו אליס מפעילה $latex H$ על הקיוביט הראשון. זה אומר שכל וקטור כמו $latex \left|000\right\rangle $ הולך להתפצל לשני וקטורים, עבור שני הערכים השונים עבור הביט הראשון שלו, ושהכל יוכפל בשורש 2. מכיוון שאין שני וקטורים בסכום ששני הביטים האחרונים שלהם זהים (בזכות הפעלת $latex C_{not}$) נקבל שמונה מחוברים שונים:
+עכשיו אליס מפעילה $latex H$ על הקיוביט הראשון. זה אומר שכל וקטור כמו $latex \left\|000\right\rangle $ הולך להתפצל לשני וקטורים, עבור שני הערכים השונים עבור הביט הראשון שלו, ושהכל יוכפל בשורש 2. מכיוון שאין שני וקטורים בסכום ששני הביטים האחרונים שלהם זהים (בזכות הפעלת $latex C_{not}$) נקבל שמונה מחוברים שונים:
 
-$latex \frac{1}{2}a\left(\left|000\right\rangle +\left|100\right\rangle +\left|011\right\rangle +\left|111\right\rangle \right)+$
+$latex \frac{1}{2}a\left(\left\|000\right\rangle +\left\|100\right\rangle +\left\|011\right\rangle +\left\|111\right\rangle \right)+$
 
-$latex \frac{1}{2}b\left(\left|010\right\rangle +\left|110\right\rangle +\left|001\right\rangle +\left|101\right\rangle \right)$
+$latex \frac{1}{2}b\left(\left\|010\right\rangle +\left\|110\right\rangle +\left\|001\right\rangle +\left\|101\right\rangle \right)$
 
 וכל מה שנשאר לעשות עכשיו הוא קיבוץ איברים שחולקים את שני הביטים הראשונים, ומקבלים את הצירוף שכבר ראינו קודם. הסיבה שבגללה כל המידע הרלוונטי עובר אל הקיוביט של בוב היא שבכל אחד משני זוגות הסוגריים יש בדיוק וקטור אחד עם אותם שני ביטים ראשונים, כך שכל זוג ביטים ראשונים שכזה מוכפל בסכום של משהו מהסוגר הראשון (כלומר, מוכפל ב-$latex a$) עם משהו מהסוגר השני (כלומר, מוכפל ב-$latex b$).
 
 נשאר לדבר על איך בוב "מתקן" את המצב הקוונטי במקרה שבה הוא לא בדיוק המצב שממנו התחלנו (אבל בוב כן יודע בדיוק איך הוא "השתבש"). הנה שלושת המקרים האפשריים:
 <ul>
-	<li>$latex b\left|0\right\rangle +a\left|1\right\rangle $</li>
-	<li>$latex -b\left|0\right\rangle +a\left|1\right\rangle $</li>
-	<li>$latex a\left|0\right\rangle -b\left|1\right\rangle $</li>
+	<li>$latex b\left\|0\right\rangle +a\left\|1\right\rangle $</li>
+	<li>$latex -b\left\|0\right\rangle +a\left\|1\right\rangle $</li>
+	<li>$latex a\left\|0\right\rangle -b\left\|1\right\rangle $</li>
 </ul>
-בשביל המקרה הראשון אנחנו צריכים אופרטור שמחליף בין 0 ו-1, כלומר $latex \left|0\right\rangle \mapsto\left|1\right\rangle $ ו-$latex \left|1\right\rangle \mapsto\left|0\right\rangle $. לאופרטור הזה אקרא $latex X$. בשביל המקרה השני אנחנו צריכים לבצע את אותה החלפה אבל גם לכפול ב-$latex -1$ את המקדם של $latex \left|0\right\rangle $, כלומר $latex \left|0\right\rangle \mapsto-\left|1\right\rangle $ ו-$latex \left|1\right\rangle \mapsto\left|0\right\rangle $. את האופרטור הזה אסמן בתור $latex Y$. לבסוף, במקרה האחרון רק צריך להכפיל ב-$latex -1$ את המקדם של $latex \left|1\right\rangle $, כלומר האופרטור יהיה $latex \left|0\right\rangle \mapsto\left|0\right\rangle $ ו-$latex \left|1\right\rangle \mapsto-\left|1\right\rangle $. לאופרטור הזה אקרא $latex Z$. השמות של האופרטורים מגיעים ממטריצות פאולי המתאימות - אבל צריך לשים לב שההתאמה הזו לא מדויקת (לאן $latex i$ נעלם?) ולא חייבים להבין במטריצות פאולי כאן.
+בשביל המקרה הראשון אנחנו צריכים אופרטור שמחליף בין 0 ו-1, כלומר $latex \left\|0\right\rangle \mapsto\left\|1\right\rangle $ ו-$latex \left\|1\right\rangle \mapsto\left\|0\right\rangle $. לאופרטור הזה אקרא $latex X$. בשביל המקרה השני אנחנו צריכים לבצע את אותה החלפה אבל גם לכפול ב-$latex -1$ את המקדם של $latex \left\|0\right\rangle $, כלומר $latex \left\|0\right\rangle \mapsto-\left\|1\right\rangle $ ו-$latex \left\|1\right\rangle \mapsto\left\|0\right\rangle $. את האופרטור הזה אסמן בתור $latex Y$. לבסוף, במקרה האחרון רק צריך להכפיל ב-$latex -1$ את המקדם של $latex \left\|1\right\rangle $, כלומר האופרטור יהיה $latex \left\|0\right\rangle \mapsto\left\|0\right\rangle $ ו-$latex \left\|1\right\rangle \mapsto-\left\|1\right\rangle $. לאופרטור הזה אקרא $latex Z$. השמות של האופרטורים מגיעים ממטריצות פאולי המתאימות - אבל צריך לשים לב שההתאמה הזו לא מדויקת (לאן $latex i$ נעלם?) ולא חייבים להבין במטריצות פאולי כאן.
 
 סיימנו עם טלפורטציה קוונטית, עכשיו בואו נדבר על ההפך. בטלפורטציה קוונטית, אנחנו משתמשים בזוג ביטים "קלאסיים" ובקיוביט שזור אחד כדי לשדר מאליס לבוב קיוביט אחד של מידע. ההפך נקרא <strong>קידוד צפוף</strong>, ובו אנחנו משתמשים בזוג שזור אחד ובקיוביט אחד נוסף על מנת לשדר מאליס לבוב שני ביטים קלאסיים של מידע. כלומר, יש כאן טריידאוף מסויים - אנחנו חוסכים בכמות המידע שצריכה לעבור בזמן אמת מאליס אל בוב (קיוביט אחד לכל שני ביטים של מידע) אבל משלמים על זה במחיר של ניצול משאב משותף שהם שיתפו ביניהם קודם (קיוביטים שזורים).
 
@@ -114,28 +114,28 @@ $latex \frac{1}{2}b\left(\left|010\right\rangle +\left|110\right\rangle +\left|0
 
 מה שאליס עושה הוא לבדוק מה ערכם של זוג הביטים שהיא רוצה לשדר. בהתאם לערך הזה, היא מפעילה שער כלשהו על הקיוביט שלה - אחד מבין $latex I,X,Y,Z$ ($latex I$ הוא ה"שער" שלא עושה כלום; אפשר לוותר עליו בפועל, כמובן). אחר כך היא שולחת לבוב את הקיוביט שלה (ההנחה כאן היא שיש לה ערוץ שידור קוונטי, כמובן). כשבוב מקבל את הקיוביט, הוא עושה שלושה דברים - ראשית הוא מבצע $latex C_{not}$ על שני הקיוביטים; מודד את הקיוביט <strong>של עצמו</strong> ומקבל מזה מידע כלשהו על מה היו שני הביטים שנשלחו; ואז הוא מפעיל את $latex H$ על הקיוביט של אליס, מודד אותו ומקבל את מידע שמאפשר לו לשחזר את שני הביטים. פשוט מאוד.
 
-בואו נעבור לתיאורים פורמליים והסבר למה זה עובד. בהתחלה המצב הקוונטי שאליס ובוב חולקים הוא $latex \frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$ הסטנדרטי של זוג שזור. עכשיו בואו נראה מה הוא הופך להיות אחרי שאליס מפעילה עליו את $latex I,X,Y,Z$, בהתאם לזוג הביטים שהיא רוצה לשדר:
+בואו נעבור לתיאורים פורמליים והסבר למה זה עובד. בהתחלה המצב הקוונטי שאליס ובוב חולקים הוא $latex \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$ הסטנדרטי של זוג שזור. עכשיו בואו נראה מה הוא הופך להיות אחרי שאליס מפעילה עליו את $latex I,X,Y,Z$, בהתאם לזוג הביטים שהיא רוצה לשדר:
 <ul>
-	<li>אם הם $latex 00$ אז היא מפעילה $latex I$ ומקבלת $latex \frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הם $latex 01$ אז היא מפעילה $latex X$ומקבלת $latex \frac{\left|10\right\rangle +\left|01\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הם $latex 10$ אז היא מפעילה $latex Y$ ומקבלת $latex \frac{-\left|10\right\rangle +\left|01\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הם $latex 11$ אז היא מפעילה $latex Z$ ומקבלת $latex \frac{\left|00\right\rangle -\left|11\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הם $latex 00$ אז היא מפעילה $latex I$ ומקבלת $latex \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הם $latex 01$ אז היא מפעילה $latex X$ומקבלת $latex \frac{\left\|10\right\rangle +\left\|01\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הם $latex 10$ אז היא מפעילה $latex Y$ ומקבלת $latex \frac{-\left\|10\right\rangle +\left\|01\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הם $latex 11$ אז היא מפעילה $latex Z$ ומקבלת $latex \frac{\left\|00\right\rangle -\left\|11\right\rangle }{\sqrt{2}}$.</li>
 </ul>
 עכשיו תורו של בוב. הוא מפעיל $latex C_{not}$ על המצב הקוונטי כולו, ואנחנו מקבלים:
 <ul>
-	<li>אם הביטים הם $latex 00$ אנחנו מקבלים $latex \frac{\left|00\right\rangle +\left|10\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 01 אנחנו מקבלים $latex \frac{\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 10 אנחנו מקבלים $latex \frac{-\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 11 אנחנו מקבלים $latex \frac{\left|00\right\rangle -\left|10\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם $latex 00$ אנחנו מקבלים $latex \frac{\left\|00\right\rangle +\left\|10\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 01 אנחנו מקבלים $latex \frac{\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 10 אנחנו מקבלים $latex \frac{-\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 11 אנחנו מקבלים $latex \frac{\left\|00\right\rangle -\left\|10\right\rangle }{\sqrt{2}}$.</li>
 </ul>
-עכשיו בואו נראה מה קיבלנו. בכל אחד מארבעת המצבים הקוונטיים, אנחנו מקבלים סופרפוזיציה שבה הערך של הקיוביט השני זהה עבור שני המצבים האפשריים. למשל, את $latex \frac{\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}$ אפשר היה לכתוב גם בתור $latex \left(\frac{\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}\right)\otimes\left|1\right\rangle $ . כך שמדידה של הקיוביט השני מניבה את התוצאות הבאות:
+עכשיו בואו נראה מה קיבלנו. בכל אחד מארבעת המצבים הקוונטיים, אנחנו מקבלים סופרפוזיציה שבה הערך של הקיוביט השני זהה עבור שני המצבים האפשריים. למשל, את $latex \frac{\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}$ אפשר היה לכתוב גם בתור $latex \left(\frac{\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}\right)\otimes\left\|1\right\rangle $ . כך שמדידה של הקיוביט השני מניבה את התוצאות הבאות:
 <ul>
-	<li>אם הביטים הם 00 המדידה מחזירה 0 והקיוביט של אליס עובר למצב $latex \frac{\left|0\right\rangle +\left|1\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 01 המדידה מחזירה 1 והקיוביט של אליס עובר למצב $latex  \frac{\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 10 המדידה מחזירה 1 והקיוביט של אליס עובר למצב $latex \frac{-\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}$.</li>
-	<li>אם הביטים הם 11 המדידה מחזירה 0 והקיוביט של אליס עובר למצב $latex  \frac{\left|0\right\rangle -\left|1\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 00 המדידה מחזירה 0 והקיוביט של אליס עובר למצב $latex \frac{\left\|0\right\rangle +\left\|1\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 01 המדידה מחזירה 1 והקיוביט של אליס עובר למצב $latex  \frac{\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 10 המדידה מחזירה 1 והקיוביט של אליס עובר למצב $latex \frac{-\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}$.</li>
+	<li>אם הביטים הם 11 המדידה מחזירה 0 והקיוביט של אליס עובר למצב $latex  \frac{\left\|0\right\rangle -\left\|1\right\rangle }{\sqrt{2}}$.</li>
 </ul>
-במילים אחרות, אחרי המדידה הקיוביט של אליס קרס או למצב $latex \left|+\right\rangle $ או למצב $latex \left|-\right\rangle $. כעת, את $latex H$ הגדרתי על ידי ההעתקה $latex \left|0\right\rangle \mapsto\left|+\right\rangle $ ו-$latex \left|1\right\rangle \mapsto\left|-\right\rangle $, אבל קל לראות על ידי חישוב פשוט שהיא מקיימת $latex \left|+\right\rangle \mapsto\left|0\right\rangle $ ו-$latex \left|-\right\rangle \mapsto\left|1\right\rangle $. לכן, אחרי שבוב מפעיל את $latex H$ ומודד, הוא מקבל בודאות 0 או 1 (הייתי יכול גם לומר שבוב פשוט מודד לפי הבסיס $latex \left|+\right\rangle ,\left|-\right\rangle $, כמובן). נסכם את התוצאות האפשריות:
+במילים אחרות, אחרי המדידה הקיוביט של אליס קרס או למצב $latex \left\|+\right\rangle $ או למצב $latex \left\|-\right\rangle $. כעת, את $latex H$ הגדרתי על ידי ההעתקה $latex \left\|0\right\rangle \mapsto\left\|+\right\rangle $ ו-$latex \left\|1\right\rangle \mapsto\left\|-\right\rangle $, אבל קל לראות על ידי חישוב פשוט שהיא מקיימת $latex \left\|+\right\rangle \mapsto\left\|0\right\rangle $ ו-$latex \left\|-\right\rangle \mapsto\left\|1\right\rangle $. לכן, אחרי שבוב מפעיל את $latex H$ ומודד, הוא מקבל בודאות 0 או 1 (הייתי יכול גם לומר שבוב פשוט מודד לפי הבסיס $latex \left\|+\right\rangle ,\left\|-\right\rangle $, כמובן). נסכם את התוצאות האפשריות:
 <ul>
 	<li>אם הביטים הם 00 המדידה הראשונה מחזירה 0 והשניה מחזירה 0.</li>
 	<li>אם הביטים הם 01 המדידה הראשונה מחזירה 1 והשניה מחזירה 0.</li>

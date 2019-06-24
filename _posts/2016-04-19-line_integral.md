@@ -44,31 +44,31 @@ $latex \gamma_{4}\left(x\right)=\begin{cases}\left(2x,2x\right) &amp; 0\le x\le\
 
 מה שמוביל אותנו לשאלה - איך מחשבים אורך של עקומה? ליתר דיוק, איך בכלל <strong>מגדירים</strong> אורך של עקומה? ובכן, בואו ניקח דוגמא מאינטגרלים: באינטגרל אנחנו מקרבים <strong>שטח</strong> באמצעות <strong>מלבנים</strong>, אז בואו נקרב אורך (האנלוג החד-ממדי של שטח) באמצעות קווים ישרים (האנלוג החד-ממדי של מלבן). פורמלית, אם אנחנו רוצים לחשב את האורך של $latex \gamma$ שמוגדרת על הקטע $latex \left[a,b\right]$, ניקח חלוקה $latex P$ של $latex \left[a,b\right]$ (כלומר, אוסף של נקודות $latex t_{1},t_{2},\dots,t_{N}$ כך ש-$latex a=t_{1}&lt;t_{2}&lt;\dots&lt;t_{n}=b$), נעביר קטע ישר בין כל שתי נקודות סמוכות ונחבר את סכום כל הקטעים הללו. נקבל:
 
-$latex \sum_{i=1}^{N-1}\left|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right|$
+$latex \sum_{i=1}^{N-1}\left\|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right\|$
 
-כאשר ערך מוחלט כאן מייצג את הערך המוחלט הרגיל בדו-ממד: $latex \left|\left(x,y\right)\right|=\sqrt{x^{2}+y^{2}}$.
+כאשר ערך מוחלט כאן מייצג את הערך המוחלט הרגיל בדו-ממד: $latex \left\|\left(x,y\right)\right\|=\sqrt{x^{2}+y^{2}}$.
 
 האינטואיציה היא שהקו הישר בין שתי נקודות הוא בעל האורך הקטן ביותר מבין כל העקומות שמחברות אותם, ולכן הסכום הזה תמיד קטן מאורך העקומה האמיתי, והוא שואף אליו ככל שהחלוקה קטנה יותר. לכן אפשר לקחת את החסם העליון של כל הסכום מהצורה שלעיל ולהגדיר את אורך העקומה להיות שווה לה.
 
 אצלנו, כזכור, העקומה היא <strong>חלקה</strong>. זה מאפשר לנו לעשות משהו יותר נחמד. בואו נזכור את משפט הערך הממוצע של לגראנז': אם $latex f$ רציפה על $latex \left[a,b\right]$ וגזירה על $latex \left(a,b\right)$ אז קיימת $latex c\in\left(a,b\right)$ כך ש-$latex f\left(b\right)-f\left(a\right)=f^{\prime}\left(c\right)\left(b-a\right)$. אם נפעיל את זה על קירוב העקומה שלנו, נקבל
 
-$latex \sum_{i=1}^{N-1}\left|\gamma^{\prime}\left(c_{i}\right)\right|\Delta t_{i}$
+$latex \sum_{i=1}^{N-1}\left\|\gamma^{\prime}\left(c_{i}\right)\right\|\Delta t_{i}$
 
 כאשר $latex \Delta t_{i}=t_{i+1}-t_{i}$ ו-$latex t_{i}&lt;c_{i}&lt;t_{i+1}$.
 
-הדבר הזה הוא <strong>סכום רימן</strong> של האינטגרל של $latex \gamma^{\prime}$ על הקטע $latex \left[a,b\right]$, אינטגרל שקיים בזכות ההנחה שלנו ש-$latex \gamma^{\prime}$ רציפה (זהו המשפט היסודי של החדו"א). לכן אם משאיפים את גודל החלוקות ל-0, מה שנותן לנו את אורך העקומה, מקבלים גם בדיוק את האינטגרל $latex \int_{a}^{b}\left|\gamma^{\prime}\left(t\right)\right|dt$. אם כן, מצאנו דרך נוחה <strong>לחשב</strong> את האורך של עקומה חלוקה באמצעות אינטגרל רימן רגיל, ואני מקווה שנחה דעתנו שהדרך הזו מסתדרת עם ההגדרה המתבקשת ביותר לאורך של עקומה.
+הדבר הזה הוא <strong>סכום רימן</strong> של האינטגרל של $latex \gamma^{\prime}$ על הקטע $latex \left[a,b\right]$, אינטגרל שקיים בזכות ההנחה שלנו ש-$latex \gamma^{\prime}$ רציפה (זהו המשפט היסודי של החדו"א). לכן אם משאיפים את גודל החלוקות ל-0, מה שנותן לנו את אורך העקומה, מקבלים גם בדיוק את האינטגרל $latex \int_{a}^{b}\left\|\gamma^{\prime}\left(t\right)\right\|dt$. אם כן, מצאנו דרך נוחה <strong>לחשב</strong> את האורך של עקומה חלוקה באמצעות אינטגרל רימן רגיל, ואני מקווה שנחה דעתנו שהדרך הזו מסתדרת עם ההגדרה המתבקשת ביותר לאורך של עקומה.
 
 כעת נחזור לאינטגרל קווי. שם הניתוח המדויק מסובך קצת יותר, כי הסכום הטיפוסי שלנו נראה כך:
 
-$latex \sum_{i=1}^{N-1}f\left(\gamma\left(c_{i}\right)\right)\left|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right|$
+$latex \sum_{i=1}^{N-1}f\left(\gamma\left(c_{i}\right)\right)\left\|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right\|$
 
 וזאת אחרי שכבר ביצענו את הפישוט שעכשיו נראה מתבקש - במקום לכפול באורך העקומה בין $latex \gamma\left(t_{i}\right)$ ו-$latex \gamma\left(t_{i+1}\right)$, אנחנו כופלים באורך הקטע שמחבר את שתי הנקודות הללו. הבעיה היא שאם ננסה להשתמש במשפט ערך הביניים כמו קודם נקבל
 
-$latex \sum_{i=1}^{N-1}f\left(\gamma\left(c_{i}\right)\right)\left|\gamma^{\prime}\left(d_{i}\right)\right|$
+$latex \sum_{i=1}^{N-1}f\left(\gamma\left(c_{i}\right)\right)\left\|\gamma^{\prime}\left(d_{i}\right)\right\|$
 
-כך ש-$latex c_{i},d_{i}$ הן נקודות ביניים, אבל לא בהכרח <strong>אותן</strong> נקודות ביניים. לכן זה לא סכום רימן. זה דורש הערכה קצת יותר זהירה של $latex \left|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right|$ שכן תשתמש ב-$latex c_{i}$, ולא אכנס לכך כאן. השורה התחתונה היא שזה עובד ומקבלים את האינטגרל המתבקש:
+כך ש-$latex c_{i},d_{i}$ הן נקודות ביניים, אבל לא בהכרח <strong>אותן</strong> נקודות ביניים. לכן זה לא סכום רימן. זה דורש הערכה קצת יותר זהירה של $latex \left\|\gamma\left(t_{i+1}\right)-\gamma\left(t_{i}\right)\right\|$ שכן תשתמש ב-$latex c_{i}$, ולא אכנס לכך כאן. השורה התחתונה היא שזה עובד ומקבלים את האינטגרל המתבקש:
 
-$latex \int_{C}fds=\int_{a}^{b}f\left(\gamma\left(t\right)\right)\left|\gamma^{\prime}\left(t\right)\right|dt$
+$latex \int_{C}fds=\int_{a}^{b}f\left(\gamma\left(t\right)\right)\left\|\gamma^{\prime}\left(t\right)\right\|dt$
 
 וברוב הספרים מעדיפים להביא את האינטגרל הזה בתור <strong>ההגדרה</strong> של אינטגרל קווי מסוג ראשון.
 

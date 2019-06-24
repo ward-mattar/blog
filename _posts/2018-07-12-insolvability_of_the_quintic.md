@@ -61,7 +61,7 @@ tags:
 
 עכשיו, בואו נסתכל על השדה \\(F\left(s_{1},\dots,s_{n}\right)\\) שנוצר מ-\\(F\\) על ידי המקדמים של הפולינום הכללי. כל איבר של \\(S_{n}\\) משמר את השדה הזה - זו המהות של "פונקציות סימטריות" שהזכרתי קודם. לכן אני יודע ש-\\(F\left(s_{1},\dots,s_{n}\right)\subseteq E\\). בפרט:
 
-\\(\left[F\left(a_{1},\dots,a_{n}\right):F\left(s_{1},\dots,s_{n}\right)\right]=\left[F\left(a_{1},\dots,a_{n}\right):E\right]\left[E:F\left(s_{1},\dots,s_{n}\right)\right]\ge\left|S_{n}\right|=n!\\)
+\\(\left[F\left(a_{1},\dots,a_{n}\right):F\left(s_{1},\dots,s_{n}\right)\right]=\left[F\left(a_{1},\dots,a_{n}\right):E\right]\left[E:F\left(s_{1},\dots,s_{n}\right)\right]\ge\left\|S_{n}\right\|=n!\\)
 
 אבל מצד שני, אנחנו יודעים ש-\\(F\left(a_{1},\dots,a_{n}\right)\\) הוא שדה הפיצול של פולינום ממעלה \\(n\\) מעל \\(F\left(s_{1},\dots,s_{n}\right)\\), ואנחנו כבר יודעים שהמימד של שדה פיצול כזה הוא <strong>לכל היותר </strong>\\(n!\\), כלומר \\(\left[F\left(a_{1},\dots,a_{n}\right):F\left(s_{1},\dots,s_{n}\right)\right]\le n!\\). אנחנו יודעים את זה כי <a href="https://gadial.net/2018/04/22/splitting_fields_algebraic_closures/">הוכחתי את זה</a> כשהתחלנו לדבר על שדות פיצול; אז גם הוספתי ""במקרה הכללי" הוא יהיה שווה בדיוק \\(n!\\); אותו "מקרה כללי" יהיה בעל חשיבות אדירה בהמשך, כשנדבר על תורת גלואה, ואז נראה אותו". ובכן, כרגע ראינו אותו.
 

@@ -15,8 +15,8 @@ tags:
 הנה הקוד:
 
 [code language="ruby"]
-# puts &quot;After sorting the list #{ARGV.join(&quot;, &quot;)} we get #{ARGV.collect{|x| x.to_i}.sort.join(&quot;, &quot;)}&quot;
-list = ARGV.collect{|x| x.to_i}
+# puts &quot;After sorting the list #{ARGV.join(&quot;, &quot;)} we get #{ARGV.collect{\|x\| x.to_i}.sort.join(&quot;, &quot;)}&quot;
+list = ARGV.collect{\|x\| x.to_i}
 sorted_list = []
 while not list.empty?
   current_element = list.pop
@@ -47,14 +47,14 @@ puts &quot;After sorting the list #{ARGV.join(&quot;, &quot;)} we get #{sorted_l
 import System.Environment
 
 toIntArray :: [String] -&gt; [Int]
-toIntArray array = [read(x) | x &lt;- array]
+toIntArray array = [read(x) \| x &lt;- array]
 
 quickSort :: Ord a =&gt; [a] -&gt; [a]
 quickSort [] 		= []
 quickSort (x:xs) 	= quickSort smaller ++ [x] ++ quickSort larger
   where
-    smaller = [a | a &lt;- xs, a &lt; x]
-    larger  = [b | b &lt;- xs, b &gt;= x]
+    smaller = [a \| a &lt;- xs, a &lt; x]
+    larger  = [b \| b &lt;- xs, b &gt;= x]
 
 main = do
   args &lt;- getArgs

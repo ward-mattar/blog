@@ -67,7 +67,7 @@ Graph.prototype = {
 
 [javascript]
 add_edge: function(a,b,w){
-		if (a &gt;= this.n || b &gt;= this.n){
+		if (a &gt;= this.n \|\| b &gt;= this.n){
 			return;
 		}
 		if (a &gt; b){
@@ -94,7 +94,7 @@ add_edge: function(a,b,w){
 [javascript]
 has_edge: function(a,b){
 		result = false;
-		this.each_edge(function(e){if ((e[0] == a &amp;&amp; e[1] == b) || (e[1] == a &amp;&amp; e[0] == b)) result = true;})
+		this.each_edge(function(e){if ((e[0] == a &amp;&amp; e[1] == b) \|\| (e[1] == a &amp;&amp; e[0] == b)) result = true;})
 		return result;
 	},
 [/javascript]
@@ -114,7 +114,7 @@ each_edge: function(f){
 find_edge: function(a,b){
 		for (var i = 0; i &lt; this.E.length; i++){
 			var e = this.E[i];
-			if ((e[0] == a &amp;&amp; e[1] == b) || (e[1] == a &amp;&amp; e[0] == b))
+			if ((e[0] == a &amp;&amp; e[1] == b) \|\| (e[1] == a &amp;&amp; e[0] == b))
 				return e;
 		}
 		return null;
@@ -127,7 +127,7 @@ find_edge: function(a,b){
 remove_edge: function(a,b){
 		for (var i = 0; i &lt; this.E.length; i++){
 			var e = this.E[i];
-			if ((e[0] == a &amp;&amp; e[1] == b) || (e[0] == b &amp;&amp; e[1] == a)){
+			if ((e[0] == a &amp;&amp; e[1] == b) \|\| (e[0] == b &amp;&amp; e[1] == a)){
 				this.E.splice(i,1);
 				return;
 			}
@@ -215,10 +215,10 @@ draw: function(){
 כרגע כל מה שאני עושה הוא למחוק את התוכן הנוכחי של ה-Canvas ולהריץ שלוש לולאות. שתי האחרונות מציירות את הקירות שסביב המבוך, למעט הפינה הימנית-תחתונה שנותרת פרוצה ("כניסה" למבוך); הלולאה הראשונה היא מה שמצייר את הקירות הפנימיים, על פי הקשתות שיש כרגע בגרף. אבל כל עוד לא הראיתי את המימוש של draw_wall בעצם לא עשיתי כלום, אז הנה המימוש שהוא טיפה טכני ולא חייבים להבין את פרטיו:
 [javascript]
 draw_wall: function(a,b,color){
-		if (a == undefined || b == undefined || (Math.abs(a[0]-b[0])+Math.abs(a[1]-b[1])) != 1){
+		if (a == undefined \|\| b == undefined \|\| (Math.abs(a[0]-b[0])+Math.abs(a[1]-b[1])) != 1){
 		 return;
 		}
-		color = color || '#000000';
+		color = color \|\| '#000000';
 		Game.context.strokeStyle = color;
 		Game.context.fillStyle = color;
 		var x = WALL_WIDTH + Math.max(a[0],b[0])*(SQUARE_SIZE + WALL_WIDTH);

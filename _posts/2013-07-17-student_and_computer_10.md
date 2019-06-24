@@ -26,7 +26,7 @@ when &quot;A&quot;
   end
 when &quot;G&quot;
     a0, q, n = ARGV[1].to_i, ARGV[2].to_i, ARGV[3].to_i
-    sum = (0...n).collect{|i| a0*q**i}.inject(0){|temp_sum, x| temp_sum + x}
+    sum = (0...n).collect{\|i\| a0*q**i}.inject(0){\|temp_sum, x\| temp_sum + x}
 end
 
 puts &quot;The sum is #{sum}&quot;
@@ -39,7 +39,7 @@ puts &quot;The sum is #{sum}&quot;
 חישוב הסכום כשהסדרה היא חשבונית (מזהים את זה על ידי כך שהפרמטר הראשון שהתוכנית קיבלה היה "A") הוא בנאלי ולא ארחיב עליו (נסו לראות שאתם מבינים מה אני עושה שם!). מה שמעניין הוא חישוב הסכום כשהסדרה היא הנדסית, שנעשה כולו בשורה ארוכה אחת:
 
 [code]
-sum = (0...n).collect{|i| a0*q**i}.inject(0){|temp_sum, x| temp_sum + x}
+sum = (0...n).collect{\|i\| a0*q**i}.inject(0){\|temp_sum, x\| temp_sum + x}
 [/code]
 
 מה שקורה כאן הוא דבר די נפוץ ברובי. אנחנו מתחילים מאובייקט שהוא אוסף של מספרים - במקרה הזה, כל המספרים בין 0 ל-9, שמיוצגים על ידי אובייקט של <strong>טווח</strong>, ואז מתחילים לעשות על האובייקט הזה סדרה של פעולות. הפעולה הראשונה היא collect שמחליפה כל מספר בטווח באיבר המתאים בסדרה ההנדסית. קיבלנו מערך שכולל את כל האיברים בסדרה ההנדסית, ונותר לסכום אותו. לצורך כך אנחנו מגייסים את המתודה inject שפועלת כך: בנוסף למערך שקורא לה היא מקבלת כקלט גם פרמטר נוסף, שבמקרה הזה הוא 0, שהוא "הערך ההתחלתי", ובלוק. בתוך הבלוק ישנם שני משתנים, שאני קורא להם temp_sum ו-x. הרעיון הוא כזה: ראשית inject מאתחלת את temp_sum להיות הערך שהועבר לה - 0 במקרה שלנו. כעת היא עוברת סדרתית על כל אברי המערך, מציבה כל אחד מהם בתוך x, מריצה את הבלוק ומציבה בתוך temp_sum את תוצאת הבלוק, שהיא במקרה הנוכחי הערך temp_sum+x. כל זה מתורגם לסכימה של איברי המערך ולכן להחזרה של התוצאה הנכונה.
@@ -52,10 +52,10 @@ sum = (0...n).collect{|i| a0*q**i}.inject(0){|temp_sum, x| temp_sum + x}
 import System.Environment
 
 arithmetic_series_sum :: Int -&gt; (Int -&gt; (Int -&gt; Int))
-arithmetic_series_sum a0 d n = foldl (+) 0 [a0 + d*i | i &lt;- [0..n-1]]
+arithmetic_series_sum a0 d n = foldl (+) 0 [a0 + d*i \| i &lt;- [0..n-1]]
 
 geometric_series_sum :: Int -&gt; (Int -&gt; (Int -&gt; Int))
-geometric_series_sum a0 q n = foldl (+) 0 [a0 * q^i | i &lt;- [0..n-1]]
+geometric_series_sum a0 q n = foldl (+) 0 [a0 * q^i \| i &lt;- [0..n-1]]
 
 series_sum :: [String] -&gt; Int
 series_sum (&quot;A&quot;:a0:d:n:[]) = arithmetic_series_sum (read a0) (read d) (read n)

@@ -29,7 +29,7 @@ puts &quot;Board area: #{(8*ARGV[0].to_i)**2}, total lines length: #{2*ARGV[0].t
 נתחיל בכל זאת מהפתרון הפשוט. ברובי אפשר למצוא מחלקים בשורה אחת:
 
 [code language="ruby"]
-(1..n).find_all{|k| n % k == 0}
+(1..n).find_all{\|k\| n % k == 0}
 [/code]
 
 אין כאן משהו שלא ראינו קודם. עכשיו, איך אפשר לבדוק ראשוניות? הדבר המתבקש לבדוק הוא שהתוצאה של הפעלת השורה לעיל היא רשימה באורך 2 בדיוק (כי כאמור, כל רשימה כזו תכיל לפחות את 1 ואת n). אבל למה לכתוב שוב את השורה הזו אם כבר כתבתי אותה פעם אחת? תחת זאת אפשר לתת לה <strong>שם בעל משמעות</strong> ולהשתמש מכאן ואילך בשם הזה. זה, על קצה המזלג, הרעיון מאחורי אחד המושגים המרכזיים ביותר בתכנות - <strong>פונקציה</strong>.
@@ -41,7 +41,7 @@ puts &quot;Board area: #{(8*ARGV[0].to_i)**2}, total lines length: #{2*ARGV[0].t
 אם כן, הנה הקוד:
 [code language="ruby"]
 def divisors(n)
-  (1..n).find_all{|k| n % k == 0}
+  (1..n).find_all{\|k\| n % k == 0}
 end
 
 def is_prime?(n)
@@ -65,7 +65,7 @@ puts &quot;#{n} is#{(is_prime?(n))?(&quot;&quot;):(&quot; not&quot;)} prime&quot
 
 [code]
 divisors :: Int -&gt; [Int]
-divisors n = [a | a &lt;- [1..n], (n `mod` a) == 0]
+divisors n = [a \| a &lt;- [1..n], (n `mod` a) == 0]
 
 is_prime :: Int -&gt; Bool
 is_prime n = length (divisors(n)) == 2

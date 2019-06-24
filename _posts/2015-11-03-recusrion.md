@@ -165,7 +165,7 @@ end
 def subset_sum(a, n)
 	return [] if n &lt; 0 or (n &gt; 0 and a.empty?) #empty solution set
 	return [ [] ] if n == 0   #one solution - no elements
-	return subset_sum(a[1..-1], n) + subset_sum(a[1..-1], n - a[0]).map{|sol| [a[0]] + sol}
+	return subset_sum(a[1..-1], n) + subset_sum(a[1..-1], n - a[0]).map{\|sol\| [a[0]] + sol}
 end
 [/ruby]
 
@@ -181,7 +181,7 @@ def solve_maze(maze, row, col)
 	maze[row][col] = 2
 	return true if row == 0 and col == 0
 	neighbors = row + 1, col], [row - 1, col], [row,  col + 1], [row, col - 1
-	neighbors.each{|row, col| return true if solve_maze(maze, row, col)}
+	neighbors.each{\|row, col\| return true if solve_maze(maze, row, col)}
 	maze[row][col] = 3
 	return false
 end
@@ -192,7 +192,7 @@ end
 [ruby]
 def print_maze(maze)
 	sym = {0 =&gt; &quot; &quot;, 1 =&gt; &quot;+&quot;, 2 =&gt; &quot;.&quot;, 3 =&gt; &quot; &quot;}
-	maze.map{|row| row.map{|v| sym[v]}}.each{|row| puts row.join(&quot;&quot;)}
+	maze.map{\|row\| row.map{\|v\| sym[v]}}.each{\|row\| puts row.join(&quot;&quot;)}
 end
 maze = [[0, 0, 1, 1, 1, 1, 1],
 		[1, 0, 1, 1, 1, 0, 1],

@@ -40,17 +40,17 @@ tags:
 
 כדי להגדיר את $latex \varphi_{k+1}$ מתוך $latex \varphi_{k}$ אני הולך לחלק את הפסוקיות של $latex \varphi_{k}$ לארבע קבוצות זרות ומשלימות: פסוקיות שבהן מופיעים גם $latex x_{k}$ וגם $latex \neg x_{k}$, כלומר הן טאוטולוגיות ואני הולך להתעלם מהן; פסוקיות שבהן לא $latex x_{k}$ ולא $latex \neg x_{k}$ מופיעים ואני הולך להעביר אותן כמות שהן ל-$latex \varphi_{k+1}$ ; פסוקיות שבהן $latex x_{k}$ מופיע אבל לא $latex \neg x_{k}$, ופסוקיות שבהן $latex \neg x_{k}$ מופיע אבל לא $latex x_{k}$. בבירור אלו כל המקרים האפשריים. אז בואו נגדיר: $latex \varphi_{k}=T_{k}\cup N_{k}\cup A_{k}\cup B_{k}$ כך ש-
 
-$latex T_{k}=\left\{ C\in\varphi_{k}\ |\ x_{k}\in C\wedge\neg x_{k}\in C\right\} $
+$latex T_{k}=\left\{ C\in\varphi_{k}\ \|\ x_{k}\in C\wedge\neg x_{k}\in C\right\} $
 
-$latex N_{k}=\left\{ C\in\varphi_{k}\ |\ x_{k}\notin C\wedge\neg x_{k}\notin C\right\} $
+$latex N_{k}=\left\{ C\in\varphi_{k}\ \|\ x_{k}\notin C\wedge\neg x_{k}\notin C\right\} $
 
-$latex A_{k}=\left\{ C\in\varphi_{k}\ |\ x_{k}\in C\wedge\neg x_{k}\notin C\right\} $
+$latex A_{k}=\left\{ C\in\varphi_{k}\ \|\ x_{k}\in C\wedge\neg x_{k}\notin C\right\} $
 
-$latex B_{k}=\left\{ C\in\varphi_{k}\ |\ x_{k}\notin C\wedge\neg x_{k}\in C\right\} $
+$latex B_{k}=\left\{ C\in\varphi_{k}\ \|\ x_{k}\notin C\wedge\neg x_{k}\in C\right\} $
 
 עכשיו נגדיר את $latex A_{k}\otimes B_{k}$ בתור "מה שמקבלים כשעושים את כל הרזולוציות שרק אפשר עם $latex A_{k},B_{k}$":
 
-$latex A_{k}\otimes B_{k}=\left\{ C\otimes_{x_{k}}D\ |\ C\in A_{k},D\in B_{k}\right\} $
+$latex A_{k}\otimes B_{k}=\left\{ C\otimes_{x_{k}}D\ \|\ C\in A_{k},D\in B_{k}\right\} $
 
 ועכשיו נגדיר:
 

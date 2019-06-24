@@ -26,7 +26,7 @@ $latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)}{h}$
 
 מה נשבר כאן? ובכן, $latex h$ היא חלק מה<strong>קלט</strong> של $latex F$, ולכן $latex h\in\mathbb{R}^{n}$ היא וקטור. במונה אנחנו מקבלים את ה<strong>פלט</strong> של $latex F$, גם כן וקטור, רק שב-$latex \mathbb{R}^{m}$. אנחנו לא יודעים איך לאכול את הביטוי הזה מבחינה מתמטית; אין לנו דרך לחלק וקטורים אלו באלו, למעט במקרה שבו $latex n=1$ (וכפי שנראה בהמשך, המקרה שבו $latex n=1$ הוא אכן פשוט במיוחד, גם אם $latex m&gt;1$). אגב, כאן אנחנו מתפצלים מהאנליזה המרוכבת; שם מה שקורה הוא שמחלקים במספר מרוכב, שמצד אחד אמנם נראה כמו וקטור דו ממדי של מספרים ממשיים, ומצד שני במרוכבים <strong>כן</strong> ידוע לנו איך לבצע את החלוקה.
 
-דרך אפשרית להתמודד עם הבעיה הזו היא לא לחלק ב-$latex h$ אלא ב<strong>נורמה</strong> של $latex h$, כלומר ב-$latex \left|h\right|$. בדרך הזו נקבל "נגזרת" שהיא וקטור ב-$latex \mathbb{R}^{m}$ ולא לגמרי ברור מה היא אומרת - חסרה לנו אינטואיציה.
+דרך אפשרית להתמודד עם הבעיה הזו היא לא לחלק ב-$latex h$ אלא ב<strong>נורמה</strong> של $latex h$, כלומר ב-$latex \left\|h\right\|$. בדרך הזו נקבל "נגזרת" שהיא וקטור ב-$latex \mathbb{R}^{m}$ ולא לגמרי ברור מה היא אומרת - חסרה לנו אינטואיציה.
 
 אז בואו נעבור להגדרה השניה, עם המשיק. אמרנו ש-$latex f^{\prime}\left(a\right)$ הוא השיפוע של המשיק, כלומר המשיק הוא הפונקציה $latex f^{\prime}\left(a\right)\left(x-a\right)+f\left(a\right)$ (זו גאומטריה אנליטית: אם יש לנו ישר עם שיפוע $latex m$ שעובר דרך $latex \left(a,b\right)$ אז משוואותו היא $latex y=m\left(x-a\right)+b$). החלק שמעניין אותנו במשיק הוא הפונקציה $latex T\left(x\right)=f^{\prime}\left(a\right)x$ - זו טרנספורמציה לינארית (המשיק עצמו איננו טרנספורמציה לינארית באופן כללי כי הוא לא עובר דרך ראשית הצירים). לחלק הזה אנחנו קוראים <strong>הדיפרנציאל</strong> של $latex f$ בנקודה $latex a$. כדי לראות למה הוא מעניין, בואו נחזור אל הנוסחה:
 
@@ -48,7 +48,7 @@ $latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-T\left(h\right)}{h}=0
 
 את ההגדרה הזו אפשר להכליל בצורה פשוטה לפונקציות כלליות: אם $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$ אז הדיפרנציאל של $latex F$ בנקודה $latex a$, אם הוא קיים, הוא הטרנספורמציה הלינארית היחידה שמקיימת
 
-$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-T\left(h\right)}{\left|h\right|}=0$
+$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-T\left(h\right)}{\left\|h\right\|}=0$
 
 אם הדיפרנציאל קיים, אז אומרים ש-$latex f$ <strong>גזירה</strong> בנקודה $latex a$. במילה <strong>נגזרת</strong> משתמשים כדי לתאר או את $latex T$ או את המטריצה המייצגת שלה; זה לא כל כך משנה כי ברור לנו שבמובנים המהותיים זה בדיוק אותו דבר. אם כן, עבור פונקציות ממשיות רגילות, הנגזרת היא בעצם מטריצה $latex 1\times1$!
 
@@ -66,15 +66,15 @@ $latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{h}$
 
 עכשיו אפשר לחבר את כל המושגים הללו ביחד. ניקח $latex F:\mathbb{R}^{n}\to\mathbb{R}$. אם $latex F$ גזירה, אז כל הנגזרות המכוונות שלה קיימות, וקל מאוד לקבל אותן - הנגזרת המכוונת בכיוון $latex u$ בנקודה $latex a$ היא בדיוק $latex DF\left(a\right)\cdot u$ - כלומר, לוקחים את המטריצה שמייצגת את $latex DF$ בנקודה $latex a$ ומכפילים סקלרית ב-$latex u$ (מטילים על $latex u$). כלומר, $latex DF$ מקודדת איכשהו את המידע על <strong>כל</strong> הנגזרות המכוונות של $latex F$. מצד שני, זה אומר שעכשיו ברור לגמרי איך לחשב את $latex DF$: אנחנו יודעים ש-$latex DF\left(a\right)$ הוא וקטור ב-$latex \mathbb{R}^{n}$ (מטריצה $latex 1\times n$) ולכן ניתן להצגה כצירוף לינארי $latex \sum_{i=1}^{n}\lambda_{i}e_{i}$, כאשר המקדמים נתונים בדיוק על ידי $latex \left(a\right)\cdot e_{i}$$latex \lambda_{i}=DF$. מסקנה: $latex DF\left(a\right)=\left(D_{1}F\left(a\right),\dots,D_{n}F\left(a\right)\right)$. הוקטור הזה כל כך חשוב שנותנים לו <strong>עוד</strong> סימון ושם: הוא נקרא <strong>הגרדיאנט</strong> של $latex F$ ומסומן $latex \nabla F$ (למשולש הזה קוראים <strong>נבלה</strong>, אם רציתם לדעת).
 
-ההוכחה של הטענה הזו היא קלה למדי ומראה כמה היא מתבקשת. נניח ש-$latex F$ גזירה ויהא $latex u$ וקטור שונה מאפס כלשהו. אנחנו רוצים להראות ש-$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{h}=DF\left(a\right)\cdot u$. כזכור, על פי הגדרת הנגזרת, $latex \lim_{t\to0}\frac{F\left(a+t\right)-F\left(a\right)-DF\left(a\right)\cdot t}{\left|t\right|}=0$ (בהוכחה הזו $latex h$ הוא סקלר ו-$latex t$ הוא וקטור). מכיוון שהגבול הזה נכון עבור השאפה של $latex t$ כללי לאפס, הוא נכון גם אם משאיפים את $latex t$ לאפס רק לאורך ציר מסויים, הציר שמגדיר $latex u$ (למי שלא מאמין, פשוט תפתחו את הגדרת האפסילון-דלתא ותראו). כלומר, אנחנו מקבלים את הגבול
+ההוכחה של הטענה הזו היא קלה למדי ומראה כמה היא מתבקשת. נניח ש-$latex F$ גזירה ויהא $latex u$ וקטור שונה מאפס כלשהו. אנחנו רוצים להראות ש-$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{h}=DF\left(a\right)\cdot u$. כזכור, על פי הגדרת הנגזרת, $latex \lim_{t\to0}\frac{F\left(a+t\right)-F\left(a\right)-DF\left(a\right)\cdot t}{\left\|t\right\|}=0$ (בהוכחה הזו $latex h$ הוא סקלר ו-$latex t$ הוא וקטור). מכיוון שהגבול הזה נכון עבור השאפה של $latex t$ כללי לאפס, הוא נכון גם אם משאיפים את $latex t$ לאפס רק לאורך ציר מסויים, הציר שמגדיר $latex u$ (למי שלא מאמין, פשוט תפתחו את הגדרת האפסילון-דלתא ותראו). כלומר, אנחנו מקבלים את הגבול
 
-$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)-DF\left(a\right)\cdot\left(hu\right)}{\left|hu\right|}=0$
+$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)-DF\left(a\right)\cdot\left(hu\right)}{\left\|hu\right\|}=0$
 
-נכפול את שני האגפים בקבוע $latex \left|u\right|$, נשתמש בהומוגניות של מכפלה סקלרית ושל נורמה, ונקבל
+נכפול את שני האגפים בקבוע $latex \left\|u\right\|$, נשתמש בהומוגניות של מכפלה סקלרית ושל נורמה, ונקבל
 
-$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left|h\right|}-\frac{h}{\left|h\right|}DF\left(a\right)\cdot u=0$
+$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left\|h\right\|}-\frac{h}{\left\|h\right\|}DF\left(a\right)\cdot u=0$
 
-אם $latex h$ שואף לאפס מימין, אנחנו מקבלים בדיוק את מה שרצינו: $latex \lim_{h\to0^{+}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$; אחרת, נכפול במינוס 1 ונקבל $latex \lim_{h\to0^{-}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$. המסקנה הסופית היא שאכן מתקיים $latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left|h\right|}=DF\left(a\right)\cdot u$.
+אם $latex h$ שואף לאפס מימין, אנחנו מקבלים בדיוק את מה שרצינו: $latex \lim_{h\to0^{+}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$; אחרת, נכפול במינוס 1 ונקבל $latex \lim_{h\to0^{-}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$. המסקנה הסופית היא שאכן מתקיים $latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left\|h\right\|}=DF\left(a\right)\cdot u$.
 
 אם כן, <strong>אם</strong> $latex F$ היא גזירה, אז הנגזרת שלה נתונה בדיוק באמצעות הנגזרות החלקיות, מה שאומר שיש לנו עכשיו טכניקה פרקטית לחישוב נגזרת כללית על ידי רדוקציה לבעיה של חישוב נגזרת רגילה. מה שמפתיע הוא שההפך אינו נכון - ייתכן שכל הנגזרות החלקיות יהיו קיימות (או אפילו יותר מכך, כל הנגזרות המכוונות יהיו קיימות) ועדיין $latex F$ לא תהיה גזירה. הגרדיאנט עדיין יהיה קיים, כמובן, אבל הוא לא יגדיר טרנספורמציה לינארית שמקרבת את $latex F$ בצורה מוצלחת. הפתולוגיה הזו היא בדיוק הסיבה שבגללה הגדרנו נגזרת בצורה מוזרה שכזו במקום להתחיל מנגזרות חלקיות - התנאי של גזירות יותר חזק מהתנאי של קיום הנגזרות החלקיות. ההכללה לפונקציה $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$ קלה: $latex F$ גזירה אם ורק אם כל הרכיבים שלה גזירים, ואם היא גזירה אז הנגזרת שלה היא המטריצה $latex m\times n$ שהשורות שלה הן הגרדיאנטים של הרכיבים.
 
@@ -98,9 +98,9 @@ $latex \lim_{h\to0}\frac{f\left(0+hu\right)-f\left(0\right)}{h}=\lim_{h\to0}\fra
 
 אז אם לסכם: אם $latex F$ גזירה, אז נובע שכל הנגזרות החלקיות שלה קיימות - <strong>אבל</strong> זה לא אומר שהן רציפות. אם לעומת זאת כל הנגזרות החלקיות קיימות ורציפות, אז מובטח ש-$latex F$ גזירה, <strong>אבל</strong> רק קיום הנגזרות החלקיות לא גורר רציפות. אם כן, הכרנו את הגיבורים של החלק הדיפרנציאלי של אנליזה וקטורית - הנגזרת והנגזרות החלקיות והמכוונות; וזמן טוב לעצור את הפוסט הזה הוא בדיוק אחרי ההוכחה שקיום נגזרות חלקיות רציפות גורר גזירות, כי זו לא הוכחה טריוויאלית.
 
-פורמלית, הטענה שאני אוכיח היא זו: אם $latex A\subseteq\mathbb{R}^{n}$ היא קבוצה פתוחה כך שלכל $latex a\in A$ הנגזרות החלקיות של $latex F$ קיימות ב-$latex a$ ורציפות בה, אז $latex F$ גזירה בכל נקודה של $latex A$. "קבוצה פתוחה" היא קבוצה $latex A$ כך שלכל $latex a\in A$ קיים "כדור פתוח" סביב $latex a$ שמוכל כולו ב-$latex A$, כלומר יש $latex \varepsilon&gt;0$ כך ש$latex \left|x-a\right|&lt;\varepsilon$ גורר ש-$latex x\in A$.
+פורמלית, הטענה שאני אוכיח היא זו: אם $latex A\subseteq\mathbb{R}^{n}$ היא קבוצה פתוחה כך שלכל $latex a\in A$ הנגזרות החלקיות של $latex F$ קיימות ב-$latex a$ ורציפות בה, אז $latex F$ גזירה בכל נקודה של $latex A$. "קבוצה פתוחה" היא קבוצה $latex A$ כך שלכל $latex a\in A$ קיים "כדור פתוח" סביב $latex a$ שמוכל כולו ב-$latex A$, כלומר יש $latex \varepsilon&gt;0$ כך ש$latex \left\|x-a\right\|&lt;\varepsilon$ גורר ש-$latex x\in A$.
 
-הרעיון הבסיסי פשוט: אם כל הנגזרות החלקיות של $latex F$ קיימות, אנחנו יודעים בדיוק איך $latex DF\left(a\right)$ אמור להיראות: $latex DF\left(a\right)=\left(D_{1}F\left(a\right),\dots,D_{n}F\left(a\right)\right)$. לכן, בהינתן $latex h\in\mathbb{R}^{n}$ כלשהו, $latex DF\left(a\right)\cdot h=\sum D_{i}F\left(a\right)h_{i}$. היעד שלנו הוא להוכיח שמתקיים $latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left|h\right|}=0$. אנחנו לא חייבים לטפל בכל $latex h$ - מספיק לטפל בכל $latex h$ שהוא קטן דיו כך שהכדור הפתוח ברדיוס $latex h$ סביב $latex a$ מוכל כולו ב-$latex A$.
+הרעיון הבסיסי פשוט: אם כל הנגזרות החלקיות של $latex F$ קיימות, אנחנו יודעים בדיוק איך $latex DF\left(a\right)$ אמור להיראות: $latex DF\left(a\right)=\left(D_{1}F\left(a\right),\dots,D_{n}F\left(a\right)\right)$. לכן, בהינתן $latex h\in\mathbb{R}^{n}$ כלשהו, $latex DF\left(a\right)\cdot h=\sum D_{i}F\left(a\right)h_{i}$. היעד שלנו הוא להוכיח שמתקיים $latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left\|h\right\|}=0$. אנחנו לא חייבים לטפל בכל $latex h$ - מספיק לטפל בכל $latex h$ שהוא קטן דיו כך שהכדור הפתוח ברדיוס $latex h$ סביב $latex a$ מוכל כולו ב-$latex A$.
 
 לשם כך אני ארצה לקבל תיאור אחר של $latex F\left(a+h\right)-F\left(a\right)$, כזה שמשתמש בנגזרות החלקיות. האם זה מזכיר לכם משהו? זו סיטואציה דומה לזו של אחד מהמשפטים החשובים ביותר באינפי - משפט הערך הממוצע של לגראנז'. מכיוון שאני הולך להשתמש בו בהמשך, בואו נזכיר אותו. יש לנו פונקציה $latex f:\left[a,b\right]\to\mathbb{R}$ שהיא גזירה לכל הפחות ב-$latex \left(a,b\right)$ ורציפה על כל $latex \left[a,b\right]$. השינוי הממוצע של $latex f$ בכל הקטע הזה שווה בדיוק ל-$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}$. נגזרת, כזכור, היא תיאור של שינוי <strong>רגעי</strong>, ולכן כל עוד $latex a,b$ מרוחקים זה מזה, לא מובטח שהנגזרת בנקודות הללו (אם היא בכלל קיימת) תתאר את השינוי הממוצע הזה. הקסם (ובעיני זה באמת קסם) הוא ש<strong>קיימת</strong> בקטע נקודה שעבורה זה כן עובד: קיימת נקודה $latex c\in\left(a,b\right)$ כך ש-$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}=f^{\prime}\left(c\right)$. דרך אחרת לחשוב על כך היא זו:$latex f\left(b\right)-f\left(a\right)=\left(b-a\right)f^{\prime}\left(c\right)$, כלומר גודל השינוי של הפונקציה בקטע כולו יכול להיגזר מהשינוי הרגעי שלה ברגע נתון אחד - אבל כמובן, צריך לדעת איזה רגע.
 
@@ -120,16 +120,16 @@ $latex F\left(a+h\right)-F\left(a\right)=\sum_{i=1}^{n}F\left(p_{i}\right)-F\lef
 
 נחזור עכשיו אל הגבול שאנחנו רוצים להוכיח:
 
-$latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left|h\right|}=0$
+$latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left\|h\right\|}=0$
 
 נציב בו את מה שקיבלנו, ונקבל:
 
-$latex \lim_{h\to0}\frac{\sum D_{i}F\left(q_{i}\right)h_{i}-\sum D_{i}F\left(a\right)h_{i}}{\left|h\right|}=0$
+$latex \lim_{h\to0}\frac{\sum D_{i}F\left(q_{i}\right)h_{i}-\sum D_{i}F\left(a\right)h_{i}}{\left\|h\right\|}=0$
 
 או, יותר פשוט
 
-$latex \lim_{h\to0}\sum\left(D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)\right)\frac{h_{i}}{\left|h\right|}=0$
+$latex \lim_{h\to0}\sum\left(D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)\right)\frac{h_{i}}{\left\|h\right\|}=0$
 
-הנקודות $latex q_{i}$ תלויות ב-$latex h$; כאשר $latex h$ שואף לאפס, הנקודות הללו שואפות ל-$latex a$ (הוכיחו!). ומכיוון ש-$latex D_{i}F$ רציפה, אז $latex \lim_{q_{i}\to a}D_{i}F\left(q_{i}\right)=D_{i}F\left(a\right)$, כלומר הביטוי $latex D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)$ שואף לאפס. הוא מוכפל בביטוי $latex \frac{h_{i}}{\left|h\right|}$, שהוא כמובן חסום בערכו המוחלט על ידי $latex 1$ (כי $latex \left|h\right|$ גדול מהערך המוחלט של כל אחד מהרכיבים של $latex h$). לכן קיבלנו שהגבול הוא אכן אפס, וזה מה שרצינו.
+הנקודות $latex q_{i}$ תלויות ב-$latex h$; כאשר $latex h$ שואף לאפס, הנקודות הללו שואפות ל-$latex a$ (הוכיחו!). ומכיוון ש-$latex D_{i}F$ רציפה, אז $latex \lim_{q_{i}\to a}D_{i}F\left(q_{i}\right)=D_{i}F\left(a\right)$, כלומר הביטוי $latex D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)$ שואף לאפס. הוא מוכפל בביטוי $latex \frac{h_{i}}{\left\|h\right\|}$, שהוא כמובן חסום בערכו המוחלט על ידי $latex 1$ (כי $latex \left\|h\right\|$ גדול מהערך המוחלט של כל אחד מהרכיבים של $latex h$). לכן קיבלנו שהגבול הוא אכן אפס, וזה מה שרצינו.
 
 לסיכום, הכרנו את הנגזרת, ולמדנו איך לבדוק שהיא קיימת ולחשב אותה בצורה פשוטה יחסית, עבור מחלקה גדולה ויפה של פונקציות ($latex C_{1}$). בפוסט הבא נראה עוד דברים מגניבים שקשורים אליה.

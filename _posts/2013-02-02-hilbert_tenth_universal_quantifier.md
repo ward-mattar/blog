@@ -42,7 +42,7 @@ $latex n!\left(\frac{1}{1\left(1-\frac{1}{u}\right)\cdots\left(1-\frac{n-1}{u}\r
 
 זאת כי ככל שמגדילים את הערך של $latex x$ בביטוי $latex \left(1-\frac{x}{u}\right)$ כך מקטינים את הביטוי, ולכן מגדילים את אחד חלקי הביטוי.
 
-עכשיו, $latex \frac{1}{\left(1-\frac{n}{u}\right)^{n}}=\left(\frac{1}{1-\frac{n}{u}}\right)^{n}$ ולכן כדאי לנו למצוא חסם כלשהו על מה שבפנים, $latex \frac{1}{1-\frac{n}{u}}$. לצורך כך כדאי להיזכר שהדבר הזה נראה כמו סכום של טור גיאומטרי. באופן כללי, אם $latex \left|q\right|&lt;1$, אז מתקיים
+עכשיו, $latex \frac{1}{\left(1-\frac{n}{u}\right)^{n}}=\left(\frac{1}{1-\frac{n}{u}}\right)^{n}$ ולכן כדאי לנו למצוא חסם כלשהו על מה שבפנים, $latex \frac{1}{1-\frac{n}{u}}$. לצורך כך כדאי להיזכר שהדבר הזה נראה כמו סכום של טור גיאומטרי. באופן כללי, אם $latex \left\|q\right\|&lt;1$, אז מתקיים
 
 $latex \sum_{k=0}^{\infty}q^{k}=\frac{1}{1-q}$
 
@@ -116,9 +116,9 @@ $latex \exists c,t,a_{1},\dots,a_{m}$
 
 $latex 1+ct=\prod_{k=1}^{y}1+kt$
 
-$latex \wedge t=Q\left(y,u,x_{1},\dots,x_{n}\right)!\wedge1+ct|\prod_{j=1}^{u}\left(a_{1}-j\right)$
+$latex \wedge t=Q\left(y,u,x_{1},\dots,x_{n}\right)!\wedge1+ct\|\prod_{j=1}^{u}\left(a_{1}-j\right)$
 
-$latex \wedge\dots\wedge1+ct|\prod_{j=1}^{u}\left(a_{m}-j\right)$
+$latex \wedge\dots\wedge1+ct\|\prod_{j=1}^{u}\left(a_{m}-j\right)$
 
 $latex \wedge P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)\equiv_{1+ct}0$
 
@@ -130,9 +130,9 @@ $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;y$
 
 אם $latex z\le y$ וגם $latex y_{1},\dots,y_{m}\le u$ אז
 
-$latex \left|P\left(x_{1},\dots,x_{n},z,y,y_{1},\dots,y_{m}\right)\right|\le Q\left(y,u,x_{1},\dots,x_{n}\right)$
+$latex \left\|P\left(x_{1},\dots,x_{n},z,y,y_{1},\dots,y_{m}\right)\right\|\le Q\left(y,u,x_{1},\dots,x_{n}\right)$
 
-זהו. אם נצליח לעשות את זה, גמרנו, שכן בבירור הביטוי המפלצתי שכתבתי הוא דיופנטי - הוא כולל רק את $latex \prod\left(a+bk\right)$ שכבר ראינו שהיא דיופנטית, ואת היחס $latex a|b$ ("$latex a$ מחלק את $latex b$") שכבר ראינו שהוא דיופנטי, ואת היחס $latex \equiv$ שכבר ראינו שהוא דיופנטי, ואת הפונקציה $latex n!$ שכבר ראינו שהיא דיופנטית.
+זהו. אם נצליח לעשות את זה, גמרנו, שכן בבירור הביטוי המפלצתי שכתבתי הוא דיופנטי - הוא כולל רק את $latex \prod\left(a+bk\right)$ שכבר ראינו שהיא דיופנטית, ואת היחס $latex a\|b$ ("$latex a$ מחלק את $latex b$") שכבר ראינו שהוא דיופנטי, ואת היחס $latex \equiv$ שכבר ראינו שהוא דיופנטי, ואת הפונקציה $latex n!$ שכבר ראינו שהיא דיופנטית.
 
 עכשיו מכיוון שזו הוכחת שקילות, צריך להוכיח שני כיוונים. בואו נניח קודם כל שיש לנו $latex x_{1},\dots,x_{n},y,u$ שעבורם הביטוי הדיופנטי המפלצתי הוא נכון (כלומר, יש פתרון למשוואות שלו) ונראה שקיים ערך של $latex z$ שחסום על ידי $latex y$ כך שעבורו קיימים ערכים של $latex y_{i}$-ים שחסומים על ידי $latex u$ כך ש-$latex P\left(x_{1},\dots,x_{n},z,y,y_{1},\dots,y_{m}\right)=0$.
 
@@ -142,7 +142,7 @@ $latex y_{i}^{\left(k\right)}=a_{i}\mbox{ mod }p_{k}$
 
 דהיינו, $latex y_{i}^{\left(k\right)}$ מתקבל מחלוקת $latex a_{i}$ ב-$latex p_{k}$ ולקיחת השארית. אני טוען שהערכים הללו אכן מספקים את $latex P$, ושהם לא גדולים מ-$latex u$, כלומר $latex 1\le y_{i}^{\left(k\right)}\le u$. מדוע?
 
-ובכן, ראשית נטפל בעניין הגודל. שימו לב לכך ש-$latex p_{k}|1+kt$ (כי בחרנו את $latex p_{k}$ להיות גורם של הביטוי הימני), וש-$latex 1+kt|1+ct$ (זה נובע מייד מהמשוואה הראשונה בביטוי המפלצתי) וש-$latex 1+ct|\prod_{j=1}^{u}\left(a_{i}-j\right)$ (זו אחת מהמשוואות בביטוי המפלצתי). מסקנה: $latex p_{k}|\prod_{j=1}^{u}\left(a_{i}-j\right)$, אבל מכיוון שלקחנו את $latex p_{k}$ להיות ראשוני, אם הוא מחלק מכפלה הוא מחלק אחד מאיבריה, כלומר יש $latex j$ ספציפי כלשהו כך ש-$latex p_{k}|a_{i}-j$. מסקנה: $latex a_{i}\equiv_{p_{k}}j\equiv_{p_{k}}y_{i}^{\left(k\right)}$.
+ובכן, ראשית נטפל בעניין הגודל. שימו לב לכך ש-$latex p_{k}\|1+kt$ (כי בחרנו את $latex p_{k}$ להיות גורם של הביטוי הימני), וש-$latex 1+kt\|1+ct$ (זה נובע מייד מהמשוואה הראשונה בביטוי המפלצתי) וש-$latex 1+ct\|\prod_{j=1}^{u}\left(a_{i}-j\right)$ (זו אחת מהמשוואות בביטוי המפלצתי). מסקנה: $latex p_{k}\|\prod_{j=1}^{u}\left(a_{i}-j\right)$, אבל מכיוון שלקחנו את $latex p_{k}$ להיות ראשוני, אם הוא מחלק מכפלה הוא מחלק אחד מאיבריה, כלומר יש $latex j$ ספציפי כלשהו כך ש-$latex p_{k}\|a_{i}-j$. מסקנה: $latex a_{i}\equiv_{p_{k}}j\equiv_{p_{k}}y_{i}^{\left(k\right)}$.
 
 אם אצליח לשכנע אתכם ש-$latex y_{i}^{\left(k\right)}=j$ זה יראה ש-$latex y_{i}^{\left(k\right)}$ קטן מספיק, כי $latex 1\le j\le u$. כעת, $latex y_{i}^{\left(k\right)}$ התקבל מחלוקה של משהו ב-$latex p_{k}$ ולקיחת השארית, כלומר הוא אוטומטית קטן מ-$latex p_{k}$. אם נוכיח ש-$latex j&lt;p_{k}$ זה יסיים את העניין כי שני מספרים ששקולים מודולו $latex p_{k}$ ושניהם קטנים מ-$latex p_{k}$ חייבים להיות שווים. כדי להראות ש-$latex j&lt;p_{k}$ מספיק להראות ש-$latex u&lt;p_{k}$. כעת נכניס את $latex Q$ לתמונה: כזכור, $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;u$, ולכן די לנו להראות ש-$latex p_{k}&gt;Q\left(y,u,x_{1},\dots,x_{n}\right)$. איך נעשה את זה? ובכן, בואו נסתכל על הביטוי המפלצתי ונראה איך $latex Q$ בא לידי ביטוי בו.
 
@@ -170,7 +170,7 @@ $latex P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\
 
 עכשיו, השוויון שלעיל לא אומר ש-$latex P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\right)}\right)=0$, רק שקול לאפס מודולו $latex p_{k}$. כדי להראות שוויון לאפס צריך להראות שהביטוי הזה גם קטן מ-$latex p_{k}$. אבל זה שוב נובע מ-$latex Q$, הפעם מהתכונה השלישית שלו:
 
-$latex \left|P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\right)}\right)\right|\le Q\left(y,u,x_{1},\dots,x_{n}\right)&lt;p_{k}$
+$latex \left\|P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\right)}\right)\right\|\le Q\left(y,u,x_{1},\dots,x_{n}\right)&lt;p_{k}$
 
 וסיימנו את כיוון הגרירה הראשון, לפיו אם $latex x_{1},\dots,x_{n}$ פותרים את הביטוי המפלצתי הם פותרים את $latex P$ ה"רגיל".
 
@@ -182,17 +182,17 @@ $latex P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\
 
 נסמן בתור $latex u$ מספר שגדול מכל ה-$latex y_{i}^{\left(k\right)}$-ים הללו. כעת, נגדיר $latex t=Q\left(y,u,x_{1},\dots,x_{n}\right)!$. נותר לנו להגדיר את $latex c$ ואת ה-$latex a_{i}$-ים.
 
-כעת, $latex 1+kt\equiv_{t}1$ ולכן $latex \prod_{k=1}^{y}\left(1+kt\right)\equiv_{t}1$. המשמעות הישירה של השקילות הזו היא שקיים $latex c$ כך ש-$latex \prod_{k=1}^{y}\left(1+kt\right)=1+ct$, כך שמצאנו את ה-$latex c$ שלנו והוא מקיים את המשוואה הראשונה בביטוי המפלצתי. נשאר רק לבחור את ה-$latex a_{i}$-ים כך שיקיימו את המשוואות $latex 1+ct|\prod_{j=1}^{u}\left(a_{i}-j\right)$, וכך שיתקיים $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)\equiv_{1+ct}0$. זה השלב שידרוש תחכום ושימוש במשפט השאריות הסיני.
+כעת, $latex 1+kt\equiv_{t}1$ ולכן $latex \prod_{k=1}^{y}\left(1+kt\right)\equiv_{t}1$. המשמעות הישירה של השקילות הזו היא שקיים $latex c$ כך ש-$latex \prod_{k=1}^{y}\left(1+kt\right)=1+ct$, כך שמצאנו את ה-$latex c$ שלנו והוא מקיים את המשוואה הראשונה בביטוי המפלצתי. נשאר רק לבחור את ה-$latex a_{i}$-ים כך שיקיימו את המשוואות $latex 1+ct\|\prod_{j=1}^{u}\left(a_{i}-j\right)$, וכך שיתקיים $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)\equiv_{1+ct}0$. זה השלב שידרוש תחכום ושימוש במשפט השאריות הסיני.
 
-מה שאני רוצה לעשות הוא להגדיר את $latex a_{i}$ להיות הפתרון למערכת המשוואות $latex a_{i}\equiv_{1+kt}y_{i}^{\left(k\right)}$, $latex 1\le k\le y$ (זה לא כל כך מפתיע מבחינה רעיונית - אם אתם עוד מצליחים לעקוב אחרי מה שקורה בהוכחה ברמת התמונה הגדולה - אני בקושי מצליח - אפשר לראות שה-$latex a_{i}$-ים הללו אמורים לקודד בתוכם איכשהו את הפתרונות ל-$latex P$ עבור כל בחירה של $latex k$ בתחום המתאים). כדי להראות שקיים פתרון למערכת הזו צריך להוכיח שכל המודולוסים זרים, כלומר ש-$latex \left(1+kt,1+lt\right)=1$ עבור $latex 1\le l&lt;k\le y$. נניח בשלילה שיש איזה ראשוני $latex p$ שמחלק את שניהם, אז הוא מחלק גם את ההפרש שלהם, כלומר $latex p|t\left(k-l\right)$. שימו לב ש-$latex p$ לא יכול לחלק את $latex t$, אחרת הוא לא היה מחלק את $latex 1+kt$, ולכן בהכרח $latex p|k-l$. בפרט זה אומר ש-$latex p&lt;y$. כעת, תעלול! הגדרנו $latex t=Q\left(y,u,x_{1},\dots,x_{n}\right)!$, והרי $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;y$, ולכן כל מספר עד $latex y$ נכלל במכפלה שמרכיבה את $latex t$, ולכן $latex p$ חייב לחלק את $latex t$ וזו סתירה. מסקנה: $latex \left(1+kt,1+lt\right)=1$ ואפשר להשתמש במשפט השאריות הסיני כפי שרצינו כדי למצוא את ה-$latex a_{i}$-ים.
+מה שאני רוצה לעשות הוא להגדיר את $latex a_{i}$ להיות הפתרון למערכת המשוואות $latex a_{i}\equiv_{1+kt}y_{i}^{\left(k\right)}$, $latex 1\le k\le y$ (זה לא כל כך מפתיע מבחינה רעיונית - אם אתם עוד מצליחים לעקוב אחרי מה שקורה בהוכחה ברמת התמונה הגדולה - אני בקושי מצליח - אפשר לראות שה-$latex a_{i}$-ים הללו אמורים לקודד בתוכם איכשהו את הפתרונות ל-$latex P$ עבור כל בחירה של $latex k$ בתחום המתאים). כדי להראות שקיים פתרון למערכת הזו צריך להוכיח שכל המודולוסים זרים, כלומר ש-$latex \left(1+kt,1+lt\right)=1$ עבור $latex 1\le l&lt;k\le y$. נניח בשלילה שיש איזה ראשוני $latex p$ שמחלק את שניהם, אז הוא מחלק גם את ההפרש שלהם, כלומר $latex p\|t\left(k-l\right)$. שימו לב ש-$latex p$ לא יכול לחלק את $latex t$, אחרת הוא לא היה מחלק את $latex 1+kt$, ולכן בהכרח $latex p\|k-l$. בפרט זה אומר ש-$latex p&lt;y$. כעת, תעלול! הגדרנו $latex t=Q\left(y,u,x_{1},\dots,x_{n}\right)!$, והרי $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;y$, ולכן כל מספר עד $latex y$ נכלל במכפלה שמרכיבה את $latex t$, ולכן $latex p$ חייב לחלק את $latex t$ וזו סתירה. מסקנה: $latex \left(1+kt,1+lt\right)=1$ ואפשר להשתמש במשפט השאריות הסיני כפי שרצינו כדי למצוא את ה-$latex a_{i}$-ים.
 
 למה זה עזר לנו? ובכן, שימו לב כי לכל $latex k$ אנחנו מקבלים:
 
 $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)\equiv_{1+kt}P\left(x_{1},\dots,x_{n},k,y,y_{1}^{\left(k\right)},\dots,y_{m}^{\left(k\right)}\right)=0$
 
-כלומר, לכל $latex 1\le k\le y$ קיבלנו ש-$latex 1+kt$ מחלק את $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)$. מכיוון שכל ה-$latex 1+kt$-ים זרים זה לזה, אפשר להשתמש במשפט נוסף: אם שני מספרים זרים זה לזה מחלקים את אותו מספר, גם המכפלה שלהם מחלקת אותו. בסימנים: אם $latex a|c$ וגם $latex b|c$ וגם $latex \left(a,b\right)=1$ אז $latex ab|c$.
+כלומר, לכל $latex 1\le k\le y$ קיבלנו ש-$latex 1+kt$ מחלק את $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)$. מכיוון שכל ה-$latex 1+kt$-ים זרים זה לזה, אפשר להשתמש במשפט נוסף: אם שני מספרים זרים זה לזה מחלקים את אותו מספר, גם המכפלה שלהם מחלקת אותו. בסימנים: אם $latex a\|c$ וגם $latex b\|c$ וגם $latex \left(a,b\right)=1$ אז $latex ab\|c$.
 
-המסקנה שלנו היא ש-$latex 1+ct=\prod_{k=1}^{y}1+kt$ מחלק את $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)$, וזו בדיוק המשוואה האחרונה בביטוי המפלצתי. כמעט סיימנו. נשאר רק להראות שמתקיים $latex 1+ct|\prod_{j=1}^{u}\left(a_{i}-j\right)$ לכל $latex a_{i}$. לשם כך מספיק, כפי שראינו, להראות שלכל $latex a_{i}$ ולכל $latex k$ מתקיים $latex 1+kt|\prod_{j=1}^{u}\left(a_{i}-j\right)$. כדי לחלק מכפלה מספיק לחלק איבר אחד שלה, כלומר מספיק לנו להראות שלכל $latex a_{i}$ ולכל $latex k$ קיים $latex j$ כך ש-$latex 1+kt|a_{i}-j$, אבל זה קל: מכיוון שהגדרנו את $latex a_{i}$ להיות איבר שמקיים $latex a_{i}\equiv_{1+kt}y_{i}^{\left(k\right)}$ זה אומר ש-$latex 1+kt$ מחלק את $latex a_{i}-y_{i}^{\left(k\right)}$ ולכן $latex y_{i}^{\left(k\right)}$ הוא ה-$latex j$ שלנו; רק צריך לשים לב לכך ש-$latex 1\le y_{i}^{\left(k\right)}\le u$ ולכן הוא בתחום המתאים (הנה לנו הסיבה שבגללה היה חשוב להגביל את הערכים של ה-$latex y_{i}$-ים).
+המסקנה שלנו היא ש-$latex 1+ct=\prod_{k=1}^{y}1+kt$ מחלק את $latex P\left(x_{1},\dots,x_{n},c,y,a_{1},\dots,a_{m}\right)$, וזו בדיוק המשוואה האחרונה בביטוי המפלצתי. כמעט סיימנו. נשאר רק להראות שמתקיים $latex 1+ct\|\prod_{j=1}^{u}\left(a_{i}-j\right)$ לכל $latex a_{i}$. לשם כך מספיק, כפי שראינו, להראות שלכל $latex a_{i}$ ולכל $latex k$ מתקיים $latex 1+kt\|\prod_{j=1}^{u}\left(a_{i}-j\right)$. כדי לחלק מכפלה מספיק לחלק איבר אחד שלה, כלומר מספיק לנו להראות שלכל $latex a_{i}$ ולכל $latex k$ קיים $latex j$ כך ש-$latex 1+kt\|a_{i}-j$, אבל זה קל: מכיוון שהגדרנו את $latex a_{i}$ להיות איבר שמקיים $latex a_{i}\equiv_{1+kt}y_{i}^{\left(k\right)}$ זה אומר ש-$latex 1+kt$ מחלק את $latex a_{i}-y_{i}^{\left(k\right)}$ ולכן $latex y_{i}^{\left(k\right)}$ הוא ה-$latex j$ שלנו; רק צריך לשים לב לכך ש-$latex 1\le y_{i}^{\left(k\right)}\le u$ ולכן הוא בתחום המתאים (הנה לנו הסיבה שבגללה היה חשוב להגביל את הערכים של ה-$latex y_{i}$-ים).
 
 סיימנו!
 
@@ -210,7 +210,7 @@ $latex t_{r}=cx_{1}^{q_{1}}\cdots x_{n}^{q_{n}}k^{a}y^{b}y_{1}^{s_{1}}\cdots y_{
 
 בואו נגדיר מונום חדש, $latex u_{r}$, על בסיס $latex t_{r}$:
 
-$latex u_{r}=\left|c\right|y^{a+b}x_{1}^{q_{1}}\cdots x_{n}^{q_{n}}u^{s_{1}+\dots s_{m}}$
+$latex u_{r}=\left\|c\right\|y^{a+b}x_{1}^{q_{1}}\cdots x_{n}^{q_{n}}u^{s_{1}+\dots s_{m}}$
 
 ועכשיו נגדיר את $latex Q$:
 
@@ -218,16 +218,16 @@ $latex Q\left(y,u,x_{1},\dots,x_{n}\right)=u+y+\sum_{r=1}^{N}u_{r}$
 
 בבירור מתקיים $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;u$ וגם $latex Q\left(y,u,x_{1},\dots,x_{n}\right)&gt;y$ רק מעצם הבניה (זכרו שכל הערכים שאפשר להציב בפולינום הם חיוביים). צריך רק להסביר למה מתקיים
 
-$latex \left|P\left(x_{1},\dots,x_{n},k,y,y_{1},\dots,y_{m}\right)\right|\le Q\left(y,u,x_{1},\dots,x_{n}\right)$
+$latex \left\|P\left(x_{1},\dots,x_{n},k,y,y_{1},\dots,y_{m}\right)\right\|\le Q\left(y,u,x_{1},\dots,x_{n}\right)$
 
 וזאת, כזכור, בתנאי ש-$latex k\le y$ וגם $latex y_{1},\dots,y_{m}\le u$.
 
 אז למה זה נכון? ובכן, עם אי-שוויון המשולש נקבל:
 
-$latex \left|P\left(x_{1},\dots,x_{n},k,y,y_{1},\dots,y_{m}\right)\right|\le\sum_{r=1}^{N}\left|t_{r}\right|$
+$latex \left\|P\left(x_{1},\dots,x_{n},k,y,y_{1},\dots,y_{m}\right)\right\|\le\sum_{r=1}^{N}\left\|t_{r}\right\|$
 
-לכן מספיק להשוות מונום-מונום ולהראות ש-$latex \left|t_{r}\right|\le u_{r}$.
+לכן מספיק להשוות מונום-מונום ולהראות ש-$latex \left\|t_{r}\right\|\le u_{r}$.
 
-את $latex t_{r}$ אפשר להפריד לשלושה חלקים. הראשון הוא $latex \left|c\right|x_{1}^{q_{1}}\cdots x_{n}^{q_{n}}$ שקיים כמו שהוא גם ב-$latex u_{r}$; השני הוא $latex k^{a}y^{b}$ שמכוסה על ידי $latex y^{a+b}$ של $latex u_{r}$ בתנאי ש-$latex k\le y$; והשלישי הוא $latex y_{1}^{s_{1}}\cdots y_{m}^{s_{m}}$ שמכוסה על ידי $latex u^{s_{1}+\dots s_{m}}$ בתנאי ש-$latex y_{i}\le u$. זה מסיים את הבניה של $latex Q$, ולכן מסיים את ההוכחה של הטענה לפיה אפשר לבנות ביטויים דיופנטיים עם הכמת האוניברסלי החסום, ולכן מסיים את ההוכחה שהבעיה העשירית של הילברט לא כריעה!
+את $latex t_{r}$ אפשר להפריד לשלושה חלקים. הראשון הוא $latex \left\|c\right\|x_{1}^{q_{1}}\cdots x_{n}^{q_{n}}$ שקיים כמו שהוא גם ב-$latex u_{r}$; השני הוא $latex k^{a}y^{b}$ שמכוסה על ידי $latex y^{a+b}$ של $latex u_{r}$ בתנאי ש-$latex k\le y$; והשלישי הוא $latex y_{1}^{s_{1}}\cdots y_{m}^{s_{m}}$ שמכוסה על ידי $latex u^{s_{1}+\dots s_{m}}$ בתנאי ש-$latex y_{i}\le u$. זה מסיים את הבניה של $latex Q$, ולכן מסיים את ההוכחה של הטענה לפיה אפשר לבנות ביטויים דיופנטיים עם הכמת האוניברסלי החסום, ולכן מסיים את ההוכחה שהבעיה העשירית של הילברט לא כריעה!
 
 לא ברור לי כמה מכם הצליחו לשרוד איתי עד לשלב הזה; אכתוב עוד פוסט סיכום (קצר) כדי לחזור על מה שהלך פה ממעוף הציפור ולסיים עם בונוס קטן שקשור למספרים הראשוניים.

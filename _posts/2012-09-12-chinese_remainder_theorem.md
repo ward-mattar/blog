@@ -95,7 +95,7 @@ $latex \vdots$
 
 $latex x\equiv_{m_{k}}a_{k}$
 
-יש פתרון בתחום $latex 0\le x&lt;m$ והפתרון הזה הוא <strong>יחיד</strong> בתחום הזה (ולכן קבוצת כל הפתרונות למשוואה היא הקבוצה $latex \left\{ x+tm\ |\ t\in\mathbb{Z}\right\} $, אבל זה פחות חשוב).
+יש פתרון בתחום $latex 0\le x&lt;m$ והפתרון הזה הוא <strong>יחיד</strong> בתחום הזה (ולכן קבוצת כל הפתרונות למשוואה היא הקבוצה $latex \left\{ x+tm\ \|\ t\in\mathbb{Z}\right\} $, אבל זה פחות חשוב).
 
 ההוכחה של המשפט הכללי דומה לפתרון של המקרה הפרטי. קודם כל נוכיח שבכלל יש פתרון, כי זה העיקר. לכל $latex i$, נגדיר $latex n_{i}=\frac{m}{m_{i}}$, כלומר המכפלה של כל המודולוסים חוץ מ-$latex m_{i}$. כעת, $latex m_{i}$ ו-$latex n_{i}$ הם זרים (כי $latex m_{i}$ זר לכל הגורמים של $latex n_{i}$). מכאן נובע (לזה אתייחס בהמשך) שקיים מספר $latex d_{i}$ כך ש-$latex n_{i}d_{i}\equiv_{m_{i}}1$. בואו לצורך נוחות בלבד נסמן $latex e_{i}=n_{i}d_{i}$. שימו לב ש-$latex e_{i}$ מקיים את התכונה הבאה:
 
@@ -123,7 +123,7 @@ $latex \delta_{ij}=\begin{cases}1 &amp; i=j\\0 &amp; i\ne j\end{cases}$
 
 אבל אתם מכירים מתמטיקאים. אם הכללנו משהו וההכללה עובדת טוב, למה לא להכליל עוד? כרגע המשפט מנוסח רק על החוגים $latex \mathbb{Z}_{n}$, אבל למה לא לקחת את זה צעד אחד קדימה?
 
-עד כה זירת המשחק שלנו הייתה $latex \mathbb{Z}$, המספרים השלמים. ההכללה הטבעית של $latex \mathbb{Z}$ היא חוג קומוטטיבי עם יחידה $latex R$. כעת, מה היחס בין $latex \mathbb{Z}_{n}$ ובין $latex \mathbb{Z}$? פשוט מאוד - $latex \mathbb{Z}_{n}$ הוא <strong>חוג מנה</strong> של $latex \mathbb{Z}$ שמתקבל על ידי חלוקה באידאל $latex n\mathbb{Z}=\left\{ na\ |\ a\in\mathbb{Z}\right\} $ (כלומר, $latex \mathbb{Z}_{n}=\mathbb{Z}/n\mathbb{Z}$). אם כן, יהיו $latex A_{1},\dots,A_{k}$ אידאלים ב-$latex R$ (תתי-חוגים שבולעים ביחס לפעולת הכפל, כלומר $latex ar\in A$ לכל $latex a\in A$ ו-$latex r\in R$), והאנלוגים של $latex \mathbb{Z}_{m_{i}}$ יהיו חוגי המנה $latex R/A_{i}$.
+עד כה זירת המשחק שלנו הייתה $latex \mathbb{Z}$, המספרים השלמים. ההכללה הטבעית של $latex \mathbb{Z}$ היא חוג קומוטטיבי עם יחידה $latex R$. כעת, מה היחס בין $latex \mathbb{Z}_{n}$ ובין $latex \mathbb{Z}$? פשוט מאוד - $latex \mathbb{Z}_{n}$ הוא <strong>חוג מנה</strong> של $latex \mathbb{Z}$ שמתקבל על ידי חלוקה באידאל $latex n\mathbb{Z}=\left\{ na\ \|\ a\in\mathbb{Z}\right\} $ (כלומר, $latex \mathbb{Z}_{n}=\mathbb{Z}/n\mathbb{Z}$). אם כן, יהיו $latex A_{1},\dots,A_{k}$ אידאלים ב-$latex R$ (תתי-חוגים שבולעים ביחס לפעולת הכפל, כלומר $latex ar\in A$ לכל $latex a\in A$ ו-$latex r\in R$), והאנלוגים של $latex \mathbb{Z}_{m_{i}}$ יהיו חוגי המנה $latex R/A_{i}$.
 
 אנו נזקקים לאנלוג לתכונת ה-"ה-$latex m_{i}$-ים זרים בזוגות". אין משמעות לאמירה כמו "ה-$latex A_{i}$-ים זרים בזוגות" כי "זר" דורש מושג של חלוקה שלא קיים באידאלים באופן כללי. לכן אולי כדאי לנסות ולהיזכר <strong>למה</strong> היה לנו צורך שה-$latex m_{i}$-ים יהיו זרים בזוגות ולהכליל את התכונה הזו לחוגים. הצורך היה כדי שנוכל להשתמש בטענה המתמטית ההיא על כך שאם $latex a,b$ זרים אז קיימים $latex x,y$ כך ש-$latex ax+by=1$. כשזה מנוסח בלשון ה-$latex \mathbb{Z}_{n}$-ים, זו בעצם הטענה שאם $latex a,b$ זרים אז $latex a\mathbb{Z}+b\mathbb{Z}=\mathbb{Z}$, כשחיבור אידאלים הוא במובן הטבעי המתבקש - איברי הסכום של האידאלים הם סכומים של איבר מהאידאל הראשון ואיבר מהאידאל השני.
 

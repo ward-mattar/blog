@@ -15,7 +15,7 @@ tags:
 פתרון בכוח גס הוא ברור - עוברים על כל המספרים מ-1 עד 1,000 ובודקים לכל אחד מהם אם הוא מקיים את ששת התנאים. זה לא יעיל במיוחד מבחינת זמן ריצה באופן כללי, אבל במספרים עד 1,000 זמן הריצה לא יהיה מורגש בכלל - התוכניות יעצרו מייד עם התשובה הנכונה - כך שלעת עתה אני עדיין לא נכנס לפרטים הללו. כמה מסובך לתכנת את הפתרון הזה? ובכן, ברובי זה פתרון של שורה אחת:
 
 [code language="ruby"]
-puts (1..1000).reject{|n| (2..7).find{|k| (n % k) != k-1}}
+puts (1..1000).reject{\|n\| (2..7).find{\|k\| (n % k) != k-1}}
 [/code]
 
 לא יכלתי להמנע מלתת קוד של שורה אחת, למען ההתלהבות שבדבר, אבל בפועל התוכנית שכתבתי הכילה טיפה יותר שורות:
@@ -24,7 +24,7 @@ puts (1..1000).reject{|n| (2..7).find{|k| (n % k) != k-1}}
 MAX_STEPS = 1000
 JUMP_SIZES = (2..7)
 
-puts (1..MAX_STEPS).reject{|n| JUMP_SIZES.find{|k| (n % k) != k-1}}
+puts (1..MAX_STEPS).reject{\|n\| JUMP_SIZES.find{\|k\| (n % k) != k-1}}
 [/code]
 
 חשוב לי להדגיש שהקטע הזה עם לתת שמות משמעותיים למספרי קסם הוא <strong>קריטי</strong> מבחינתי, אפילו אם המחיר הוא קפיצה מפתרון של שורה אחת לפתרון של כמה שורות.
@@ -44,7 +44,7 @@ puts (1..MAX_STEPS).reject{|n| JUMP_SIZES.find{|k| (n % k) != k-1}}
 gives_correct_remainder :: [Int] -&gt; Int -&gt; Bool
 gives_correct_remainder ms a = length bad_ms == 0
   where
-    bad_ms = [m | m &lt;- ms, (a `mod` m) /= m-1]
+    bad_ms = [m \| m &lt;- ms, (a `mod` m) /= m-1]
 
 max_steps = 1000
 jump_sizes = [2..7]
@@ -140,10 +140,10 @@ main = do
 [code language="ruby"]
 class Array
   def sum
-    self.inject(0){|sum, x| sum+x}
+    self.inject(0){\|sum, x\| sum+x}
   end
   def prod
-    self.inject(1){|prod, x| prod*x}
+    self.inject(1){\|prod, x\| prod*x}
   end
 end
 
@@ -164,8 +164,8 @@ end
 
 def chinese_remainder_theorem(a_vector, m_vector)
   b_m = m_vector.prod
-  y_vector = m_vector.collect{|m_i| t=(b_m / m_i); t*t.inverse_modulo(m_i)}
-  return (0...a_vector.length).collect{|i| a_vector[i]*y_vector[i]}.sum % b_m
+  y_vector = m_vector.collect{\|m_i\| t=(b_m / m_i); t*t.inverse_modulo(m_i)}
+  return (0...a_vector.length).collect{\|i\| a_vector[i]*y_vector[i]}.sum % b_m
 end
 
 puts chinese_remainder_theorem([2,3,4,6],[3,4,5,7])

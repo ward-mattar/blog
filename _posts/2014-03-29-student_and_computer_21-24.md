@@ -27,7 +27,7 @@ tags:
 [ruby]
 class Array
   def exist?
-    each{|x| return true if yield(x)}
+    each{\|x\| return true if yield(x)}
     false
   end
   def sum
@@ -35,8 +35,8 @@ class Array
   end
 end
 
-sides = ARGV.collect{|x| x.to_i}
-print &quot;il&quot; if sides.exist?{|a| 2*a &gt; sides.sum}
+sides = ARGV.collect{\|x\| x.to_i}
+print &quot;il&quot; if sides.exist?{\|a\| 2*a &gt; sides.sum}
 puts &quot;legal triangle&quot;
 [/ruby]
 
@@ -50,7 +50,7 @@ puts &quot;legal triangle&quot;
 כאן אני קצת תוהה מה השאלה הזו עושה בחלק השני של הספר - היא קלה ולא מחכימה. אבל מילא. הפתרון הוא של שורה קצרה אחת וזהו:
 
 [ruby]
-a, b = ARGV.collect{|x| x.to_i}
+a, b = ARGV.collect{\|x\| x.to_i}
 puts (a/b) + 1
 [/ruby]
 

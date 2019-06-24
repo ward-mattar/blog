@@ -19,49 +19,49 @@ tags:
 
 ארחיב על הרעיון הכללי בהמשך, אבל בינתיים רק אציין את העובדות הבאות: ראשית, מערכת קוונטית לא חייבת להיות כולה באותו המקום. אם יש לנו מערכת של שני קיוביטים, אין מניעה עקרונית שאחד הקיוביטים יהיה עם אליס והשני יהיה עם בוב, למרות המרחק הפיזי הגדול בין אליס ובוב. שנית, מדידה של המערכת משפיעה על המערכת "בבת אחת" עבור כל מי שמחזיק בחלק מהמערכת; דהיינו, אם אליס מודדת את הביט שלה, המערכת כולה מושפעת מייד וגם בוב "ירגיש" את ההשפעה הזו, עד כמה שהוא יכול להרגיש אותה בהתחשב בכך שאין לו את הביט שאליס מדדה.
 
-אז מה שקורה הוא הדבר הבא: ראשית, כשאליס ובוב נפגשים כדי לקבוע אסטרטגיה ולהחליף חפצים, הם משתפים ביניהם מערכת קוונטית של שני קיוביטים שנמצאת במצב הבא: $latex \left|00\right\rangle +\left|11\right\rangle $. אני מזכיר שהסימון הזה הוא דרך מקוצרת לכתוב $latex  \frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$ שהוא בתורו דרך מקוצרת לכתוב את הצירוף הלינארי הכללי $latex \frac{1}{\sqrt{2}}\cdot\left|00\right\rangle +0\cdot\left|10\right\rangle +0\cdot\left|01\right\rangle +\frac{1}{\sqrt{2}}\cdot\left|11\right\rangle $ שהוא בתורו דרך מקוצרת לכתוב $latex \frac{1}{\sqrt{2}}\cdot\left|0\right\rangle \otimes\left|0\right\rangle +0\cdot\left|1\right\rangle \otimes\left|0\right\rangle +0\cdot\left|0\right\rangle \otimes\left|1\right\rangle +\frac{1}{\sqrt{2}}\cdot\left|1\right\rangle \otimes\left|1\right\rangle $. נראה לי שהכתיב של $latex \left|00\right\rangle +\left|11\right\rangle $ עדיף. יש מישהו בקהל שרוצה להעיר עוד הערות על ענייני סימון?
+אז מה שקורה הוא הדבר הבא: ראשית, כשאליס ובוב נפגשים כדי לקבוע אסטרטגיה ולהחליף חפצים, הם משתפים ביניהם מערכת קוונטית של שני קיוביטים שנמצאת במצב הבא: $latex \left\|00\right\rangle +\left\|11\right\rangle $. אני מזכיר שהסימון הזה הוא דרך מקוצרת לכתוב $latex  \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$ שהוא בתורו דרך מקוצרת לכתוב את הצירוף הלינארי הכללי $latex \frac{1}{\sqrt{2}}\cdot\left\|00\right\rangle +0\cdot\left\|10\right\rangle +0\cdot\left\|01\right\rangle +\frac{1}{\sqrt{2}}\cdot\left\|11\right\rangle $ שהוא בתורו דרך מקוצרת לכתוב $latex \frac{1}{\sqrt{2}}\cdot\left\|0\right\rangle \otimes\left\|0\right\rangle +0\cdot\left\|1\right\rangle \otimes\left\|0\right\rangle +0\cdot\left\|0\right\rangle \otimes\left\|1\right\rangle +\frac{1}{\sqrt{2}}\cdot\left\|1\right\rangle \otimes\left\|1\right\rangle $. נראה לי שהכתיב של $latex \left\|00\right\rangle +\left\|11\right\rangle $ עדיף. יש מישהו בקהל שרוצה להעיר עוד הערות על ענייני סימון?
 
-המצב הקוונטי $latex \left|00\right\rangle +\left|11\right\rangle $ הוא מעניין מכיוון שהוא מצביע על "תיאום" בין שני הקיוביטים שמעורבים בו. אם נמדוד את אחד מהביטים ונגרום לו לקרוס, זה יגרום גם לביט השני לקרוס לאותו ערך שנמדד כמו של הביט הראשון. זה יוצר מעין <strong>תיאום בו זמני</strong> בין אליס ובוב, אפילו אם הם נמצאים במרחק גדול זו מזה. על ההשלכות הפילוסופיות-פיזיקליות של זה אדבר בהמשך, בינתיים אני רוצה להסביר איך זה עוזר לנו במשחק.
+המצב הקוונטי $latex \left\|00\right\rangle +\left\|11\right\rangle $ הוא מעניין מכיוון שהוא מצביע על "תיאום" בין שני הקיוביטים שמעורבים בו. אם נמדוד את אחד מהביטים ונגרום לו לקרוס, זה יגרום גם לביט השני לקרוס לאותו ערך שנמדד כמו של הביט הראשון. זה יוצר מעין <strong>תיאום בו זמני</strong> בין אליס ובוב, אפילו אם הם נמצאים במרחק גדול זו מזה. על ההשלכות הפילוסופיות-פיזיקליות של זה אדבר בהמשך, בינתיים אני רוצה להסביר איך זה עוזר לנו במשחק.
 
-האינטואיציה הראשונית היא שאליס תוכל להעביר לבוב את המידע על הביט $latex x$ שקיבלה. איך? אם הביט הוא 0 היא תפעיל טרנספורמציה על המצב הקוונטי שלה שתהפוך אותו ל-$latex \left|00\right\rangle $, ואחרת היא תפעיל עליו טרנספורמציה שתהפוך אותו ל-$latex \left|11\right\rangle $. בוב ימדוד את המצב שלו, יקבל תשובה בודאות של 100 אחוז, ויענה בהתאם. זה רעיון טוב, אבל הוא מתעלם מכך שלאליס אין ביד את כל המערכת הקוונטית; יש לה רק את הקיוביט שלה, ולכן היא מסוגלת לבצע רק עליו פעולות.
+האינטואיציה הראשונית היא שאליס תוכל להעביר לבוב את המידע על הביט $latex x$ שקיבלה. איך? אם הביט הוא 0 היא תפעיל טרנספורמציה על המצב הקוונטי שלה שתהפוך אותו ל-$latex \left\|00\right\rangle $, ואחרת היא תפעיל עליו טרנספורמציה שתהפוך אותו ל-$latex \left\|11\right\rangle $. בוב ימדוד את המצב שלו, יקבל תשובה בודאות של 100 אחוז, ויענה בהתאם. זה רעיון טוב, אבל הוא מתעלם מכך שלאליס אין ביד את כל המערכת הקוונטית; יש לה רק את הקיוביט שלה, ולכן היא מסוגלת לבצע רק עליו פעולות.
 
 עכשיו אני הולך להתחיל להיות טכני, ולכן לפני כן אני אגלה לכם מה בדיוק עושים, כי זה באמת פשוט: אליס ובוב בודקים את הביטים שקיבלו. מי שקיבל 0 לא עושה כלום. מי שקיבל 1 מפעיל על הקיוביט שלו טרנספורמציה מסויימת שאתאר בהמשך (לכל אחד מהם יש טרנספורמציה אחרת). אחר כך הם מודדים את הקיוביטים שלהם ועונים לפי תוצאת המדידה. זה הכל; העיקר הוא כמובן בכך שהטרנספורמציה שהם ביצעו על הקיוביטים שלהם משפיעה איכשהו על תוצאת המדידה. כדי להבין איך נצטרך להיכנס לפרטים. אעיר מראש שפרט אחד שאני <strong>לא</strong> הולך להיכנס אליו בכלל הוא האופן שבו סדר הפעולות משפיע על החישוב - הוא לא, אבל כדי לראות את זה הפוסט יצטרך להתנפח עם עוד חישובים שמגיעים לאותה התוצאה. אם זה מפריע לכם אתם יכולים לבצע את הבדיקה בעצמכם.
 
-בואו נתאר שניה איך מבצעים פעולות על מערכת קוונטית. נתחיל עם מערכת של קיוביט בודד, עם מצבי בסיס $latex \left|0\right\rangle $ ו-$latex \left|1\right\rangle $. כל פעולה (שאינה מדידה) שניתן לבצע על המערכת ניתנת לתיאור על ידי מטריצה $latex 2\times2$ $latex A$ שהיא <strong>אוניטרית</strong>, כלומר $latex AA^{*}=I$ (והמשמעות: $latex A$ משמרת נורמה של וקטורים שהיא פועלת עליהם). דוגמה קלאסית לטרנספורמציה אוניטרית על מרחב ממימד 2 היא <strong>סיבוב</strong>. סיבוב בזווית של $latex \theta $ מעלות מתואר על ידי המטריצה $latex A=\left[\begin{array}{cc}\cos\theta &amp; -\sin\theta\\\sin\theta &amp; \cos\theta\end{array}\right]$. דרך אחרת, שקולה, לתאר את $latex A$ היא לתאר את האופן שבו היא פועלת על מצבי הבסיס - לאן היא שולחת אותם:
+בואו נתאר שניה איך מבצעים פעולות על מערכת קוונטית. נתחיל עם מערכת של קיוביט בודד, עם מצבי בסיס $latex \left\|0\right\rangle $ ו-$latex \left\|1\right\rangle $. כל פעולה (שאינה מדידה) שניתן לבצע על המערכת ניתנת לתיאור על ידי מטריצה $latex 2\times2$ $latex A$ שהיא <strong>אוניטרית</strong>, כלומר $latex AA^{*}=I$ (והמשמעות: $latex A$ משמרת נורמה של וקטורים שהיא פועלת עליהם). דוגמה קלאסית לטרנספורמציה אוניטרית על מרחב ממימד 2 היא <strong>סיבוב</strong>. סיבוב בזווית של $latex \theta $ מעלות מתואר על ידי המטריצה $latex A=\left[\begin{array}{cc}\cos\theta &amp; -\sin\theta\\\sin\theta &amp; \cos\theta\end{array}\right]$. דרך אחרת, שקולה, לתאר את $latex A$ היא לתאר את האופן שבו היא פועלת על מצבי הבסיס - לאן היא שולחת אותם:
 
-$latex \left|0\right\rangle \mapsto\cos\theta\left|0\right\rangle +\sin\theta\left|1\right\rangle $
+$latex \left\|0\right\rangle \mapsto\cos\theta\left\|0\right\rangle +\sin\theta\left\|1\right\rangle $
 
-$latex \left|1\right\rangle \mapsto\cos\theta\left|1\right\rangle -\sin\theta\left|0\right\rangle $
+$latex \left\|1\right\rangle \mapsto\cos\theta\left\|1\right\rangle -\sin\theta\left\|0\right\rangle $
 
 אם, למשל, היינו מפעילים את הטרנספורמציה הזו עם זווית של $latex \theta=-\frac{\pi}{4}$ על המצב הקוונטי, היינו מקבלים את הדבר הבא (זכרו ש-$latex \cos\theta=\frac{1}{\sqrt{2}}$ ו-$latex \sin\theta=-\frac{1}{\sqrt{2}}$ במקרה זה):
 
-$latex \frac{\left|0\right\rangle +\left|1\right\rangle }{\sqrt{2}}\mapsto\frac{\left(\left|0\right\rangle -\left|1\right\rangle \right)+\left(\left|0\right\rangle +\left|1\right\rangle \right)}{2}=\left|0\right\rangle $
+$latex \frac{\left\|0\right\rangle +\left\|1\right\rangle }{\sqrt{2}}\mapsto\frac{\left(\left\|0\right\rangle -\left\|1\right\rangle \right)+\left(\left\|0\right\rangle +\left\|1\right\rangle \right)}{2}=\left\|0\right\rangle $
 
-כלומר, הטרנספורמציה הזו אכן מסוגלת לקחת מצב "מעורבב" של $latex \left|0\right\rangle +\left|1\right\rangle $ ולהעביר אותו למצב "טהור" (בדומה גם ל-$latex \left|1\right\rangle $ אפשר להגיע עם טרנספורמציה אחרת). אבל זה, כאמור, במערכת של קיוביט אחד. במערכת של שני הקיוביטים שלנו אם אליס תפעיל סיבוב ב-$latex \theta$ מעלות על הקיוביט שלה, הפעולה ה"כללית" היא בעצם שילוב של שתי פעולות: סיבוב של הקיוביט של אליס, והשארה ללא שינוי של הקיוביט של בוב, מה שמתואר על ידי המטריצה $latex I$. שתי אלו הן מטריצות $latex 2\times2$ - איך מקבלים מהן את המטריצה $latex 4\times4$ שמתארת את הפעולה של אליס על המרחב של שני הקיוביטים?
+כלומר, הטרנספורמציה הזו אכן מסוגלת לקחת מצב "מעורבב" של $latex \left\|0\right\rangle +\left\|1\right\rangle $ ולהעביר אותו למצב "טהור" (בדומה גם ל-$latex \left\|1\right\rangle $ אפשר להגיע עם טרנספורמציה אחרת). אבל זה, כאמור, במערכת של קיוביט אחד. במערכת של שני הקיוביטים שלנו אם אליס תפעיל סיבוב ב-$latex \theta$ מעלות על הקיוביט שלה, הפעולה ה"כללית" היא בעצם שילוב של שתי פעולות: סיבוב של הקיוביט של אליס, והשארה ללא שינוי של הקיוביט של בוב, מה שמתואר על ידי המטריצה $latex I$. שתי אלו הן מטריצות $latex 2\times2$ - איך מקבלים מהן את המטריצה $latex 4\times4$ שמתארת את הפעולה של אליס על המרחב של שני הקיוביטים?
 
 התשובה פשוטה: מכפלת קרונקר של המטריצות. מכפלת קרונקר, כזכור, פירושו לקחת את אחת המטריצות ולדחוף עותק שלה לתוך כל כניסה במטריצה השניה, תוך שהמטריצה מוכפלת בסקלר שהוא הערך של הכניסה של המטריצה השניה. במקרה שלנו אנחנו לוקחים את המטריצה $latex \left[\begin{array}{cc}\cos\theta &amp; -\sin\theta\\\sin\theta &amp; \cos\theta\end{array}\right]$ ודוחפים אותה לתוך המטריצה $latex \left[\begin{array}{cc}1 &amp; 0\\0 &amp; 1\end{array}\right]$. נקבל את המטריצה
 
 $latex \left[\begin{array}{cccc}\cos\theta &amp; -\sin\theta &amp; 0 &amp; 0\\\sin\theta &amp; \cos\theta &amp; 0 &amp; 0\\0 &amp; 0 &amp; \cos\theta &amp; -\sin\theta\\0 &amp; 0 &amp; \sin\theta &amp; \cos\theta\end{array}\right]$
 
-המטריצה הזו מבוססת על הנחה כלשהי שלי על הסדר של אברי הבסיס במכפלה הטנזורית - ספציפית, שהוא זה: $latex \left|00\right\rangle ,\left|10\right\rangle ,\left|01\right\rangle ,\left|11\right\rangle $. כלומר, שאנחנו כל פעם מתקדמים קודם כל על פי הרכיב הראשון ואז הרכיב השני.
+המטריצה הזו מבוססת על הנחה כלשהי שלי על הסדר של אברי הבסיס במכפלה הטנזורית - ספציפית, שהוא זה: $latex \left\|00\right\rangle ,\left\|10\right\rangle ,\left\|01\right\rangle ,\left\|11\right\rangle $. כלומר, שאנחנו כל פעם מתקדמים קודם כל על פי הרכיב הראשון ואז הרכיב השני.
 
 אם אני אנסה לכתוב את הפעולה הזו על פי מה שהיא מעוללת לוקטורים, אני אקבל את זה:
 
-$latex \left|00\right\rangle \mapsto\cos\theta\left|00\right\rangle +\sin\theta\left|10\right\rangle $
+$latex \left\|00\right\rangle \mapsto\cos\theta\left\|00\right\rangle +\sin\theta\left\|10\right\rangle $
 
-$latex \left|11\right\rangle \mapsto\cos\theta\left|11\right\rangle -\sin\theta\left|01\right\rangle $
+$latex \left\|11\right\rangle \mapsto\cos\theta\left\|11\right\rangle -\sin\theta\left\|01\right\rangle $
 
-$latex \left|10\right\rangle \mapsto\cos\theta\left|10\right\rangle -\sin\theta\left|00\right\rangle $
+$latex \left\|10\right\rangle \mapsto\cos\theta\left\|10\right\rangle -\sin\theta\left\|00\right\rangle $
 
-$latex \left|01\right\rangle \mapsto\cos\theta\left|01\right\rangle +\sin\theta\left|11\right\rangle $
+$latex \left\|01\right\rangle \mapsto\cos\theta\left\|01\right\rangle +\sin\theta\left\|11\right\rangle $
 
-אז אם אליס תפעיל סיבוב בזווית $latex \theta$ על המערכת במצב $latex \left|00\right\rangle +\left|11\right\rangle $ היא תעביר אותה למצב $latex \cos\theta\left|00\right\rangle +\sin\theta\left|10\right\rangle -\sin\theta\left|01\right\rangle +\cos\theta\left|11\right\rangle $.
+אז אם אליס תפעיל סיבוב בזווית $latex \theta$ על המערכת במצב $latex \left\|00\right\rangle +\left\|11\right\rangle $ היא תעביר אותה למצב $latex \cos\theta\left\|00\right\rangle +\sin\theta\left\|10\right\rangle -\sin\theta\left\|01\right\rangle +\cos\theta\left\|11\right\rangle $.
 
-הבנו איך נראות טרנספורמציות אוניטריות שמופעלת על קיוביט בודד ברמת ההשפעה שלהן על כל המערכת; עכשיו בואו נראה מה קורה עם מדידה של קיוביט בודד ואיך היא משפיעה על כל המערכת. המדידה שלנו תהיה ביחס לבסיס הסטנדרטי, כלומר הטלה לתת-המרחב שנפרש על ידי $latex \left|0\right\rangle $ או לתת-המרחב שנפרש על ידי $latex \left|1\right\rangle $. את ההטלה הראשונה אפשר לתאר על ידי הטרנספורמציה
+הבנו איך נראות טרנספורמציות אוניטריות שמופעלת על קיוביט בודד ברמת ההשפעה שלהן על כל המערכת; עכשיו בואו נראה מה קורה עם מדידה של קיוביט בודד ואיך היא משפיעה על כל המערכת. המדידה שלנו תהיה ביחס לבסיס הסטנדרטי, כלומר הטלה לתת-המרחב שנפרש על ידי $latex \left\|0\right\rangle $ או לתת-המרחב שנפרש על ידי $latex \left\|1\right\rangle $. את ההטלה הראשונה אפשר לתאר על ידי הטרנספורמציה
 
-$latex \left|0\right\rangle \mapsto1\cdot\left|0\right\rangle +0\cdot\left|1\right\rangle $
+$latex \left\|0\right\rangle \mapsto1\cdot\left\|0\right\rangle +0\cdot\left\|1\right\rangle $
 
-$latex \left|1\right\rangle \mapsto0\cdot\left|0\right\rangle +0\cdot\left|1\right\rangle $
+$latex \left\|1\right\rangle \mapsto0\cdot\left\|0\right\rangle +0\cdot\left\|1\right\rangle $
 
 שהמטריצה שלה היא $latex \left[\begin{array}{cc}1 &amp; 0\\0 &amp; 0\end{array}\right]$ (שימו לב - לא מטריצה אוניטרית!). אחרי מכפלה טנזורית עם $latex I$ נקבל את המטריצה
 
@@ -69,35 +69,35 @@ $latex \left[\begin{array}{cccc}1 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 0 &am
 
 שמתאימה לטרנספורמציה
 
-$latex \left|00\right\rangle \mapsto\left|00\right\rangle $
+$latex \left\|00\right\rangle \mapsto\left\|00\right\rangle $
 
-$latex \left|11\right\rangle \mapsto0$
+$latex \left\|11\right\rangle \mapsto0$
 
-$latex \left|10\right\rangle \mapsto0$
+$latex \left\|10\right\rangle \mapsto0$
 
-$latex \left|01\right\rangle \mapsto\left|01\right\rangle $
+$latex \left\|01\right\rangle \mapsto\left\|01\right\rangle $
 
-שאפשר לסמן יותר בקלות בתור $latex \left|00\right\rangle \left\langle 00\right|+\left|01\right\rangle \left\langle 01\right|$.
+שאפשר לסמן יותר בקלות בתור $latex \left\|00\right\rangle \left\langle 00\right\|+\left\|01\right\rangle \left\langle 01\right\|$.
 
-כלומר (וזה היה כמובן צפוי לגמרי אבל טוב היה לראות את זה בעיניים) קיבלנו את ההטלה לתת-המרחב שנפרש על ידי $latex \left|00\right\rangle $ ו-$latex \left|01\right\rangle $, כלומר המצבים שבהם הביט שמדדנו הוא 0. אני מניח שאתם יכולים לנחש איך נראה אופרטור המדידה שהוא הטלה לתת-המרחב שנפרש על ידי $latex \left|1\right\rangle $ כשמרחיבים אותו למערכת של שני הקיוביטים.
+כלומר (וזה היה כמובן צפוי לגמרי אבל טוב היה לראות את זה בעיניים) קיבלנו את ההטלה לתת-המרחב שנפרש על ידי $latex \left\|00\right\rangle $ ו-$latex \left\|01\right\rangle $, כלומר המצבים שבהם הביט שמדדנו הוא 0. אני מניח שאתם יכולים לנחש איך נראה אופרטור המדידה שהוא הטלה לתת-המרחב שנפרש על ידי $latex \left\|1\right\rangle $ כשמרחיבים אותו למערכת של שני הקיוביטים.
 
 עכשיו בואו נעבור לאקשן. ראשית, מה האלגוריתם? אליס ובוב מקבלים ביטים $latex x,y$ כקלט. אם אליס קיבלה $latex x=0$ היא לא עושה כלום; אם היא קיבלה $latex 1$ היא מפעילה על הקיוביט שלה טרנספורמציית <strong>סיבוב</strong> בזווית $latex \theta=\frac{\pi}{8}$. ומה בוב עושה? אם $latex y=0$, כלום; אם $latex y=1$, סיבוב בזווית $latex \theta=-\frac{\pi}{8}$ (שימו לב למינוס, הוא חשוב!). אחר כך שניהם מודדים את הקיוביט שלהם ועונים כמו תוצאת המדידה.
 
 כעת, מה המדידות של אליס ובוב יכולות להחזיר אם הביטים של שניהם היו 0 ולכן הם לא נגעו במערכת? כמובן שהאינטואיציה היא ששניהם יענו אותו דבר, כי לא משנה לאיזה ערך המערכת קורסת, שני הקיוביטים יהיו מתואמים.
 
-הבה ונוכיח את האינטואיציה הזו. נאמר שאליס מודדת ראשונה את הקיוביט שלה. המערכת כרגע במצב $latex \left|00\right\rangle +\left|11\right\rangle $, אבל זה סימון מקוצר שמשמיט את קבוע הנורמליזציה של הקיוביטים ומכיוון שאנחנו הולכים לבצע מדידה עדיף שלא נשכח את הקבוע הזה. אז נסמן את מצב המערכת בתור $latex \frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}$. או שנקרוס בהסתברות $latex \left|\left(\left|00\right\rangle \left\langle 00\right|+\left|01\right\rangle \left\langle 01\right|\right)\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}\right|^{2}=\left|\frac{\left|00\right\rangle }{\sqrt{2}}\right|^{2}=\frac{1}{2}$ למצב $latex \left|00\right\rangle $ או שנקרוס בהסתברות $latex \frac{1}{2}$ למצב $latex \left|11\right\rangle $.
+הבה ונוכיח את האינטואיציה הזו. נאמר שאליס מודדת ראשונה את הקיוביט שלה. המערכת כרגע במצב $latex \left\|00\right\rangle +\left\|11\right\rangle $, אבל זה סימון מקוצר שמשמיט את קבוע הנורמליזציה של הקיוביטים ומכיוון שאנחנו הולכים לבצע מדידה עדיף שלא נשכח את הקבוע הזה. אז נסמן את מצב המערכת בתור $latex \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}$. או שנקרוס בהסתברות $latex \left\|\left(\left\|00\right\rangle \left\langle 00\right\|+\left\|01\right\rangle \left\langle 01\right\|\right)\frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}\right\|^{2}=\left\|\frac{\left\|00\right\rangle }{\sqrt{2}}\right\|^{2}=\frac{1}{2}$ למצב $latex \left\|00\right\rangle $ או שנקרוס בהסתברות $latex \frac{1}{2}$ למצב $latex \left\|11\right\rangle $.
 
-נניח שקרסנו ל-$latex \left|00\right\rangle $, מה יקרה עם בוב? ובכן, אתם יכולים לעשות את החישוב בצד אבל זה מיותר; די ברור שבוב יקבל 0. לכן אליס ובוב יענו שניהם 0 כאן וינצחו (זכרו - הם צריכים לענות שונה רק אם שניהם קיבלו את הקלט 1, וכאן שניהם קיבלו את הקלט 0). באופן דומה גם קריסה ל-$latex \left|11\right\rangle $ תוביל לכך שגם אליס וגם בוב יענו 1.
+נניח שקרסנו ל-$latex \left\|00\right\rangle $, מה יקרה עם בוב? ובכן, אתם יכולים לעשות את החישוב בצד אבל זה מיותר; די ברור שבוב יקבל 0. לכן אליס ובוב יענו שניהם 0 כאן וינצחו (זכרו - הם צריכים לענות שונה רק אם שניהם קיבלו את הקלט 1, וכאן שניהם קיבלו את הקלט 0). באופן דומה גם קריסה ל-$latex \left\|11\right\rangle $ תוביל לכך שגם אליס וגם בוב יענו 1.
 
-אז במקרה הקל טיפלנו. כעת, מה קורה אם אליס מקבלת 1 ובוב לא? ובכן, ראינו כבר שאליס תבצע טרנספורמציית סיבוב שתעביר את המערכת למצב $latex \cos\frac{\pi}{8}\left|00\right\rangle +\sin\frac{\pi}{8}\left|10\right\rangle -\sin\frac{\pi}{8}\left|01\right\rangle +\cos\frac{\pi}{8}\left|11\right\rangle $. עכשיו, בואו נמדוד! ראשית, הטלה על $latex \left|0\right\rangle $ תצליח בהסתברות:
+אז במקרה הקל טיפלנו. כעת, מה קורה אם אליס מקבלת 1 ובוב לא? ובכן, ראינו כבר שאליס תבצע טרנספורמציית סיבוב שתעביר את המערכת למצב $latex \cos\frac{\pi}{8}\left\|00\right\rangle +\sin\frac{\pi}{8}\left\|10\right\rangle -\sin\frac{\pi}{8}\left\|01\right\rangle +\cos\frac{\pi}{8}\left\|11\right\rangle $. עכשיו, בואו נמדוד! ראשית, הטלה על $latex \left\|0\right\rangle $ תצליח בהסתברות:
 
-$latex \left|\frac{1}{\sqrt{2}}\left(\cos\frac{\pi}{8}\left|00\right\rangle +\sin\frac{\pi}{8}\left|10\right\rangle -\sin\frac{\pi}{8}\left|01\right\rangle +\cos\frac{\pi}{8}\left|11\right\rangle \right)\left(\left|00\right\rangle \left\langle 00\right|+\left|01\right\rangle \left\langle 01\right|\right)\right|^{2}=$
+$latex \left\|\frac{1}{\sqrt{2}}\left(\cos\frac{\pi}{8}\left\|00\right\rangle +\sin\frac{\pi}{8}\left\|10\right\rangle -\sin\frac{\pi}{8}\left\|01\right\rangle +\cos\frac{\pi}{8}\left\|11\right\rangle \right)\left(\left\|00\right\rangle \left\langle 00\right\|+\left\|01\right\rangle \left\langle 01\right\|\right)\right\|^{2}=$
 
-$latex \left|\frac{1}{\sqrt{2}}\left(\cos\frac{\pi}{8}\left|00\right\rangle -\sin\frac{\pi}{8}\left|01\right\rangle \right)\right|^{2}=\frac{1}{2}\left(\cos^{2}\frac{\pi}{8}+\sin^{2}\frac{\pi}{8}\right)=\frac{1}{2}$
+$latex \left\|\frac{1}{\sqrt{2}}\left(\cos\frac{\pi}{8}\left\|00\right\rangle -\sin\frac{\pi}{8}\left\|01\right\rangle \right)\right\|^{2}=\frac{1}{2}\left(\cos^{2}\frac{\pi}{8}+\sin^{2}\frac{\pi}{8}\right)=\frac{1}{2}$
 
-רגע, מה? שוב קיבלנו $latex \frac{1}{2}$? אחרי כל המהומה שעשינו? איך זה ייתכן? איך זה עזר לנו? ובכן, בואו נראה מה קורה עכשיו. בהסתברות $latex \frac{1}{2}$ אנחנו קורסים, אבל לאיזה מצב? לא למצב $latex  \left|00\right\rangle $ אלא למצב $latex \cos\frac{\pi}{8}\left|00\right\rangle -\sin\frac{\pi}{8}\left|01\right\rangle $ - מצב שמנקודת מבטו של בוב, שרואה רק את הקיוביט השני, נראה כמו $latex \cos\frac{\pi}{8}\left|0\right\rangle -\sin\frac{\pi}{8}\left|1\right\rangle $ - במילים אחרות, זה נראה לו כאילו מישהו סובב את הקיוביט שלו ב-$latex -\frac{\pi}{8}$. שימו לב מה קרה: אליס סובבה את הקיוביט <strong>שלה</strong>, אבל בגלל התיאום בין הקיוביטים, אחרי המדידה מה שיש לבוב ביד היא מערכת שבה הקיוביט <strong>שלו</strong> מסובב. עכשיו, בוב כמובן לא "רואה" שהקיוביט שלו מסובב כי הוא לא יכול לדעת את המקדמים של המערכת שלו; כל מה שהוא יכול לעשות הוא לבצע בעצמו מדידה. מה התוצאות האפשריות של המדידה? או, עכשיו סוף סוף זה לא יהיה סימטרי; המערכת תקרוס אל $latex \left|0\right\rangle $ בהסתברות $latex \cos^{2}\frac{\pi}{8}$ ואל $latex \left|1\right\rangle $ בהסתברות $latex \sin^{2}\frac{\pi}{8}$. מבין שתי ההסתברויות, זו של $latex \cos^{2}\frac{\pi}{8}$ גדולה משמעותית יותר כי $latex \frac{\pi}{8}$ קטן יחסית - לכן בחרנו את הזווית הזו דווקא.
+רגע, מה? שוב קיבלנו $latex \frac{1}{2}$? אחרי כל המהומה שעשינו? איך זה ייתכן? איך זה עזר לנו? ובכן, בואו נראה מה קורה עכשיו. בהסתברות $latex \frac{1}{2}$ אנחנו קורסים, אבל לאיזה מצב? לא למצב $latex  \left\|00\right\rangle $ אלא למצב $latex \cos\frac{\pi}{8}\left\|00\right\rangle -\sin\frac{\pi}{8}\left\|01\right\rangle $ - מצב שמנקודת מבטו של בוב, שרואה רק את הקיוביט השני, נראה כמו $latex \cos\frac{\pi}{8}\left\|0\right\rangle -\sin\frac{\pi}{8}\left\|1\right\rangle $ - במילים אחרות, זה נראה לו כאילו מישהו סובב את הקיוביט שלו ב-$latex -\frac{\pi}{8}$. שימו לב מה קרה: אליס סובבה את הקיוביט <strong>שלה</strong>, אבל בגלל התיאום בין הקיוביטים, אחרי המדידה מה שיש לבוב ביד היא מערכת שבה הקיוביט <strong>שלו</strong> מסובב. עכשיו, בוב כמובן לא "רואה" שהקיוביט שלו מסובב כי הוא לא יכול לדעת את המקדמים של המערכת שלו; כל מה שהוא יכול לעשות הוא לבצע בעצמו מדידה. מה התוצאות האפשריות של המדידה? או, עכשיו סוף סוף זה לא יהיה סימטרי; המערכת תקרוס אל $latex \left\|0\right\rangle $ בהסתברות $latex \cos^{2}\frac{\pi}{8}$ ואל $latex \left\|1\right\rangle $ בהסתברות $latex \sin^{2}\frac{\pi}{8}$. מבין שתי ההסתברויות, זו של $latex \cos^{2}\frac{\pi}{8}$ גדולה משמעותית יותר כי $latex \frac{\pi}{8}$ קטן יחסית - לכן בחרנו את הזווית הזו דווקא.
 
-בדומה, אם בהסתברות $latex \frac{1}{2}$ אליס תקבל דווקא $latex \left|1\right\rangle $ ולא $latex \left|0\right\rangle $ המערכת תקרוס למצב $latex \sin\frac{\pi}{8}\left|10\right\rangle +\cos\frac{\pi}{8}\left|11\right\rangle $ שנראה לבוב כמו $latex \sin\frac{\pi}{8}\left|0\right\rangle +\cos\frac{\pi}{8}\left|1\right\rangle $ והפעם ההסתברות למדוד $latex \left|1\right\rangle $ דווקא תהיה $latex \cos^{2}\frac{\pi}{8}$. מה שראינו הוא שלא משנה מה אליס מקבלת, ההסתברות שבוב יקבל את אותו הדבר כמוה היא גדולה יחסית - $latex \cos^{2}\frac{\pi}{8}\ge0.85$.
+בדומה, אם בהסתברות $latex \frac{1}{2}$ אליס תקבל דווקא $latex \left\|1\right\rangle $ ולא $latex \left\|0\right\rangle $ המערכת תקרוס למצב $latex \sin\frac{\pi}{8}\left\|10\right\rangle +\cos\frac{\pi}{8}\left\|11\right\rangle $ שנראה לבוב כמו $latex \sin\frac{\pi}{8}\left\|0\right\rangle +\cos\frac{\pi}{8}\left\|1\right\rangle $ והפעם ההסתברות למדוד $latex \left\|1\right\rangle $ דווקא תהיה $latex \cos^{2}\frac{\pi}{8}$. מה שראינו הוא שלא משנה מה אליס מקבלת, ההסתברות שבוב יקבל את אותו הדבר כמוה היא גדולה יחסית - $latex \cos^{2}\frac{\pi}{8}\ge0.85$.
 
 עכשיו הפאנץ' מגיע: כאשר אליס ובוב מקבלים שניהם 1, ומפעילים שניהם את הטרנספורמציות שלהם, זה הולך "לשבור" את הקורלציה בין שני הקיוביטים שלהם - או ליתר דיוק, להפוך אותה לאנטי-קורלציה (אנטי-קורלציה מלאה פירושה שכאשר אחד הקיוביטים הוא 0 השני הוא 1; שימו לב להבדל המשמעותי בין זה ובין "אין קורלציה". הדבר דומה להיפסטר שמקפיד תמיד לעשות ההפך מהמיינסטרים, ולכן נקבע על ידו).
 
@@ -113,15 +113,15 @@ $latex \left[\begin{array}{cccc}\cos\frac{\pi}{8} &amp; 0 &amp; \sin\frac{\pi}{8
 
 $latex \left[\begin{array}{cccc}\cos\frac{\pi}{8} &amp; -\sin\frac{\pi}{8} &amp; 0 &amp; 0\\\sin\frac{\pi}{8} &amp; \cos\frac{\pi}{8} &amp; 0 &amp; 0\\0 &amp; 0 &amp; \cos\frac{\pi}{8} &amp; -\sin\frac{\pi}{8}\\0 &amp; 0 &amp; \sin\frac{\pi}{8} &amp; \cos\frac{\pi}{8}\end{array}\right]\left[\begin{array}{cccc}\cos\frac{\pi}{8} &amp; 0 &amp; \sin\frac{\pi}{8} &amp; 0\\0 &amp; \cos\frac{\pi}{8} &amp; &amp; \sin\frac{\pi}{8}\\-\sin\frac{\pi}{8} &amp; 0 &amp; \cos\frac{\pi}{8} &amp; 0\\0 &amp; -\sin\frac{\pi}{8} &amp; 0 &amp; \cos\frac{\pi}{8}\end{array}\right]=\left[\begin{array}{cccc}\cos^{2}\frac{\pi}{8} &amp; \cdots &amp; \cdots &amp; -\sin^{2}\frac{\pi}{8}\\\frac{1}{2}\sin\frac{\pi}{4} &amp; &amp; &amp; \frac{1}{2}\sin\frac{\pi}{4}\\-\frac{1}{2}\sin\frac{\pi}{4} &amp; &amp; &amp; -\frac{1}{2}\sin\frac{\pi}{4}\\-\sin^{2}\frac{\pi}{8} &amp; \cdots &amp; \cdots &amp; \cos^{2}\frac{\pi}{8}\end{array}\right]$
 
-לא טרחתי לחשב את העמודות במרכז כי כשנכפול את המטריצה במצב הקוונטי $latex \left|00\right\rangle +\left|11\right\rangle $ העמודות הללו לא ישפיעו. אחרי הכפל נקבל את המצב הבא:
+לא טרחתי לחשב את העמודות במרכז כי כשנכפול את המטריצה במצב הקוונטי $latex \left\|00\right\rangle +\left\|11\right\rangle $ העמודות הללו לא ישפיעו. אחרי הכפל נקבל את המצב הבא:
 
-$latex \left(\cos^{2}\frac{\pi}{8}-\sin^{2}\frac{\pi}{8}\right)\left|00\right\rangle +\sin\frac{\pi}{4}\left|01\right\rangle -\sin\frac{\pi}{4}\left|10\right\rangle +\left(\cos^{2}\frac{\pi}{8}-\sin^{2}\frac{\pi}{8}\right)\left|11\right\rangle $
+$latex \left(\cos^{2}\frac{\pi}{8}-\sin^{2}\frac{\pi}{8}\right)\left\|00\right\rangle +\sin\frac{\pi}{4}\left\|01\right\rangle -\sin\frac{\pi}{4}\left\|10\right\rangle +\left(\cos^{2}\frac{\pi}{8}-\sin^{2}\frac{\pi}{8}\right)\left\|11\right\rangle $
 
 השתמשתי קודם בכך ש-$latex \cos\theta\sin\theta=\frac{1}{2}\sin2\theta$ - זהות הזווית הכפולה עבור סינוס. עבור קוסינוס יש זהות דומה: $latex \cos2\theta=\cos^{2}\theta-\sin^{2}\theta$. לכן המצב הקוונטי שהגענו אליו הוא
 
-$latex \cos\frac{\pi}{4}\left|00\right\rangle +\sin\frac{\pi}{4}\left|01\right\rangle -\sin\frac{\pi}{4}\left|10\right\rangle +\cos\frac{\pi}{4}\left|11\right\rangle $
+$latex \cos\frac{\pi}{4}\left\|00\right\rangle +\sin\frac{\pi}{4}\left\|01\right\rangle -\sin\frac{\pi}{4}\left\|10\right\rangle +\cos\frac{\pi}{4}\left\|11\right\rangle $
 
-ועכשיו אולי ברור למה בחרנו את הזווית $latex \theta=\frac{\pi}{8}$; זה מכיוון ש-$latex \frac{\pi}{4}$ מקיימת ש-$latex \sin\frac{\pi}{4}=\cos\frac{\pi}{4}$, מה שאומר שכל המקדמים במצב שקיבלנו הם זהים בערכם המוחלט - ואתם כבר מבינים שזה אומר שהמדידה המשותפת של אליס-ואז-בוב תיתן כל זוג תוצאות באותה הסתברות בדיוק - כלומר, אם גם אליס וגם בוב ביצעו טרנספורמציה על המערכת, הם "שברו" לגמרי את הקורלציה בין הקיוביטים (ולא סתם הפכו אותה לאנטי-קורלציה). עכשיו, מכיוון ש-$latex x=y=1$ אליס ובוב צריכים להחזיר תוצאה שונה - מה שיקרה אם הם ימדדו את $latex \left|10\right\rangle $ או $latex \left|01\right\rangle $, בהסתברות $latex \frac{1}{2}$.
+ועכשיו אולי ברור למה בחרנו את הזווית $latex \theta=\frac{\pi}{8}$; זה מכיוון ש-$latex \frac{\pi}{4}$ מקיימת ש-$latex \sin\frac{\pi}{4}=\cos\frac{\pi}{4}$, מה שאומר שכל המקדמים במצב שקיבלנו הם זהים בערכם המוחלט - ואתם כבר מבינים שזה אומר שהמדידה המשותפת של אליס-ואז-בוב תיתן כל זוג תוצאות באותה הסתברות בדיוק - כלומר, אם גם אליס וגם בוב ביצעו טרנספורמציה על המערכת, הם "שברו" לגמרי את הקורלציה בין הקיוביטים (ולא סתם הפכו אותה לאנטי-קורלציה). עכשיו, מכיוון ש-$latex x=y=1$ אליס ובוב צריכים להחזיר תוצאה שונה - מה שיקרה אם הם ימדדו את $latex \left\|10\right\rangle $ או $latex \left\|01\right\rangle $, בהסתברות $latex \frac{1}{2}$.
 
 עכשיו אפשר לנתח את האסטרטגיה הזו של אליס ובוב ומה ההסתברות שלהם לנצח במשחק. אמרנו שמנהל המשחק מגריל את $latex x,y$ באקראי, כך שאנחנו מפרידים בין שלושה מקרים:
 <ol>
@@ -133,4 +133,4 @@ $latex \cos\frac{\pi}{4}\left|00\right\rangle +\sin\frac{\pi}{4}\left|01\right\r
 
 אז מה יש לנו כאן? מצד אחד, ההפרש בין $latex 0.8$ ל-$latex 0.75$ הוא לא דרמטי במיוחד, והמשחק כולו נראה אבסורדי לגמרי ולא שימושי בעליל, ולכן התוצאה לא נראית חשובה במיוחד מבחינה פרקטית; אבל המשמעות שלה מבחינה תיאורטית היא לא זניחה בכלל - היא ממחישה מה חישובים קוונטים נותנים לנו שחישוב רגיל לא יכול לתת. מצד שני, לקרוא לזה "חישוב קוונטי" זו קצת רמאות - הפואנטה כאן היא לא החישוב; היא ה<strong>תקשורת</strong> שתורת הקוונטים מאפשרת לאליס ובוב לבצע - היא מאפשרת להם לעשות סוג מוגבל של קורלציית מידע גם כשהם מרוחקים, וכאן הקסם של הסופרפוזיציה לא תורם אלא מפריע (כי במקום שאליס פשוט תשלח ביט באופן קסום אל בוב הם עושים טרנספורמציות למצבים קוונטיים ומודדים אותם ומקווים שיהיה מזל עם המדידות). לכן זו דוגמה טובה להמחשת ה<strong>אתגר</strong> שיש בחישוב קוונטי עם התמודדות עם <strong>מגבלות</strong> על החישוב.
 
-אבל רגע, אתם אומרים, תורת הקוונטים מאפשרת לאליס ובוב לתקשר יותר מהר ממהירות האור, וזה סותר את תורת היחסות הפרטית! ובכן, כן, זה ההקשר שבו המצב הקוונטי $latex \left|00\right\rangle +\left|11\right\rangle $ הופיע מלכתחילה, אבל כמובן שהסיפור לא עד כדי כך פשוט והסתירה לא כל כך ברורה. אדבר על כך בפוסט הבא.
+אבל רגע, אתם אומרים, תורת הקוונטים מאפשרת לאליס ובוב לתקשר יותר מהר ממהירות האור, וזה סותר את תורת היחסות הפרטית! ובכן, כן, זה ההקשר שבו המצב הקוונטי $latex \left\|00\right\rangle +\left\|11\right\rangle $ הופיע מלכתחילה, אבל כמובן שהסיפור לא עד כדי כך פשוט והסתירה לא כל כך ברורה. אדבר על כך בפוסט הבא.

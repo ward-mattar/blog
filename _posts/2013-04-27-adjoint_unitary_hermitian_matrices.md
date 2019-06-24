@@ -39,7 +39,7 @@ $latex \left[\begin{array}{cc}1 &amp; -i\\i &amp; 1\end{array}\right]$
 
 כמו שאתם רואים, היא לא בדיוק סימטרית. אם נפרק אותה לסכום של שתי מטריצות שאחת מהן כוללת את כל הרכיבים הממשיים והשניה את כל הרכיבים המדומים נקבל שהמטריצה הממשית היא סימטרית, בעוד שהמטריצה המדומה היא אנטי-סימטרית (מטריצה אנטי סימטרית היא מטריצה $latex A$ כך ש-$latex A^{t}=-A$). בפרט, האיברים על האלכסון הראשי של המטריצה שווים להצמדה של עצמם ולכן הם חייבים להיות מספרים ממשיים "טהורים". זה יהיה חשוב בהמשך.
 
-בואו נעבור לדבר על מטריצות אוניטריות. ראשית כל אני רוצה להבין מה הדטרמיננטה של מטריצה כזו יכולה להיות. אם $latex A^{-1}=A^{*}$ אז $latex A\cdot A^{*}=I$ ולכן $latex 1=\left|I\right|=\left|AA^{*}\right|=\left|A\right|\left|A^{*}\right|$. ומהי $latex \left|A^{*}\right|$? תחושת הבטן היא ש-$latex \left|A^{*}\right|=\overline{\left|A\right|}$, כלומר הדטרמיננטה של הצמוד היא ההצמדה המרוכבת של הדטרמיננטה של $latex A$. לא קשה לראות את זה ישירות מההגדרה הפורמלית של דטרמיננטה, למשל בתור סכום של מכפלות. זכרו שלכל מספר מרוכב $latex z$ מתקיים $latex z\cdot\overline{z}=\left|z\right|^{2}$, ולכן המסקנה היא ש-$latex \left|\det A\right|^{2}=1$ (עברתי לסמן דטרמיננטה ב-$latex \det$ מסיבות ברורות). מכאן שהדטרמיננטה של $latex A$ חייבת להיות 1 בערכה המוחלט (מכיוון שהיא עשויה להיות מספר מרוכב זה עדיין נותן לה לא מעט אפשרויות).
+בואו נעבור לדבר על מטריצות אוניטריות. ראשית כל אני רוצה להבין מה הדטרמיננטה של מטריצה כזו יכולה להיות. אם $latex A^{-1}=A^{*}$ אז $latex A\cdot A^{*}=I$ ולכן $latex 1=\left\|I\right\|=\left\|AA^{*}\right\|=\left\|A\right\|\left\|A^{*}\right\|$. ומהי $latex \left\|A^{*}\right\|$? תחושת הבטן היא ש-$latex \left\|A^{*}\right\|=\overline{\left\|A\right\|}$, כלומר הדטרמיננטה של הצמוד היא ההצמדה המרוכבת של הדטרמיננטה של $latex A$. לא קשה לראות את זה ישירות מההגדרה הפורמלית של דטרמיננטה, למשל בתור סכום של מכפלות. זכרו שלכל מספר מרוכב $latex z$ מתקיים $latex z\cdot\overline{z}=\left\|z\right\|^{2}$, ולכן המסקנה היא ש-$latex \left\|\det A\right\|^{2}=1$ (עברתי לסמן דטרמיננטה ב-$latex \det$ מסיבות ברורות). מכאן שהדטרמיננטה של $latex A$ חייבת להיות 1 בערכה המוחלט (מכיוון שהיא עשויה להיות מספר מרוכב זה עדיין נותן לה לא מעט אפשרויות).
 
 עכשיו בואו נעבור לדבר על מקרה קונקרטי יותר. ראשית כל, הבה וניזכר באופן כללי מהי ההופכית של מטריצה מסדר $latex 2\times2$ כלשהי. אם
 
@@ -47,25 +47,25 @@ $latex A=\left[\begin{array}{cc}a &amp; b\\c &amp; d\end{array}\right]$
 
 אז ההופכית שלה היא
 
-$latex A^{-1}=\frac{1}{\left|A\right|}\left[\begin{array}{cc}d &amp; -b\\-c &amp; a\end{array}\right]$
+$latex A^{-1}=\frac{1}{\left\|A\right\|}\left[\begin{array}{cc}d &amp; -b\\-c &amp; a\end{array}\right]$
 
-לא מאמינים? פשוט תכפילו ותראו... הנוסחה הזו היא מקרה פרטי של המשפט לפיו $latex A^{-1}=\frac{\mbox{adj}A}{\left|A\right|}$ שהראיתי בעבר. עכשיו, באופן כללי מתקיים
+לא מאמינים? פשוט תכפילו ותראו... הנוסחה הזו היא מקרה פרטי של המשפט לפיו $latex A^{-1}=\frac{\mbox{adj}A}{\left\|A\right\|}$ שהראיתי בעבר. עכשיו, באופן כללי מתקיים
 
 $latex A^{*}=\left[\begin{array}{cc}\overline{a} &amp; \overline{c}\\\overline{b} &amp; \overline{d}\end{array}\right]$
 
 כך שאם מתקיים $latex A^{-1}=A^{*}$ אנחנו יכולים להסיק את $latex c,d$ בתור פונקציות של $latex a,b$:
 
-$latex c=-\left|A\right|\overline{b}$
+$latex c=-\left\|A\right\|\overline{b}$
 
-$latex d=\left|A\right|\overline{a}$
+$latex d=\left\|A\right\|\overline{a}$
 
-מכיוון ש-$latex \left|A\right|=ad-bc$ אז בפרט נקבל $latex \left|A\right|=\left|A\right|a\overline{a}+\left|A\right|b\overline{b}=\left|A\right|\left(\left|a\right|^{2}+\left|b\right|^{2}\right)$, כלומר $latex \left|a\right|^{2}+\left|b\right|^{2}=1$.
+מכיוון ש-$latex \left\|A\right\|=ad-bc$ אז בפרט נקבל $latex \left\|A\right\|=\left\|A\right\|a\overline{a}+\left\|A\right\|b\overline{b}=\left\|A\right\|\left(\left\|a\right\|^{2}+\left\|b\right\|^{2}\right)$, כלומר $latex \left\|a\right\|^{2}+\left\|b\right\|^{2}=1$.
 
-כעת, אפשר לכתוב קונקרטית $latex \left|A\right|=e^{i\theta}$ עבור $latex 0\le\theta\le2\pi$ - זו דרך ההצגה הקוטבית של מספר מרוכב עם ערך מוחלט 1. לכן נקבל שמטריצה $latex A$ מסדר $latex 2\times2$ היא אוניטרית אם ורק אם היא מהצורה
+כעת, אפשר לכתוב קונקרטית $latex \left\|A\right\|=e^{i\theta}$ עבור $latex 0\le\theta\le2\pi$ - זו דרך ההצגה הקוטבית של מספר מרוכב עם ערך מוחלט 1. לכן נקבל שמטריצה $latex A$ מסדר $latex 2\times2$ היא אוניטרית אם ורק אם היא מהצורה
 
 $latex \left[\begin{array}{cc}a &amp; b\\-e^{i\theta}\overline{b} &amp; e^{i\theta}\overline{a}\end{array}\right]$
 
-כך ש-$latex \left|a\right|^{2}+\left|b\right|^{2}=1$.
+כך ש-$latex \left\|a\right\|^{2}+\left\|b\right\|^{2}=1$.
 
 במקרה של מטריצה עם מקדמים ממשיים העסק הופך לפשוט מאוד: במקרה הזה $latex \overline{a}=a,\overline{b}=b$ ואילו $latex e^{i\theta}$ יכול להיות רק 1 או $latex -1$. לכן נקבל שיש בדיוק שני סוגים של מטריצות אוניטריות ממשיות:
 

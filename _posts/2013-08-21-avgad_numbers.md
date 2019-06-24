@@ -30,7 +30,7 @@ tags:
 [code language="ruby"]
 class String
   def gematric_value
-    self.split(&quot;&quot;).collect{|a| LETTER_VALUES[a] || 0}.inject(0){|sum, x| sum + x}
+    self.split(&quot;&quot;).collect{\|a\| LETTER_VALUES[a] \|\| 0}.inject(0){\|sum, x\| sum + x}
   end
 end
 [/code]
@@ -134,12 +134,12 @@ class Integer
   def to_hebrew_name
     return HEBREW_NUMBER_NAMES[self] if HEBREW_NUMBER_NAMES[self]
     name_parts = []
-    digits = self.to_s.split(&quot;&quot;).reverse.collect_with_index{|x,i| x.to_i * 10**i}.reverse
+    digits = self.to_s.split(&quot;&quot;).reverse.collect_with_index{\|x,i\| x.to_i * 10**i}.reverse
     if digits[-2] == 10 and digits[-1] != 0
       digits[-2] += digits[-1]
       digits.pop
     end
-    digit_names = digits.reject{|d| d == 0}.collect{|d| d.to_hebrew_name}
+    digit_names = digits.reject{\|d\| d == 0}.collect{\|d\| d.to_hebrew_name}
     digit_names[-1] = &quot;ו&quot; + digit_names[-1]
     name = digit_names.join(&quot; &quot;)
     name
@@ -155,7 +155,7 @@ end
 class Array
   def collect_with_index
     result = []
-    self.each_index{|i| result &lt;&lt; yield(self[i], i)}
+    self.each_index{\|i\| result &lt;&lt; yield(self[i], i)}
     result
   end
 end
@@ -164,7 +164,7 @@ end
 נהדר. מה עושים עכשיו? עכשיו מגיע השלב ה"מחקרי". פיתחתי את הכלים, עכשיו אפשר לנסות ולקפוץ לתוך הנתונים. דבר ראשון, במתח, בחיל וברעדה כותבים את הקוד שמחפש מספרי עבגד ומדפיס אותם:
 
 [code language="ruby"]
-(1..8000).each do |n|
+(1..8000).each do \|n\|
      puts &quot;#{n} =&gt; #{n.to_hebrew_name} =&gt; #{n.to_hebrew_name.gematric_value}&quot; if (n == n.to_hebrew_name.gematric_value)
 end
 [/code]
@@ -176,7 +176,7 @@ end
 אז מה עכשיו? קודם כל, בואו ננסה לקבל רושם כללי לגבי מה המספרים שבכלל עשויים להתקבל כפלט של $latex f$ עבור קלטים שהם עד 10,000:
 
 [code language="ruby"]
-puts (1...10000).collect{|n| n.to_hebrew_name.gematric_value}.max
+puts (1...10000).collect{\|n\| n.to_hebrew_name.gematric_value}.max
 [/code]
 
 הקוד הזה מחזיר 4144, וזה מעניין - זה אומר שכל מספר גדול מ-4144 עד 10,000 בהכרח החזיר פלט שקטן יותר מעצמו. למה זה מעניין? כי זה מעלה לי את הניחוש לפיו <strong>כל מספר</strong> גדול מ-4144 יחזיר פלט קטן מעצמו. למעשה, חקירה טיפה יותר מדוקדקת מראה ש-3999 ("שלושת אלפים תשע מאות תשעים ותשע") הוא המספר הגדול ביותר עד 10,000 שמחזיר מספר גדול מעצמו (4010). ההשערה הלא מוכחת שלי היא שזה המספר הגדול ביותר שמחזיר מספר שאינו קטן ממנו. בכלל. זו לא השערה מוכחת והיא כמובן תלויה בשאלה מה סגנון הכתיבה שאנחנו הולכים לפיו, אבל זה נראה לי סביר מאוד. למה? ובכן, קל לקבל הערכה גסה של כמה שווה כל ספרה, בגימטריה: "שלושת אלפים" הוא 1197. אז גם אם נניח שכל ספרה במספר, כשכותבים אותה בעברית מחזירה ערך גימטרי של 1500, אז בעוד שמספר בן 4 ספרות יוכל להביא אותנו אל ערך גימטרי של 6,000, מספר בן 5 ספרות יוכל להביא אותנו רק אל 7,500 שהוא כמובן קטן ממנו. ומספר בן 8 ספרות - רק אל 9,000, וכן הלאה וכן הלאה. בלשון מתמטית, המספרים גדלים <strong>אקספוננציאלית</strong> כשמגדילים את מספר הספרות שלהם, אבל הערך הגימטרי של הכתיב שלהם בעברית גדל <strong>לינארית</strong>, עם קבוע גדול יחסית (חסום על ידי ה-1,500 הזה, אבל בעצם גם על ידי מספרים קטנים יותר). בגלל שהקבוע הזה גדול יחסית בכלל יש לנו "מרחב משחק" בהתחלה.
@@ -230,7 +230,7 @@ end
 [code language="ruby"]
 def find_for_pair
   max = 2100
-  nums = (1..max).collect{|n| n.to_hebrew_name.gematric_value}
+  nums = (1..max).collect{\|n\| n.to_hebrew_name.gematric_value}
   nums = [nil] + nums
 
   for x in (1..max) do
@@ -248,13 +248,13 @@ end
   def to_hebrew_name_bible_style
     return HEBREW_NUMBER_NAMES[self] if HEBREW_NUMBER_NAMES[self]
     name_parts = []
-    digits = self.to_s.split(&quot;&quot;).reverse.collect_with_index{|x,i| x.to_i * 10**i}.reverse
+    digits = self.to_s.split(&quot;&quot;).reverse.collect_with_index{\|x,i\| x.to_i * 10**i}.reverse
 	if digits[-2] == 10 and digits[-1] != 0
       digits[-2] += digits[-1]
       digits.pop
     end
-    digit_names = digits.reject{|d| d == 0}.collect{|d| d.to_hebrew_name}
-    (1...digit_names.length).each{|i| digit_names[i] = &quot;ו&quot; + digit_names[i]}
+    digit_names = digits.reject{\|d\| d == 0}.collect{\|d\| d.to_hebrew_name}
+    (1...digit_names.length).each{\|i\| digit_names[i] = &quot;ו&quot; + digit_names[i]}
     name = digit_names.join(&quot; &quot;)
     name
   end

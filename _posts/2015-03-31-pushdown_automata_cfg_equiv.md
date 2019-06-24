@@ -15,7 +15,7 @@ tags:
 
 בואו ניסגר מראש על הפורמליסטיקה. ניקח אוטומט מחסנית $latex M=\left(Q,\Sigma,\Gamma,q_{0},\bot,\delta,\emptyset\right)$ עם קבוצת מצבים $latex Q$, א"ב קלט ומחסנית $latex \Sigma,\Gamma$ בהתאמה, מצב התחלתי $latex q_{0}$ וסימן תחתית מחסנית $latex \bot$ ופונקציית מעברים $latex \delta$, כך ש-$latex \delta\left(q,\sigma,A\right)$, עבור $latex \sigma\in\Sigma\cup\left\{ \varepsilon\right\} $ ו-$latex A\in\Gamma$, היא קבוצה של זוגות $latex \left(p,\beta\right)$ שפירושם "במצב $latex q$ אחרי קריאת $latex \sigma$ ועם $latex A$ בראש המחסנית אפשר לעבור למצב $latex p$ ולדחוף $latex \beta$ במקום $latex A$". קבוצת המצבים המקבלים תהיה ריקה כי אני אתעניין רק באוטומט שמקבל על ידי ריקון (לכל אוטומט שמקבל על ידי מצבים מקבלים יש אוטומט שקול שמקבל על ידי ריקון). כלומר, שפת האוטומט מוגדרת כך:
 
-$latex L\left(M\right)=\left\{ w\in\Sigma^{*}\ |\ \exists p\in Q:\left[q_{0},w,\bot\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]\right\} $
+$latex L\left(M\right)=\left\{ w\in\Sigma^{*}\ \|\ \exists p\in Q:\left[q_{0},w,\bot\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]\right\} $
 
 כאשר $latex \left[q,w,\alpha\right]$ היא <strong>קונפיגורציה</strong> של האוטומט שמתארת את המצב הנוכחי $latex q$, הקלט שנותר $latex w$ ותוכן המחסנית $latex \alpha$, והסימן $latex \vdash^{*}$ אומר "אפשר לעבור מהקונפיגורציה השמאלית לימנית ב-0 או יותר צעדים".
 

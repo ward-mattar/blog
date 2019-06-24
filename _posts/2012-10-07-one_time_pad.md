@@ -42,11 +42,11 @@ tags:
 
 נניח כעת שהתגלגל לידינו כתב סתר מוצפן, ונניח שהוא 1. מה ההסתברות, בהינתן המידע הזה, שהכתב הגלוי היה גם כן 1? בלשון מתמטית הסתברותית משתמשים במונח של <strong>הסתברות מותנית</strong> ש<a href="http://www.gadial.net/2010/08/05/conditional_probability/">תיארתי בעבר בבלוג</a>. ההסתברות הזו היא ההסתברות שהכתב הגלוי יהיה 1 וגם כתב הסתר יהיה 1 (הסתברות זו היא $latex \frac{3}{4}\cdot\frac{1}{2}$ - ההסתברות שהכתב הגלוי יהיה 1 כפול ההסתברות שיצא המפתח 0), חלקי ההסתברות שכתב הסתר יהיה 1. בניסוח מתמטי:
 
-$latex \mbox{Pr}\left[P=1\ |\ C=1\right]=\frac{\mbox{Pr}\left[P=1,C=1\right]}{\mbox{Pr}\left[C=1\right]}=\frac{\frac{3}{4}\cdot\frac{1}{2}}{\frac{1}{2}}=\frac{3}{4}=\mbox{Pr}\left[P=1\right]$
+$latex \mbox{Pr}\left[P=1\ \|\ C=1\right]=\frac{\mbox{Pr}\left[P=1,C=1\right]}{\mbox{Pr}\left[C=1\right]}=\frac{\frac{3}{4}\cdot\frac{1}{2}}{\frac{1}{2}}=\frac{3}{4}=\mbox{Pr}\left[P=1\right]$
 
 כלומר, קיבלנו שההסתברות ש-$latex P=1$, כשהיא מותנית בכך ש-$latex C=1$, היא אותה הסתברות בדיוק כמו ההסתברות ש-$latex P=1$ בלי שום התניה. בלשון מתמטית זה אומר שהמאורע $latex P=1$ והמאורע $latex C=1$ הם <strong>בלתי תלויים</strong> - אין בידיעה שאחד מהם התקיים כדי לתת לנו אינפורמציה כלשהי על השני.
 
-כפי שאתם בוודאי מנחשים, התופעה הזו היא כללית, וזה גם הקריטיון של שנון כשהוא מנוסח פורמלי: צופן מושלם הוא צופן שבו מתקיים $latex \mbox{Pr}\left[P=a\ |\ C=b\right]=\mbox{Pr}\left[P=a\right]$ לכל $latex a,b$ שהם ערכים חוקיים שאותם $latex P,C$ יכולים לקבל.
+כפי שאתם בוודאי מנחשים, התופעה הזו היא כללית, וזה גם הקריטיון של שנון כשהוא מנוסח פורמלי: צופן מושלם הוא צופן שבו מתקיים $latex \mbox{Pr}\left[P=a\ \|\ C=b\right]=\mbox{Pr}\left[P=a\right]$ לכל $latex a,b$ שהם ערכים חוקיים שאותם $latex P,C$ יכולים לקבל.
 
 אם לכל כתב גלוי $latex P=a$ וכתב סתר $latex C=b$ קיים מפתח אחד ויחיד $latex k_{a,b}$ שמעביר את $latex a$ ל-$latex b$, ואם הסתברות כל המפתחות שווה לאיזה ערך $latex p_{K}$, אז ראשית כל
 
@@ -54,7 +54,7 @@ $latex \mbox{Pr}\left[P=a,C=b\right]=\mbox{Pr}\left[P=a,K=k_{a,b}\right]=\mbox{P
 
 כאן אני מתבסס על כך שהגרלת המפתח היא <strong>בלתי תלויה</strong> בהגרלת הכתב הגלוי. אם הגרלת המפתח תלויה בצורה כלשהו בכתב הגלוי - ובכן, זה אסון מוחלט (ובמקרה זה המעבר האחרון שביצעתי לא יהיה חוקי מבחינה מתמטית).
 
-כעת, אם אשכנע אתכם ש-$latex \mbox{Pr}\left[C=b\right]=p_{K}$ אסיים, כי ינבע מכך ש-$latex \mbox{Pr}\left[P=a\ |\ C=b\right]=\frac{\mbox{Pr}\left[P=a,C=b\right]}{\mbox{Pr}\left[C=b\right]}=\frac{\mbox{Pr}\left[P=a\right]\cdot p_{K}}{p_{K}}=\mbox{Pr}\left[P=a\right]$ כנדרש. אם כן, אני רוצה להוכיח לכם שבלי תלות ב-$latex P$, כתבי הסתר מתפלגים בצורה אחידה בדיוק כמו המפתחות.
+כעת, אם אשכנע אתכם ש-$latex \mbox{Pr}\left[C=b\right]=p_{K}$ אסיים, כי ינבע מכך ש-$latex \mbox{Pr}\left[P=a\ \|\ C=b\right]=\frac{\mbox{Pr}\left[P=a,C=b\right]}{\mbox{Pr}\left[C=b\right]}=\frac{\mbox{Pr}\left[P=a\right]\cdot p_{K}}{p_{K}}=\mbox{Pr}\left[P=a\right]$ כנדרש. אם כן, אני רוצה להוכיח לכם שבלי תלות ב-$latex P$, כתבי הסתר מתפלגים בצורה אחידה בדיוק כמו המפתחות.
 
 ההוכחה הזו היא מה שכבר הזכרתי קודם וראינו איך הוא מתקיים במקרה הפשוט ביותר. בואו נסמן את הקבוצה של כל הכתבים הגלויים האפשריים ב-$latex \mathcal{P}$. אז מתקיים:
 
