@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ומה הקשר של בעיית העצירה לאלכסון של קנטור? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="ומה הקשר של בעיית העצירה לאלכסון של קנטור?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="מי שלא הבין את ההוכחה לאי-כריעות בעיית העצירה, או שהיא סתם לא מעוררת אצלו שום אינטואיציה, אולי יוכל להיעזר בהוכחה “אלטרנטיבית” (במרכאות, כי בפועל עושים בה את אותו הדבר בדיוק) שמהווה וריאציה על שיטת האלכסון של קנטור שכבר הצגתי כאן. זו אחת הדוגמאות הקלאסיות לשימוש בשיטת לכסון במדעי המחשב - יש עוד מספר דוגמאות מעניינות שאולי אביא בעתיד." />
+<meta property="og:description" content="מי שלא הבין את ההוכחה לאי-כריעות בעיית העצירה, או שהיא סתם לא מעוררת אצלו שום אינטואיציה, אולי יוכל להיעזר בהוכחה “אלטרנטיבית” (במרכאות, כי בפועל עושים בה את אותו הדבר בדיוק) שמהווה וריאציה על שיטת האלכסון של קנטור שכבר הצגתי כאן. זו אחת הדוגמאות הקלאסיות לשימוש בשיטת לכסון במדעי המחשב - יש עוד מספר דוגמאות מעניינות שאולי אביא בעתיד." />
+<link rel="canonical" href="http://localhost:4000/blog/2007/10/07/halting_problem_and_cantor_diagonal" />
+<meta property="og:url" content="http://localhost:4000/blog/2007/10/07/halting_problem_and_cantor_diagonal" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-10-07T00:46:21+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2007-10-07T00:46:21+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/10/07/halting_problem_and_cantor_diagonal"},"url":"http://localhost:4000/blog/2007/10/07/halting_problem_and_cantor_diagonal","description":"מי שלא הבין את ההוכחה לאי-כריעות בעיית העצירה, או שהיא סתם לא מעוררת אצלו שום אינטואיציה, אולי יוכל להיעזר בהוכחה “אלטרנטיבית” (במרכאות, כי בפועל עושים בה את אותו הדבר בדיוק) שמהווה וריאציה על שיטת האלכסון של קנטור שכבר הצגתי כאן. זו אחת הדוגמאות הקלאסיות לשימוש בשיטת לכסון במדעי המחשב - יש עוד מספר דוגמאות מעניינות שאולי אביא בעתיד.","headline":"ומה הקשר של בעיית העצירה לאלכסון של קנטור?","dateModified":"2007-10-07T00:46:21+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ומה הקשר של בעיית העצירה לאלכסון של קנטור?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-10-07T00:46:21+03:00" itemprop="datePublished">Oct 7, 2007
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>מי שלא הבין את <a href="http://www.gadial.net/?p=65">ההוכחה</a> לאי-כריעות <a href="http://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%99%D7%99%D7%AA_%D7%94%D7%A2%D7%A6%D7%99%D7%A8%D7%94">בעיית העצירה</a>, או שהיא סתם לא מעוררת אצלו שום אינטואיציה, אולי יוכל להיעזר בהוכחה “אלטרנטיבית” (במרכאות, כי בפועל עושים בה את אותו הדבר בדיוק) שמהווה וריאציה על שיטת <a href="http://he.wikipedia.org/wiki/%D7%94%D7%90%D7%9C%D7%9B%D7%A1%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A7%D7%A0%D7%98%D7%95%D7%A8">האלכסון של קנטור</a> ש<a href="http://www.gadial.net/?p=52">כבר הצגתי כאן</a>. זו אחת הדוגמאות הקלאסיות לשימוש בשיטת לכסון במדעי המחשב - יש עוד מספר דוגמאות מעניינות שאולי אביא בעתיד.</p>
+
+<p>הרעיון הוא כדלהלן: כבר אמרנו שכל <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%9B%D7%95%D7%A0%D7%AA_%D7%98%D7%99%D7%95%D7%A8%D7%99%D7%A0%D7%92">מכונת טיורינג</a> אפשר לקודד באמצעות <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%98%D7%91%D7%A2%D7%99">מספר טבעי</a>. גם אמרנו שאפשר להניח שהקלטים למכונות הטיורינג הם מספרים טבעיים. לכן אפשר לחשוב על טבלה גדולה, של “התשובה לבעיית העצירה”, שמוגדרת כך: כל שורה מתאימה למכונת טיורינג כלשהי, וכל עמודה לקלט כלשהו. התא (i,j) - השורה ה-i והעמודה ה-j - מכיל “כן” אם המכונה שמספרה i עוצרת על הקלט j, ו”לא” אם היא אינה עוצרת.</p>
+
+<p>שיטת האלכסון של קנטור מבוססת על היטפלות לטבלאות שכאלו, וזה בדיוק מה שנעשה: נגדיר תוכנית חדשה, נניח Q, שמתנהגת “הפוך ביחס לאלכסון” - כלומר, על הקלט 1 היא עושה ההפך ממה שכתוב בתא (1,1), על הקלט 2 היא עושה ההפך ממה שכתוב בתא (2,2), וכן הלאה. די ברור שאותה Q לא יכולה להיות מיוצגת על ידי אף אחת מהשורות בטבלה, כי ההתנהגות שלה שונה מההתנהגות של המכונה שבשורה i לפחות על קלט אחד - הקלט i. מה הולך כאן?</p>
+
+<p>באלכסון של קנטור, האבסורדיות הזו שכנעה אותנו שאי אפשר לכתוב את כל המספרים הממשיים ברשימה ממוספרת - כלומר, יש מספר לא בן מניה של ממשיים. אלא שכאן אי אפשר להסיק את אותו הדבר, כלומר שיש מספר לא בן מניה של מכונות טיורינג; כבר הוכחנו שיש מספר בן מניה שלהן. מה הולך כאן? לכאורה קיבלנו סתירה בסיסית במתמטיקה, משהו בסגנון 0=1, ועוד שתי דקות מטוסים יתחילו ליפול והמחשב המרכזי בבנק שלכם יקרוס.</p>
+
+<p>כמובן שאין כאן שום בעיה - המסקנה היחידה היא שתוכנית כמו Q בכלל לא יכולה להתקיים. אם נגיד “אבל לפני שניה הגדרנו אותה במדוייק ואמרנו איך היא מתנהגת על כל קלט” זה טוב ויפה - אלא שהתעלמנו מכך שהתיאור שנתנו הוא לא אלגוריתם.</p>
+
+<p>שכן מה הולך כאן? אמרנו למכונה Q “על הקלט i תעשי ההפך ממה שכתוב בתא (i,i)”, שזה טוב ויפה, אבל לא אמרנו כלום על איך Q <strong>יודעת</strong> מה נמצא בתא i. הרי הטבלה שבנינו היא אינסופית; אי אפשר לקודד אותה כחלק מהמכונה Q עצמה, כי <strong>כל אלגוריתם הוא סופי</strong> (שימו לב עד כמה דרישת הסופיות הזו קריטית).</p>
+
+<p>אם כן, ההנחות הרגילות שאיתן אנו עובדים לא מסייעות לנו ולו ברמז לגלות איך אפשר לכתוב תוכנה מחוכמת כמו Q הזו (אשמח לשמוע הצעות; זה יבשר על חורבן המתמטיקה ונפילת המטוסים המדוברת, אבל זה עדיין יהיה מעניין). כאן נכנסת בעיית העצירה לתמונה: נניח שהייתה איזו מכונה פלאית U שפותרת את בעיית העצירה, אז קיומה היה סולל את הדרך לבניית Q: מה ש-Q הייתה עושה על הקלט i הוא לשאול את U “מה הערך של הכניסה (i,i) בטבלה?” ו-U הייתה עונה, כי זה משמעותה של מכונה שפותרת את בעיית העצירה - שיש לנו דרך <strong>אלגוריתמית</strong> לדעת מה מכיל כל תא בטבלה. הגענו לסתירה (כי כבר אמרנו ש-Q אבסורדית ולא יכולה להתקיים) ולכן אין שום U פלאית.</p>
+
+<p>בפעם הבאה אעבור מדיבורים על בעיית העצירה עצמה לדיבורים על עוד דברים שהם בלתי כריעים, וההוכחה לכך מתאפשרת בזכות הידיעה שבעיית העצירה בלתי כריעה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2007/10/07/halting_problem_and_cantor_diagonal" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

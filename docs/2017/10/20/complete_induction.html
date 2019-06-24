@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אינדוקציה שלמה ואינדוקציה רגילה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אינדוקציה שלמה ואינדוקציה רגילה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="פנו אלי בשאלה פשוטה: איך מוכיחים את עקרון האינדוקציה השלמה מעקרון האינדוקציה הרגיל? ובכן, בואו נסביר על מה מדובר בכלל, ואיך מוכיחים." />
+<meta property="og:description" content="פנו אלי בשאלה פשוטה: איך מוכיחים את עקרון האינדוקציה השלמה מעקרון האינדוקציה הרגיל? ובכן, בואו נסביר על מה מדובר בכלל, ואיך מוכיחים." />
+<link rel="canonical" href="http://localhost:4000/blog/2017/10/20/complete_induction" />
+<meta property="og:url" content="http://localhost:4000/blog/2017/10/20/complete_induction" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-20T20:16:42+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2017-10-20T20:16:42+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/10/20/complete_induction"},"url":"http://localhost:4000/blog/2017/10/20/complete_induction","description":"פנו אלי בשאלה פשוטה: איך מוכיחים את עקרון האינדוקציה השלמה מעקרון האינדוקציה הרגיל? ובכן, בואו נסביר על מה מדובר בכלל, ואיך מוכיחים.","headline":"אינדוקציה שלמה ואינדוקציה רגילה","dateModified":"2017-10-20T20:16:42+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אינדוקציה שלמה ואינדוקציה רגילה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-10-20T20:16:42+03:00" itemprop="datePublished">Oct 20, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>פנו אלי בשאלה פשוטה: איך מוכיחים את עקרון האינדוקציה השלמה מעקרון האינדוקציה הרגיל? ובכן, בואו נסביר על מה מדובר בכלל, ואיך מוכיחים.</p>
+
+<p>אינדוקציה “רגילה” היא דרך מקובלת במתמטיקה להסיק טענה כללית: מתחילים ממקרים פרטיים ספציפיים שבהם קל להראות את הטענה באופן מפורש, ואז מציגים “תבנית הוכחה” שהיא מהצורה “אם המקרה הפשוט הזה נכון, אז גם המקרה היותר מסובך הזה נכון”. הרעיון הוא שלכל מקרה שנרצה להוכיח, נוכל איכשהו להתחיל ממקרה פרטי שעבורו כבר הוכחנו את הטענה, ואז להסיק ממנו, באמצעות תבנית ההוכחה שלנו, מקרים יותר ויותר מסובכים עד שנגיע אל המקרה הספציפי שאנחנו רוצים להוכיח.</p>
+
+<p>את התיאור המאוד כללי ומנופנף ידיים הזה לרוב דוחסים לתוך המסגרת המאוד פשוטה של המספרים הטבעיים - המספרים \(1,2,3,4,\dots\) (נעזוב את 0 להפעם). הרעיון הוא שיש לנו סדרה של טענות, כשכל טענה מתאימה למספר טבעי אחר. למשל, השווין \(1+2+3+\dots+n=\frac{n\left(n+1\right)}{2}\) הוא בעצם דרך כללית לתאר את הסדרה הבאה של טענות:</p>
+
+<p>טענה מס’ 1: \(1=\frac{1\left(1+1\right)}{2}\)</p>
+
+<p>טענה מס’ 2: \(1+2=\frac{2\left(2+1\right)}{2}\)</p>
+
+<p>טענה מס’ 3: \(1+2+3=\frac{3\left(3+1\right)}{2}\)</p>
+
+<p>וכך זה נמשך ונמשך.</p>
+
+<p>אינדוקציה “רגילה” אומרת את הדבר הבא: נניח שאנחנו יודעים להוכיח את הטענה במפורש עבור \(n=1\) (<strong>הבסיס</strong>) ונניח גם ש<strong>אם</strong> נתון לנו שהטענה נכונה עבור \(n\) כלשהו אז אנחנו יודעים להוכיח שהטענה נכונה עבור \(n+1\) (<strong>הצעד</strong>) אז הטענה נכונה לכל \(n\). האינטואיציה היא שכדי להוכיח את טענה 3, למשל, אנחנו מבצעים שרשרת של טענות מהצורה “אוקיי, קודם כל טענה 1 נכונה כי הנה הוכחה מפורשת. עכשיו, אני יודע להוכיח ש<strong>אם</strong> טענה 1 נכונה אז גם טענה 2 נכונה, וכבר ראיתי שטענה 1 נכונה אז המסקנה היא שטענה 2 נכונה. עכשיו, אני יודע להוכיח ש<strong>אם </strong>טענה 2 נכונה אז גם טענה 3 נכונה, וכבר ראינו ש-2 נכונה ולכן גם 3 נכונה”. עבור טענה 1,000,000 אותו עיקרון בדיוק יעבוד, אם כי השרשרת שתיווצר תהיה מפלצתית באורכה (אבל האורך הזה יהיה סופי, שזו הנקודה החשובה פה כי הוכחות אמורות להיות תמיד סופיות).</p>
+
+<p>אינדוקציה “שלמה” אומרת את הדבר הבא: נניח ש<strong>אם </strong>נתון לנו שהטענה נכונה <strong>לכל</strong> מספר טבעי מ-1 ועד \(n\), אז אנחנו יודעים להוכיח את הטענה עבור \(n+1\), אז מכאן נובע שהטענה נכונה לכל \(n\). כאן אין הבדלה בין הבסיס ובין הצעד, כי הבסיס הוא הסיטואציה שבה \(n=0\), ואז ה”צעד” אומר את הדבר הבא: אנחנו יודעים להוכיח שהטענה נכונה עבור 1 <strong>אם</strong> נתון לנו שהיא נכונה לכל מספר טבעי שגדול או שווה ל-1 אבל קטן או שווה ל-0, כלומר במקרה הזה לא נתון לנו כלום, וזו בדיוק הסיטואציה של להוכיח את המקרה \(n=1\) בלי כלום.</p>
+
+<p>מה ההבדל בין אינדוקציה רגילה ושלמה? באינדוקציה שלמה <strong>יש יותר על מה להתבסס</strong> כשבאים להוכיח שהטענה נכונה עבור \(n+1\). באינדוקציה רגילה כל מה שיש לנו הוא את נכונות הטענה עבור \(n\), וזהו; אבל אולי המקרה עבור \(n\) לא רלוונטי עבור \(n+1\) ודווקא קל להוכיח את המקרה \(n+1\) אם נתונה לנו הטענה עבור \(n-1\)? לכן אינדוקציה שלמה באה להגיד לנו - קחו איזה מקרה שתרצו מבין אלו ש”כבר עברתם”. אם נחשוב על זה לרגע, כשאני מוכיח את המקרה \(n=5\) באינדוקציה <strong>רגילה</strong>, מה שאני עושה הוא קודם כל לייצר הוכחות עבור המקרים \(1,2,3,4\) ואז להשתמש רק במקרה 4 כדי להוכיח את 5. אין סיבה עקרוני למה לא להשתמש גם ב”תוצרי הלוואי” שהוכחתי בדרך - 1,2,3.</p>
+
+<p>אם לסכם - אינדוקציה שלמה נראית <strong>חזקה יותר</strong> כי היא נותנת לנו בצעד האינדוקציה יותר מידע שאפשר להתבסס עליו, אבל בפועל זה לא מידע שצץ משום מקום - גם באינדוקציה רגילה הוא נוצר, והאינדוקציה הרגילה פשוט “שוכחת ממנו”. תחשבו על האופן שבו אנחנו לפעמים קוראים ערכים בויקיפדיה: אנחנו נכנסים לערך כלשהו, באמצע הקריאה לוחצים על לינק ומתחילים לקרוא על ערך אחר, ואז על ערך אחר וכן הלאה; כשאנחנו עוברים ערך אנחנו יכולים או סתם ללחוץ על הלינק והדפדפן יעבור לערך החדש, או שאנחנו יכולים לפתוח את הלינק בטאב חדש, תוך שאנחנו שומרים את הטאבים שכוללים את כל הערכים שבהם היינו עד כה. זו המחשה להבדל בין שתי הגישות.</p>
+
+<p>אז למה אנחנו כאן? בשביל הפורמליזם. השאלה המעניינת היא זו: נניח שאנחנו יודעים שהמספרים הטבעיים מקיימים את תכונת האינדוקציה הרגילה; איך אפשר להסיק מכך שהם מקיימים את תכונת האינדוקציה השלמה? איך עושים את זה פורמלית? ולמה בעצם זו בעיה?</p>
+
+<p>כדי לפשט טיפה את הדיון מבלי לפגוע במהות שלו, בואו נציג ניסוח קצת יותר נקי של מהי אינדוקציה. במקום לדבר על “תכונות” נדבר על קבוצות. אינדוקציה רגילה אומרת את הדבר הבא: תהא \(S\) קבוצה כלשהי של מספרים טבעיים. אם \(1\in S\) וגם ידוע שלכל \(n\) טבעי, אם \(n\in S\) אז \(n+1\in S\), אז המסקנה היא ש-\(S=\mathbb{N}\), דהיינו \(S\) כוללת את כל הטבעיים. בואו ננסח את זה בצורה יותר פורמלית, כדי למנוע ככל הניתן כפלי משמעות שהשפה מכניסה:</p>
+
+<p>\(\forall S\left[\left(1\in S\wedge\left(\forall n\left(n\in S\to n+1\in S\right)\right)\right)\to S=\mathbb{N}\right]\)</p>
+
+<p>הניסוח הזה הוא עדיין כתיבה בנפנוף ידיים כלשהו - זה לא פסוק שמתאים בדיוק לכל כללי הלוגיקה הפורמלית, אבל זה מספיק טוב לצריכנו, שהם לתאר פורמלית את מה שקורה פה. עכשיו אנסח אינדוקציה שלמה בצורה דומה:</p>
+
+<p>\(\forall S\left[\left(\forall n\left(\forall k\left(k&lt;n\to k\in S\right)\to n\in S\right)\right)\to S=\mathbb{N}\right]\)</p>
+
+<p>בואו ננסה להבין איך צריכה להיראות הוכחה פורמלית יחסית לדברים הללו. ראשית, ה-\(\forall S\) הזה אומר שאני צריך לקחת \(S\) <strong>כלשהי</strong> ולהוכיח את הטענה בסוגריים עבור אותה \(S\). כלומר, מה שנשאר להוכיח הוא כעת</p>
+
+<p>\(\left(\forall n\left(\forall k\left(k&lt;n\to k\in S\right)\to n\in S\right)\right)\to S=\mathbb{N}\)</p>
+
+<p>זו טענה מהמבנה הכללי \(A\to B\). טענות כאלו הן נכונות תמיד, למעט במקרה שבו \(A\) הוא “אמת” ואילו <strong>\(B\) </strong>הוא “שקר”. כלומר, היעד שלנו הוא להראות שהמקרה הזה לא מתאפשר. מכיוון שבמקרה הזה \(A\) הוא “אמת” אני יכול להוסיף את \(A\) להנחות שלי, ומכיוון שאני רוצה להראות שגם \(B\) הוא אמת, אני רוצה להוכיח את \(B\). במילים אחרות, אם אני מתחזק לעצמי שתי רשימות - רשימה של “ההנחות שלי” ורשימה של “הדברים שעלי להוכיח”, ורשימת “הדברים שעלי להוכיח” כללה את \(A\to B\), אז אני מוציא את \(A\to B\) מהרשימה הזו, מוסיף לה את \(B\) ומוסיף את \(A\) לרשימת ההנחות שלי.</p>
+
+<p>על כן, ה”צריך להוכיח” שלי כולל דבר יחיד: \(S=\mathbb{N}\). ההנחות שלי כוללות את הרישא של נוסחת האינדוקציה השלמה, ואת <strong>כל</strong> נוסחת האינדוקציה הרגילה. כלומר, יש לי שתי הנחות:</p>
+<ol>
+	<li>{::nomarkdown}\(\forall n\left(\forall k\left(k&lt;n\to k\in S\right)\to n\in S\right)\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\(\left(1\in S\wedge\left(\forall n\left(n\in S\to n+1\in S\right)\right)\right)\to S=\mathbb{N}\){:/nomarkdown}</li>
+</ol>
+<p>את הנחה מס’ 2 אפשר לנצל בצורה הבאה: הסיפא שלה היא בדיוק מה שאני צריך להוכיח, ולכן אם אוכיח את הרישא שלה, סיימתי. זה אומר שאני יכול <strong>להחליף</strong> את הצריך להוכיח המקורי שלי בנוסחה הבאה:</p>
+
+<p>\(1\in S\wedge\left(\forall n\left(n\in S\to n+1\in S\right)\right)\)</p>
+
+<p>אלו בעצם שני “צריך להוכיח” שונים שכתובים יחד. רשימת ה”צריך להוכיח” שלי, אם כן, היא כעת:</p>
+<ol>
+	<li>{::nomarkdown}\(1\in S\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\(\forall n\left(n\in S\to n+1\in S\right)\){:/nomarkdown}</li>
+</ol>
+<p>וההנחה שבאמצעותה אני אמור להוכיח את שני אלו היא זו: \(\forall n\left(\forall k\left(k&lt;n\to k\in S\right)\to n\in S\right)\). בואו נראה איך זה מוכיח את 1: ההנחה מתקיימת לכל \(n\), ולכן בפרט עבור הבחירה \(n=1\). כשמציבים את הבחירה הזו בהנחה, מקבלים</p>
+
+<p>\(\left(\forall k\left(k&lt;1\to k\in S\right)\to1\in S\right)\). כמו קודם, אנחנו יכולים להחליף את ה”צריך להוכיח” הנוכחי שלנו, \(1\in S\), ברישא של הפסוק הזה, \(\forall k\left(k&lt;1\to k\in S\right)\). אצלנו הטבעיים לא כוללים את 0, ולכן \(k&lt;1\) הוא משהו שלא מתקיים לאף טבעי. לכן הנוסחה \(\forall k\left(k&lt;1\to k\in S\right)\) היא נכונה תמיד (אם הרישא היא “שקר” לא אכפת לנו אם הסיפא היא אמת או שקר). זה מסיים את זה.</p>
+
+<p>עד עכשיו הכל עבד כל כך חלק, אז איפה הבעיה בעצם? בדיוק בשלב הבא: נשאר לי להוכיח ש-</p>
+
+<p>\(\forall n\left(n\in S\to n+1\in S\right)\)</p>
+
+<p>כלומר, עבור \(a\) שרירותי כלשהו, אנחנו רוצים להוכיח ש-\(a\in S\to a+1\in S\) (בכוונה החלפתי את האות). במילים אחרות, אנחנו רוצים להוכיח את \(a+1\in S\) עם ההנחה \(a\in S\) והנחה נוספת: ההנחה החזקה-לכאורה של אינדוקציה שלמה, שאומרת ש- \(\forall n\left(\forall k\left(k&lt;n\to k\in S\right)\to n\in S\right)\). אם אני אציב \(n=a+1\), הסיפא של ההנחה שלי תהיה בדיוק מה שאני חותר אליו, ויישאר לי רק להראות את \(\forall k\left(k&lt;a+1\to k\in S\right)\). וכאן אני נתקע.</p>
+
+<p>למה אני נתקע? כי לא נתון לי ש-\(k\in S\) <strong>לכל</strong> \(k&lt;a+1\); זה נתון רק עבור \(k\) ספציפי - \(k=a\). ההנחה הרחבה של האינדוקציה השלמה היא <strong>חסרון</strong> במקרה הנוכחי, כי בניגוד לסיטואציות הרגילות שבהן אני <strong>משתמש</strong> באינדוקציה שלמה, ואז זה מקל על החיים, כאן אני מנסה להוכיח <strong>את עקרון האינדוקציה השלמה עצמו</strong>, ולצורך כך אני צריך לקושש <strong>יותר</strong> נתונים מאשר בדרך כלל. לכאורה נתקעתי.</p>
+
+<p>הפתרון הוא פתרון סטנדרטי כאשר משתמשים באינדוקציה ונתקעים - <strong>לחזק את הנחת האינדוקציה</strong>. כשמוכיחים את צעד האינדוקציה מוכיחים \(n\in S\to n+1\in S\). כאן אנחנו נעזרים ב<strong>הנחה</strong> \(n\in S\) כדי להוכיח את ה<strong>צעד</strong> \(n+1\in S\). אם ההנחה \(n\in S\) לא מספיק טובה לנו, אנחנו מחליפים את \(S\) כולה ב-\(S^{\prime}\) שהיא <strong>חיזוק</strong> של \(S\) - כלומר, היא תכונה שכל מי שמקיים אותה מקיים גם את \(S\), אבל כוללת יותר אינפורמציה שאפשר לנצל. בצורה הזו אנחנו מקבלים את ההנחה החזקה יותר \(n\in S^{\prime}\) ואם בחרנו את \(S^{\prime}\) בחוכמה, נוכל להוכיח את הצעד החזק יותר (ולכן הקשה יותר להוכחה) \(n+1\in S^{\prime}\) יותר בקלות.</p>
+
+<p>במקרה שלנו החיזוק הוא די ברור: \(S^{\prime}=\left\{ n\in S\ \|\ \forall k&lt;n\left(k\in S\right)\right\} \). כלומר, התכונה שלנו עכשיו היא “אני מקיים את \(S\) וכך גם כל מי שקטן ממני”. בבירור \(S^{\prime}\subseteq S\) ולכן אם אוכיח \(S^{\prime}=\mathbb{N}\) ינבע מכך \(S=\mathbb{N}\). בשביל להוכיח ש-ּ\(S^{\prime}=\mathbb{N}\) צריך להוכיח את שתי הטענות שהצגתי קודם:</p>
+<ol>
+	<li>{::nomarkdown}\(1\in S^{\prime}\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\(\forall n\left(n\in S^{\prime}\to n+1\in S^{\prime}\right)\){:/nomarkdown}</li>
+</ol>
+<p>מבין שתיהן, הטענה הראשונה כבר טופלה - כבר ראינו ש-\(1\in S\) ומכיוון שלא קיים \(k&lt;1\) אז השייכות \(1\in S^{\prime}\) נובעת מיידית. נשאר רק להוכיח את צעד האינדוקציה ה”מחוזק”, כלומר ש-\(a\in S^{\prime}\to a+1\in S^{\prime}\). כעת, אם \(a\in S^{\prime}\) אז מהגדרת \(S^{\prime}\) נקבל ש-\(k\in S\) לכל \(k&lt;a+1\). זה אומר שכדי להראות ש-\(a+1\in S^{\prime}\) צריך אך ורק להראות ש-\(a+1\in S\). עכשיו מצבנו השתפר! אנחנו צריכים להוכיח את הטענה</p>
+
+<p>\(a+1\in S\)</p>
+
+<p>שגם קודם הסתבכנו איתה, אבל עכשיו יש לנו הנחה חזקה יותר:</p>
+
+<p>\(a\in S^{\prime}\)</p>
+
+<p>וההנחה הזו נותנת לנו את מה שהיה חסר לנו קודם: \(k\in S\) לכל \(k&lt;a+1\). עם ההנחה הזו אפשר להשתמש בהנחה הנוספת שקיבלנו מעקרון האינדוקציה השלמה ולקבל \(a+1\in S\) כפי שרצינו, מה שמסיים את ההוכחה.</p>
+
+<p>לסיכום, אין בעקרון האינדוקציה השלמה שום דבר מתוחכם במיוחד - הוא דוגמא בסיסית לאופן שבו אפשר <strong>לחזק</strong> את עקרון האינדוקציה הרגיל על ידי שינוי התכונה שאותה מוכיחים באינדוקציה. אבל זה אחד מהמקרים הללו שבהם קשה להבין מה בעצם הבעיה עד שלא חופרים בו טכנית לעומק.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2017/10/20/complete_induction" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>בסיסים אורתונורמליים במרחבי הילברט | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="בסיסים אורתונורמליים במרחבי הילברט" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם כתבתי עוד ועוד מילים במקום להגיד “מרחב הילברט הוא מרחב מכפלה פנימית שלם ביחס למטריקה שמושרת מהמכפלה הפנימית שלו”. בעיקר ניסיתי לדבר על ההבדל שבין מרחב סוף-ממדי למרחב אינסוף ממדי, שמתבטא בכך שבמרחב אינסוף-ממדי יותר יעיל לנו לפעמים לדבר על מושג של “בסיס” שלא זהה למושג הסטנדרטי. בפוסט הזה אני רוצה להרחיב על כך." />
+<meta property="og:description" content="בפוסט הקודם כתבתי עוד ועוד מילים במקום להגיד “מרחב הילברט הוא מרחב מכפלה פנימית שלם ביחס למטריקה שמושרת מהמכפלה הפנימית שלו”. בעיקר ניסיתי לדבר על ההבדל שבין מרחב סוף-ממדי למרחב אינסוף ממדי, שמתבטא בכך שבמרחב אינסוף-ממדי יותר יעיל לנו לפעמים לדבר על מושג של “בסיס” שלא זהה למושג הסטנדרטי. בפוסט הזה אני רוצה להרחיב על כך." />
+<link rel="canonical" href="http://localhost:4000/blog/2014/02/19/orthonormal_basis_in_hilbert_space" />
+<meta property="og:url" content="http://localhost:4000/blog/2014/02/19/orthonormal_basis_in_hilbert_space" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-02-19T19:28:45+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2014-02-19T19:28:45+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/02/19/orthonormal_basis_in_hilbert_space"},"url":"http://localhost:4000/blog/2014/02/19/orthonormal_basis_in_hilbert_space","description":"בפוסט הקודם כתבתי עוד ועוד מילים במקום להגיד “מרחב הילברט הוא מרחב מכפלה פנימית שלם ביחס למטריקה שמושרת מהמכפלה הפנימית שלו”. בעיקר ניסיתי לדבר על ההבדל שבין מרחב סוף-ממדי למרחב אינסוף ממדי, שמתבטא בכך שבמרחב אינסוף-ממדי יותר יעיל לנו לפעמים לדבר על מושג של “בסיס” שלא זהה למושג הסטנדרטי. בפוסט הזה אני רוצה להרחיב על כך.","headline":"בסיסים אורתונורמליים במרחבי הילברט","dateModified":"2014-02-19T19:28:45+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">בסיסים אורתונורמליים במרחבי הילברט</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-19T19:28:45+02:00" itemprop="datePublished">Feb 19, 2014
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://www.gadial.net/2014/02/09/hilbert_spaces/">בפוסט הקודם</a> כתבתי עוד ועוד מילים במקום להגיד “מרחב הילברט הוא מרחב מכפלה פנימית שלם ביחס למטריקה שמושרת מהמכפלה הפנימית שלו”. בעיקר ניסיתי לדבר על ההבדל שבין מרחב סוף-ממדי למרחב אינסוף ממדי, שמתבטא בכך שבמרחב אינסוף-ממדי יותר יעיל לנו לפעמים לדבר על מושג של “בסיס” שלא זהה למושג הסטנדרטי. בפוסט הזה אני רוצה להרחיב על כך.</p>
+
+<p>בואו נתחיל מהדוגמה שהיא האבטיפוס. הגדרתי את המרחב \( l^{2}\) בתור מרחב וקטורי מעל \( \mathbb{C}\) שכולל את כל הסדרות מהצורה \( a=a_{1},a_{2},a_{3},\dots\) של מספרים מרוכבים, שמקיימות \( \sum_{n=1}^{\infty}\left\|a_{n}\right\|^{2}&lt;\infty\). על המרחב הזה הגדרתי את המכפלה הפנימית \( \left\langle a,b\right\rangle =\sum_{n=1}^{\infty}a_{n}\overline{b_{n}}\). כמובן, לא הוכחתי שכל ההגדרות הללו עובדות: למשל, שסכום של שתי סדרות עדיין מקיים את הדרישה על סכום הערכים המוחלטים. ההוכחות לא מסובכות אבל כן טכניות ולכן אני בורח מהן, לפחות לבינתיים.</p>
+
+<p>אז בואו קבלו את קיומו של \( l^{2}\) כנתון, ובוא נתבונן בוקטורים הבאים: \( e_{n}\) יסמן את הוקטור שהוא סדרה שכולה 0-ים פרט למקום ה-\( n\)-י, שהוא 1. בבירור \( e_{n}\in l^{2}\) לכל \( n\), ומתקיים \( \left\langle e_{i},e_{j}\right\rangle =\delta_{ij}\), כלומר כל ה-\( e_{n}\)-ים אורתוגונליים זה לזה, ו-\( \\|e_{n}\\|=1\) לכל \( n\). זה מזכיר את מה שקראתי לו “בסיס אורתונורמלי” במרחבים סוף-ממדיים, אבל כמובן שזה לא בסיס במובן הרגיל של המילה, כי צירוף לינארי של מספר סופי של \( e_{n}\)-ים שכאלו יניב וקטור שכל הכניסות שלו פרט למספר סופי הן 0, וב-\( l^{2}\) יש וקטורים רבים שאינם כאלו. אבל מה כן נכון? שאם \( a\) הוא וקטור כלשהו ב-\( l^{2}\), אז ניתן לכתוב:</p>
+
+<p>\( a=\sum_{n=1}^{\infty}a_{n}e_{n}\)</p>
+
+<p>אבל צריך קצת להיזהר עם כתיבת שוויונות כאלו - באיזה מובן יש כאן שוויון? באיזה מובן יש משמעות לסכום האינסופי הזה? ובכן, בפוסט הקודם דיברתי על זה - השוויון הזה הוא דרך אחרת לומר ש-\( \lim_{n\to\infty}\\|a-\sum_{k=1}^{n}a_{k}e_{k}\\|=0\). עכשיו, שימו לב למקדמים של הצירוף הלינארי - ה-\( a_{k}\)-ים. מאיפה ידעתי לכתוב אותם? ובכן, אם אתם זוכרים מה קרה במרחבים סוף-ממדיים, ראינו שם שאם יש לנו בסיס אורתונורמלי כלשהו \( e_{1},\dots,e_{n}\) ויש לנו וקטור \( a\) במרחב, אז \( a=\sum_{k=1}^{n}\left\langle a,e_{k}\right\rangle e_{k}\). כלומר, המקדמים של \( a\) בצירוף הלינארי של הבסיס האורתונורמלי הם בדיוק המכפלה הפנימית של \( a\) באיברים של אותו בסיס. במקרה הספציפי של \( l^{2}\), הבסיס \( e_{n}\) שהצגתי והוקטור \( a=\left(a_{1},a_{2},a_{3},\dots\right)\), קל לראות שעל פי הגדרה \( \left\langle a,e_{n}\right\rangle =a_{n}\).</p>
+
+<p>כעת נשאלת השאלה - האם זה עובד באופן כללי? אם אנחנו לוקחים סדרה אינסופית כלשהי \( e_{1},e_{2},\dots\) של וקטורים אורתונורמליים במרחב הילברט \( \mathcal{H}\) כלשהו, ולוקחים \( a\in\mathcal{H}\), האם נקבל ש-\( a=\sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}\)? ובכן, באסה, לא. חסר לנו עדיין משהו שיהפוך את הסדרה של הוקטורים האורתונורמליים ל”בסיס אינסופי”. אבל לפני שנדבר עליו, בואו ננסה להעריך עד כמה השוויון \( a=\sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}\) יכול להיכשל. לשם כך אני הולך להציג את מה שמכונים שוויון ואי-שוויון <strong>בסל</strong>: הם עוסקים בנסיון לקרב וקטור \( a\) על ידי קבוצה <strong>סופית</strong> של וקטורים אורתונורמליים. נתחיל מהשוויון:</p>
+
+<p>\( \\|a-\sum_{k=1}^{n}\left\langle a,e_{k}\right\rangle e_{k}\\|^{2}=\\|a\\|^{2}-\sum_{k=1}^{n}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\)</p>
+
+<p>כדי להבין מה קורה פה, בואו ניזכר מה זה \( \sum_{k=1}^{n}\left\langle a,e_{k}\right\rangle e_{k}\): אנחנו לוקחים את המרחב שנפרש על ידי הוקטורים \( \left\{ e_{1},\dots,e_{n}\right\} \) ומטילים את \( a\) עליו. ההטלה הזו מיוצגת על ידי הסכום, ולכן \( a-\sum_{k=1}^{n}\left\langle a,e_{k}\right\rangle e_{k}\) הוא הרכיב שנותר מ-\( a\) אחרי שקיזזנו את מה שהוטל על המרחב שנפרש על ידי הוקטורים האורתונורמליים. שוויון בסל אומר מה הגודל של ה”מה שנשאר” הזה - הגודל בריבוע שווה לגודל של \( a\) בריבוע, פחות סכום הריבועים של המקדמים של הרכיב המוטל של \( a\).</p>
+
+<p>ההוכחה היא סטנדרטית למדי ומבוססת בעיקר על סדרה של שוויונות, אבל אני רוצה להראות אותה בכל זאת בגלל שטמונה בה תובנה נוספת על כך ש-\( \left\langle a,e_{k}\right\rangle \) הם המקדמים ה”נכונים” לבחור בהם כשאנחנו רוצים לפרק את \( a\) לגורמים.</p>
+
+<p>אז מה שנעשה הוא זה: נסתכל על צירוף לינארי <strong>כלשהו</strong>, \( \sum_{k=1}^{n}\alpha_{k}e_{k}\) וננסה לחשב ישירות מההגדרה את גודל הנורמה במקרה שלו:</p>
+
+<p>\( \\|a-\sum_{k=1}^{n}\alpha_{k}e_{k}\\|^{2}=\left\langle a-\sum_{k=1}^{n}\alpha_{k}e_{k},a-\sum_{k=1}^{n}\alpha_{k}e_{k}\right\rangle \)</p>
+
+<p>\( =\left\langle a,a\right\rangle -\left\langle a,\sum_{k=1}^{n}\alpha_{k}e_{k}\right\rangle -\left\langle \sum_{k=1}^{n}\alpha_{k}e_{k},a\right\rangle +\left\langle \sum_{k=1}^{n}\alpha_{k}e_{k},\sum_{k=1}^{n}\alpha_{k}e_{k}\right\rangle \)</p>
+
+<p>\( =\\|a\\|^{2}-\left\langle a,\sum_{k=1}^{n}\alpha_{k}e_{k}\right\rangle -\left\langle \sum_{k=1}^{n}\alpha_{k}e_{k},a\right\rangle +\sum_{k=1}^{n}\alpha_{k}\overline{\alpha_{k}}\)</p>
+
+<p>המעבר האחרון חיסל את המכפלה הפנימית הימנית על ידי שימוש באורתונורמליות של \( \left\{ e_{1},\dots,e_{n}\right\} \). עכשיו נשתמש בלינאריות של מכפלה פנימית ונקבל:</p>
+
+<p>\( =\\|a\\|^{2}-\sum_{k=1}^{n}\overline{\alpha_{k}}\left\langle a,e_{k}\right\rangle -\sum_{k=1}^{n}\alpha_{k}\overline{\left\langle a,e_{k}\right\rangle }+\sum_{k=1}^{n}\alpha_{k}\overline{\alpha_{k}}\)</p>
+
+<p>\( =\\|a\\|^{2}+\sum_{k=1}^{n}\left[-\overline{\alpha_{k}}\left\langle a,e_{k}\right\rangle -\alpha_{k}\overline{\left\langle a,e_{k}\right\rangle }+\alpha_{k}\overline{\alpha_{k}}\right]\)</p>
+
+<p>\( =\\|a\\|^{2}-\sum\left\langle a,e_{k}\right\rangle \overline{\left\langle a,e_{k}\right\rangle }+\sum\left[\left\langle a,e_{k}\right\rangle \overline{\left\langle a,e_{k}\right\rangle }-\overline{\alpha_{k}}\left\langle a,e_{k}\right\rangle -\alpha_{k}\overline{\left\langle a,e_{k}\right\rangle }+\alpha_{k}\overline{\alpha_{k}}\right]\)</p>
+
+<p>\( =\\|a\\|^{2}-\sum\left\langle a,e_{k}\right\rangle \overline{\left\langle a,e_{k}\right\rangle }+\sum\left[\left(\left\langle a,e_{k}\right\rangle -\alpha_{k}\right)\overline{\left(\left\langle a,e_{k}\right\rangle -\alpha_{k}\right)}\right]\)</p>
+
+<p>\( =\\|a\\|^{2}-\sum\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}+\sum\left\|\left\langle a,e_{k}\right\rangle -\alpha_{k}\right\|^{2}\)</p>
+
+<p>בשביל מה זה היה טוב, תשאלו? ובכן, כעת בבירור הערך המינימלי של הביטוי הזה מתקבל כאשר \( \alpha_{k}=\left\langle a,e_{k}\right\rangle \), ובמקרה הזה נקבל את השוויון \( \\|a-\sum_{k=1}^{n}\alpha_{k}e_{k}\\|^{2}=\\|a\\|^{2}-\sum\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\) שרצינו. כזכור, המקדמים \( \left\langle a,e_{k}\right\rangle \) הללו נקראים <strong>מקדמי פורייה</strong> של \( a\), על פי הבסיס \( \left(e_{n}\right)\).</p>
+
+<p>כעת לאי השוויון, שהוא מפורסם יותר: מכיוון שבשוויון לעיל אגף שמאל תמיד חיובי, הרי ש-\( \\|a\\|^{2}-\sum\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\ge0\), ועל ידי העברת אגפים נקבל ש-\( \sum_{k=1}^{n}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\le\\|a\\|^{2}\). אי השוויון הזה תקף לכל \( n\), ולכן נובעת ממנו המסקנה הבאה:</p>
+
+<p>\( \sum_{k=1}^{\infty}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\le\\|a\\|^{2}\)</p>
+
+<p>ההוכחה סטנדרטית: אם מניחים בשלילה שהשוויון אינו נכון, אז יהיה סכום חלקי כלשהו שבעצמו כבר עובר את \( \\|a\\|^{2}\) וזו תהיה סתירה לנתון.</p>
+
+<p>עכשיו, מכיוון שהטור חסום, האיבר הכללי שלו בהכרח שואף לאפס, כלומר \( \left\langle a,e_{n}\right\rangle \to0\), וזה נכון לכל \( a\). התכונה הזו, של “התכנסות בעזרת מכפלה פנימית”, היא כל כך מעניינת שנותנים לה שם: <strong>התכנסות חלשה</strong>. פורמלית, אם יש לנו סדרה \( x_{1},x_{2},x_{3},\dots\), אז מסמנים \( x_{n}\overset{w}{\to x}\) אם מתקיים ש-\( \left\langle x_{n}-x,a\right\rangle =0\) לכל \( a\) במרחב. במקרה שלנו קיבלנו ש-\( e_{n}\overset{w}{\to0}\).</p>
+
+<p>השם “התכנסות חלשה” נובע מכך שהתכנסות “רגילה”, כלומר \( \\|x-x_{n}\\|\to0\), גוררת את ההתכנסות החלשה: בואו נניח לרגע שמתקיים \( \lim_{n\to\infty}\\|x_{n}-x\\|=0\). אני רוצה להראות שזה גורר את הסוג השני של התכנסות, כלומר ש- \( \left\langle x_{n}-x,a\right\rangle \to0\). כדי להראות את זה, בואו נשתמש ב<strong>אי-שוויון קושי שוורץ</strong>: \( \left\|\left\langle a,b\right\rangle \right\|\le\\|a\\|\\|b\\|\). אי השוויון הזה עובד בכל מרחב מכפלה פנימית ואני מתחמק מלהוכיח אותו כרגע, אבל בואו נראה מה הוא נותן לנו כאן:</p>
+
+<p>\( \left\|\left\langle x_{n}-x,a\right\rangle \right\|\le\\|x_{n}-x\\|\\|a\\|\)</p>
+
+<p>עכשיו, \( \\|a\\|\) הוא קבוע, ואילו \( \\|x_{n}-x\\|\to0\), ולכן \( \left\|\left\langle x_{n}-x,a\right\rangle \right\|\to0\), כלומר \( \left\langle x_{n}-x,a\right\rangle \to0\), וזאת בלי קשר לשאלה מהו \( a\).</p>
+
+<p>כדי לראות ששני סוגי ההתכנסויות אינם זהים, מספיק לשים לב לכך שעבור הסדרה האורתונורמלית שלנו, \( \\|e_{n}\\|=1\) לכל \( n\) ולכן \( \\|e_{n}-0\\|\) בוודאי שאינו שואף ל-0. כלומר, ה-\( e_{n}\)-ים מתכנסים חלש לאפס אך לא חזק.</p>
+
+<p>עכשיו, אי השוויון \( \sum_{k=1}^{\infty}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\le\\|a\\|^{2}\) בעצם אומר לנו שטור מקדמי הפורייה של \( a\) מתכנס תמיד. האם אפשר להסיק מכך שהטור \( \sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}\) גם כן מתכנס תמיד? ובכן, אוף, לא. אבל מה שכן קל להראות, עם טכניקות דומות לאלו שהשתמשנו בהן עד כה, הוא שכאשר אנחנו במרחב הילברט, הטור אכן מתכנס תמיד. מה שעושים הוא להראות שבאופן כללי, \( \sum_{k=1}^{n}\alpha_{n}e_{n}\) היא סדרת קושי, ולהשתמש בשלמות של המרחב כדי להסיק שהיא מתכנסת, וזאת כאשר המקדמים \( \alpha_{n}\) מקיימים ש-\( \sum_{n=1}^{\infty}\left\|\alpha_{n}\right\|^{2}&lt;\infty\). כמו כן, לא קשה להראות שאם הטור מתכנס, אז שוויון פרסבל שהצגתי בפוסט הקודם (עבור סכום סופי של וקטורים אורתונורמליים) מתקיים גם כאן, כלומר \( \\|\sum_{n=1}^{\infty}\alpha_{n}e_{n}\\|^{2}=\sum_{n=1}^{\infty}\left\|\alpha_{n}\right\|^{2}\).</p>
+
+<p>נפלא, אז האם במרחב הילברט מתקיים \( a=\sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}\)? ובכן, לא, עדיין לא! הטור באגף ימין עשוי להתכנס, אבל לא מובטח שיתכנס אל \( a\)!</p>
+
+<p>בואו נראה דוגמה. נסתכל על המרחב \( \mathcal{H}=L^{2}\left(\left[-\pi,\pi\right]\right)\), כלומר פונקציות \( f:\left[-\pi,\pi\right]\to\mathbb{C}\) עם מכפלה פנימית שמוגדרת על ידי אינטגרל. נגדיר \( e_{n}=\frac{1}{\sqrt{\pi}}\sin nx\). כדי לראות שמדובר על סדרה של וקטורים אורתונורמליים נצטרך לעבוד טיפה. ראשית, המכפלה הפנימית של וקטור עם עצמו:</p>
+
+<p>\( \left\langle e_{n},e_{n}\right\rangle =\frac{1}{\pi}\int_{-\pi}^{\pi}\sin^{2}nxdx=\frac{1}{\pi}\int_{-\pi}^{\pi}\frac{1-\cos2nx}{2}dx=\)</p>
+
+<p>\( =\frac{1}{\pi}\left[\frac{x-\frac{1}{2n}\sin2nx}{2}\right]_{-\pi}^{\pi}=\frac{1}{\pi}\left(\frac{\pi+\pi}{2}\right)=1\)</p>
+
+<p>כאן השתמשנו בכך שסינוס של כפולה שלמה של \( \pi\) הוא אפס. כמו כן, אם \( n\ne m\) אז נקבל</p>
+
+<p>\( \left\langle e_{n},e_{m}\right\rangle =\frac{1}{\pi}\int_{-\pi}^{\pi}\sin nx\sin mxdx=\frac{1}{\pi}\int_{-\pi}^{\pi}\frac{\cos\left(n-m\right)x-\cos\left(n+m\right)x}{2}dx=0\)</p>
+
+<p>כאן הרשיתי לעצמי לקפוץ ל-0 מהר, כי כבר ברור מה יקרה - שני הקוסינוסים יהפכו אחרי אינטגרציה לסינוסים וכשנציב בהם \( \pi\) הם יתאפסו. הסיכוי היחיד של הביטוי להיות שונה מאפס הוא אכן כאשר \( n=m\) ואז ה-\( \cos\left(n-m\right)x\) הופך ל-1.</p>
+
+<p>אז יש לנו וקטורים אורתונורמליים. עכשיו בואו ננסה לקחת את הוקטור \( a=\cos x\) ולהציג אותו כסכום:</p>
+
+<p>\( \sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}=\frac{\sin nx}{\sqrt{\pi}}\cdot\sum_{n=1}^{\infty}\frac{1}{\sqrt{\pi}}\int_{-\pi}^{\pi}\cos x\sin nxdx\)</p>
+
+<p>\( =\frac{\sin nx}{\sqrt{\pi}}\cdot\sum_{n=1}^{\infty}\frac{1}{\sqrt{\pi}}\int_{-\pi}^{\pi}\frac{\sin\left(n+1\right)x+\sin\left(n-1\right)x}{2}dx=0\)</p>
+
+<p>כאן אפס מגיע הרבה יותר בקלות - פשוט תוך הסתמכות על כך ש-\( \sin\) היא פונקציה אי זוגית (\( f\left(-x\right)=-f\left(x\right)\)) ושאינטגרציה של פונקציות כאלו בתחום סימטרי סביב 0 נותנת 0 תמיד. אם כן, קיבלנו ש-\( \sum_{n=1}^{\infty}\left\langle \cos x,e_{n}\right\rangle e_{n}\) שווה לאפס, במקום ל-\( \cos x\). הממממ. אז מה עוד חסר?</p>
+
+<p>ראשית, בואו נגדיר את מה שאנחנו רוצים שיקרה: סדרה - של וקטורים אורתונורמליים \( e_{1},e_{2},e_{3},\dots\) נקראת <strong>שלמה</strong> אם \( \sum_{n=1}^{\infty}\left\langle a,e_{n}\right\rangle e_{n}=a\) לכל \( a\) במרחב. בפרט נובע מכך שלכל וקטור במרחב יש דרך הצגה <strong>יחידה</strong> כסכום אינסופי של אברי הסדרה: כי נניח ש-\( \sum_{n=1}^{\infty}\alpha_{n}e_{n}=\sum_{n=1}^{\infty}\beta_{n}e_{n}\), אז נחסר את האגפים ונקבל \( 0=\sum_{n=1}^{\infty}\left(\alpha_{n}-\beta_{n}\right)e_{n}\) ומשוויון פרסבל נסיק ש-\( 0=\sum_{n=1}^{\infty}\left\|\alpha_{n}-\beta_{n}\right\|^{2}\), מה שיכול לקרות רק אם \( \alpha_{n}=\beta_{n}\) לכל \( n\). תכונת ה”קיום ויחידות” הזו מאוד דומה למה שקורה עם בסיס רגיל, רק ששם מדובר על צירוף לינארי סופי, לא אינסופי; עדיין, זה מספיק כדי שנשתמש שנקרא לסדרה אורתונורמלית שלמה “בסיס אורתונורמלי” (כשלכולם ברור מההקשר שזה לא בסיס של צירוף לינארי סופי).</p>
+
+<p>טוב, ההגדרה של סדרה אורתונורמלית שלמה עדיין לא אומרת שיש לנו קריטריון קל לבדיקה שיכריע שסדרת וקטורים נתונה היא שלמה. בואו נחשוב לרגע - איך אפשר לזהות שקבוצה אורתונורמלית של וקטורים היא בסיס למרחב וקטורי ממימד סופי? ובכן, וקטורים אורתוגונליים הם בלתי תלויים לינארית, אז רק צריך להראות שזו קבוצה פורשת; אם היא לא פורשת, אז יש איזה שהוא וקטור שלא נפרש על ידי אברי הקבוצה, ולכן אפשר לפרק אותו לשני רכיבים - רכיב אחד של ההיטל שלו על אברי הקבוצה, ורכיב שני שאורתוגונלי לכל אברי הקבוצה. במילים אחרות, הקבוצה לא פורשת רק אם קיים וקטור שאורתוגונלי לכל אבריה אבל הוא איננו וקטור האפס.</p>
+
+<p>ובכן, הקריטריון הזה עובד גם עבור סדרות אינסופיות. פורמלית, אם \( e_{1},e_{2},\dots\) היא סדרה אורתונורמלית בעלת התכונה שאם \( \left\langle a,e_{n}\right\rangle =0\) לכל \( e_{n}\) בסדרה, אז בהכרח \( a=0\) - אז במקרה כזה, \( e_{1},e_{2},\dots\) היא סדרה אורתונורמלית שלמה. ברור, אגב, שזה חייב להתרחש אם הסדרה היא שלמה, כי אז לכל \( a\) מתקיים \( a=\sum\left\langle a,e_{n}\right\rangle e_{n}\) כך שאם כל המקדמים הם 0 נובע מכך שהסכום הוא 0. השאלה היא רק למה התכונה של המכפלה הפנימית הזו גוררת שהסדרה היא אכן שלמה.</p>
+
+<p>אוקיי, אז בואו ניקח איזה \( a\) ונגדיר \( b=\sum\left\langle a,e_{n}\right\rangle e_{n}\). כזכור, \( b\) קיים, אבל אם הסדרה אינה שלמה קיימת הסכנה שהוא יהיה שונה מ-\( a\). אם נראה ש-\( a-b=0\), סיימנו; בגלל התכונה שלעיל, מספיק להראות ש-\( \left\langle a-b,e_{n}\right\rangle =0\) לכל \( n\). בואו נפתח את החישוב של המכפלה הפנימית הזו:</p>
+
+<p>\( \left\langle a-b,e_{n}\right\rangle =\left\langle a,e_{n}\right\rangle -\left\langle \sum\left\langle a,e_{k}\right\rangle e_{k},e_{n}\right\rangle =\left\langle a,e_{n}\right\rangle -\sum\left\langle a,e_{k}\right\rangle \delta_{nk}\)</p>
+
+<p>\( =\left\langle a,e_{n}\right\rangle -\left\langle a,e_{n}\right\rangle =0\)</p>
+
+<p>וזה מסיים את זה.</p>
+
+<p>למעשה, אפשר לתת עוד קריטריון שקול לכך שסדרה אורתונורמלית היא שלמה - שוויון פרסבל. ניסחתי אותו כאן כבר בתור \( \\|\sum_{n=1}^{\infty}\alpha_{n}e_{n}\\|^{2}=\sum_{n=1}^{\infty}\left\|\alpha_{n}\right\|^{2}\) - כלומר, בלי להתחייב על מהם המקדמים \( \alpha_{k}\) - אבל אפשר עכשיו לנסח אותו שוב בצורה המוכרת יותר שלו, שתקפה רק עבור סדרה אורתונורמלית שלמה:</p>
+
+<p>\( \\|a\\|^{2}=\sum_{n=1}^{\infty}\left\|\left\langle a,e_{n}\right\rangle \right\|^{2}\).</p>
+
+<p>לא בכל מרחב הילברט יש סדרה אורתונורמלית שלמה; מרחבים שבהם יש כזו נקראים <strong>ספרביליים</strong>. עכשיו, בואו ניזכר לרגע במה שקרה באלגברה לינארית סוף-ממדית: ראינו שכל מרחב וקטורי ממימד \( n\) איזומורפי ל-\( \mathbb{C}^{n}\) - האיזומורפיזם כלל בחירת בסיס למרחב והתאמה לכל וקטור במרחב של וקטור הקואורדינטות שלו על פי הבסיס. בואו נראה עכשיו שאותה תוצאה עובדת גם עבור מרחבי הילברט ספרביליים (ובפרט עבור כל מרחבי המכפלה הפנימית ממימד סופי): נראה שכל מרחב כזה ממימד \( n\) איזומורפי ל-\( \mathbb{C}^{n}\) כמרחב מכפלה פנימית. ולמי יהיו איזומורפיים מרחבי הילברט הספרביליים האינסוף-ממדיים? נסו לנחש (זה לא קשה) בזמן שאני מגדיר פורמלית מה זה אומר איזומורפיזם כאן: אם \( U,V\) הם שני מרחבי מכפלה פנימית מעל \( \mathbb{C}\) (עזבו את \( \mathbb{R}\), אין לי כוח לנסח כל משפט פעמיים) אז פונקציה \( T:U\to V\) היא איזומורפיזם שלהם אם היא לינארית (\( T\left(a+b\right)=T\left(a+b\right)\) ו-\( T\left(\lambda a\right)=\lambda T\left(a\right)\)), חד-חד-ערכית ועל, ומשמרת את המכפלה הפנימית, כלומר \( \left\langle T\left(a\right),T\left(b\right)\right\rangle =\left\langle a,b\right\rangle \).</p>
+
+<p>אז בואו ניקח מרחב מכפלה פנימית ממימד \( n\). הוא סוף ממדי, ולכן יש לו בסיס רגיל. את הבסיס הרגיל אפשר לגרם-שמדט ולקבל בסיס אורתונורמלי \( \left\{ e_{1},\dots,e_{n}\right\} \). עכשיו נגדיר את \( T\) באופן המתבקש, על ידי שליחת כל איבר לוקטור הקואורדינטות שלו, דהיינו \( T\left(a\right)=\left(\left\langle a,e_{1}\right\rangle ,\dots,\left\langle a,e_{n}\right\rangle \right)\). הלינאריות של \( T\) נובעת מייד מתכונות הלינאריות של מכפלה פנימית. כדי להראות ש-\( T\) חח”ע ועל מספיק להראות שהגרעין שלה הוא 0, וזה נובע מכך שאם \( \left\langle a,e_{i}\right\rangle =0\) לכל \( 1\le i\le n\) אז \( a=0\) (פשוט בגלל ש-\( a=\sum_{i=1}^{n}\left\langle a,e_{i}\right\rangle e_{i}\)). לבסוף, \( \left\langle a,b\right\rangle =\left\langle \sum\left\langle a,e_{i}\right\rangle e_{i},\sum\left\langle b,e_{j}\right\rangle e_{j}\right\rangle =\sum\left\langle a,e_{i}\right\rangle \overline{\left\langle b,e_{i}\right\rangle }\) ו-</p>
+
+<p>\( \left\langle T\left(a\right),T\left(b\right)\right\rangle =\left\langle \left(\left\langle a,e_{1}\right\rangle ,\dots,\left\langle a,e_{n}\right\rangle \right),\left(\left\langle b,e_{1}\right\rangle ,\dots,\left\langle b,e_{n}\right\rangle \right)\right\rangle =\sum\left\langle a,e_{i}\right\rangle \overline{\left\langle b,e_{i}\right\rangle }\)</p>
+
+<p>(תזכרו שבמקרה השני, המכפלה הפנימית היא הסטנדרטית על \( \mathbb{C}^{n}\)).</p>
+
+<p>ומה קורה במקרה שבו \( \mathcal{H}\) לא סוף ממדי? עדיין מתבקש לשלוח איבר לוקטור הקואורדינטות שלו, כלומר לסדרה אינסופית של מספרים מרוכבים. זה מזכיר את \( l^{2}\), אבל כדי שההעתקה הזו באמת תהיה מ-\( \mathcal{H}\) אל \( l^{2}\), צריך להתקיים שסדרת הקואורדינטות הזו תקיים את התנאי שמגדיר איברים של \( l^{2}\), שהוא כזכור שיתקיים \( \sum\left\|a_{n}\right\|^{2}&lt;\infty\). למרבה המזל, כבר ראינו את זה בפוסט: \( \sum_{k=1}^{\infty}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\le\\|a\\|^{2}\), ולכן אם \( a\in\mathcal{H}\) הוא איבר כלשהו, אז יש לנו חסם על \( \sum_{k=1}^{\infty}\left\|\left\langle a,e_{k}\right\rangle \right\|^{2}\) - הנורמה של \( a\), שהיא תמיד סופית (כך היא מוגדרת). מכאן מקבלים ש-\( T\left(a\right)=\left(\left\langle a,e_{1}\right\rangle ,\left\langle a,e_{2}\right\rangle ,\dots\right)\) היא העתקה חוקית, וקל להראות שהיא לינארית ומשמרת נורמה כמו קודם. המסקנה היא שכל מרחב הילברט אינסוף ממדי ספרבילי הוא איזומורפי ל-\( l^{2}\), מה שהופך את \( l^{2}\) ל”דוגמה קנונית למרחב הילברט”.</p>
+
+<p>עכשיו בואו נדבר על \( L^{2}\). ראינו כבר קבוצה שמנסה להיות סדרה אורתונורמלית שלמה ב-\( L^{2}\left(\left[-\pi,\pi\right]\right)\) ונכשלת בצורה מבישה. האם קיימת סדרה אורתונורמלית שלמה, כלומר האם המרחב הוא ספרבילי? התשובה חיובית, והסדרה האורתונורמלית שאני רוצה להראות היא חשובה ביותר: היא בעצם מהווה מקרה פרטי חשוב של מה שנקרא <strong>טורי פורייה</strong>.</p>
+
+<p>קודם ניסינו את מזלנו עם סינוסים. זו הייתה בחירה טובה, כי קל להראות שהם אורתונורמליים; מה שהיה חסר לנו בשביל סדרה שלמה הוא גם קוסינוסים. אבל למעשה, אין צורך לדבר על סינוסים וקוסינוסים בנפרד אלו מאלו: אפשר לנצל את זה שהמרחב שלנו הוא מעל המרוכבים, \( \mathbb{C}\), ושבמרוכבים יש פונקציה שמאחדת גם את סינוס וגם את קוסינוס - האקספוננט המרוכב. גם למי שלא מכיר את זה, מספיק לראות את הנוסחה הבאה, “נוסחת אוילר”: \( e^{i\theta}=\cos\theta+i\sin\theta\). הוכחה של נכונות הנוסחה היא עניין לפוסט באנליזה מרוכבת - בינתיים תאמינו לי שזה עובד.</p>
+
+<p>אברי הסדרה שלנו יהיו האיברים הבאים: \( \varphi_{n}\left(x\right)=\frac{1}{\sqrt{2\pi}}e^{inx}\) (אני משתמש ב-\( \varphi\) כי \( e\) תפוס על ידי הקבוע המתמטי), כאשר \( n\) הוא מספר <strong>שלם</strong>, כלומר אנו מרשים גם מספרים שליליים. הסיבה להכפלה ב-\( \frac{1}{\sqrt{2\pi}}\) היא כדי שנקבל שהנורמה של כל איבר היא 1 (תכף נעשה את החישוב) ואנחנו צריכים \( n\)-ים שליליים אחרת הסדרה לא תהיה שלמה. כמובן, יש משהו קצת מוזר בכך שהסדרה שלנו אינסופית “לשני הכיוונים”, אבל זו בסך הכל שיטת סימון קצת שונה שנועדה להקל עלינו; הייתי יכול באותה המידה להגדיר את הסדרה כך:</p>
+
+<p>\( \varphi_{n}\left(x\right)=\begin{cases}\frac{1}{\sqrt{2\pi}}e^{ikx} &amp; n=2k\\\frac{1}{\sqrt{2\pi}}e^{-ikx} &amp; n=2k+1\end{cases}\)</p>
+
+<p>אבל זה יותר מסובך מבחינת הסימונים, ומתמטיקאים שונאים דברים כאלו, ואני מסכים איתם.</p>
+
+<p>בואו נראה שמדובר על סדרה אורתונורמלית. ראשית, מכפלה של איבר בעצמו:</p>
+
+<p>\( \left\langle \varphi_{n},\varphi_{n}\right\rangle =\int_{-\pi}^{\pi}\frac{1}{\sqrt{2\pi}}e^{inx}\cdot\frac{1}{\sqrt{2\pi}}e^{-inx}dx=\frac{1}{2\pi}\int_{-\pi}^{\pi}1dx=1\)</p>
+
+<p>כעת, מכפלה של שני איברים שונים:</p>
+
+<p>\( \left\langle \varphi_{n},\varphi_{m}\right\rangle =\int_{-\pi}^{\pi}\frac{1}{\sqrt{2\pi}}e^{inx}\cdot\frac{1}{\sqrt{2\pi}}e^{-imx}dx=\frac{1}{2\pi}\int_{-\pi}^{\pi}e^{i\left(n-m\right)x}dx\)</p>
+
+<p>\( =\frac{1}{2\pi}\left[\frac{1}{i\left(n-m\right)}e^{i\left(n-m\right)x}\right]_{-\pi}^{\pi}=\frac{e^{i\left(n-m\right)\pi}-e^{-i\left(n-m\right)\pi}}{2\pi\left(i\left(n-m\right)\right)}=0\)</p>
+
+<p>המעבר האחרון נובע מכך ש-\( e^{i\left(n-m\right)\pi}=\cos\left(\pi\left(n-m\right)\right)\) (מנוסחת אוילר) ו-\( e^{-i\left(n-m\right)\pi}=\cos\left(\pi\left(m-n\right)\right)=\cos\left(\pi\left(n-m\right)\right)\) (מכך שקוסינוס היא פונקציה זוגית - סימטרית ביחס לציר \( x=0\)).</p>
+
+<p>מה נשאר? להראות שזו סדרה אורתונורמלית שלמה. כלומר, אם להשתמש בטריק שראינו, להוכיח שאם \( \left\langle \varphi_{n},f\right\rangle =0\) לכל \( n\), אז \( f=0\). אבל עם ההוכחה הזו נחכה קצת לפוסט ייעודי שידבר על טורי פורייה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2014/02/19/orthonormal_basis_in_hilbert_space" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

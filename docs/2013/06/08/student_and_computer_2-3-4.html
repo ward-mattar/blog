@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>פרוייקט “התלמיד והמחשב”, בעיות 2-3-4 | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="פרוייקט “התלמיד והמחשב”, בעיות 2-3-4" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="התרגילים הראשונים שיש בספר של “התלמיד והמחשב” הם קלים בצורה מאכזבת, מה שגורם לעניין להיראות די רפטטיבי; לכן אני אשתדל בפתרונות שלי לא בהכרח ללכת לכיוון של הפתרון היעיל או הפשוט ביותר, אלא אנסה לנצל כל פתרון כדי להראות משהו חדש בשפות שאני מתעסק איתן. במידת האפשר. בעיה מס’ 2 הבעיה פשוטה בערך כמו בעיה מס’ 1: נתונות לנו שתי זווית במשולש, ועלינו להחזיר את הזווית השלישית." />
+<meta property="og:description" content="התרגילים הראשונים שיש בספר של “התלמיד והמחשב” הם קלים בצורה מאכזבת, מה שגורם לעניין להיראות די רפטטיבי; לכן אני אשתדל בפתרונות שלי לא בהכרח ללכת לכיוון של הפתרון היעיל או הפשוט ביותר, אלא אנסה לנצל כל פתרון כדי להראות משהו חדש בשפות שאני מתעסק איתן. במידת האפשר. בעיה מס’ 2 הבעיה פשוטה בערך כמו בעיה מס’ 1: נתונות לנו שתי זווית במשולש, ועלינו להחזיר את הזווית השלישית." />
+<link rel="canonical" href="http://localhost:4000/blog/2013/06/08/student_and_computer_2-3-4" />
+<meta property="og:url" content="http://localhost:4000/blog/2013/06/08/student_and_computer_2-3-4" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-06-08T19:02:49+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2013-06-08T19:02:49+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/06/08/student_and_computer_2-3-4"},"url":"http://localhost:4000/blog/2013/06/08/student_and_computer_2-3-4","description":"התרגילים הראשונים שיש בספר של “התלמיד והמחשב” הם קלים בצורה מאכזבת, מה שגורם לעניין להיראות די רפטטיבי; לכן אני אשתדל בפתרונות שלי לא בהכרח ללכת לכיוון של הפתרון היעיל או הפשוט ביותר, אלא אנסה לנצל כל פתרון כדי להראות משהו חדש בשפות שאני מתעסק איתן. במידת האפשר. בעיה מס’ 2 הבעיה פשוטה בערך כמו בעיה מס’ 1: נתונות לנו שתי זווית במשולש, ועלינו להחזיר את הזווית השלישית.","headline":"פרוייקט “התלמיד והמחשב”, בעיות 2-3-4","dateModified":"2013-06-08T19:02:49+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">פרוייקט &quot;התלמיד והמחשב&quot;, בעיות 2-3-4</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-06-08T19:02:49+03:00" itemprop="datePublished">Jun 8, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>התרגילים הראשונים שיש בספר של “<a href="http://www.gadial.net/2013/05/27/student_and_computer_1/">התלמיד והמחשב</a>” הם קלים בצורה מאכזבת, מה שגורם לעניין להיראות די רפטטיבי; לכן אני אשתדל בפתרונות שלי לא בהכרח ללכת לכיוון של הפתרון היעיל או הפשוט ביותר, אלא אנסה לנצל כל פתרון כדי להראות משהו חדש בשפות שאני מתעסק איתן. במידת האפשר.</p>
+<h1>בעיה מס’ 2</h1>
+<p>הבעיה פשוטה בערך כמו בעיה מס’ 1: נתונות לנו שתי זווית במשולש, ועלינו להחזיר את הזווית השלישית.</p>
+
+<p>מבחינה מתמטית זה תרגיל חשבוני פשוט: אם הזוויות הן \( a,b\) אז הזווית השלישית היא \( 180-a-b\). זאת תחת ההנחה שאנחנו מודדים זוויות במעלות ולא, נאמר, ב<a href="http://www.gadial.net/2008/01/11/radians/">רדיאנים</a>, ושאנחנו מדברים על משולשים בגאומטריה אוקלידית ולא ב<a href="gadial.net/Presentations/NoneuclideanGeometry.pdf‎">גאומטריות לא אוקלידיות</a>, שבהן סכום הזוויות במשולש יכול להיות קטן מ-180 מעלות. אבל אלו מן הסתם דקויות מתמטיות שאליהן ממש לא התכוון כותב הספר, והוא גם לא מזכיר אותן.</p>
+
+<p>אם כן, הנה קוד ברובי שפותר את הבעיה:</p>
+
+<p>[code language=”ruby”]
+ANGLES_IN_TRIANGLE = 180
+puts "Please insert two angles of the triangle"
+first_angle = gets.to_i
+second_angle = gets.to_i
+third_angle = ANGLES_IN_TRIANGLE - (first_angle + second_angle)
+puts "The angles in the triangle are #{first_angle}, #{second_angle}, #{third_angle}"
+[/code]</p>
+
+<p><strong></strong>הקוד הזה מאוד דומה לפתרון של תרגיל מס’ 1, אבל הוספתי בו מרכיב חשוב בשפות תכנות - קבועים. השורה הראשונה בתוכנית מציבה את הערך המספרי 180 בקבוע ANGLES_IN_TRIANGLE. מה זה אומר שהמשתנה הזה הוא “קבוע”? פירוש הדבר הוא שמרגע שהצבנו בו ערך, בשורה הראשונה שבה הוא הופיע, לא ניתן לשנות יותר את הערך שנמצא בתוכו (למען האמת, המפרש של רובי יתן לנו <strong>אזהרה</strong> אבל לא יגרום לתוכנית לקרוס). אז בשביל מה צריך משתנה מוזר כזה שאי אפשר לשנות את הערך שלו? למה לא לכתוב בתוכנית 180 וזהו? או, טוב ששאלתם.</p>
+
+<p>מה שיש לנו כאן הוא דוגמה קלאסית לסיטואציה של “התוכנית פשוטה מדי אז קשה להבין בשביל מה צריך לעשות כך וכך”. בעולם האמיתי תוכניות הן לא בנות חמש שורות אלא בנות עשרות-מאות-אלפי-מיליוני שורות, ואז יש יתרון גדול בהחלפה של מספרים בקבועים עם שמות בעלי משמעות. הבה ונמנה כמה:</p>
+<ol>
+	<li>קריאות: מישהו שקורא את הקוד בדרך כלל קורא רק <strong>חלק</strong> ממנו כאשר מדובר על קוד גדול. אם הוא ייתקל במספר 180 באמצע הקוד, הוא לא בהכרח יבין מההקשר מה המספר הזה בא לייצג. זה ייראה לו כמו "מספר קסם". אם לעומת זאת הוא יתקל בשם אינפורמטיבי יהיה לו יותר קל להבין מה הולך כאן.</li>
+	<li>קלות שינוי: אם יש הרבה פרמטרים שבהם התוכנית שלנו תלויה ואנחנו עשויים לרצות לשנות אותם, עדיף בהרבה שהם יוגדרו כקבועים במקום גלוי בתחילת התוכנית ושנשנה אותם שם, מאשר שנצטרך לחטט בתוך הקוד ולחפש את המקום שבו משתמשים בהם בכל פעם שבה אנחנו רוצים לשנות.</li>
+	<li>מניעת התנגשויות: נניח שיש לנו בתוכנית כמה פרמטרים בעלי משמעויות שונות, שבמקרה יוצאים כולם 4. נניח עכשיו שאנחנו רוצים לשנות את אחד הפרמטרים הללו ל-5 מבלי לשנות את היתר. אם לא נגדיר את הפרמרטים בתוך קבועים אלא פשוט נכתוב 4 בקוד בכל מקום, איך נשנה? אם נשנה כל מקום שבו מופיע 4 ל-5 אנחנו משנים גם את הערך של פרמטרים שלא רצינו לשנות!</li>
+	<li>קבועים יכולים לקפל בתוכם מספרים שהם תוצאה של חישוב מסובך יחסית, ובפרט כזה שלא ניתן לבצע מראש ולכתוב בתוכנית אלא יהיה תלוי בפרמטרים כלשהם שהתוכנית תדע רק אחרי תחילת ריצתה (תחשבו למשל על תוכנית שקוראת קבצי קונפיגורציה חיצוניים).</li>
+</ol>
+<p>בקיצור, קבועים זה טוב. כלל ברזל אחד בתכנות הוא שרצוי מאוד שלא יהיו “מספרי קסם” בתוך הקוד - מי שכותב מספר מפורש כחלק מהקוד ולא בתוך קבוע צריך לעצור ולשאול את עצמו האם זה באמת רעיון טוב. לרוב 0 ו-1 יהיו חריגים ברורים מהכלל הזה, ויש עוד מקרים שבהם המשמעות של המספר ברורה לחלוטין מההקשר, אבל כשאנחנו נותנים כללים לתכנות נכון, אנחנו תמיד מדברים על המקרה הממוצע, לא על כל המקרים.</p>
+
+<p>קצת על התחביר: בשפות אחרות נהוג לסמן שמשתנה הוא קבוע על ידי הוספת constant לפני הצהרה עליו או משהו בסגנון. ברובי לא נהוג להצהיר במפורש על משתנים, ולכן הכלל הוא שקבוע הוא משתנה שהשם שלו מתחיל באות גדולה. מכיוון שבכל מקרה זה נוהג די נפוץ לכתוב שמות של קבועים כשכל האותיות שבהן גדולות, זה גם מה שנהוג לעשות ברובי (אבל מבחינת התחביר זה לא הכרחי). זו, אגב, תכונה קצת מעצבנת של רובי, מכיוון שלפעמים אני כן רוצה להגדיר משתנה שהשם שלו מתחיל באות גדולה (למשל, כשאני מתכנת אלגוריתם כלשהו מתוך מאמר, כך שבמאמר עצמו המשתנים קיבלו שמות שהן אותיות גדולות), אבל שאלו יהיו הצרות שלנו.</p>
+
+<p>ומה קורה בהסקל?</p>
+
+<p>[code]
+angles_in_triangle = 180
+third_triangle_angle :: Int -&gt; (Int -&gt; Int)
+third_triangle_angle a b = angles_in_triangle - (a+b)</p>
+
+<p>main = do
+  putStrLn "Please insert two angles of the triangle"
+  a &lt;- getLine
+  b &lt;- getLine
+  putStrLn ("The angles in the triangle are " ++ a ++ ", " ++ b ++ ", " ++ show(third_triangle_angle (read a) (read b)))
+[/code]</p>
+
+<p>גם פה יש לנו קוד שדומה מאוד לזה של תרגיל 1. ההצהרה על הקבוע בהתחלה לא דורשת לא כיתוב של constant ולא אותיות גדולות או שום דבר אחר, עקב הגישה של הסקל לפיה “הכל הוא פונקציה”. בעצם, כשאני כותב ש-angles_in_triangle שווה ל-180, אני לא אומר “angles_in_triangle הוא מספר שהערך שלו הוא 180” אלא ש-“angles_in_triangle היא <strong>פונקציה</strong> שמקבלת 0 קלטים ומחזירה את הפלט הקבוע 180”. זה נשמע שקול, אבל מבחינה רעיונית יש הבדלים, והבסיסי שבהם הוא שהסקל לא מרשה לנו להגדיר מחדש פונקציות באמצע התוכנית, כך שאם אני אנסה להציב ב-angles_in_triangle ערך אחר, התוכנית לא תתקמפל. הסיבה שאני לא כותב את שם הקבוע באותיות גדולות היא שבהסקל באותיות גדולות מתחילים בכלל טיפוסים של ערכים (כמו Int שכבר ראינו) ואילו שמות של פונקציות מתחילים תמיד באותיות קטנות. כל שפה והמוזרויות שלה…</p>
+
+<p>ועכשיו לג’אווהסקריפט:</p>
+
+<p>[code language=”javascript”]
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Targil 2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    compute_angle = function(){
+		var ANLGES_IN_TRIANGLE = 180
+		var a = parseInt(document.getElementById("a").value);
+		var b = parseInt(document.getElementById("b").value);
+		var c = ANLGES_IN_TRIANGLE - (a+b);
+		document.getElementById("c").value = c;
+    }
+  &lt;/script&gt;
+  angle a = &lt;input type="textbox" id="a" value = "0" onkeyup = "compute_angle()"/&gt;
+  &lt;br /&gt;
+  angle b = &lt;input type="textbox" id="b" value = "0" onkeyup = "compute_angle()"/&gt;
+  &lt;br /&gt;
+  angle c = &lt;input type="textbox" id="c" value = "180"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+[/code]</p>
+
+<p>כאן לכאורה אני מצהיר על הקבוע כמו שצריך - כותב var ואת השם שלו באותיות גדולות. רק שלמעשה, כאן זה אפילו פחות חזק מאשר ברובי - מבחינת ג’אווהסקריפט מדובר על משתנה לכל דבר ואפשר להציב בו ערכים חדשים. אני לא מכיר דרך להגדיר קבועים בג’אווהסקריפט (למרות שאם ממש מתאמצים יש דרכים למנוע ממשתנים מסויימים להשתנות).</p>
+
+<p>רגע, אולי תגידו, אבל קראנו שאפשר לכתוב const לפני שמות של משתנים וזה עובד! זה נכון, אבל זה נכון רק אם הדפדפן שמריץ את קוד הג’אווהסקריפט הוא chrome; למיטב ידיעתי דפדפנים אחרים לא תומכים בתכונה הזו, מה שאומר שזה פשע נגד האנושות להשתמש בה. כאשר כותבים קוד שמטרתו להיות מוצג בדפדפן, רצוי לעשות זאת בצורה שתבטיח שהוא יעבוד באותה הצורה בכל הדפדפנים האפשריים, ושאם הוא לא יעבוד בדפדפן כלשהו זה יהיה בגלל שאותו דפדפן החליט לסטות מהסטנדרט, ולא הפוך. הסיבה המרכזית לקיומם של כל אתרי ה”האתר מוצג רק באקספלורר 6, אנא תעיפו את הפיירפוקס שלכם לכל הרוחות” שחלקנו עדיין זוכרים בתיעוב היא בדיוק זו - שאנשים כתבו רק מתוך מחשבה על הדפדפן האיום והנורא שהיה אקספלורר 6 ואפילו לא טרחו לבדוק שהקוד שלהם רץ על פיירפוקס (זה לא רק עניין של שימוש בהרחבות לא סטנדרטיות של השפה; זה גם עניין של “באקספלורר 6 יש באג, אז אני אשנה את התוכנית החוקית שלי בצורה כזו שהבאג לא ישפיע עליה, אבל במחיר זה שהתוכנית כבר לא תרוץ טוב בדפדפן שאין בו את הבאג”).</p>
+
+<p>בואו נעבור עכשיו לבעיה מס’ 3, שקצת מעליבה אותי למען האמת:</p>
+<h1>בעיה מס’ 3</h1>
+<p>בעיה מס’ 3 היא זו: נתון משולש שווה שוקיים ונתונה זווית הבסיס בו. מהי זווית הראש?</p>
+
+<p>זו שאלה מעצבנת כי היא <strong>מקרה פרטי</strong> של השאלה הקודמת, כאשר שתי הזוויות שמתקבלות כקלט הן שוות. זה אומר שהקוד הולך לצאת <strong>פשוט יותר</strong> מאשר הקוד הקודם. אז איך אפשר לעשות איתו משהו מעניין? ברובי אני אציג משהו חדש - קלט מתוך שורת הפקודה ולא מתוך הקלדות המשתמש:</p>
+
+<p>[code language=”ruby”]
+ANGLES_IN_TRIANGLE = 180
+base_angle = ARGV[0].to_i
+head_angle = ANGLES_IN_TRIANGLE - (2*base_angle)
+puts "The head angle in an isosceles triangle with base angle #{base_angle} is #{head_angle}"
+[/code]</p>
+
+<p>הדבר החדש והמעניין כאן הוא הקבוע ARGV שצץ לו פתאום. כדי להבין אותו צריך להבין איך מריצים תוכניות בדרך כלל. רובנו רגילים פשוט ללחוץ על אייקון של קובץ ההרצה, אבל מה שקורה כשלוחצים על האייקון הזה הוא שמורצת <strong>פקודה</strong> כלשהי. לפעמים הפקודה כוללת רק את שם התוכנית, אבל לעתים קרובות אחרי שם התוכנית מופיעים עוד פרמטרים. הפרמטרים הללו הם מחרוזות, כשרווחים מפרידים בין כל שני פרמטרים. כשהתוכנית מתחילה לרוץ, מאותחל קבוע שנקרא ARGV שמכיל <strong>רשימה</strong> של כל הפרמטרים הללו. אני עדיין לא רוצה לדבר על מה זה בדיוק רשימות, ולכן בינתיים נסתפק בכך שלכתוב סוגריים מרובעים עם אפס בתוכם אחרי ARGV ניגש לאיבר הראשון ברשימה הזו.</p>
+
+<p>בשביל מה העברת פרמטרים כזו לתוכנית טובה? למה לא להשתמש ב-gets? ובכן, זה פשוט עניין של נוחות - למי שמריץ את התוכנית נוח לכתוב את שם התוכנית ואז את הפרמטרים במקום לכתוב את שם התוכנית, ללחוץ אנטר, להקיש פרמטר, ללחוץ אנטר… וכדומה. זה גם עושה קטעי קוד שכוללים קריאה לתוכניות קריאים ופשוטים יותר.</p>
+
+<p>עכשיו בואו נראה את התוכנית בהסקל. אני לא הולך לקרוא פרמטרים משורת הפקודה בה כי האופן שעושים את זה בהסקל הוא טיפה יותר מסובך, אז נעזוב את זה לבינתיים. תחת זאת אני אדגים משהו פשוט אחר: את הפונקציה ה”חדשה” של תרגיל 3 אני אכתוב בעזרת זו של תרגיל 2:</p>
+
+<p>[code]
+angles_in_triangle = 180</p>
+
+<p>third_triangle_angle :: Int -&gt; (Int -&gt; Int)
+third_triangle_angle a b = angles_in_triangle - (a+b)</p>
+
+<p>head_triangle_angle :: Int -&gt; Int
+head_triangle_angle base = third_triangle_angle base base</p>
+
+<p>main = do
+  putStrLn "Please insert the base angle of the triangle"
+  base &lt;- getLine
+  putStrLn ("The angles in the triangle are " ++ base ++ ", " ++ base ++ ", " ++ show(head_triangle_angle (read base)))
+[/code]</p>
+
+<p>ורק בג’אווהסקריפט אין לי רעיון למשהו יצירתי לעשות. אין ARGV בג’אווהסקריפט כי התוכניות לא מורצות משורת הפקודה. מה שכן אפשר לעשות בג’אווהסקריפט הוא לקבל פרמטרים מהדפדפן, כחלק מהבקשה שהדפדפן מבצע כשהוא מבקש מהשרת את הדף; אני מעדיף לא להיכנס לפרטים הללו כרגע, מכיוון שאין מנגנון פשוט שמובנה בשפה ומאפשר להשיג אותם - צריך טיפה לעבוד או להשתמש בספריה סטנדרטית חשובה ביותר (jQuery) שאני נמנע מלהציג בינתיים. אז הנה הקוד הסתמי למדי:</p>
+
+<p>[code language=”javascript”]
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Targil 3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    compute_angle = function(){
+		var ANLGES_IN_TRIANGLE = 180
+		var base_angle = parseInt(document.getElementById("base").value);
+		var head_angle = ANLGES_IN_TRIANGLE - (base_angle*2);
+		document.getElementById("head").value = head_angle;
+    }
+  &lt;/script&gt;
+  Base angle = &lt;input type="textbox" id="base" value = "0" onkeyup = "compute_angle()"/&gt;
+  &lt;br /&gt;
+  Head angle = &lt;input type="textbox" id="head" value = "180"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+[/code]</p>
+
+<p>טוב, מספיק עם זוויות ומשולשים ומלבנים, בואו נעבור לבעיה מס’ 4:</p>
+<h1>בעיה מס’ 4</h1>
+<p>בבעיה מס’ 4 אנחנו צריכים לקלוט מספר כלשהו, לאו דווקא מספר שלם, ו<strong>לעגל</strong> אותו אל המספר השלם הקרוב ביותר, תוך המוסכמה שאם המספר שקיבלנו נמצא בדיוק בין שני מספרים שלמים, מעגלים כלפי מעלה. כלומר, 3 יעוגל ל-3; 3.3 יעוגל ל-3; 3.5 יעוגל ל-4 ו-3.7 גם כן יעוגל ל-4.</p>
+
+<p>כאשר הספר נכתב, ככל הנראה לא הייתה פונקציה לעיגול של מספרים שמובנית בתוך השפה, ולכן הפתרון שבו הכותב השתמש היה זה: הוסיף 0.5 למספר ואז המיר אותו למספר שלם, תוך הסתמכות על כך שהמרה כזו תמיד לוקחת את החלק השלם של המספר ומתעלמת מכל היתר. בשפות מודרניות כבר יש פונקציה מובנית בשפה עבור עיגול של מספרים, אבל עדיין אשתמש בשיטה של הספר כי אחרת התוכניות יצאו טריוויאליות <strong>מדי</strong>. הנה התוכנית ברובי:</p>
+
+<p>[code language=”ruby”]
+puts "Please insert a number to round"
+number = gets.to_f
+#puts "The rounded number is #{number.round}"
+rounded_number = (number + 0.5).to_i
+puts "The rounded number is #{rounded_number}"
+[/code]</p>
+
+<p>השורה השלישית, זו שמתחילה ב-#, היא <strong>הערה;</strong> המטרה של הערות בקוד היא להקל על מי שקורא אותו להבין מה הולך כאן, ויש להן את המטרה המשנית של להוציא מהתוכנית באופן זמני קטעי קוד מסויימים שכרגע אנחנו לא רוצים להשתמש בהם אבל אולי נרצה להחזיר אחר כך וטוב לדעת שהם היו כאן. במקרה הנוכחי אני משתמש בהערה כדי לתת את השורה שהיא הפתרון ה”נכון” לבעיה הזו ברובי, רק כדי שנוכל לראות איך אמורים לעשות את זה. היתר הוא סטנדרטי ועושה בדיוק את מה שאמרתי: מוסיף 0.5 למספר ואז ממיר הכל למספר שלם.</p>
+
+<p>התוכנית בהסקל די דומה:</p>
+
+<p>[code]
+myRound :: (RealFrac a, Integral b) =&gt; a -&gt; b
+myRound num = floor (num + 0.5)</p>
+
+<p>main = do
+  putStrLn "Please insert a number to round"
+  num &lt;- getLine
+  putStrLn ("The rounded number is " ++ show (myRound (read num)))
+[/code]</p>
+
+<p>אבל ההגדרה של myRound אולי נראית די מוזרה. פתאום יש שם גם חץ מהצורה &lt;=, ומה זה אומר? ובכן, זו דוגמה לפונקציה <strong>פולימורפית</strong>, כלומר לפונקציה שיכולה לקבל כקלט הרבה טיפוסים שונים ולהוציא כפלט הרבה טיפוסים שונים, כל עוד הטיפוסים הללו מצייתים לכל מני כללים. RealFrac שמופיע שם הוא לא טיפוס יחיד אלא אוסף של כמה טיפוסים אפשריים שונים, וכך גם Integral (למשל, Int הוא מקרה פרטי אחד של Integral). אז מה שכתוב שם הוא שהפונקציה מקבלת ערך מסוג a, כאשר a הוא סוג שהוא תת-טיפוס של RealFrac, ומוציאה ערך מסוג b, כאשר b הוא תת-טיפוס של Integral. זה עניין מסובך למדי ונחזור אליו בהמשך; כאן הוא רק בתור טעימה.</p>
+
+<p>לסיום, הפתרון בג’אווהסקריפט:</p>
+
+<p>[code langauge=”javascript”]
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Targil 4&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    compute_round = function(){
+		var num = parseFloat(document.getElementById("num").value);
+		var rounded_num = Math.floor(num + 0.5)
+		document.getElementById("round").value = rounded_num;
+    }
+  &lt;/script&gt;
+  Number = &lt;input type="textbox" id="num" value = "0" onkeyup = "compute_round()"/&gt;
+  &lt;br /&gt;
+  Rounded number = &lt;input type="textbox" id="round" value = "0"/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+[/code]</p>
+
+<p>אין כאן משהו מיוחד, אבל שימו לב לשימוש ב-Math.floor; זו דוגמה לשימוש בפונקציית ספריה, ספציפית הספריה Math. כמו כן שימו שאני מבצע עכשיו parseFloat במקום parseInt.</p>
+
+<p>זהו להפעם; אקשן קצת יותר רציני יתחיל בפעם הבאה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2013/06/08/student_and_computer_2-3-4" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

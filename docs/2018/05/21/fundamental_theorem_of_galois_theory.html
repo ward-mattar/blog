@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>המשפט היסודי של תורת גלואה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="המשפט היסודי של תורת גלואה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="מה הולך כאן? בשעה טובה הגענו אל אחת מאבני היסוד של האלגברה המופשטת - המשפט היסודי של תורת גלואה. כדי להבין מה המשפט אומר צריך להכיר את המושגים הבסיסיים שהוא מתעסק בהם - הרחבת שדות ואוטומורפיזמים של שדות והשדה שאוטומורפיזם משמר. מכירים? יופי, אז הנה המשפט:" />
+<meta property="og:description" content="מה הולך כאן? בשעה טובה הגענו אל אחת מאבני היסוד של האלגברה המופשטת - המשפט היסודי של תורת גלואה. כדי להבין מה המשפט אומר צריך להכיר את המושגים הבסיסיים שהוא מתעסק בהם - הרחבת שדות ואוטומורפיזמים של שדות והשדה שאוטומורפיזם משמר. מכירים? יופי, אז הנה המשפט:" />
+<link rel="canonical" href="http://localhost:4000/blog/2018/05/21/fundamental_theorem_of_galois_theory" />
+<meta property="og:url" content="http://localhost:4000/blog/2018/05/21/fundamental_theorem_of_galois_theory" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-05-21T16:46:02+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2018-05-21T16:46:02+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/05/21/fundamental_theorem_of_galois_theory"},"url":"http://localhost:4000/blog/2018/05/21/fundamental_theorem_of_galois_theory","description":"מה הולך כאן? בשעה טובה הגענו אל אחת מאבני היסוד של האלגברה המופשטת - המשפט היסודי של תורת גלואה. כדי להבין מה המשפט אומר צריך להכיר את המושגים הבסיסיים שהוא מתעסק בהם - הרחבת שדות ואוטומורפיזמים של שדות והשדה שאוטומורפיזם משמר. מכירים? יופי, אז הנה המשפט:","headline":"המשפט היסודי של תורת גלואה","dateModified":"2018-05-21T16:46:02+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">המשפט היסודי של תורת גלואה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-05-21T16:46:02+03:00" itemprop="datePublished">May 21, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2>מה הולך כאן?</h2>
+<p>בשעה טובה הגענו אל אחת מאבני היסוד של האלגברה המופשטת - המשפט היסודי של תורת גלואה. כדי להבין מה המשפט אומר צריך להכיר את המושגים הבסיסיים שהוא מתעסק בהם - <a href="https://gadial.net/2018/04/03/field_extensions_intro/">הרחבת שדות</a> ו<a href="https://gadial.net/2018/04/26/galois_theory_intro/">אוטומורפיזמים של שדות</a> והשדה שאוטומורפיזם משמר. מכירים? יופי, אז הנה המשפט:</p>
+
+<p>תהא \(E/F\) הרחבת גלואה ו-\(G=\text{Gal}\left(E/F\right)\) חבורת הגלואה של ההרחבה. אז קיימת התאמה חד-חד-ערכית ועל בין <strong>שדות הביניים</strong> \(K\) המקיימים \(F\subseteq K\subseteq E\) ובין <strong>תתי-חבורות</strong> \(H\subseteq G\). ההתאמה מוגדרת כך: בכיוון אחד, בהינתן \(K\), היא מחזירה את כל האיברים של \(G\) שמשמרים את \(K\); בכיוון השני, בהינתן \(H\), היא מחזירה את כל האיברים של \(E\) שמשתמרים על ידי \(H\).</p>
+
+<p>יותר מכך: ההתאמה שומרת על מבנה ה<strong>סריג</strong> של תתי-השדות של \(E\) שמכילים את \(F\) ותתי-החבורות של \(G\), תוך שהיא הופכת את הסדר. כלומר, עבור תתי-שדות \(K_{1},K_{2}\) ותתי-החבורות שמתאימים להם \(H_{1},H_{2}\):</p>
+<ul>
+ 	<li>אם {::nomarkdown}\(K_{1}\subseteq K_{2}\){:/nomarkdown} אז {::nomarkdown}\(H_{2}\subseteq H_{1}\){:/nomarkdown}.</li>
+ 	<li>תת-החבורה שמתאימה לשדה {::nomarkdown}\(\left\langle K_{1},K_{2}\right\rangle \){:/nomarkdown} שנוצר על ידי {::nomarkdown}\(K_{1},K_{2}\){:/nomarkdown} היא {::nomarkdown}\(H_{1}\cap H_{2}\){:/nomarkdown}.</li>
+ 	<li>תת-החבורה שמתאימה לשדה {::nomarkdown}\(K_{1}\cap K_{2}\){:/nomarkdown} היא תת-החבורה {::nomarkdown}\(\left\langle H_{1},H_{2}\right\rangle \){:/nomarkdown} שנוצרת על ידי {::nomarkdown}\(H_{1},H_{2}\){:/nomarkdown}.</li>
+</ul>
+<p>יותר מכך: לכל \(F\subseteq K\subseteq E\) כזו אנחנו יודעים ש:</p>
+<ul>
+ 	<li>{::nomarkdown}\(E/K\){:/nomarkdown} הרחבת גלואה עם חבורת גלואה {::nomarkdown}\(\text{Gal}\left(E/K\right)=H\){:/nomarkdown}. לכן בפרט {::nomarkdown}\(\left[E:K\right]=\left\|H\right\|\){:/nomarkdown} ו-{::nomarkdown}\(\left[K:F\right]=\left\|G:H\right\|\){:/nomarkdown} (האינדקס של {::nomarkdown}\(H\){:/nomarkdown} ב-{::nomarkdown}\(G\){:/nomarkdown}).</li>
+ 	<li>{::nomarkdown}\(K/F\){:/nomarkdown} היא הרחבת גלואה אם ורק אם {::nomarkdown}\(H\){:/nomarkdown} היא תת-חבורה <strong>נורמלית </strong>ב-{::nomarkdown}\(G\){:/nomarkdown} ובמקרה זה, {::nomarkdown}\(\text{Gal}\left(K/F\right)\cong G/H\){:/nomarkdown}.</li>
+</ul>
+<p>אני רוצה להסביר את הקטע עם הסריג קצת יותר בפירוט, אבל קודם - תמונות. כאן תמונה אחת באמת שווה אלף מילים.</p>
+
+<p>\(\xymatrix{ &amp; \mathbb{Q}\left(\sqrt{2},\sqrt{3}\right)\ar[dl]^{2}\ar[d]^{2}\ar[dr]^{2}\\ \mathbb{Q}\left(\sqrt{2}\right)\ar[dr]^{2} &amp; \mathbb{Q}\left(\sqrt{6}\right)\ar[d]^{2} &amp; \mathbb{Q}\left(\sqrt{3}\right)\ar[dl]^{2}\\ &amp; \mathbb{Q} } \)</p>
+
+<p>\(\xymatrix{ &amp; \left\{ e\right\} \ar[dl]^{2}\ar[d]^{2}\ar[dr]^{2}\\ \left\{ e,\left(1,0\right)\right\} \ar[dr]^{2} &amp; \left\{ e,\left(1,1\right)\right\} \ar[d]^{2} &amp; \left\{ e,\left(0,1\right)\right\} \ar[dl]^{2}\\ &amp; \left\{ e,\left(1,0\right),\left(0,1\right),\left(1,1\right)\right\} } \)</p>
+
+<p>מה אנחנו רואים פה? בתמונה הראשונה יש לנו את ההרחבה \(\mathbb{Q}\left(\sqrt{2},\sqrt{3}\right)/\mathbb{Q}\) (שדה הפיצול של הפולינום \(\left(x^{2}-2\right)\left(x^{2}-3\right)\) מעל \(\mathbb{Q}\) עם כל תת-השדות שלה. המספרים ליד החצים מתארים את המימדים של ההרחבות. למשל, \(\left[\mathbb{Q}\left(\sqrt{2},\sqrt{3}\right):\mathbb{Q}\left(\sqrt{6}\right)\right]=2\).</p>
+
+<p>בתמונה השניה יש לנו את החבורה \(\mathbb{Z}_{2}\times\mathbb{Z}_{2}\) עם כל תת-החבורות שלה. שימו לב שאני מצייר את החבורה ותתי-החבורות שלה בסדר <strong>הפוך</strong>: תת חבורה נמצאת <strong>מעל</strong> תתי-החבורות שהיא מוכלת בהן. גם המשמעות של המספרים השתנתה: אם יש לנו חץ מתת-החבורה \(H\) אל תת-החבורה \(G\) (כלומר, \(H\subseteq G\)) אז המספר הוא <strong>האינדקס</strong> של \(H\) ב-\(G\), מה שאני מסמן בתור \(\left\|G:H\right\|\) ושווה למספר הקוסטים של \(H\) ב-\(G\) ובמקרה שלנו, הסופי, גם פשוט ל-\(\frac{\left\|G\right\|}{\left\|H\right\|}\).</p>
+
+<p>ברגע שבו הייתה לי הדיאגרמה הראשונה, היה קל לצייר את השניה - רק שיניתי את השמות של השדות כך שבמקומם יהיו תתי-חבורות מתאימות. את החצים עצמם והמספרים עליהם לא הייתי צריך לשנות. זו המהות של המשפט היסודי - המבנה של החצים (“סריג”, ועוד אסביר במפורש מהו בהמשך) הוא זהה לחלוטין עד כדי שינוי שמות - <strong>איזומורפי</strong>.</p>
+
+<p>עוד דוגמא? עוד דוגמא. ראינו גם את עלילות שדה הפיצול של \(x^{3}-2\). השורשים של הפולינום הזה היו \(\sqrt[3]{2},\omega\sqrt[3]{2},\omega^{2}\sqrt[3]{2}\), כאשר \(\omega=e^{\frac{2\pi i}{3}}\) הוא <strong>שורש יחידה פרימיטיבי</strong> מסדר 3 - מספר מרוכב שמקיים \(\omega^{3}=1\) והחזקות שלו הן כל הפתרונות המרוכבים של המשוואה \(x^{3}=1\). כל תמורה אפשרית של השורשים הללו נותנת אוטומורפיזם של שדה הפיצול, כך שחבורת הגלואה המתאימה היא \(S_{3}\) - חבורת כל התמורות על שלושה איברים. איך החבורה הזו נראית, אנחנו יודעים טוב: היא כוללת את תמורת היחידה \(e\), את החילופים \(\left(1\ 2\right),\left(1\ 3\right),\left(2\ 3\right)\) ואת המעגלים מאורך 3 \(\left(1\ 2\ 3\right)\) ו-\(\left(1\ 3\ 2\right)\). כל חילוף יוצר תת-חבורה מסדר 2 שכוללת את \(e\) ועצמו; התמורה \(\left(1\ 2\ 3\right)\) יוצרת תת-חבורה מסדר 3 שכוללת גם את \(\left(1\ 3\ 2\right)\); וזהו. אלו תתי-החבורות הלא טריוויאליות היחידות. אם מנסים למשל ליצור תת-חבורה מ-\(\left(1\ 2\right)\) ו-\(\left(1\ 3\right)\) אז המכפלה שלהם נותנת גם את \(\left(1\ 2\ 3\right)\) ו-\(\left(1\ 3\ 2\right)\) ומכאן כבר אפשר לקבל את כל \(S_{3}\). אם כן, את מבנה הסריג של \(S_{3}\) אפשר לצייר כך:</p>
+
+<p>\(\xymatrix{ &amp; \left\{ e\right\} \ar[ddl]^{3}\ar[d]^{2}\ar[dr]^{2}\ar[drr]\\ &amp; \left\{ e,\left(1\ 2\right)\right\} \ar[dd]^{3} &amp; \left\{ e,\left(1\ 3\right)\right\} \ar[ddl]^{3} &amp; \left\{ e,\left(2\ 3\right)\right\} \ar[ddll]^{3}\\ \left\{ e,\left(1\ 2\ 3\right),\left(1\ 3\ 2\right)\right\} \ar[dr]^{2}\\ &amp; S_{3} } \)</p>
+
+<p>מה השדות שמשתמרים על ידי תת-החבורות המתאימות? ובכן, \(\left\{ e,\left(1\ 2\right)\right\} \) מחליפה שניים מהשורשים - נאמר ש”1” מתאר את \(\sqrt[3]{2}\) ואילו “2” מתאר את \(\omega\sqrt[3]{2}\), אז \(\left(1\ 2\right)\) מחליפה אותם ולא משנה את \(\omega^{2}\sqrt[3]{2}\), כך שנקבל את שדה השבת \(\mathbb{Q}\left(\omega^{2}\sqrt[3]{2}\right)\) ומשהו דומה יקרה עם שתי החבורות האחרות מסדר 2. ומה עם החבורה מסדר 3? היא כוללת תמורות שמזיזות את כל השורשים, אז אף שורש לא יהיה שייך לשדה השבת שלה. אם כך, מי כן יהיה שם? הנה תעלול שיאפשר לנו לראות את זה בקלות: התמורה \(\sigma=\left(1\ 2\ 3\right)\) מבצעת את הדברים הבאים:</p>
+
+<p>\(\sigma\left(\sqrt[3]{2}\right)=\omega\sqrt[3]{2}\)</p>
+
+<p>\(\sigma\left(\omega\sqrt[3]{2}\right)=\omega^{2}\sqrt[3]{2}\)</p>
+
+<p>ולכן אם <strong>נחלק</strong> את האיברים הללו האחד בשני נקבל:</p>
+
+<p>\(\sigma\left(\omega\right)=\sigma\left(\frac{\omega\sqrt[3]{2}}{\sqrt[3]{2}}\right)=\frac{\omega^{2}\sqrt[3]{2}}{\omega\sqrt[3]{2}}=\omega\)</p>
+
+<p>באופן דומה, \(\tau=\left(1\ 3\ 2\right)\) מבצעת:</p>
+
+<p>\(\tau\left(\sqrt[3]{2}\right)=\omega^{2}\sqrt[3]{2}\)</p>
+
+<p>\(\tau\left(\omega\sqrt[3]{2}\right)=\sqrt[3]{2}\)</p>
+
+<p>ולכן:</p>
+
+<p>\(\tau\left(\omega\right)=\tau\left(\frac{\omega\sqrt[3]{2}}{\sqrt[3]{2}}\right)=\frac{\sqrt[3]{2}}{\omega^{2}\sqrt[3]{2}}=\omega^{-2}=\omega\)</p>
+
+<p>המעבר האחרון נובע מכך ש-\(\omega^{3}=1\).</p>
+
+<p>אם כן, \(\omega\) בוודאי <strong>שייך</strong> לשדה ש-\(\left\{ e,\left(1\ 2\ 3\right),\left(1\ 3\ 2\right)\right\} \) משמרת. מכיוון שהפולינום המינימלי של \(\omega\) מעל \(\mathbb{Q}\) הוא \(x^{2}+x+1\) (כי \(x^{3}-1=\left(x-1\right)\left(x^{2}+x+1\right)\)) אז מימד ההרחבה \(\mathbb{Q}\left(\omega\right)/\mathbb{Q}\) הוא 2, בהתאם לאינדקס של \(\left\{ e,\left(1\ 2\ 3\right),\left(1\ 3\ 2\right)\right\} \) ב-\(S_{3}\), כך שכבר ברור שזה כל שדה השבת, וקיבלנו את דיאגרמת השדות:</p>
+
+<p>\(\xymatrix{ &amp; \mathbb{Q}\left(\sqrt[3]{2},\omega\right)\ar[ddl]^{3}\ar[d]^{2}\ar[dr]^{2}\ar[drr]\\ &amp; \mathbb{Q}\left(\omega^{2}\sqrt[3]{2}\right)\ar[dd]^{3} &amp; \mathbb{Q}\left(\omega\sqrt[3]{2}\right)\ar[ddl]^{3} &amp; \mathbb{Q}\left(\sqrt[3]{2}\right)\ar[ddll]^{3}\\ \mathbb{Q}\left(\omega\right)\ar[dr]^{2}\\ &amp; \mathbb{Q} } \)</p>
+
+<p>והמשפט היסודי של תורת גלואה גם מבטיח לנו שאלו כל שדות הביניים שיש. זו בעצם התכונה החשובה של המשפט היסודי: הוא הופך את הבעיה הקשה מאוד של מציאת שדות ביניים של הרחבות סופיות לבעיה הקצת פחות קשה של להבין את המבנה של חבורות סופיות.</p>
+
+<p>עכשיו, תת-החבורה \(\left\{ e,\left(1\ 2\right)\right\} \) היא לא נורמלית ב-\(S_{3}\) (היא לא סגורה להצמדה; הצמדה של \(\left(1\ 2\right)\) מחזירה את \(\left(1\ 3\right)\) ו-\(\left(2\ 3\right)\)). זה אומר לנו שאם נסתכל על ההרחבה \(\mathbb{Q}\left(\omega^{2}\sqrt[3]{2}\right)/\mathbb{Q}\), היא לא תהיה הרחבת גלואה (וזה לא מפתיע - זו הרחבה שכוללת שורש אחד של הפולינום \(x^{3}-2\) אבל לא את היתר). לעומת זאת, \(\left\{ e,\left(1\ 2\ 3\right),\left(1\ 3\ 2\right)\right\} \) כן נורמלית (היא מאינדקס 2; כל תת-חבורה מאינדקס 2 היא נורמלית) ואכן \(\mathbb{Q}\left(\omega\right)/\mathbb{Q}\) היא הרחבת גלואה (הרי היא שדה הפיצול של \(x^{2}+x+1\) הספרבילי). בקיצור, נראה לי שהבנו - המשפט עובד!</p>
+
+<p>בואו נסביר רק את הקטע של ה”סריג” הזה. המושג הבסיסי פה הוא <strong>קבוצה סדורה חלקית</strong>: זוג \(\left(P,\le\right)\) של קבוצה \(P\) ויחס בינארי \(\le\) מעליה הוא קבוצה סדורה חלקית אם \(\le\) הוא רפלקסיבי, טרנזיטיבי ואנטי-סימטרי. היחס \(\subseteq\) של שדות מקיים את זה, וגם \(\supseteq\) של חבורות מקיים את זה. ההיפוך של הסימון לא מקרי: במקרה של חבורות, אני אומר ש-\(G\le H\) אם ורק אם \(G\supseteq H\).</p>
+
+<p>שתי קבוצות סדורות חלקית \(\left(P_{1},\le_{1}\right)\) ו-\(\left(P_{2},\le_{2}\right)\) הן <strong>איזומורפיות</strong> אם יש ביניהן העתקה חח”ע ועל \(f:P_{1}\to P_{2}\) כך ש-\(a\le b\iff f\left(a\right)\le f\left(b\right)\). המשמעות של איזומורפיזם כזה הוא ששתי הקבוצות הן <strong>אותו דבר בדיוק עד כדי שינוי שמות</strong> בכל הנוגע ליחסי הסדר בין האיברים שלהן. המשפט היסודי של תורת גלואה אומר (בין היתר) ששתי הקבוצות הסדורות שתיארתי - שדות ביניים של \(E/F\) עם הכלה רגילה, ותתי-חבורות של \(\text{Gal}\left(E/F\right)\) עם הכלה הפוכה - הן איזומורפיות. לכן הציור שלהן יהיה אותו הציור בדיוק.</p>
+
+<p>ומה עניין ה”סריג” כאן? ובכן, <strong>סריג</strong> במתמטיקה זו מילה שמתארת כל מני דברים, ואחד מהם הוא קבוצה סדורה חלקית \(\left(P,\le\right)\) כך שלכל שני איברים \(a,b\in P\), לקבוצה \(\left\{ a,b\right\} \) יש חסם עליון וחסם תחתון. חסם עליון הוא איבר \(c\) כך ש-\(a\le c\) וגם \(b\le c\) (למי שמקיים את שני אלו קוראים <strong>חסם מלעיל</strong> של הקבוצה) וכמו כן לכל \(d\) שגם הוא חסם מלעיל, \(c\le d\). חסם תחתון זה אותו הדבר רק עם היפוך הכיוון של אי השוויונות. כדי שההגדרה הזו תהיה מעניינת בכלל צריך שיחס הסדר על \(P\) לא יהיה מלא - כלומר, שיהיו איברים \(a,b\) לא מתקיים לא \(a\le b\) וגם לא \(b\le a\) (כי אם למשל \(a\le b\) אז החסם העליון של \(\left\{ a,b\right\} \) הוא \(b\) והתחתון הוא \(a\)). הדוגמא הקלאסית לסריג היא המספרים הטבעיים עם יחס הסדר “\(a\) מחלק את \(b\)”. שם החסם העליון של כל זוג איברים הוא ה-\(\text{lcm}\) שלהם (הכפולה המשותפת המינימלית) והחסם התחתון הוא ה-\(\text{gcd}\) שלהם (המחלק המשותף המקסימלי).</p>
+
+<p>במקרה שלנו, עבור שני שדות \(\left\{ K_{1},K_{2}\right\} \) ויחס ההכלה, החסם העליון הוא \(\left\langle K_{1},K_{2}\right\rangle \) והתחתון הוא \(K_{1}\cap K_{2}\), ועם חבורות זה ההפך כי יחס הסדר הוא הפוך. מכאן ברורה ההתאמה בין השניים: השדה שמתאים לחסם העליון של \(\left\{ K_{1},K_{2}\right\} \) <strong>צריך</strong> להתאים לחסם התחתון של \(\left\{ H_{1},H_{2}\right\} \) עבור החבורות המתאימות \(H_{1},H_{2}\).</p>
+<h2>ואיך מוכיחים את זה?</h2>
+<p>את רוב הרכיבים של ההוכחה כבר יש לנו, ורק החלק עם חבורת המנה יהיה קשה. נתחיל מההתאמה עצמה. אני לוקח הרחבת גלואה \(E/F\) ומסמן \(G=\text{Gal}\left(E/F\right)\). לכל תת-חבורה \(H\subseteq G\) אנחנו מתאימים את השדה \(\Psi\left(H\right)=\left\{ a\in E\ \|\ \forall\sigma\in H:\sigma a=a\right\} \) שמשתמר על ידי \(H\). כבר ראינו שזה אכן שדה וש-\(F\subseteq\Psi\left(H\right)\subseteq E\), כך שיש לנו <strong>פונקציה</strong> מאוסף תת-החבורות של \(G\) אל אוסף שדות הביניים של \(E/F\).</p>
+
+<p>בכיון השני, אנחנו לוקחים שדה ביניים \(F\subseteq K\subseteq E\) ומתאימים לו תת-חבורה \(\Phi\left(K\right)=\left\{ \sigma\in G\ \|\ \forall a\in K:\sigma a=a\right\} \) של כל אברי \(G\) שמשמרים את כל \(K\). גם פה קל להשתכנע שזו תת-חבורה: אם \(\sigma a=a\) וגם \(\tau a=a\) אז \(\left(\sigma\tau\right)a=\sigma\left(\tau a\right)=\sigma a=a\) ו-\(\tau^{-1}a=\tau^{-1}\left(\tau a\right)=\left(\tau^{-1}\tau\right)a=a\), כך ש-\(\Phi\left(K\right)\) סגורה לכפל ולהופכי ולכן היא תת-חבורה. כעת הטענה היא ש-\(\Psi,\Phi\) הן הופכיות זו לזו, ולכן בפרט כל אחת מהן חד-חד-ערכית ועל.</p>
+
+<p>בפוסט הקודם הראיתי שאם \(E\) הוא שדה ו-\(H\) היא תת-חבורה כלשהי של אוטומורפיזמים של \(E\) ואנחנו מסמנים \(K=\Psi\left(H\right)\), אז \(E/K\) היא הרחבת גלואה ו-\(\text{Gal}\left(E/K\right)=H\). הטענה הזו הגיעה בדם יזע דמעות ואלגברה לינארית. כעת, הייתי שמח לומר ש-\(\Phi\left(K\right)=\text{Gal}\left(E/K\right)\), מה שהיה מסיים את מה שאני צריך להראות פה, אבל צריך להיזהר: ההגדרה היבשה של \(\text{Gal}\left(E/K\right)\) היא בתור \(\left\{ \sigma\in\text{Aut}\left(E\right)\ \|\ \forall a\in K:\sigma a=a\right\} \), ואילו \(\Phi\left(K\right)=\left\{ \sigma\in G\ \|\ \forall a\in K:\sigma a=a\right\} \). רואים את ההבדל? ב-\(\text{Gal}\left(E/K\right)\) עלולים להיות עוד איברים שלא ב-\(\Phi\left(K\right)\) כי אולי יש לנו אוטומורפיזמים של \(E\) שמשמרים את \(K\) אבל לא שייכים ל-\(G\), כלומר לא משמרים את \(F\). אבל הרי \(F\subseteq K\) ולכן כל מי שמשמר את \(K\) משמר גם את \(F\) ושייך ל-\(G\), כך שכל הדקדוק הזה בקטנות נראה מיותר לגמרי - אבל אני רוצה שיהיה ברור שיש כאן משהו שצריך לומר.</p>
+
+<p>יפה, אז ראינו ש-\(\Phi\left(\Psi\left(H\right)\right)=H\). צריך גם להראות את ההפך: \(\Psi\left(\Phi\left(K\right)\right)=K\) לכל \(F\subseteq K\subseteq E\). כאן קיימת סכנה: באופן כללי, אם \(G/F\) איננה הרחבת גלואה, בהחלט ייתכן ש-\(\Psi\left(\Phi\left(K\right)\right)\) יהיה שדה גדול יותר מ-\(K\) - זו הסיטואציה של “אין מספיק אוטומורפיזמים של \(E\) כדי לתפוס בדיוק את \(K\)”. בפוסט הקודם ראינו שלהגיד “הסיטואציה העגומה הזו לא מתרחשת” זה בדיוק להגיד שההרחבה שלנו היא הרחבת גלואה. נחדד:</p>
+
+<p>\(E/K\) היא הרחבת גלואה אם ורק אם השדה ש-\(\text{Aut}\left(E/K\right)\) משמרת הוא \(K\).</p>
+
+<p>במקרה שלנו, \(\Phi\left(K\right)=\text{Aut}\left(E/K\right)\) על פי הגדרה (אברי \(\Phi\left(K\right)\) הם איברים של \(G\), כלומר צריכים גם לשמר את \(F\), אבל מכיוון ש-\(F\subseteq K\) זה מתקיים תמיד). לכן לומר ש-\(E/K\) היא גלואה זה לומר ש-\(\Psi\left(\Phi\left(K\right)\right)=K\). אז הכיוון הזה של ההוכחה מצטמצם לטענה הבאה: אם \(E/F\) גלואה ו-\(F\subseteq K\subseteq E\) אז \(E/K\) גלואה. את זה אמרתי קודם, ב”יותר מכך” שבציטוט המשפט. אבל למה שזה יהיה נכון?</p>
+
+<p>כאן נכנסת לתמונה העובדה שאנחנו מבינים הרחבות גלואה טוב מכמה כיוונים שונים. ראינו בפוסט הקודם ש-\(E/F\) היא גלואה אם ורק אם \(E\) היא <strong>שדה פיצול של פולינום ספרבילי</strong> \(p\left(x\right)\in F\left[x\right]\). העניין הוא ש<strong>אותו פולינום בדיוק</strong> קיים גם מעל \(K\left[x\right]\). כלומר, אני יכול לקחת את \(p\left(x\right)\) כפי שהוא, לשכוח מקיומו של \(F\) ולומר “תכירו, הנה \(p\left(x\right)\in K\left[x\right]\), הוא פולינום ספרבילי מעל \(K\) ושדה הפיצול שלו הוא \(E\)”. שדה הפיצול של פולינום לא משתנה כשמשנים את השם של השדה שמכיל את המקדמים, כל עוד אלו בדיוק אותם מקדמים; הפולינום בוודאי לא יפסיק להיות ספרבילי פתאום. הדבר היחיד שעלול להשתנות כשמשנים את השדה הוא ש-\(p\left(x\right)\) פתאום יפסיק להיות אי-פריק (כפי ש-\(x^{3}-2\) האי-פריק מעל \(\mathbb{Q}\) הופך פתאום מעל \(\mathbb{Q}\left(\sqrt[3]{2}\right)\) להיות פריק עם פירוק \(x^{3}-2=\left(x-\sqrt[3]{2}\right)\left(x^{2}+x\sqrt[3]{2}+\left(\sqrt[3]{2}\right)^{2}\right)\)). אלא ש”אי-פריק” זה לא משהו שנדרש מהפולינום כדי ששדה הפיצול שלו יהיה הרחבת גלואה, כך שזה לא רלוונטי. זה מסיים את השלב הזה של ההוכחה.</p>
+
+<p>עד כה הראינו:</p>
+<ol>
+ 	<li>קיימת התאמה חח"ע ועל {::nomarkdown}\(\Phi\){:/nomarkdown} בין שדות ביניים {::nomarkdown}\(F\subseteq K\subseteq E\){:/nomarkdown} ותתי-חבורות של {::nomarkdown}\(\text{Gal}\left(E/F\right)\){:/nomarkdown}.</li>
+ 	<li>אם {::nomarkdown}\(K\){:/nomarkdown} שדה ביניים שכזה אז {::nomarkdown}\(E/K\){:/nomarkdown} גלואה ו-{::nomarkdown}\(\text{Gal}\left(E/K\right)=\Phi\left(K\right)\){:/nomarkdown}.</li>
+</ol>
+<p>המסקנות המיידיות מ-2 הן שאם נסמן \(\Phi\left(K\right)=H\) אז \(\left[E:K\right]=\left\|H\right\|\) - זה נובע מכך שהרחבה היא גלואה אם ורק אם \(\left[E:K\right]=\left\|\text{Aut}\left(E/K\right)\right\|\) (זו ההגדרה המקורית שלנו להרחבת גלואה). מכיוון שאנחנו יודעים ש-\(\left[E:F\right]=\left[E:K\right]\left[K:F\right]\) (אחד המשפטים הבסיסיים בתורת השדות) ו-\(\left\|G\right\|=\left\|G:H\right\|\cdot\left\|H\right\|\) (אחד המשפטים הבסיסיים בתורת החבורות) ומכיוון ש-\(G=\text{Gal}\left(E/F\right)\) גלואה ולכן \(\left\|G\right\|=\left[E:F\right]\), נקבל ש-</p>
+
+<p>\(\left\|G:H\right\|\cdot\left\|H\right\|=\left[E:K\right]\left[K:F\right]\)</p>
+
+<p>ואחרי צמצום \(\left\|H\right\|\) משני האגפים (\(\left[E:K\right]=\left\|H\right\|\)) נקבל \(\left\|G:H\right\|=\left[K:F\right]\). זה היה ה”יותר מכך” הראשון בניסוח שנתתי למשפט.</p>
+
+<p>חוב אחר שנשאר לי: להראות שאם \(K_{1}\subseteq K_{2}\) אז \(H_{2}\subseteq H_{1}\) (כאשר \(H_{i}=\Phi\left(K_{i}\right)\)). זה קל מאוד, כמובן: אם \(K_{1}\subseteq K_{2}\) אז כל אוטומורפיזם של \(E\) שמשמר את \(K_{2}\) חייב לשמר גם את \(K_{1}\), ולכן כל איבר של \(\text{Gal}\left(E/K_{2}\right)\) חייב להיות גם איבר של \(\text{Gal}\left(E/K_{1}\right)\) ולכן \(H_{2}=\text{Gal}\left(E/K_{2}\right)\subseteq\text{Gal}\left(E/K_{1}\right)=H_{1}\).</p>
+
+<p>נשאר רק החלק שהבטחתי שיהיה כבד - להראות ש-\(K/F\) היא הרחבת גלואה אם ורק אם \(H\) היא תת-חבורה <strong>נורמלית </strong>ב-\(G\) ושבמקרה הזה, \(\text{Gal}\left(K/F\right)\cong G/H\).</p>
+
+<p>כדי להבין אם \(K/F\) היא גלואה או לא, נרצה להבין האם \(\left\|\text{Aut}\left(K/F\right)\right\|=\left[K:F\right]\) או לא. מכיוון שכל המידע שיש לנו נוגע להרחבה “הגדולה” \(E/K\), אז כדי להבין את \(\text{Aut}\left(K/F\right)\) נרצה להסתכל על דרך לקשר אותה להרחבה הגדולה הזו. אז בואו ניקח \(\sigma\in\text{Gal}\left(E/F\right)\) וננסה להבין איך \(\sigma\) מתנהגת כש<strong>מצמצמים</strong> אותה ל-\(K\), מה שאני מסמן בתור \(\sigma\|_{K}\). אני עדיין מקבל פונקציה חח”ע שהיא הומומורפיזם של שדות; התחום שלה הוא \(K\) והטווח שלה הוא \(E\), ואני גם יודע שעל \(F\) היא הזהות, אבל <strong>זה כל מה שאני יודע</strong> באופן כללי. פונקציה כזו איננה בהכרח <strong>אוטומורפיזם</strong> של \(K\); בשביל זה התמונה שלה הייתה צריכה להיות בדיוק כל \(K\). היא מה שנקרא <strong>שיכון</strong> של \(K\) בתוך \(E\) - הומומורפיזם חח”ע שהתמונה שלו היא עותק ש”נראה כמו” \(K\) בתוך \(E\) גם אם הוא לא זהה לו.</p>
+
+<p>רוצים דוגמא? בטח. זוכרים את \(\mathbb{Q}\left(\sqrt[3]{2}\right)\) ו-\(\mathbb{Q}\left(\omega\sqrt[3]{2}\right)\)? אלו שני שדות שורש שונים של הפולינום \(x^{3}-2\) מעל \(\mathbb{Q}\) והם בוודאי איזומורפיים, אבל הם שונים זה מזה. אני יכול לעבור מאחד לשני על ידי הפונקציה \(\sigma:\mathbb{Q}\left(\sqrt[3]{2}\right)\to\mathbb{Q}\left(\omega\sqrt[3]{2}\right)\) המוגדרת על ידי \(\sigma\left(\sqrt[3]{2}\right)=\omega\left(\sqrt[3]{2}\right)\) שעל כל \(\mathbb{Q}\) היא הזהות. אז \(\sigma\in\text{Gal}\left(E/F\right)\) כאשר \(E\) הוא שדה הפיצול של \(x^{3}-2\), אבל התמונה שלה על \(K=\mathbb{Q}\left(\sqrt[3]{2}\right)\) היא לא \(K\) אלא עותק איזומורפי של \(K\) ששונה מ-\(K\). זה ההבדל בין <strong>שיכון</strong> ובין <strong>אוטומורפיזם</strong>.</p>
+
+<p>אם תסתכלו על הדוגמא האחרת, של \(\mathbb{Q}\left(\sqrt{2},\sqrt{3}\right)\), תגלו ששם זה לא עובד - אין לנו שיכונים שאינם אוטומורפיזמים. \(\mathbb{Q}\left(\sqrt{2}\right)\) ו-\(\mathbb{Q}\left(\sqrt{3}\right)\) הם שדות <strong>לא איזומורפיים</strong>, כי באחד מהם יש פתרון למשוואה \(x^{2}-2\) ובשני אין.</p>
+
+<p>בשלב הזה אפשר אולי לנחש שכדי ש-\(K/F\) יהיה הרחבת גלואה, התנאי שנדרש מאיתנו הוא ש<strong>כל שיכון יהיה אוטומורפיזם</strong>. כל שיכון של \(K\) שמשמר את \(F\), כלומר. בואו ניתן סימונים: \(\text{Emb}\left(K/F\right)\) תהיה קבוצת השיכונים של \(K\) שמשמרת את \(F\). אני אוכיח ש-\(\left\|\text{Emb}\left(K/F\right)\right\|=\left[K:F\right]\); מכיוון ש-\(\text{Aut}\left(K/F\right)\subseteq\text{Emb}\left(K/F\right)\) זה יגרור ש-\(K/F\) גלואה (כלומר, \(\left\|\text{Aut}\left(K/F\right)\right\|=\left[K:F\right]\)) אם ורק אם \(\text{Aut}\left(K/F\right)=\text{Emb}\left(K/F\right)\).</p>
+
+<p>נתחיל מכך ששיכונים ב-\(\text{Emb}\left(K/F\right)\) לא יכולים להתפרע יותר מדי - כולם מתקבלים על ידי כך שאני לוקח איבר \(\sigma\in\text{Gal}\left(E/F\right)\) ופשוט מצמצם אותו ל-\(K\), כלומר \(\text{Emb}\left(K/F\right)=\left\{ \sigma\|_{K}\ \|\ \sigma\in\text{Gal}\left(E/F\right)\right\} \). כשאני מבצע את הצמצום הזה חלק מהאוטומורפיזמים של \(\text{Gal}\left(E/F\right)\) עשויים להצטמצם לאותו איבר - אבל נדבר על זה בהמשך. כרגע השאלה היא <strong>למה</strong> בכלל כל שיכון של \(K\) מתקבל בצורה כזו.</p>
+
+<p>בשביל לענות על השאלה הזו צריך להיזכר במשפט שתיארתי בחטף <a href="http://gadial.net/2018/04/22/splitting_fields_algebraic_closures/">כשדיברנו על שדות פיצול</a> - שוב, אולי לא במפתיע, אחד מהמשפטים הטכניים ביותר בנושא. זה הלך כך: אם \(K_{1},K_{2}\) שדות עם איזומורפיזם \(\sigma:K_{1}\to K_{2}\), ואם \(p\left(x\right)\in K_{1}\left[x\right]\) הוא פולינום עם שדה פיצול \(E_{1}\) ואם נסמן את שדה הפיצול של \(\sigma\left(p\right)\) (הפולינום שמתקבל מ-\(p\left(x\right)\) על ידי הפעלת \(\sigma\) על המקדמים) ב-\(E_{2}\) אז קיים איזומורפיזם \(\tau:E_{1}\to E_{2}\) כך ש-\(\tau\|_{K_{1}}=\sigma\). ההוכחה, כזכור, הייתה סוג של אינדוקציה שמתבססת על כך ש-\(E_{1}\) מתקבל מ-\(K_{1}\) על ידי שרשרת של הרחבות פשוטות.</p>
+
+<p>במקרה שלנו \(K_{1}\) הוא פשוט \(K\) ואילו \(K_{2}=\sigma\left(K\right)\) - התמונה של \(K\) תחת השיכון \(\sigma\). מן הסתם \(\sigma\) הוא איזומורפיזם של שני השדות הללו כי ככה הוא נבחר מלכתחילה. כמו כן \(E_{1}=E\) הוא שדה הפיצול של פולינום ספרבילי \(p\left(x\right)\in F\left[x\right]\) - זו המשמעות של כך ש-\(E/F\) היא הרחבת גלואה. אם כן, מהו \(E_{2}\)? זה שדה הפיצול של הפולינום \(\sigma\left(p\right)\) מעל \(K_{2}\); אלא ש-\(\sigma\left(p\right)=p\) כי \(p\) הוא פולינום עם מקדמים ב-\(F\) - בדיוק השדה ש-\(\sigma\) משמר. לכן \(E_{2}=E_{1}\) ואנחנו מקבלים שאפשר להרחיב את \(\sigma\) לאוטומורפיזם \(\tau:E\to E\), כפי שרצינו.</p>
+
+<p>הסברנו למה \(\text{Emb}\left(K/F\right)=\left\{ \sigma\|_{K}\ \|\ \sigma\in\text{Gal}\left(E/F\right)\right\} \); נשאיר להבין כמה איברים בדיוק יש ב-\(\text{Emb}\left(K/F\right)\). לצורך כך, בואו ניקח \(\sigma_{1},\sigma_{2}\in\text{Gal}\left(E/F\right)\) וננסה להבין מתי \(\sigma_{1}\|_{K}=\sigma_{2}\|_{K}\). זה קורה אם ורק אם \(\sigma_{1}\sigma_{2}^{-1}\|_{K}=\text{Id}_{K}\), כלומר אם ורק אם \(\sigma_{1}\sigma_{2}^{-1}\in\text{Gal}\left(E/K\right)\). במילים אחרות: שני אוטומורפיזמים של \(E\) נותנים את אותו שיכון של \(K\) אם הם <strong>באותו קוסט</strong> של חבורת הגלואה של \(E/K\). אם ניקח נציג לכל קוסט, אז קבוצת הצמצומים של הנציגים הללו ל-\(K\) תיתן לנו את כל \(\text{Emb}\left(K/F\right)\) (כל איבר אחר של \(E/K\) נמצא באחד הקוסטים ולכן יתן את אותו שיכון כפי שהנציג שלו בקוסט נתן). כזכור, ראינו קודם ש-\(\left\|G:H\right\|=\left[K:F\right]\) כאשר \(H=\text{Gal}\left(E/K\right)\), והרי \(\left\|G:H\right\|\) הוא בדיוק מספר הקוסטים של \(H\) ב-\(G\). לכן קיבלנו ש-\(\left\|\text{Emb}\left(K/F\right)\right\|=\left[K:F\right]\), כמו שרצינו.</p>
+
+<p>זה משאיר אותנו עם הטענה הבאה: \(K/F\) היא גלואה אם ורק אם כל שיכון של \(K\) ב-\(E\) שמשמר את \(F\) הוא למעשה אוטומורפיזם של \(K\) שמשמר את \(F\). כלומר, אם \(\sigma\in\text{Gal}\left(E/F\right)\) אז \(\sigma\left(K\right)=K\).</p>
+
+<p>בואו נסמן \(K^{\prime}=\sigma\left(K\right)\). באילו סיטואציות \(K=K^{\prime}\)? ראינו קודם שהפונקציה \(\Phi\) שמקבלת תת-שדה של \(E\) ומחזירה את תת-החבורה של \(G\) שמשמרת אותו היא חד-חד-ערכית: כלומר, \(K=K^{\prime}\) אם ורק אם \(\Phi\left(K\right)=\Phi\left(K^{\prime}\right)\). בואו נסמן \(H=\Phi\left(K\right)\) ו-\(H^{\prime}=\Phi\left(K^{\prime}\right)\). נשאלת כעת השאלה: אם \(K^{\prime}=\sigma\left(K\right)\) אז מהי \(H^{\prime}\)? התשובה היא ש-\(H^{\prime}=\sigma H\sigma^{-1}\) - <strong>ההצמדה</strong> של \(H\) באמצעות \(\sigma\). זו דוגמא יפה מאוד לאופן שבו פעולת ה<strong>הצמדה</strong> בחבורות היא רלוונטית לחיים, ליקום ובכלל.</p>
+
+<p>התוצאה הזו כנראה לא מפתיעה אתכם אם אתם זוכרים אלגברה לינארית, כי יש שם משהו מאוד דומה: שתי מטריצות מייצגות את אותה העתקה לינארית בבסיסים שונים אם אחת מתקבלת מהשניה על ידי הצמדה, ובמקרה הזה המטריצה המצמידה היא מטריצת המעבר מאחד הבסיסים לשני. באנלוגיה הזו, השדות אצלנו הם ה”בסיסים” ואוטומורפיזמי הגלואה הם ה”מטריצות” שמייצגות את ההעתקה הלינארית.</p>
+
+<p>בואו נוכיח ש-\(H^{\prime}=\sigma H\sigma^{-1}\); מספיק להראות את “ההפך”, כלומר את \(\sigma^{-1}H^{\prime}\sigma=H\), אז בואו נעשה את זה: \(\tau\in H^{\prime}\) אם ורק אם \(\tau\left(b\right)=b\) לכל \(b\in K^{\prime}\). מכיוון ש-\(K^{\prime}=\sigma\left(K\right)\) ו-\(\sigma\) חח”ע ועל, זה מתקיים אם ורק אם \(\tau\left(\sigma\left(a\right)\right)=\sigma\left(a\right)\) לכל \(a\in K\). כלומר, אם ורק אם \(\tau\sigma=\sigma\) מעל \(K\), כלומר אם ורק אם \(\sigma^{-1}\tau\sigma=\text{Id}_{K}\), כלומר אם ורק אם \(\sigma^{-1}\tau\sigma\in H\), כפי שרצינו.</p>
+
+<p>לסיכום: קיבלנו ש-\(K/F\) גלואה אם ורק אם \(\sigma H\sigma^{-1}=H\) לכל \(\sigma\in G\) - זו בדיוק ההגדרה של <strong>תת-חבורה נורמלית</strong> (טוב, אחת מההגדרות). נשאר רק לדבר על המבנה של \(\text{Gal}\left(K/F\right)\) במקרה הזה. ובכן, הבה ונגדיר הומומורפיזם <strong>של חבורות</strong> באופן הבא: \(\varphi:G\to\text{Gal}\left(K/F\right)\) מוגדר על ידי \(\varphi\left(\sigma\right)=\sigma\|_{K}\). לא קשה לבדוק ישירות שזה אכן הומומורפיזם. מה הגרעין שלו? \(\sigma\|_{K}=\text{Id}_{K}\) אם ורק אם \(\sigma\in\text{Gal}\left(E/K\right)=H\). לכן נקבל ממשפט האיזומורפיזם הראשון של חבורות ש-\(G/H\cong\text{Gal}\left(K/F\right)\) - בדיוק מה שרצינו.</p>
+
+<p>אתם יכולים לשאול את עצמכם, ובצדק, איפה בשלב האחרון של ההוכחה, עם משפט האיזומורפיזם הראשון, השתמשנו בכך ש-\(H\) נורמלית. הרי \(H\) <strong>יוצאת</strong> נורמלית מכך שהיא הגרעין של \(\varphi\) שאני בונה שם. ובכן, אם \(H\) לא הייתה נורמלית, אז \(\varphi\) לא הייתה מוגדרת היטב; הטווח שלה הוא \(\text{Gal}\left(K/F\right)\) אבל כפי שראינו, אם \(H\) לא נורמלית לא מובטח ש-\(\varphi\left(\sigma\right)=\sigma\|_{K}\) יהיה <strong>אוטומורפיזם</strong> של \(K\); הוא יכול להיות “סתם” שיכון.</p>
+
+<p>זה מסיים את הוכחת המשפט היסודי של תורת גלואה, ובעצם מביא אותנו לסוג של נקודת שיא בסדרת הפוסטים שלנו על אלגברה מופשטת. אפשר לכאורה לעצור כאן, אבל זו למעשה הנקודה הכי גרוע לעצור בה. תורת גלואה לא נוצרה סתם בשביל היופי של לראות את הדמיון בין שדות וחבורות. היא נוצרה כדי להתמודד עם בעיות מתמטיות קונקרטיות, ואנחנו נראה דוגמאות לכך בפוסטים הבאים.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2018/05/21/fundamental_theorem_of_galois_theory" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

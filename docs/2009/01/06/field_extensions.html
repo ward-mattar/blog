@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הרחבה קלה על הרחבת שדות | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הרחבה קלה על הרחבת שדות" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="(אזהרה - פוסט טכני יחסית)" />
+<meta property="og:description" content="(אזהרה - פוסט טכני יחסית)" />
+<link rel="canonical" href="http://localhost:4000/blog/2009/01/06/field_extensions" />
+<meta property="og:url" content="http://localhost:4000/blog/2009/01/06/field_extensions" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-01-06T16:00:49+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2009-01-06T16:00:49+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2009/01/06/field_extensions"},"url":"http://localhost:4000/blog/2009/01/06/field_extensions","description":"(אזהרה - פוסט טכני יחסית)","headline":"הרחבה קלה על הרחבת שדות","dateModified":"2009-01-06T16:00:49+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הרחבה קלה על הרחבת שדות</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-01-06T16:00:49+02:00" itemprop="datePublished">Jan 6, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>(אזהרה - פוסט טכני יחסית)</p>
+
+<p><a href="http://www.gadial.net/?p=176">בפוסט הקודם</a> הראיתי שניתן לחשוב על בניות בסרגל ומחוגה בתור “משחק” אלגברי לגמרי - מתחילים מהמספר 1, וכעת ניתן “לבנות” מספרים נוספים, כאשר הפעולות המותרות לנו הן <a href="http://he.wikipedia.org/wiki/%D7%90%D7%A8%D7%91%D7%A2_%D7%A4%D7%A2%D7%95%D7%9C%D7%95%D7%AA_%D7%94%D7%97%D7%A9%D7%91%D7%95%D7%9F">ארבע פעולות החשבון</a> - חיבור, חיסור, כפל וחילוק, ובנוסף לכך אנחנו מסוגלים להוציא <a href="http://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%A8%D7%A9_%D7%A8%D7%99%D7%91%D7%95%D7%A2%D7%99">שורש ריבועי</a> למספרים חיוביים. השאלה המעניינת אותנו היא מה המספרים שניתנים לבנייה בדרך הזו (וזה אכן שמם הפורמלי “<a href="http://en.wikipedia.org/wiki/Constructible_number">מספרים ניתנים לבניה</a>”). הסיבה לכך שהבעיות הגאומטריות של היוונים הקדמונים שהזכרתי בפוסט הקודם אינן פתירות היא בדיוק מכיוון שפתרון שלהם מערב בהכרח בניה של מספר שאינו ניתן לבניה.</p>
+
+<p>הדרך הפורמלית לטפל בבעיה הזו היא באמצעות המושג המתמטי הכללי של <strong>שדה</strong>, ובפרט באמצעות התחום שעוסק ב<a href="http://he.wikipedia.org/wiki/%D7%94%D7%A8%D7%97%D7%91%D7%AA_%D7%A9%D7%93%D7%95%D7%AA"><strong>הרחבת שדות</strong></a>, שעליו אדבר בפוסט הזה.</p>
+
+<p>בצורה לא פורמלית (אך בכל זאת מדוייקת למדי) אפשר לומר ששדה הוא קבוצת איברים שניתן להגדיר עבורם את ארבע פעולות החשבון (<strong>ללא</strong> הוצאת שורש) באופן שהתכונות של ארבע פעולות החשבון “המקוריות” יתקיימו גם עבורם. התכונות הללו הן, למשל:</p>
+<ol>
+	<li>חוק הקיבוץ: {::nomarkdown}\( (x+y)+z=x+(y+z)\){:/nomarkdown} (וכמו כן עבור כפל)</li>
+	<li>חוק החילוף: {::nomarkdown}\( x+y=y+x\){:/nomarkdown} (וכמו כן עבור כפל)</li>
+	<li>חוק הפילוג: {::nomarkdown}\( x(y+z)=xy+xz\){:/nomarkdown}</li>
+</ol>
+<p>פרט לכך, יש איבר שמסומן ב-0 שמשמש בתור “נייטרלי לחיבור”, כלומר כשמחברים את 0 עם x מקבלים x; ויש איבר שמסומן ב-1 ומשמש בתור נייטרלי לכפל - כשכופלים בו את x, מקבלים x. לכל איבר x יש איבר נגדי, מינוס x, כך שהסכום של שניהם הוא 0 (ולמעשה, את החיסור ניתן להגדיר בתור “חיבור עם הנגדי של”), ובדומה לכל איבר x שאינו 0 יש הופכי, \( \frac{1}{x}\), כך שהמכפלה של שניהם נותנת 1 (ואז מגדירים חילוק בתור “כפל עם ההופכי”). ל-0 אין הופכי מכיוון שאפס כפול כל דבר הוא אפס (נסו להוכיח זאת - התכונה המרכזית שצריך היא את חוק הפילוג).</p>
+
+<p>תחת הגדרות מסויימות של פעולת החיבור מתקיימת תכונה שנראית מוזרה ממבט ראשון - אם מחברים את 1 לעצמו מספיק פעמים, מקבלים 0. זה קורה כאשר פעולת החיבור שלנו היא מודולו מספר כלשהו n (כלומר, אחרי שמחברים מחלקים ב-n והתוצאה הסופית היא השארית), אך בכל שאר הפוסט אניח שזה לא קורה. שדה שבו זה לא קורה, כלומר אפשר לחבר את 1 עם עצמו כמה פעמים שרק נרצה ולא נקבל אפס, נקרא “שדה ממציין 0”.</p>
+
+<p>הדוגמה הקלאסית לשדה היא<a href="http://he.wikipedia.org/wiki/%D7%A9%D7%93%D7%94_%D7%94%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D_%D7%94%D7%A8%D7%A6%D7%99%D7%95%D7%A0%D7%9C%D7%99%D7%99%D7%9D"> שדה המספרים הרציונליים</a>, אך הוא יותר מאשר דוגמה קלאסית “סתם” - הוא השדה הקטן ביותר ממציין 0, במובן זה ש<strong>כל</strong> שדה ממציין 0 יכיל בתוכו את המספרים הרציונליים (ליתר דיוק, שדה ש”נראה בדיוק כמו” המספרים הרציונליים). זאת מכיוון שאם יש לנו את 1 בשדה (ויש, על פי ההנחה) וכל מה שמתקבל על ידי ארבע פעולות החשבון גם נמצא בשדה, אפשר לבנות בקלות כל שני מספרים שלמים a,b, ולכן גם את המנה שלהם a/b - וזהו מספר רציונלי כללי.</p>
+
+<p>בפרט, אוסף המספרים הניתנים לבנייה כולל את כל המספרים הרציונליים. אלא שהוא כולל עוד דברים - למשל, שורש 2. אם כן, הוא שדה גדול יותר, ש<strong>מכיל</strong> את המספרים הרציונליים כתת שדה. בניסוח אחר, שדה המספרים הניתנים לבנייה <strong>מרחיב</strong> את שדה המספרים הרציונליים. ובאופן כללי, אם F,E הם שני שדות כך ש-E מכיל את F, אומרים ש-E הוא שדה הרחבה של F. מסמנים את זה על ידי \( E/F\).</p>
+
+<p>הדרך הפשוטה ביותר להרחיב שדה היא להוסיף לו איבר אחד שלא היה שייך לו קודם, ואז “לסגור” את השדה עבור האיבר הזה, כלומר להוסיף כל איבר אחר שחייבים להוסיף כדי שפעולות החשבון ימשיכו לתת איברים מהקבוצה. למשל, אם F הוא שדה הרציונליים ואנחנו מוסיפים לו את \( \sqrt{2}\), עלינו להוסיף עוד איברים כמו \( \sqrt{2}+1,\frac{\sqrt{2}}{2}\) וכדומה. באופן כללי, אם מוסיפים לשדה F איבר \( \theta\), אז מסגירות לכפל גם כל החזקות שלו צריכות להיות שייכות לשדה - \( \theta, \theta^2,\theta^3,\dots\). במקרה של שורש 2 זה קל, כי שורש 2 בריבוע בחזקת 2 כבר שייך לשדה.</p>
+
+<p>ייתכן שאתם שואלים את עצמכם “אם \( \theta\) לא היה שייך ל-F, מאיפה הוא הגיע?” באופן כללי זו שאלה מצויינת, שדורשת הצדקה פורמלית. יש כזו, וזו בדיוק ההצדקה הפורמלית להוספת המספר המדומה i למספרים הממשיים, אך לא אעסוק בה כעת אלא בעתיד. לעת עתה, בהקשר של המספרים הניתנים לבנייה, כל מה שאדבר עליו הוא הרחבות של המספרים הרציונליים על ידי הוספת מספרים אי רציונליים אליהם - ומאיפה מגיעים המספרים האי רציונליים אנחנו יודעים (<a href="http://www.gadial.net/?p=29">כתבתי</a> פעם פוסט אחד או שניים בנושא).</p>
+
+<p>חזרה לענייננו. בהינתן שהוספנו לשדה את \( \theta\), אז גם כל \( \theta^n\) לכל n טבעי, צריך להיות בשדה, וגם כפל של דבר כזה באיבר שכבר עתה היה בשדה - \( a\theta^n\) - צריך להיות בשדה, וגם סכומים של דברים כאלו צריכים להיות בשדה. בשורה התחתונה נובע מכך שאחרי הוספת \( \theta\) לשדה וביצוע ה”סגירה” שלו, השדה מורכב כולו מביטויים מהצורה \( \sum_{i=0}^n a_i\theta^i\), כאשר n הוא טבעי כלשהו ואילו \( a_i\) הם איברים השייכים לשדה המקורי. דרך אחרת לומר זאת היא שהשדה המתקבל מההרחבה של \( F\) על ידי \( \theta\) מכיל את כל ה<a href="http://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%9C%D7%99%D7%A0%D7%95%D7%9D">פולינומים</a> עם מקדמים מתוך \( F\), לאחר שהציבו בהם את \( \theta\).</p>
+
+<p>טוב ויפה, אבל כפי שראינו, האיבר \( (\sqrt{2})^2\) (שהוא פולינום מדרגה שנייה שהציבו בו את שורש 2) הוא בעצם האיבר \( 2\) (שהוא פולינום מדרגה 0 שהציבו בו את שורש 2 - כלומר, שורש 2 בכלל לא מופיע בו). אם כן, האם יש דרך הצגה פשוטה יותר לאברי השדה המורחב, שמבטיחה שכל איבר ייוצג פעם אחת?</p>
+
+<p>התשובה חיובית, ותלויה בשאלה האם \( \theta\) הוא מה שנקרא “אלגברי מעל F”. איבר הוא אלגברי מעל F אם קיים פולינום שכל מקדמיו ב-F שמאפס את \( \theta\), כלומר \( \sum_{i=0}^n a_i\theta^i=0\) עבורו. נניח שקיים פולינום כזה, אז בפרט אפשר לבחור אחד בעל דרגה מינימלית; הדרגה המינימלית של פולינום מעל F שמאפס את \( \theta\) נקראת “הדרגה של \( \theta\)”, וניתן להוכיח שמכך ינבע שההרחבה של F באמצעות \( \theta\) ניתנת לתיאור כאוסף כל הפולינומים מעל F מדרגה <strong>קטנה</strong> מ-n שהוצב בהם \( \theta\).</p>
+
+<p>התכונה הזו, של דרגה של איבר, היא התכונה המרכזית שנזדקק לה כאשר נעסוק בבניות בסרגל ומחוגה. מכיוון שהיא קשורה בקשר אמיץ למושג בסיסי וחשוב מאוד מ<a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%94_%D7%9C%D7%99%D7%A0%D7%90%D7%A8%D7%99%D7%AA">אלגברה לינארית</a> - מושג המימד. אקח כאן הפסקה קלה ואקדיש את הפוסט הבא למושג הזה - שבתקווה, ישפוך אור נוסף על מושג הדרגה במובנו הכללי והרחב יותר - דרגה של הרחבה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2009/01/06/field_extensions" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

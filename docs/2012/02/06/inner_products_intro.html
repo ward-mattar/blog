@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>מכפלות פנימיות | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="מכפלות פנימיות" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי את מושג המכפלה הסקלרית, והפעם אני רוצה לקפוץ ישר להכללה בלי לתת יותר מדי מוטיבציה. אז בואו נחזור לדבר על ההקשר הרגיל של אלגברה לינארית - מרחבים וקטוריים מעל שדה ( \mathbb{F}). נתחיל מלדבר על המרחב ( \mathbb{F}^{n}). וקטור ממוצע בו נראה כך: ( x=\left(x_{1},x_{2},\dots,x_{n}\right)) כאשר ( x_{i}\in\mathbb{F}). בהינתן וקטור אחר ( y=\left(y_{1},\dots,y_{n}\right)), נגדיר את המכפלה הסקלרית שלהם להיות ( x\cdot y=\sum_{i=1}^{n}x_{i}y_{i}). כלומר, כופלים כל “רכיב” לחוד, וסוכמים את התוצאה." />
+<meta property="og:description" content="בפוסט הקודם הצגתי את מושג המכפלה הסקלרית, והפעם אני רוצה לקפוץ ישר להכללה בלי לתת יותר מדי מוטיבציה. אז בואו נחזור לדבר על ההקשר הרגיל של אלגברה לינארית - מרחבים וקטוריים מעל שדה ( \mathbb{F}). נתחיל מלדבר על המרחב ( \mathbb{F}^{n}). וקטור ממוצע בו נראה כך: ( x=\left(x_{1},x_{2},\dots,x_{n}\right)) כאשר ( x_{i}\in\mathbb{F}). בהינתן וקטור אחר ( y=\left(y_{1},\dots,y_{n}\right)), נגדיר את המכפלה הסקלרית שלהם להיות ( x\cdot y=\sum_{i=1}^{n}x_{i}y_{i}). כלומר, כופלים כל “רכיב” לחוד, וסוכמים את התוצאה." />
+<link rel="canonical" href="http://localhost:4000/blog/2012/02/06/inner_products_intro" />
+<meta property="og:url" content="http://localhost:4000/blog/2012/02/06/inner_products_intro" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-02-06T15:28:00+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2012-02-06T15:28:00+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/02/06/inner_products_intro"},"url":"http://localhost:4000/blog/2012/02/06/inner_products_intro","description":"בפוסט הקודם הצגתי את מושג המכפלה הסקלרית, והפעם אני רוצה לקפוץ ישר להכללה בלי לתת יותר מדי מוטיבציה. אז בואו נחזור לדבר על ההקשר הרגיל של אלגברה לינארית - מרחבים וקטוריים מעל שדה ( \\mathbb{F}). נתחיל מלדבר על המרחב ( \\mathbb{F}^{n}). וקטור ממוצע בו נראה כך: ( x=\\left(x_{1},x_{2},\\dots,x_{n}\\right)) כאשר ( x_{i}\\in\\mathbb{F}). בהינתן וקטור אחר ( y=\\left(y_{1},\\dots,y_{n}\\right)), נגדיר את המכפלה הסקלרית שלהם להיות ( x\\cdot y=\\sum_{i=1}^{n}x_{i}y_{i}). כלומר, כופלים כל “רכיב” לחוד, וסוכמים את התוצאה.","headline":"מכפלות פנימיות","dateModified":"2012-02-06T15:28:00+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">מכפלות פנימיות</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-02-06T15:28:00+02:00" itemprop="datePublished">Feb 6, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הקודם הצגתי את מושג המכפלה הסקלרית, והפעם אני רוצה לקפוץ ישר להכללה בלי לתת יותר מדי מוטיבציה. אז בואו נחזור לדבר על ההקשר הרגיל של אלגברה לינארית - מרחבים וקטוריים מעל שדה \( \mathbb{F}\). נתחיל מלדבר על המרחב \( \mathbb{F}^{n}\). וקטור ממוצע בו נראה כך: \( x=\left(x_{1},x_{2},\dots,x_{n}\right)\) כאשר \( x_{i}\in\mathbb{F}\). בהינתן וקטור אחר \( y=\left(y_{1},\dots,y_{n}\right)\), <strong>נגדיר</strong> את המכפלה הסקלרית שלהם להיות \( x\cdot y=\sum_{i=1}^{n}x_{i}y_{i}\). כלומר, כופלים כל “רכיב” לחוד, וסוכמים את התוצאה.</p>
+
+<p>יפה. הגדרנו פונקציה חשובה ושימושית בהקשרים רבים ושונים שלא אציג כעת. אלא שלפונקציה הזו יש הכללה רבת עוצמה ביותר, שפותחת פתח לתחום נרחב באלגברה לינארית שטרם נגעתי בו - מרחבי מכפלה פנימית - ולכן אני רוצה להבין קצת איך הפונקציה הזו מתנהגת.</p>
+
+<p>האבחנה הראשונה היא שהכפל הזה מקיים דיסטריביוטיביות: \( \left(x+y\right)\cdot z=x\cdot z+y\cdot z\) (בדקו זאת - זה נובע ישירות מההגדרה), אבל כבר צריך להיזהר כאן - החיבור שבאגף שמאל הוא חיבור וקטורים, בעוד שהחיבור באגף ימין הוא חיבור סקלרים, מכיוון שמכפלה סקלרית לוקחת זוג וקטורים והופכת אותו לסקלר. לכן אין שום משמעות לביטוי כמו \( x\cdot y\cdot z\): שכן \( x\cdot y\) הוא סקלר, ולכן אי אפשר לכפול אותו סקלרית ב-\( z\). מה שכן, אם \( \lambda\) הוא סקלר, אז קל לראות ש-\( \lambda\times\left(x\cdot y\right)=\left(\lambda\otimes x\right)\cdot y\). כאן מופיעים שלושה כפלים שונים בו זמנית ולכן הרשיתי לעצמי לסמן אותם בסימונים מוזרים: \( \cdot\) היא המכפלה הסקלרית (של שני וקטורים), \( \times\) היא מכפלה של שני סקלרים ב-\( \mathbb{F}\) ו-\( \otimes\) היא המכפלה של סקלר בוקטור. הערבוב הגדול הזה של סוגי המכפלות השונות הוא כנראה אחת מהסיבות שבגללן נשתמש בעיקר בסימון \( \left\langle x,y\right\rangle \) כדי לתאר מכפלה פנימית של וקטורים.</p>
+
+<p>פעולה כזו, שלוקחת וקטורים ומחזירה סקלר, אינה חדשה לנו - כבר ראינו בעבר פוסטים על <a href="http://www.gadial.net/?p=1408">פונקציונלים לינאריים</a> שהן טרנספורמציות לינארית שלוקחות וקטור ומחזירות סקלר, וגם ראינו ש<a href="http://www.gadial.net/?p=1418">דטרמיננטה</a> היא טרנספורמציה מולטי-לינארית שלוקחת וקטורים ומחזירה סקלר. מכפלה סקלרית היא מה שנקרא פונקציה בילינארית (“דו-לינארית”) כי היא על שני משתנים (חשבו על הפונקציה \( f\left(x,y\right)=x\cdot y\)).</p>
+
+<p>תכונה אחת שיש למכפלה סקלרית ולא קיימת אצל חלק מהפונקציות הבילינאריות היא <strong>סימטריה</strong>: \( x\cdot y=y\cdot x\). טבעי יהיה להכניס גם את התכונה הזו להכללה שלנו (ומן הסתם נראה בהמשך כיצד היא מסייעת).</p>
+
+<p>התכונה האחרונה היא הבעייתית ביותר. הבה ונשאל את עצמנו מה קורה ב-\( \mathbb{R}\) כאשר אנחנו כופלים וקטור סקלרית עם עצמו. מכיוון שהזווית בינו לעצמו היא 0, נקבל פשוט \( \left\|v\right\|^{2}\), כלומר את האורך של \( \left\|v\right\|\) בריבוע. לכן אנחנו יכולים לצפות שהאורך של וקטור תמיד יהיה נתון על ידי שורש של המכפלה הפנימית שלו בעצמו. עם מושג של אורך אפשר לעשות דברים נפלאים, אבל כדי שאפשר יהיה לעשות אותם האורך צריך להיות מה שאנחנו מצפים שהוא יהיה - מספר ממשי, וכזה שגדול מאפס אם הוקטור שונה מאפס (שוב, קשה להצדיק את זה כרגע בלי שתראו מה עושים עם זה, אבל סמכו עלי שזהו המצב).</p>
+
+<p>לרוע המזל, מעל שדה \( \mathbb{F}\) כללי אין שום סיבה להניח שנקבל ש-\( \left\|v\right\|^{2}\) הוא בכלל איבר של \( \mathbb{R}\), לא כל שכן איבר חיובי ששונה מאפס אם \( v\) שונה מאפס. זה מוביל אותנו להגבלה המצערת הראשונה שלנו - אנחנו הולכים להגדיר מכפלה פנימית אך ורק במקרים שבהם \( \mathbb{F=R}\) או \( \mathbb{F=C}\), ושום מקרה אחר. היינו יכולים לנסות ולעשות את זה גם במקרים אחרים, אבל התיאוריה פשוט לא הייתה עובדת. זו דוגמה לסיטואציה במתמטיקה שבה אנחנו צריכים להיות אבסטרקטיים <strong>פחות</strong>, כי תוצאות יפות וחזקות ספציפיות תקפות רק במקרה פרטי מסויים.</p>
+
+<p>עכשיו אני יכול להציג את ההכללה סוף סוף. אם \( V\) הוא מרחב וקטורי מעל \( \mathbb{R}\), אז <strong>מכפלה פנימית</strong> היא פונקציה \( \left\langle \cdot,\cdot\right\rangle :V\times V\to\mathbb{R}\) אשר מקיימת:</p>
+<ol>
+	<li> {::nomarkdown}\( \left\langle x+y,z\right\rangle =\left\langle x,z\right\rangle +\left\langle y,z\right\rangle \){:/nomarkdown} לכל {::nomarkdown}\( x,y,z\in V\){:/nomarkdown}.</li>
+	<li> {::nomarkdown}\( \left\langle \lambda x,y\right\rangle =\lambda\left\langle x,y\right\rangle \){:/nomarkdown} לכל {::nomarkdown}\( x,y\in V\){:/nomarkdown} ו-{::nomarkdown}\( \lambda\in\mathbb{R}\){:/nomarkdown}.</li>
+	<li> {::nomarkdown}\( \left\langle x,y\right\rangle =\left\langle y,x\right\rangle \){:/nomarkdown} לכל {::nomarkdown}\( x,y\in V\){:/nomarkdown}.</li>
+	<li> {::nomarkdown}\( \left\langle x,x\right\rangle \ge0\){:/nomarkdown} לכל {::nomarkdown}\( x\in V\){:/nomarkdown} ו-{::nomarkdown}\( x=0\iff\left\langle x,x\right\rangle =0\){:/nomarkdown}.</li>
+</ol>
+<p>שימו לב שהסימטריה נותנת לי מייד תכונות כמו \( \left\langle x,y+z\right\rangle =\left\langle x,y\right\rangle +\left\langle x,z\right\rangle \) ו-\( \left\langle x,\lambda y\right\rangle =\lambda\left\langle x,y\right\rangle \).</p>
+
+<p>טוב, אז הגדרנו הגדרה. כדי שהיא תהיה מעניינת, צריך להראות שיש לה באמת דוגמאות לא טריוויאליות, חוץ מהמכפלה הסקלרית שכבר ראינו. הנה הדוגמה הקלאסית שקופצת לי לראש: נסתכל במרחב \( V=\mbox{C}\left[0,1\right]\) - מרחב הפונקציות \( f:\left[0,1\right]\to\mathbb{R}\) (\( \left[0,1\right]\) הוא הקטע הסגור שכולל את כל הממשיים בין 0 ל-1 כולל) שהן רציפות (אני מניח שהמושג מוכר לקוראים - אם לא, אני ממליץ לקרוא על פונקציות רציפות; ואם לא, לא סוף העולם - זו רק דוגמה). לא קשה לראות שזה אכן מרחב וקטורי מעל \( \mathbb{R}\). את המכפלה הפנימית נגדיר כך:</p>
+
+<p>\( \left\langle f,g\right\rangle =\int_{0}^{1}f\left(x\right)g\left(x\right)dx\)</p>
+
+<p>קל למדי לראות שתכונות 1-3 מתקיימות, בזכות תכונות הלינאריות של האינטגרל. תכונה 4 היא מאתגרת קצת יותר - אנחנו רוצים לטעון שאם \( f\not\equiv0\) (כאן \( 0\) היא הפונקציה שמחזירה 0 לכל אברי \( \left[0,1\right]\)) אז \( \int_{0}^{1}f^{2}\left(x\right)dx&gt;0\). כאן הרציפות של \( f\) קריטית; אם היינו מרשים ל-\( f\) להיות לא רציפה, ולו בנקודה אחת, היינו מקבלים פונקציות שונות מאפס שהמכפלה הפנימית שלהן עם עצמן היא 0 (פשוט תבחרו פונקציה שהיא 0 בכל מקום חוץ מבנקודת האי-רציפות, ושם היא תהיה 1 למשל).</p>
+
+<p>אם כן, \( f\) רציפה. בנוסף, \( f^{2}\left(x\right)\ge0\) לכל \( x\in\left[0,1\right]\), ולכן \( \int_{0}^{1}f^{2}\left(x\right)dx\) חיובי או אפס. מה שאני הולך לעשות עכשיו הוא פשוט לטעון שיש סביבה כלשהי שבה כל ערכי \( f\) גדולים מאפס ולכן השטח שלה חיובי: מכיוון ש-\( f\) רציפה ושונה מאפס, אז קיים \( c\in\left[0,1\right]\) כך ש-\( f\left(c\right)&gt;0\). מכיוון שהיא רציפה, אז עבור \( \varepsilon=\frac{f\left(c\right)}{2}\) קיימת \( \delta&gt;0\) כך ש-\( \left\|f\left(x\right)-f\left(c\right)\right\|&lt;\varepsilon\) אם \( \left\|x-c\right\|&lt;\delta\). לכן יש לנו קטע, מאורך \( \delta\) לכל הפחות, שלכל הנקודות בו מתקיים \( f\left(x\right)&lt;\varepsilon-f\left(c\right)=\frac{1}{2}f\left(c\right)\) (למה מאורך \( \delta\) ולא \( 2\delta\)? כי \( c\) יכולה להיות גם בקצוות). מכאן שהאינטגרל מקיים \( \int_{0}^{1}f^{2}\left(x\right)dx\ge\delta\cdot\left(\frac{1}{2}f\left(c\right)\right)^{2}&gt;0\) וסיימנו.</p>
+
+<p>לפני שאמשיך, אני רוצה לדבר על מה קורה מעל \( \mathbb{C}\). אפשר היה לקוות שנוכל לקחת את ההגדרה שלעיל ופשוט להחליף כל מופע של \( \mathbb{R}\) ב-\( \mathbb{C}\), אבל לרוע המזל זה לא עובד. בואו ונראה למה:</p>
+
+<p>\( \left\langle i,i\right\rangle =i\left\langle 1,i\right\rangle =i\left\langle i,1\right\rangle =i^{2}\left\langle 1,1\right\rangle =-\left\langle 1,1\right\rangle \)</p>
+
+<p>ומה קיבלנו כאן? מצד אחד, \( \left\langle 1,1\right\rangle &gt;0\) כי \( 1\ne0\) ותכונה 4; מצד שני, זה אומר ש-\( \left\langle i,i\right\rangle \) חייב להיות שלילי, בסתירה לתכונה 4. משהו נשתבש בהגדרות שלנו, ומסתבר שהתכונה הסוררת היא 3, וניתן לתקנה די בקלות, אם כי במחיר של אובדן חלק מה”טבעיות” של ההגדרה (אחרי שמתרגלים מבינים שזה כן טבעי). בואו נזכור שאם \( z=a+bi\) הוא מספר מרוכב (\( a,b\in\mathbb{R}\)) אז ה<strong>צמוד</strong> שלו מוגדר כ-\( \overline{z}=\overline{a+bi}=a-bi\). את תכונה 3 נגדיר כעת מחדש כך: \( \left\langle x,y\right\rangle =\overline{\left\langle y,x\right\rangle }\) לכל \( x,y\in V\). זה הכל, ובמקרה שאנחנו מעל השדה \( \mathbb{R}\) לא שינינו כלום כי \( \overline{\left\langle x,y\right\rangle }=\left\langle x,y\right\rangle \) עבור מספרים ממשיים. לתכונה 3 המשודרגת קוראים <strong>הרמיטיות</strong> (על שם המתמטיקאי הרמיט). שימו לב שבמקרה של \( \mathbb{C}\), תכונה 4 היא משמעותית חזקה יותר מאשר קודם - אם \( \left\langle x,x\right\rangle \ge0\) זה בפרט אומר ש-\( \left\langle x,x\right\rangle \) הוא מספר ממשי (מספרים מרוכבים לא ממשיים לא ניתנים להשוואה עם אפס).</p>
+
+<p>מה שכן, עלינו להיות טיפה זהירים. אמנם, עדיין מתקיים ש-\( \left\langle \lambda x,y\right\rangle =\lambda\left\langle x,y\right\rangle \), אבל לחלוטין לא מתקיים \( \left\langle x,\lambda y\right\rangle =\lambda\left\langle x,y\right\rangle \); אם נשתמש בהרמיטיות נקבל \( \left\langle x,\lambda y\right\rangle =\overline{\lambda}\left\langle x,y\right\rangle \).</p>
+
+<p>מעכשיו אמשיך לפתח את כל התורה עבור \( \mathbb{C}\) בלבד, והסימן של הצמוד יופיע לא מעט, אבל זכרו שאפשר לעשות את אותם דברים בדיוק שאעשה כאן גם עבור \( \mathbb{R}\) ופשוט להסיר את הצמוד.</p>
+
+<p>מכפלה סקלרית על \( \mathbb{C}^{n}\) נראית כמעט כמו מכפלה סקלרית “רגילה”, רק שצריך להכניס את הצמוד לתמונה אחרת נאבד את ההרמיטיות. כלומר, אם \( x,y\in\mathbb{C}^{n}\) אז נגדיר \( x\cdot y=\sum_{i=1}^{n}x_{i}\overline{y_{i}}\), וזו תהיה ההגדרה שנעבוד איתה מעתה למכפלה סקלרית.</p>
+
+<p>בואו ניגש לעבודה האמיתית - נתחיל מלהבין איך נראות <strong>כל</strong> המכפלות הפנימיות על מרחב וקטורי \( V\) שהוא סוף-ממדי (במרחבים אינסוף ממדיים הסיפור, כרגיל, מסובך פי כמה וכמה). יהי אם כן \( V\) מרחב וקטורי כלשהו ממימד \( n\) ו-\( B=\left\{ b_{1},\dots,b_{n}\right\} \) בסיס סדור כלשהו שלו. כזכור, לכל \( v\in V\) אני מגדיר <strong>וקטור קואורדינטות</strong> \( \left[v\right]_{B}=\left(\lambda_{1},\dots,\lambda_{n}\right)\) כך ש-\( \sum\lambda_{i}b_{i}=v\) (מכיוון ש-\( B\) בסיס אז קיים צירוף לינארי של אבריו שנותן את \( v\) והוא יחיד, כך שההגדרה הגיונית). כעת אפשר להגדיר מכפלה פנימית \( \left\langle x,y\right\rangle _{B}\) באופן הבא: \( \left\langle x,y\right\rangle _{B}=\left[x\right]_{B}\cdot\left[y\right]_{B}\). כלומר: אנחנו לוקחים את וקטורי הקואורדינטות של \( x,y\) וכופלים אותם מכפלה סקלרית “רגילה” ב-\( \mathbb{C}^{n}\). הגדרה טבעית למדי, יש להודות, והיא דוגמה לרעיון נפוץ במתמטיקה - אם יש לך שני מבנים שהם איזומורפיים (במקרה שלנו, \( V\) איזומורפי ל-\( \mathbb{C}^{n}\), כשכל בסיס \( B\) קובע איזומורפיזם אחר) אפשר להשתמש באיזומורפיזם ובפעולה שכבר קיימת באחד מהמבנים כדי להגדיר פעולה במבנה השני (הפעולה תיקבע גם על פי הפעולה על המבנה הראשון, אבל גם על פי האיזומורפיזם עצמו - שני איזומורפיזמים שונים יתנו פעולות שונות).</p>
+
+<p>אם כן, ראינו שאפשר לקבל מכפלות פנימיות על כל מרחב \( V\) סוף-ממדי מעל \( \mathbb{C}\) באמצעות בסיס. אני רוצה לטעון שגם ההפך נכון - ש<strong>כל</strong> מכפלה פנימית על על מרחב וקטורי סוף ממדי \( V\) ניתן להציג בתור מכפלה סקלרית ביחס לבסיס מסוים. במקום להוכיח את זה מייד, אני רוצה לעצור לרגע ולהבין איך נראים בסיסים כאלו.</p>
+
+<p>ובכן, נניח שיש לי בסיס \( B\) והגדרתי מכפלה פנימית \( \left\langle \cdot,\cdot\right\rangle \) באמצעות \( B\). השאלה הראשונה היא מהם \( \left\langle b_{i},b_{j}\right\rangle \) כאשר \( b_{i},b_{j}\) הם עצמם איברי \( B\). התשובה פשוטה: \( \left[b_{i}\right]_{B}=\left(0,0,\dots,1,\dots,0\right)\) כאשר ה-1 היחיד הוא בקואורדינטה ה-\( i\)-ית, ולכן \( \left\langle b_{i,},b_{j}\right\rangle =0\) אם \( i\ne j\) ו-\( \left\langle b_{i},b_{i}\right\rangle =1\) (בקיצור אפשר לכתוב זאת \( \left\langle b_{i},b_{j}\right\rangle =\delta_{ij}\)). בסיס שאיבריו מקיימים תכונות אלו (ביחס למכפלה פנימית מסויימת) נקרא <strong>בסיס אורתונורמלי</strong> (ביחס לאותה מכפלה פנימית). מבחינה גיאומטרית נכון לחשוב עליו כעל בסיס שהוקטורים השונים בו מאונכים - <strong>אורתוגונליים - </strong>זה לזה (זו משמעות \( \left\langle b_{i},b_{j}\right\rangle =0\)) ואורכם הוא 1 (זו משמעות \( \left\langle b_{i},b_{i}\right\rangle =1\)) - אסביר זאת יותר בפוסט הבא שבו אדבר על ההיבטים הגיאומטריים של מרחבי מכפלה פנימית.</p>
+
+<p>בואו נניח עתה שיש לנו מרחב מכפלה פנימית \( V\) עם מכפלה \( \left\langle \cdot,\cdot\right\rangle \) שלאו דווקא התקבלה מתוך בסיס מסויים. כל מה שאני יודע עליה הוא שהיא מקיימת את תכונות 1-4. אם אני אצליח למצוא בסיס \( B\) של \( v\) שמקיים \( \left\langle b_{i},b_{j}\right\rangle =\delta_{ij}\) - כלומר, בסיס אורתונורמלי ביחס למכפלה הפנימית הזו - אני טוען שינבע מכך שהמכפלה הפנימית היא בדיוק \( \left\langle \cdot,\cdot\right\rangle _{B}\). מדוע? ובכן, נניח ש-\( x,y\) הם שני וקטורים כלשהם ב-\( V\) וניתן להציג אותם כ-\( x=\sum x_{i}b_{i}\) ו-\( y=\sum y_{i}b_{i}\) כאשר \( x_{i},y_{i}\) הם סקלרים. אז מתקיים:</p>
+
+<p>\( \left\langle x,y\right\rangle =\left\langle \sum x_{i}b_{i},\sum y_{i}b_{j}\right\rangle =\sum_{i,j}x_{i}\overline{y_{j}}\left\langle b_{i},b_{j}\right\rangle =\sum_{i=1}^{n}x_{i}\overline{y_{i}}=\left[x\right]_{B}\cdot\left[y\right]_{B}\)</p>
+
+<p>המעבר השני מתבסס על תכונות 1-3 של המכפלה הפנימית, והמעבר שאחריו נובע מכך ש-\( B\) הוא בסיס אורתונורמלי.</p>
+
+<p>אם תחשבו על זה, מה שקורה כאן די דומה למה שקרה בלכסון מטריצות. שם חיפשנו בסיס שבו טרנספורמציה לינארית מסויימת היא “פשוטה” - מיוצגת על ידי מטריצה אלכסונית; כאן אנחנו רואים שאם יש לנו מכפלה פנימית אז יש בסיס - בסיס אורתונורמלי - שבו היא “פשוטה” - ניתן לחשוב עליה כעל מכפלה סקלרית (השיא כמובן יהיה בשילוב של שני הדברים הללו - בסיס אורתונורמלי שגם מלכסן טרנספורמציה מסויימת; זה יהיה מה שנקרא <strong>משפט הפירוק הספקטרלי</strong> והוא אחד מהגביעים הקדושים של סדרת הפוסטים הזו).</p>
+
+<p>הבה ונחדד את הנקודה הזו על ידי כך שנראה שכל מכפלה פנימית במרחב ממימד סופי אכן ניתנת לייצוג באופן מסויים באמצעות מטריצה. בואו ניקח מכפלה פנימית כלשהי \( \left\langle \cdot,\cdot\right\rangle \) ובסיס \( B\) כלשהו למרחב; ובואו נגדיר מטריצה \( B\) על ידי \( B_{ij}=\left\langle b_{j},b_{i}\right\rangle \) (שימו לב להיפוך סדר האינדקסים!). כבר ראינו ש-\( \left\langle x,y\right\rangle =\sum_{i,j}x_{i}\overline{y_{j}}\left\langle b_{i},b_{j}\right\rangle \); דרך אחרת לכתוב את המשוואה הזו היא בתור \( \left\langle x,y\right\rangle =y^{*}Bx\) כאשר \( y^{*}\) מסמן הצמדה של כל רכיבי \( y\) (אני לא כותב \( \overline{y}\) כי לפעמים פשוט משתמשים בקו עליון כדי להבהיר ש-\( y\) הוא וקטור). אם כן, בסיס אורתונורמלי הוא בסיס שבו המכפלה הפנימית מיוצגת על ידי מטריצת היחידה (ובסיס אורתוגונלי - שבו כל שני וקטורים הם אורתוגונליים אבל לא בהכרח מקיימים \( \left\langle b_{i},b_{i}\right\rangle =1\) - הוא בסיס שבו המטריצה המייצגת היא אלכסונית).</p>
+
+<p>נשאלת אם כן השאלה - האם לכל מרחב מכפלה פנימית סוף ממדי קיים בסיס אורתונורמלי? התשובה חיובית, ולא רק שהיא חיובית - ההוכחה שלה קונסטרוקטיבית לגמרי. אנחנו נראה כיצד ניתן להתחיל מבסיס כלשהו ל-\( V\) ולבנות מתוכו בסיס אורתונורמלי - לאלגוריתם הזה קוראים “תהליך גרם-שמידט”.</p>
+
+<p>נתחיל בשאלה תמימה. נניח ש-\( B=\left\{ b_{1},\dots,b_{n}\right\} \) הוא בסיס למרחב וקטורי \( B\), ו-\( v\in V\) הוא וקטור תמים כלשהו ב-\( V\). אנחנו יודעים ש-\( v=\sum\lambda_{i}b_{i}\) ושצירוף לינארי זה הוא יחיד. אבל האם אנחנו יודעים למצוא את \( \lambda_{i}\) לכל \( i\)?</p>
+
+<p>השאלה הזו ערמומית הרבה יותר משנדמה במבט ראשון. נסו שניה לפתור אותה ותראו אילו בעיות מתעוררות מייד. בכלל לא ברור לנו איך \( V\) מיוצג; איך \( v\) נתון לנו; מה בדיוק אנחנו יודעים על \( B\). במקרה שבו \( V=\mathbb{C}^{n}\) עוד אפשר לעשות משהו - כל הוקטורים הם סדרות סופיות של מרוכבים, ולמצוא את ה-\( \lambda_{i}\) -ים דורש לפתור מערכת של משוואות לינאריות מעל המרוכבים. אבל במרחבים כלליים יותר, שבהם אין לנו איזומורפיזם ברור ל-\( \mathbb{C}^{n}\), פתאום השאלה נהיית בעייתית ותלויה מאוד בייצוג שיש לנו של \( V\). ובכלל, לפתור מערכת משוואות זה גם כן לא הדבר הכי אינפורמטיבי בעולם.</p>
+
+<p>אבל, אם \( B\) הוא בסיס <strong>אורתונורמלי</strong> ביחס למכפלה פנימית שאנו יודעים לחשב, פתאום העסק הופך לפשוט בצורה בלתי רגילה. כי בואו נראה מה קורה כשכופלים את \( v\) ב-\( b_{i}\):</p>
+
+<p>\( \left\langle v,b_{i}\right\rangle =\left\langle \sum\lambda_{j}b_{j},b_{i}\right\rangle =\sum\lambda_{j}\left\langle b_{j},b_{i}\right\rangle =\lambda_{i}\)</p>
+
+<p>כל הגורמים \( \lambda_{j}\left\langle b_{j},b_{i}\right\rangle \) עבור \( j\ne i\) מתאפסים ואנחנו נשארים בדיוק עם המכפלה הפנימית של \( v\) עם \( b_{i}\). חשבו על זה בתור <strong>הטלה</strong> של \( v\) על מערכת צירים, כאשר כל ציר מוגדר על ידי אחד מ-\( b_{i}\)-ים. מה שאנחנו רואים כאן הוא שכדי לדעת את הקואורדינטה ה-\( i\) של \( v\) בבסיס האורתונורמלי \( B\) אנחנו צריכים לדעת רק את \( b_{i}\) ולא שום דבר אחר. בפרט, וזה לב הרעיון בגרם-שמידט, אם אנחנו באמצע תהליך הבנייה של \( B\) ובנינו עד כה רק <strong>חלק</strong> מהוקטורים בו, אז לכל וקטור חדש אנחנו כבר יודעים <strong>חלק</strong> מהצירוף הלינארי שייצג את \( v\) בבסיס ה”מלא”, ואותו חלק לא הולך להשתנות יותר אף פעם.</p>
+
+<p>עוד מושג אחד ודי. אם \( v\in V\) הוא וקטור כלשהו השונה מאפס, אנחנו נרצה למצוא \( \lambda\) כך ש-\( \left\langle \lambda v,\lambda v\right\rangle =1\). מתכונות המכפלה הפנימית אנחנו רואים חיש קל שנובע מכך כי \( \left\|\lambda\right\|^{2}=\frac{1}{\left\langle v,v\right\rangle }\), ולכן טבעי לבחור ש-\( \lambda=\frac{1}{\sqrt{\left\langle v,v\right\rangle }}\). שימו לב שתכונה 4 של המכפלה הפנימית ש-\( \left\langle v,v\right\rangle \) מבטיחה יהיה מספר ממשי חיובי ולכן יהיה ניתן להוציא לו שורש. אם אנחנו מעל שדה שאינו \( \mathbb{R}\) או \( \mathbb{C}\), הנקודה הזו היא בדיוק אחת מהנקודות שבהן “הכל קורס” - בכלל לא בטוח שיהיה לנו בסיס אורתונורמלי במרחבים כאלו.</p>
+
+<p>לסקלר \( \sqrt{\left\langle v,v\right\rangle }\) הזה יש סימון ושם, שנעמוד על משמעותם המלאה רק בפוסט הבא - \( \\|v\\|\), <strong>הנורמה</strong> של \( v\). בפשטות, נורמה היא הכללה של מושג האורך, אבל על המבנה המעניין שקיומה משרה על \( V\) אני לא אדבר עכשיו; העניין שלי בה נובע מכך שאם \( v\) הוא וקטור שונה מאפס כלשהו, אז כפי שראינו - \( \frac{v}{\\|v\\|}\) הוא וקטור שהמכפלה הפנימית שלו עם עצמו היא 1. לחלוקת \( v\) ב-\( \\|v\\|\) קוראים <strong>לנרמל</strong> את \( v\).</p>
+
+<p>עכשיו בואו נראה את גרם-שמידט. אנחנו מתחילים מבסיס כלשהו \( \left\{ v_{1},\dots,v_{n}\right\} \) למרחב מכפלה פנימית מסויים ובונים בסיס אורתונורמלי \( \left\{ b_{1},\dots,b_{n}\right\} \) לאותו מרחב. הבניה היא אינדוקטיבית; בשלב ה-\( i\) כבר בנינו את \( \left\{ b_{1},\dots,b_{i-1}\right\} \) כך שהם אורתונורמליים ופורשים בדיוק את אותו מרחב כמו \( \left\{ v_{1},\dots,v_{i-1}\right\} \), ואל הקבוצה הזו אנו מוסיפים את \( b_{i}\). איך? ראשית אנו לוקחים את \( v_{i}\). כעת, לכל \( 1\le j&lt;i\) אנו יודעים ש-\( \left\langle v_{i},b_{j}\right\rangle \) יהיה המקדם של \( b_{j}\) בצירוף הלינארי שפורש את \( v_{i}\); כלומר, \( \left\langle v_{i},b_{j}\right\rangle b_{j}\) הוא בדיוק אותו חלק של \( v_{i}\) ש”כבר מטופל” על ידי \( b_{j}\), ולכן אפשר להחסיר אותו מ-\( v_{i}\) בלב שקט. כלומר, אנו מגדירים וקטור חדש \( u_{i}=v_{i}-\left(\sum_{j=1}^{i-1}\left\langle v_{i},b_{j}\right\rangle b_{j}\right)\).</p>
+
+<p>כעת נשים לב לכך שעבור \( 1\le j&lt;i\), \( \left\langle u_{i},b_{j}\right\rangle =\left\langle v_{i},b_{j}\right\rangle -\left(\sum_{k=1}^{i-1}\left\langle v_{i},b_{k}\right\rangle \left\langle b_{k},b_{j}\right\rangle \right)=\left\langle v_{i},b_{j}\right\rangle -\left\langle v_{i},b_{j}\right\rangle =0\), כלומר \( u_{i}\) הוא אורתוגונלי לכל האיברים שבנינו עד כה של \( B\). עם זאת, קיימת הסכנה ש-\( u_{i}=0\) וחסל. אבל אמרנו ש-\( b_{1},\dots,b_{i-1}\) פורשים את אותו מרחב כמו \( v_{1},\dots,v_{i-1}\), ואם \( u_{i}=0\) זה אומר ש-\( v_{i}=\sum_{j=1}^{i-1}\left\langle v_{i},b_{j}\right\rangle b_{j}\in\mbox{span}\left\{ v_{1},\dots,v_{i-1}\right\} \) בסתירה לכך ש-\( v_{i}\) היה בלתי תלוי באיברים אלו (כי \( \left\{ v_{1},\dots,v_{n}\right\} \) היא <strong>בסיס</strong>). כל שנותר לעשות הוא לנרמל אותו ולהוסיף לקבוצה: נגדיר \( b_{i}=\frac{u_{i}}{\\|u_{i}\\|}\) וסיימנו. אנחנו עדיין צריכים להוכיח ש-\( \mbox{span}\left\{ v_{1},\dots,v_{i}\right\} =\mbox{span}\left\{ b_{1},\dots,b_{i}\right\} \), אבל אני עצל מכדי לכתוב במפורש את ההוכחה ומשאיר לכם את זה כתרגיל.</p>
+
+<p>אחרי שהתהליך יסיים לזלול את כל הבסיס \( \left\{ v_{1},\dots,v_{n}\right\} \) נקבל קבוצה \( \left\{ b_{1},\dots,b_{n}\right\} \) שפורשת את אותו מרחב כמו \( \left\{ v_{1},\dots,v_{n}\right\} \) (ולכן היא בסיס), ובנוסף היא אורתונורמלית, בדיוק מה שרצינו. למען הדורות הבאים, בואו נכתוב את התהליך במפורש בתור אלגוריתם:</p>
+<ol>
+	<li> לכל {::nomarkdown}\( i=1,2,\dots,n\){:/nomarkdown}:
+<ol>
+	<li> הגדר {::nomarkdown}\( u_{i}=v_{i}-\left(\sum_{j=1}^{i-1}\left\langle v_{i},b_{j}\right\rangle b_{j}\right)\){:/nomarkdown}</li>
+	<li> הגדר {::nomarkdown}\( b_{i}=\frac{u_{i}}{\\|u_{i}\\|}\){:/nomarkdown}</li>
+</ol>
+</li>
+	<li> החזר את {::nomarkdown}\( \left\{ b_{1},\dots,b_{n}\right\} \){:/nomarkdown}</li>
+</ol>
+<p>די פשוט, כשחושבים על זה. לרוע המזל, כשעושים את התהליך בפועל בעולם האמיתי, מהר מאוד מקבלים גועל נפש שאין כדוגמתו (כשמנרמלים וקטור לרוב צצים שורשים מזוויעים). תודה לאל על קיומם של מחשבים.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2012/02/06/inner_products_intro" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

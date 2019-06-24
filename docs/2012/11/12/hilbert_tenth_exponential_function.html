@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הבעיה העשירית של הילברט - הפונקציה האקספוננציאלית היא דיופנטית | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הבעיה העשירית של הילברט - הפונקציה האקספוננציאלית היא דיופנטית" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="סוף סוף הגענו אל האקשן האמיתי. כזכור, עבור ( a&gt;1) הגדרנו את משוואת פל ( x^{2}-dy^{2}=1) כאשר ( d=a^{2}-1), וסימנו בתור ( x_{n}\left(a\right)) את סדרת ערכי ה-( x)-ים של פתרונות של המשוואה (כשכולם מוצגים בתור “חזקות” של הפתרון היסודי). המטרה שלנו כרגע היא להראות שהפונקציה ( f\left(a,k\right)=x_{k}\left(a\right)) היא דיופנטית; לשם כך נציג מערכת משוואות שבה מככבים ( x,k,a) ועוד כל מני משתנים אחרים, כך שאחרי שמציבים ערכים קונקרטיים ב-( x,k,a), למערכת המשוואות שנותרה יש פתרון אם ורק אם ( x=x_{k}\left(a\right)). במערכת הזו יש שמונה משוואות. מוכנים? הנה הן: {::nomarkdown}\( x^{2}-\left(a^{2}-1\right)y^{2}=1\){:/nomarkdown} {::nomarkdown}\( u^{2}-\left(a^{2}-1\right)v^{2}=1\){:/nomarkdown} {::nomarkdown}\( s^{2}-\left(b^{2}-1\right)t^{2}=1\){:/nomarkdown} {::nomarkdown}\( v=ry^{2}\){:/nomarkdown} {::nomarkdown}\( b=1+4py=a+qu\){:/nomarkdown} {::nomarkdown}\( s=x+cu\){:/nomarkdown} {::nomarkdown}\( t=k+4\left(d-1\right)y\){:/nomarkdown} {::nomarkdown}\( y=k+e-1\){:/nomarkdown} יפה. בואו נתחיל להבין מה המשמעות של כל זה ואיך כל משוואה עוזרת לנו." />
+<meta property="og:description" content="סוף סוף הגענו אל האקשן האמיתי. כזכור, עבור ( a&gt;1) הגדרנו את משוואת פל ( x^{2}-dy^{2}=1) כאשר ( d=a^{2}-1), וסימנו בתור ( x_{n}\left(a\right)) את סדרת ערכי ה-( x)-ים של פתרונות של המשוואה (כשכולם מוצגים בתור “חזקות” של הפתרון היסודי). המטרה שלנו כרגע היא להראות שהפונקציה ( f\left(a,k\right)=x_{k}\left(a\right)) היא דיופנטית; לשם כך נציג מערכת משוואות שבה מככבים ( x,k,a) ועוד כל מני משתנים אחרים, כך שאחרי שמציבים ערכים קונקרטיים ב-( x,k,a), למערכת המשוואות שנותרה יש פתרון אם ורק אם ( x=x_{k}\left(a\right)). במערכת הזו יש שמונה משוואות. מוכנים? הנה הן: {::nomarkdown}\( x^{2}-\left(a^{2}-1\right)y^{2}=1\){:/nomarkdown} {::nomarkdown}\( u^{2}-\left(a^{2}-1\right)v^{2}=1\){:/nomarkdown} {::nomarkdown}\( s^{2}-\left(b^{2}-1\right)t^{2}=1\){:/nomarkdown} {::nomarkdown}\( v=ry^{2}\){:/nomarkdown} {::nomarkdown}\( b=1+4py=a+qu\){:/nomarkdown} {::nomarkdown}\( s=x+cu\){:/nomarkdown} {::nomarkdown}\( t=k+4\left(d-1\right)y\){:/nomarkdown} {::nomarkdown}\( y=k+e-1\){:/nomarkdown} יפה. בואו נתחיל להבין מה המשמעות של כל זה ואיך כל משוואה עוזרת לנו." />
+<link rel="canonical" href="http://localhost:4000/blog/2012/11/12/hilbert_tenth_exponential_function" />
+<meta property="og:url" content="http://localhost:4000/blog/2012/11/12/hilbert_tenth_exponential_function" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-11-12T23:11:31+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2012-11-12T23:11:31+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/11/12/hilbert_tenth_exponential_function"},"url":"http://localhost:4000/blog/2012/11/12/hilbert_tenth_exponential_function","description":"סוף סוף הגענו אל האקשן האמיתי. כזכור, עבור ( a&gt;1) הגדרנו את משוואת פל ( x^{2}-dy^{2}=1) כאשר ( d=a^{2}-1), וסימנו בתור ( x_{n}\\left(a\\right)) את סדרת ערכי ה-( x)-ים של פתרונות של המשוואה (כשכולם מוצגים בתור “חזקות” של הפתרון היסודי). המטרה שלנו כרגע היא להראות שהפונקציה ( f\\left(a,k\\right)=x_{k}\\left(a\\right)) היא דיופנטית; לשם כך נציג מערכת משוואות שבה מככבים ( x,k,a) ועוד כל מני משתנים אחרים, כך שאחרי שמציבים ערכים קונקרטיים ב-( x,k,a), למערכת המשוואות שנותרה יש פתרון אם ורק אם ( x=x_{k}\\left(a\\right)). במערכת הזו יש שמונה משוואות. מוכנים? הנה הן: {::nomarkdown}\\( x^{2}-\\left(a^{2}-1\\right)y^{2}=1\\){:/nomarkdown} {::nomarkdown}\\( u^{2}-\\left(a^{2}-1\\right)v^{2}=1\\){:/nomarkdown} {::nomarkdown}\\( s^{2}-\\left(b^{2}-1\\right)t^{2}=1\\){:/nomarkdown} {::nomarkdown}\\( v=ry^{2}\\){:/nomarkdown} {::nomarkdown}\\( b=1+4py=a+qu\\){:/nomarkdown} {::nomarkdown}\\( s=x+cu\\){:/nomarkdown} {::nomarkdown}\\( t=k+4\\left(d-1\\right)y\\){:/nomarkdown} {::nomarkdown}\\( y=k+e-1\\){:/nomarkdown} יפה. בואו נתחיל להבין מה המשמעות של כל זה ואיך כל משוואה עוזרת לנו.","headline":"הבעיה העשירית של הילברט - הפונקציה האקספוננציאלית היא דיופנטית","dateModified":"2012-11-12T23:11:31+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הבעיה העשירית של הילברט - הפונקציה האקספוננציאלית היא דיופנטית</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-11-12T23:11:31+02:00" itemprop="datePublished">Nov 12, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>סוף סוף הגענו אל האקשן האמיתי. כזכור, עבור \( a&gt;1\) הגדרנו את משוואת פל \( x^{2}-dy^{2}=1\) כאשר \( d=a^{2}-1\), וסימנו בתור \( x_{n}\left(a\right)\) את סדרת ערכי ה-\( x\)-ים של פתרונות של המשוואה (כשכולם מוצגים בתור “חזקות” של הפתרון היסודי). המטרה שלנו כרגע היא להראות שהפונקציה \( f\left(a,k\right)=x_{k}\left(a\right)\) היא דיופנטית; לשם כך נציג מערכת משוואות שבה מככבים \( x,k,a\) ועוד כל מני משתנים אחרים, כך שאחרי שמציבים ערכים קונקרטיים ב-\( x,k,a\), למערכת המשוואות שנותרה יש פתרון אם ורק אם \( x=x_{k}\left(a\right)\). במערכת הזו יש שמונה משוואות. מוכנים? הנה הן:</p>
+<ol>
+	<li>{::nomarkdown}\( x^{2}-\left(a^{2}-1\right)y^{2}=1\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( u^{2}-\left(a^{2}-1\right)v^{2}=1\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( s^{2}-\left(b^{2}-1\right)t^{2}=1\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( v=ry^{2}\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( b=1+4py=a+qu\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( s=x+cu\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( t=k+4\left(d-1\right)y\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( y=k+e-1\){:/nomarkdown}</li>
+</ol>
+<p>יפה. בואו נתחיל להבין מה המשמעות של כל זה ואיך כל משוואה עוזרת לנו.</p>
+
+<p>נתחיל מהראשונה. כל פתרון של המשוואה הזו בעצם נותן לנו פתרון של משוואת פל עבור \( a\) כלשהו. כלומר, כבר מהמשוואה הראשונה אנחנו יכולים להסיק שקיים \( i\) כלשהו כך ש-\( x=x_{i}\left(a\right)\) וגם \( y=y_{i}\left(a\right)\). בעצם כל האתגר שנותר לנו כעת הוא להוכיח ש-\( k=i\) (זכרו! יש לחשוב על \( k\) בתור קבוע - “פרמטר” שהצבנו במשוואות).</p>
+
+<p>שתי המשוואות הבאות נותנות לנו עוד פתרונות למשוואות פל. משוואה 2 מראה לנו ש-\( u=x_{n}\left(a\right),v=x_{n}\left(a\right)\) עבור \( n\) כלשהו; שימו לב שאלו הם איברים שונים באותה סדרה (של פתרונות משוואת פל עבור \( a\)). לעומת זאת \( s=x_{j}\left(b\right),t=y_{j}\left(b\right)\) הם כבר פתרונות של משוואת פל שעשויה להיות שונה, תלוי אם \( b\) שווה ל-\( a\) או לא. לשם מה אנו נזקקים לעוד שני פתרונות? סבלנות.</p>
+
+<p>מידע שאנחנו מקבלים מייד הוא ש-\( b\) אכן שונה מ-\( a\) ולמעשה הוא בהכרח גדול ממנו - זה נובע ממשוואה 5, \( b=a+qu\). זכרו שכל המשוואות הללו הן בשלמים <strong>חיוביים</strong> (זה פישוט שעשינו אי-אז בתחילת סדרת הפוסטים הזו).</p>
+
+<p>כעת, האם אנחנו יכולים לומר משהו על הקשר שבין \( \left(x,y\right)\) ובין \( \left(u,v\right)\)? שניהם פתרונות של משוואת פל עם המקדם \( d=a^{2}-1\), אבל חוץ מזה הם כרוכים האחד בשני עם משוואה 4: \( v=ry^{2}\), או במפורש: \( y_{n}\left(a\right)=r\left(y_{i}\left(a\right)\right)^{2}\). במילים אחרות, \( \left(y_{i}\left(a\right)\right)^{2}\) מחלק את \( y_{n}\left(a\right)\). בפוסט הקודם הראינו שמכך נובע ש-\( y_{i}\left(a\right)\) מחלק את \( n\) (וכמובן ש-\( i\le n\)).</p>
+
+<p>יפה, למדנו משהו על הקשר בין \( i\) ו-\( n\). עכשיו בואו נכניס את \( x_{j}\left(b\right)\) לתמונה. משוואה 6, כשהיא מנוסחת בסימונים החדשים שלנו, אומרת ש-\( x_{j}\left(b\right)=x_{i}\left(a\right)+cx_{n}\left(a\right)\). אפשר לסמן זאת גם כך: \( x_{j}\left(b\right)\equiv_{x_{n}\left(a\right)}x_{i}\left(a\right)\). זה לא סוף מה שאפשר לעשות עם שקילות מודולו \( x_{n}\left(a\right)\); משוואה 5 אומרת ש-\( b=a+qx_{n}\left(a\right)\), כלומר \( b\equiv_{x_{n}\left(a\right)}a\).</p>
+
+<p>עכשיו בואו נשלוף תוצאה מהפוסט הקודם: אם \( a\equiv_{c}b\) אז לכל \( n\) מתקיים ש-\( x_{n}\left(a\right)\equiv_{c}x_{n}\left(b\right)\) (זה נבע מההגדרה האינדוקטיבית של סדרות ה-\( x_{n}\)-ים). אצלנו אפשר להסיק מזה ש-\( x_{j}\left(b\right)\equiv_{x_{n}\left(a\right)}x_{j}\left(a\right)\), ולכן נקבל ש-\( x_{i}\left(a\right)\equiv_{x_{n}\left(a\right)}x_{j}\left(a\right)\). לפי התוצאה מסוף הפוסט הקודם, המסקנה היא ש-\( j\equiv_{4n}\pm i\). כעת, מכיוון ש-\( y_{i}\left(a\right)\) מחלק את \( n\), הרי ש-\( 4y_{i}\left(a\right)\) מחלק את \( 4n\) וכל דבר שמתחלק על ידו, ועל כן \( j\equiv_{4y_{i}\left(a\right)}\pm i\).</p>
+
+<p>כעת בואו נשתמש שוב במשוואה 5, בחלק שלה שבו טרם השתמשנו שקובע ש-\( b=1+4py_{i}\left(a\right)\), כלומר ש-\( b\equiv_{4y_{i}\left(a\right)}1\), כלומר ש-\( 4y_{i}\left(a\right)\) מחלק את \( b-1\).</p>
+
+<p>עכשיו בואו נשתמש בעוד תוצאה מהפוסט הקודם, לפיה \( y_{n}\left(a\right)\equiv_{a-1}n\) (גם זה נבע די מייד מנוסחאות הנסיגה). אצלנו נשתמש בזה עם \( j\) ונקבל ש-\( y_{j}\left(b\right)\equiv_{b-1}j\), כלומר \( y_{j}\left(b\right)\equiv_{4y_{i}\left(a\right)}j\). מבלבל? טיפה, כן. עכשיו כדי לבלבל עוד יותר נוסיף לתמונה את משוואה 7: \( y_{j}\left(b\right)=k+4\left(d-1\right)y_{i}\left(a\right)\) (<strong>שימו לב</strong> ש-\( d\) כאן הוא משתנה בלי אילוצים עליו פרט לכך שיהיה חיובי; אנחנו <strong>לא</strong>יכולים להניח ש-\( d=a^{2}-1\) וגם לא ניסינו לדרוש משהו כזה). מהמשוואה הזו נקבל מייד ש-\( y_{j}\left(b\right)\equiv_{4y_{i}\left(a\right)}k\), והנה הכנסנו את \( k\) לתמונה סוף סוף. זכרו - מטרת העל שלנו היא להראות ש-\( k=i\), והתקדמנו יפה לקראת זה; בואו נערוך סיכום ביניים קצר של תוצאות שמצאנו:</p>
+<ol>
+	<li>{::nomarkdown}\( j\equiv_{4y_{i}\left(a\right)}\pm i\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( y_{j}\left(b\right)\equiv_{4y_{i}\left(a\right)}j\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( y_{j}\left(b\right)\equiv_{4y_{i}\left(a\right)}k\){:/nomarkdown}</li>
+</ol>
+<p>משלושת אלו קיבלנו את השרשרת הבאה שבה כל השקילויות הן מודולו \( 4y_{i}\left(a\right)\): \( k\equiv y_{j}\left(b\right)\equiv j\equiv\pm i\). אם כן, עוד לא הוכחנו ש-\( k=i\) אבל ראינו ש-\( k\equiv_{4y_{i}\left(a\right)}\pm i\) וגם זו התחלה (וכמעט סיימנו!).</p>
+
+<p>בואו נכניס לתמונה עכשיו את משוואה 8: \( y=k+e-1\). מה היא בעצם אומרת? זו בסך הכל הדרך הדיופנטית לכתוב \( k\le y_{i}\left(a\right)\) (כי \( e\) הוא מספר חיובי כלשהו). כעת, בפוסט הקודם ראינו ש-\( i\le y_{i}\left(a\right)\). אם תחשבו על זה קצת, זה אומר ש-\( k=i\)! למה? כי \( k,i\) שניהם נמצאים בתוך טווח שבו אין שני מספרים שונים ששקולים מודולו \( 4y_{i}\left(a\right)\) - הטווח \( -2y_{i}\left(a\right)+1,\dots-1,0,1,\dots,2y_{i}\left(a\right)\) (זוכרים? דיברנו על זה קצת בפוסט הקודם). זהו, סיימנו את הכיוון הראשון! הראינו שאם נתון פתרון למשוואות הדיופנטיות עבור ערכים נתונים של \( x,k,a\) אז הוא מקיים \( x=x_{k}\left(a\right)\).</p>
+
+<p>הכיוון השני הוא להראות שאם יש לנו ערכים נתונים של \( x,k,a\) שמקיימים \( x=x_{k}\left(a\right)\) ואנחנו מציבים אותם במשוואות שלעיל, אז התוצאה היא מערכת משוואות פתירה. כלומר, אנחנו צריכים לקבוע מה יהיו הערכים ששאר המשתנים מקבלים ולהוכיח שכל המשוואות מתקיימות (עכשיו המשוואות הופכות להיות האויבים שלנו - אם קודם הן סיפקו לנו מידע, עכשיו הן מספקות לנו אילוצים שאנחנו חייבים לקיים).</p>
+
+<p>בואו נתחיל ממשוואה 1 - היא קלה. אם \( x=x_{k}\left(a\right)\) אז אנחנו יודעים שיש \( y=y_{k}\left(a\right)\) כך ש-\( x^{2}+\left(a-1\right)y^{2}=1\) מהגדרת משוואת פל. אז סיפקנו כבר את משוואה 1. בואו נעבור ל-2; כל פתרון אחר של משוואת פל עבור \( a\) יספק אותה, אבל כדאי לבחור את הפתרון הזה בחוכמה כדי שגם שאר המשוואות יסופקו - נבחר \( m=2ky_{k}\left(a\right)\) (למה? כי זה עובד, כפי שנראה בהמשך) ונגדיר \( u=x_{m}\left(a\right)\) ו-\( v=y_{m}\left(a\right)\), וזה כמובן שיספק את משוואה 2.</p>
+
+<p>עכשיו, בפוסט הקודם ראינו ש-\( y_{n}\) מחלק את \( y_{t}\) אם ורק אם \( n\) מחלק את \( t\), וכמו כן גם ראינו ש-\( y_{n}^{2}\) תמיד מחלק את \( y_{ny_{n}}\). מהתוצאה השניה נובע ש-\( y_{k}^{2}\) מחלק את \( y_{m/2}\), ומהראשונה נובע ש-\( y_{m/2}\) מחלק את \( y_{m}\) ולכן נקבל ש-\( y_{k}^{2}\) מחלק את \( y_{m}\), כלומר \( y^{2}\) מחלק את \( v\), כלומר יש \( r\) כך ש-\( v=ry^{2}\), והנה סיפקנו את משוואה 4. זה עדיין לא מסביר עד הסוף את האופן שבו בחרנו את \( m\) (אם כל מה שהיינו רוצים לעשות הוא להראות ש-\( y^{2}\) מחלק את \( v\) היה אפשר לבחור \( m=ky_{k}\)) אבל זה הרווח הראשון שקצרנו מההגדרה הזו.</p>
+
+<p>האתגר הבא, והגדול ביותר שלנו, הוא לספק את משוואה 5 שאיכשהו קושרת את הפרמטרים של כל שלוש משוואות פל שלנו יחד. נצטרך לבחור את \( b\) בצורה חכמה מאוד, ועל פיו לבחור את מה שיפתור את משוואה 3. נתחיל דווקא מתכונה של \( u,v\): בפוסט הקודם ראינו שאם \( n\) הוא זוגי אז \( y_{n}\) הוא זוגי וכשהוא אי זוגי אז \( y_{n}\) אי זוגי. במקרה שלנו בחרנו את \( m\) בכוונה באופן שיבטיח שהוא זוגי ולכן \( v\) זוגי, אבל זה אומר שבהכרח \( u\) אי זוגי (כי \( u^{2}+\left(a^{2}-1\right)v^{2}=1\); מה תהיה הזוגיות של אגף שמאל אם גם \( u\) וגם \( v\) זוגיים?). אנחנו גם יודעים שהמחלק המשותף הגדול ביותר של \( u,v\) הוא 1 (שוב, מהפוסט הקודם), ולכן גם המחלק המשותף הגדול ביותר של \( u\) ושל \( 4y\) הוא 1. רגע, למה? ובכן, בואו נניח ש-\( p\) הוא מספר גדול מ-1 שמחלק גם את \( u\) וגם את \( 4y\). אפשר תמיד להניח ש-\( p\) ראשוני כי אם ניקח מחלק משותף כלשהו של \( u,4y\) יהיה ראשוני שמחלק אותו; כמו כן, \( p\) חייב להיות אי זוגי כי \( u\) אי זוגי, ולכן \( p\) לא מחלק את \( 4\), ולכן כדי לחלק את \( 4y\) הוא חייב לחלק את \( y\). אבל ראינו ש-\( y\) מחלק את \( v\) ולכן קיבלנו ש-\( p\) הוא מחלק משותף של \( u,v\) וזו סתירה לכך שהם זרים.</p>
+
+<p>איך זה עוזר לנו ש-\( u,4y\) זרים? ובכן, זה מאפשר לנו לשלוף מהשרוול כלי נשק קטלני במיוחד. זכרו מהי משוואה 5 - בואו נכתוב אותה הפעם בתור זוג המשוואות שהיא:</p>
+
+<p>\( b=1+4yp\)</p>
+
+<p>\( b=a+uq\)</p>
+
+<p>דרך אחרת, כמעט שקולה, לכתוב את מערכת המשוואות הזו היא:</p>
+
+<p>\( b\equiv_{4y}1\)</p>
+
+<p>\( b\equiv_{u}a\)</p>
+
+<p>וזו מערכת משוואות מודולרית שבה המודולוסים הם זרים, מה שאומר ש<strong>משפט השאריות הסיני</strong> מבטיח שתמיד קיים לה פתרון. נבחר את הערך של המשתנה \( b\) להיות הפתרון הזה. האם סיימנו? עוד לא, כי דרך הכתיבה המודולרית לא שקולה לחלוטין; היא הייתה שקולה רק אם \( p,q\) היו יכולים להיות גם שליליים. למרבה המזל, אם \( b\) הוא פתרון של מערכת המשוואות אז גם \( b+n\left(4yu\right)\) הוא כזה, לכל \( n\) טבעי, ולכן תמיד אפשר לבחור \( b\) גדול מספיק כדי ששתי המשוואות המקוריות יתקיימו. טראח! הנה סיפקנו גם את משוואה 5.</p>
+
+<p>עכשיו, כשיש לנו את \( b\) ביד, אפשר להגדיר את \( s,t\) - הפתרונות למשוואה 3 - בתור \( s=x_{k}\left(b\right),t=y_{k}\left(b\right)\) (אותו \( k\) כמו זה שהיה נתון לנו מלכתחילה). בפוסט הקודם ראינו שאם \( a\equiv_{c}b\) אז \( x_{n}\left(a\right)\equiv_{c}x_{n}\left(b\right)\). במקרה שלנו, \( b\equiv_{u}a\) ולכן נקבל \( s\equiv_{u}x\), כלומר \( s=x+cu\) בדיוק כמו משוואה 6. רגע, בדיוק? לא! מי מכם האמין לי? יש פה שוב את אותה בעיה כמו קודם - אף אחד לא ערב לנו ש-\( c\) הזה הוא חיובי. כדי להיווכח בכך שהוא חיובי שימו לב לכך ש-\( b&gt;a\) (זה נובע מהמשוואה \( b=a+uq\)). ולכן \( s=x_{k}\left(b\right)&gt;x_{k}\left(a\right)=x\) (לא בטוחים בזה? הוכיחו לעצמכם, זה נובע מהגדרת \( x_{k}\) כסדרת נסיגה).</p>
+
+<p>נותרו רק משוואות 7 ו-8. משוואה 7 מתעסקת בקשר שבין \( t=y_{k}\left(b\right)\) ו-\( y=y_{k}\left(a\right)\) ו-\( k\). ראשית כל, שימו לב לכך ש-\( t\ge k\) (בגלל שראינו בפוסט הקודם ש-\( y_{n}\ge n\) תמיד). כמו כן, בפוסט הקודם ראינו גם ש-\( y_{n}\equiv_{a-1}n\), ובמקרה שלנו זה אומר ש-\( t\equiv_{b-1}k\). ממשוואה 5 ראינו ש-\( b=1+4yp\) ולכן \( t\equiv_{4yp}k\) ומכאן שבפרט \( t\equiv_{4y}k\). כעת, מה אומרת משוואה 7? ש-\( t=k+4\left(d-1\right)y\), ולכן העובדה ש-\( t\equiv_{4y}k\) מראה את זה, כי כבר ראינו ש-\( t\ge k\).</p>
+
+<p>נותרה רק משוואה 8: \( y=k+e-1\). להראות שהיא פתירה זה מיידי: \( y=y_{k}\left(a\right)\ge k\) (מאוד שימושית, הטענה ש-\( y_{n}\left(a\right)\ge n\)) ולכן קיים \( e\) כנדרש (\( e=y-k+1\)).</p>
+
+<p>סיימנו! הוכחנו ש-\( f\left(k,a\right)=x_{k}\left(a\right)\) היא פונקציה דיופנטית! זה הישג לא מבוטל, עברנו דרך לא קצרה בדרך לחיסול הבעיה העשירית של הילברט.</p>
+
+<p>לפני שאמשיך, אני רוצה לכתוב את משוואות 1-8 בצורה קצת יותר ידידותית למשתמש, עכשיו כשהבנו פחות או יותר מה הולך בהן:</p>
+<ol>
+	<li>{::nomarkdown}\( x,y\){:/nomarkdown} הם פתרונות של משוואת פל עם הפרמטר {::nomarkdown}\( a\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( u,v\){:/nomarkdown} הם פתרונות של משוואת פל עם הפרמטר {::nomarkdown}\( a\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( s,t\){:/nomarkdown} הם פתרונות של משוואת פל עם הפרמטר {::nomarkdown}\( b\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( y^{2}\){:/nomarkdown} מחלק את {::nomarkdown}\( v\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( b\equiv_{4y}1\){:/nomarkdown} וגם {::nomarkdown}\( b\equiv_{u}a\){:/nomarkdown} וגם {::nomarkdown}\( b&gt;a\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( s\equiv_{u}x\){:/nomarkdown} וגם {::nomarkdown}\( s&gt;x\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( t\equiv_{4y}k\){:/nomarkdown} וגם {::nomarkdown}\( t&gt;k\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( y\ge k\){:/nomarkdown}.</li>
+</ol>
+<p>זה כבר נראה הרבה יותר אנושי. בעצם יש לנו כאן שלושה פתרונות למשוואות פל עם שני פרמטרים וכמה קשרים בסיסיים בין הפרמטרים. כל שאר המשתנים שהיו מעורבים במשוואות היו רק משתני עזר שסייעו לנו לכתוב באופן דיופנטי תכונות כמו \( \ge\) וכמו שקילות מודולו. אני מציג את המשוואות כך כדי שיהיה קצת יותר קל להבין מאיפה הן הגיעו ומה עבר בראש של מי שהמציא אותן, למרות שאין לי מושג איך הגיעו להוכחה הזו.</p>
+
+<p>עכשיו, קדימה לגביע הקדוש שלנו! נגדיר את הפונקציה \( h\left(n,k\right)=n^{k}\) ונוכיח שהיא דיופנטית. לשם כך נבנה מערכת משוואות שכוללת את 8 המשוואות שהצגתי קודם, ועוד 4 משוואות חדשות:</p>
+<ol>
+	<li>{::nomarkdown}\( \left(x-y\left(a-n\right)-m\right)^{2}=\left(f-1\right)^{2}\left(2an-n^{2}-1\right)^{2}\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( m+g=2an-n^{2}-1\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( w=n+h=k+l\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( a^{2}-\left(w^{2}-1\right)\left(w-1\right)^{2}z^{2}=1\){:/nomarkdown}</li>
+</ol>
+<p>זה הכל. למה זה עובד?</p>
+
+<p>ובכן, בואו נניח ראשית כל שיש לנו פתרון למערכת המשוואות ונוכיח שמתקיים \( m=n^{k}\).</p>
+
+<p>ראשית, שימו לב שמשוואה מס’ 3 (החדשה; אם אתייחס למשוואות הישנות במספר שלהן אומר זאת במפורש מעתה) גוררת ש-\( w&gt;1\) (כי הוא סכום של שני מספרים חיוביים), ולכן \( \left(w^{2}-1\right)\left(w-1\right)^{2}z^{2}&gt;0\) ומכאן על פי משוואה 4 ש-\( a&gt;1\). אם \( a&gt;1\) אז כל המשוואות הישנות (1 עד 8) מראות ש-\( x=x_{k}\left(a\right)\) ו-\( y=y_{k}\left(a\right)\) - זה מה שעשינו קודם.</p>
+
+<p>עכשיו, כולנו כבר הדחקנו את זה, אבל בפוסט הקודם ראינו ש-\( x_{k}\left(a\right)-y_{k}\left(a\right)\left(a-n\right)\equiv_{2an-n^{2}-1}n^{k}\) (בחיי! אני לא ממציא את זה!). סוף סוף זה יועיל לנו קצת. כפי שאתם רואים, משוואה 1 מהונדסת פחות או יותר כדי להתאים לביטוי הזה; אם ניקח אותה מודולו \( 2an-n^{2}-1\), נקבל:</p>
+
+<p>\( \left(x-y\left(a-n\right)-m\right)^{2}\equiv_{2an-n^{2}-1}0\)</p>
+
+<p>או במילים אחרות:</p>
+
+<p>\( m\equiv_{2an-n^{2}-1}x-y\left(a-n\right)\equiv n^{k}\) (המעבר האחרון נובע מהמשפט בפוסט הקודם).</p>
+
+<p>יפה, אז אנחנו קרובים באופן מפתיע ליעד שלנו. רק צריך להשתכנע ש-\( m\) ו-\( n^{k}\) הם קטנים יותר מ-\( 2an-n^{2}-1\) ואז נסיים כמו קודם.</p>
+
+<p>בואו תסתכלו רגע על משוואה 4. נראה לכם מוכר? זה לא במקרה, גם זו משוואת פל! הפעם \( w\) הוא על תקן \( a\), ולכן יש \( j\) כלשהו כך ש-\( a=x_{j}\left(w\right)\) ו-\( \left(w-1\right)z=y_{j}\left(w\right)\). עכשיו, משפט מהפוסט הקודם שכבר השתמשנו בו כאן הוא ש-\( y_{j}\equiv_{w-1}j\), אבל מכיוון ש-\( y_{j}\) מתחלק על ידי \( w-1\) נובע מכך ש-\( j\equiv_{w-1}0\), ולכן בהכרח \( j\ge w-1\). עכשיו, אנחנו יודעים ש-\( x_{j}\left(w\right)\ge w^{j}\) (שוב, פוסט קודם) ולכן \( a\ge w^{w-1}&gt;n^{k}\), כשהמעבר האחרון נובע מכך שמשוואה 2 מראה ש-\( w&gt;a,k\). זה טוב מאוד - זה מראה ש-\( a\) ענקי, כמו שאנחנו צריכים, אבל עוד לא סיימנו.</p>
+
+<p>בואו נציץ במשוואה 2. מה שהיא בעצם אומרת הוא ש-\( m&lt;2an-n^{2}-1\) - כלומר, נותן לנו את הקוטן של \( m\) שרצינו באופן מפורש. אז אם נראה ש-\( n^{k}&lt;2an-n^{2}-1\), נסיים את הכיוון הזה של ההוכחה. הדרך לעשות את זה היא להכניס טיפה אנליזה לתמונה. בואו נגדיר פונקציה \( f\left(n\right)=2an-n^{2}-1\). אז \( f\left(1\right)=2a-2\ge a\) (אי השוויון האחרון נובע מכך ש-\( a&gt;1\)). כעת, נגזור את \( f\) ונקבל \( f^{\prime}\left(n\right)=2a-2n\) וזה גדול מ-0 לכל התחום \( 1\le n&lt;a\), כלומר \( f\) היא פונקציה עולה בתחום הזה ולכן \( f\left(n\right)\ge a\) לכל \( 1\le n&lt;a\). כעת, אם \( a&gt;n^{k}\) אז בפרט נקבל \( f\left(n\right)=2an-n^{2}-1\ge a&gt;n^{k}\) (אין ל-\( n\) ברירה, הוא חייב להיות קטן מ-\( a\) אחרת \( n^{k}\) לא היה קטן מ-\( a\)). זה <strong>מסיים את הכיוון הראשון של ההוכחה</strong>!</p>
+
+<p>נותר רק הכיוון השני - להראות שאם \( m=n^{k}\), אז יש למערכת המשוואות שלנו פתרון. בואו נתחיל ממשוואה 3. היא בסך הכל אומרת ש-\( w&gt;n,k\), אז בואו נבחר את \( w\) להיות מספר <strong>כלשהו</strong> שמקיים את זה. עכשיו, נגדיר \( a=x_{w-1}\left(w\right)\). מה עם \( y_{w-1}\left(w\right)\)? מטענה מהפוסט הקודם שכבר עשינו בה שימוש פה, \( y_{w-1}\left(w\right)\equiv_{w-1}w-1\equiv0\). במילים אחרות, \( w-1\) מחלק את \( y_{w-1}\left(w\right)\) ולכן \( y_{w-1}\left(w\right)=z\left(w-1\right)\), והנה פתרנו את משוואה 4.</p>
+
+<p>כעת, אם \( w&gt;n\) ו-\( w&gt;k\) אז \( a=x_{w-1}\left(w\right)\ge w^{w-1}&gt;n^{k}\) ולכן נקבל (בדיוק כמו קודם) ש-\( m=n^{k}&lt;2an-n^{2}-1\), מה שנותן לנו פתרון למשוואה 2. נותרה רק משוואה 1!</p>
+
+<p>ובכן, הבה ונגדיר \( x=x_{k}\left(a\right),y=y_{k}\left(a\right)\). אנחנו יודעים ש-\( x_{k}\left(a\right)-y_{k}\left(a\right)\left(a-n\right)\equiv_{2an-n^{2}-1}n^{k}\), ובמילים אחרות: \( 2an-n^{2}-1\) מחלק את \( x-y\left(a-n\right)-m\), כלומר יש \( f\) כך ש-\( x-y\left(a-n\right)-m=\left(f-1\right)\left(x-y\left(a-n\right)-m\right)\). רק שיש לנו בעיה קטנה - לא ברור אם \( f\) הזה חיובי או שלילי בכלל. הפתרון הוא להעלות את שני אגפי המשוואה בריבוע, ואז לקבל \( \left(x-y\left(a-n\right)-m\right)^{2}=\left(f-1\right)^{2}\left(x-y\left(a-n\right)-m\right)^{2}\) וכעת אם \( f\) היה שלילי אפשר להחליף אותו ב-\( \left\|f\right\|\) מבלי לשים לב להבדל. זה מסיים עם משוואה 1, ומכיוון שכל המשוואות הישנות מסופקות על ידי הפתרון למשוואת פל \( x_{k}\left(a\right)\), <strong>סיימנו את ההוכחה!</strong></p>
+
+<p>זה עדיין לא מוכיח שהבעיה העשירית של הילברט היא לא כריעה, אבל זה מוכיח שהפונקציה האקספוננציאלית היא דיופנטית - וזה המכשול שעמד בפני המתמטיקאים שעבדו על הבעיה במשך עשרות שנים. מכאן ואילך העניינים יפסיקו להיראות כמו “חשבון מכולת” ונחזור לדבר על התמונה הגדולה ולהבין איך פונקציה אקספוננציאלית עוזרת לנו.</p>
+
+<p>קצת קרדיט לסיום על כל ההוכחה הזו. אני עובד, כאמור, על בסיס מאמר של מרטין דיוויס שקישרתי אליו בתחילת סדרת הפוסטים הזו. הוא מייחס את ההוכחה שהצגתי כאן (שמבחינה היסטורית אינה ההוכחה הראשונה מסוגה) לג’וליה רובינסון (אחת מהחוקרות המרכזיות של הבעיה העשירית) תוך שימוש בכמה מהרעיונות של יורי מאטיסייביץ’ (מי שהוכיח לראשונה שיש פונקציה דיופנטית שגדלה אקספוננציאלית, ובכך סיים את ההוכחה של אי הכריעות של הבעיה העשירית). זו ההוכחה הפשוטה ביותר שהצלחתי למצוא; יש למאטיסייביץ’ עצמו ספר על הבעיה, אבל את המאמר של דיוויס תמיד חיבבתי יותר.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2012/11/12/hilbert_tenth_exponential_function" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט השלמות של גדל, ההוכחה (חלק א’) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט השלמות של גדל, ההוכחה (חלק א’)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים ( \Phi) בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק ( \varphi)כך ש-( \Phi\not\vdash\varphi) וגם ( \Phi\not\vdash\neg\varphi) - כלומר, ( \Phi) לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם ( \Phi\models\varphi) עבור ( \Phi,\varphi) כלשהם, אז ( \Phi\vdash\varphi) - כלומר, כל מה שנובע לוגית גם יכיח." />
+<meta property="og:description" content="בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים ( \Phi) בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק ( \varphi)כך ש-( \Phi\not\vdash\varphi) וגם ( \Phi\not\vdash\neg\varphi) - כלומר, ( \Phi) לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם ( \Phi\models\varphi) עבור ( \Phi,\varphi) כלשהם, אז ( \Phi\vdash\varphi) - כלומר, כל מה שנובע לוגית גם יכיח." />
+<link rel="canonical" href="http://localhost:4000/blog/2013/02/26/godel_completeness_proof_1" />
+<meta property="og:url" content="http://localhost:4000/blog/2013/02/26/godel_completeness_proof_1" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-02-26T00:52:55+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2013-02-26T00:52:55+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/02/26/godel_completeness_proof_1"},"url":"http://localhost:4000/blog/2013/02/26/godel_completeness_proof_1","description":"בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים ( \\Phi) בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק ( \\varphi)כך ש-( \\Phi\\not\\vdash\\varphi) וגם ( \\Phi\\not\\vdash\\neg\\varphi) - כלומר, ( \\Phi) לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם ( \\Phi\\models\\varphi) עבור ( \\Phi,\\varphi) כלשהם, אז ( \\Phi\\vdash\\varphi) - כלומר, כל מה שנובע לוגית גם יכיח.","headline":"משפט השלמות של גדל, ההוכחה (חלק א’)","dateModified":"2013-02-26T00:52:55+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט השלמות של גדל, ההוכחה (חלק א&#39;)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-02-26T00:52:55+02:00" itemprop="datePublished">Feb 26, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ב<a href="http://www.gadial.net/2013/02/23/first_order_logic_proof_system/">פוסט הקודם</a> הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של <strong>תורות</strong>: על כך שאם קבוצה של פסוקים \( \Phi\) בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק \( \varphi\)כך ש-\( \Phi\not\vdash\varphi\) וגם \( \Phi\not\vdash\neg\varphi\) - כלומר, \( \Phi\) לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של <strong>מערכת ההוכחה</strong>, והוא אומר שאם \( \Phi\models\varphi\) עבור \( \Phi,\varphi\) כלשהם, אז \( \Phi\vdash\varphi\) - כלומר, כל מה שנובע לוגית גם יכיח.</p>
+
+<p>משטיפלנו בבלבול הזה אפשר לגשת לעבודה. בואו נתחיל בלהיזכר באופן שבו הוכחנו את משפט השלמות עבור תחשיב הפסוקים, כי הרעיון הבסיסי עדיין עובד גם כאן: הוכחנו טענה שנראית ממבט ראשון שונה לגמרי - שאם קבוצה \( \Phi\) היא עקבית, אז קיים לה מודל, כאשר “עקבית” פירושו שהיא אינה מוכיחה דבר והיפוכו. הטענה הזו גוררת מיידית את משפט השלמות באופן הבא: נניח כי \( \Phi\models\varphi\) ונניח בשלילה ש-\( \Phi\cup\left\{ \neg\varphi\right\} \) עקבית, אז קיים ל-\( \Phi\cup\left\{ \neg\varphi\right\} \) מודל \( \mathcal{M}\), ובפרט \( \mathcal{M}\models\Phi\) ולכן \( \mathcal{M}\models\varphi\) (זו המשמעות של הטענה ש-\( \varphi\) נובע לוגית מ-\( \Phi\)). מצד שני, \( \mathcal{M}\models\neg\varphi\) וזו סתירה (בהינתן מודל ופסוק, ערך האמת של הפסוק נקבע בצורה יחידה והוא תמיד הפוך מזה של שלילתו). לכן נובע ש-\( \Phi\cup\left\{ \neg\varphi\right\} \) אינה עקבית, ומכך נובע ש-\( \Phi\vdash\varphi\). את השלב האחרון (“משפט ההוכחה בדרך השלילה”) הוכחתי עבור תחשיב הפסוקים וההוכחה תקפה באותה מידה גם בלוגיקה מסדר ראשון, עד כדי נקודה קטנה אך מהותית: המשפט הזה מתבסס על מה שנקרא <strong>משפט הדדוקציה</strong>, וההוכחה של משפט הדדוקציה ללוגיקה מסדר ראשון דורשת עוד טיפה עבודה.</p>
+
+<p>משפט הדדוקציה אומר, כזכור, שאם \( \Phi\cup\left\{ \alpha\right\} \vdash\beta\) אז \( \Phi\vdash\alpha\to\beta\). בתחשיב הפסוקים ראינו כיצד להוכיח זאת במקרה שבו \( \beta\) היא אקסיומה, הנחה מתוך \( \Phi\), \( \alpha\) בעצמה, או מתקבלת על ידי MP מפסוקים שעבורם אנו כבר יודעים שמשפט הדדוקציה נכון. עם זאת, בלוגיקה מסדר ראשון צריך גם להתייחס למקרה שבו \( \beta\) מתקבלת מהפעלת GEN, כלומר \( \beta=\forall x\gamma\) כאשר \( \gamma\) כבר מקיימת את משפט הדדוקציה, כלומר \( \Phi\vdash\alpha\to\gamma\).</p>
+
+<p>אם כן, מה עושים? למרבה המזל, יש לנו תבנית אקסיומה שנבחרה בדיוק כדי להתמודד עם הסיטואציה הזו - תבנית אקסיומה מס’ 5, \( \forall x\left(\varphi\to\psi\right)\to\left(\varphi\to\forall x\psi\right)\). הדרישה של תבנית האקסיומה הזו היא ש-\( x\) לא יהיה משתנה חופשי ב-\( \varphi\). במקרה שלנו \( \varphi\) הוא \( \alpha\), והרי \( \beta\) מתקבל על ידי הוכחה מ-\( \Phi\cup\left\{ \alpha\right\} \) ודרשתי במפורש שאם GEN יופעל, אז זה יהיה רק עם משתנה שאינו מופיע חופשי ב-\( \Phi\cup\left\{ \alpha\right\} \), ומכאן ש-\( x\) אינו חופשי ב-\( \alpha\). לכן אפשר לכתוב את ההוכחה הפורמלית הבאה:</p>
+<ol>
+	<li>{::nomarkdown}\( \alpha\to\gamma\){:/nomarkdown} (הנחה).</li>
+	<li>{::nomarkdown}\( \forall x\left(\alpha\to\gamma\right)\){:/nomarkdown} (GEN על 1 עם משתנה שאינו מופיע חופשי ב-{::nomarkdown}\( \Phi\){:/nomarkdown})</li>
+	<li>{::nomarkdown}\( \forall x\left(\alpha\to\gamma\right)\to\left(\alpha\to\forall x\gamma\right)\){:/nomarkdown} (תבנית אקסיומה 5).</li>
+	<li>{::nomarkdown}\( \alpha\to\forall x\gamma\){:/nomarkdown} (MP על 2,3).</li>
+</ol>
+<p>וקיבלנו בדיוק את \( \alpha\to\beta\) כפי שרצינו. זה מסיים את ההעברה של המשפטים מתחשיב הפסוקים ללוגיקה מסדר ראשון ומאפשר לנו להתמקד בעיקר.</p>
+
+<p>אם כן, מעתה היעד שלנו הוא להוכיח שלקבוצה עקבית \( \Phi\) של פסוקים קיים מודל. בתחשיב הפסוקים “מודל” היה דבר פשוט למדי - השמה של ערכי אמת לכל המשתנים, וחסל. בלוגיקה מסדר ראשון מודל הוא עסק מסובך הרבה יותר - צריך להגדיר עולם שהוא קבוצה כלשהי של איברים, ולכל הסימנים במילון של \( \Phi\) צריך להתאים יחסים, פונקציות וקבועים מתוך העולם. על פניו בכלל לא ברור <strong>מאיפה</strong> אנחנו הולכים להמציא את העולם הזה. כאן נכנס לתמונה התעלול הראשון: האיברים של העולם שלנו יהיו (בערך - אני משקר כאן כרגע) הקבועים של המילון של \( \Phi\). אלא שזה נשמע על פניו מטופש - מה אם במילון אין בכלל קבועים?</p>
+
+<p>ובכן, בתחשיב הפסוקים האופן שבו התמודדנו עם בעיית ה”ממש לא ברור לי מאיפה להתחיל” היה לקחת את קבוצת הפסוקים שלנו ו<strong>להרחיב</strong> אותה כך שנקבל קבוצה שבה יהיה לנו מעט מאוד חופש פעולה - קבוצה כזו שאם קיים לה מודל, אז די ברור לנו איך הוא <strong>חייב</strong> להיראות. צמצום חופש הבחירה עזר לנו מאוד. אותו הדבר יקרה גם כאן - אנחנו ניקח את \( \Phi\) ונרחיב אותה, אבל גם ניקח אתצ \( \tau\), המילון של \( \Phi\), ונרחיב גם אותו על ידי הוספה של המון סימני קבועים. אחרי שנקבל את \( \Phi\) המורחבת מעל המילון המורחב כבר יהיה די ברור איך המודל חייב להיראות, וכל מה שיישאר הוא לטפל בפרטים הטכניים.</p>
+
+<p>מה שנרצה לעשות הוא להרחיב את אוסף הקבועים של \( \tau\) ואת \( \Phi\) כך שהם יקיימו את התכונה הבאה: ש-\( \Phi\) המורחבת תוכל להוכיח שלכל נוסחה \( \varphi\left(x\right)\) עם משתנה חופשי יחיד \( x\), אם \( \exists x\varphi\left(x\right)\) מתקיים אז קיים קבוע ש”מוכיח” את זה, כלומר יש קבוע \( c\) כך ש-\( \varphi\left(c\right)\) מתקיים. פורמלית אנו אומרים שקבוצת סימני קבועים \( C\) היא קבוצת <strong>עדים</strong> עבור \( \Phi\) אם לכל נוסחה \( \varphi\left(x\right)\) עם משתנה חופשי יחיד קיים \( c\in C\) כך שמתקיים</p>
+
+<p>\( \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)\)</p>
+
+<p>כאן \( \varphi\left(c\right)\) פירושו מה שמקבלים כאשר מציבים ב-\( \varphi\) את הקבוע \( c\) במקום \( x\).</p>
+
+<p>אז כמו בתחשיב הפסוקים, יש לנו שני שלבים: שלב ההרחבה של \( \Phi\) ו-\( \tau\), ושלב ההוכחה שלתורה המורחבת יש מודל. מכיוון שמודל לתורה המורחבת מעל המילון המורחב הוא עדיין מודל גם לתורה המקורית מעל המילון המקורי, זה יסיים את ההוכחה.</p>
+
+<p>למרות שמבחינה מעשית שלב ההרחבה קודם לשלב בניית המודל, אני מעדיף לבצע אותם בסדר הפוך, מכיוון ששלב ההרחבה בעייתי יותר טכנית מסיבות שאתאר בהמשך, והרעיון היפה המרכזי בהוכחה נמצא בשלב בניית המודל. אם כן, אני מניח כרגע שנתונה לי תורה (קבוצת פסוקים עקבית) \( \Phi\) מעל מילון \( \tau\) כך שמתקיימות שתי התכונות הבאות:</p>
+<ol>
+	<li>{::nomarkdown}\( \Phi\){:/nomarkdown} עקבית מקסימלית, במובן זה שהוספת כל פסוק ל-{::nomarkdown}\( \Phi\){:/nomarkdown} יהפוך את {::nomarkdown}\( \Phi\){:/nomarkdown} ללא-עקבית.</li>
+	<li>קיימת קבוצת עדים {::nomarkdown}\( C\){:/nomarkdown} עבור {::nomarkdown}\( \Phi\){:/nomarkdown}, כלומר לכל נוסחה {::nomarkdown}\( \varphi\left(x\right)\){:/nomarkdown} עם משתנה חופשי יחיד {::nomarkdown}\( x\){:/nomarkdown} קיים קבוע {::nomarkdown}\( c\in C\){:/nomarkdown} כך ש-{::nomarkdown}\( \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)\){:/nomarkdown}.</li>
+</ol>
+<p>בואו נבנה ל-\( \Phi\) מודל \( \mathcal{M}\). מודל כולל <strong>עולם</strong> שהוא קבוצה של איברים, ו<strong>פרשנויות</strong> לסימני היחס, הפונקציות והקבועים של \( \tau\). הרעיון האינטואיטיבי הוא לעשות את הדבר הבא: להגדיר את העולם להיות שווה לקבוצת הקבועים של \( \tau\), כלומר לקחת את האובייקט ה<strong>סינטקטי</strong> של סימני קבועים, ולהגדיר את המודל <strong>באמצעותו</strong>. אחר כך, בהינתן סימן יחס \( R\left(x,y\right)\) (נניח לצורך הדוגמה שהוא דו-מקומי) להגדיר יחס \( R^{\mathcal{M}}\left(x,y\right)\) במודל על ידי כך שלכל שני איברים \( c,d\) של העולם, \( \left(c,d\right)\in R^{\mathcal{M}}\) אם ורק אם הפסוק \( R\left(c,d\right)\) יכיח מתוך \( \Phi\). זה הרעיון, והוא פשוט ומבריק ויפהפה. כמובן שהפרטים הטכניים קצת מסתבכים עכשיו.</p>
+
+<p>ההוכחה מתפצלת כאן למעשה לשתי אפשרויות, בהתאם לשאלה אם הגדרנו לוגיקה מסדר ראשון עם סימן השוויון או בלעדיו. אני בחרתי להגדיר עם; כפי שנראה, זה גורם לנו לאי-אלו קשיים, אבל אסביר בהמשך אילו קשיים היו נוצרים אם הייתי בוחר לעבוד בלעדיו (זה היה מוביל לבניית מודל שמרגיש לי מלאכותי יותר).</p>
+
+<p>אז נניח שאנחנו עובדים בלוגיקה עם סימן השוויון. הנה הבעיה - הביטו לרגע בפסוק \( c=d\) כאשר \( c,d\) הם שני איברים של \( C\). נניח שהוא יכיח מתוך \( \Phi\) (וזה בהחלט יכול לקרות). פירוש הדבר הוא ש<strong>אסור</strong> לנו להגדיר את \( c,d\) בתור איברים שונים בעולם של \( \mathcal{M}\), כי אז הפסוק \( c=d\) לא יהיה ספיק במודל הזה (ומכיוון שמערכת ההוכחה שלנו נאותה, ינבע מכך ש-\( \mathcal{M}\) אינו מודל של \( \Phi\)). הבעיה הזו מכריחה אותנו להגדיר את העולם של \( \mathcal{M}\) באופן קצת יותר מחוכם. מה שנעשה הוא להגדיר <strong>יחס שקילות</strong> על אברי \( C\), כך ש-\( c\equiv d\) אם ורק אם \( \Phi\vdash c=d\). כלומר, אנחנו אומרים שכל הקבועים של \( C\) ש-\( \Phi\) “מוכיחה שהם שווים” יהיו שקולים האחד לשני.</p>
+
+<p>צריך להוכיח שהיחס הזה הוא אכן יחס שקילות. לצורך כך נצטרך להוכיח דברים על יחס השוויון, אז בואו ניזכר באקסיומות שהיו קשורות אליו והכנסנו למערכת ההוכחה שלנו:</p>
+<ol>
+	<li>{::nomarkdown}\( x=x\){:/nomarkdown}</li>
+	<li>{::nomarkdown}\( x=y\to t=s\){:/nomarkdown} כאשר {::nomarkdown}\( s\){:/nomarkdown} מתקבל מ-{::nomarkdown}\( t\){:/nomarkdown} על ידי החלפת מופע אחד או יותר של {::nomarkdown}\( x\){:/nomarkdown} ב-{::nomarkdown}\( y\){:/nomarkdown}.</li>
+	<li>{::nomarkdown}\( x=y\to\left[\varphi\to\psi\right]\){:/nomarkdown} כאשר {::nomarkdown}\( \psi\){:/nomarkdown} מתקבל מ-{::nomarkdown}\( \varphi\){:/nomarkdown} על ידי החלפת מופע אחד או יותר של {::nomarkdown}\( x\){:/nomarkdown} ב-{::nomarkdown}\( y\){:/nomarkdown}.</li>
+</ol>
+<p>בואו נתחיל. ראשית, אם \( c\in C\) כלשהו צריך להראות ש-\( \Phi\vdash c=c\). הנה הוכחה פורמלית:</p>
+<ol>
+	<li>{::nomarkdown}\( x=x\){:/nomarkdown} (אקסיומת שוויון מס' 1)</li>
+	<li>{::nomarkdown}\( x=x\to c=c\){:/nomarkdown} (אקסיומת שוויון מס' 2 עם {::nomarkdown}\( t=s=c\){:/nomarkdown})</li>
+	<li>{::nomarkdown}\( c=c\){:/nomarkdown} (MP על 1,2).</li>
+</ol>
+<p>עכשיו, אם \( c,d\in C\) הם איברים כלשהם כך ש-\( \Phi\vdash c=d\) צריך להוכיח שגם \( \Phi\vdash d=c\):</p>
+<ol>
+	<li>{::nomarkdown}\( x=y\to\left(x=x\to y=x\right)\){:/nomarkdown} (אקסיומת שוויון מס' 3 עם {::nomarkdown}\( \varphi=\left(x=x\right)\){:/nomarkdown} ו-{::nomarkdown}\( \psi=\left(y=x\right)\){:/nomarkdown}).</li>
+	<li>{::nomarkdown}\( \forall x\forall y\left(x=y\right)\to\left(x=x\to y=x\right)\){:/nomarkdown} (Gen על 1).</li>
+	<li>{::nomarkdown}\( \left[\forall x\forall y\left(x=y\right)\to\left(x=x\to y=x\right)\right]\to\left[\left(c=d\right)\to\left(c=c\to d=c\right)\right]\){:/nomarkdown} (תבנית אקסיומה 4)</li>
+	<li>{::nomarkdown}\( c=d\to\left(c=c\to d=c\right)\){:/nomarkdown} (MP על 2,3).</li>
+	<li>{::nomarkdown}\( c=d\){:/nomarkdown} (יכיח מ-{::nomarkdown}\( \Phi\){:/nomarkdown}).</li>
+	<li>{::nomarkdown}\( c=c\to d=c\){:/nomarkdown} (MP על 4,5).</li>
+	<li>{::nomarkdown}\( c=c\){:/nomarkdown} (יכיח מ-{::nomarkdown}\( \Phi\){:/nomarkdown}).</li>
+	<li>{::nomarkdown}\( d=c\){:/nomarkdown} (MP על 6,7).</li>
+</ol>
+<p>זה היה מבעית למדי, מה שמעלה את החשש שהוכחת טרנזיטיביות תהיה גרועה עוד יותר. נניח ש-\( c,d,e\in C\) מקיימים \( \Phi\vdash c=d\) וגם \( \Phi\vdash d=e\), אז צריך להוכיח ש-\( \Phi\vdash c=e\). כפי שאולי הבנתם מההוכחה הקודמת, מספיק להוכיח ש-\( x=y\to\left(y=z\to x=z\right)\) כדי לסיים, אבל זו הרי בדיוק אקסיומת שוויון מס’ 3 עם \( \varphi=\left(x=z\right)\) ו-\( \psi=\left(y=z\right)\), כך שאחסוך מכם את המשך ההוכחה המפלצתית. זה מוכיח לנו שהיחס שהגדרתי לעיל הוא אכן יחס שקילות, ולכן אפשר לדבר על <strong>מחלקות השקילות</strong> שלו. כזכור, אם \( c\in C\) הוא איבר כלשהו, אז מסמנים \( \left[c\right]=\left\{ d\in C\ \|\ c\equiv d\right\} \). הקבוצה \( \left[c\right]\) נקראת <strong>מחלקת השקילות</strong> של \( c\) ולא קשה לראות ש-\( C\) מתפרקת לאיחוד זר של מחלקות שקילות של איברים בה.</p>
+
+<p>כעת אפשר להתחיל את הגדרת המודל \( \mathcal{M}\). ראשית נגדיר את העולם שלו: \( D^{\mathcal{M}}=\left\{ \left[c\right]\ \|\ c\in C\right\} \). כעת נותר לתת פרשנויות לסימני היחס, הקבועים והפונקציות.</p>
+
+<p>נתחיל מסימני היחס. יהא \( R\left(x_{1},\dots,x_{n}\right)\in\tau\) סימן יחס \( n\)-מקומי. נגדיר יחס \( R^{\mathcal{M}}\subseteq\left(D^{\mathcal{M}}\right)^{n}\) באופן הבא: לכל \( c_{1},\dots,c_{n}\in C\), \( \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}\) אם ורק אם \( \Phi\vdash R\left(c_{1},\dots,c_{n}\right)\). זו הגדרה שנראית הגיונית, אבל כמו כל הגדרה שמערבת מחלקות שקילות, יש סכנה שהיא <strong>לא מוגדרת היטב</strong>. למה הכוונה? ייתכן שיש \( d_{1},\dots,d_{n}\in C\) כך ש-\( \left[c_{i}\right]=\left[d_{i}\right]\) (כלומר, מחלקת השקילות של \( c_{i}\) ו-\( d_{i}\) זהות, לכל \( 1\le i\le n\)) ועם זאת \( \Phi\vdash R\left(c_{1},\dots,c_{n}\right)\) אבל \( \Phi\not\vdash R\left(d_{1},\dots,d_{n}\right)\), מה שאומר שההחלטה אם \( \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}\) אינה תלויה במחלקות השקילות בלבד אלא ממש ב<strong>נציגים</strong> שאנחנו בוחרים להן, ואסור לנו לעשות את זה - אנחנו חייבים לקבוע באופן חד משמעי עבור כל מחלקת שקילות מה יקרה איתה.</p>
+
+<p>במקרה שלנו אין בעיה אמיתית שכזו. נניח ש-\( \Phi\vdash R\left(c_{1},\dots,c_{n}\right)\) וכמו כן ש-\( c_{1}\equiv d_{1}\), כלומר \( \Phi\vdash c_{1}=d_{1}\). אז מהאקסיומה \( x=y\to R\left(x,c_{2},\dots,c_{n}\right)=R\left(y,c_{2},\dots,c_{n}\right)\) אפשר לקבל חיש קל ש-\( \Phi\vdash R\left(d_{1},\dots,c_{n}\right)\) וכך להחליף בהדרגתיות את כל ה-\( c\)-ים ב-\( d\)-ים. עם זאת, חשוב היה לי להדגיש שזו נקודה שיש לשים לב אליה במהלך ההגדרה, וזה חלק מהסיבוך הנוסף שנגרם לנו מכך שהלוגיקה מסדר ראשון שלנו כוללת שוויון.</p>
+
+<p>נעבור לקבועים. מפתה להגיד שלכל סימן קבוע \( c\in\tau\), נגדיר את הפרשנות שלו להיות \( c^{\mathcal{M}}=\left[c\right]\), וזה אכן הרעיון הכללי, אבל זה <strong>לא מספיק</strong>. הבעיה היא שאולי יש סימני קבועים שבכלל לא שייכים ל-\( C\). הפואנטה היא שגם במקרה זה, הפרשנות שנותנים לסימנים הללו <strong>חייבת</strong> להיות זהה לפרשנות שנותנים לפחות לאחד מהקבועים. למה? או, זו הזדמנות לראות את עניין ה”\( C\) היא קבוצת עדים” בפעולה.</p>
+
+<p>נניח ש-\( d\in\tau\) הוא סימן קבוע כלשהו. אז אנחנו יודעים שהפסוק הבא הוא אמת לוגית: \( \exists x\left(x=d\right)\). עכשיו, \( \Phi\) היא קבוצה עקבית מקסימלית, מה שאומר (ואת זה אנחנו יודעים עוד מתחשיב הפסוקים) שלכל פסוק היא מוכיחה אותו או את שלילתו (אחרת היה אפשר להוסיף את הפסוק אליה ולקבל קבוצה גדולה יותר שעדיין עקבית). בגלל נאותות מערכת ההוכחה לא ייתכן שהיא תוכיח דבר שהוא סתירה לוגית, ולכן \( \Phi\vdash\exists x\left(x=d\right)\), ומכיוון ש-\( C\) היא קבוצת עדים, אז קיים \( c\in C\) כך ש-\( \Phi\vdash\exists x\left(x=d\right)\to\left(c=d\right)\), ומשילוב שני אלו נקבל ש-\( \Phi\vdash c=d\), וקיבלנו את מה שצריכה להיות הפרשנות של \( d\): \( d^{\mathcal{M}}=\left[c\right]\). גם כאן, התהליך היה מוגדר היטב: אם במקום \( c\) היינו מוצאים עד אחר, היינו מקבלים גם עבורו שהוא שווה ל-\( d\) ומהטרנזיטיביות שכבר ראינו של השוויון היינו מקבלים ש-\( \Phi\) מוכיחה את הפסוק שאומר ששני העדים שווים ולכן מחלקת השקילות שלהם שווה.</p>
+
+<p>בפונקציות מטפלים באופן דומה. אם \( f\left(x_{1},\dots,x_{n}\right)\in\tau\) הוא סימן פונקציה \( n\) מקומי, ואנחנו צריכים להגדיר את \( f^{\mathcal{M}}\left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\) אז נתבונן בפסוק \( \exists x\left(f\left(c_{1},\dots,c_{n}\right)=x\right)\), ניקח עד \( c\) עבורו ונגדיר \( f^{\mathcal{M}}\left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)=\left[c\right]\). גם פה צריך להוכיח שהכל מוגדר היטב אבל נדמה לי שכבר הבנתם את הרעיון. זה מסיים את הגדרת המודל \( \mathcal{M}\).</p>
+
+<p>כמובן שהגדרת המודל היא רק חלק מהעבודה, עכשיו צריך גם להוכיח שהמודל “עובד”, כלומר שהוא מספק כל פסוק ב-\( \Phi\). איך נראים פסוקים באופן כללי? ובכן, פסוק הוא נוסחה שאין בה משתנים חופשיים. אז אפשר להתחיל מנוסחאות שאין בהן משתנים בכלל - כל שמות העצם שמופיעים בהן מורכבים רק מקבועים וסימני פונקציות. פסוק בסיסי מסוג זה חייב לכלול יחס (שם עצם לבדו אינו פסוק; פסוק מורכב מיחסים על שמות עצם, שמעורבבים האחד עם השני עם קשרים וכמתים). אז ראשית כל יש לנו פסוקים מהצורה</p>
+
+<p>\( t_{1}=t_{2}\in\Phi\)</p>
+
+<p>כאשר \( t_{1},t_{2}\) שמות עצם שאינם כוללים משתנים. אנחנו רוצים לחשב את הערך של שני שמות העצם הללו במודל ולראות שהוא זהה. לא ממש ברור איך לעשות את זה באופן ישיר, אבל קל לעשות את זה באופן עקיף: נסתכל על הפסוק \( \exists x\left(t_{1}=x\right)\) ונקבל, כרגיל, שיש \( c\in C\) כך ש-\( t_{1}=c\in\Phi\). בדומה נקבל ש-\( t_{2}=d\in\Phi\) עבור \( d\in C\) כלשהו, וכבר ראינו שאפשר להוכיח טרנזיטיביות, כלומר ש-\( c=d\in\Phi\) ולכן \( \left[c\right]=\left[d\right]\) וזהו הערך שהמודל מעניק לשני שמות העצם \( t_{1},t_{2}\) כך שבמקרה הזה טיפלנו.</p>
+
+<p>כעת, הסוג הנוסף של פסוק בסיסי הוא פסוק מהצורה</p>
+
+<p>\( R\left(t_{1},\dots,t_{n}\right)\in\Phi\)</p>
+
+<p>כאשר \( R\) סימן יחס כלשהו ו-\( t_{1},\dots,t_{n}\) שמות עצם כלשהם שאינם כוללים משתנים. כמקודם, מוצאים \( c_{1},\dots,c_{n}\) כך ש-\( t_{i}=c_{i}\in\Phi\) ומכאן נוכל להוכיח ש-\( R\left(c_{1},\dots,c_{n}\right)\in\Phi\), מה שיגרור ש-\( \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}\), מה שמסיים את המקרה הזה. כדאי לשים לב שבגלל ש-\( \Phi\) עקבית מקסימלית הרי שבשני המקרים הוכחנו יותר מאשר את מה שרצינו - הוכחנו גם שאם \( t_{1}=t_{2}\notin\Phi\) אז הערכים שהמודל מעניק לשמות העצם הללו שונים (אחרת אפשר היה להוסיף את \( t_{1}=t_{2}\) ל-\( \Phi\) מבלי לפגוע בעקביות) וכך גם עבור ה-\( R\)-ים. זה יועיל לנו בהמשך.</p>
+
+<p>כעת אפשר להמשיך באינדוקציה על מבנה יתר הפסוקים הקיימים. לכל פסוק \( \varphi\) נרצה להראות ש-\( \mathcal{M}\models\varphi\) אם ורק אם \( \varphi\in\Phi\). נתחיל עם פסוקים מהצורה \( \neg\varphi\) כאשר \( \varphi\) הוא פסוק שעליו כבר הוכחנו את הטענה. אז מכיוון ש-\( \Phi\) עקבית מקסימלית, \( \neg\varphi\in\Phi\) אם ורק אם \( \varphi\notin\Phi\) אם ורק אם \( \mathcal{M}\not\models\varphi\), אם ורק אם \( \mathcal{M}\models\varphi\). זה היה קל.</p>
+
+<p>עבור פסוק מהצורה \( \varphi\to\psi\) הנימוק ארוך יותר אבל לא באמת מסובך יותר. מכיוון שלמשהו כמו \( \varphi\to\psi\) יש רק השמה לא מספקת אחת, יהיה קל יותר להוכיח ש-\( \varphi\to\psi\notin\Phi\) אם ורק אם \( \mathcal{M}\models\varphi\) וגם \( \mathcal{M}\not\models\psi\). אם כן, \( \varphi\to\psi\notin\Phi\) אם ורק אם \( \neg\left(\varphi\to\psi\right)\in\Phi\). כעת, תעלול: הבה ונסתכל על הפסוקים \( \neg\left(\varphi\to\psi\right)\to\varphi\) ו-\( \neg\left(\varphi\to\psi\right)\to\neg\psi\). בדיקה ישירה תראה לנו שהם טאוטולוגיות, ולכן יכיחים מ-\( \Phi\) בלי הנחות כלל, רק על ידי אקסיומות 1-3 ו-MP. לכן נקבל ש-\( \Phi\vdash\varphi\) ו-\( \Phi\vdash\neg\psi\), מה שקורה אם ורק אם \( \mathcal{M}\models\varphi\) וגם \( \mathcal{M}\not\models\psi\), כנדרש.</p>
+
+<p>מה נותרו? כמתים. יהיה יותר פשוט רעיונית לטפל ב-\( \exists\); הטיפול ב-\( \forall\) יהיה זהה מכיוון ש-\( \exists x\varphi\left(x\right)\) שקול לפסוק \( \neg\forall x\neg\varphi\left(x\right)\).</p>
+
+<p>אם כן, נוכיח ש-\( \exists x\varphi\left(x\right)\in\Phi\) אם ורק אם \( \mathcal{M}\models\exists x\varphi\left(x\right)\). הבעיה היא ש-\( \varphi\left(x\right)\) הוא לא פסוק, כי \( x\) חופשי בו, ולכן אי אפשר להשתמש עליו בהנחת האינדוקציה והכל קורס, <strong>אלמלא</strong> היה לנו את התכונה המוזרה והכל כך לא ברורה במבט ראשון של “עד להוכחה”. בגלל ש-\( C\) היא קבוצת עדים, אז קיים קבוע \( c\) כך ש-\( \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)\), ולכן \( \varphi\left(c\right)\in\Phi\) ו-\( \varphi\left(c\right)\) הוא פסוק כך שהנחת האינדוקציה פועלת עליו, ו-\( \mathcal{M}\models\varphi\left(c\right)\), כלומר \( \mathcal{M}\models\exists x\varphi\left(x\right)\) (פורמלית: אם \( z\) היא השמה כלשהי, אז \( \mathcal{M}\models_{z\left[x\leftarrow\left[c\right]\right]}\varphi\left(x\right)\) ולכן \( \mathcal{M}\models_{z}\exists x\varphi\left(x\right)\)). הטיעון עובד באותו האופן בכיוון השני עד שמגיעים לכך ש-\( \varphi\left(c\right)\in\Phi\) ורוצים להסיק מכך ש-\( \exists x\varphi\left(x\right)\in\Phi\); את זה עושים באמצעות הפסוק \( \varphi\left(c\right)\to\exists x\varphi\left(x\right)\) שיכיח מ-\( \Phi\). אם אתם תוהים למה הוא יכיח, הנה הוכחה פורמלית:</p>
+<ol>
+	<li>{::nomarkdown}\( \forall x\neg\varphi\left(x\right)\to\neg\varphi\left(c\right)\){:/nomarkdown} (תבנית אקסיומה 4).</li>
+	<li>{::nomarkdown}\( \left[\forall x\neg\varphi\left(x\right)\to\neg\varphi\left(c\right)\right]\to\left[\neg\neg\varphi\left(c\right)\to\neg\forall x\neg\varphi\left(x\right)\right]\){:/nomarkdown} (תבנית אקסיומה 3).</li>
+	<li>{::nomarkdown}\( \neg\neg\varphi\left(c\right)\to\neg\forall x\neg\varphi\left(x\right)\){:/nomarkdown} (MP על 1,2).</li>
+	<li>{::nomarkdown}\( \neg\neg\varphi\left(c\right)\to\exists x\varphi\left(x\right)\){:/nomarkdown} (סתם שינוי סימון שיהיה קריא).</li>
+	<li>{::nomarkdown}\( \left[\neg\neg\varphi\left(c\right)\to\exists x\varphi\left(x\right)\right]\to\left[\varphi\left(c\right)\to\exists x\varphi\left(x\right)\right]\){:/nomarkdown} (טאוטולוגיה של תחשיב הפסוקים: {::nomarkdown}\( \left(\neg\neg A\to B\right)\to\left(A\to B\right)\){:/nomarkdown}).</li>
+	<li>{::nomarkdown}\( \varphi\left(c\right)\to\exists x\varphi\left(x\right)\){:/nomarkdown} (MP על 4,5).</li>
+</ol>
+<p>וזה <strong>מסיים את ההוכחה</strong>! רק שכמובן, זה לא מסיים את הוכחת משפט השלמות של גדל; זה מסיים את ההוכחה לכך שאם יש לנו תורה \( \Phi\) שהיא עקבית מקסימלית וקיימת לה קבוצת עדים, אז יש לה מודל. עוד נשאר לנו להוכיח שכל תורה עקבית אפשר להרחיב לתורה שכזו, ואת זה נעשה בפוסט הבא.</p>
+
+<p>כעת אפשר לחשוב על האופן שבו ההוכחה מתקלקלת (או הופכת לפשוטה יותר) אם שוויון הוא לא חלק מהלוגיקה שלנו. כדאי להעיר שאנחנו <strong>רוצים</strong> שוויון בלוגיקה שלנו מהרבה סיבות ולכן גם אם הוספת שוויון רק מקשה עלינו חבל לוותר עליו. עדיין, מבחינה רעיונית אולי פשוט יותר להציג קודם כל את ההוכחה עבור לוגיקה ללא שוויון כדי להימנע מיחסי שקילות ואקשן שכזה; מצד שני, במקרה הזה לא מספיק לבנות את המודל מתוך הקבועים של \( C\) - <strong>כל שם עצם</strong> של השפה שלנו יהיה חייב להיות איבר בעולם של המודל. לי זה מרגיש מעט יותר מלאכותי, כאמור, אבל כל אחד ואיך שנוח לו. גם כך וגם כך הרעיון הזה, של בניה של המודל (האובייקט הסמנטי) מתוך השפה עצמה (האובייקט הסינטקטי) הוא אחד מהרעיונות החביבים עלי במתמטיקה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2013/02/26/godel_completeness_proof_1" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
