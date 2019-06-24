@@ -1,6 +1,6 @@
 ---
 id: 1139
-title: 'IP=PSPACE - ההוכחה (חלק ב&#039;)'
+title: "IP=PSPACE - ההוכחה (חלק ב')"
 date: 2011-05-14T23:29:15+00:00
 author: gadial
 layout: post
