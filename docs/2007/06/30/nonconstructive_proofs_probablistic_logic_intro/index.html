@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הקיים הנעלם – הדוגמה ההסתברותית – מבוא לוגי | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הקיים הנעלם – הדוגמה ההסתברותית – מבוא לוגי" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אציג כעת דוגמה לשימוש בתורת ההסתברות כדי להוכיח קיום של דבר מה. פרט ל”רווח” המיידי מהדוגמה – עוד הוכחת קיום קונסטרוקטיבית (אם כי מהסוג שמצביע על קיום של משהו שגם חיפוש ממצה יכול למצוא ללא קושי) – זוהי גם הזדמנות לראות דבר מה שאולי אינו מובן מאליו בתחילה: שניתן בעזרת הסתברות להוכיח דברים בודאות גמורה." />
+<meta property="og:description" content="אציג כעת דוגמה לשימוש בתורת ההסתברות כדי להוכיח קיום של דבר מה. פרט ל”רווח” המיידי מהדוגמה – עוד הוכחת קיום קונסטרוקטיבית (אם כי מהסוג שמצביע על קיום של משהו שגם חיפוש ממצה יכול למצוא ללא קושי) – זוהי גם הזדמנות לראות דבר מה שאולי אינו מובן מאליו בתחילה: שניתן בעזרת הסתברות להוכיח דברים בודאות גמורה." />
+<link rel="canonical" href="http://localhost:4000/blog/2007/06/30/nonconstructive_proofs_probablistic_logic_intro/" />
+<meta property="og:url" content="http://localhost:4000/blog/2007/06/30/nonconstructive_proofs_probablistic_logic_intro/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-06-30T12:54:24+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2007-06-30T12:54:24+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/06/30/nonconstructive_proofs_probablistic_logic_intro/"},"url":"http://localhost:4000/blog/2007/06/30/nonconstructive_proofs_probablistic_logic_intro/","author":{"@type":"Person","name":"gadial"},"description":"אציג כעת דוגמה לשימוש בתורת ההסתברות כדי להוכיח קיום של דבר מה. פרט ל”רווח” המיידי מהדוגמה – עוד הוכחת קיום קונסטרוקטיבית (אם כי מהסוג שמצביע על קיום של משהו שגם חיפוש ממצה יכול למצוא ללא קושי) – זוהי גם הזדמנות לראות דבר מה שאולי אינו מובן מאליו בתחילה: שניתן בעזרת הסתברות להוכיח דברים בודאות גמורה.","headline":"הקיים הנעלם – הדוגמה ההסתברותית – מבוא לוגי","dateModified":"2007-06-30T12:54:24+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הקיים הנעלם &amp;#8211; הדוגמה ההסתברותית &amp;#8211; מבוא לוגי</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-06-30T12:54:24+03:00" itemprop="datePublished">Jun 30, 2007
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אציג כעת דוגמה לשימוש ב<a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%94%D7%A1%D7%AA%D7%91%D7%A8%D7%95%D7%AA">תורת ההסתברות</a> כדי להוכיח קיום של דבר מה. פרט ל”רווח” המיידי מהדוגמה – עוד הוכחת קיום קונסטרוקטיבית (אם כי מהסוג שמצביע על קיום של משהו שגם חיפוש ממצה יכול למצוא ללא קושי) – זוהי גם הזדמנות לראות דבר מה שאולי אינו מובן מאליו בתחילה: שניתן בעזרת הסתברות להוכיח דברים <strong>בודאות גמורה</strong>.</p>
+
+<p>לרוע המזל, אי אפשר לחמוק מהפרטים הטכניים של ניסוח הבעיה וההוכחה. אלו מכם שאינם מכירים כלל לוגיקה פורמלית והסתברות עלולים שלא להבין את המשך הפוסט (או גרוע מכך – למה הוא מעניין…) אנסה להסביר פחות או יותר את המושגים ולקשר לויקיפדיה, אבל ברור לי שזה לא בהכרח מספיק.</p>
+
+<p>ההוכחה עוסקת ב<a href="http://he.wikipedia.org/wiki/%D7%A4%D7%A1%D7%95%D7%A7_(%D7%9C%D7%95%D7%92%D7%99%D7%A7%D7%94)">פסוקים לוגיים</a> – יצורים שאינם מסובכים במיוחד בפני עצמם, אבל יש להציג אותם בכל זאת. “פסוק” מורכב ממשתנים שיכולים לקבל את הערכים “אמת” ו”שקר”. המוטיבציה היא ברצון לפרמל בצורה מתמטית משפטים כמו “השמש זורחת ולא יורד גשם” – משפט כזה ניתן לייצג בתור הפסוק “x וגם לא y”, כש-x הוא המשתנה שמייצג את “השמש זורחת”, ו-y המשתנה שמייצג את “יורד גשם”. אם השמש זורחת (כלומר, x מקבל את הערך “אמת”) ובכל זאת יורד גשם (כלומר, גם y מקבל את הערך “אמת”) אז ערכו של הפסוק כולו הוא “שקר” (כי השמש אמנם זורחת, אבל לא יורד גשם).</p>
+
+<p>בצורה פורמלית כותבים “x <a href="http://he.wikipedia.org/wiki/%D7%95%D7%92%D7%9D_%28%D7%9C%D7%95%D7%92%D7%99%29">וגם</a> y” בתור $latex x\wedge y$, ואת “x <a href="http://he.wikipedia.org/wiki/OR_%D7%9C%D7%95%D7%92%D7%99">או</a> y” (שפירושו: או x, או y, או שניהם גם יחד) בתור $latex x\vee y$. הכללים ה”חשבוניים” הקשורים לפעולות אלו פשוטים: התוצאה של פעולת “וגם” היא “שקר” אלא אם שני המשתנים מקבלים את הערך “אמת” (ואז היא “אמת”), והתוצאה של פעולת “או” היא תמיד “אמת” אלא אם שני המשתנים מקבלים את הערך “שקר”.</p>
+
+<p>יש הרבה צורות לכתוב פסוקים, ולרוב בוחרים צורה “קנונית” מסויימת שמועילה לנו. במקרה שלנו הצורה תהיה ספציפית מאוד:</p>
+
+<p>$latex (X_1\vee Y_1\vee Z_1)\wedge(X_2\vee Y_2\vee Z_2)\wedge\dots\wedge(X_n\vee Y_n\vee Z_n) $</p>
+
+<p>כלומר, הצורה היא זו: “שלשות של משתנים, כשכל המשתנים בשלשה מחוברים על ידי “או”, וכל השלשות מחוברות זו עם זו באמצעות “וגם””. העובדה שאלו דווקא <strong>שלשות</strong> של משתנים היא חשובה.</p>
+
+<p>כל שלשה של משתנים שמחוברים ביניהם על ידי “או” נקראת <strong>פסוקית</strong>. המשתנים שבתוך הפסוקיות אינם בהכרח שונים זה מזה – ייתכן שהמשתנה $latex X_2$ הוא בדיוק אותו משתנה כמו $latex Z_7$ (כלומר – אם מציבים “שקר” במשתנה $latex X_2$, אותו הערך בדיוק יוצב גם ב-$latex Z_7$) וייכתן שאחד המשתנים הוא שלילה של משתנה אחר (כלומר, כשבאחד מהם יוצב “אמת” בשני יוצב “שקר”, ולהפך). כפי שנראה בהמשך, זה לא חשוב לצורך ההוכחה.</p>
+
+<p>השאלה המעניינת בהינתן פסוק כזה היא האם הוא <strong>ספיק</strong> או לא – האם קיימת הצבת ערכים למשתנים שעבורה כל הפסוק יקבל את הערך “אמת”. מכיוון שכל הפסוקיות מחוברות ביניהן בקשר “וגם”, ברור שהפסוק כולו ספיק אך ורק אם קיימת השמה למשתנים שמספקת את כל הפסוקיות בו זמנית.</p>
+
+<p>מתברר שזו <a href="http://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%99%D7%99%D7%AA_SAT">בעיה קשה מאוד</a>, מבחינה חישובית, לבדוק האם קיימת השמה שכזו. הבעיה העיקרית היא שיש מספר עצום של השמות אפשריות (מה פירוש “מספר עצום” כאן – בפעם אחרת), וייתכן שרק אחת ויחידה מהן מספקת את כל הפסוקיות, ולא ברור האם יש דרך יעילה למצוא אותה שאינה כוללת חיפוש ממצה על כל ההשמות האפשריות (אמרתי קודם שהעובדה שמדובר בשלשות היא חשובה – ואכן, אם כל פסוקית הייתה מורכבת משני משתנים ולא משלושה דווקא הייתה שיטה יעילה למצוא השמה מספקת, אם יש כזו). כמו כן, אין שום הכרח שבאמת תהיה השמה מספקת שכזו.</p>
+
+<p><strong>אבל</strong>, מה שכן נכון ואני עומד להוכיח, הוא שתמיד יש השמה שמספקת לפחות $latex \frac{7}{8}$ מהפסוקיות – כלומר, מספקת “כמעט את כל” הפסוקיות. למעשה, הוכיחו שזה הדבר הכי טוב שמסוגלים לדעת בצורה טריוויאלית – כל בדיקה מסוג “האם יש השמה שמספקת יותר משבע שמיניות מהפסוקיות” היא קשה כמו הבדיקה “האם קיימת השמה שמספקת את כל הפסוקיות”.</p>
+
+<p>ההוכחה שלי, כאמור, לא תהיה קונסטרוקטיבית. אני לא אראה שום דרך שבה בונים את ההשמה הזו (אם כי, כאמור, חיפוש ממצה על כל ההשמות ודאי ימצא אותה). המושגים היחידים מתורת ההסתברות שיהיה צורך להכיר לצורך ההוכחה הן “<a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%97%D7%91_%D7%9E%D7%93%D7%92%D7%9D">מרחב המדגם</a>”, “<a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%AA%D7%A0%D7%94_%D7%9E%D7%A7%D7%A8%D7%99">משתנה מקרי</a>” ו”<a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%97%D7%9C%D7%AA">תוחלת</a>” – מושגים בסיסיים למדי ולא קשים להבנה, אך לרוע מזלי קטונתי מלהציג אותם בעצמי בצורה מסודרת בשלב הזה, ואני מסתמך על ויקיפדיה.</p>
+
+<p>אם עד עכשיו הכל ברור, בפוסט הבא אעבור להוכחה עצמה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2007/06/30/nonconstructive_proofs_probablistic_logic_intro/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

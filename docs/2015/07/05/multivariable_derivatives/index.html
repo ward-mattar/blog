@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אנליזה וקטורית – נגזרת ונגזרת חלקית | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אנליזה וקטורית – נגזרת ונגזרת חלקית" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אחרי פוסט המבוא שבו הבטחתי גדולות ונצורות, בואו נעבור לאקשן. כאמור, אני מניח ידע קודם אצל הקוראים, הן באינפי של פונקציות ממשיות והן באלגברה לינארית (עד וכולל מכפלות פנימיות) כך שלא אציג מחדש את המושגים הללו. אלא אם יש ערך מוסף כלשהו בלהציג אותם מחדש. כמו למשל עכשיו! אני רוצה שנדבר שוב על מהי נגזרת של פונקציה ממשית." />
+<meta property="og:description" content="אחרי פוסט המבוא שבו הבטחתי גדולות ונצורות, בואו נעבור לאקשן. כאמור, אני מניח ידע קודם אצל הקוראים, הן באינפי של פונקציות ממשיות והן באלגברה לינארית (עד וכולל מכפלות פנימיות) כך שלא אציג מחדש את המושגים הללו. אלא אם יש ערך מוסף כלשהו בלהציג אותם מחדש. כמו למשל עכשיו! אני רוצה שנדבר שוב על מהי נגזרת של פונקציה ממשית." />
+<link rel="canonical" href="http://localhost:4000/blog/2015/07/05/multivariable_derivatives/" />
+<meta property="og:url" content="http://localhost:4000/blog/2015/07/05/multivariable_derivatives/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-07-06T01:31:59+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2015-07-06T01:31:59+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/07/05/multivariable_derivatives/"},"url":"http://localhost:4000/blog/2015/07/05/multivariable_derivatives/","author":{"@type":"Person","name":"gadial"},"description":"אחרי פוסט המבוא שבו הבטחתי גדולות ונצורות, בואו נעבור לאקשן. כאמור, אני מניח ידע קודם אצל הקוראים, הן באינפי של פונקציות ממשיות והן באלגברה לינארית (עד וכולל מכפלות פנימיות) כך שלא אציג מחדש את המושגים הללו. אלא אם יש ערך מוסף כלשהו בלהציג אותם מחדש. כמו למשל עכשיו! אני רוצה שנדבר שוב על מהי נגזרת של פונקציה ממשית.","headline":"אנליזה וקטורית – נגזרת ונגזרת חלקית","dateModified":"2015-07-06T01:31:59+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אנליזה וקטורית &amp;#8211; נגזרת ונגזרת חלקית</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-07-06T01:31:59+03:00" itemprop="datePublished">Jul 6, 2015
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אחרי <a href="http://www.gadial.net/2015/07/02/vector_analysis_intro/">פוסט המבוא</a> שבו הבטחתי גדולות ונצורות, בואו נעבור לאקשן. כאמור, אני מניח ידע קודם אצל הקוראים, הן <a href="http://www.gadial.net/2010/09/05/calculus_intro/">באינפי של פונקציות ממשיות</a> והן ב<a href="http://www.gadial.net/2011/09/21/linear_algebra_overview/">אלגברה לינארית</a> (עד וכולל <a href="http://www.gadial.net/2012/02/06/inner_products_intro/">מכפלות פנימיות</a>) כך שלא אציג מחדש את המושגים הללו. אלא אם יש ערך מוסף כלשהו בלהציג אותם מחדש. כמו למשל עכשיו! אני רוצה שנדבר שוב על מהי נגזרת של פונקציה ממשית.</p>
+
+<p>האינטואיציה הסטנדרטית מאחורי נגזרת של פונקציה $latex f:\mathbb{R}\to\mathbb{R}$ היא למצוא את “קצב השינוי הרגעי” של פונקציה בנקודה מסויימת $latex a\in\mathbb{R}$. אינטואיציה סטנדרטית נוספת היא למצוא את <strong>המשיק</strong> לגרף הפונקציה באותה נקודה – קו ישר שבנקודה הזו הכיוון שלו הוא כמו הכיוון של הפונקציה. את “קצב השינוי הרגעי” לוקחים על ידי חישוב של קצב השינוי הממוצע לאורך פרק זמן, ואז מקטינים את פרק הזמן כך שהוא שואף לאפס; את המשיק מוצאים על ידי כך שמחשבים את המיתר בין גרף הפונקציה ב-$latex a$ ונקודה נוספת $latex b$, קרובה אליה, ואז אנחנו משאיפים את $latex b$ אל $latex a$. עבור האינטואיציה הראשונה, מה שאנחנו מוצאים הוא <strong>מספר ממשי</strong>; עבור האינטואיציה השניה מה שאנחנו מוצאים הוא <strong>פונקציה לינארית</strong> (קו ישר). הקשר בין השניים מיידי: המספר הממשי (<strong>המספר הנגזר</strong>) הוא השיפוע של הפונקציה הלינארית, שבתורה מכונה <strong>הדיפרנציאל</strong> של הפונקציה.</p>
+
+<p>הפורמליזם של האינטואיציה הראשונה הוא זה:</p>
+
+<p>$latex f^{\prime}\left(a\right)=\lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)}{h}$</p>
+
+<p>הביטוי $latex \frac{f\left(a+h\right)-f\left(a\right)}{h}$ הוא בדיוק השינוי הממוצע בין ערך הפונקציה ב-$latex a$ וערכה בנקודה אחרת $latex b$, רק שבמקום לכתוב $latex \frac{f\left(b\right)-f\left(a\right)}{b-a}$ יותר קל לסמן $latex b=a+h$ ולהמשיך משם.</p>
+
+<p>את הביטוי הזה באופן די ברור אי אפשר להכליל כמו שהוא. בואו ניקח פונקציה $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$ וננסה לכתוב את הביטוי הזה עבורה:</p>
+
+<p>$latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)}{h}$</p>
+
+<p>מה נשבר כאן? ובכן, $latex h$ היא חלק מה<strong>קלט</strong> של $latex F$, ולכן $latex h\in\mathbb{R}^{n}$ היא וקטור. במונה אנחנו מקבלים את ה<strong>פלט</strong> של $latex F$, גם כן וקטור, רק שב-$latex \mathbb{R}^{m}$. אנחנו לא יודעים איך לאכול את הביטוי הזה מבחינה מתמטית; אין לנו דרך לחלק וקטורים אלו באלו, למעט במקרה שבו $latex n=1$ (וכפי שנראה בהמשך, המקרה שבו $latex n=1$ הוא אכן פשוט במיוחד, גם אם $latex m&gt;1$). אגב, כאן אנחנו מתפצלים מהאנליזה המרוכבת; שם מה שקורה הוא שמחלקים במספר מרוכב, שמצד אחד אמנם נראה כמו וקטור דו ממדי של מספרים ממשיים, ומצד שני במרוכבים <strong>כן</strong> ידוע לנו איך לבצע את החלוקה.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>דרך אפשרית להתמודד עם הבעיה הזו היא לא לחלק ב-$latex h$ אלא ב<strong>נורמה</strong> של $latex h$, כלומר ב-$latex \left</td>
+      <td>h\right</td>
+      <td>$. בדרך הזו נקבל “נגזרת” שהיא וקטור ב-$latex \mathbb{R}^{m}$ ולא לגמרי ברור מה היא אומרת – חסרה לנו אינטואיציה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>אז בואו נעבור להגדרה השניה, עם המשיק. אמרנו ש-$latex f^{\prime}\left(a\right)$ הוא השיפוע של המשיק, כלומר המשיק הוא הפונקציה $latex f^{\prime}\left(a\right)\left(x-a\right)+f\left(a\right)$ (זו גאומטריה אנליטית: אם יש לנו ישר עם שיפוע $latex m$ שעובר דרך $latex \left(a,b\right)$ אז משוואותו היא $latex y=m\left(x-a\right)+b$). החלק שמעניין אותנו במשיק הוא הפונקציה $latex T\left(x\right)=f^{\prime}\left(a\right)x$ – זו טרנספורמציה לינארית (המשיק עצמו איננו טרנספורמציה לינארית באופן כללי כי הוא לא עובר דרך ראשית הצירים). לחלק הזה אנחנו קוראים <strong>הדיפרנציאל</strong> של $latex f$ בנקודה $latex a$. כדי לראות למה הוא מעניין, בואו נחזור אל הנוסחה:</p>
+
+<p>$latex f^{\prime}\left(a\right)=\lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)}{h}$</p>
+
+<p>נעביר אגפים:</p>
+
+<p>$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)}{h}-f^{\prime}\left(a\right)=0$</p>
+
+<p>נעלה למונה:</p>
+
+<p>$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-f^{\prime}\left(a\right)h}{h}=0$</p>
+
+<p>וקיבלנו:</p>
+
+<p>$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-T\left(h\right)}{h}=0$</p>
+
+<p>אז הנה הגדרה אלטרנטיבית: הדיפרנציאל של $latex f$ הוא הטרנספורמציה הלינארית $latex T$ שעבורה הגבול לעיל שווה לאפס. אפשר עם קצת עבודה להוכיח שאם קיימת טרנספורמציה לינארית כזו, אז היא יחידה, כך שההגדרה הגיונית.</p>
+
+<p>את ההגדרה הזו אפשר להכליל בצורה פשוטה לפונקציות כלליות: אם $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$ אז הדיפרנציאל של $latex F$ בנקודה $latex a$, אם הוא קיים, הוא הטרנספורמציה הלינארית היחידה שמקיימת</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)-T\left(h\right)}{\left</td>
+      <td>h\right</td>
+      <td>}=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>אם הדיפרנציאל קיים, אז אומרים ש-$latex f$ <strong>גזירה</strong> בנקודה $latex a$. במילה <strong>נגזרת</strong> משתמשים כדי לתאר או את $latex T$ או את המטריצה המייצגת שלה; זה לא כל כך משנה כי ברור לנו שבמובנים המהותיים זה בדיוק אותו דבר. אם כן, עבור פונקציות ממשיות רגילות, הנגזרת היא בעצם מטריצה $latex 1\times1$!</p>
+
+<p>הסימון המקובל לנגזרת של $latex f$ בהקשר הזה הוא $latex Df\left(a\right)$ (אם רוצים, אפשר לחשוב על $latex D$ בתור אופרטור שלוקח את $latex f$ ומחזיר פונקציה שלכל $latex a$ מחזירה מטריצה/טרנספורמציה). שימו לב לאופן שבו כללי המשחק השתנו קצת ממה שהיה עם פונקציות ממשיות: בפונקציות ממשיות, $latex Df$ הוא פונקציה ממשית (שמקבלת $latex a$ ומחזירה את המטריצה $latex 1\times1$ שדיברתי עליה, שגם היא מספר ממשי) ולכן אפשר היה לגזור שוב ושוב ושוב. כאן בבירור זה לא עובד ואין משמעות לסימון $latex DDf$, מה שאולי מעלה אצלכם את התהיה אם אי אפשר להגדיר גם נגזרות “רגילות” על פונקציות שכאלו.</p>
+
+<p>אז בואו נתחיל עם דוגמה פשוטה ככל הניתן. פונקציה סקלרית (שמחזירה סקלר, כלומר הטווח שלה הוא ממימד 1) על המישור, $latex f:\mathbb{R}^{2}\to\mathbb{R}$. למשל, $latex f\left(x,y\right)=x\sin y$. אין לנו מושג כרגע איך למצוא לה את הנגזרת, אבל כל אחד מאיתנו שמיומן בגזירה כן יודע להתעלל בביטוי $latex x\sin y$: אם נחשוב לרגע על $latex y$ כפרמטר ועל $latex x$ בתור משתנה, ברור לנו איך אפשר לגזור את הביטוי הזה. פורמלית, אם אני אסמן $latex f_{y}\left(x\right)=x\sin y$ אז קל לי לחשב את $latex f_{y}^{\prime}\left(x\right)=\sin y$. קל גם לחשב את $latex f_{x}^{\prime}\left(y\right)=x\cos y$. הנגזרות הללו נקראות <strong>נגזרות חלקיות</strong> של $latex f$, כי במובן מסויים אנחנו גוזרים רק חלק מ-$latex f$. עבור פונקציות במספר קטן של משתנים, נהוג להשתמש בסימן $latex \partial$ לתיאור נגזרת חלקית, כמו שמשתמשים ב-$latex d$ לתיאור נגזרת של פונקציה ממשית: דהיינו, אם מסמנים $latex \frac{df}{dx}$ בתור הנגזרת של הפונקציה $latex f\left(x\right)$, אז מסמנים $latex \frac{\partial f}{\partial x},\frac{\partial f}{\partial y}$ לתיאור שתי הנגזרות החלקיות של $latex f\left(x,y\right)$. זה סימון מאוד ידוע ופופולרי, אבל אני בקושי אשתמש בו, כי עבור פונקציות בעלות מספר שרירותי הוא הופך למסורבל. נאמר ש-$latex F\left(x_{1},\dots,x_{n}\right)$ היא פונקציה סקלרית . אז במקום לכתוב $latex \frac{\partial F}{\partial x_{i}}$ כבר יותר קל לכתוב $latex D_{i}F$ וחסל.</p>
+
+<p>אז בואו נדבר על נגזרות חלקיות של פונקציה כללית, אבל לא כללית עד הסוף – אני אמשיך לדבר על פונקציות סקלריות, שהטווח שלהן הוא ממימד אחד. באופן כללי, אם $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$, אז נהוג לפרק אותה לרכיבים: לסמן $latex F=\left(f_{1},\dots,f_{m}\right)$ כך ש-$latex f_{i}:\mathbb{R}^{n}\to\mathbb{R}$ היא פונקציה סקלרית. את רוב התוצאות שנדבר עליהן אפשר לתאר עבור פונקציה סקלרית, ודי מובן מאליו איך “להרכיב” אותן עבור פונקציה כללית – עוד נעשה את זה, אבל כאמור, בואו נדבר רק על פונקציות סקלריות לרגע.</p>
+
+<p>מצד אחד, אין דבר טבעי יותר מנגזרת חלקית עבור פונקציה בכמה משתנים. מצד שני, זו הגדרה שנראית צרה באופן כמעט שרירותי. הרי נגזרת חלקית היא מה שמקבלים כאשר מסתכלים על הפונקציה במקום על כל המרחב שבו היא מוגדרת, רק על ישר אחד, שבו היא נראית כמו פונקציה במשתנה יחיד עם פרמטרים – או ציר $latex x$, או ציר $latex y$ וכדומה. אבל אפשר להסתכל עליה גם על כל ישר אחר. זה מוביל אותנו להגדרה של <strong>נגזרת מכוונת</strong>: אם $latex 0\ne u\in\mathbb{R}^{n}$ הוא וקטור כלשהו שונה מאפס ב-$latex \mathbb{R}^{n}$ ו-$latex F:\mathbb{R}^{n}\to\mathbb{R}$ היא פונקציה, אז אפשר להגדיר את הנגזרת המכוונת של $latex F$ עבור $latex u$ בנקודה $latex a$ בתור</p>
+
+<p>$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{h}$</p>
+
+<p>כאשר כאן $latex h\in\mathbb{R}$ הוא סקלר. הנגזרות החלקיות הן מקרה פרטי של נגזרות מכוונות, עבור וקטורי הבסיס $latex e_{i}=\left(0,\dots,1,\dots,0\right)$ של המרחב $latex \mathbb{R}^{n}$ (שימו לב ש-$latex u$ הוא חשוב, ולא רק הכיוון שלו; הכפלה של $latex u$ בסקלר כלשהו תשפיע גם על הנגזרת המכוונת שהוא מגדיר. לכן לפעמים דורשים ש-$latex u$ יהיה מנורמה 1).</p>
+
+<p>עכשיו אפשר לחבר את כל המושגים הללו ביחד. ניקח $latex F:\mathbb{R}^{n}\to\mathbb{R}$. אם $latex F$ גזירה, אז כל הנגזרות המכוונות שלה קיימות, וקל מאוד לקבל אותן – הנגזרת המכוונת בכיוון $latex u$ בנקודה $latex a$ היא בדיוק $latex DF\left(a\right)\cdot u$ – כלומר, לוקחים את המטריצה שמייצגת את $latex DF$ בנקודה $latex a$ ומכפילים סקלרית ב-$latex u$ (מטילים על $latex u$). כלומר, $latex DF$ מקודדת איכשהו את המידע על <strong>כל</strong> הנגזרות המכוונות של $latex F$. מצד שני, זה אומר שעכשיו ברור לגמרי איך לחשב את $latex DF$: אנחנו יודעים ש-$latex DF\left(a\right)$ הוא וקטור ב-$latex \mathbb{R}^{n}$ (מטריצה $latex 1\times n$) ולכן ניתן להצגה כצירוף לינארי $latex \sum_{i=1}^{n}\lambda_{i}e_{i}$, כאשר המקדמים נתונים בדיוק על ידי $latex \left(a\right)\cdot e_{i}$$latex \lambda_{i}=DF$. מסקנה: $latex DF\left(a\right)=\left(D_{1}F\left(a\right),\dots,D_{n}F\left(a\right)\right)$. הוקטור הזה כל כך חשוב שנותנים לו <strong>עוד</strong> סימון ושם: הוא נקרא <strong>הגרדיאנט</strong> של $latex F$ ומסומן $latex \nabla F$ (למשולש הזה קוראים <strong>נבלה</strong>, אם רציתם לדעת).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ההוכחה של הטענה הזו היא קלה למדי ומראה כמה היא מתבקשת. נניח ש-$latex F$ גזירה ויהא $latex u$ וקטור שונה מאפס כלשהו. אנחנו רוצים להראות ש-$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{h}=DF\left(a\right)\cdot u$. כזכור, על פי הגדרת הנגזרת, $latex \lim_{t\to0}\frac{F\left(a+t\right)-F\left(a\right)-DF\left(a\right)\cdot t}{\left</td>
+      <td>t\right</td>
+      <td>}=0$ (בהוכחה הזו $latex h$ הוא סקלר ו-$latex t$ הוא וקטור). מכיוון שהגבול הזה נכון עבור השאפה של $latex t$ כללי לאפס, הוא נכון גם אם משאיפים את $latex t$ לאפס רק לאורך ציר מסויים, הציר שמגדיר $latex u$ (למי שלא מאמין, פשוט תפתחו את הגדרת האפסילון-דלתא ותראו). כלומר, אנחנו מקבלים את הגבול</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)-DF\left(a\right)\cdot\left(hu\right)}{\left</td>
+      <td>hu\right</td>
+      <td>}=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>נכפול את שני האגפים בקבוע $latex \left</td>
+      <td>u\right</td>
+      <td>$, נשתמש בהומוגניות של מכפלה סקלרית ושל נורמה, ונקבל</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left</td>
+      <td>h\right</td>
+      <td>}-\frac{h}{\left</td>
+      <td>h\right</td>
+      <td>}DF\left(a\right)\cdot u=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אם $latex h$ שואף לאפס מימין, אנחנו מקבלים בדיוק את מה שרצינו: $latex \lim_{h\to0^{+}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$; אחרת, נכפול במינוס 1 ונקבל $latex \lim_{h\to0^{-}}\frac{F\left(a+hu\right)-F\left(a\right)}{h}-DF\left(a\right)\cdot u=0$. המסקנה הסופית היא שאכן מתקיים $latex \lim_{h\to0}\frac{F\left(a+hu\right)-F\left(a\right)}{\left</td>
+      <td>h\right</td>
+      <td>}=DF\left(a\right)\cdot u$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>אם כן, <strong>אם</strong> $latex F$ היא גזירה, אז הנגזרת שלה נתונה בדיוק באמצעות הנגזרות החלקיות, מה שאומר שיש לנו עכשיו טכניקה פרקטית לחישוב נגזרת כללית על ידי רדוקציה לבעיה של חישוב נגזרת רגילה. מה שמפתיע הוא שההפך אינו נכון – ייתכן שכל הנגזרות החלקיות יהיו קיימות (או אפילו יותר מכך, כל הנגזרות המכוונות יהיו קיימות) ועדיין $latex F$ לא תהיה גזירה. הגרדיאנט עדיין יהיה קיים, כמובן, אבל הוא לא יגדיר טרנספורמציה לינארית שמקרבת את $latex F$ בצורה מוצלחת. הפתולוגיה הזו היא בדיוק הסיבה שבגללה הגדרנו נגזרת בצורה מוזרה שכזו במקום להתחיל מנגזרות חלקיות – התנאי של גזירות יותר חזק מהתנאי של קיום הנגזרות החלקיות. ההכללה לפונקציה $latex F:\mathbb{R}^{n}\to\mathbb{R}^{m}$ קלה: $latex F$ גזירה אם ורק אם כל הרכיבים שלה גזירים, ואם היא גזירה אז הנגזרת שלה היא המטריצה $latex m\times n$ שהשורות שלה הן הגרדיאנטים של הרכיבים.</p>
+
+<p>בואו נראה דוגמה לפונקציה $latex f:\mathbb{R}^{2}\to\mathbb{R}$ שהגרדיאנט שלה קיים אבל היא לא גזירה:</p>
+
+<p>$latex f\left(x,y\right)=\begin{cases}0 &amp; x=y=0\\frac{x^{2}y}{x^{4}+y^{2}} &amp; \mbox{else}\end{cases}$</p>
+
+<p>הרעיון כאן הוא ש-0 היא נקודה בעייתית עבור הפונקציה – הגדרנו את ערכה להיות 0 שם כי אם נקפיא את $latex x$ או את $latex y$ להיות 0 ונלך על הציר של המשתנה השני נקבל כל הזמן את הערך 0; אבל באותה מידה יכלנו להגדיר אותו להיות חצי, כי לאורך העקום $latex \left(t,t^{2}\right)$ הערך של הפונקציה הוא $latex \frac{1}{2}$. כלומר, אין דרך טובה להגדיר את $latex f$ כך שתהיה רציפה בראשית הצירים, ולא קשה לראות שכמו עבור פונקציות ממשיות, גם במקרה שלנו גזירות של פונקציה בנקודה גוררת רציפות שלה בנקודה.</p>
+
+<p>מצד שני, אפשר לחשב כל נגזרת מכוונת ב-$latex \left(0,0\right)$ בלי קושי של ממש. בואו נעשה את זה לפי הגדרה. ניקח $latex u=\left(a,b\right)$, ונחשב:</p>
+
+<p>$latex \lim_{h\to0}\frac{f\left(0+hu\right)-f\left(0\right)}{h}=\lim_{h\to0}\frac{\left(ha\right)^{2}\left(hb\right)}{\left(ha\right)^{4}+\left(hb\right)^{2}}\frac{1}{h}=\lim_{h\to0}\frac{a^{2}b}{h^{2}a^{4}+b^{2}}=\frac{a^{2}}{b}$</p>
+
+<p>כמובן, בהנחה ש-$latex b\ne0$, אחרת נקבל $latex 0$. בפרט ברור שהנגזרות החלקיות בנקודה הזו הן 0. אז על פניו טרנספורמציית האפס <strong>אמורה</strong> להיות הנגזרת של הפונקציה; אבל מן הסתם היא לא עובדת, ולכן הפונקציה לא גזירה למרות שהנגזרות החלקיות קיימות. הלקח כאן הוא שהסתכלות “חד ממדית” על הפונקציה מפספסת אינפורמציה חשובה – אפשר לקחת פונקציה שהיא כמו הפיל בסיפור על הפיל והעיוורים; שאם נסתכל עליה מכיוון מסויים, נראה משהו אחד, אבל אם נסתכל עליה מכיוון אחר נראה משהו שונה לחלוטין, וכך גם עבור כל כיוון הסתכלות חד ממדי אפשרי. חייבים להסתכל על הכל “בבת אחת” כדי לא לפספס.</p>
+
+<p>חישבתי את הנגזרות החלקיות בנקודה 0, אבל עבור נקודות אחרות אני יכול לחשב אותן על פי חוקי הגזירה של פונקציות ממשיות: נאמר, כדי לגזור את $latex \frac{x^{2}y}{x^{4}+y^{2}}$ לפי $latex x$ אני חושב על $latex y$ בתור קבוע ומשתמש בכללי הגזירה של מנת פונקציות. אני מקבל $latex \frac{2xy\left(x^{4}+y^{2}\right)-x^{2}y\left(4x^{3}\right)}{\left(x^{4}+y^{2}\right)^{2}}=\frac{2x^{5}y+2xy^{3}-4x^{5}y}{\left(x^{4}+y^{2}\right)^{2}}=\frac{2xy^{3}-2x^{5}y}{\left(x^{4}+y^{2}\right)^{2}}=\frac{2xy\left(y^{2}-x^{4}\right)}{\left(x^{4}+y^{2}\right)^{2}}$.</p>
+
+<p>כששואפים ל-0 על צירי $latex x,y$ מקבלים 0, אבל על הציר $latex \left(2t,t^{2}\right)$ נקבל $latex \frac{4t^{3}\left(t^{4}-16t^{4}\right)}{\left(3t^{4}\right)^{2}}=-5\frac{t^{7}}{t^{8}}=-\frac{5}{t}$</p>
+
+<p>והיצור הזה מתפוצץ כש-$latex t$ שואף לאפס, כך שקיבלנו נגזרת חלקית לא רציפה. זה מרמז לנו מה בעייתי פה – נגזרות לא רציפות הן יצורים שמתנהגים בצורה מעצבנת. ואכן, מסתבר שתנאי מספיק לגזירות של פונקציה הוא שהנגזרות החלקיות שלה יהיו קיימות <strong>ורציפות</strong>. פונקציה כזו נקראת “גזירה ברציפות”, ואומרים שהיא שייכת למחלקה $latex C^{1}$ (באופן כללי, $latex C^{k}$ היא מחלקת הפונקציות שגזירות $latex k$ פעמים והנגזרות רציפות; ו-$latex C^{\infty}$ היא מחלקת הפונקציות שגזירות מספר כלשהו של פעמים והנגזרות, מן הסתם, רציפות). לעתים קרובות נוח לנו מראש להגביל את הדיון רק לפונקציות שהן $latex C^{1}$ ואז הכל מתנהג נחמד; אבל באופן כללי קיימים מקרים פתולוגיים שצריך להיות מודעים אליהם.</p>
+
+<p>אז אם לסכם: אם $latex F$ גזירה, אז נובע שכל הנגזרות החלקיות שלה קיימות – <strong>אבל</strong> זה לא אומר שהן רציפות. אם לעומת זאת כל הנגזרות החלקיות קיימות ורציפות, אז מובטח ש-$latex F$ גזירה, <strong>אבל</strong> רק קיום הנגזרות החלקיות לא גורר רציפות. אם כן, הכרנו את הגיבורים של החלק הדיפרנציאלי של אנליזה וקטורית – הנגזרת והנגזרות החלקיות והמכוונות; וזמן טוב לעצור את הפוסט הזה הוא בדיוק אחרי ההוכחה שקיום נגזרות חלקיות רציפות גורר גזירות, כי זו לא הוכחה טריוויאלית.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>פורמלית, הטענה שאני אוכיח היא זו: אם $latex A\subseteq\mathbb{R}^{n}$ היא קבוצה פתוחה כך שלכל $latex a\in A$ הנגזרות החלקיות של $latex F$ קיימות ב-$latex a$ ורציפות בה, אז $latex F$ גזירה בכל נקודה של $latex A$. “קבוצה פתוחה” היא קבוצה $latex A$ כך שלכל $latex a\in A$ קיים “כדור פתוח” סביב $latex a$ שמוכל כולו ב-$latex A$, כלומר יש $latex \varepsilon&gt;0$ כך ש$latex \left</td>
+      <td>x-a\right</td>
+      <td>&lt;\varepsilon$ גורר ש-$latex x\in A$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>הרעיון הבסיסי פשוט: אם כל הנגזרות החלקיות של $latex F$ קיימות, אנחנו יודעים בדיוק איך $latex DF\left(a\right)$ אמור להיראות: $latex DF\left(a\right)=\left(D_{1}F\left(a\right),\dots,D_{n}F\left(a\right)\right)$. לכן, בהינתן $latex h\in\mathbb{R}^{n}$ כלשהו, $latex DF\left(a\right)\cdot h=\sum D_{i}F\left(a\right)h_{i}$. היעד שלנו הוא להוכיח שמתקיים $latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left</td>
+      <td>h\right</td>
+      <td>}=0$. אנחנו לא חייבים לטפל בכל $latex h$ – מספיק לטפל בכל $latex h$ שהוא קטן דיו כך שהכדור הפתוח ברדיוס $latex h$ סביב $latex a$ מוכל כולו ב-$latex A$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>לשם כך אני ארצה לקבל תיאור אחר של $latex F\left(a+h\right)-F\left(a\right)$, כזה שמשתמש בנגזרות החלקיות. האם זה מזכיר לכם משהו? זו סיטואציה דומה לזו של אחד מהמשפטים החשובים ביותר באינפי – משפט הערך הממוצע של לגראנז’. מכיוון שאני הולך להשתמש בו בהמשך, בואו נזכיר אותו. יש לנו פונקציה $latex f:\left[a,b\right]\to\mathbb{R}$ שהיא גזירה לכל הפחות ב-$latex \left(a,b\right)$ ורציפה על כל $latex \left[a,b\right]$. השינוי הממוצע של $latex f$ בכל הקטע הזה שווה בדיוק ל-$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}$. נגזרת, כזכור, היא תיאור של שינוי <strong>רגעי</strong>, ולכן כל עוד $latex a,b$ מרוחקים זה מזה, לא מובטח שהנגזרת בנקודות הללו (אם היא בכלל קיימת) תתאר את השינוי הממוצע הזה. הקסם (ובעיני זה באמת קסם) הוא ש<strong>קיימת</strong> בקטע נקודה שעבורה זה כן עובד: קיימת נקודה $latex c\in\left(a,b\right)$ כך ש-$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}=f^{\prime}\left(c\right)$. דרך אחרת לחשוב על כך היא זו:$latex f\left(b\right)-f\left(a\right)=\left(b-a\right)f^{\prime}\left(c\right)$, כלומר גודל השינוי של הפונקציה בקטע כולו יכול להיגזר מהשינוי הרגעי שלה ברגע נתון אחד – אבל כמובן, צריך לדעת איזה רגע.</p>
+
+<p>הבעיה היא ש-$latex F\left(a+h\right)-F\left(a\right)$ הוא לא ביטוי שאפשר להפעיל עליו ישירות את לגראנז’, כי אנחנו לא ב-$latex \mathbb{R}$ אלא ב-$latex \mathbb{R}^{n}$. אבל כרגיל, אפשר לבצע מעין <strong>רדוקציה</strong> ל-$latex \mathbb{R}$ על ידי פירוק הביטוי הזה ל<strong>טור טלסקופי</strong> של איברים שכל אחד מהם יהיה חד-ממדי באופיו (טור טלסקופי הוא טור שכל האיברים בו מצמצמים זה את זה למעט הראשון והאחרון; למשל, אם נפתח את המכפלה $latex \left(1+q+q^{2}+\dots q^{n}\right)\left(q-1\right)$ נקבל טור טלסקופי שאחרי צמצום יישאר ממנו רק $latex q^{n+1}-1$, והופס קיבלנו את הנוסחה $latex 1+q+\dots+q^{n}=\frac{q^{n+1}-1}{q-1}$ לטור הנדסי).</p>
+
+<p>בואו נכתוב את $latex h$ במפורש רגע: $latex h=\left(h_{1},h_{2},\dots,h_{n}\right)$. אפשר לתאר את $latex h$ כסכום לפי הבסיס הסטנדרטי: $latex h=\sum_{i=1}^{n}h_{i}e_{i}$. יהיה נוח לסמן “סכומים חלקיים” של $latex a+h$ באופן הבא: $latex p_{i}=a+\sum_{j=1}^{i}h_{j}e_{j}$ (כאשר $latex p_{0}=a$, עם המוסכמה שלפיה הסכום הוא “ריק” אם האינדקס למעלה גדול מהערך ההתחלתי למטה). עכשיו קל לראות שמתקיים</p>
+
+<p>$latex F\left(a+h\right)-F\left(a\right)=F\left(p_{n}\right)-F\left(p_{n-1}\right)+F\left(p_{n-1}\right)-\dots-F\left(p_{1}\right)+F\left(p_{1}\right)-F\left(p_{0}\right)$</p>
+
+<p>זה טור טלסקופי שבו כל זוג של מחובר חיובי ואז שלילי, כלומר משהו מהצורה $latex F\left(p_{i}\right)-F\left(p_{i-1}\right)$ מתאים לשני וקטורים שהם זהים, פרט לכך שקואורדינטה אחת במחובר החיובי היא $latex h_{i}$ בעוד שמקבילתה במחובר השלילי היא 0; חשבו על כך כאילו אנחנו הולכים מהנקודה $latex h$ אל הנקודה $latex 0$ “ציר אחד בכל פעם”. אם אתם לא רואים את זה, ציירו את הנקודות $latex \left(1,1,1\right),\left(0,1,1\right),\left(0,0,1\right),\left(0,0,0\right)$ והסתכלו על המסלול שעובר דרכן בסדר זה: תראו שקיבלנו קוביה שאנחנו הולכים על צלעות שלה. בואו נכתוב את הטור שוב, בסימון מקוצר:</p>
+
+<p>אני הולך להשתמש בלגראנז’ על $latex F\left(p_{i}\right)-F\left(p_{i-1}\right)$, אבל מכיוון שהסימון אולי עדיין מבלבל, אני אכתוב את הכל במפורש בתור פונקציות ממשיות. נשתמש ב-$latex t$ בתור משתנה שמייצג מספר ממשי. נגדיר $latex f_{i}\left(t\right)=F\left(p_{i-1}+te_{i}\right)$ (כלומר, הרכיב ה-$latex i$-י הוא $latex t$). נסתכל על הקטע $latex \left[0,h_{i}\right]$ (אם $latex h_{i}$ שלילי אז צריך לכתוב את הקטע $latex \left[h_{i},0\right]$, אבל זה לא באמת משנה). בגלל שבחרנו את $latex h$ להיות קטן מספיק כך שהסביבה של $latex a$ ברדיוס $latex h$ מוכלת ב-$latex A$, נקבל ש-$latex F\left(p_{i-1}+te_{i}\right)$ מוגדרת לכל $latex t\in\left[0,h_{i}\right]$, ומהנתון לגבי הנגזרות החלקיות, $latex f_{i}$ היא גם גזירה ברציפות שם – כאן זה קריטי לחלוטין ש-$latex f_{i}$ מקפיאה את כל הרכיבים למעט אחד.</p>
+
+<p>עכשיו אפשר להשתמש בלגראנז’ על $latex f_{i}$ ולקבל שקיימת נקודה $latex c_{i}\in\left[0,h_{i}\right]$ כך ש-$latex f_{i}\left(h_{i}\right)-f_{i}\left(0\right)=h_{i}f_{i}^{\prime}\left(c_{i}\right)$. בואו נסמן ב-$latex q_{i}$ את הנקודה המתאימה עבור $latex F$, כלומר $latex q_{i}=p_{i-1}+c_{i}e_{i}$. אז נקבל ש-$latex F\left(p_{i}\right)-F\left(p_{i-1}\right)=D_{i}F\left(q_{i}\right)h_{i}$. הנה קיבלנו את הלגראנז’ שלנו. אם נחזור אל הטור הטלסקופי ממקודם, קיבלנו ש-</p>
+
+<p>$latex F\left(a+h\right)-F\left(a\right)=\sum_{i=1}^{n}F\left(p_{i}\right)-F\left(p_{-1}\right)=\sum_{i=1}^{n}D_{i}F\left(q_{i}\right)h_{i}$</p>
+
+<p>נחזור עכשיו אל הגבול שאנחנו רוצים להוכיח:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\frac{F\left(a+h\right)-F\left(a\right)-\sum D_{i}F\left(a\right)h_{i}}{\left</td>
+      <td>h\right</td>
+      <td>}=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>נציב בו את מה שקיבלנו, ונקבל:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\frac{\sum D_{i}F\left(q_{i}\right)h_{i}-\sum D_{i}F\left(a\right)h_{i}}{\left</td>
+      <td>h\right</td>
+      <td>}=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>או, יותר פשוט</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \lim_{h\to0}\sum\left(D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)\right)\frac{h_{i}}{\left</td>
+      <td>h\right</td>
+      <td>}=0$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>הנקודות $latex q_{i}$ תלויות ב-$latex h$; כאשר $latex h$ שואף לאפס, הנקודות הללו שואפות ל-$latex a$ (הוכיחו!). ומכיוון ש-$latex D_{i}F$ רציפה, אז $latex \lim_{q_{i}\to a}D_{i}F\left(q_{i}\right)=D_{i}F\left(a\right)$, כלומר הביטוי $latex D_{i}F\left(q_{i}\right)-D_{i}F\left(a\right)$ שואף לאפס. הוא מוכפל בביטוי $latex \frac{h_{i}}{\left</td>
+      <td>h\right</td>
+      <td>}$, שהוא כמובן חסום בערכו המוחלט על ידי $latex 1$ (כי $latex \left</td>
+      <td>h\right</td>
+      <td>$ גדול מהערך המוחלט של כל אחד מהרכיבים של $latex h$). לכן קיבלנו שהגבול הוא אכן אפס, וזה מה שרצינו.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>לסיכום, הכרנו את הנגזרת, ולמדנו איך לבדוק שהיא קיימת ולחשב אותה בצורה פשוטה יחסית, עבור מחלקה גדולה ויפה של פונקציות ($latex C_{1}$). בפוסט הבא נראה עוד דברים מגניבים שקשורים אליה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2015/07/05/multivariable_derivatives/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

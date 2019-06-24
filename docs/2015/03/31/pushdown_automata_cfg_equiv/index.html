@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>שקילות אוטומט מחסנית ודקדוק חסר הקשר | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="שקילות אוטומט מחסנית ודקדוק חסר הקשר" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי את המודל של אוטומט מחסנית. המטרה הייתה להציג מודל של אוטומט שמחלקת השפות שמתאימה לו היא בדיוק מחלקת השפות חסרות ההקשר. לצורך זה, חשבתי על אלגוריתם פשוט לזיהוי שפה של דקדוק חסר הקשר כלשהו, ואז לקחתי מודל של אוטומט שמסוגל לממש בקלות את האלגוריתם הזה. בכך הוכחתי את הכיוון ה”קל” – שאוטומט מחסנית מקבל כל שפה חסרת הקשר. עכשיו הגיע הזמן לכיוון הקשה יותר – שהשפה של אוטומט מחסנית היא תמיד חסרת הקשר – דהיינו, שבהינתן אוטומט מחסנית $latex M$ קיים דקדוק חסר הקשר $latex G$ כך ש-$latex L\left(G\right)=L\left(M\right)$. זה קשה, כי אנחנו צריכים איכשהו “לסמלץ” אוטומט עם דקדוק, מה שנראה לא קשור בעליל במבט ראשון ואכן ידרוש מאיתנו בניה חכמה למדי – כנראה הדבר הכי מסובך שראינו עד כה בסדרת הפוסטים על שפות פורמליות, אבל עדיין לא משהו עד כדי כך מסובך, לא לדאוג." />
+<meta property="og:description" content="בפוסט הקודם הצגתי את המודל של אוטומט מחסנית. המטרה הייתה להציג מודל של אוטומט שמחלקת השפות שמתאימה לו היא בדיוק מחלקת השפות חסרות ההקשר. לצורך זה, חשבתי על אלגוריתם פשוט לזיהוי שפה של דקדוק חסר הקשר כלשהו, ואז לקחתי מודל של אוטומט שמסוגל לממש בקלות את האלגוריתם הזה. בכך הוכחתי את הכיוון ה”קל” – שאוטומט מחסנית מקבל כל שפה חסרת הקשר. עכשיו הגיע הזמן לכיוון הקשה יותר – שהשפה של אוטומט מחסנית היא תמיד חסרת הקשר – דהיינו, שבהינתן אוטומט מחסנית $latex M$ קיים דקדוק חסר הקשר $latex G$ כך ש-$latex L\left(G\right)=L\left(M\right)$. זה קשה, כי אנחנו צריכים איכשהו “לסמלץ” אוטומט עם דקדוק, מה שנראה לא קשור בעליל במבט ראשון ואכן ידרוש מאיתנו בניה חכמה למדי – כנראה הדבר הכי מסובך שראינו עד כה בסדרת הפוסטים על שפות פורמליות, אבל עדיין לא משהו עד כדי כך מסובך, לא לדאוג." />
+<link rel="canonical" href="http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv/" />
+<meta property="og:url" content="http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-03-31T16:04:13+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2015-03-31T16:04:13+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv/"},"url":"http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv/","author":{"@type":"Person","name":"gadial"},"description":"בפוסט הקודם הצגתי את המודל של אוטומט מחסנית. המטרה הייתה להציג מודל של אוטומט שמחלקת השפות שמתאימה לו היא בדיוק מחלקת השפות חסרות ההקשר. לצורך זה, חשבתי על אלגוריתם פשוט לזיהוי שפה של דקדוק חסר הקשר כלשהו, ואז לקחתי מודל של אוטומט שמסוגל לממש בקלות את האלגוריתם הזה. בכך הוכחתי את הכיוון ה”קל” – שאוטומט מחסנית מקבל כל שפה חסרת הקשר. עכשיו הגיע הזמן לכיוון הקשה יותר – שהשפה של אוטומט מחסנית היא תמיד חסרת הקשר – דהיינו, שבהינתן אוטומט מחסנית $latex M$ קיים דקדוק חסר הקשר $latex G$ כך ש-$latex L\\left(G\\right)=L\\left(M\\right)$. זה קשה, כי אנחנו צריכים איכשהו “לסמלץ” אוטומט עם דקדוק, מה שנראה לא קשור בעליל במבט ראשון ואכן ידרוש מאיתנו בניה חכמה למדי – כנראה הדבר הכי מסובך שראינו עד כה בסדרת הפוסטים על שפות פורמליות, אבל עדיין לא משהו עד כדי כך מסובך, לא לדאוג.","headline":"שקילות אוטומט מחסנית ודקדוק חסר הקשר","dateModified":"2015-03-31T16:04:13+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">שקילות אוטומט מחסנית ודקדוק חסר הקשר</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-03-31T16:04:13+03:00" itemprop="datePublished">Mar 31, 2015
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://www.gadial.net/2015/03/22/pushdown_automata/">בפוסט הקודם</a> הצגתי את המודל של <strong>אוטומט מחסנית</strong>. המטרה הייתה להציג מודל של אוטומט שמחלקת השפות שמתאימה לו היא בדיוק מחלקת השפות חסרות ההקשר. לצורך זה, חשבתי על אלגוריתם פשוט לזיהוי שפה של דקדוק חסר הקשר כלשהו, ואז לקחתי מודל של אוטומט שמסוגל לממש בקלות את האלגוריתם הזה. בכך הוכחתי את הכיוון ה”קל” – שאוטומט מחסנית מקבל כל שפה חסרת הקשר. עכשיו הגיע הזמן לכיוון הקשה יותר – שהשפה של אוטומט מחסנית היא תמיד חסרת הקשר – דהיינו, שבהינתן אוטומט מחסנית $latex M$ קיים דקדוק חסר הקשר $latex G$ כך ש-$latex L\left(G\right)=L\left(M\right)$. זה קשה, כי אנחנו צריכים איכשהו “לסמלץ” אוטומט עם דקדוק, מה שנראה לא קשור בעליל במבט ראשון ואכן ידרוש מאיתנו בניה חכמה למדי – כנראה הדבר הכי מסובך שראינו עד כה בסדרת הפוסטים על שפות פורמליות, אבל עדיין לא משהו <strong>עד כדי כך</strong> מסובך, לא לדאוג.</p>
+
+<p>בואו ניסגר מראש על הפורמליסטיקה. ניקח אוטומט מחסנית $latex M=\left(Q,\Sigma,\Gamma,q_{0},\bot,\delta,\emptyset\right)$ עם קבוצת מצבים $latex Q$, א”ב קלט ומחסנית $latex \Sigma,\Gamma$ בהתאמה, מצב התחלתי $latex q_{0}$ וסימן תחתית מחסנית $latex \bot$ ופונקציית מעברים $latex \delta$, כך ש-$latex \delta\left(q,\sigma,A\right)$, עבור $latex \sigma\in\Sigma\cup\left{ \varepsilon\right} $ ו-$latex A\in\Gamma$, היא קבוצה של זוגות $latex \left(p,\beta\right)$ שפירושם “במצב $latex q$ אחרי קריאת $latex \sigma$ ועם $latex A$ בראש המחסנית אפשר לעבור למצב $latex p$ ולדחוף $latex \beta$ במקום $latex A$”. קבוצת המצבים המקבלים תהיה ריקה כי אני אתעניין רק באוטומט שמקבל על ידי ריקון (לכל אוטומט שמקבל על ידי מצבים מקבלים יש אוטומט שקול שמקבל על ידי ריקון). כלומר, שפת האוטומט מוגדרת כך:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex L\left(M\right)=\left{ w\in\Sigma^{*}\</td>
+      <td>\ \exists p\in Q:\left[q_{0},w,\bot\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]\right} $</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כאשר $latex \left[q,w,\alpha\right]$ היא <strong>קונפיגורציה</strong> של האוטומט שמתארת את המצב הנוכחי $latex q$, הקלט שנותר $latex w$ ותוכן המחסנית $latex \alpha$, והסימן $latex \vdash^{*}$ אומר “אפשר לעבור מהקונפיגורציה השמאלית לימנית ב-0 או יותר צעדים”.</p>
+
+<p>עכשיו, איך ניגשים לבניה שלנו? במבט ראשון זה נראה מפחיד ואין לנו מושג מאיפה להתחיל, כי דקדוק זה משהו שמייצר מילים על ידי כך שהוא משליך הרבה אותיות לפה ולשם ופתאום יש מילה מוגמרת, ולעומת זאת אוטומט עובר סדרתית על אותיות ועושה חישובים וכדומה. אבל בעצם, אם חושבים על זה, כבר ראינו משהו דומה – דקדוק שמסמלץ אוטומט סופי דטרמיניסטי. שם הרעיון היה כזה: משתני הדקדוק היו $latex Q$, הטרמינלים היו $latex \Sigma$ ולכל מעבר $latex \delta\left(q,\sigma\right)=p$ היה לנו את כלל הגזירה $latex q\to\sigma p$. כך הדקדוק יצר את המילה “אות אחרי אות” כשהסימן הימני ביותר בתבנית הפסוקית שבמהלך הבניה תמיד תיאר את המצב הנוכחי של האוטומט – בעצם, אם חושבים על זה, זה סוג של תיאור של ה<strong>קונפיגורציה</strong> שלו (רק בלי “מה שנשאר מהקלט”).</p>
+
+<p>אז למה לא לעשות בניה דומה עבור אוטומט מחסנית? הרי ההבדל היחיד הוא שעכשיו יש לנו גם מחסנית. למה לא לתאר את הקונפיגורציה הנוכחית של האוטומט בלי שארית הקלט בתור זוג $latex \left(q,\alpha\right)$ כאשר $latex \alpha\in\Gamma^{*}$ ולכל מעבר $latex \left(p,\beta\right)\in\delta\left(q,\sigma,A\right)$ להוסיף את הגזירה הבאה בדקדוק: $latex \left(q,A\alpha\right)\to\sigma\left(p,\beta\alpha\right)$?</p>
+
+<p>התשובה פשוטה מאוד – כי הדקדוק שנקבל יהיה בעל <strong>אינסוף משתנים</strong> – כי הרי יש לנו אינסוף זוגות $latex \left(q,\alpha\right)$ עם $latex \alpha\in\Gamma^{*}$ שהרי הגודל של המחסנית של האוטומט לא חסום. הכשלון הזה לא מפתיע במיוחד כי אם הוא היה מצליח, מה שהיינו בונים הוא <strong>דקדוק לינארי ימני</strong>, מה שהיה מוכיח שהשפה שלנו היא בכלל רגולרית, דהיינו היינו מוכיחים שכל שפה חסרת הקשר היא רגולרית, וזה בוודאי לא נכון. אם כן, אין לנו תקווה לדקדוק שיהיה <strong>עד כדי כך</strong> פשוט.</p>
+
+<p>עדיין, מה שעשינו הוא התחלה טובה שתוביל אותנו בסופו של דבר אל הבניה שעובדת. בואו ננסה להציע לה תיקון נאיבי ונראה מה יקרה: מכיוון שהבעיה שלנו היא עם כך ש-$latex \alpha$ הוא לא חסום באורכו, הנה הצעה: פשוט נפרוט אותו לפרוטות. נוסיף את כל $latex \Gamma$ לקבוצת המשתנים של הדקדוק שלנו, ועכשיו תבנית פסוקית אופיינית תיראה, נאמר, כך: $latex aabqABB$. התבנית הזו אומרת “עד כה הסימולציה של האוטומט שלנו קראה את $latex aab$; עכשיו אנחנו במצב $latex q$; תוכן המחסנית הוא $latex ABB$”. זה נראה מאוד מבטיח כי האוטומט פועל רק על פי התו העליון במחסנית, שממילא צמוד ל-$latex q$, אז נראה שאפשר לעשות כאן משהו.</p>
+
+<p>למה הבניה הזו נכשלת? כי הדקדוק שלנו צריך להיות <strong>חסר הקשר</strong>. כאשר אני גוזר את המשתנה $latex q$, המשתנה לא יודע מי נמצא מימינו ומשמאלו והגזירה לא תהיה מושפעת מזה. במילים אחרות, אין ל-$latex q$ דרך “להכיר” את ה-$latex A$ שמימינו. תגידו, אוקיי – בואו נחבר את שניהם מראש לזוג, כלומר התבנית תיראה כך: $latex aab\left(q,A\right)BB$. זה טוב ויפה, אבל אחרי ש-$latex \left(q,A\right)$ נגזר למשהו, איך אותו משהו יתחבר אל ה-$latex B$-ים שמשמאל?</p>
+
+<p>בקיצור, גם זה לא יעבוד. אני לא יכול שיהיו לי משתנים שהם “מצב לבד” ו”אות מחסנית לבד” – אני חייב שהמשתנים שלי יכללו מידע גם עבור המצב וגם עבור האות במחסנית. איך נעשה את זה? בואו ננסה פשוט לחבר אותם לזוגות ונראה איך זה עובד בדוגמה שלעיל: $latex \left(q_{3},B\right)$$latex aab\left(q_{1},A\right)\left(q_{2},B\right)$. כאשר כאן $latex q_{1},q_{2},q_{3}$ הם מצבים כלשהם. מה שאני מצפה מ-$latex \left(q_{1},A\right)$ לגזור זה את “החלק במילה שעליו האוטומט רץ עד לשלב שבו הוא מגיע למצב $latex q_{2}$ ובמחסנית נשארו רק $latex BB$”, ומה שאני מצפה מ-$latex \left(q_{2},B\right)$ לגזור זה את “החלק במילה שעליו האוטומט רץ עד לשלב שבו הוא מגיע למצב $latex q_{3}$ ובמחסנית נשאר רק $latex B$” ו-$latex \left(q_{3},B\right)$ אמור לגזור את “החלק המילה שעליו האוטומט רץ עד שהמחסנית מתרוקנת”. משהו כאן עדיין לא עובד, אבל אני חושב שאנחנו כבר רואים שזה מתחמם ואנחנו מתקרבים לבניה שתעבוד.</p>
+
+<p>הבעיה בבניה הנוכחית היא שהיא עדיין תלוית הקשר במובן מסויים – מה זאת אומרת, אני מצפה מ-$latex \left(q_{1},A\right)$ לגזור את החלק במילה שעליו האוטומט רץ עד שהוא מגיע ל-$latex q_{2}$ ובמחסנית יש $latex BB$? איך הוא יודע מ-$latex q_{2}$ ומ-$latex BB$? כרגע הוא לא. אבל שימו לב – הוא בעצם לא באמת מתעניין ב-$latex BB$. אפשר לנסח את זה מחדש: $latex \left(q_{1},A\right)$ אמור לגזור את החלק במילה שעליו האוטומט רץ עד שהוא מגיע ל-$latex q_{2}$ והמחסנית מגיעה למצב שבו מה שהיה מתחת ל-$latex A$ נחשף לראשונה. הקטע הזה עם ה”נחשף לראשונה” נראה לי כמו הדבר הכי מבלבל כאן, אז בואו נפרט קצת: על פי ההגדרה שלו, הדבר הראשון שהאוטומט עושה כשהוא מבצע צעד זה להסיר את $latex A$ מהמחסנית. אבל מייד אחר כך הוא דוחף במקום $latex A$ מילה $latex \beta$ כלשהי. אם $latex \beta$ היא המילה הריקה, אז מה שהיה מתחת ל-$latex A$ נחשף; אחרת, $latex A$ הוחלף על ידי תווים נוספים (אולי יותר מ-1) ומה שהיה קבור מתחת ל-$latex A$ נשאר קבור ונצטרך לטפל בכל מה שמעליו לפני שנגיע אליו.</p>
+
+<p>אם כן, לא באמת אכפת לנו מה-$latex BB$, אבל כן אכפת לנו מ-$latex q_{2}$. אבל כאן אין בעצם בעיה, כי $latex q_{2}$ הוא מצב בודד ואפשר לזכור אותו – זו כבר לא סדרה בלתי חסומה של תווים. זה מוביל אותנו אל הרעיון שמאחורי הבניה האמיתית שבה נשתמש: המשתנים שלנו יהיו שלשות $latex \left(q,A,p\right)$ כך שהמילים ששלשות כאלו גוזרות הן בדיוק המילים שמאפשרות לאוטומט לעבור מ-$latex q$ אל $latex p$ כאשר בהתחלה $latex A$ בראש המחסנית ובסיום נחשף מה שהיה מתחתיו.</p>
+
+<p>בואו נכתוב את זה בצורה פורמלית. אני רוצה לבנות את הדקדוק בצורה כזו שיתקיים הדבר הבא:</p>
+
+<p>$latex \left(q,A,p\right)\Rightarrow^{*}w\iff\left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$</p>
+
+<p>כאן צד שמאל הוא גזירה בדקדוק, וצד ימין הוא חישוב של האוטומט. שימו לב לאופן הפשוט שבו כל הסיבוך של “הפעם הראשונה שבה מה שמתחת ל-$latex A$ נחשף” מבוטא כאן – אני פשוט מתאר את החישוב כאילו הוא מתחיל ממחסנית שבה אין כלום מתחת ל-$latex A$, ובצעד האחרון המחסנית מתרוקנת. לא ייתכן שהמחסנית גם לפני הצעד האחרון כי אז האוטומט היה נתקע. לא קשה להוכיח שאם $latex \left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$ אז גם $latex \left[q,w,A\beta\right]\vdash^{*}\left[p,\varepsilon,\beta\right]$ לכל $latex \beta$ אפשרי, כך שאנחנו לא מגבילים את הכלליות בכך שאנחנו מדברים רק על מה שקורה שהמחסנית ריקה. מעכשיו, לצורך פשטות, אני אדבר על סדרת מעברים כזו פשוט בתור “מעברים שמרוקנים את $latex A$” למרות שפורמלית זה לא ממש נכון (כי $latex A$ יכול לעוף במעבר הראשון אבל מה שמתחתיו לא ייחשף מייד, או ש-$latex A$ יישאר למשך הרבה זמן, וכו’).</p>
+
+<p>אם אני אצליח לבנות דקדוק שאלו משתניו, זה מסיים כמעט מייד את ההוכחה – שימו לב כמה צד ימין של השקילות דומה להגדרת הקבלה באמצעות ריקון מחסנית. כדי לסיים את הבניה אני אוסיף לדקדוק משתנה התחלתי $latex S$ (חייב להיות משתנה התחלתי וטרם ציינתי כזה) ולכל מצב $latex p\in Q$ אוסיף את הגזירה $latex S\to\left(q_{0},\bot,p\right)$, וסיימנו: $latex w\in L\left(M\right)$ אם ורק אם קיים $latex p\in Q$ כך ש-$latex \left[q_{0},w,\bot\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$, כלומר אם ורק אם קיים $latex p\in Q$ כך ש-$latex \left(q_{0},\bot,p\right)\Rightarrow^{*}w$, כלומר אם ורק אם $latex S\Rightarrow^{*}w$ (למה? זה דורש טיפה נימוק), כלומר אם ורק אם $latex w\in L\left(G\right)$.</p>
+
+<p>אז נשאר רק להבין איך לבנות את הדקדוק כך שהשקילות תתקיים. מה זה אומר “לבנות את הדקדוק”? את המשתנים כבר ציינתי – אלו כל השלשות $latex \left(q,A,p\right)$; רק נשאר להציג את כללי הגזירה שלהם. פורמלית, הדקדוק שלי הוא $latex G=\left(\left{ S\right} \cup Q\times\Gamma\times Q,\Sigma,S,P\right)$ ורק נותר לי לתאר את $latex P$.</p>
+
+<p>הבניה תתבסס, מן הסתם, על המעברים של האוטומט. אפשר לחלק את המעברים לשני סוגים: כאלו ש<strong>מפשטים</strong> לנו את הסיטואציה, וכאלו ש<strong>מסבכים</strong> אותה (או לכל הפחות משאירים אותה ללא שינוי), וזאת בהתאם לשאלה מה קורה למחסנית. צעד שמסיר את התו מהמחסנית ולא דוחף כלום במקומו עושה לנו את החיים פשוטים יותר; צעד שלא מקטין את המחסנית מסבך אותנו.</p>
+
+<p>המקרה הראשון הוא מעבר מהצורה $latex \left(p,\varepsilon\right)\in\delta\left(q,\sigma,A\right)$. שימו לב מה מעבר כזה עושה: הוא מעביר אותנו מ-$latex q$ אל $latex p$ תוך שהוא מרוקן את $latex A$ מהמחסנית – בדיוק מה שהמשתנה $latex \left(q,A,p\right)$ בא לתאר. מכיוון שהמעבר הזה משתמש ב-$latex \sigma$ לצורך כך (ייתכן ש-$latex \sigma$ היא המילה הריקה), אז אנחנו מקבלים את הגזירה $latex \left(q,A,p\right)\to\sigma$.</p>
+
+<p>ועכשיו לסיטואציה המסובכת – מעבר מהצורה $latex \left(p,B_{1}B_{2}\dots B_{n}\right)\in\delta\left(q,\sigma,A\right)$. כאן $latex A$ הוחלף על ידי $latex B_{1}\dots B_{n}$ ולכן כדי להשיג את האפקט של ריקון $latex A$ מהמחסנית, אנחנו צריכים לרוקן את $latex B_{1},\dots,B_{n}$. זה מזמין את הגזירה הבאה:</p>
+
+<p>$latex \left(q,A,q_{n+1}\right)\to\sigma\left(q_{1},B_{1},q_{2}\right)\left(q_{2},B_{2},q_{3}\right)\cdots\left(q_{n},B_{n},q_{n+1}\right)$</p>
+
+<p>שמתארת את הסיפור הבא: קודם כל עברנו מ-$latex q$ אל $latex q_{1}$ תוך קריאת $latex \sigma$ והחלפת $latex A$ ב-$latex B_{1}\cdots B_{n}$; אחר כך נעבור מ-$latex q_{1}$ אל $latex q_{2}$ ונרוקן את $latex B_{1}$ תוך כדי; מ-$latex q_{2}$ נעבור אל $latex q_{3}$ תוך ריקון $latex B_{2}$ וכן הלאה, עד אשר נעבור מ-$latex q_{n}$ אל $latex q_{n+1}$ תוך ריקון $latex B_{n}$.</p>
+
+<p>הכל טוב ויפה חוץ מדבר אחד – מי לכל הרוחות הם המצבים $latex q_{1},q_{2},\dots,q_{n+1}$? מאיפה הם באו? כל מי שהיו לי במעבר המקורי באוטומט היו $latex q,p$, ולאן $latex p$ נעלם באמת?</p>
+
+<p>אז בבירור $latex q_{1}=p$, אבל זה עדיין לא מסביר מיהם המצבים $latex q_{2},\dots,q_{n+1}$. התשובה היא ש<strong>אני לא יודע</strong>. המטרה של הגזירה של $latex \left(q,A,q_{n+1}\right)$ היא לתאר את <strong>כל</strong> הריצות האפשריות שבהן יסירו את $latex B_{1}\cdots B_{n}$ מהמחסנית, ואני לא יודע מה מצבי הביניים בהן יהיו. אז מה שאני עושה הוא <strong>לכסות את כל האפשרויות</strong>. כלומר, אני הולך להוסיף את הגזירה</p>
+
+<p>$latex \left(q,A,q_{n+1}\right)\to\sigma\left(q_{1},B_{1},q_{2}\right)\left(q_{2},B_{2},q_{3}\right)\cdots\left(q_{n},B_{n},q_{n+1}\right)$</p>
+
+<p>עבור <strong>כל</strong> בחירת ערכים אפשרית ל-$latex q_{2},\dots,q_{n+1}$. ומה קורה אם, למשל, אין דרך להגיע מ-$latex q_{1}$ אל $latex q_{2}$ תוך הסרת $latex B_{1}$ עבור בחירה מסויימת של $latex q_{2}$? אין בעיה. אז הגזירה הזו “תיתקע” כי המשתנה $latex \left(q_{1},B_{1},q_{2}\right)$ לא יצליח לגזור מילה טרמינלית. לא נורא – אני לא חייב שכל נסיון גזירה יצליח.</p>
+
+<p>קרוב לודאי שחלק מכם תוהים עכשיו למה טרחתי לפצל את כללי הגזירה לשניים, כשבעצם יש לי רק כלל גזירה אחד בשני המקרים – ה”פשוט” וה”מסובך”: הכלל $latex \left(q,A,q_{n+1}\right)\to\sigma\left(q_{1},B_{1},q_{2}\right)\left(q_{2},B_{2},q_{3}\right)\cdots\left(q_{n},B_{n},q_{n+1}\right)$ עם האילוץ ש-$latex p=q_{1}$. המקרה ה”פשוט” מתקבל כאשר $latex n=0$. ובכן, אפשר לעשות את זה כך, אבל לדעתי זה פשוט מבלבל יותר ואני לא רואה בזה טעם. כדאי להזכיר למי ששכח או לא יודע שהרעיון במתמטיקה הוא להיות ברור; לא להיות מינימליסטי. מינימליזם הוא טוב אם הוא מפשט עניינים, אבל אני לא חושב שהוא מטרה בפני עצמה.</p>
+
+<p>בואו נעבור עכשיו להוכחה חצי פורמלית לכך שהבניה עובדת. אני חושב שכאן מאוד מועיל לראות הוכחה כזו כי למרות שאני מקווה שכבר יש לנו אינטואיציה לא רעה לגבי מה הבניה הזו ומאיפה היא הגיעה, עדיין חסר משהו כדי להשתכנע שזה אכן עובד. כזכור, כל מה שנשאר לי להוכיח הוא את הטענה $latex \left(q,A,p\right)\Rightarrow^{*}w\iff\left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$. זו טענת אם-ורק-אם כך שאני צריך להוכיח שני כיוונים. נטפל בכל אחד מהם בנפרד.</p>
+
+<p>נתחיל מכך שנתון $latex \left(q,A,p\right)\Rightarrow^{*}w$ ונוכיח ש-$latex \left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$. כלומר, אם המשתנה $latex \left(q,A,p\right)$ גוזר מילה כלשהי, אז המילה הזו מעבירה את האוטומט מ-$latex q$ אל $latex p$ תוך סילוק $latex A$ מהמחסנית. נוכיח את זה באינדוקציה, וזו הזדמנות טובה לשאול את עצמנו – אינדוקציה על מה? כלל האצבע הוא זה – נסתכל על האובייקט שאת קיומו אנחנו מניחים וממנו אנחנו רוצים להסיק דברים, ונבצע אינדוקציה על מאפיין כלשהו שלו שהולך ונעשה מורכב יותר. כאן האובייקט הנתון הוא <strong>הגזירה</strong> של $latex w$ מתוך המשתנה; הפרמטר יהיה אורך הגזירה. הבסיס הוא גזירה בת צעד אחד, וזה קל – בגזירה בת צעד אחד שגוזרת מילה טרמינלית ממשתנה, צעד הגזירה חייב להיות כזה שלא יוצר משתנים אלא רק טרמינלים, כלומר הוא חייב להיות גזירה מהצורה ה”פשוטה”, $latex \left(q,A,p\right)\to\sigma$. מכאן אנחנו לומדים שני דברים: ש-$latex w=\sigma$, וש-$latex \left(p,\varepsilon\right)\in\delta\left(q,\sigma,A\right)$. מסקנה: $latex \left[q,w,A\right]=\left[q,\sigma,A\right]\vdash\left[p,\varepsilon,\varepsilon\right]$.</p>
+
+<p>נעבור אל צעד האינדוקציה. כאן אנחנו מניחים שהטענה נכונה לכל גזירה מאורך קטן מ-$latex k$ (עבור $latex k\ge2$) ומוכיחים עבור $latex \left(q,A,p\right)\Rightarrow^{k}w$. התעלול הוא לרוב לפרק את הגזירה לצעד ראשון או אחרון, ו”כל היתר” שעליהם אפשר להפעיל את הנחת האינדוקציה. כאן יהיה לנו נוח לפרק לפי הצעד הראשון, שחייב להיות גזירה מהצורה ה”מסובכת”, כי אחרת נקבל מילה טרמינלית אחרי הצעד הראשון ולכן לא ייתכן שהגזירה היא בת שני צעדים או יותר.</p>
+
+<p>כלומר, מתקיים $latex \left(q,A,p\right)\Rightarrow\sigma\left(p,B_{1},q_{2}\right)\left(q_{2},B_{2},q_{3}\right)\cdots\left(q_{n},B_{n},q_{n+1}\right)\Rightarrow^{*}w$ וזה נובע מכך שבאוטומט קיים המעבר $latex \left(p,B_{1}B_{2}\dots B_{n}\right)\in\delta\left(q,\sigma,A\right)$. בגזירה שמתוארת כאן, כל אחד מהמשתנים מתישהו נגזר לגמרי למילה טרמינלית כלשהי; בואו נסמן אותן באופן הבא: $latex \left(q_{i},B_{i},q_{i+1}\right)\Rightarrow^{*}w_{i}$. המסקנה היא ש-$latex w=\sigma w_{1}\cdots w_{n}$, ושניתן להפעיל את הנחת האינדוקציה על כל גזירה מהצורה $latex \left(q_{i},B_{i},q_{i+1}\right)\Rightarrow^{*}w_{i}$ (כי הן בנות פחות מ-$latex k$ צעדים) ולקבל $latex \left[q_{i},w_{i},B\right]\vdash^{*}\left[q_{i+1},\varepsilon,\varepsilon\right]$.</p>
+
+<p>עכשיו נחבר את כל אלו כדי לקבל הוכחה לכך ש-$latex \left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$:</p>
+
+<p>$latex \left[q,w,A\right]=\left[q,\sigma w_{1}\cdots w_{n},A\right]\vdash\left[p,w_{1}\cdots w_{n},B_{1}\dots B_{n}\right]\vdash^{*}$</p>
+
+<p>$latex \vdash^{*}\left[q_{2},w_{2}\cdots w_{n},B_{2}\cdots B_{n}\right]\vdash^{*}\left[q_{n},w_{n},B_{n}\right]\vdash^{*}\left[q_{n+1},\varepsilon,\varepsilon\right]$</p>
+
+<p>וקיבלנו את המבוקש. זה מסיים את הכיוון הזה של ההוכחה.</p>
+
+<p>הכיוון השני דומה באופיו אבל אני אנפנף בו קצת יותר בידיים. הפעם נתון לי $latex \left[q,w,A\right]\vdash^{*}\left[p,\varepsilon,\varepsilon\right]$ ואני רוצה להוכיח ש-$latex \left(q,A,p\right)\Rightarrow^{*}w$ – ושוב, אעשה זאת באינדוקציה, הפעם על אורך החישוב באוטומט. אם החישוב הוא בן צעד בודד, אז הצעד הזה חייב להיות מהצורה $latex \left(p,\varepsilon\right)\in\delta\left(q,\sigma,A\right)$ (אחרת לא היה אפשר לרוקן את $latex A$ מהמחסנית) ו-$latex w=\sigma$. מסקנה: בדקדוק שבנינו קיים הכלל $latex \left(q,A,p\right)\rightarrow\sigma$ וקיבלנו ש-$latex \left(q,A,p\right)\Rightarrow^{*}\sigma=w$. יופי, זה היה קל.</p>
+
+<p>עכשיו לצעד: נניח שהטענה נכונה לכל חישוב מאורך קטן מ-$latex k$. ונוכיח עבור חישוב באורך $latex k$ כאשר $latex k\ge2$. אם $latex \left[q,w,A\right]\vdash^{k}\left[p,\varepsilon,\varepsilon\right]$ אז נוח לפרק על פי הצעד הראשון, שחייב להיות כזה ש<strong>לא</strong> מרוקן את המחסנית (אחרת לא היה אחריו עוד צעד). כלומר, הצעד הראשון משתמש במעבר מהצורה $latex \left(q_{1},B_{1}B_{2}\dots B_{n}\right)\in\delta\left(q,\sigma,A\right)$, ולכן החישוב מתחיל כך: $latex \left[q,w,A\right]\vdash\left[q_{1},w^{\prime},B_{1}\cdots B_{n}\right]$, כאשר $latex w=\sigma w^{\prime}$. כאן מגיע נפנוף הידיים.</p>
+
+<p>מה שאני אומר הוא זה: אני יודע שמהקונפיגורציה $latex \left[q_{1},w^{\prime},B_{1}\cdots B_{n}\right]$ החישוב נמשך עד שהוא מסתיים בקונפיגורציה $latex \left[p,\varepsilon,\varepsilon\right]$. בפרט, המחסנית ריקה בסוף וסיימנו לקרוא את כל $latex w^{\prime}$. מכיוון שהמחסנית ריקה, היה חייב להיות רגע שבו $latex B_{2}$ נחשף לראשונה (כלומר, בניסוח הלא פורמלי שהשתמשתי בו עד כה, רגע שבו “$latex B_{1}$ מוסר מהמחסנית”). וכמו כן חייב להיות רגע שבו $latex B_{3}$ נחשף, וכן הלאה, עד הרגע האחרון, שבו המחסנית מתרוקנת.</p>
+
+<p>אם כן, אני אפרק את $latex w^{\prime}$ בהתאם לרגעים הללו: $latex w_{1}$ הוא כל מה שהאוטומט קרא עד לרגע שבו $latex B_{2}$ נחשף, ו-$latex w_{2}$ הוא כל מה שהאוטומט קרא עד לרגע שבו $latex B_{3}$ נחשף, וכן הלאה. כמו כן, אני אקרא בשם $latex q_{2}$ למצב שאליו מגיעים בדיוק כש-$latex B_{2}$ נחשף, וכן הלאה. שימו לב לכך ש-$latex w^{\prime}=w_{1}\cdots w_{n}$.</p>
+
+<p>אם כן, הסימונים שנתתי מתארים את הסיטואציה הבאה: $latex \left[q_{i},w_{i}w_{i+1}\cdots w_{n},B_{i}B_{i+1}\cdots B_{n}\right]\vdash^{*}\left[q_{i+1},w_{i+1}\cdots w_{n},B_{i+1}\cdots B_{n}\right]$. כעת לנפנוף הידיים האחרון: מכיוון שבחישוב הזה אין ל-$latex w_{i+1}\cdots w_{n}$ שום השפעה (כי עוד לא הגענו לחלק הזה בקלט) וכמו כן גם ל-$latex B_{i+1}\cdots B_{n}$ אין שום השפעה (כי האוטומט לא רואה אותם בשום שלב של החישוב – כאן קריטית לגמרי העובדה שאני מסיים את החלק הזה של החישוב בדיוק כאשר $latex B_{i+1}$ נחשף <strong>לראשונה</strong>), הרי שאפשר פשוט להתעלם מהם – כלומר, מתקיים $latex \left[q_{i},w_{i},B_{i}\right]\vdash^{*}\left[q_{i+1},\varepsilon,\varepsilon\right]$. וזה מצויין עבורי, כי על הדבר הזה אפשר להשתמש בהנחת האינדוקציה – הוא מהצורה המתאימה (אני מסיים בקונפיגורציה שבה הקלט שנותר והמחסנית שניהם ריקים) והוא מתאר חישוב באורך קטן מ-$latex k$ (כי הוא חלק מחישוב באורך $latex k$ בלי הצעד הראשון של אותו חישוב). קיבלנו ש-$latex \left(q_{i},B_{i},q_{i+1}\right)\Rightarrow^{*}w_{i}$ לכל $latex 1\le i\le n$.</p>
+
+<p>כעת אפשר לסיים על ידי הצגת גזירה של $latex w$:</p>
+
+<p>$latex \left(q,A,p\right)\Rightarrow\sigma\left(q_{1},B_{1},q_{2}\right)\cdots\left(q_{n},B_{n},q_{n+1}\right)\Rightarrow^{*}\sigma w_{1}w_{2}\cdots w_{n}=\sigma w^{\prime}=w$</p>
+
+<p>וזה מסיים את הכיוון השני של ההוכחה, ואת ההוכחה כולה.</p>
+
+<p>לסיכום, עכשיו יש לנו שתי דרכים שונות לתאר בהן שפות חסרות הקשר – או על ידי דקדוק, או על ידי אוטומט. באופן לא מפתיע, אני הולך להמשיך להשתמש בדקדוקים רוב הזמן כי זה יותר נוח, אבל פה ושם יש דברים שאוטומט יותר נוח עבורם וטוב שיש לנו בחירה. בפרט, כשאתם נתקלים בשפה ותוהים בינכם לבין עצמכם אם היא חסרת הקשר או לא (ולמי מאיתנו זה לא קרה?), הרבה פעמים במקום לנסות להמציא דקדוק עבור השפה נוח לחשוב בצורה “אלגוריתמית” על האופן שבו אוטומט מחסנית יקבל אותה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2015/03/31/pushdown_automata_cfg_equiv/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

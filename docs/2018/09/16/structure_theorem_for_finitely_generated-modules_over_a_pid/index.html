@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט המבנה למודולים נוצרים סופית מעל תחום ראשי | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט המבנה למודולים נוצרים סופית מעל תחום ראשי" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בשעה טובה הגעתי אל עוד אחת מנקודות השיא בסדרת פוסטי האלגברה המופשטת שלי – נקודת השיא האחרונה שאני מתכנן להגיע אליה בסדרה הזו. בפוסט הזה אני מתכנן להציג את המשפט ולהסביר את הרעיונות הכלליים של ההוכחה; אני אשאיר פרטים מלאים לפוסטים הבאים." />
+<meta property="og:description" content="בשעה טובה הגעתי אל עוד אחת מנקודות השיא בסדרת פוסטי האלגברה המופשטת שלי – נקודת השיא האחרונה שאני מתכנן להגיע אליה בסדרה הזו. בפוסט הזה אני מתכנן להציג את המשפט ולהסביר את הרעיונות הכלליים של ההוכחה; אני אשאיר פרטים מלאים לפוסטים הבאים." />
+<link rel="canonical" href="http://localhost:4000/blog/2018/09/16/structure_theorem_for_finitely_generated-modules_over_a_pid/" />
+<meta property="og:url" content="http://localhost:4000/blog/2018/09/16/structure_theorem_for_finitely_generated-modules_over_a_pid/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-16T14:08:26+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2018-09-16T14:08:26+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/09/16/structure_theorem_for_finitely_generated-modules_over_a_pid/"},"url":"http://localhost:4000/blog/2018/09/16/structure_theorem_for_finitely_generated-modules_over_a_pid/","author":{"@type":"Person","name":"gadial"},"description":"בשעה טובה הגעתי אל עוד אחת מנקודות השיא בסדרת פוסטי האלגברה המופשטת שלי – נקודת השיא האחרונה שאני מתכנן להגיע אליה בסדרה הזו. בפוסט הזה אני מתכנן להציג את המשפט ולהסביר את הרעיונות הכלליים של ההוכחה; אני אשאיר פרטים מלאים לפוסטים הבאים.","headline":"משפט המבנה למודולים נוצרים סופית מעל תחום ראשי","dateModified":"2018-09-16T14:08:26+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט המבנה למודולים נוצרים סופית מעל תחום ראשי</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-16T14:08:26+03:00" itemprop="datePublished">Sep 16, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בשעה טובה הגעתי אל עוד אחת מנקודות השיא בסדרת פוסטי האלגברה המופשטת שלי – נקודת השיא האחרונה שאני מתכנן להגיע אליה בסדרה הזו. בפוסט הזה אני מתכנן להציג את המשפט ולהסביר את הרעיונות הכלליים של ההוכחה; אני אשאיר פרטים מלאים לפוסטים הבאים.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>נתחיל עם ניסוח מפורש של מה המשפט אומר, כדי שלא יצא שאני מדבר הרבה באוויר עוד לפני שראינו את העיקר. המשפט אומר כך: אם (M) הוא מודול נוצר סופית מעל תחום ראשי (R) (את כל המושגים הללו הסברתי בפוסטים קודמים), אז (M) איזומורפי למודול מהצורה (R^{n}\times R/\left\langle a_{1}\right\rangle \times R/\left\langle a_{2}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle ) כך ש-(a_{1},\dots,a_{m}\in R) הם איברים שונים מאפס שאינם הפיכים ומקיימים את יחס החלוקה הבאה: (a_{1}</td>
+      <td>a_{2}</td>
+      <td>a_{3}</td>
+      <td>\dots</td>
+      <td>a_{n}). המודול הזה הוא <strong>יחיד</strong>: כלומר, אם (M) איזומורפי גם למודול מהצורה (R^{n^{\prime}}\times R/\left\langle b_{1}\right\rangle \times R/\left\langle b_{2}\right\rangle \times\dots\times R/\left\langle b_{m^{\prime}}\right\rangle ) אז (n=n^{\prime}) ו-(m=m^{\prime}) ו-(a_{i}=b_{i}) לכל (1\le i\le m).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>עכשיו בואו ננסה להבין מה הולך פה באמצעות שתי דוגמאות.</p>
+
+<p>ראשית, <strong>מרחבים וקטוריים</strong>. מרחב וקטורי, כזכור, הוא “בסך הכל” מודול מעל שדה (F). שדה הוא בפרט תחום ראשי, ואחד טריוויאלי – האידאלים היחידים של (F) הם (\left\langle 0\right\rangle =\left{ 0\right} ) ו-(\left\langle 1\right\rangle =F). אחת מהתוצאות הבסיסיות באלגברה לינארית היא שאם מרחב וקטורי (V) הוא נוצר סופית (יש לו <strong>קבוצה פורשת</strong> שהיא סופית) אז קיים לו <strong>בסיס</strong> – קבוצה שהיא בו זמנית פורשת ובלתי תלויה לינארית. בהינתן בסיס, כל איבר של (V) ניתן לכתיבה בתור צירוף לינארי <strong>יחיד</strong> של אברי הבסיס (היחידות נובעת מכך שהבסיס בלתי תלוי לינארית), וזה מאפשר לזהות כל איבר של (V) עם “וקטור הקואורדינטות” שלו – וקטור של סקלרים שמתארים מה המקדמים בצירוף הלינארי של אברי הבסיס שנותן את האיבר הזה. ההתאמה הזו בין איבר של (V) ווקטור הקואורדינטות שלו נותנת לנו איזומורפיזם (V\cong F^{n}) כאשר (n) הוא גודלו של הבסיס.</p>
+
+<p>זה גם, כמובן, מה שמשפט המבנה שהצגתי למעלה נותן לנו – עבור שדה <strong>לא קיים</strong> איבר (a) שהוא גם שונה מאפס וגם לא הפיך, ולכן הדרך היחידה להציג את המרחב הוקטורי בתור (R^{n}\times R/\left\langle a_{1}\right\rangle \times R/\left\langle a_{2}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle ) היא שלא יהיו בכלל איברים (a_{1},\dots,a_{m}) שכאלה – המרחב יהיה איזומורפי ל-(R^{n}), ובמקרה שלנו (R=F). זה מבהיר לנו למה משפט המבנה הזה עובר לנו מעל לראש כשאנחנו לומדים אלגברה לינארית ואנחנו לא שומעים עליו אפילו ברמז – התוכן ה”מעניין” שלו – החלק עם ה-(a_{1},\dots,a_{n}) – הוא פשוט <strong>לחלוטין לא רלוונטי</strong> במרחבים וקטוריים.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>איפה התוכן הזה כן רלוונטי? הזכרתי שני מקרים עיקריים, אחד של חבורות אבליות והשני של “מרחבים וקטוריים עם טרנספורמציה לינארית שפועלת עליהם”. נתחיל מהמקרה של חבורות אבליות, שהוא פשוט יותר. כזכור, כל חבורה אבלית (G) היא (\mathbb{Z})-מודול עבור המודול (M=G), כשכפל איבר (g\in G) ב-(a\in\mathbb{Z}) זה פשוט לחבר את (g) עם עצמו (a) פעמים. עכשיו, (\mathbb{Z}/\left\langle a\right\rangle \cong\mathbb{Z}_{a}) כאשר (\mathbb{Z}_{a}) הוא אוסף המספרים (0,1,\dots,a-1) עם חיבור וכפל מודולו (a). המסקנה היא שכל חבורה אבלית נוצרת סופית היא מהצורה (\mathbb{Z}^{n}\times\mathbb{Z}_{a_{1}}\times\dots\times\mathbb{Z}_{a_{m}}) עם יחס החלוקה (a_{1}</td>
+      <td>\dots</td>
+      <td>a_{m}). במשפט הזה כבר השתמשתי לא מעט בבלוג, ללא הוכחה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>המשפט הזה מעניין כי הוא מראה שכל חבורה אבלית נוצרת סופית היא מכפלה סופית של חבורות <strong>ציקליות</strong>. יש את החבורה הציקלית האינסופית היחידה (\mathbb{Z}) שמשתתפת במכפלה (n) פעמים, ויש את החלק “המסובך יותר”, (\mathbb{Z}_{a_{1}}\times\dots\times\mathbb{Z}_{a_{m}}), שמככבות בו חבורות ציקליות סופיות. בואו נסתכל לרגע על חבורה לדוגמא שכזו, (\mathbb{Z}<em>{a}). היא כאמור ציקלית עם היוצר (1) (כאשר (1) הוא איבר היחידה <strong>הכפלי</strong> בחוג (\mathbb{Z}) שמעליו אנחנו עובדים), והיא בעלת התכונה ש-(ax=0) לכל (x\in\mathbb{Z}_{a}) – במקרה הנוכחי זו מסקנה מיידית ממשפט לגראנז’. זה אומר שאם נחשוב לרגע על (\mathbb{Z}_{a}) בתור (\mathbb{Z})-מודול, אז (a\in\mathbb{Z}) הוא בעל התכונה ש-(a\mathbb{Z}</em>{a}=\left{ 0\right} ). איבר כזה נקרא <strong>מאפס</strong> של המודול. כדי להשלים את הצגת המושגים, כל החלק (\mathbb{Z}_{a_{1}}\times\dots\times\mathbb{Z}_{a_{m}}) נקרא <strong>הפיתול</strong> (Torsion) של (\mathbb{Z}^{n}); הוא כולל בדיוק את כל האיברים שהסדר שלהם סופי, כלומר שיש איבר שונה מאפס של (\mathbb{Z}) שמאפס אותם.</p>
+
+<p>שני המושגים הללו – מאפס ופיתול – מספיק חשובים כדי שאגדיר אותם עכשיו במפורש: נניח ש-(M) הוא (R)-מודול ו-(N\subseteq M) הוא תת-מודול שלו, אז נגדיר את <strong>המאפס</strong> של (N) בתור</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(\text{Ann}\left(N\right)=\left{ r\in R\</td>
+      <td>\ \forall n\in N:rn=0\right} )</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כמו כן נגדיר את ה<strong>פיתול</strong> של (M) בתור</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(\text{Tor}\left(M\right)=\left{ a\in M\</td>
+      <td>\ \exists0\ne r\in R:ra=0\right} )</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>קל להראות שהפיתול הוא תת-מודול <strong>בתנאי</strong> שהחוג (R) הוא קומוטטיבי (הנחה שאנחנו דבקים בה בקנאות בשלב הזה). כל תת-מודול של הפיתול נקרא, ובכן, <strong>מודול פיתול</strong> (שימו לב להבדל! אין את ה’ הידיעה!) של (M), ואומרים על (M) שהוא <strong>חופשי מפיתול</strong> אם (\text{Tor}\left(M\right)=\left{ 0\right} ).</p>
+
+<p>נחזור עכשיו לענייננו – להבין יותר טוב מה משפט המבנה אומר. עכשיו קצת יותר קל לתאר את (R^{n}\times R/\left\langle a_{1}\right\rangle \times R/\left\langle a_{2}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle ): כל תת-מודול מהצורה (N=R/\left\langle a\right\rangle ) הוא <strong>מודול פיתול</strong>, כי (aN=\left{ 0\right} ) (שכן ה-(0) בתוך החוג (R/\left\langle a\right\rangle ) הוא אוסף כל האיברים של (R) שמתחלקים ב-(a)). זה גם מראה ש-(a\in\text{Ann}\left(N\right)), ולא קשה להוכיח ש-(\text{Ann}\left(N\right)=\left\langle a\right\rangle ) (זו כמעט ההגדרה), כלומר (a) הוא המאפס “הכי חשוב” של (N).</p>
+
+<p>כלומר, גם באופן כללי, משפט המבנה מחלק את המודול לחלק שהוא <strong>חסר פיתול</strong>, (R^{n}) (זה חלק חסר פיתול כי כפל של איבר ב-(R^{n}) באיבר מ-(R) לא יכול לאפס כלום; זאת מאחר ו-(R) תחום שלמות), ולחלק של הפיתול (R/\left\langle a_{1}\right\rangle \times R/\left\langle a_{2}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle ) שעליו אפשר לומר איזו תכונת התחלקות מעניינת לגבי <strong>המאפסים</strong> של תתי-המודולים המוכפלים. יותר מכך – כל תתי-המודולים הללו הם <strong>ציקליים</strong>. נזכיר מה זה ציקלי: (N) הוא (R)-מודול צקלי אם קיים (a\in N) כך ש-(Ra=N) ו-(a) נקרא <strong>יוצר</strong>. במקרה הנוכחי, (1\in R/\left\langle a\right\rangle ) הוא יוצר שכזה (למעשה צריך לכתוב (1+\left\langle a\right\rangle ) אבל נעזוב את זה) – זה בדיוק מה שראינו עם החבורות (\mathbb{Z}_{a}) קודם.</p>
+
+<p>עכשיו בואו ונראה איך זה בא לידי ביטוי במקרה השני שעבורו אנחנו כאן – מרחבים וקטוריים עם טרנספורמציה לינארית מעליהם. כזכור, הרעיון הוא זה: יהא (V) מרחב וקטורי סוף-ממדי מעל שדה (F) ותהא (T:V\to V) טרנספורמציה לינארית כלשהי, אז (V) הוא (F\left[x\right]) מודול עם הפעולה הבאה: (p\left(x\right)\cdot v\triangleq p\left(T\right)\left(v\right)). כעת, (F\left[x\right]) הוא תחום ראשי כי הוא תחום אוקלידי (הדמיון שלו ל-(\mathbb{Z}) גדול), ו-(V) הוא בוודאי נוצר סופית מעל (F\left[x\right]) כי הוא סוף ממדי כבר מעל (F). לכן אפשר להשתמש במשפט המיון ולקבל ש-</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>(V\cong\left(F\left[x\right]\right)^{n}\times F\left[x\right]/\left\langle a_{1}\left(x\right)\right\rangle \times\dots\times F\left[x\right]/\left\langle a_{m}\left(x\right)\right\rangle ) עם יחסי החלוקה (a_{1}\left(x\right)</td>
+      <td>\dots</td>
+      <td>a_{m}\left(x\right)).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ראשית כל, תשכחו מהרכיב (\left(F\left[x\right]\right)^{n}) במכפלה הזו. הוא לא קיים. הרכיב הזה זר לפיתול, אבל <strong>כל</strong> (V) הוא פיתול אחד גדול, בגלל <strong>משפט קיילי-המילטון</strong>. המשפט הזה קובע, כזכור, שלכל טרנספורמציה לינארית (V) מעל מרחב סוף-ממדי קיים פולינום שמאפס אותה; “הפולינום האופייני” שלה (קיילי-המילטון זה יותר מדי; אפשר גם להשתמש בכך שמרחב הטרנספורמציות הוא סוף ממדי ולכן אם ניקח מספיק חזקות של (T) הן יהיו תלויות לינארית, אבל זה פחות מרשים מלומר <strong>קיילי-המילטון</strong> באותיות גדולות). אם (p\left(x\right)) הוא הפולינום האופייני הזה, הרי ש-(p\left(x\right)\cdot V=\left{ 0\right} ) וסיימנו. לכן הצורה של (V) היא בסך הכל</p>
+
+<p>(V\cong F\left[x\right]/\left\langle a_{1}\left(x\right)\right\rangle \times\dots\times F\left[x\right]/\left\langle a_{m}\left(x\right)\right\rangle )</p>
+
+<p>עכשיו, בואו ננסה להבין רכיב מהצורה (F\left[x\right]/\left\langle a\left(x\right)\right\rangle ). היצור הזה הוא חוג הפולינומים ממעלה קטנה מזו של (a\left(x\right)). נניח שהמעלה הזו היא (n), אז אם אני חושב על (F\left[x\right]/\left\langle a\left(x\right)\right\rangle ) בתור מרחב וקטורי מעל (F), אז בסיס שלו הוא (1,x,x^{2},\dots,x^{n-1}). עכשיו, אפשר לבדוק איזה איבר מותאם ל-(1) הזה של (F\left[x\right]/\left\langle a\left(x\right)\right\rangle ) באיזומורפיזם בין (V) לבין (\left\langle a_{1}\left(x\right)\right\rangle \times\dots\times F\left[x\right]/\left\langle a_{m}\left(x\right)\right\rangle ). בואו נקרא לאיבר הזה (w); אז האיבר (x) מותאם למה שמתקבל מ-(w) אחרי שמכפילים אותו ב-(x); כזכור, “כפל ב-(x)” בתוך המודול (V) פירושו הפעלה של (T), ועל כן (x) מותאם אל (T\left(w\right)). בדומה (x^{2}) מותאם אל (T^{2}\left(w\right)) וכן הלאה; אנחנו מקבלים ש-(F\left[x\right]/\left\langle a\left(x\right)\right\rangle ) איזומורפי <strong>כמרחב וקטורי</strong> מעל (F) למרחב שנוצר על ידי (\left{ w,T\left(w\right),T^{2}\left(w\right),\dots,T^{n-1}\left(w\right)\right} ). אני אסמן את המרחב הזה בתור (Z\left(w;T\right)). המסקנה שהגעתי אליה היא שאני יכול לכתוב</p>
+
+<p>(V\cong Z\left(w_{1};T\right)\oplus\dots\oplus Z\left(w_{m};T\right))</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ויותר מכך – אם אני מסמן את <strong>המאפסים</strong> של ה-(w_{i})-ים הללו בתור (a_{i})-ים, יש לי את יחס החלוקה (a_{1}</td>
+      <td>\dots</td>
+      <td>a_{m}).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>הדבר הזה הוא מה שנקרא באלגברה לינארית <strong>משפט הפירוק הציקלי</strong> והקדשתי לו בעבר פוסט <a href="https://gadial.net/2016/09/29/cyclic_decomposition_theorem/">ארוך וקשה למדי</a>. הבטחתי שם ש”אפשר לעשות את זה גם עם מודולים” ועכשיו אנחנו מגיעים אל ההבטחה, אבל חשוב לי שנראה שכבר הגענו אל נקודת החיבור שלנו אל האלגברה הלינארית.</p>
+
+<p>יפה, ראינו איך משפט המבנה שימושי ואני מקווה שעל הדרך הבנו קצת יותר טוב מה הוא אומר – אבל איך מוכיחים אותו? הנה הרעיון הכללי. נניח ש-(M) הוא (R)-מודול נוצר סופית. זה אומר שקיימת לו קבוצת יוצרים (x_{1},\dots,x_{n}) מגודל מינימלי. אם לא היו שום קשרים לינאריים מעניינים בין היוצרים, היינו מקבלים ש-(M) הוא פשוט <strong>מודול חופשי</strong>; כל הרעיון במשפט המבנה הוא לתת הצגה “קנונית” לקשרים הלינאריים המעניינים. אז מה שנעשה הוא לקחת את המודול החופשי (R^{n}) מעל (R), לנסות ליצור איזומורפיזם בינו ובין (M) ולבדוק “מה בדיוק משתבש”.</p>
+
+<p>המודול (R^{n}) נוצר על ידי איברים מהצורה (\left(0,0,\dots,0,1,0,\dots,0\right)) שהם 0 בכל מקום למעט המקום ה-(i). אסמן ב-(b_{i}) איבר כזה. אז קל לבנות הומומורפיזם (\varphi:R^{n}\to M) על ידי (\varphi\left(b_{i}\right)=x_{i}). על פי משפט האיזומורפיזם הראשון, (M\cong R^{n}/\ker\varphi), כך שלב העניין מבחינתנו יהיה ההבנה של המבנה של (\ker\varphi). שימו לב לכך ש-(\ker\varphi) הוא תת-חוג של (R^{n}) ולכן הוא בפרט <strong>תת-מודול</strong> של (R^{n}). ה-(\ker\varphi) הזה מייצג את “מה בדיוק השתבש”, ולכן השאלה שלנו הפכה להיות – אם (R) הוא תחום ראשי, איך נראה תת-מודול של מודול <strong>חופשי</strong>?</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>התשובה לשאלה <strong>הזו</strong> היא עיקר העבודה הטכנית שלנו וההוכחה שלה תידחה לפוסט הבא, אבל הנה המסקנה: אם (M) הוא מודול חופשי מדרגה (n) ו- (N\subseteq M) הוא תת-מודול של (M) אז גם (N) חופשי, ואפשר למצוא ל-(N) בסיס “נחמד” במובן הבא: קיים בסיס (y_{1},\dots,y_{n}) של (M) וקיימים איברים שונים מאפס (a_{1},\dots,a_{m}\in R) כך ש-(a_{1}</td>
+      <td>\dots</td>
+      <td>a_{m}) כך ש-(a_{1}y_{1},\dots,a_{m}y_{m}) הוא בסיס של (N). זהו. בשורה הקצרה הזו מתחבא עיקר הקושי של המשפט.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כשאנחנו מצויידים במשפט הזה, אפשר להמשיך: (R^{n}=Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}) ואילו (\ker\varphi=Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m}). לכן אנחנו מקבלים:</p>
+
+<p>(M\cong\left(Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}\right)/\left(Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m}\right))</p>
+
+<p>זה בינתיים לא נראה ברור יותר במיוחד, אז בואו ננסה למצוא הומומורפיזם <strong>על</strong> מ-(Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}) לאיזה שהוא מודול כך שהגרעין יוצא בדיוק (Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m}). האינטואיציה כאן דווקא לא קשה: אפשר לחשוב על כל איבר של (Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}) בתור (r_{1}y_{1}+\dots+r_{n}y_{n}), או בסימון אחר (\left(r_{1},r_{2},\dots,r_{n}\right)) ואנחנו בוחרים לאן לשלוח אותו בהתאם למקדמים (r_{i}) הללו. המשמעות של “הגרעין הוא (Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m})” היא שצריך ש-(r_{1}) יישלח אל (0) אם ורק אם (r_{1}\in\left\langle a_{1}\right\rangle ), (r_{2}\in\left\langle a_{2}\right\rangle ) וכדומה עד ל-(r_{m}\in\left\langle a_{m}\right\rangle ). אז מתבקש לשלוח את הקואורדינטה ה-(i)-ית אל (R/\left\langle a_{i}\right\rangle ). ומה עם (r_{k}) עבור (k&gt;m)? אני לא רוצה שהקואורדינטות הללו ישתתפו בגרעין, כלומר שכל איבר בגרעין יהיה מהצורה (\left(r_{1},r_{2},\dots,r_{m},0,0,\dots,0\right)). לכן אני <strong>חייב</strong> לשלוח את הקואורדינטות הללו למודול חופשי מעל (R); נשלח כל קואורדינטה כזו ל-(R) עצמו אחרת לא נקבל הומומורפיזם על.</p>
+
+<p>נסכם: אני מגדיר הומומורפיזם (\psi:Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}\to R/\left\langle a_{1}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle \times R^{n-m}) על ידי “הטלה”: (\psi\left(r_{1},\dots,r_{n}\right)=\left(r_{1}+\left\langle a_{1}\right\rangle ,\dots,r_{m}+\left\langle a_{m}\right\rangle ,r_{m+1},\dots,r_{n}\right)). קל להוכיח ש-(\ker\psi=Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m}) ולכן מקבלים</p>
+
+<p>(\left(Ry_{1}\oplus Ry_{2}\oplus\dots\oplus Ry_{n}\right)/\left(Ra_{1}y_{1}\oplus\dots\oplus Ra_{m}y_{m}\right)\cong R/\left\langle a_{1}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle \times R^{n-m})</p>
+
+<p>כלומר</p>
+
+<p>(M\cong R/\left\langle a_{1}\right\rangle \times\dots\times R/\left\langle a_{m}\right\rangle \times R^{n-m})</p>
+
+<p>וזה מסיים את חלק ה<strong>קיום</strong> של המשפט. עדיין לא הוכחתי שהמבנה הזה הוא <strong>יחיד</strong>. אבל לפני שאני עושה את זה, אני רוצה להראות <strong>עוד ניסוח</strong> של משפט המבנה; ניסוח שיעזור לי מאוד בהוכחת הקיום והוא שימושי מאוד בפני עצמו.</p>
+
+<p>הניסוח הולך כך: אם (M) הוא מודול נוצר סופית מעל תחום ראשי (R), אז</p>
+
+<p>(M\cong R^{n}\times R/\left\langle p_{1}^{k_{1}}\right\rangle \times R/\left\langle p_{2}^{k_{2}}\right\rangle \times\dots\times R/\left\langle p_{m}^{k_{m}}\right\rangle )</p>
+
+<p>כאשר (p_{1},p_{2},\dots,p_{m}\in R) הם איברים <strong>ראשוניים</strong> ב-(R) (לא בהכרח שונים זה מזה!), ו-(k_{1},k_{2},\dots,k_{m}) הם מספרים טבעיים חיוביים (לא בהכרח שונים זה מזה!). יותר מכך – הפירוק הזה הוא יחיד עד כדי שינוי סדר, כלומר כל איזומורפיזם נוסף של (M) למודול מהצורה הזו יכלול בדיוק את הרכיבים (n,\left\langle p_{1}^{k_{1}}\right\rangle ,\dots,\left\langle p_{m}^{k_{m}}\right\rangle ).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>הניסוח הקודם של המשפט השתמש באיברים (a_{1}</td>
+      <td>a_{2}</td>
+      <td>\dots</td>
+      <td>a_{m}). האיברים הללו נקראים <strong>הגורמים האינוריאנטיים</strong> של המודול. הניסוח הנוכחי משתמש באיברים (p_{1}^{k_{1}},\dots,p_{m}^{k_{m}}) שנקראים <strong>המחלקים האלמנטריים</strong> של המודול. להבדיל מהגורמים האינוריאנטיים אנחנו לא דורשים עליהם יחסי חלוקה כלשהם, אבל כן דורשים את דרישת ה<strong>ראשוניות</strong> של האיברים בבסיס של החזקה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כמקודם, הדרך הטובה לקבל אינטואיציה כאן היא להסתכל על המקרה הפרטי של חבורות. בואו נתחיל ממשהו ממש פשוט: (\mathbb{Z}_{6}). זו חבורה ציקלית, והייצוג שלה בשיטת הגורמים האינוריאנטיים הוא פשוט (\mathbb{Z}_{6}) עצמה (כלומר: יש גורם אינוריאנטי יחיד: (a_{1}=6)). לעומת זאת, זה <strong>אינו</strong> הייצוג שלה בשיטת המחלקים האלמנטריים, כי (6) איננו ראשוני ב-(\mathbb{Z}). אנחנו יודעים ש-(\mathbb{Z}_{6}\cong\mathbb{Z}_{2}\times\mathbb{Z}_{3}), ולכן אלו הם המחלקים האלמנטריים: (2^{1},3^{1}). אלו שתי הצגות שונות לאותה חבורה בתור מכפלה של חבורות ציקליות, כשכל אחד מההצגות הללו היא “קנונית” במובן מסויים.</p>
+
+<p>הנה דוגמא יותר מבלבלת: (\mathbb{Z}_{4}) היא חבורה ציקלית ולכן זהו הייצוג שלה בשיטת הגורמים האינוריאנטיים, אבל 4 אינו ראשוני – אז האם הייצוג בשיטת המחלקים האלמנטריים הוא (\mathbb{Z}_{2}\times\mathbb{Z}_{2})? ובכן, <strong>לא</strong>! (\mathbb{Z}_{4}) היא חבורה שונה מ-(\mathbb{Z}_{2}\times\mathbb{Z}_{2}) שכלל אינה ציקלית. למעשה, מכיוון ש-(4=2^{2}) הרי ש-(\mathbb{Z}_{4}) הוא גם הייצוג של החבורה הזו בשיטת המחלקים האלמנטריים. כמו כן, (\mathbb{Z}_{2}\times\mathbb{Z}_{2}) מיוצגת הן בשיטת המחלקים האלמנטריים והן בשיטת הגורמים האינוריאנטיים על ידי (\mathbb{Z}_{2}\times\mathbb{Z}_{2}). בואו נכתוב את המספרים עבור שתי החבורות:</p>
+
+<ul>
+  <li>(\mathbb{Z}_{4}): גורמים אינוריאנטיים: (4). מחלקים אלמנטריים: (2^{2}).</li>
+  <li>(\mathbb{Z}_{2}\times\mathbb{Z}_{2}): גורמים אינוריאנטיים: (2,2). מחלקים אלמנטריים: (2^{1},2^{1}).</li>
+</ul>
+
+<p>הסיטואציה הולכת ומסתבכת ככל שגודל החבורות שלנו גדל. בואו נדבר על חבורות אבליות מסדר 36. מהן הסדרות האפשריות של גורמים אינוריאנטיים עבורן? מכיוון שכל גורם אינוריאנטי מייצג חבורה אחרת במכפלה, המכפלה של כל הגורמים האינוריאנטיים צריכה להיות 36. עכשיו, (36=4\cdot9) אבל (4,9) היא לא סדרה חוקית של גורמים אינוריאנטיים כי 4 לא מחלק את 9. אפשר לשבת ולחשב ידנית את כל הסדרות החוקיות של גורמים אינוריאנטיים – הנה הן:</p>
+
+<ul>
+  <li>(36)</li>
+  <li>2,18</li>
+  <li>(3,12)</li>
+  <li>(6,6)</li>
+</ul>
+
+<p>אבל לא מצאתי את הסדרות הללו בשום דרך מתוחכמת – פשוט ניסוי וטעיה. האם אין משהו עמוק יותר? ובכן, אפשר אולי להתחיל דווקא מהמחלקים האלמנטריים. מכיוון ש-(36=2^{2}\cdot3^{2}), לכל אחד משני הראשוניים יש לנו שתי אפשרויות, ובסך הכל נקבל ארבע:</p>
+
+<ul>
+  <li>(2,2,3,3)</li>
+  <li>(2^{2},3,3)</li>
+  <li>(2,2,3^{2})</li>
+  <li>(2^{2},3^{2})</li>
+</ul>
+
+<p>כל אחת מהסדרות של מחלקים אינוריאנטיים מתאימה לאחת מהסדרות של מחלקים אלמנטריים, אבל מי מתאימה למי? למשל, עבור (2,2,3,3): כפי שהזכרתי קודם, (\mathbb{Z}_{6}\cong\mathbb{Z}_{2}\times\mathbb{Z}_{3}), כך שאם אפריד את המחלקים האלמנטריים לשני זוגות: (\left(2,3\right),\left(2,3\right)) אראה שקיבלתי בסך הכל את (\mathbb{Z}_{6}\times\mathbb{Z}_{6}), כלומר את סדרת המחלקים האינוריאנטיים (6,6). באופן דומה את (2^{2},3,3) אני יכול לחלק ל-(\left(2^{2},3\right),\left(3\right)) ולקבל את המחלקים (3,12), את (2,2,3^{2}) אהפוך ל-(\left(2,3^{2}\right),\left(2\right)) ואקבל את (2,18) ומ-(2^{2},3^{2}) אקבל את 36. <strong>אבל מה בעצם הרעיון המנחה הכללי פה</strong>?</p>
+
+<p>מילת המפתח שאנחנו נזקקים לה היא <strong>משפט השאריות הסיני</strong>. לא כללתי את משפט השאריות הסיני בסדרת הפוסטים הנוכחית <a href="https://gadial.net/2012/09/12/chinese_remainder_theorem/">כי כבר יש לי פוסט</a> עליו ועד כה לא נזקקתי לו במפורש. נתחיל עם הניסוח שלו עבור חבורות שרלוונטי לנו כרגע: אם (n=a_{1}a_{2}\cdots a_{k}) כך שכל ה-(a)-ים זרים בזוגות, אז (\mathbb{Z}_{n}\cong\mathbb{Z}_{a_{1}}\times\dots\times\mathbb{Z}_{a_{k}}). האיזומורפיזם (\mathbb{Z}_{6}\cong\mathbb{Z}_{2}\times\mathbb{Z}<em>{3}) הוא מקרה פרטי של המשפט הזה. יותר מכך – אפשר להראות שאם ה-(a)-ים <strong>לא</strong> זרים, אז אין איזומורפיזם. למשל, (\mathbb{Z}_{2}\times\mathbb{Z}_{2}\not\cong\mathbb{Z}</em>{4}) כפי שכבר ראינו. לכן, אם יש לנו סדרה של מחלקים אלמנטריים, אנחנו יכולים לקבץ מחלקים שמתאימים לחזקות עם בסיס <strong>שונה</strong>; מכיוון שהבסיס ראשוני, המחלקים הללו יהיו זרים ונוכל להשתמש במשפט השאריות הסיני.</p>
+
+<p>כעת, אם היעד שלנו הוא לייצר סדרה של גורמים אינוריאנטיים, כך שכל איבר בסדרה מתחלק על ידי קודמו, הדרך להבטיח שזה יעבוד תהיה <strong>להתחיל מהסוף</strong>: קודם ניקח את החזקות הגבוהות ביותר שמתאימות <strong>לכל</strong> הראשוניים שמשתתפים במחלקים האלמנטריים ונכפול את כולן (כי אחרת יהיה גורם אינוריאנטי אחר שכולל חזקה גדולה יותר של אחד מהראשוניים, ואז הוא לא יוכל לחלק את האיבר שאנחנו בונים). המכפלה הזו היא הגורם האינוריאנטי הגדול ביותר. אחר כך נסתכל על “מה שנשאר” ושוב ניקח את החזקה הגבוהה ביותר של כל ראשוני שמופיע בבסיס של אחד מהמחלקים האלמנטריים שנשארו, וכן הלאה.</p>
+
+<p>המעבר מגורמים אינוריאנטיים למחלקים אלמנטריים הוא פשוט יותר – לוקחים כל גורם, מפרקים אותו לגורמים שהם חזקות של ראשוניים ומוסיפים לרשימת המחלקים האלמנטריים שמצאנו. למשל, הגורמים האינוריאנטיים (2,18) יתרמו את (2,3^{2}) עבור 18 ואת (2) עבור, ובכן, 2.</p>
+
+<p>עכשיו, כל הדיון הזה התקיים עד כה בהקשר של חבורות אבליות, אבל אותם רעיונות בדיוק עוברים גם למקרה הכללי יותר, של מודול נוצר סופית מעל תחום ראשי. לשם כך, ראשית כל בואו ניתן את הניסוח הכללי של משפט השאריות הסיני: אנחנו אומרים ששני אידאלים (I,J\subseteq R) בחוג קומוטטיבי הם <strong>קו-מקסימליים</strong> אם (I+J=R). זו המקבילה בשפת האידאלים של “איברים זרים”; ואכן, אם (a,b) זרים, כלומר (\text{gcd}\left(a,b\right)=1), אז קיימים (x,y) כך ש-(ax+by=1) ולכן (\left\langle x\right\rangle +\left\langle y\right\rangle =\left\langle 1\right\rangle =R), ובמילים אחרות: אם (a,b) זרים אז (\left\langle a\right\rangle ,\left\langle b\right\rangle ) קו-מקסימליים.</p>
+
+<p>כעת, משפט השאריות הסיני אומר שאם (A_{1},\dots,A_{n}) הם אידאליים קו-מקסימליים בזוגות בחוג הקומוטטיבי (R) ואם (A=A_{1}\cdots A_{n}), אז (R/A\cong R/A_{1}\times\dots\times R/A_{n}). זה נראה תפור על הסיטואציה שלנו, שבה כשאנחנו מציגים מודול בעזרת גורמים אינוריאנטיים, אנחנו עובדים עם הרבה איברים מהצורה (R/\left\langle a\right\rangle ) כאשר (a) הוא אחד מהגורמים האינוריאנטיים.</p>
+
+<p>מכיוון שאנחנו בתחום ראשי אנחנו בפרט בתחום פריקות יחידה, כך שאפשר לכתוב (a=up_{1}^{k_{1}}p_{2}^{k_{2}}\cdots p_{n}^{k_{n}}) כאשר ה-(p)-ים הם ראשוניים ואילו (u) הוא הפיך כלשהו. לא קשה לראות מהגדרת המכפלה של אידאלים שנובע מכך ש-(\left\langle a\right\rangle =\left\langle p_{1}^{k_{1}}\right\rangle \cdots\left\langle p_{n}^{k_{n}}\right\rangle ) וממשפט השאריות הסיני נקבל (R/\left\langle a\right\rangle \cong R/\left\langle p_{1}^{k_{1}}\right\rangle \times\dots\times R/\left\langle p_{n}^{k_{n}}\right\rangle ) והופס – עברנו מגורמים אינוריאנטיים למחלקים אלמנטריים (וגם את ההפך אנחנו כבר מבינים איך עושים).</p>
+
+<p>אז הראינו <strong>קיום</strong> של סדרת גורמים אינוריאנטיים וסדרת מחלקים אלמנטריים; רק צריך להסביר למה הסדרות הללו הן <strong>יחידות</strong>. ההוכחה תהיה טכנית למדי, ולכן אני בוחר לדחות אותה לפוסט בהמשך ולסיים כאן. הבנו את הרעיון הבסיסי של המשפט ומאיפה הוא מגיע; עדיין יש לי חוב כבד הן בהוכחת הקיום והן בהוכחת היחידות, שאפדה בפוסטים בהמשך.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2018/09/16/structure_theorem_for_finitely_generated-modules_over_a_pid/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

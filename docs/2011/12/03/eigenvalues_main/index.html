@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ערכים עצמיים – ועכשיו ברצינות | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="ערכים עצמיים – ועכשיו ברצינות" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם נתתי הקדמה ומוטיבציה כלשהם לנושא של ערכים עצמיים ולכן עכשיו אני מרשה לעצמי לצלול ישר למים. בכל הדיון שלנו אנחנו הולכים לדבר על מרחב וקטורי $latex V$ ממימד סופי מעל שדה כלשהו $latex \mathbb{F}$. הסופיות של $latex V$ היא קריטית כאן; במרחבים ממימד לא סופי הסיפור מסובך פי כמה וכמה ושייך כבר לתחום האנליזה הפונקציונלית. אנחנו מתעניין באופרטורים לינאריים על $latex V$ – טרנספורמציות לינאריות $latex T:V\to V$. אם עבור וקטור $latex v\in V$ שונה מאפס (עוד מעט נבין למה שונה מאפס) וסקלר $latex \lambda\in\mathbb{F}$ מתקיים $latex T\left(v\right)=\lambda v$ (הפעולה של $latex T$ על $latex v$ היא פשוט כפל של $latex v$ בסקלר $latex \lambda$) אז $latex \lambda$ נקרא ערך עצמי של $latex T$, ו-$latex v$ נקרא וקטור עצמי של $latex T$ השייך לערך העצמי $latex \lambda$." />
+<meta property="og:description" content="בפוסט הקודם נתתי הקדמה ומוטיבציה כלשהם לנושא של ערכים עצמיים ולכן עכשיו אני מרשה לעצמי לצלול ישר למים. בכל הדיון שלנו אנחנו הולכים לדבר על מרחב וקטורי $latex V$ ממימד סופי מעל שדה כלשהו $latex \mathbb{F}$. הסופיות של $latex V$ היא קריטית כאן; במרחבים ממימד לא סופי הסיפור מסובך פי כמה וכמה ושייך כבר לתחום האנליזה הפונקציונלית. אנחנו מתעניין באופרטורים לינאריים על $latex V$ – טרנספורמציות לינאריות $latex T:V\to V$. אם עבור וקטור $latex v\in V$ שונה מאפס (עוד מעט נבין למה שונה מאפס) וסקלר $latex \lambda\in\mathbb{F}$ מתקיים $latex T\left(v\right)=\lambda v$ (הפעולה של $latex T$ על $latex v$ היא פשוט כפל של $latex v$ בסקלר $latex \lambda$) אז $latex \lambda$ נקרא ערך עצמי של $latex T$, ו-$latex v$ נקרא וקטור עצמי של $latex T$ השייך לערך העצמי $latex \lambda$." />
+<link rel="canonical" href="http://localhost:4000/blog/2011/12/03/eigenvalues_main/" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/12/03/eigenvalues_main/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-12-03T16:46:09+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2011-12-03T16:46:09+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/12/03/eigenvalues_main/"},"url":"http://localhost:4000/blog/2011/12/03/eigenvalues_main/","author":{"@type":"Person","name":"gadial"},"description":"בפוסט הקודם נתתי הקדמה ומוטיבציה כלשהם לנושא של ערכים עצמיים ולכן עכשיו אני מרשה לעצמי לצלול ישר למים. בכל הדיון שלנו אנחנו הולכים לדבר על מרחב וקטורי $latex V$ ממימד סופי מעל שדה כלשהו $latex \\mathbb{F}$. הסופיות של $latex V$ היא קריטית כאן; במרחבים ממימד לא סופי הסיפור מסובך פי כמה וכמה ושייך כבר לתחום האנליזה הפונקציונלית. אנחנו מתעניין באופרטורים לינאריים על $latex V$ – טרנספורמציות לינאריות $latex T:V\\to V$. אם עבור וקטור $latex v\\in V$ שונה מאפס (עוד מעט נבין למה שונה מאפס) וסקלר $latex \\lambda\\in\\mathbb{F}$ מתקיים $latex T\\left(v\\right)=\\lambda v$ (הפעולה של $latex T$ על $latex v$ היא פשוט כפל של $latex v$ בסקלר $latex \\lambda$) אז $latex \\lambda$ נקרא ערך עצמי של $latex T$, ו-$latex v$ נקרא וקטור עצמי של $latex T$ השייך לערך העצמי $latex \\lambda$.","headline":"ערכים עצמיים – ועכשיו ברצינות","dateModified":"2011-12-03T16:46:09+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ערכים עצמיים &amp;#8211; ועכשיו ברצינות</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-12-03T16:46:09+02:00" itemprop="datePublished">Dec 3, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הקודם נתתי הקדמה ומוטיבציה כלשהם לנושא של ערכים עצמיים ולכן עכשיו אני מרשה לעצמי לצלול ישר למים. בכל הדיון שלנו אנחנו הולכים לדבר על מרחב וקטורי $latex V$ ממימד <strong>סופי</strong> מעל שדה כלשהו $latex \mathbb{F}$. הסופיות של $latex V$ היא קריטית כאן; במרחבים ממימד לא סופי הסיפור מסובך פי כמה וכמה ושייך כבר לתחום האנליזה הפונקציונלית. אנחנו מתעניין באופרטורים לינאריים על $latex V$ – טרנספורמציות לינאריות $latex T:V\to V$. אם עבור וקטור $latex v\in V$ שונה מאפס (עוד מעט נבין למה שונה מאפס) וסקלר $latex \lambda\in\mathbb{F}$ מתקיים $latex T\left(v\right)=\lambda v$ (הפעולה של $latex T$ על $latex v$ היא פשוט כפל של $latex v$ בסקלר $latex \lambda$) אז $latex \lambda$ נקרא <strong>ערך עצמי</strong> של $latex T$, ו-$latex v$ נקרא <strong>וקטור עצמי</strong> של $latex T$ השייך לערך העצמי $latex \lambda$.</p>
+
+<p>אם נקבע בסיס כלשהי $latex B$ של $latex V$, אפשר להסתכל על המטריצה $latex \left[T\right]_{B}$ שמייצגת את $latex T$ בבסיס זה. מטריצה זו תקיים $latex \left[T\right]_{B}\cdot\left[v\right]_{B}=\lambda\left[v\right]_{B}$, ומכיוון שעבודה עם מטריצות יותר נוחה מעבודה עם טרנספורמציות, זה מוביל אותנו להגדרה הבאה: אם $latex A$ מטריצה מעל שדה $latex \mathbb{F}$ ו-$latex v\in\mathbb{F}^{n}$ הוא וקטור כך ש-$latex Av=\lambda v$ עבור $latex \lambda\in\mathbb{F}$ כלשהו אז $latex \lambda$ הוא ערך עצמי של $latex A$ ו-$latex v$ הוא וקטור עצמי שלה. זו אותה הגדרה בדיוק כמו עבור $latex T$ כללי, אבל עכשיו הדיון הרבה יותר קונקרטי – יש לנו מטריצה $latex A$ מסדר $latex n\times n$ ווקטור ב-$latex \mathbb{F}^{n}$ ומספיק להבין מה קורה איתם כדי להבין את התורה של ערכים עצמיים באופן כללי. אגב, שימו לב שמטריצות לא ריבועיות (כמו גם טרנספורמציות כלליות $latex T:V\to W$) מחוץ למשחק שלנו מלכתחילה כי כדי שפעולה על $latex v$ תיתן את $latex v$ כפול סקלר אנחנו צריכים להישאר באותו מרחב שממנו התחלנו.</p>
+
+<p>השלב הראשון שלנו הוא זה – נתונה $latex A$, מה בכלל הערכים $latex \lambda$ שיכולים להיות ערכים עצמיים שלה? האם כל $latex \lambda\in\mathbb{F}$ הוא מועמד פוטנציאלי? האם יש אינסוף מהם? התשובה היא פשוטה ויפה – אם $latex A$ היא מסדר $latex n\times n$ אז יש לה לכל היותר $latex n$ ערכים עצמיים, ויש להם אפיון תאורטי פשוט.</p>
+
+<p>התעלול הוא כזה: אם $latex Av=\lambda v$ אז על ידי העברת אגפים נקבל $latex Av-\lambda v=0$, ואת המשוואה הזו אפשר לכתוב גם כ-$latex \left(A-\lambda I\right)v=0$ )כאשר $latex \lambda I$ היא מטריצה שיש בה $latex \lambda$ בכל האלכסון הראשי ואפס בכל מקום אחר; לא קשה לראות ש-$latex \left(\lambda I\right)v=\lambda v$). במילים אחרות, לכל ערך עצמי $latex \lambda$ של $latex A$, הוקטורים העצמיים שמתאימים ל-$latex \lambda$ הם בדיוק הפתרונות של המשוואה ההומוגנית שמוגדרת על ידי $latex A-\lambda I$ (ובאופן שקול, הגרעין של הטרנספורמציה שמוגדרת על ידי $latex A-\lambda I$). ובכן, $latex v=\overline{0}$ הוא <strong>תמיד</strong> פתרון למשוואה הזו, בלי קשר ל-$latex \lambda$ או ל-$latex A$ או לשום דבר ($latex A\overline{0}=\overline{0}=\lambda\cdot\overline{0}$) אז ברור שאנו חייבים לחדד את ההגדרה של ערך עצמי ווקטור עצמי כך ש-$latex \overline{0}$ בכלל לא יהיה במשחק; לכן בהגדרה שלמעלה אני דורש שוקטור עצמי יהיה שונה מאפס.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>עכשיו, מתי יש למשוואה $latex \left(A-\lambda I\right)v=0$ פתרון שונה מאפס? אם ורק אם המטריצה $latex A-\lambda I$ היא לא הפיכה (אם הייתה הפיכה על ידי כפל של המשוואה בהופכי שלה היינו מקבלים $latex v=\overline{0}$). באופן מקרי לחלוטין, לפני פוסט או שניים נתתי קריטריון שמבוסס על דטרמיננטות לכך שמטריצה תהיה לא הפיכה: מטריצה היא לא הפיכה אם ורק אם הדטרמיננטה שלה היא 0. לכן אנו מסיקים ש-$latex \left</td>
+      <td>A-\lambda I\right</td>
+      <td>=0$. באותה המידה גם $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>=0$, ואעדיף לעבוד עם המטריצה הזו מסיבה טכנית קטנה שתתברר בקרוב. כעת, זכרו את המשוואה שהגדירה דטרמיננטה: $latex \left</td>
+      <td>A\right</td>
+      <td>=\sum_{\sigma}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{n}A_{i\sigma\left(i\right)}$. לא חייבים להבין לעומק את המשוואה הזו, אלא רק את השורה התחתונה: הדטרמיננטה היא סכום של מכפלות של הכניסות של $latex A$. במקרה שלנו, היא סכום של מכפלות של הכניסות של $latex \lambda I-A$. יותר מכך – כל מכפלה היא של בדיוק $latex n$ כניסות של המטריצה. מכך אפשר להסיק שדרך אחת לכתוב את $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>$ היא בתור <strong>פולינום</strong> ב-$latex \lambda$ ממעלה לכל היותר $latex n$: $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>=t_{n}\lambda^{n}+t_{n-1}\lambda^{n-1}+\dots+t_{1}\lambda+t_{0}$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>למעשה, אם חושבים על זה קצת, הפולינום הזה חייב להיות מתוקן, כלומר $latex t_{n}=1$; הסיבה לכך היא שכדי לקבל $latex \lambda^{n}$ אנחנו חייבים לכפול את כל המופעים של $latex \lambda$ במטריצה $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>$ ולכל המופעים הללו יש מקדם 1 (במטריצה $latex A-\lambda I$ יש לכולם מקדם $latex -1$ ולכן עשוי להתקבל $latex t_{n}=-1$ ולכן העדפתי לא להתעסק איתה, למרות שזה לא משנה כלום).</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>כעת, אם $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>=0$ זה אומר שמתקיים $latex \lambda^{n}+t_{n-1}\lambda^{n-1}+\dots+t_{1}\lambda+t_{0}=0$, כלומר $latex \lambda$ היא פתרון של משוואה פולינומית ממעלה $latex n$. מכיוון שהמקדמים במשוואה הזו לא תלויים בכלל ב-$latex \lambda$ אלא נקבעים מתוך $latex A$ עצמה, אפשר לחשוב על זה כך – $latex \lambda$ היא שורש של הפולינום $latex p_{A}\left(x\right)=x^{n}+t_{n-1}x^{n-1}+\dots+t_{1}x+t_{0}$. הפולינום הזה נקרא <strong>הפולינום האופייני</strong> של $latex A$, ואפשר פשוט להגדיר אותו בתור $latex \left</td>
+      <td>xI-A\right</td>
+      <td>$, כלומר לוקחים את הסימבול $latex x$ (לא חושבים עליו בתור איבר של $latex \mathbb{F}$), מקבלים את המטריצה $latex xI-A$ שהיא ערבוב של אברי $latex \mathbb{F}$ והסימבול $latex x$, ומפתחים את הדטרמיננטה של זה. מבחינה מתמטית זוהי פעולה חוקית לחלוטין, אם כי בקורס ראשון באלגברה עוד לא ברור עד הסוף מה זה בכלל אומר “הסימבול $latex x$” או זה שהוא אינו שייך ל-$latex \mathbb{F}$. זה לא חשוב במיוחד כרגע אז לא אכנס לכך.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>הבה ונשים לב לתוצאה שראינו: אם $latex \lambda$ הוא ערך עצמי של $latex A$, אז $latex \lambda$ הוא שורש של הפולינום האופייני $latex p_{A}\left(x\right)$. כעת, $latex p_{A}\left(x\right)$ הוא פולינום ממעלה $latex n$ מעל השדה $latex \mathbb{F}$ (מקדמיו הם איברים של $latex \mathbb{F}$), ולכן אפשר לשלוף מהשרוול משפט בסיסי באלגברה: לפולינום ממעלה $latex n$ מעל שדה יש לכל היותר $latex n$ שורשים. ההוכחה מתבססת על כך שאם $latex a$ הוא שורש של $latex p\left(x\right)$ אז הפולינום ממעלה ראשונה $latex x-a$ <strong>מחלק</strong> את $latex p\left(x\right)$, כלומר $latex p\left(x\right)=\left(x-a\right)q\left(x\right)$ כאשר $latex q\left(x\right)$ ממעלה קטנה ב-1 ממעלת $latex p\left(x\right)$, ואפשר להמשיך כך את ההוכחה באינדוקציה. אם אנחנו לא מעל שדה אז לא מובטח ש-$latex x-a$ יחלק את $latex p\left(x\right)$, אבל גם לזה לא ניכנס כאן.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>מסקנה: למטריצה $latex A$ מסדר $latex n\times n$ יכולים להיות לכל היותר $latex n$ ערכים עצמיים – ובקרוב נראה דוגמאות לכך שלא תמיד יש אפילו את זה, כי לפולינום ממעלה $latex n$ לא <strong>חייבים</strong> להיות $latex n$ שורשים שונים. לפני שנראה דוגמאות בואו רק נשלים את הכיוון השני: <strong>כל</strong> שורש של הפולינום האופייני $latex p_{A}\left(x\right)$ חייב להיות ערך עצמי של $latex A$, כי כל שורש $latex \lambda$ כזה מקיים $latex \left</td>
+      <td>\lambda I-A\right</td>
+      <td>=0$ ולכן <strong>מובטח</strong> שלמשוואה $latex \left(A-\lambda I\right)v=0$ יהיה פתרון לא טריוויאלי.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בקיצור, הראינו כבר תוצאה מעניינת: הערכים העצמיים של $latex A$ הם בדיוק השורשים של פולינום מסויים $latex p_{A}$ שנקרא “הפולינום האופייני של $latex A$”. מצאנו גם דרך יעילה לחשב את אותו פולינום באמצעות מושג הדטרמיננטה. כעת בואו ונראה כמה דוגמאות במטריצות $latex 2\times2$ שבהן חישוב דטרמיננטה הוא טריוויאלי.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>נתחיל מהמטריצה הכי פשוטה: $latex I=\left[\begin{array}{cc}1 &amp; 0\0 &amp; 1\end{array}\right]$. אנחנו יודעים ש-$latex Iv=v$ לכל $latex v$ ולכן 1 הוא ערך עצמי של $latex I$ והוא גם הערך העצמי היחיד שלה. מהו הפולינום האופייני? זהו בדיוק $latex \left</td>
+      <td>\begin{array}{cc}x-1 &amp; 0\0 &amp; x-1\end{array}\right</td>
+      <td>=\left(x-1\right)^{2}=x^{2}-2x+1$. למעשה, דרך ההצגה של $latex \left(x-1\right)^{2}$ יותר טובה לנו מזו של $latex x^{2}-2x+1$ כי בה ברור מייד ש-1 הוא שורש של הפולינום, ושהוא השורש היחיד למרות שהפולינום הוא ממעלה 2. בעצם, נראה ש-1 הוא “פעמיים” שורש של $latex x^{2}-2x+1$; את זה אפשר לנסח פורמלית. אומרים ש-$latex a$ הוא שורש מ<strong>ריבוי</strong> $latex k$ של הפולינום $latex p\left(x\right)$ אם $latex p\left(x\right)=\left(x-a\right)^{k}q\left(x\right)$ כך ש-$latex a$ אינו שורש של $latex q\left(x\right)$. בניסוח שקול, $latex \left(x-a\right)^{k}$ הוא הגורם המקסימלי של $latex p\left(x\right)$ מהצורה $latex x-a$ בחזקת משהו. בהקשר של ערכים עצמיים, אם $latex \lambda$ הוא שורש מריבוי $latex k$ של הפולינום האופייני של $latex A$ אומרים ש-$latex \lambda$ הוא בעל <strong>ריבוי אלגברי</strong> $latex k$. הסיבה לתוספת של “אלגברי” היא שתכף ייכנס לתמונה גם ריבוי גיאומטרי ויש להבדיל בין השניים.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>בואו נעבור למטריצה מחוכמת קצת יותר – זו שמייצגת סיבוב ב-90 מעלות. מצאנו בעבר שזוהי המטריצה $latex \left[\begin{array}{cc}0 &amp; 1\-1 &amp; 0\end{array}\right]$, ולכן נקבל את הפולינום האופיניי $latex \left</td>
+      <td>\left[\begin{array}{cc}x &amp; -1\1 &amp; x\end{array}\right]\right</td>
+      <td>=x^{2}+1$. טוב ויפה, מהם השורשים של $latex x^{2}+1$? ובכן… אה… המ… זה מסובך.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>בואו נחשוב רגע על סיבוב ב-90 מעלות של $latex \mathbb{R}^{2}$. האם בכלל יש לו וקטורים עצמיים? ודאי שלא. וקטור עצמי פירושו נקודה ב-$latex \mathbb{R}^{2}$ שלאחר שמפעילים עליה את הטרנספורמציה עדיין נמצאת על אותו ישר שחיבר אותה קודם לראשית הצירים, רק במרחק שונה, אולי. אבל כאן כל נקודה שאיננה ראשית הצירים בעצמה מסובבת באכזריות 90 מעלות ולכן בוודאי שלא תהיה על אותו ישר אלא ההפך, על ישר שמאונך לישר הקודם (השתמשנו בזה בפוסט הקודם כדי למצוא את המטריצה שמייצגת שיקוף). המסקנה היא שלטרנספורמציה הזו אין בכלל וקטורים עצמיים, וזה משתלב טוב עם ההבחנה שלפולינום האופייני של המטריצה שמייצגת אותה <strong>אין שורשים</strong> מעל $latex \mathbb{R}$.</p>
+
+<p>אלא מה, בואו נזכור ש-$latex \mathbb{R}$ הוא שדה שחי בתוך שדה גדול יותר שנקרא $latex \mathbb{C}$, המרוכבים, ובתוך השדה הזה יש ל-$latex x^{2}+1$ שורשים: $latex i$ ו-$latex -i$. פורמלית, $latex x^{2}+1=\left(x+i\right)\left(x-i\right)$. אז אם מסתכלים על המטריצה $latex \left[\begin{array}{cc}0 &amp; 1\-1 &amp; 0\end{array}\right]$ לא כמטריצה מעל השדה $latex \mathbb{R}$ אלא כמטריצה מעל השדה $latex \mathbb{C}$, יש לה שני ערכים עצמיים מריבוי אלגברי 1: $latex i$ ו-$latex -i$. ואכן, $latex \left[\begin{array}{cc}0 &amp; 1\-1 &amp; 0\end{array}\right]\left[\begin{array}{c}1\i\end{array}\right]=\left[\begin{array}{c}i\-1\end{array}\right]=i\left[\begin{array}{c}1\i\end{array}\right]$ ו-$latex \left[\begin{array}{cc}0 &amp; 1\-1 &amp; 0\end{array}\right]\left[\begin{array}{c}1\-i\end{array}\right]=\left[\begin{array}{c}-i\-1\end{array}\right]=-i\left[\begin{array}{c}1\-i\end{array}\right]$ מה שמראה שאלו אכן ערכים עצמיים, עם וקטורים עצמיים $latex \left[\begin{array}{c}i\-1\end{array}\right]$ ו-$latex \left[\begin{array}{c}-i\-1\end{array}\right]$ בהתאמה. באופן לא מפתיע, הוקטורים העצמיים אינם ממשיים, כלומר אינם איברים של $latex \mathbb{R}^{2}$; אם מצמצמים את נקודת המבט שלנו ל-$latex \mathbb{R}^{2}$ אכן לא קיימים וקטורים עצמיים.</p>
+
+<p>כעת אתם אולי שואלים את עצמכם איך מצאתי את הוקטורים העצמיים שהתאימו ל-$latex i,-i$. אם אנחנו כבר יודעים ש-$latex \lambda$ הוא ערך עצמי של $latex A$, אז מציאת הוקטורים העצמיים היא פשוטה למדי: הרי אלו בדיוק הוקטורים שהם פתרונות לא טריוויאליים למערכת המשוואות $latex \left(\lambda I-A\right)x=0$, ולפתור מערכת משוואות כזו – זה היה הדבר הראשון שעליו דיברנו באלגברה לינארית. זה גם בדיוק האופן שבו מצאתי את הוקטורים העצמיים שלעיל: למשל, עבור הערך העצמי $latex i$, התבוננתי במטריצה $latex \left[\begin{array}{cc}i &amp; -1\1 &amp; i\end{array}\right]$, דירגתי אותה וקיבלתי $latex \left[\begin{array}{cc}1 &amp; i\0 &amp; 0\end{array}\right]$ ומכאן שהפתרון הכללי הוא מהצורה $latex \left(-it,t\right)$; על ידי הצבת $latex t=i$ מקבלים את הפתרון $latex \left[\begin{array}{c}1\i\end{array}\right]$ שבו השתמשתי, אבל באותה מידה גם $latex \left[\begin{array}{c}-i\1\end{array}\right]$ יהיה וקטור עצמי עבור הערך העצמי $latex i$.</p>
+
+<p>באופן כללי, לכל ערך עצמי $latex \lambda$, אוסף כל הוקטורים העצמיים שמתאימים ל-$latex \lambda$ מהווה תת-מרחב וקטורי של $latex \mathbb{F}^{n}$. זה נובע מכך שזהו בדיוק אוסף הפתרונות של מערכת משוואות הומוגנית, אבל אפשר גם לראות את זה ישירות מההגדרה (אם $latex Av=\lambda v$ וגם $latex Au=\lambda u$ אז $latex A\left(\tau v+\rho u\right)=\tau Av+\rho Au=\lambda\left(\tau v+\rho u\right)$). המרחב הזה נקרא <strong>המרחב העצמי</strong> השייך לערך העצמי $latex \lambda$. בדוגמאות של מטריצת הסיבוב המרחבים העצמיים היו ממימד 1, אבל בדוגמה של מטריצת היחידה, למרות שלא אמרתי זאת במפורש, המרחב הוא ממימד 2 (הוא נפרש על ידי איזה שני וקטורים בלתי תלויים שרק תרצו, כי כולם וקטורים עצמיים של $latex I$). עבור ערך עצמי $latex \lambda$, המימד של המרחב העצמי שמתאים ל-$latex \lambda$ נקרא <strong>הריבוי הגיאומטרי</strong> של $latex \lambda$. למה גיאומטרי? כי מרחבים וקטוריים ומימד וכל זה הם, או לפחות אמורים להיות, מושגים גיאומטריים באופיים (ריבוי אלגברי מגיע מדרגה של פולינום, ריבוי גיאומטרי ממימד של מרחב).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>יפה, אז ל-$latex \lambda$ יש גם ריבוי אלגברי וגם ריבוי גיאומטרי, ולכן נשאלת מייד השאלה מה הקשר ביניהם. התשובה היא שהריבוי האלגברי של $latex \lambda$ הוא תמיד גדול או שווה לריבוי הגיאומטרי, אבל בהחלט ייתכן מצב שבו הם לא שווים. בואו נראה דוגמה – המטריצה $latex \left[\begin{array}{cc}1 &amp; 1\0 &amp; 1\end{array}\right]$. חישוב מהיר מוצא שהפולינום האופייני שלה הוא $latex \left</td>
+      <td>\begin{array}{cc}x-1 &amp; -1\0 &amp; x-1\end{array}\right</td>
+      <td>=\left(x-1\right)^{2}$ ולכן 1 הוא ערך עצמי מריבוי אלגברי 2, בדיוק כמו עם מטריצת היחידה; אבל המרחב העצמי שמתאים ל-1 הוא מרחב הפתרונות של המשוואה $latex \left[\begin{array}{cc}0 &amp; 1\0 &amp; 0\end{array}\right]\left[\begin{array}{c}x\y\end{array}\right]=\left[\begin{array}{c}0\0\end{array}\right]$ שהוא ממימד אחד: $latex \left(t,0\right)$ הוא הפתרון הכללי של המשוואה, ואין פתרונות מצורה אחרת. במילים אחרות, המימד הגיאומטרי של הערך העצמי 1 הוא 1.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>תכף נראה איך מוכיחים את המשפט על הקשר בין הריבוי האלגברי והגיאומטרי, אבל קודם כל בואו נחזור לדבר על טרנספורמציות לינאריות. כל הדיון שהתקיים עד כה תקף באותה המידה בשבילן: יש להן ערכים עצמיים, ווקטורים עצמיים, ולכל ערך עצמי יש ריבוי גאומטרי ואלגברי וכן הלאה. דרך פשוטה לגלות את הערכים העצמיים של טרנספורמציה לינארית $latex T$ היא פשוט לקחת בסיס <strong>כלשהו</strong> $latex B$, להסתכל על המטריצה $latex \left[T\right]_{B}$, ולמצוא את הערכים העצמיים והוקטורים העצמיים שלה. די בבירור $latex v$ הוא וקטור עצמי של $latex T$ אם ורק אם $latex \left[v\right]_{B}$ הוא וקטור עצמי של $latex \left[T\right]_{B}$ עם אותו ערך עצמי; למשל, אם נניח ש-$latex v$ הוא וקטור עצמי של $latex T$ אז $latex \left[T\right]_{B}\left[v\right]_{B}=\left[Tv\right]_{B}=\left[\lambda v\right]_{B}=\lambda\left[v\right]_{B}$ ומכאן עולה ש-$latex \left[v\right]_{B}$ הוא אכן וקטור עצמי של $latex \left[T\right]_{B}$ עם אותו ערך עצמי, וגם הכיוון ההפוך זהה.</p>
+
+<p>מבלי לשים לב, בעצם אנחנו אומרים כאן משהו לא טריוויאלי עד כדי כך – לכל המטריצות שמייצגות את אותה טרנספורמציה לינארית $latex T$ יש בדיוק את אותם ערכים עצמיים! ובאופן דומה – לכל הטרנספורמציות שמיוצגות בידי אותה מטריצה יש בדיוק אותם ערכים עצמיים. שימו לב שאותם ערכים עצמיים לא אומר שאלו גם אותם וקטורים עצמיים; זאת מכיוון שהוקטורים העצמיים של המטריצות שמתאימות ל-$latex T$ הם וקטורי ה<strong>קואורדינטות</strong> של הוקטורים העצמיים של $latex T$, ולכן תלויים בבסיס ובבסיסים שונים יתקבלו וקטורי קואורדינטות שונים.</p>
+
+<p>אפשר גם לשכוח לרגע מ-$latex T$ ולנסח את הטענה כך: למטריצות דומות יש אותם ערכים עצמיים. כזכור, $latex A,B$ דומות אם קיימת מטריצה הפיכה $latex P$ כך ש-$latex P^{-1}AP=B$. בעזרת התכונה הזו גם קל להוכיח שלמטריצות דומות יש למעשה אותו פולינום אופייני; זה פשוט החישוב הבא:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \left</td>
+      <td>xI-B\right</td>
+      <td>=\left</td>
+      <td>P^{-1}xIP-P^{-1}AP\right</td>
+      <td>=\left</td>
+      <td>P^{-1}\left(xI-A\right)P\right</td>
+      <td>=\left</td>
+      <td>P^{-1}\right</td>
+      <td>\left</td>
+      <td>xI-A\right</td>
+      <td>\left</td>
+      <td>P\right</td>
+      <td>=\left</td>
+      <td>xI-A\right</td>
+      <td>$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>כאן אנו משתמשים בכך ש-$latex xI=P^{-1}xIP$ כי מטריצת היחידה מתחלפת בכפל עם כל מטריצה אחרת, כמו גם בכך ש-$latex \left</td>
+      <td>P^{-1}\right</td>
+      <td>=\left</td>
+      <td>P\right</td>
+      <td>^{-1}$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כעת, כאשר התעסקנו בפוסט הקודם עם הטרנספורמציה של שיקוף התחלנו מכך שמצאנו שני וקטורים עצמיים של הטרנספורמציה, ואז שמנו לב שבבסיס שכולל את הוקטורים העצמיים הללו, המטריצה שמייצגת את הטרנספורמציה היא פשוטה במיוחד. זה נכון באופן כללי. בואו נתחיל מהאבחנה הבאה: אם $latex B=\left{ v_{1},\dots,v_{n}\right} $ הוא בסיס כלשהו ל-$latex V$ כך ש-$latex v_{i}$ הוא וקטור עצמי של $latex T$ שמתאים לערך העצמי $latex \lambda$, מהי העמודה ה-$latex i$ במטריצה $latex \left[T\right]_{B}$? העמודה הזו היא וקטור הקואורדינטות של $latex T\left(v_{i}\right)$ על פי הבסיס $latex B$, אבל מכיוון ש-$latex T\left(v_{i}\right)=\lambda v_{i}$ קיבלנו ש-$latex \lambda v_{i}$ היא בדיוק ההצגה של $latex T\left(v_{i}\right)$ בבסיס $latex B$, כלומר העמודה הזו כוללת $latex \lambda$ בשורה ה-$latex i$ ואפס בכל מקום אחר. ומכאן שאם $latex B$ הוא בסיס ש<strong>כולו</strong> מורכב מוקטורים עצמיים של $latex T$, אז המטריצה שמייצגת את $latex T$ בבסיס הזה היא אלכסונית, כשהאיברים על האלכסון הם בדיוק הערכים העצמיים של $latex T$. ובניסוח עבור מטריצות: אם עבור מטריצה $latex A$ קיים בסיס ל-$latex \mathbb{F}^{n}$ שמורכב כולו מוקטורים עצמיים של $latex A$, אז $latex A$ דומה למטריצה אלכסונית שאברי האלכסון שלה הם הערכים העצמיים של $latex A$.</p>
+
+<p>די מובן מאליו שגם הכיוון השני נכון, כלומר אם ל-$latex T$ יש בסיס שבו היא מיוצגת על ידי מטריצה אלכסונית אז הערכים על האלכסון הם הערכים העצמיים של $latex T$ ווקטורי הבסיס הם הוקטורים העצמיים המתאימים (למה? ובכן, פשוט כפלו את המטריצה המייצגת הזו בוקטורי הקואורדינטות שמתאימים לבסיס ותראו מה קורה). זה אומר שמצאנו קריטריון שמכסה את כל המקרים שבהם $latex T$ מיוצגת על ידי מטריצה אלכסונית; הקריטריון הזה קשור קשר הדוק למושגי הערכים והוקטורים העצמיים – “ל-$latex V$ יש בסיס של וקטורים עצמיים של $latex T$”. נותר להבין מתי קיים בסיס כזה.</p>
+
+<p>עכשיו אפשר להוכיח שהריבוי האלגברי של ערך עצמי תמיד גדול או שווה לריבוי הגאומטרי שלו. נניח של-$latex T$ יש ערך עצמי $latex \lambda$ עם ריבוי גיאומטרי $latex k$. אז יש וקטורים $latex v_{1},\dots,v_{k}$ שכולם בלתי תלויים לינארית וכולם וקטורים עצמיים שמתאימים ל-$latex \lambda$. כעת אפשר להשלים את הקבוצה $latex v_{1},\dots,v_{k}$ לבסיס $latex v_{1},\dots,v_{n}$ של המרחב $latex V$ כולו. המטריצה שמייצגת את $latex T$ בבסיס הזה מקיימת את התכונה ש-$latex k$ העמודות הראשונות שלה כוללות $latex \lambda$ על האלכסון ותו לא. לכן, אם ניקח את המטריצה הזו ונחשב את הפולינום האופייני שלה, נחשב דטרמיננטה של מטריצה שבה $latex k$ העמודות הראשונות כוללות $latex x-\lambda$ על האלכסון ותו לא. לכן אם נפתח את הדטרמיננטה על פי עמודות (קודם הראשונה, אז השנייה וכן הלאה) נקבל שהפולינום האופייני הוא מכפלה של $latex \left(x-\lambda\right)^{k}$ בעוד משהו; בפרט זה מצביע על כך שהריבוי האלגברי של $latex \lambda$ הוא לפחות $latex k$, מה שמסיים את ההוכחה.</p>
+
+<p>נותרה לנו רק עוד אבחנה אחת לפני שנגיע לפאנץ’: וקטורים עצמיים המתאימים לערכים עצמיים שונים הם בלתי תלויים לינארית. למה הכוונה? לכך שאם מתקיים $latex v_{1}+\dots+v_{k}=0$, כאשר כל $latex v_{i}$ מקיים $latex T\left(v_{i}\right)=\lambda_{i}$ וכל ה-$latex \lambda_{i}$ שונים אלו מאלו, אז $latex v_{1}=\dots=v_{k}=0$ (אפשר גם לנסח את הקריטריון באופן שקול עם צירוף לינארי רגיל עם מקדמים וכדומה אבל זה מיותר – למה?)</p>
+
+<p>האינטואיציה הראשונית היא לומר “אוקיי, בואו נפעיל את $latex T$ על שני אגפי השוויון”. מה שמקבלים הוא $latex \sum\lambda_{i}v_{i}=0$ (כי $latex T\left(0\right)=0$) אבל זה לא ממש עוזר לנו. מצד שני, מה יש לנו לעשות חוץ מלהפעיל את $latex T$ על סכום הוקטורים? ובכן, אנחנו יכולים לעשות דבר כזה – להפעיל את $latex T$ כמה פעמים; לכפול את המשוואה שנקבל בסקלר; ולחבר משוואות כאלו. את כל זה אפשר לתאר באופן הקומפקטי הבא: אם $latex p$ הוא פולינום כלשהו מעל $latex \mathbb{F}$, אז אפשר להגדיר טרנספורמציה לינארית חדשה $latex p\left(T\right)$ שמתקבלת מ”הצבה” של $latex T$ בפולינום. למשל, אם $latex p\left(x\right)=x^{3}+3x-1$ אז $latex p\left(T\right)=T^{3}+3T-I$. כעת זה תרגיל פשוט להראות שאם $latex v_{i}$ הוא וקטור עצמי של $latex T$ עם ערך עצמי $latex \lambda_{i}$ אז $latex p\left(T\right)\left(v_{i}\right)=p\left(\lambda_{i}\right)v_{i}$. מסקנה: לכל פולינום $latex p$ שרק נרצה, נוכל לקבל את המשוואה $latex \sum p\left(\lambda_{i}\right)v_{i}=0$.</p>
+
+<p>כעת משתמשים בתעלול חזק ונפוץ ביותר במתמטיקה: לכל $latex i$ נמצא פולינום $latex p_{i}$ שמקיים $latex p_{i}\left(\lambda_{j}\right)=\delta_{ij}$, כלומר הוא 1 על $latex \lambda_{i}$ ו-0 על $latex \lambda_{j}$ לכל $latex j\ne i$ (מבין המספר הסופי של הערכים העצמיים הקיימים; אם היו אינסוף ערכים עצמיים כל הטענה הזו הייתה הולכת לעזאזל). הדרך למצוא פולינום כזה היא באמצעות <strong>אינטרפולציה</strong> – בנייה של פולינום על בסיס כמה נקודות ספציפיות שלו שידועות. מבלי להיכנס כרגע לאופן שבו מבצעים אינטרפולציות באופן כללי, הנה פולינום שכזה: $latex p_{i}\left(x\right)=\prod_{j\ne i}\frac{x-\lambda_{j}}{\lambda_{i}-\lambda_{j}}$. כעת, אם נשתמש במשוואה $latex \sum p\left(\lambda_{i}\right)v_{i}=0$ עם $latex p=p_{i}$ נקבל מייד $latex v_{i}=0$ לכל $latex i$, כפי שרצינו.</p>
+
+<p>ועכשיו אני יכול לנסח חד משמעית את המשפט האחרון והמרכזי בפוסט הזה: מטריצה $latex A$ היא לכסינה (ובהתאמה, טרנספורמציה לינארית $latex T$ היא בעלת ייצוג שהוא מטריצה אלכסונית) מעל שדה $latex \mathbb{F}$ אם ורק אם כל הערכים העצמיים שלה נמצאים ב-$latex \mathbb{F}$, והריבוי האלגברי של כל אחד מהם שווה לריבוי הגיאומטרי שלו. למי ש”כל הערכים העצמיים שלה נמצאים בשדה” נשמע לו מעורפל מדי, אפשר להחליף אותו ב”סכום הריבויים האלגבריים של כל הערכים העצמיים הוא $latex n$”, כאשר $latex n$ הוא סדר המטריצה או מימד המרחב שעליו $latex T$ פועלת.</p>
+
+<p>את זה שאם מטריצה היא לכסינה התכונה הזו מתקיימת כבר ראינו (וגם אם לא, להוכיח את מה שלא אמרתי במפורש זה קל מאוד ומהווה אימון טוב). נשאר רק לקשר בין זה שהריבוי הגיאומטרי שווה לריבוי האלגברי ובין זה שיש למרחב כולו בסיס של וקטורים עצמיים. אבל זה כמעט מיידי: אם לכל ערך עצמי $latex \lambda_{i}$ מריבוי $latex k_{i}$ יש $latex k_{i}$ וקטורים עצמיים בלתי תלויים לינארית ומתקיים $latex \sum k_{i}=n$, אז אפשר לבנות למרחב כולו בסיס שמורכב מאיחוד קבוצות של וקטורים עצמיים בלתי תלויים עבור כל אחד מה-$latex \lambda_{i}$. זו תהיה קבוצה מגודל $latex n$. עכשיו, ברשותכם, קצת אינדקסים: נסמן ב-$latex \left{ v_{1}^{i},\dots,v_{k_{i}}^{i}\right} $ קבוצה של $latex k_{i}$ וקטורים עצמיים בלתי תלויים של $latex \lambda_{i}$. אנחנו רוצים לראות שאיחוד כל הקבוצות הללו הוא בלתי תלוי לינארית, אז בואו ניקח צירוף לינארי ששווה לאפס של כולם: $latex \sum_{i=1}^{t}\sum_{j=1}^{k_{i}}\tau_{ij}v_{j}^{i}=0$. כעת, שימו לב ש-$latex u_{i}=\sum_{j=1}^{k_{i}}\tau_{ij}v_{j}^{i}$ הוא גם כן וקטור עצמי של $latex \lambda_{i}$ (כי צירופים לינאריים של וקטורים עצמיים השייכים לאותו ערך עצמי הם וקטורים עצמיים של אותו ערך עצמי) ולכן אפשר לכתוב את הסכום הזה כ-$latex \sum_{i=1}^{t}u_{i}=0$, והוכחנו זה עתה שנובע מכך ש-$latex u_{1}=\dots=u_{t}=0$. כעת, אם $latex \sum_{j=1}^{k_{i}}\tau_{ij}v_{j}^{i}=0$ אז $latex \tau_{ij}=0$ לכל $latex \tau_{ij}$ שכן לכל $latex \lambda_{i}$ לקחנו אוסף וקטורים שהם עצמם בלתי תלויים לינארית. זהו זה.</p>
+
+<p>דרך קצת יותר ציורית לתאר את המשפט הזה היא זו: מטריצה היא לכסינה אם יש לה מספיק ערכים עצמיים ב-$latex \mathbb{F}$ (סכום הריבויים האלגבריים שווה $latex n$) ומספיק וקטורים עצמיים בלתי תלויים ב-$latex \mathbb{F}^{n}$ (סכום הריבויים הגיאומטריים הוא $latex n$). אם נעצור ונסתכל אחורה נראה שעברנו בפוסט הזה כברת דרך לא קטנה, אבל הסיפור רק מתחיל.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2011/12/03/eigenvalues_main/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

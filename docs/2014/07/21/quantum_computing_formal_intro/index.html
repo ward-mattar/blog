@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>חישוב קוונטי – ועכשיו פורמלית | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="חישוב קוונטי – ועכשיו פורמלית" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="הפוסטים שלי עד כה על חישוב קוונטי ותורת הקוונטים דיברו מאוד באוויר. עכשיו הגיע הזמן לתכל’ס – לתאר את המודל המתמטי הבסיסי של תורת הקוונטים שבו אנחנו הולכים להשתמש. לפני שאני מתחיל אני רק רוצה להזכיר שהרעיון בתורת הקוונטים הוא לתת מסגרת שבה אפשר להשתמש כדי לבנות מודלים לאינספור מערכות פיזיקליות אמיתיות, אבל בניית מודלים כאלו יכולה להיות קשה ומורכבת וזה לחלוטין לא מה שאנחנו עושים כאן. למעשה, ננקוט בגישה ההפוכה – נציג מודלים פשוטים יחסית, ובכלל לא נדון בשאלה האם קיימת מערכת פיזיקלית אמיתית שמסוגלת לממש אותם." />
+<meta property="og:description" content="הפוסטים שלי עד כה על חישוב קוונטי ותורת הקוונטים דיברו מאוד באוויר. עכשיו הגיע הזמן לתכל’ס – לתאר את המודל המתמטי הבסיסי של תורת הקוונטים שבו אנחנו הולכים להשתמש. לפני שאני מתחיל אני רק רוצה להזכיר שהרעיון בתורת הקוונטים הוא לתת מסגרת שבה אפשר להשתמש כדי לבנות מודלים לאינספור מערכות פיזיקליות אמיתיות, אבל בניית מודלים כאלו יכולה להיות קשה ומורכבת וזה לחלוטין לא מה שאנחנו עושים כאן. למעשה, ננקוט בגישה ההפוכה – נציג מודלים פשוטים יחסית, ובכלל לא נדון בשאלה האם קיימת מערכת פיזיקלית אמיתית שמסוגלת לממש אותם." />
+<link rel="canonical" href="http://localhost:4000/blog/2014/07/21/quantum_computing_formal_intro/" />
+<meta property="og:url" content="http://localhost:4000/blog/2014/07/21/quantum_computing_formal_intro/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-07-22T01:16:08+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2014-07-22T01:16:08+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/07/21/quantum_computing_formal_intro/"},"url":"http://localhost:4000/blog/2014/07/21/quantum_computing_formal_intro/","author":{"@type":"Person","name":"gadial"},"description":"הפוסטים שלי עד כה על חישוב קוונטי ותורת הקוונטים דיברו מאוד באוויר. עכשיו הגיע הזמן לתכל’ס – לתאר את המודל המתמטי הבסיסי של תורת הקוונטים שבו אנחנו הולכים להשתמש. לפני שאני מתחיל אני רק רוצה להזכיר שהרעיון בתורת הקוונטים הוא לתת מסגרת שבה אפשר להשתמש כדי לבנות מודלים לאינספור מערכות פיזיקליות אמיתיות, אבל בניית מודלים כאלו יכולה להיות קשה ומורכבת וזה לחלוטין לא מה שאנחנו עושים כאן. למעשה, ננקוט בגישה ההפוכה – נציג מודלים פשוטים יחסית, ובכלל לא נדון בשאלה האם קיימת מערכת פיזיקלית אמיתית שמסוגלת לממש אותם.","headline":"חישוב קוונטי – ועכשיו פורמלית","dateModified":"2014-07-22T01:16:08+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">חישוב קוונטי &amp;#8211; ועכשיו פורמלית</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-07-22T01:16:08+03:00" itemprop="datePublished">Jul 22, 2014
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>הפוסטים שלי עד כה על חישוב קוונטי ותורת הקוונטים דיברו מאוד באוויר. עכשיו הגיע הזמן לתכל’ס – לתאר את המודל המתמטי הבסיסי של תורת הקוונטים שבו אנחנו הולכים להשתמש. לפני שאני מתחיל אני רק רוצה להזכיר שהרעיון בתורת הקוונטים הוא לתת <strong>מסגרת</strong> שבה אפשר להשתמש כדי לבנות מודלים לאינספור מערכות פיזיקליות אמיתיות, אבל בניית מודלים כאלו יכולה להיות קשה ומורכבת וזה לחלוטין לא מה שאנחנו עושים כאן. למעשה, ננקוט בגישה ההפוכה – נציג מודלים פשוטים יחסית, ובכלל לא נדון בשאלה האם קיימת מערכת פיזיקלית אמיתית שמסוגלת לממש אותם.</p>
+
+<p>המודל המתמטי הוא, ובכן, מתמטי. צריך להכיר בעיקר אלגברה לינארית בשבילו, אבל ברמה שבה כבר מרגישים בנוח עם המושגים. מכיוון שכתבתי בבלוג פוסטים על הנושאים הרלוונטיים אני לא הולך לחזור על שום דבר מהמתמטיקה עכשיו אלא להניח שהקוראים מכירים אותה. עם הקוראים שלא מכירים מתמטיקה אבל קיוו להבין פורמלית מהו חישוב קוונטי הסליחה; אבל לטעמי בלי להבין טוב את המתמטיקה (שאינה מתקדמת במיוחד) אין אפשרות להבין חישוב קוונטי.</p>
+
+<p>ה”אקסיומה” הראשונה של תורת הקוונטים היא שניתן לתאר את המערכת בתור <strong>מרחב וקטורי</strong>; ליתר דיוק, מרחב הילברט מעל $latex \mathbb{C}$, דהיינו יש לנו גם מכפלה פנימית בעסק והמרחב מתנהג “נחמד”. אני הולך להתעסק רק עם מרחבים סוף-ממדיים אז התורה הכללית יותר של מרחבי הילברט לא לגמרי רלוונטית, אבל בניתוח של מערכות פיזיקליות אמיתיות העבודה עם מרחבים אינסוף-ממדיים היא בלתי נמנעת (ולמען האמת, טקסטים פיזיקאיים לרוב מרמים על ימין ועל שמאל בנקודה הזו, אבל זה לא אמור להיות פוסט מרמור על פיזיקה אז לא תשמעו ממני כלום על זה). המרחב הוקטורי הזה נקרא <strong>מרחב המצבים</strong> של המערכת. המצב של המערכת ברגע נתון מתואר על ידי וקטור אחד מתוך המרחב. על הוקטור הזה יש דרישה שהוא יהיה מנורמה 1, וארחיב על זה בהמשך.</p>
+
+<p>בואו נראה את הדוגמה הבסיסית ביותר למרחב שכזה: <strong>קיוביט</strong>. קיוביט הוא האנלוג הקוונטי של הביט ה”קלאסי”. מהו ביט? יחידת המידע הבסיסית במחשב, שיכולה להיות 0 או 1 (מבחינה פיזיקלית ניתן לייצג ביט, למשל, על ידי רמות מתח שונות ברכיב חשמלי מסויים). כמובן שעם ביט בודד קשה לעשות הרבה, אבל הרבה ביטים ביחד מסוגלים לייצג כל מה שתרצו, בערך.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>קיוביט הוא מערכת קוונטית שבה יש שני מצבי בסיסי, דהיינו מרחב המצבים הוא מרחב וקטורי ממימד 2 מעל $latex \mathbb{C}$. נהוג לקחת בסיס אורתונורמלי שלו ולסמן את אבריו ב-0 ו-1, אבל כשהם נמצאים בתוך $latex \left</td>
+      <td>\cdot\right\rangle$. דהיינו, אברי הבסיס מסומנים על ידי $latex \left</td>
+      <td>0\right\rangle $ ו-$latex \left</td>
+      <td>1\right\rangle $ (אבל 0 ו-1 הם <strong>סימונים</strong> ותו לא; אין להם משמעות מספרית כאן).</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>מה פשר השימוש ב-$latex \left</td>
+      <td>\cdot\right\rangle $? נראה לי שהגיע הזמן להסביר. מדובר על סימון שהמציא הפיזיקאי פול דיראק. על היתרונות והחסרונות שלו אולי נדבר בהמשך, אחרי שנצבור קצת נסיון בעבודה איתו. בינתיים נסביר מה קורה כאן. נתחיל מהאופן שבו נהוג לפעמים לכתוב מכפלה פנימית של שני וקטורים: $latex \left\langle a</td>
+      <td>b\right\rangle $. כלומר, $latex a,b$ נמצאים בתוך סוגריים משולשים עם קו מפריד ביניהם. באנגלית סוגריים כאלו נקראים brackets. עכשיו, מה שדירק עושה הוא “לחתוך באמצע” את המכפלה הפנימית הזו – לפרק אותה לזוג $latex \left\langle a\right</td>
+      <td>\cdot\left</td>
+      <td>b\right\rangle $. את המשמעות של $latex \left</td>
+      <td>b\right\rangle $ כבר הבנו – זה פשוט איבר במרחב הוקטורי שלנו, שאסמן בתור $latex V$. מהו $latex \left\langle a\right</td>
+      <td>$, עם הסוגריים ה”הפוכים”? ובכן, זהו <strong>פונקציונל לינארי</strong> מעל $latex V$. תזכורת קטנה מה זה: פונקציונל לינארי מעל $latex V$ הוא פונקציה $latex f:V\to\mathbb{C}$ (כלומר, טרנספורמציה לינארית מהמרחב אל השדה שמעליו המרחב מוגדר, שבמקרה שלו הוא $latex \mathbb{C}$). לכן הסימון $latex \left\langle a\right</td>
+      <td>\cdot\left</td>
+      <td>b\right\rangle $ משמעותו – קחו את הפונקציונל $latex \left\langle a\right</td>
+      <td>$ והפעילו אותו על הוקטור $latex \left</td>
+      <td>b\right\rangle $. במקרה שבו $latex \left</td>
+      <td>a\right\rangle$ הוא איבר של המרחב הוקטורי שלנו, אנחנו מקבלים ממנו באופן טבעי פונקציונל $latex \left\langle a\right</td>
+      <td>$: מה ש-$latex \left\langle a\right</td>
+      <td>$ עושה על קלט $latex \left</td>
+      <td>b\right\rangle $ הוא פשוט להחזיר את המכפלה הפנימית של $latex \left</td>
+      <td>a\right\rangle $ עם $latex \left</td>
+      <td>b\right\rangle $. אם אסמן לרגע את המכפלה הפנימית של שני וקטורים באמצעות סוגריים רגילים, בעצם יש לנו כאן את ההגדרה $latex \left\langle a\right</td>
+      <td>\cdot\left</td>
+      <td>b\right\rangle \triangleq\left(\left</td>
+      <td>a\right\rangle ,\left</td>
+      <td>b\right\rangle \right)$. אם נשמיט את הנקודה בין $latex \left\langle a\right</td>
+      <td>$ ו-$latex \left</td>
+      <td>b\right\rangle $ ו”נצמיד” את הסמלים של שני האיברים נקבל בחזרה את הסימון $latex \left\langle a</td>
+      <td>b\right\rangle $ למכפלה הפנימית; זו הייתה מן הסתם המוטיבציה של שיטת הסימון של דיראק. לסיום, מכיוון שלקחנו את $latex \left\langle a</td>
+      <td>b\right\rangle $ ו”חתכנו אותו באמצע” לקבלת $latex \left\langle a\right</td>
+      <td>,\left</td>
+      <td>b\right\rangle $, עושים דבר דומה גם עם ה<strong>שמות</strong>: סוגריים משולשים נקראים brackets, ובהתאם הסימון $latex \left\langle a\right</td>
+      <td>$ (סימון שמתאר, כזכור, פונקציונל) נקרא bra והסימון $latex \left</td>
+      <td>b\right\rangle $ נקרא ket. וכל שיטת הסימון הזו נקראת לפעמים bra-ket notation.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>מבלבל? הו כן, בהחלט. זה סימון שקצת קשה להתרגל אליו. אבל זה כל מה שהוא – סימון.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>עכשיו בואו נסבך את העניינים עוד יותר ונגדיר משהו שנקרא <strong>מכפלה חיצונית</strong> של שני וקטורים: הוא יסומן בתור $latex \left</td>
+      <td>b\right\rangle \left\langle a\right</td>
+      <td>$. המשמעות של המשהו הזה נובעת כמעט מאליה מתוך הסימון: זה אופרטור לינארי מ-$latex V$ אל $latex V$, שמקבל כקלט וקטור $latex \left</td>
+      <td>c\right\rangle $, מחשב את המכפלה הפנימית של $latex \left</td>
+      <td>c\right\rangle $ עם $latex \left</td>
+      <td>a\right\rangle $, מקבל סקלר מרוכב ואז כופל את הסקלר המרוכב הזה ב-$latex \left</td>
+      <td>b\right\rangle $. פורמלית, אם $latex \left\langle a</td>
+      <td>c\right\rangle =\lambda$ אנחנו רואים שהסימון של דיראק הופך את האופרטור הזה ל”טבעי”, אם אנחנו מרשים לעצמנו להתעלל קצת בסימון ולהניח שהוא מקיים אסוציאטיביות:</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \left</td>
+      <td>b\right\rangle \left\langle a\right</td>
+      <td>\left(\left</td>
+      <td>c\right\rangle \right)=\left</td>
+      <td>b\right\rangle \left(\left\langle a</td>
+      <td>c\right\rangle \right)=\left</td>
+      <td>b\right\rangle \cdot\lambda=\lambda\left</td>
+      <td>b\right\rangle $.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>בואו נשחק טיפה עם הסימון הזה. אם יש לנו בסיס אורתונורמלי למרחב – נאמר, $latex \left</td>
+      <td>0\right\rangle ,\left</td>
+      <td>1\right\rangle $ ויש לנו וקטור $latex \left</td>
+      <td>a\right\rangle $, אז אפשר להציג את $latex \left</td>
+      <td>a\right\rangle $ כצירוף לינארי של אברי הבסיס, כשהמקדמים מתקבלים בדיוק ממכפלה פנימית של $latex \left</td>
+      <td>a\right\rangle $ עם אברי הבסיס. כלומר: $latex \left</td>
+      <td>a\right\rangle =\left\langle 0</td>
+      <td>a\right\rangle \left</td>
+      <td>0\right\rangle +\left\langle 1</td>
+      <td>a\right\rangle \left</td>
+      <td>1\right\rangle $. דרך אחרת לכתוב את השוויון הזה, עם הסימונים שלנו, היא $latex \left</td>
+      <td>a\right\rangle =\left(\left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>+\left</td>
+      <td>1\right\rangle \left\langle 1\right</td>
+      <td>\right)\left</td>
+      <td>a\right\rangle $. אנחנו רואים כאן שמתקיים ש-$latex \left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>+\left</td>
+      <td>1\right\rangle \left\langle 1\right</td>
+      <td>$ הוא אופרטור היחידה, $latex \left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>+\left</td>
+      <td>1\right\rangle \left\langle 1\right</td>
+      <td>=I$. עוד קצת מחשבה ונראה ש-$latex \left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>$ הוא האופרטור שמטיל כל וקטור על תת-המרחב שנפרש על ידי $latex \left</td>
+      <td>0\right\rangle $ (ובאופן כללי, אם יש לנו בסיס אורתונורמלי $latex \left</td>
+      <td>e_{1}\right\rangle ,\left</td>
+      <td>e_{2}\right\rangle ,\dots\left</td>
+      <td>e_{n}\right\rangle $ אז כל אופרטור $latex \sum_{j}\left</td>
+      <td>e_{j}\right\rangle \left\langle e_{j}\right</td>
+      <td>$ כאשר $latex j$ רץ על חלק מהאינדקסים בין 1 ל-$latex n$, הוא אופרטור הטלה על תת-המרחב שנפרש על ידי אברי הבסיס המתאימים).</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>שיטת ההצגה הזו מאפשרת לנו לתאר מאוד בפשטות אופרטורים שהם <strong>לכסינים</strong>. אם $latex T$ הוא אופרטור כזה, שבבסיס האורתונורמלי $latex \left</td>
+      <td>e_{1}\right\rangle ,\left</td>
+      <td>e_{2}\right\rangle ,\dots\left</td>
+      <td>e_{n}\right\rangle $ הוא מתואר על ידי מטריצה אלכסונית $latex \mbox{diag}\left(\lambda_{1},\dots,\lambda_{n}\right)$, אז ניתן לכתוב אותו כך: $latex T=\sum\lambda_{i}\left</td>
+      <td>e_{i}\right\rangle \left\langle e_{i}\right</td>
+      <td>$. בואו ניתן עוד דוגמה. לצורך הדוגמה אני אציג שלוש מטריצות שנקראות <strong>מטריצות פאולי</strong>; הן זכו לשם מיוחד כי הן שימושיות למדי, מן הסתם. הנה הן:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>$latex \sigma_{x}=\left[\begin{array}{cc}0 &amp; 1\1 &amp; 0\end{array}\right],\sigma_{y}=\left[\begin{array}{cc}0 &amp; -i\i &amp; 0\end{array}\right],\sigma_{z}=\left[\begin{array}{cc}1 &amp; 0\0 &amp; -1\end{array}\right]$</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>את $latex \sigma_{z}$ אפשר להציג בקלות עם הבסיס הסטנדרטי שלנו: $latex \sigma_{z}=\left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>-\left</td>
+      <td>1\right\rangle \left\langle 1\right</td>
+      <td>$. עבור שתי האחרות זה יותר בעייתי. למשל, עבור $latex \sigma_{x}$ בסיס של וקטורים עצמיים הוא $latex \left</td>
+      <td>0\right\rangle +\left</td>
+      <td>1\right\rangle $ ו-$latex \left</td>
+      <td>0\right\rangle -\left</td>
+      <td>1\right\rangle $, עם ערכים עצמיים 1 ו-$latex -1$ בהתאמה. אז מפתה לכתוב משהו כזה:</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \sigma_{x}=\left(\left</td>
+      <td>0\right\rangle +\left</td>
+      <td>1\right\rangle \right)\left(\left\langle 0\right</td>
+      <td>+\left\langle 1\right</td>
+      <td>\right)-\left(\left</td>
+      <td>0\right\rangle -\left</td>
+      <td>1\right\rangle \right)\left(\left\langle 0\right</td>
+      <td>-\left\langle 1\right</td>
+      <td>\right)$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ואז לפתוח סוגריים, לצמצם איברים ולקבל</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \sigma_{x}=2\left(\left</td>
+      <td>1\right\rangle \left\langle 0\right</td>
+      <td>+\left</td>
+      <td>0\right\rangle \left\langle 1\right</td>
+      <td>\right)$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אבל זה פשוט <strong>לא נכון</strong>; מאיפה הגיע הכפל הזה ב-2? הסיבה היא שרימינו עם בחירת הבסיס של הוקטורים העצמיים; בחרנו בסיס לא אורתונורמלי – הנורמה של שני האיברים בו היא 2. אם יש לנו בסיס לא אורתונורמלי, דרך הכתיבה של האופרטור בתור $latex \sum\lambda_{i}\left</td>
+      <td>e_{i}\right\rangle \left\langle e_{i}\right</td>
+      <td>$ היא פשוט לא חוקית. אם היינו עובדים עם בסיס אורתונורמלי, כלומר מחלקים כל וקטור ב-$latex \sqrt{2}$, בסוף היינו מגיעים אל $latex \sigma_{x}=\left</td>
+      <td>1\right\rangle \left\langle 0\right</td>
+      <td>+\left</td>
+      <td>0\right\rangle \left\langle 1\right</td>
+      <td>$, שהיא דרך ההצגה הנכונה של האופרטור הזה. מכאן כבר קצרה הדרך להבנה שאפשר לייצג באופן כללי את האופרטור $latex \left[\begin{array}{cc}a &amp; b\c &amp; d\end{array}\right]$ על ידי $latex a\left</td>
+      <td>1\right\rangle \left\langle 1\right</td>
+      <td>+b\left</td>
+      <td>1\right\rangle \left\langle 0\right</td>
+      <td>+c\left</td>
+      <td>0\right\rangle \left\langle 1\right</td>
+      <td>+d\left</td>
+      <td>0\right\rangle \left\langle 0\right</td>
+      <td>$, ובפרט $latex \sigma_{y}=-i\left</td>
+      <td>1\right\rangle \left\langle 0\right</td>
+      <td>+i\left</td>
+      <td>0\right\rangle \left\langle 1\right</td>
+      <td>$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אם תזכרו, אמרנו שהמצבים של המערכת הקוונטית שלנו הם תמיד וקטורים <strong>מנורמה</strong> <strong>1</strong> במרחב שלנו. את הסיבה לדרישה הזו נסביר בהמשך, אבל משמעותה היא שוקטור כמו $latex \left</td>
+      <td>0\right\rangle +\left</td>
+      <td>1\right\rangle $ הוא לא איבר חוקי במרחב שלנו; צריך לכתוב $latex \frac{\left</td>
+      <td>0\right\rangle +\left</td>
+      <td>1\right\rangle }{\sqrt{2}}$. הבעיה היא שלכתוב את החלקי-שורש-שתיים הזה, זה פשוט מסורבל מדי לפעמים ולמי יש כוח לזה. אז מה עושים? מרמים בסימון, זה מה שעושים. כותבים $latex \left</td>
+      <td>0\right\rangle +\left</td>
+      <td>1\right\rangle $ בכל זאת, מתוך הנחה שכל מי שמבין עניין מבין שצריך לחלק שם בשורש שתיים ואנחנו סתם כותבים קיצור.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>עוד סימון לא סטנדרטי אחד שנזדקק לו נוגע למכפלה פנימית שמערבת גם הפעלת אופרטור. קודם כל נזכיר את הרעיון הכללי, תוך שאני מסמן מכפלה פנימית של וקטורים $latex a,b$ ב-$latex \left(a,b\right)$. לכל טרנספורמציה לינארית $latex T$ מהמרחב לעצמו קיימת מה שנקרא <strong>טרנספורמציה צמודה</strong> $latex T^{*}$ המקיימת את התכונה ש-$latex \left(a,Tb\right)=\left(T^{*}a,b\right)$, כלומר אפשר “להעביר” את $latex T$ צד במכפלה הפנימית ב”מחיר” של מעבר מ-$latex T$ אל הצמודה שלה $latex T^{<em>}$. <a href="http://www.gadial.net/2012/04/29/inner_product_space_adjoint/">היה לי על זה פוסט</a>, למי שמעוניין (אגב, פיזיקאים אמיתיים כותבים $latex T^{\dagger}$ במקום $latex T^{</em>}$, אבל איני פיזיקאי אמיתי).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>בקוונטית מסמנים את זוג הביטויים השווים הללו – $latex \left(a,Tb\right)$ ו-$latex \left(T^{*}a,b\right)$, באופן הבא: $latex \left\langle a</td>
+      <td>T</td>
+      <td>b\right\rangle $. הסימון הזה יכול אולי להיראות טיפה דו-משמעי במבט ראשון בגלל הסימטריה שלו, אבל זכרו שזו סימטריה מדומה: $latex \left</td>
+      <td>b\right\rangle $ הוא וקטור, בזמן ש-$latex \left\langle a\right</td>
+      <td>$ הוא אופרטור, ולכן הביטוי $latex \left\langle a</td>
+      <td>T</td>
+      <td>b\right\rangle $ אומר בצורה ברורה – הפעילו את $latex T$ על $latex \left</td>
+      <td>b\right\rangle $, קחו את התוצאה והפעילו עליה את האופרטור $latex \left\langle a\right</td>
+      <td>$, כלומר כפלו את התוצאה במכפלה פנימית עם $latex \left</td>
+      <td>a\right\rangle $. חד משמעי למדי.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>עוד דבר אחד שאני רוצה לדבר עליו לפני שנעבור הלאה הוא איך אפשר לבנות מערכות גדולות יותר מתוך מערכות קיימות. קיוביט אחד זה נחמד, אבל אי אפשר לעשות איתו יותר מדי; איך נראית מערכת של שני קיוביטים? ושלושה? ו-$latex n$ קיוביטים?</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ובכן, זה פשוט מאוד: מערכת מורכבת שכזו היא, מבחינה מתמטית, <strong>מכפלה טנזורית</strong> של המרחבים של המערכות הקיימות. את המושג של מכפלה טנזורית <a href="http://www.gadial.net/2014/06/10/vector_space_tensor_product/">תיארתי לא מזמן בבלוג</a> בדיוק בתור הכנה לפוסטים על חישוב קוונטי ולכן לא אתעכב עליו עכשיו. רק אעיר משהו על סימון: זה מעייף לכתוב $latex \left</td>
+      <td>0\right\rangle \otimes\left</td>
+      <td>0\right\rangle $ כל הזמן, אז פשוט כותבים $latex \left</td>
+      <td>00\right\rangle $ ושאר התעללויות דומות בסימון. בהמשך יש סיכוי שנראה התעללויות גדולות עוד יותר.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>יפה, הבנו פחות או יותר את הסימונים ואת הרעיון הבסיסי; על אילו עוד הנחות אנו מתבססים במודלים של תורת הקוונטים שלנו?</p>
+
+<p>הההנחה השניה מדברת על האופן שבו מערכת קוונטית סגורה – כלומר, בלי השפעות חיצוניות – <strong>מתפתחת בזמן</strong>. את השינוי הזה מתארת משוואה דיפרנציאלית שנקראת “משוואת שרדינגר”:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex i\hbar\frac{d\left</td>
+      <td>a\right\rangle }{dt}=H\left</td>
+      <td>a\right\rangle $</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כאשר $latex \hbar$ הוא קבוע פיזיקלי (“קבוע פלאנק”) ולא ניכנס אליו, ואילו $latex H$ הוא אופרטור הרמיטי שנקרא ה<strong>המילטוניאן</strong> של המערכת הקוונטית והוא מקודד את כל המידע הרלוונטי על המערכת לצורך ידיעת ההתפתחות שלה. כאשר רוצים לנתח מערכות קוונטיות אמיתיות מתארים את ההמילטוניאן שלהן במפורש ואז מנסים לפתור את המשוואה – למצוא ייצוגים מפורשים לפתרונות או לפחות להבין איך הם מתנהגים.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>כל זה לא יהיה רלוונטי בכלל עבורנו, מכיוון שאנחנו עוסקים במערכות פשוטות מאוד. תחת זאת מספיק לדעת את הדבר הבא: אם $latex \left</td>
+      <td>a_{1}\right\rangle $ הוא תיאור של המערכת בזמן א’ ו-$latex \left</td>
+      <td>a_{2}\right\rangle $ הוא תיאור שלה בזמן ב’ שבא אחרי זמן א’, אז קיים אופרטור אוניטרי $latex T$ כך ש-$latex \left</td>
+      <td>a_{2}\right\rangle =T\left</td>
+      <td>a_{1}\right\rangle $. אופרטור אוניטרי, כזכור, הוא אופרטור שמשמר את הנורמה של האיברים שהוא פועל עליהם; זה רלוונטי כי הנורמה של כל האיברים ה”חוקיים” במרחב שלנו היא 1. במקרה של המערכות הפשוטות שבהן נתעסק, אנו מניחים שאפשר לממש בפועל כל אופרטור אוניטרי כזה – כלומר, שאם יש לנו מערכת קוונטית במצב $latex \left</td>
+      <td>a\right\rangle $ כלשהו ויש לנו אופרטור אוניטרי $latex T$, אז אפשר לעשות איזה הוקוס פוקוס שיעביר את המערכת למצב $latex T\left</td>
+      <td>a\right\rangle $. איך עושים את זה בפועל? האם אפשר לעשות את זה בפועל? אלו לא שאלות שרלוונטיות להבנת היכולות של המודל החישובי שלנו אלא רק לשאלה (החשובה) עד כמה הוא ניתן למימוש במציאות. אנחנו לא הולכים לדבר על זה, בראש ובראשונה כי אני לא מבין בזה כלום.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ההנחה השלישית שלנו נוגעת למה שאנחנו קוראים לו <strong>מדידה</strong>. מדידה של מערכת קוונטית היא אינטראקציה חיצונית איתה (כלומר, לא כפופה להנחה הקודמת) שבמסגרתה המערכת “קורסת” למצב כלשהו, כאשר השאלה לאיזה מצב המערכת תקרוס היא <strong>הסתברותית</strong>; מדידה לרוב יכולה לגרום לקריסה לכמה מצבים שונים, והשאלה מי מביניהם יעלה בגורל נענית באופן הסתברותי. נפנוף הידיים הוא שנתון לנו בסיס אורתונורמלי למרחב $latex \left</td>
+      <td>e_{1}\right\rangle ,\left</td>
+      <td>e_{2}\right\rangle ,\dots\left</td>
+      <td>e_{n}\right\rangle $, ומדידה פירושה שאם המערכת נמצאת במצב $latex \left</td>
+      <td>a\right\rangle $ , אז היא עוברת לאחד ממצבי הבסיס, כשההסתברות לעבור למצב $latex \left</td>
+      <td>e_{i}\right\rangle $ היא $latex \left</td>
+      <td>\left\langle e_{i},a\right\rangle \right</td>
+      <td>^{2}$, דהיינו הריבוע של המקדם של $latex \left</td>
+      <td>e_{i}\right\rangle $ בהצגה של $latex \left</td>
+      <td>a\right\rangle $ כצירוף לינארי של אברי הבסיס.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>אבל, הניסוח המדויק הוא כללי יותר. בואו נראה אותו בלי להיכנס יותר מדי לפאניקה, כי את האינטואיציה כבר יש לנו.</p>
+
+<p>הרעיון הבסיסי הוא שכל מדידה – או אם להשתמש בטרמינולוגיה המקובלת, כל <strong>ערך נצפה</strong> – מאופיינת מבחינה מתמטית על ידי אופרטור לינארי $latex T$ שפועל על מרחב המצבים. התוצאות האפשריות של המדידה הן בדיוק <strong>הערכים העצמיים</strong> של $latex T$, ואחרי מדידה המערכת הקוונטית קורסת לתוך <strong>המרחב העצמי</strong> שמתאים לערך העצמי שנמדד. כמו כן $latex T$ חייב להיות אופרטור <strong>הרמיטי</strong>, כלומר לקיים $latex T^{*}=T$. אחת מהמשמעויות של הרמיטיות, נזכיר, היא שכל הערכים העצמיים של $latex T$ הם <strong>מספרים ממשיים</strong>; זה מתאים לכך שהמדידות שאנחנו מבצעים במציאות מחזירות מספרים ממשיים ולא מספרים מרוכבים כלליים, למרות שהפורמליזם המתמטי שלנו מדבר על מרחב וקטורי מעל המרוכבים.</p>
+
+<p>כרגיל, אפשר לשאול את השאלה – איך אפשר בכלל להוכיח שזה המצב? למה דווקא אופרטור לינארי? למה דווקא הערכים העצמיים? למה הרמיטי? ייתכן מאוד שיש תשובות תיאורטיות נפלאות לשאלות הללו, אבל אני לא מכיר אותן; אני מצדד לעת עתה בגישת “זה פורמליזם, זה עובד בשטח, זה מגניב, בואו נדבוק בזה ונראה מה קורה”. אני מסכים שזו לא מעט שרירותיות שצריך לבלוע בביס אחד.</p>
+
+<p>כשאנחנו מדברים על מרחבי הילברט כלליים, ערכים עצמיים של אופרטור זה עניין מסובך ואני לא הולך להיכנס בכלל לפרטים שלו. אז מראש אנחנו הולכים לדבר על מקרים פשוטים יותר: אצלנו המרחב הוא סוף-ממדי ולכן יש רק מספר סופי של ערכים עצמיים אפשריים. במקרה הזה, אנחנו נופלים תחת <strong>משפט הפירוק הספקטרלי</strong> שאומר שכל אופרטור נורמלי ניתן ללכסון אורתונורמלי, כלומר שקיים בסיס אורתונורמלי למרחב שבו האופרטור מיוצג על ידי מטריצה אלכסונית, או באופן שקול – קיים בסיס אורתונורמלי למרחב שכולו וקטורים עצמיים של האופרטור. אופרטור נורמלי הוא כזה שמתחלף עם הצמוד שלו – כלומר מקיים $latex TT^{*}=T^{*}T$. כל האופרטורים ההרמיטיים הם נורמליים, כמובן, ולכן כולם ניתנים לפירוק ספקטרלי שכזה.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>על פניו זה מוביל אותנו ישירות אל ההגדרה הקודמת: יהא $latex \left</td>
+      <td>e_{1}\right\rangle ,\left</td>
+      <td>e_{2}\right\rangle ,\dots\left</td>
+      <td>e_{n}\right\rangle $ בסיס אורתונורמלי של וקטורים עצמיים של $latex T$ עם ערכים עצמיים $latex \lambda_{1},\dots,\lambda_{n}$, אז ההסתברות שלנו למדוד את $latex \lambda_{i}$ אם אנחנו כרגע במצב $latex \left</td>
+      <td>a\right\rangle $ היא בדיוק $latex \left</td>
+      <td>\left\langle e_{i},a\right\rangle \right</td>
+      <td>^{2}$ ואחר כך נקרוס למצב $latex \left</td>
+      <td>e_{i}\right\rangle $. למה זה לא כללי מספיק? כי ייתכן של-$latex T$ יהיו ערכים עצמיים שהמרחב העצמי שלהם הוא ממימד גדול מ-1, כלומר יש יותר משני וקטורים עצמיים שונים מהותית (שאינם כפולה אחד של השני בסקלר) לערך העצמי הזה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>במקרה הזה, שבו יש יותר מוקטור עצמי אחד, ההסתברות לקבל את הערך העצמי המתאים היא סכום ההסתברויות לקבל אותה עם כל אחד מהוקטורים העצמיים, אבל השאלה היותר מעניינת היא – “לאן” נקרוס? האם אנחנו יכולים לבחור בשרירותיות וקטור ששייך למרחב העצמי ולקרוס אליו? האם במדידות שונות נוכל לקרוס לוקטורים שונים באותו מרחב עצמי? ובכן, לא, וכדי להסביר מה בדיוק קורה אנחנו נזקקים למושג של <strong>הטלה</strong> (<a href="http://www.gadial.net/2011/12/24/simultaneous_diagonalization/">שהזכרתי פעם בבלוג</a>). הטלה של וקטור על תת-מרחב מפרקת את הוקטור לשני חלקים – חלק אחד שנמצא במרחב, וחלק שני שנמצא ב”משלים” של המרחב. פורמלית, אם $latex V$ הוא מרחב וקטורי כך ש-$latex V=W\oplus U$ אז הטלה של וקטור $latex v\in V$ על $latex W$ מציגה אותו כסכום $latex  v=w+u$ כך ש-$latex w\in W,u\in U$. הסכום הזה הוא <strong>יחיד</strong> (זה חלק מהרעיון בסכום ישר, מה שמסומן ב-$latex \oplus$ – ואני מניח שאתם כבר יודעים את זה!) וההטלה פשוט מחזירה את $latex w$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>במקרה שלנו, בגלל שמדובר על בסיסים אורתונורמליים, הכל מאוד פשוט; למעשה, כבר הזכרתי את זה קודם. אם תת-המרחב העצמי הרלוונטי נפרש על ידי הוקטורים $latex  \left</td>
+      <td>e_{1}\right\rangle ,\left</td>
+      <td>e_{2}\right\rangle ,\dots\left</td>
+      <td>e_{t}\right\rangle $, אז אופרטור ההטלה על תת-המרחב הזה נתון במפורש על ידי $latex P=\sum_{i=1}^{t}\left</td>
+      <td>e_{i}\right\rangle \left\langle e_{i}\right</td>
+      <td>$. כרגיל, זו תוצאה שאני מניח שאתם כבר מכירים ולא אוכיח שוב.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>קל לראות שאופרטור ההטלה הזה מקיים שני דברים: הוא הרמיטי (כלומר $latex P^{*}=P$) והוא מקיים $latex P^{2}=P$. או במילים אחרות, $latex P^{*}P=P$. זה יהיה חשוב עוד רגע. גם את התכונות הללו אני לא אוכיח.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אם כך, ננסח מחדש את כל עניין המדידה: יש לנו אופרטורי הטלה $latex P_{1},\dots,P_{n}$ לתת-המרחבים העצמיים המתאימים לערכים העצמיים השונים $latex \lambda_{1},\dots,\lambda_{n}$ של האופרטור $latex T$ שאמרנו שהוא מה שמאפיין את המדידה. בהינתן מערכת במצב $latex \left</td>
+      <td>a\right\rangle $, מה ההסתברות שתת המרחב העצמי של $latex \lambda_{i}$ יהיה תוצאת המדידה? ההנחה היא שההסתברות הזו היא בדיוק הנורמה בריבוע של $latex P_{i}\left</td>
+      <td>a\right\rangle $, כלומר $latex \left(P_{i}\left</td>
+      <td>a\right\rangle ,P_{i}\left</td>
+      <td>a\right\rangle \right)$, מה שמסומן בסימונים שלנו בתור $latex \left\langle a</td>
+      <td>P_{i}^{*}P_{i}</td>
+      <td>a\right\rangle $ ובגלל ש-$latex P_{i}^{*}P_{i}=P_{i}$ אפשר פשוט לכתוב בתור $latex \left\langle a</td>
+      <td>P_{i}</td>
+      <td>a\right\rangle $. אם $latex \lambda_{i}$ הייתה תוצאת המדידה, מה יהיה המצב של המערכת הקוונטית אחרי המדידה? על פניו אנחנו אמורים לעבור אל $latex P_{i}\left</td>
+      <td>a\right\rangle $, אבל לא מובטח לנו שהוקטור הזה מנורמל. לכן ננרמל אותו: אנחנו עוברים אל $latex \frac{P_{i}\left</td>
+      <td>a\right\rangle }{\sqrt{\left\langle a</td>
+      <td>P_{i}</td>
+      <td>a\right\rangle }}$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>אז אלו ההנחות שנתבסס עליהן – האופן שבו מערכות קוונטיות מתוארות, האופן שבו הן מתפתחות כל עוד לא מודדים אותן, והאופן שבו מודדים אותן. החל מהפוסט הבא גם נתחיל לעשות עם המערכות הללו דברים מעניינים.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2014/07/21/quantum_computing_formal_intro/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

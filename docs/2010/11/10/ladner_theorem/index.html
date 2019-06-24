@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט לדנר, או – מפרקים לגורמים את NP | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט לדנר, או – מפרקים לגורמים את NP" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="סדרת הפוסטים האחרונה בבלוג עוררה תגובות נזעמות על כך שהכל קל וטריוויאלי מדי. כדי לנקום במי שטוענים כך, אציג היום פוסט שילכלך את הידיים עד למאוד בפרטים טכניים, אך יציג תוצאה בתורת הסיבוכיות שלטעמי היא יפה מאוד – משפט לדנר (יש יותר ממשפט מפורסם אחד של לדנר, אבל תכף יתברר על מה בדיוק מדובר). גם מי שנרתעים מפרטים טכניים מוזמנים להישאר לפחות לתחילת הפוסט, שבו אסביר מי נגד מי כאן." />
+<meta property="og:description" content="סדרת הפוסטים האחרונה בבלוג עוררה תגובות נזעמות על כך שהכל קל וטריוויאלי מדי. כדי לנקום במי שטוענים כך, אציג היום פוסט שילכלך את הידיים עד למאוד בפרטים טכניים, אך יציג תוצאה בתורת הסיבוכיות שלטעמי היא יפה מאוד – משפט לדנר (יש יותר ממשפט מפורסם אחד של לדנר, אבל תכף יתברר על מה בדיוק מדובר). גם מי שנרתעים מפרטים טכניים מוזמנים להישאר לפחות לתחילת הפוסט, שבו אסביר מי נגד מי כאן." />
+<link rel="canonical" href="http://localhost:4000/blog/2010/11/10/ladner_theorem/" />
+<meta property="og:url" content="http://localhost:4000/blog/2010/11/10/ladner_theorem/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-11-11T01:33:16+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2010-11-11T01:33:16+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/11/10/ladner_theorem/"},"url":"http://localhost:4000/blog/2010/11/10/ladner_theorem/","author":{"@type":"Person","name":"gadial"},"description":"סדרת הפוסטים האחרונה בבלוג עוררה תגובות נזעמות על כך שהכל קל וטריוויאלי מדי. כדי לנקום במי שטוענים כך, אציג היום פוסט שילכלך את הידיים עד למאוד בפרטים טכניים, אך יציג תוצאה בתורת הסיבוכיות שלטעמי היא יפה מאוד – משפט לדנר (יש יותר ממשפט מפורסם אחד של לדנר, אבל תכף יתברר על מה בדיוק מדובר). גם מי שנרתעים מפרטים טכניים מוזמנים להישאר לפחות לתחילת הפוסט, שבו אסביר מי נגד מי כאן.","headline":"משפט לדנר, או – מפרקים לגורמים את NP","dateModified":"2010-11-11T01:33:16+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט לדנר, או &amp;#8211; מפרקים לגורמים את NP</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-11-11T01:33:16+02:00" itemprop="datePublished">Nov 11, 2010
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>סדרת הפוסטים האחרונה בבלוג עוררה תגובות נזעמות על כך שהכל קל וטריוויאלי מדי. כדי לנקום במי שטוענים כך, אציג היום פוסט שילכלך את הידיים עד למאוד בפרטים טכניים, אך יציג תוצאה בתורת הסיבוכיות שלטעמי היא יפה מאוד – משפט לדנר (יש יותר ממשפט מפורסם אחד של לדנר, אבל תכף יתברר על מה בדיוק מדובר). גם מי שנרתעים מפרטים טכניים מוזמנים להישאר לפחות לתחילת הפוסט, שבו אסביר מי נגד מי כאן.</p>
+
+<p>ובכן, לא אחזור על כל תורת הסיבוכיות מההתחלה – אניח שהקוראים מכירים את המושגים P ו-NP, ואפילו את המושג הקשה יותר של NP-שלמות. <a href="http://www.gadial.net/?p=705">כתבתי</a> לא מזמן על המחלקות הללו כך שלא אעשה זאת שוב. השאלה שבה אעסוק הפעם היא זו:</p>
+
+<p>אנחנו מכירים בעיות רבות ששייכות ל-P, כלומר בעיות ששיכות ל-NP והן “הכי קלות” שם. על קצה המזלג: חישוב אריתמטי, חיפוש ברשימה, מיון, חיפוש בגרף, מציאת עץ פורש של גרף, התמרת פורייה בדידה, מציאת קמור של קבוצת נקודות, פתרון בעיית תכנון לינארי, ועוד ועוד ועוד ועוד – וגולת הכותרת של תחילת העשור: בדיקת ראשוניות. לא כל אלו הן בעיות כן/לא אבל העיקרון ברור). בדומה, אנחנו מכירים בעיות רבות שהן NP-שלמות – כלומר, בעיות ב-NP שהן “הכי קשות”. ושוב, רשימת המכולת כוללת את SAT, את 3-צביעה של גרפים, מציאת מעגל המילטוני, פתרון בעיית תכנון לינארי בשלמים, ועוד ועוד ועוד. אבל מה אנחנו לא מכירים כרגע בכלל? בעיות ב-NP שהן לא ב-P וגם אינן NP-שלמות.</p>
+
+<p>צריך להבהיר כאן משהו: אין לנו כרגע מושג האם P שונה מ-NP. אם שתי המחלקות הללו שוות, אז <strong>כל</strong> בעיה ב-NP היא גם NP-שלמה, וגם ב-P (למעשה, שתי השפות ה”טריוויאליות” – שפת כל המילים והשפה הריקה – אינן NP-שלמות בגלל בעיה טכנית לא חשובה, אבל נעזוב את זה). אם כן, לשאלה האם יש שפה שאינה ב-P וגם אינה NP-שלמה. כלומר, האם העולם שלנו כולל רק בעיות “הכי קלות” ובעיות “הכי קשות”, או שיש גם בעיות “הכי בינוניות”?</p>
+
+<p>יש לנו כרגע מועמדת טבעית לתפקיד בעיה שכזו – בעיית הפירוק לגורמים. לא ידוע אלגוריתם פולינומי לבעיה זו, ובניגוד לבדיקת ראשוניות – גם לא ממש מצפים שאלגוריתם כזה יימצא. עם זאת, ולמרות שזו תהיה סנסציה של ממש, אני לא חושב שהאפשרות לכך שזה יקרה נפסלת על הסף (למעשה, <strong>קיים</strong> אלגוריתם פולינומי לפירוק לגורמים, אבל למחשבים קוונטיים). מפתיע עוד יותר יהיה לגלות שפירוק לגורמים היא בעיה NP-שלמה. אבל כאמור, <strong>להוכיח</strong> שפירוק לגורמים זו בעיית ביניים שכזו בפרט יפתור לנו אחת ולתמיד את סוגיית $latex \mbox{P=NP}$, ולא ממש סביר שכך זה יקרה…</p>
+
+<p>אז מה כן אפשר לעשות? הוכחה שמתבססת על ההנחה ש-$latex \mbox{P}\ne\mbox{NP}$, כמובן, וזה מה שאציג כעת. לרוע המזל, ההוכחה אינה פשוטה; למרבה המזל, היא גם לא כל כך קשה כמו הוכחה אחרת שקראתי בשעתו. ההוכחה הזו קלה מספיק כדי שאציג אותה בבלוג, ולו כדי לנקום במי שרוצים דברים קשים יותר.</p>
+
+<p>כעת אני עובר למוד “מתמטי”. אתם מוזמנים להפסיק כאן – מי שימשיך, שלא יתלונן – הזהרתי אתכם. מכאן ואילך אני מניח ידע כלשהו בסיבוכיות.</p>
+
+<p>שפת הביניים שנבנה תתבסס על $latex \mbox{SAT}$; כזכור (מי שלא זוכר, אולי עדיף שלא ימשיך…), SAT היא פשוט אוסף של פסוקי $latex \mbox{CNF}$ ספיקים, והיא האמא של השפות ה-NP-שלמות, ולכן בוחרים אותה, אבל אפשר היה לקחת כל שפה NP-שלמה אחרת במקומה. הרעיון הוא לקחת מילים ב-SAT ו”לנפח” את האורך שלהן על ידי הוספת ג’יבריש לא מזיק – נניח, תווי $latex x$, שמן הסתם לא מהווים חלק מקידוד של פסוק חוקי. בשביל מה זה טוב? כי אם נוסיף המון תווי $latex x$ לפסוק, זה “ישפר”את זמן הריצה של אלגוריתמים עליו; זמן הריצה נמדד ביחס לאורך המילה כולה, כולל הדולרים, אבל זמן הריצה של האלגוריתם ינבע רק מאורך הפסוק עצמו, כי מהדולרים הוא מתעלם… זה נראה כמו רמאות מוחלטת וכמו משהו מטופש מאין כמותו, אני יודע; זו אחת הסיבות שבגללן ההוכחה הזו כה מגניבה.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>פורמלית, נניח ש-$latex H\left(n\right)$ היא פונקציה מהטבעיים לטבעיים, אז נסמן $latex \mbox{SAT}_{H}\triangleq\left{ \varphi x{}^{n^{H\left(n\right)}}</td>
+      <td>\varphi\in\mbox{SAT},\left</td>
+      <td>\varphi\right</td>
+      <td>=n\right} $. כלומר, אנחנו “מרפדים” כל $latex \varphi\in\mbox{SAT}$ על ידי הוספת $latex n^{H\left(n\right)}$ תווי זבל, כאשר $latex n$ הוא האורך של $latex \varphi$. ה-$latex H\left(n\right)$ שבה נשתמש, שאגדיר אותה בהמשך, תקיים את התכונות הבאות: ראשית, אפשר יהיה לחשב אותה בזמן “סביר”. שנית, היא תהיה מונוטונית עולה; ושלישית, והכי חשוב, היא תהיה חסומה אם ורק אם $latex \mbox{SAT}_{H}\in\mbox{P}$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כאן נמצא לב ההוכחה. אם $latex H$ הייתה גדלה <strong>מהר</strong>, אז היא הייתה גורמת לניפוח אדיר של מילים מ-$latex \mbox{SAT}$ ואז לא היה שום דבר מפתיע בכך ש-$latex \mbox{SAT}_{H}\in\mbox{P}$. כי, למשל, אם אני מקבל קלט $latex \varphi $^{2^{n}}$, אז גם אם אבדוק את כל ההשמות האפשריות ל-$latex \varphi$ זה ייקח לי זמן של $latex O\left(2^{n}\right)$ בלבד, וזהו האורך של המילה $latex \varphi $^{2^{n}}$ – כלומר, יש לי אלגוריתם “לינארי” שפותר את $latex \mbox{SAT}_{H}$, אבל כמובן שלא עשיתי פה שום דבר חכם. אם כן, העובדה שדווקא כאשר $latex H$ חסומה, ולכן הניפוח שלנו את $latex \mbox{SAT}$ הוא לא יותר מפולינומי בגודלו, דווקא אז $latex \mbox{SAT}_{H}\in\mbox{P}$ – זו עובדה משונה מאוד שלא כל כך מפתיע שגוררת את התוצאה שאנו מחפשים.</p>
+
+<p>בואו נראה למה.</p>
+
+<p>ראשית, אם $latex \mbox{SAT}_{H}\in\mbox{P}$ אז כאמור $latex H$ חסומה, כלומר $latex H\left(n\right)&lt;c$ עבור קבוע $latex c$ כלשהו ולכן $latex \mbox{SAT}_{H}$ כוללת פסוקים שהניפוח שלהם הוא בסך הכל פולינומי. זה מאפשר לנו לבצע רדוקציה פשוטה של $latex \mbox{SAT}$ אל $latex \mbox{SAT}_{H}$: בהינתן $latex \varphi$, צריך לייצר ממנו את $latex \mbox{\ensuremath{\varphi}}$^{n^{H\left(n\right)}}$ אבל את זה קל לעשות – אמרתי שקל לחשב את $latex H\left(n\right)$, ומכיוון שצריך לכתוב רק מספר פולינומי של תווים אחרי $latex \varphi$, הרדוקציה תהיה פולינומית (אם למשל היה צריך לכתוב $latex 2^{n}$ תווים, הרדוקציה לא הייתה פולינומית והכל היה קורס). אם כן, מאחר והנחנו ש-$latex \mbox{SAT}_{H}\in\mbox{P}$ והראינו רדוקציה פולינומית של $latex \mbox{SAT}$ אל $latex \mbox{\mbox{SAT}}_{H}$, אז גם $latex \mbox{SAT}\in\mbox{P}$ מה שגורר $latex \mbox{P=NP}$, בסתירה להנחה שלנו ש-$latex \mbox{P}\ne\mbox{NP}$.</p>
+
+<p>מצד שני, אם $latex \mbox{SAT}_{H}$ היא $latex \mbox{NP}$-שלמה, זה אומר (מהגדרת המושג של $latex \mbox{NP}$-שלמות) שיש רדוקציה פולינומית מ-$latex \mbox{SAT}$ אליה. טוב, הפעם זה לא מוביל מייד לסתירה כי הרי לא ניתן להסיק מכך ש-$latex \mbox{SAT}\in\mbox{P}$, אז מה כן? ובכן, הרדוקציה היא פולינומית? נניח שיש לה חסם זמן ריצה של $latex c\cdot n^{d}$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>עכשיו נעשה תעלול חביב ביותר – <strong>רדוקציה עצמית</strong> של $latex \mbox{SAT}$. נראה אלגוריתם שבהינתן פסוק $latex \varphi$ שאנו רוצים לבדוק את שייכותו ל-$latex \mbox{SAT}$, מצליח לחלץ ממנו פסוק $latex \psi$ ששייך ל-$latex \mbox{SAT}$ אם ורק אם $latex \varphi$ שייך ל-$latex \mbox{SAT}$, וכמו כן $latex \left</td>
+      <td>\psi\right</td>
+      <td>&lt;\left</td>
+      <td>\varphi\right</td>
+      <td>$. ההקטנה הזו היא קריטית – זה אומר שנוכל לחזור על התהליך שוב ושוב ובכל סיבוב להקטין בביט אחד את מה שיש לבדוק, ועל כן תוך מספר לינארי של סיבובים הפסוק שאנו בודקים יהיה קטן מספיק כדי שניתן יהיה לבדוק אותו באופן ישיר בלי לחשוש מהשלכות קטסטרופליות על זמן הריצה. הרעיון של רדוקציות עצמיות מקצרות אורך שכאלו הוא רעיון יפה וחשוב בפני עצמו ואני שמח שהוא צץ כך באמצע ההוכחה הזו.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>טוב, אז איפה היינו? אה, כן, $latex \mbox{SAT}_{H}\notin\mbox{P}$ (כי היא $latex \mbox{NP}$-שלמה והנחנו ש-$latex \mbox{P}\ne\mbox{NP}$). ולכן מהתכונה החשובה של $latex H\left(n\right)$ שדיברתי עליה עולה ש-$latex H\left(n\right)$ לא חסומה. מכיוון שהיא גם מונוטונית עולה, נקבל שקיים $latex n_{0}$ כך שלכל $latex n&gt;n_{0}$ מתקיים $latex n^{H\left(n\right)}&gt;c\cdot n^{2d}$. במילים אחרות – הניפוח הוא יחסית גדול.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אלא מה? הרדוקציה של $latex \mbox{SAT}$ ל-$latex \mbox{SAT}_{H}$ לוקחת פסוק $latex \varphi$ כך ש-$latex \left</td>
+      <td>\varphi\right</td>
+      <td>=n&gt;n_{0}$ ומייצרת אחד משני דברים: או משהו שנראה כמו $latex \psi $^{\left</td>
+      <td>\psi\right</td>
+      <td>^{H\left(\left</td>
+      <td>\psi\right</td>
+      <td>\right)}}$, כאשר $latex \psi$ הוא פסוק חוקי (כי כך נראית מילה ב-$latex \mbox{SAT}_{H}$), או משהו שבכלל לא מהצורה הזו (אין בו את הכמות הנכונה של דולרים, או שהוא בכלל נראה שונה לגמרי). במקרה שהמשהו לא מהצורה הנכונה, ברור לנו שהוא לא שייך ל-$latex \mbox{SAT}_{H}$ ולכן $latex \varphi$ לא שייך ל-$latex \mbox{SAT}$ וסיימנו. אז נניח מעתה ואילך שהרדוקציה תמיד מייצרת משהו מהצורה הנכונה. השאלה שלנו היא – כמה גדול $latex \psi$ יכול להיות? התשובה היא שלא ממש גדול, בגלל שלא היה לרדוקציה הרבה זמן כדי לכתוב את $latex \psi $^{\left</td>
+      <td>\psi\right</td>
+      <td>^{H\left(\left</td>
+      <td>\psi\right</td>
+      <td>\right)}}$, והיו לה המון דולרים לכתוב…</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>פורמלית, בואו נסמן $latex \left</td>
+      <td>\psi\right</td>
+      <td>=k$. הרדוקציה פעלה על $latex \varphi$ בזמן $latex c\cdot n^{d}$ לכל היותר, ולכן זה המספר המקסימלי של תווים שהיא יכלה לכתוב – כלומר, $latex \left</td>
+      <td>\psi $^{k^{H\left(k\right)}}\right</td>
+      <td>\le c\cdot n^{d}$. מצד שני, $latex \left</td>
+      <td>\psi $^{k^{H\left(k\right)}}\right</td>
+      <td>=k+k^{H\left(k\right)}&gt;c\cdot k^{2d}$. כלומר, קיבלנו $latex c\cdot k^{2d}&lt;c\cdot n^{d}$. מכאן חיש קל עולה ש-$latex k=\sqrt{n}$. כלומר, קיצרנו <strong>מאוד</strong> את $latex \varphi$, ולכן ניתן להשתמש בתעלול הרדוקציה העצמית.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>הפסקה. מישהו עדיין עוקב? כי עכשיו הגענו לחלק המסובך בהוכחה – הבניה של $latex H$. למי שבאמת שרד עד לכאן – קחו נשימה עמוקה. ועכשיו בואו ונתחיל.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>ראשית, נמספר את כל מכונות הטיורינג: $latex M_{k}$ תהיה המכונה ה-$latex k$-ית בסדר הלקסיקוגרפי על כל קידודי המכונות. כעת נגדיר את $latex H\left(n\right)=k$ להיות ה-$latex k$ הקטן ביותר שמקיים $latex k&lt;\log\log n$ וגם ש-$latex M_{k}$ מכריעה את $latex \mbox{SAT}_{H}$ עבור $latex x$-ים המקיימים $latex \left</td>
+      <td>x\right</td>
+      <td>\le\log n$, בזמן ריצה $latex k\left</td>
+      <td>x\right</td>
+      <td>^{k}$ לכל היותר. אם אין מכונה כזו, אז $latex k=\log\log n$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ההגדרה נראית מעגלית, אך מכיוון שכדי להגדיר את $latex H\left(n\right)$ עלינו להכיר רק ערכים של $latex H$ הקטנים או שווים ל-$latex \log n$ אין כאן מעגליות (זוהי הגדרה <strong>רקורסיבית</strong>, לא מעגלית).</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אם אתם תוהים כרגע מה לעזאזל – כן, גם אני הרגשתי ככה בהתחלה. אבל ההגדרה לא באמת כזו נוראית, וכל הלוגים המפחידים קיימים שם מסיבה טובה – אנחנו רוצים שאפשר יהיה לחשב את $latex H\left(n\right)$ ביעילות. החישוב הזה הוא עניין ישיר למדי – פשוט עוברים בהרצה מבוקרת על כל המכונות $latex M_{1},\dots,M_{\log\log n}$ ולכל מכונה, מריצים אותה על כל הקלטים $latex x$ המקיימים $latex \left</td>
+      <td>x\right</td>
+      <td>\le\log n$. בנוסף צריך לבדוק באופן ישיר האם $latex x\in\mbox{SAT}_{h}$ – זאת עושים באמצעות פתרון בכוח גס של $latex \mbox{SAT}$ וחישוב רקורסיבי של $latex H\left(n\right)$ לגדלים קטנים יותר. זו פשוט הפעלת כוח גס באופן הברוטלי ביותר האפשרי, וזה יוצא יעיל בזכות הלוגים.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>עכשיו, אם $latex H$ אינה מונוטונית עולה אז יש $latex n$ כך ש-$latex H\left(n\right)=k$ אבל $latex H\left(n+1\right)&lt;k$. מכאן בפרט ש-$latex H\left(n+1\right)\ne\log\log\left(n+1\right)$ (כי $latex k\le\log\log n$), כלומר $latex H\left(n+1\right)$ הוא מספרה של מכונה שעונה “כמו שצריך” על כל הקלטים עד גודל $latex \log\left(n+1\right)$. אבל מכונה כזו עונה נכון על כל הקלטים עד גודל $latex \log n$ ולכן $latex H\left(n\right)$ היה צריך להיות קטן או שווה למספרה הסידורי – סתירה.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>הראנו כי $latex H\left(n\right)$ ניתנת לחישוב יעיל ושהיא מונוטונית עולה. נותר להבין מדוע $latex H\left(n\right)$ אכן מקיימת את תכונת החסימות. ראשית נניח כי $latex \mbox{SAT}_{H}\in\mbox{P}$ ונוכיח כי $latex H$ חסומה. אם $latex \mbox{SAT}_{H}\in\mbox{P}$ אז יש אינסוף מכונות פולינומיות המכריעות את $latex \mbox{SAT}_{H}$ בזמן $latex cn^{c}$ עבור $latex c&gt;0$ קבוע גדול דיו; תהא $latex M_{k}$ מכונה שכזו כך ש-$latex k&gt;c$. אז בפרט $latex M_{k}$ מכריעה את $latex \mbox{SAT}_{H}$ עבור קלטים המקיימים $latex \left</td>
+      <td>x\right</td>
+      <td>\le\log n$ בזמן ריצה $latex k\left</td>
+      <td>x\right</td>
+      <td>^{k}$ <strong>לכל</strong> $latex n$; מכאן ש-$latex H\left(n\right)\le k$ לכל $latex n$ שעבורו $latex k\le\log\log n$, כלומר לכל $latex n&gt;2^{2^{k}}$, כלומר $latex H$ חסומה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>בכיוון השני, אם $latex H$ חסומה נוכיח ש-$latex \mbox{SAT}_{H}\in\mbox{P}$ באופן הבא: מכיוון ש-$latex H\left(n\right)$ חסומה, מעקרון שובך היונים יש ערך $latex k$ שאותו היא מקבלת אינסוף פעמים, והדבר גורר ש-$latex M_{k}$ מכריעה את $latex \mbox{SAT}_{H}$ בזמן $latex k\cdot n^{k}$. כדי לראות זאת, נניח שעל קלט $latex x$ כלשהו, $latex M_{k}$ לא עוצרת עם התשובה הנכונה בזמן $latex k\cdot\left</td>
+      <td>x\right</td>
+      <td>^{k}$, אז על פי הגדרת $latex H$ בהכרח $latex H\left(n\right)\ne k$ לכל $latex n&gt;2^{\left</td>
+      <td>x\right</td>
+      <td>}$ – סתירה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>זו סוף ההוכחה.</p>
+
+<p>בקריאה מחודשת, ההוכחה הזו היא למעשה <strong>פשוטה</strong> למדי. אין בה יותר מדי פרטים, ההגדרה היא יחסית ישירה, ואין צורך בטיעונים מחוכמים כל כך בשביל להתקדם. הוכחות כאלו הן נפוצות למדי בתורת הסיבוכיות, ואחרי שמתרגלים אליהן, הן באמת לא נוראיות כל כך. כך זה באופן כללי במתמטיקה – הוכחות שלצופה מבחוץ נראות מזוויעות לחלוטין, נראות פשוטות למדי למישהו “מבפנים”. עבורי, ככותב בלוג מתמטי, הוכחות כאלו מהוות בעיה מהותית. מצד אחד לטעמי הן יפהפיות וקלות להבנה ומן הראוי שאציג אותן לכל דורש; מצד שני, ברור לי לחלוטין שרובם המוחץ של הקוראים לא ישרדו יותר מכמה שורות של ההוכחה – ולמה שישרדו? הרי הם לא קוראים ספר לימוד בסיבוכיות וקשה להם להתעמק בפרטים, שאותם אני כנראה לא מציג באופן טוב כפי שספר לימוד מסוגל. אני לא מסוגל לפשט מהותית את ההוכחה או לתת הרבה הסברים אינטואיטיביים לה – כאן ההבנה מגיעה משליטה בטכניקה עצמה.</p>
+
+<p>אז טוב שלפעמים מפצירים בי לכתוב משהו מתקדם ונותנים לי תירוץ לכתוב פוסט כזה כעונש. כמובן, אנסה גם לכתוב פוסטים יותר “סקירתיים”ופחות טכניים על נושאים מתקדמים, אבל יותר קל להבטיח מלקיים; בפרט, בהתחשב בכך שהידע המתמטי שלי הוא לא רחב עד כדי כך (גם אם הבלוג אולי נותן אשלייה שגויה שאין זה כך).</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2010/11/10/ladner_theorem/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>(קצת על) הגאומטריה של מרחבי מכפלה פנימית | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="(קצת על) הגאומטריה של מרחבי מכפלה פנימית" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם על אלגברה לינארית הצגנו את מושג המכפלה הפנימית וכמה מושגים נלווים, אבל לא דיברנו על מה שלדעתי הוא הדבר העיקרי פה – האופן שבו מכפלה פנימית משרה על מרחבים וקטורים גאומטריה, במובן זה שאם יש לנו מכפלה פנימית על מרחב יש לנו מושגים של אורך וזווית ודברים שנובעים מהם." />
+<meta property="og:description" content="בפוסט הקודם על אלגברה לינארית הצגנו את מושג המכפלה הפנימית וכמה מושגים נלווים, אבל לא דיברנו על מה שלדעתי הוא הדבר העיקרי פה – האופן שבו מכפלה פנימית משרה על מרחבים וקטורים גאומטריה, במובן זה שאם יש לנו מכפלה פנימית על מרחב יש לנו מושגים של אורך וזווית ודברים שנובעים מהם." />
+<link rel="canonical" href="http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry/" />
+<meta property="og:url" content="http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-03-01T22:08:19+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2012-03-01T22:08:19+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry/"},"url":"http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry/","author":{"@type":"Person","name":"gadial"},"description":"בפוסט הקודם על אלגברה לינארית הצגנו את מושג המכפלה הפנימית וכמה מושגים נלווים, אבל לא דיברנו על מה שלדעתי הוא הדבר העיקרי פה – האופן שבו מכפלה פנימית משרה על מרחבים וקטורים גאומטריה, במובן זה שאם יש לנו מכפלה פנימית על מרחב יש לנו מושגים של אורך וזווית ודברים שנובעים מהם.","headline":"(קצת על) הגאומטריה של מרחבי מכפלה פנימית","dateModified":"2012-03-01T22:08:19+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">(קצת על) הגאומטריה של מרחבי מכפלה פנימית</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-03-01T22:08:19+02:00" itemprop="datePublished">Mar 1, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הקודם על אלגברה לינארית הצגנו את מושג המכפלה הפנימית וכמה מושגים נלווים, אבל לא דיברנו על מה שלדעתי הוא הדבר העיקרי פה – האופן שבו מכפלה פנימית משרה על מרחבים וקטורים <strong>גאומטריה</strong>, במובן זה שאם יש לנו מכפלה פנימית על מרחב יש לנו מושגים של אורך וזווית ודברים שנובעים מהם.</p>
+
+<p>נתחיל עם היצור שהגדרתי בפוסט הקודם כחלק אגבי מתהליך גרם-שמידט: נורמה. כזכור, אם $latex x\in V$ אז הגדרתי $latex |x|=\sqrt{\left\langle x,x\right\rangle }$, בהתבסס על כך ש-$latex \left\langle x,x\right\rangle $ הוא מספר ממשי חיובי (והפונקציה $latex \sqrt{}$, כתמיד, מחזירה את השורש החיובי). הנורמה מקיימת שלוש תכונות שמאפיינות כל כך טוב את מושג ה”אורך” שאפשר לראות אותה כהכללה טבעית שלו:</p>
+
+<ol>
+  <li>$latex |x|\ge0$ ו-$latex |x|=0$ אם ורק אם $latex x=0$.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>$latex |\lambda x|=\left</td>
+          <td>\lambda\right</td>
+          <td>|x|$ לכל סקלר $latex \lambda\in\mathbb{F}$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>$latex |x+y|\le|x|+|y|$ (“אי שוויון המשולש”).</li>
+</ol>
+
+<p>תכונה 1 היא פשוט דרישה 4 בהגדרת מכפלה פנימית.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>תכונה 2 נובעת מתכונות 2 ו-3 של מכפלה פנימית: $latex |\lambda x|^{2}=\left\langle \lambda x,\lambda x\right\rangle =\lambda\overline{\lambda}\left\langle x,x\right\rangle =\left</td>
+      <td>\lambda\right</td>
+      <td>^{2}|x|^{2}$ ולכן על ידי הוצאת שורש נקבל את התכונה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>תכונה 3 לעומת זאת היא מעניינת ולא מיידית. השם “אי שוויון המשולש” נובע מכך שבמשולש, סכום אורכי כל שתי צלעות הוא תמיד גדול מאורך הצלע השלישית. עוד מעט נראה שהתכונה הזו היא המהותית ביותר כאשר אנחנו רוצים לדבר על <strong>מרחק</strong>, שכן היא מונעת סיטואציה אבסורדית שבה מרחק בין שתי נקודות <strong>גדול</strong> מהמרחק בין שתיהן לאיזו נקודה בצד (ולכן יותר מהיר ללכת לא מהנקודה הראשונה לשניה אלא לעבור קודם בנקודה הצדדית). את תכונה 3 אי אפשר להרוויח “סתם” – נשתמש בטענת עזר שהיא חשובה ביותר בזכות עצמה.</p>
+
+<p>ראשית, בואו ננסה להוכיח את הטענה פשוט מההגדרות:</p>
+
+<p>$latex |x+y|^{2}=\left\langle x+y,x+y\right\rangle =\left\langle x,x\right\rangle +\left\langle x,y\right\rangle +\left\langle y,x\right\rangle +\left\langle y,y\right\rangle $</p>
+
+<p>$latex =|x|^{2}+\left\langle x,y\right\rangle +\overline{\left\langle x,y\right\rangle }+|y|^{2}=|x|^{2}+2\mbox{Re}\left\langle x,y\right\rangle +|y|^{2}$</p>
+
+<p>המממפף. כאן אנחנו נתקעים, כי לא ברור לנו מה לעשות עם ה-$latex 2\mbox{Re}\left\langle x,y\right\rangle $ שתקוע לנו כאן. אנחנו רוצים להבין משהו על טיב הקשר שבין $latex \left\langle x,y\right\rangle $ ו-$latex |x|,|y|$. לצורך כך, בואו ניזכר במכפלות סקלריות: הגדרנו מכפלה סקלרית ב-$latex \mathbb{R}^{2}$ בתור מכפלת ה<strong>אורכים</strong> של וקטורים בקוסינוס הזווית ביניהם. במילים אחרות, המכפלה הסקלרית הייתה <strong>לכל היותר</strong> מכפלת האורכים של הוקטורים; לרוב היא “התקזזה” קצת בגלל שהוקטורים לא הצביעו לאותו הכיוון. את התחושה האינטואיטיבית הזו אפשר לתרגם לאי-שוויון קונקרטי:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>\le|x||y|$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>לאי השוויון הזה קוראים <strong>אי שוויון קושי-שוורץ</strong>, והוא אחד מאותם משפטים מתמטיים שבהם אני נתקל <strong>בכל מקום</strong> (לעתים קרובות בניסוח למקרה פרטי עבור מכפלה פנימית ספציפית, ואז הוא נראה מסורבל <strong>יותר</strong> וקשה יותר להבנה). קשה להפריז בחשיבות שלו, אבל למרבה המזל ההוכחה שלו אינו קשה במיוחד. לפני שנוכיח אותו בואו נראה איך הוא מסיים עם אי-שוויון המשולש: $latex 2\mbox{Re}\left\langle x,y\right\rangle \le2\left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>\le2|x||y|$ ולכן:</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>$latex |x+y|^{2}\le|x|^{2}+2|x||y|+|y|^{2}=\left(|x|+|y|\right)^{2}$</p>
+
+<p>ועל ידי הוצאת שורש משני האגפים מקבלים את אי-שוויון המשולש.</p>
+
+<p>יופי, אז איך מוכיחים את קושי-שוורץ? גם כאן כדאי לזכור את מה שהלך עם מכפלה סקלרית. בדוגמה שנתתי, עם עבודה של כוח על גוף, לקחנו את הוקטור שתיאר את העבודה ופירקנו אותו לשני רכיבים – אחד בכיוון תנועת הגוף, והשני בניצב לכיוון הזה. המכפלה הסקלרית של הרכיב הראשון עם הכיוון הייתה בדיוק מכפלה של שני גדלי הוקטורים; המכפלה הסלקרית של הרכיב השני עם הכיוון הייתה 0 (כי הם ניצבים). זה גם מה שנעשה כאן, ונשתמש בדיוק באותם רעיונות שבהם השתמשנו בתהליך גרם-שמידט. ראשית ניקח את $latex x$ וננרמל אותו – נגדיר $latex a=\frac{x}{|x|}$ (כאן עלינו להניח ש-$latex x\ne0$ אבל אם $latex x=0$ אז $latex \left\langle x,y\right\rangle =0=|0||y|$ ואי השוויון טריוויאלי). כעת נגדיר $latex b=y-\left\langle y,a\right\rangle a$ . כלומר, $latex b$ הוא בדיוק מה שנשאר מ-$latex y$ אחרי שמחסרים ההטלה של $latex y$ על וקטור היחידה $latex a$ שנמצא באותו כיוון כמו $latex x$. בפרט, $latex \left\langle b,a\right\rangle =0$</p>
+
+<p>כעת:</p>
+
+<p>$latex 0\le|b|^{2}=\left\langle b,b\right\rangle =\left\langle b,y-\left\langle y,a\right\rangle a\right\rangle $</p>
+
+<p>$latex =\left\langle b,y\right\rangle -\left\langle b,\left\langle y,a\right\rangle a\right\rangle =\left\langle b,y\right\rangle $</p>
+
+<p>$latex =\left\langle y-\left\langle y,a\right\rangle a,y\right\rangle =\left\langle y,y\right\rangle -\left\langle y,a\right\rangle \left\langle a,y\right\rangle $</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex =|y|^{2}-\frac{\left\langle y,x\right\rangle \left\langle x,y\right\rangle }{|x|^{2}}=|y|^{2}-\frac{\left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>^{2}}{|x|^{2}}$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>העברת אגפים, כפל, הוצאת שורש וקיבלנו $latex \left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>\le|x||y|$. החישוב שלמעלה נראה טיפה טכני אבל הוא מיידי למדי, והעיקר פה הוא הרעיון שהצגתי קודם.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>בואו ננצל את ההזדמנות הזו ונציג רעיון שלא אשתמש בו בהמשך אבל שווה לשים אליו לב: מכיוון ש-$latex \left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>\le|x||y|$ הרי ש-$latex 0\le\frac{\left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>}{|x||y|}\le1$ תמיד ולכן אפשר לדבר על $latex \mbox{arccos}\left(\frac{\left</td>
+      <td>\left\langle x,y\right\rangle \right</td>
+      <td>}{|x||y|}\right)$ – הביטוי הזה ייתן לנו לנו זווית בין 0 ל-90 מעלות, שבמובן מסויים ניתן לחשוב עליה בתור הזווית בין $latex x$ ו-$latex y$. בפרט, אם $latex \left\langle x,y\right\rangle =0$ אז הזווית היא בת 90 מעלות, בהתאם לרעיון שלנו של “וקטורים אורתוגונליים הם מאונכים”. אבל כאמור, אני לא הולך להגיד על זה יותר שום דבר.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>כעת, צריך להיזהר ולא לתת את הרושם השגוי שנורמות צצות רק בהקשרים של מכפלה פנימית. כל פונקציה $latex V\to\mathbb{R}$ עבור מרחב וקטורי $latex V$ שמקיימת את תכונות 1-3 היא נורמה (אפשר לדבר על נורמות גם בהקשרים שאינם של מרחבים וקטוריים, אבל צריך לתקן את התכונות בהתאם – בפרט תכונה 2), ו<strong>לא כל נורמה מתקבלת ממכפלה פנימית</strong>. כלומר, ייתכן שנגדיר נורמה על מרחב $latex V$ כך שפשוט אין מכפלה פנימית על $latex V$ שנותנת את הנורמה הזו. איך אפשר להוכיח דבר כזה? או, טוב ששאלתם. בואו נראה שלוש נורמות שונות על $latex \mathbb{R}^{2}$ – שלוש מה”פופולריות” ביותר:</p>
+
+<ol>
+  <li>הנורמה האוקלידית הרגילה: $latex |\left(x,y\right)|_{2}=\sqrt{x^{2}+y^{2}}$</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>נורמת “נהגי המוניות”: $latex |\left(x,y\right)|_{1}=\left</td>
+          <td>x\right</td>
+          <td>+\left</td>
+          <td>y\right</td>
+          <td>$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>נורמת הסופרמום: $latex |\left(x,y\right)|_{\infty}=\mbox{max}\left{ \left</td>
+          <td>x\right</td>
+          <td>,\left</td>
+          <td>y\right</td>
+          <td>\right} $</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<table>
+  <tbody>
+    <tr>
+      <td>לא אוכיח שאלו נורמות אבל די קל לראות את זה (בפרט שתי התכונות הראשונות הן מיידיות). הסימונים הדומים עבור הנורמות הללו אינם מקריים: באופן כללי, לכל מספר ממשי $latex p\ge1$ אפשר להגדיר נורמה על ידי $latex |\left(x,y\right)|_{p}=\left(\left</td>
+      <td>x\right</td>
+      <td>^{p}+\left</td>
+      <td>y\right</td>
+      <td>^{p}\right)^{\frac{1}{p}}$ מה שמכליל לנו את שתי הנורמות הראשונות, והשלישית מתקבלת כאשר $latex p\to\infty$ (במובן שלא אכנס אליו כרגע).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ההמחשה הטובה ביותר לאופי של הנורמות הללו, לטעמי, היא הציור של “מעגל היחידה” בכל אחד מהן – אוסף כל הנקודות שהמרחק שלהן מהראשית הוא 1, כלומר הוקטור שמתחיל בראשית ונגמר בהן הוא מנורמה 1:</p>
+
+<p>**<a href="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png"><img class="alignnone size-full wp-image-1524" title="140px-Vector_norms.svg" src="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png" alt="" width="140" height="460" /></a><br />
+**</p>
+
+<p>למי שהאיור הזה נראה לו מופרך לגמרי – נסו זאת בעצמכם! נסו לחשוב כיצד לצייר את מעגלי היחידה עבור שתי הנורמות ה”חדשות”. זה קל באופן מפתיע ואחרי זה המעגלים הללו לא ייראו מוזר כל כך.</p>
+
+<p>כעת אני רוצה לטעון שיש תכונה שכל נורמה שמושרית ממכפלה פנימית חייבת לקיים – תכונה שהיא גאומטרית במהותה: <strong>כלל המקבילית</strong>. נניח שיש לנו שני וקטורים, $latex a,b$. אפשר לחשוב עליהם כעל שתי צלעות של מקבילית. לא קשה לראות שהאלכסונים של אותה מקבילית יהיו $latex a+b$ ו-$latex a-b$:</p>
+
+<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png"><img class="alignnone size-full wp-image-1525" title="Parallelogram_law" src="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png" alt="" width="311" height="414" /></a></strong></p>
+
+<p>כעת, כלל המקבילית הוא מין הכללה של משפט פיתגורס: סכום ריבועי אורכי כל צלעות המקבילית שווה לסכום ריבועי אורכי האלכסונים. בלשון נורמות:</p>
+
+<p>$latex 2|a|^{2}+2|b|^{2}=|a+b|^{2}+|a-b|^{2}$</p>
+
+<p>למה הכללה של פיתגורס? כי אם $latex a,b$ מאונכים זה לזה המקבילית היא מלבן, והאלכסונים בה שווים, ולכן על ידי חלוקה ב-2 מקבלים בדיוק $latex |a|^{2}+|b|^{2}=|a+b|^{2}$; אבל היופי בכלל המקבילית הוא שהוא נכון תמיד, בכל מקבילית.</p>
+
+<p>איך מוכיחים את זה? אפשר עם גאומטריה אוקלידית, אבל אני רוצה לתת כאן הוכחה שתעבוד בכל מרחב מכפלה פנימית שהוא. ובכן, בואו פשוט ננסה לעבוד עם ההגדרה:</p>
+
+<p>$latex |a+b|^{2}+|a-b|^{2}=\left\langle a+b,a+b\right\rangle +\left\langle a-b,a-b\right\rangle $</p>
+
+<p>$latex =\left(\left\langle a,a\right\rangle +\left\langle a,b\right\rangle +\left\langle b,a\right\rangle +\left\langle b,b\right\rangle \right)+\left(\left\langle a,a\right\rangle -\left\langle a,b\right\rangle -\left\langle b,a\right\rangle +\left\langle b,b\right\rangle \right)$</p>
+
+<p>$latex =2\left\langle a,a\right\rangle +2\left\langle b,b\right\rangle =2|a|^{2}+2|b|^{2}$</p>
+
+<p>וואו. זה היה… קל. די מפתיע איך דרך ההצגה הזו של נורמות ומכפלות פנימיות הופכת דברים מסויימים לטריוויאליים.</p>
+
+<p>ובכן, בואו נראה מה מעוללת נורמת הסופרמום בהקשר של כלל המקבילית, עם הוקטורים $latex a=\left(1,0\right)$ ו-$latex b=\left(0,1\right)$:</p>
+
+<p>$latex 2|\left(1,0\right)|_{\infty}^{2}+2|\left(0,1\right)|_{\infty}^{2}=2+2=4$</p>
+
+<p>$latex |\left(1,1\right)|_{\infty}^{2}+|\left(1,-1\right)|_{\infty}^{2}=1+1=2$</p>
+
+<p>אופס! כלל המקבילית לא מתקיים! לכן אנו רואים, מייד, שנורמת הסופרמום לא נתקבלה ממכפלה פנימית.</p>
+
+<p>ומה על נורמת נהגי המוניות? ובכן, $latex \left(1,0\right),\left(0,1\right)$ דווקא לא יגרמו צרות, אבל:</p>
+
+<p>$latex 2|\left(2,0\right)|_{1}^{2}+2|\left(0,2\right)|_{1}^{2}=8+8=16$</p>
+
+<p>$latex |\left(2,2\right)|_{1}^{2}+|\left(2,-2\right)|_{1}^{2}=16+16=32$</p>
+
+<p>ולכן גם נורמת נהגי המוניות לא מתקבלת ממכפלה פנימית. מצאנו קריטריון פשוט ונחמד לבדוק מתי נורמה לא מושרית ממכפלה פנימית, אבל מסתבר שהקריטריון עוד יותר חזק מכך: אם נורמה כלשהי <strong>כן</strong> מקיימת את כלל המקבילית, אז היא <strong>כן</strong> מושרית ממכפלה פנימית, ואפילו אפשר לייצג את המכפלה הפנימית בעזרת הנורמה. בואו נניח לרגע שאנחנו מעל $latex \mathbb{R}$ ושיש לנו נורמה $latex |\cdot|$ שמקיימת את כלל המקבילית, ונשחק ב”נדמה לי” שהנורמה אכן הושרתה על ידי מכפלה פנימית, כלומר $latex |x|^{2}=\left\langle x,x\right\rangle $. כפי שכבר ראינו, $latex |a+b|^{2}=|a|^{2}+\left\langle a,b\right\rangle +\left\langle b,a\right\rangle +|b|^{2}$, ואם אנחנו מעל $latex \mathbb{R}$ אז $latex \left\langle a,b\right\rangle =\left\langle b,a\right\rangle $, ולכן קיבלנו:</p>
+
+<p>$latex \left\langle a,b\right\rangle =\frac{|a+b|^{2}-|a|^{2}-|b|^{2}}{2}$</p>
+
+<p>כלומר, עלה בידינו להביע את המכפלה הפנימית של שני איברים שרירותיים באמצעות הנורמה בלבד.</p>
+
+<p>את הביטוי למעלה אפשר לשנות קצת כדי לקבל משהו יותר סימטרי. אם נחזור על התעלול ונפתח את $latex |a-b|^{2}$ נקבל בסוף $latex \left\langle a,b\right\rangle =\frac{|a|^{2}+|b|^{2}-|a-b|^{2}}{2}$. מחיבור שני הביטויים ל-$latex \left\langle a,b\right\rangle $ וחלוקה ב-2 נקבל:</p>
+
+<p>$latex \left\langle a,b\right\rangle =\frac{|a+b|^{2}-|a-b|^{2}}{4}$</p>
+
+<p>זהות זו נקראת <strong>זהות הפולריזציה</strong>.</p>
+
+<p>אם אנחנו מעל $latex \mathbb{C}$ אותו תעלול יעבוד אבל הנוסחה תהיה מסובכת יותר בגלל שכבר לא מתקיים ש-$latex \left\langle a,b\right\rangle =\left\langle b,a\right\rangle $:</p>
+
+<p>$latex \left\langle a,b\right\rangle =\frac{|x+y|^{2}-|x-y|^{2}+i|x+iy|^{2}-i|x-iy|^{2}}{4}$</p>
+
+<p>עכשיו אפשר לחזור ביתר שאת לדיון הגאומטרי. הסכמנו כבר (אני מקווה) שנורמה מייצגת “אורך”. אם $latex u,v$ הם שני איברים במרחב $latex V$ אז $latex u-v$ הוא הוקטור המחבר ביניהן (ו-$latex v-u$ הוא אותו וקטור, בכיוון ההפוך). כלומר, $latex |u-v|$ הוא אורך הוקטור שמחבר את $latex u$ עם $latex v$, דהיינו ה<strong>מרחק</strong> בין $latex u$ ו-$latex v$. בלשון יותר פורמלית, כל נורמה משרה <strong>מטריקה</strong> – מטריקה היא הכללה של מושג המרחק כשם שנורמה היא הכללה של מושג האורך, אבל מטריקה היא מושג כללי יותר (אפשר להגדיר מטריקות גם על מרחבים שאינם וקטוריים ומרחבים שאין כל משמעות לדיבורים על נורמה בהם). לא אציג עכשיו את התורה של מרחבים מטריים; נסתפק בתחושה האינטואיטיבית ש-$latex |u-v|$ אכן מייצג מרחק ונראה מה עושים עם זה כאן.</p>
+
+<p>אולי מוכרת לכם תוצאה מגאומטריה ב-$latex \mathbb{R}^{2}$: אם נתון לנו ישר ונקודה מחוצה לו, אז מרחק הנקודה מהישר הוא אורך האנך מהנקודה לישר – כש”אנך” הוא קו שמועבר בין הנקודה אל עבר נקודה כלשהי על הישר, כך שהזווית שהוא יוצר עם הישר היא בת 90 מעלות. מה זה אומר שאורך האנך הוא ה”מרחק” של הנקודה מהישר? שאורכו הוא המרחק <strong>הקטן ביותר</strong> של הנקודה מכל נקודה על הישר.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אפשר לדבר על אותה סיטואציה גם במרחב מכפלה פנימית כללי (במקרה שלנו, סוף-ממדי. אנחנו תמיד מדברים על מרחבים סוף ממדיים בכל הסיפור הזה). אצלנו את מקום הנקודה תופס וקטור $latex u$, ואת מקום הישר תופס תת-מרחב $latex W\subseteq V$. וכעת הטענה היא: $latex \min\left{ |u-w|</td>
+      <td>w\in W\right} $ קיים ומתקבל בנקודה <strong>יחידה</strong> $latex w_{0}\in W$. כדי להבין למה לא טריוויאלי שמינימום על קבוצת מספרים יהיה תמיד קיים, הביטו בקבוצה $latex \left{ 1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\dots\right} $ שבבירור אין לה מינימום – האיברים בקבוצה “הולכים ומתקרבים” לאפס, אבל אפס אינו איבר בקבוצה (אפס הוא כן מה שנקרא <strong>האינפימום</strong> של הקבוצה, אבל לא על זה מדברים פה).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>המקרה הדו-ממדי הפשוט נותן לנו אינטואיציה חזקה מאוד לגבי מה שצריך לעשות כאן: אנחנו מצפים שאם $latex w_{0}$ קיימת, אז הוקטור $latex u-w_{0}$ יהיה מאונך ל”ישר” $latex W$, כלומר שיהיה אורתוגונלי לכל וקטור בתת-המרחב $latex W$, כלומר שיתקיים $latex \left\langle u-w_{0},w\right\rangle =0$ לכל $latex w\in W$. הבה ונתחיל מלהראות שאכן קיים $latex w_{0}\in W$ כך ש-$latex u-w_{0}$ אורתוגונלי לכל $latex W$.</p>
+
+<p>מכיוון ש-$latex V$ ממימד סופי כך גם $latex W$ ולכן קיים ל-$latex W$ בסיס אורתונורמלי (גרם-שמידט…) $latex \left{ e_{1},\dots,e_{k}\right} $. כמו שכבר ראינו כשהתעסקנו עם גרם-שמידט, $latex \sum\left\langle u,e_{i}\right\rangle e_{i}$ הוא בדיוק הרכיב של $latex u$ שחי “בתוך” $latex W$ – ה<strong>הטלה</strong> של $latex u$ על $latex W$. וכפי שראינו, $latex u-\sum\left\langle u,e_{i}\right\rangle e_{i}$ יהיה אורתוגונלי לכל אחד מוקטורי הבסיס $latex e_{i}$ ולכן אורתוגונלי לכל $latex W$. כלומר, נגדיר $latex w_{0}=\sum\left\langle u,e_{i}\right\rangle e_{i}$. אולי עכשיו קצת יותר ברור למה נכון לחשוב עליו כעל “הטלה” – הפיסות מתחילות להתחבר.</p>
+
+<p>מה שהולך לקרות עכשיו תקף גם במרחבים שאינם סוף-ממדיים, בעצם: אני הולך להראות שאם $latex u-w_{0}$אורתוגונלי לכל $latex W$ (כאשר $latex w_{0}$ וקטור כלשהו ב-$latex W$ ולא משנה איך הגעתי אליו – העיקר שתתקיים תכונת האורתוגונליות) אז $latex |u-w_{0}|$ אכן מינימלי. לצורך כך בואו ניקח $latex w\in W$ כלשהו השונה מ-$latex w_{0}$, וננסה להעריך את $latex |u-w|$ תוך שימוש באחד התעלולים הכי סטנדרטיים באנליזה (וברגע שהתחלנו לדבר על נורמות, בין אם נרצה ובין אם לאו, אנחנו מתחילים להתעסק באנליזה) – להוסיף ולהחסיר את אותו איבר:</p>
+
+<p>$latex |u-w|^{2}=|u-w_{0}+w_{0}-w|^{2}=|u-w_{0}|^{2}+2\mbox{Re}\left\langle u-w_{0},w_{0}-w\right\rangle +|w_{0}-w|^{2}$</p>
+
+<p>רק מה, $latex w_{0}-w\in W$ כי אנו מחסירים זה מזה שני איברים ב-$latex W$, ולכן המכפלה הפנימית באמצע היא 0, ולכן קיבלנו ש-$latex |u-w|^{2}$ שווה ל-$latex |u-w_{0}|^{2}$ ועוד משהו חיובי, שהרי $latex w_{0}\ne w$ ולכן $latex |w_{0}-w|^{2}$ חייב להיות חיובי. סוף הסיפור – הראינו שאם $latex u-w_{0}$ אורתוגונלי ל-$latex W$ אז $latex w_{0}$ הוא “הקירוב הטוב ביותר” ל-$latex u$ ב-$latex W$. אפשר להראות גם ההפך – שאם $latex w_{0}$ הוא הקירוב הטוב ביותר אז $latex u-w_{0}$ אורתוגונלי ל-$latex W$; ההוכחה קצת יותר טכנית ולכן אתחמק ממנה.</p>
+
+<p>צריך עדיין להראות שאם $latex w_{0}$ המהולל קיים הוא גם יחיד. כדי לחשוב על סיטואציה שבה קירוב טוב ביותר הוא לא יחיד, חשבו על קבוצה בצורת פרסה, ונקודה שנמצאת בדיוק באמצע הרווח שבין שני צדדי הפרסה. אלא שפרסה איננה תת-מימד ולכן לא רלוונטית למשפט שלנו (למעשה, אפשר לחזק את המשפט שלנו ולדרוש ש-$latex W$ תהיה רק קבוצה <strong>קמורה</strong>, אבל נעזוב את זה). ההוכחה כאן קצרה להפתיע, בהינתן ההוכחה של מה שחמקתי מלהוכיח פסקה קודם: אם שני וקטורים הם קירובים-טובים-ביותר, אז $latex u$ פחות כל אחד מהם אורתוגונלי לכל $latex W$, ופשוט לא ייתכן שזה יתקיים עבור שני וקטורים שונים, כי שימו לב להוכחה שבה הראיתי שוקטור אורתוגונלי נותן את הקירוב הטוב ביותר – <strong>לכל</strong> וקטור אחר ב-$latex W$, קיבלנו ש-$latex |u-w|&gt;|u-w_{0}|$.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>התוצאה הזו היא יפה בפני עצמה, אבל עדיין חסר העוקץ. לצורך כך, הבה ונוסיף הגדרה אחת אחרונה למשחק: אם $latex W$ הוא תת-מרחב של $latex V$, נסמן ב-$latex W^{\perp}$ את <strong>המשלים האורתוגונלי</strong> שלו – המשמעות של השם תכף תתברר, אבל בינתיים נסתפק בהגדרה היבשה של “כל הוקטורים ב-$latex V$ שאורתוגונליים לכל הוקטורים ב-$latex W$”, כלומר $latex W^{\perp}=\left{ v\in V</td>
+      <td>\forall w\in W:\left\langle v,w\right\rangle =0\right} $.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>הבה ונסמן ב-$latex E$ את הפונקציה שבהינתן וקטור $latex u$ מחזירה את ההיטל שלו ב-$latex W$. זוהי טרנספורמציה לינארית, כפי שניתן לראות מהמשוואה שהגדירה את $latex w_{0}$ ותכונות הלינאריות של מכפלה פנימית. יותר מכך, זוהי <strong>הטלה</strong> במובן שהגדרתי לפני אי-אילו פוסטים, כלומר מתקיים $latex E^{2}=E$ כי $latex E\left(w\right)=w$ לכל $latex w\in W$ (למה? זה באמת לא קשה). אם אתם זוכרים במעורפל, בשעתו השתמשנו בהטלות כדי לפרק את המרחב כולו לסכום ישר של תתי-המרחבים שעליהם ההטלות, ובכן, מטילות. גם כאן אני טוען שמתקיים $latex V=W\oplus W^{\perp}$, לכל $latex W$. איך נראה את זה?</p>
+
+<p>ניקח $latex v\in V$ כלשהו. אז $latex Ev\in W$ על פי ההגדרה. מכאן שאפשר לכתוב $latex v=Ev+\left(v-Ev\right)$, וכפי שאמרתי קודם (אבל חמקתי מלהוכיח), $latex v-Ev\in W^{\perp}$. צריך גם לראות ש-$latex W\cap W^{\perp}=\left{ 0\right} $, מה שנובע מייד מכך שאם $latex w\in W\cap W^{\perp}$ אז $latex \left\langle w,w\right\rangle =0$ (כי $latex w\in W$ ו-$latex w\in W^{\perp}$ אורתוגונליים).</p>
+
+<p>מה שאתם צריכים עכשיו להעלות בדמיון שלכם זה את $latex \mathbb{R}^{2}$ עם מערכת הצירים הרגילה – ציר $latex x$ וציר $latex y$ הם התת-מרחבים האורתוגונליים שנפרשים על ידי הוקטורים האורתונורמליים $latex \left(1,0\right),\left(0,1\right)$ וההטלות על הצירים הללו הן ההטלות ה”רגילות” שאנו מכירים. הנה שוב קיבלנו הכללה של הגאומטריה המוכרת לנו.</p>
+
+<p>טוב, מספיק להשתעשע, בפוסט הבא בנושא נעבור לאקשן האמיתי – מה קורה במפגש הענקים בין הטרנספורמציות הלינאריות והמכפלות הפנימיות.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2012/03/01/inner_product_spaces_geometry/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

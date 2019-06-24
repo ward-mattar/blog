@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט המספרים המחומשים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט המספרים המחומשים" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הזה אני רוצה להוכיח את מה שנקרא משפט המספרים המחומשים. במבט ראשון המשפט נראה מוזר ולא ברור למה הוא מעניין במיוחד, ולכן הפוסט הקודם הוקדש לשימוש מעניין שלו – מציאת נוסחת נסיגה עבור פונקציית החלוקה. עם זאת, המטרה של הפוסט הנוכחי היא לעמוד בפני עצמו, כי המתמטיקה של הפוסט הקודם היא טכנית למדי ולא דומה כל כך למה שנדבר עליו הפעם, כך שחבל לוותר רק בגלל זה." />
+<meta property="og:description" content="בפוסט הזה אני רוצה להוכיח את מה שנקרא משפט המספרים המחומשים. במבט ראשון המשפט נראה מוזר ולא ברור למה הוא מעניין במיוחד, ולכן הפוסט הקודם הוקדש לשימוש מעניין שלו – מציאת נוסחת נסיגה עבור פונקציית החלוקה. עם זאת, המטרה של הפוסט הנוכחי היא לעמוד בפני עצמו, כי המתמטיקה של הפוסט הקודם היא טכנית למדי ולא דומה כל כך למה שנדבר עליו הפעם, כך שחבל לוותר רק בגלל זה." />
+<link rel="canonical" href="http://localhost:4000/blog/2018/03/27/pentagonal_number_theorem/" />
+<meta property="og:url" content="http://localhost:4000/blog/2018/03/27/pentagonal_number_theorem/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-27T16:51:55+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2018-03-27T16:51:55+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/03/27/pentagonal_number_theorem/"},"url":"http://localhost:4000/blog/2018/03/27/pentagonal_number_theorem/","author":{"@type":"Person","name":"gadial"},"description":"בפוסט הזה אני רוצה להוכיח את מה שנקרא משפט המספרים המחומשים. במבט ראשון המשפט נראה מוזר ולא ברור למה הוא מעניין במיוחד, ולכן הפוסט הקודם הוקדש לשימוש מעניין שלו – מציאת נוסחת נסיגה עבור פונקציית החלוקה. עם זאת, המטרה של הפוסט הנוכחי היא לעמוד בפני עצמו, כי המתמטיקה של הפוסט הקודם היא טכנית למדי ולא דומה כל כך למה שנדבר עליו הפעם, כך שחבל לוותר רק בגלל זה.","headline":"משפט המספרים המחומשים","dateModified":"2018-03-27T16:51:55+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט המספרים המחומשים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-03-27T16:51:55+02:00" itemprop="datePublished">Mar 27, 2018
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הזה אני רוצה להוכיח את מה שנקרא <strong>משפט המספרים המחומשים</strong>. במבט ראשון המשפט נראה מוזר ולא ברור למה הוא מעניין במיוחד, ולכן <a href="http://gadial.net/2018/03/11/partition_function_and_pentagonal_numbers/">הפוסט הקודם</a> הוקדש לשימוש מעניין שלו – מציאת נוסחת נסיגה עבור פונקציית החלוקה. עם זאת, המטרה של הפוסט הנוכחי היא לעמוד בפני עצמו, כי המתמטיקה של הפוסט הקודם היא טכנית למדי ולא דומה כל כך למה שנדבר עליו הפעם, כך שחבל לוותר רק בגלל זה.</p>
+
+<p>ראשית, מה זה מספר מחומש? זה מספר מהצורה (\frac{k\left(3k-1\right)}{2}) כאשר (k) הוא מספר טבעי חיובי. השם “מספר מחומש” מגיע מכך שצורה מוזרה שבה אפשר לקבל את המספרים היא לצייר סדרה של (k) מחומשים אחד בתוך השני, כשבמחומש ה-(k) יש בדיוק (k) נקודות על כל צלע, ואז לספור כמה נקודות יש בסך הכל. המחומש הראשון, זה עם נקודה אחת על כל צלע, הוא “מנוון” ונראה כמו נקודה בודדת:</p>
+
+<p><img class="alignnone size-medium wp-image-3572" src="http://gadial.net/wp-content/uploads/2018/03/pengaton_numbers-300x138.jpg" alt="" width="300" height="138" srcset="https://gadial.net/wp-content/uploads/2018/03/pengaton_numbers-300x138.jpg 300w, https://gadial.net/wp-content/uploads/2018/03/pengaton_numbers.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+
+<p>זו דרך די מוזרה להגדיר סדרת מספרים, ואני אכן לא אחזור אליה בכלל. יותר מכך – אני אדבר גם על המספרים שמתקבלים כשמציבים בתוך (k) ערכים <strong>שליליים</strong>; גם במקרה הזה מקבלים מספרים חיוביים. השיטה היא להציב מספר טבעי ואז את המינוס שלו, ואז את המספר הטבעי הבא וכן הלאה. הצבות של (k=1,-1,2,-2,\dots) מניבות את סדרת המספרים (1,2,5,7,12,15,22,26,\dots).</p>
+
+<p>הסיבה שהסדרה הזו מעניינת היא הנוסחה הבאה, שנקראת <strong>משפט המספרים המחומשים</strong> ובמבט ראשון ממש לא ברור מה היא אומרת בכלל:</p>
+
+<p>(\prod_{n=1}^{\infty}\left(1-x^{n}\right)=\sum_{k=-\infty}^{\infty}\left(-1\right)^{k+1}x^{\frac{k\left(3k-1\right)}{2}})</p>
+
+<p>כפי שהצהרתי בפוסט הקודם, לטעמי זו אחת מהנוסחאות היפות במתמטיקה, אבל אין שום סיבה להתעמק בפרטים שלה כאן (את זה עשיתי בפוסט הקודם) – במקום זה אפשר לנסח את המשפט בצורה שקולה לגמרי שהרבה יותר קל להבין, ותהיה הרבה יותר רלוונטית לאופן שבו אוכיח את המשפט בפועל. בהינתן מספר טבעי (n), אפשר לדבר על הדרכים השונות להציג אותו בתור סכום של מספרים טבעיים חיוביים כך שאין מספר שמופיע פעמיים. בפוסט הזה אני אקרא בשם <strong>חלוקה</strong> להצגה כזו (באופן כללי “חלוקות” מתייחס גם למקרה שבו מספר יכול להופיע פעמיים). למשל, ל-4 יש שתי חלוקות: (4) עצמו, ו-(1+3). ה”חלוקה” (2+2) לא נחשבת כי המספר 2 מופיע בה פעמיים.</p>
+
+<p>אפשר לתאר חלוקות בדרך ציורית בעזרת <strong>טבלת יאנג</strong>. טבלת יאנג כוללת בסך הכל כמה שורות של ריבועים, כשכל שורה לא ארוכה יותר מאלו שבאות מתחתיה. סכום הריבועים הכולל בטבלה הוא (n), והאורך של כל שורה מייצג את אחד מהאיברים בפירוק. הנה דוגמא עבור הפירוקים של 4:</p>
+
+<p><strong><img class="alignnone size-medium wp-image-3573" src="http://gadial.net/wp-content/uploads/2018/03/young1-300x81.png" alt="" width="300" height="81" srcset="https://gadial.net/wp-content/uploads/2018/03/young1-300x81.png 300w, https://gadial.net/wp-content/uploads/2018/03/young1-768x208.png 768w, https://gadial.net/wp-content/uploads/2018/03/young1-1024x277.png 1024w, https://gadial.net/wp-content/uploads/2018/03/young1.png 1303w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>הכלל הנוסף של “אותו מספר לא מופיע פעמיים בפירוק” מתורגם אצלנו ל”בטבלת יאנג, כל שורה קצרה יותר מזו שמתחתיה”. לכן הטבלה הזו לא חוקית מבחינתנו:</p>
+
+<p><img class="alignnone wp-image-3574 size-thumbnail" src="http://gadial.net/wp-content/uploads/2018/03/young2-150x150.png" alt="" width="150" height="150" srcset="https://gadial.net/wp-content/uploads/2018/03/young2-150x150.png 150w, https://gadial.net/wp-content/uploads/2018/03/young2-300x298.png 300w, https://gadial.net/wp-content/uploads/2018/03/young2-100x100.png 100w, https://gadial.net/wp-content/uploads/2018/03/young2-50x50.png 50w, https://gadial.net/wp-content/uploads/2018/03/young2.png 355w" sizes="(max-width: 150px) 100vw, 150px" /></p>
+
+<p>מספר החלוקות של (n) הוא מספר טבלאות היאנג החוקיות שקיימות עבורו. עכשיו בואו נבדיל בין שני סוגי טבלאות: כאלו עם מספר <strong>זוגי</strong> של שורות, מה שאקרא לו “חלוקה זוגית”, וכאלו עם מספר <strong>אי-זוגי</strong> של שורות – “חלוקה אי-זוגית”. אסמן ב-(p_{\text{odd}}\left(n\right)) את מספר החלוקות האי-זוגיות של (n) וב-(p_{\text{even}}\left(n\right)) את מספר החלוקות הזוגיות. אנחנו יודעים ש-(p_{\text{odd}}\left(n\right)+p_{\text{even}}\left(n\right)) שווה למספר החלוקות של (n) בסך הכל; אבל למה שווה ההפרש, (p_{\text{odd}}\left(n\right)-p_{\text{even}}\left(n\right))? ובכן, זה בדיוק התוכן של משפט המספרים המחומשים: הוא אומר שכמעט תמיד מספר החלוקות הזוגיות יהיה שווה למספר החלוקות האי-זוגיות, כלומר ההפרש ביניהם יהיה 0; המקרים היחידים שבהם זה לא יהיה כך יהיו עבור (n) שהוא מספר מחומש, ובמקרה הזה ההפרש יהיה פלוס-מינוס 1, כשהפלוס-או-מינוס נקבע על פי זוגיות ה-(k) שמגדיר את המספר. בכתיבה פורמלית:</p>
+
+<p>(p_{\text{odd}}\left(n\right)-p_{\text{even}}\left(n\right)=\begin{cases} 1 &amp; n=\frac{k\left(3k-1\right)}{2},k\text{ odd}\ -1 &amp; n=\frac{k\left(3k-1\right)}{2},k\text{ even}\ 0 &amp; \text{else} \end{cases})</p>
+
+<p>הנה דוגמאות לכל המקרים הללו. ראשית, 2. זה מספר מחומש שמתקבל על ידי (k=1) האי-זוגי והפירוק היחיד שלו הוא 2; הפירוק (1+1) אינו חוקי כי 1 מופיע פעמיים. לכן מספר הפירוקים האי-זוגיים גדול ב-1 ממספר הפירוקים הזוגיים. כעת אל 7. זה מספר מחומש שמתקבל על ידי (k=-2) הזוגי, כך שאנחנו מצפים שמספר הפירוקים הזוגיים שלו יהיה גדול ב-1 ממספר הפירוקים האי-זוגיים שלו. הנה כל הפירוקים:</p>
+
+<p>(7,1+6,2+5,3+4,1+2+4)</p>
+
+<p>יש לנו פה שלושה פירוקים זוגיים ושניים אי-זוגיים – כמו שהמשפט מבטיח.</p>
+
+<p>עכשיו אל 8 שאיננו מספר מחומש בכלל ולכן אנחנו מצפים למספר שווה. הנה הפירוקים לכל גודל:</p>
+
+<p>1: (8)</p>
+
+<p>(2): (1+7,2+6,3+5)</p>
+
+<p>3: (1+2+5,1+3+4)</p>
+
+<p>יש לנו פה פירוק אחד מגודל 1 ושניים מגודל 3 – סה”כ שלושה מגודל אי זוגי, מה שמתקזז עם שלושה מגודל 2 הזוגי.</p>
+
+<p>הרעיון ברור, אבל איך מוכיחים את המשפט? ההוכחה שאראה פה תהיה קומבינטורית ותיעזר בטבלאות יאנג; זו לא ההוכחה המקורית של אוילר אלא הוכחה שהתגלתה לקראת סוף המאה ה-19 על ידי פרנקלין האמריקאי (לא, לא פרנקלין הזה). הטריק הוא לסדר פירוקים זוגיים ואי זוגיים בזוגות, כשלכל היותר פירוק אחד נותר בודד. נעשה את זה על ידי הגדרת פונקציה שלוקחת פירוק ובונה ממנו פירוק חדש, עם מספר מחוברים שונה ב-1, כך שהפעלה נוספת של הפונקציה “מתקנת” את ההפעלה הקודמת וחוזרת לאיבר שממנו התחלנו. במילים אחרות, הפונקציה שלנו היא ההופכית של עצמה; מקיימת (f\left(f\left(x\right)\right)=x) לכל קלט. לפונקציה כזו קוראים <strong>אינבולוציה</strong>.</p>
+
+<p>האינטואיציה של הבניה קלה להדהים כשמסתכלים עליה ציורית עם טבלאות יאנג. בואו נביט על טבלת היאנג של הפירוק (4+6+8+9+10) של (37):</p>
+
+<p><strong><img class="alignnone wp-image-3576 size-medium" src="http://gadial.net/wp-content/uploads/2018/03/young3-300x150.png" alt="" width="300" height="150" srcset="https://gadial.net/wp-content/uploads/2018/03/young3-300x150.png 300w, https://gadial.net/wp-content/uploads/2018/03/young3-768x384.png 768w, https://gadial.net/wp-content/uploads/2018/03/young3-1024x513.png 1024w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>אנחנו רוצים לבנות מהטבלה הזו טבלה שמייצגת מספר שונה ב-1 של מחוברים. כל מחובר מתאים ל<strong>שורה</strong> בטבלת היאנג, כך ששתי דרכי הפעולה הטבעיות ביותר הן: או <strong>להוסיף שורה</strong> מעל השורה העליונה, שתיבנה מקוביות שניקח מהשורות האחרות; או <strong>להסיר</strong> את השורה העליונה ולחלק אותה לשורות האחרות. ואנחנו רוצים שהכלל שמכתיב לנו באיזו משתי הדרכים כדאי לנקוט יהיה כזה ש”הופך את עצמו” אחרי שימוש אחד. אז הנה הטריק: בואו נמספר ב-(r) את מספר הקוביות בשורה העליונה (“המחובר הקטן ביותר בסכום”) וב-(s) נמספר את האורך של <strong>האלכסון</strong> בצד ימין למטה של הטבלה. באיור אצבע את השורה העליונה בירוק ואת האלכסון באדום:</p>
+
+<p><strong> <img class="alignnone size-medium wp-image-3577" src="http://gadial.net/wp-content/uploads/2018/03/young4-300x150.png" alt="" width="300" height="150" srcset="https://gadial.net/wp-content/uploads/2018/03/young4-300x150.png 300w, https://gadial.net/wp-content/uploads/2018/03/young4-768x384.png 768w, https://gadial.net/wp-content/uploads/2018/03/young4-1024x513.png 1024w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>הגדרה פורמלית יותר של (s) היא זו: אורך הסדרה של המחוברים בסכום שמתחילה במחובר הגדול ביותר, עוברת עליהם מהגדול לקטן, ומסתיימת לפני האיבר הראשון ששונה מקודמו לפחות ב-2. והנה ניסוח עוד יותר פורמלי: אם נסמן חלוקה (\lambda) בתור (\lambda=\left(\lambda_{1},\lambda_{2},\dots,\lambda_{k}\right)) כך ש-(\lambda_{1}&gt;\lambda_{2}&gt;\dots&gt;\lambda_{k}) אז (r=\lambda_{k}) ו-(s) הוא המספר הגדול ביותר עבורו מתקיים (\left(\lambda_{1},\dots,\lambda_{s}\right)=\left(\lambda_{1},\lambda_{1}-1,\dots,\lambda_{1}-\left(s-1\right)\right)).</p>
+
+<p>ומה האינבולוציה עושה? אם (r&gt;s) אז אנחנו מפרקים את האלכסון ובונים ממנו שורה חדשה מעל השורה העליונה; בגלל ש-(r&gt;s) מובטח לנו שהשורה הזו תהיה קצרה מזו שמתחתיה, כדרוש. אם לעומת זאת (r&lt;s) אנחנו מפרקים את השורה העליונה ובונים ממנה אלכסון חדש, כלומר מוסיפים קוביה אחת לכל (r) השורות הראשונות; מכיוון ש-(r&lt;s) אנחנו יודעים שיש מספיק שורות כאלו.</p>
+
+<p><strong><img class="alignnone size-medium wp-image-3578" src="http://gadial.net/wp-content/uploads/2018/03/young5-300x200.png" alt="" width="300" height="200" srcset="https://gadial.net/wp-content/uploads/2018/03/young5-300x200.png 300w, https://gadial.net/wp-content/uploads/2018/03/young5-768x512.png 768w, https://gadial.net/wp-content/uploads/2018/03/young5-1024x683.png 1024w, https://gadial.net/wp-content/uploads/2018/03/young5.png 1573w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>מתי <strong>עשויה</strong> להיות בעיה? במקרה שבו (r=s). כאן העסק עלול להתקלקל אבל לא <strong>חייב</strong> להתקלקל. בואו נראה דוגמא, שמתאימה ל-(3+6+8+9+10) של (36):</p>
+
+<p><strong><img class="alignnone size-medium wp-image-3579" src="http://gadial.net/wp-content/uploads/2018/03/young6-300x150.png" alt="" width="300" height="150" srcset="https://gadial.net/wp-content/uploads/2018/03/young6-300x150.png 300w, https://gadial.net/wp-content/uploads/2018/03/young6-768x384.png 768w, https://gadial.net/wp-content/uploads/2018/03/young6-1024x513.png 1024w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>ברור שבמקרה הזה אי אפשר לייצר שורה חדשה, כי היא תהיה באותה אורך כמו זו שמתחתיה; חייבים לפרק את השורה הקיימת, ואז מקבלים את הפירוק (6+9+10+11):</p>
+
+<p><strong><img class="alignnone size-medium wp-image-3580" src="http://gadial.net/wp-content/uploads/2018/03/young7-300x110.png" alt="" width="300" height="110" srcset="https://gadial.net/wp-content/uploads/2018/03/young7-300x110.png 300w, https://gadial.net/wp-content/uploads/2018/03/young7-768x280.png 768w, https://gadial.net/wp-content/uploads/2018/03/young7-1024x374.png 1024w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>הפירוק הזה תקין לגמרי, וכשנפעיל עליו את האינבולוציה נחזור לסיטואציה המקורית והכל טוב. מתי כן הייתה עלולה לצוץ בעיה? רק אם לא היו לנו (r) שורות לחלק את הקוביות של השורה העליונה אליהן. מתי זה עלול לקרות? אנחנו הרי יודעים שיש לפחות (s) שורות, ואת המספר הכולל של השורות סימנתי ב-(k). כלומר (r=s\le k); לכן כדי שתוכל להיווצר בעיה, הכרחי שיתקיים (s=k): במצב הזה מכיוון שאנחנו <strong>מפרקים</strong> את השורה העליונה, אנחנו נשארים בסוף עם קוביה בודדת שאין לנו שורה להכניס אותה אליה.</p>
+
+<p>איך נראית טבלה שבה (s=k)? היא תואמת כל חלוקה שבה הפער בין <strong>כל</strong> המחוברים הסמוכים הוא 1. למשל (1+2+3+4):</p>
+
+<p><strong><img class="alignnone wp-image-3582 size-medium" src="http://gadial.net/wp-content/uploads/2018/03/young8-300x300.png" alt="" width="300" height="300" srcset="https://gadial.net/wp-content/uploads/2018/03/young8-300x300.png 300w, https://gadial.net/wp-content/uploads/2018/03/young8-150x150.png 150w, https://gadial.net/wp-content/uploads/2018/03/young8-100x100.png 100w, https://gadial.net/wp-content/uploads/2018/03/young8-50x50.png 50w, https://gadial.net/wp-content/uploads/2018/03/young8.png 702w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>אבל כאן, כמובן, אין בעיה, כי (r&lt;s) ולכן אפשר לפרק את השורה העליונה. לכן המקרה <strong>היחיד</strong> שבו יכולה להיות בעיה הוא זה שבו (s=r=k). למשל, הטבלה הזו:</p>
+
+<p><strong><img class="alignnone size-medium wp-image-3584" src="http://gadial.net/wp-content/uploads/2018/03/young9-1-300x180.png" alt="" width="300" height="180" srcset="https://gadial.net/wp-content/uploads/2018/03/young9-1-300x180.png 300w, https://gadial.net/wp-content/uploads/2018/03/young9-1-768x461.png 768w, https://gadial.net/wp-content/uploads/2018/03/young9-1.png 877w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>וכאן אנחנו אכן מקבלים מספר מחומש, (12). ובאופן כללי?</p>
+
+<p>אם (s=r=k) אז החלוקה שלנו היא בהכרח מהצורה הבאה: (\left(k,k+1,k+2,\dots,k+\left(k-1\right)\right)). זה טור חשבוני פשוט במיוחד שאפשר לסכום “בשיטה של גאוס” – לשים לב שהסכום של המחובר הראשון והאחרון הוא (3k-1), וגם הסכום של המחובר השני והלפני אחרון, וכן הלאה, ויש בסך הכל (k) מחוברים ולכן (\frac{k}{2}) זוגות של מחוברים, ולכן הסכום הכולל הוא (\frac{k\left(3k-1\right)}{2}) – והופס, קיבלנו מספר מחומש! אבל שימו לב, רק עבור המקרה שבו (k) הוא חיובי, בינתיים. עכשיו גם ברור למה כאשר (k) אי-זוגי אז יש יותר חלוקות אי זוגיות מזוגיות, ואחרת ההפך; כי (k) הוא מספר השורות בטבלה, כלומר הזוגיות של (k) קובעת האם החלוקה שאין לה בת זוג היא זוגית או אי זוגית.</p>
+
+<p>אז רגע, מה פספסנו? איך ערכים שליליים של (k) נכנסים לתמונה? ובכן, רימיתי אתכם קודם והשמטתי עוד מקרה קצה אחד. האם עליתם על הרמאות שלי? הבעיה היא במקרה שבו (r&gt;s). במקרה הזה, כזכור, הרעיון הוא לפרק את האלכסון ולדחוף את האיברים שלו בשורה מעל העליונה; אבל כאן עלולה להיווצר בעיה אם <strong>גם השורה העליונה השתתפה באלכסון</strong>, כי אז כשאני מפרק את האלכסון אני מסיר ממנה איבר אחד. הנה מקרה שבו זה קורה:</p>
+
+<p><strong><img class="alignnone wp-image-3587 size-medium" src="http://gadial.net/wp-content/uploads/2018/03/young10-300x151.png" alt="" width="300" height="151" srcset="https://gadial.net/wp-content/uploads/2018/03/young10-300x151.png 300w, https://gadial.net/wp-content/uploads/2018/03/young10-768x385.png 768w, https://gadial.net/wp-content/uploads/2018/03/young10-1024x514.png 1024w, https://gadial.net/wp-content/uploads/2018/03/young10.png 1048w" sizes="(max-width: 300px) 100vw, 300px" /></strong></p>
+
+<p>כאן האלכסון הוא מגודל 3 ולכאורה אין עם זה בעיה כי השורה העליונה היא מגודל 4, אבל כמובן – אחרי שנסיר את אברי האלכסון ניוותר עם שורה מגודל 3. לכן יכולה להיווצר בעיה בדיוק במקרה שבו (r=s+1) ו-(s=k) (כי (s=k) פירושו “גם השורה העליונה משתתפת באלכסון). במקרה הזה, החלוקה היא מהצורה (\left(k+1,k+2,\dots,k+k\right)) והסכום יוצא (\frac{k\left(3k+1\right)}{2}). זה כמובן לא מתאים לנוסחה שלנו של מספר מחומש, אז אם רוצים לקבל את האחידות היפה בנוסחה שיש לנו, בואו נשים לב לכך ש-(t\left(3t-1\right)=3t^{2}-t) ולכן אם נגדיר (t=-k) נקבל</p>
+
+<p>(\frac{t\left(3t-1\right)}{2}=\frac{3t^{2}-t}{2}=\frac{3k^{2}+k}{2}=\frac{k\left(3k+1\right)}{2}). זה מסביר את עניין המינוס ומסיים את ההוכחה.</p>
+
+<p>נסכם מה הלך פה: הגדרתי אינבולוציה על קבוצת כל טבלאות יאנג הקיימות, למעט כמה מקרי קצה. האינבולוציה לא משנה את ה<strong>גודל</strong> של הטבלה (מספר הריבועים שלה, ששווה לגודל המספר שאת החלוקה שלו הטבלה מייצגת) אבל היא כן משנה בדיוק ב-1 את <strong>מספר השורות</strong> שלה (מספר המחוברים בחלוקה). בצורה הזו אנחנו מקבלים התאמה חח”ע ועל בין החלוקות הזוגיות של מספר והחלוקות האי-זוגיות שלו, למעט במקרים שבהם לפחות אחת מטבלאות היאנג שלו משתייכת אל מקרי הקצה שהאינבולוציה לא יודעת לטפל בהם. ראינו שמקרי הקצה הללו מתרחשים בדיוק עבור מספרים מהצורה (\frac{k\left(3k-1\right)}{2}) עבור ערכים שלמים של (k); בפרט, אין שני מקרי קצה שמתרחשים עבור אותו גודל, כי לא קשה להראות שאין לאותו מספר טבעי שני ייצוגים שונים מהצורה (\frac{k\left(3k-1\right)}{2}) כאשר (k) שלם. זה יפה בפני עצמו, וזה עוד יותר יפה כשזוכרים שזה מה שמוביל בסופו של דבר לנוסחת הנסיגה המופלאה עבור פונקציית החלוקה שראינו בפוסט הקודם.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2018/03/27/pentagonal_number_theorem/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

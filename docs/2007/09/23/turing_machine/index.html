@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>המכונה המופלאה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="המכונה המופלאה" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות." />
+<meta property="og:description" content="בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות." />
+<link rel="canonical" href="http://localhost:4000/blog/2007/09/23/turing_machine/" />
+<meta property="og:url" content="http://localhost:4000/blog/2007/09/23/turing_machine/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-09-23T03:14:15+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2007-09-23T03:14:15+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/09/23/turing_machine/"},"url":"http://localhost:4000/blog/2007/09/23/turing_machine/","author":{"@type":"Person","name":"gadial"},"description":"בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות.","headline":"המכונה המופלאה","dateModified":"2007-09-23T03:14:15+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">המכונה המופלאה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-09-23T03:14:15+03:00" itemprop="datePublished">Sep 23, 2007
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בשעה טובה הגענו לתיאור הרעיון של <a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%9F_%D7%98%D7%99%D7%95%D7%A8%D7%99%D7%A0%D7%92">טיורינג</a>. טיורינג חיפש מודל מתמטי תיאורטי של “<a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D">אלגוריתם</a>”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “<a href="http://he.wikipedia.org/wiki/Athlon">אמיתיים</a>”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות.</p>
+
+<p>הרעיון פשוט: מכונת טיורינג היא אכן “מכונה” מופשטת, שמורכבת משלושה חלקים עיקריים: יש סרט באורך אינסופי (בעל התחלה – לרוב מקובל לשים אותה בצד שמאל – אבל בלי סוף) שמחולק לתאים שיכולים להכיל 0, 1 או להיות ריקים (אפשר כל קבוצת סימנים, אבל למה להסתבך – הכל ניתן לקידוד בעזרת 0 ו-1). יש למכונה ראש קורא וכותב, שמסוגל להיות רק מעל תא אחד בסרט בכל רגע נתון, ולזוז צעד אחד ימינה או שמאלה. בנוסף, יש למכונה מספר <strong>סופי</strong> של “מצבים פנימיים”, שמהווים מעין זיכרון. ברגע נתון המכונה יכולה להיות רק באחד מהמצבים הללו.</p>
+
+<p>חישוב של המכונה פועל כך: בהינתן המצב הפנימי של המכונה והאות שהראש הקורא רואה על הסרט, מוגדרת בצורה חד משמעית פעולת המכונה: לאיזה מצב פנימי היא תעבור, האם היא תכתוב משהו על הסרט או תמחק לגמרי את תוכנו, והאם היא תזיז את הראש הקורא/כותב, ואם כן – לאן. במילים אחרות, יש כאן <strong>פונקציה</strong> שמקבלת כקלט זוגות של “מצב פנימי+אות על הסרט” ומחזירה שלשות של “מצב פנימי חדש+אות חדשה על הסרט+כיוון ההזזה של הראש”.</p>
+
+<p>המכונה מתחילה את פעולתה כשכתוב כבר משהו על הסרט – הקלט – ושאר הסרט ריק (זכרו – הקלטים שלנו הם סופיים) והראש הקורא נמצא בקצה הסרט. היא מסיימת את פעולתה על ידי מעבר לאחד משני מצבים פנימיים מיוחדים: האחד מכונה “מצב מקבל” והשני “מצב דוחה”.</p>
+
+<p>זכרו שב<a href="http://www.gadial.net/?p=60">פוסט קודם</a> ניסיתי לשכנע אתכם שאפשר לצמצם את כל הבעיות החישוביות לבעיות של זיהוי שייכות לקבוצה. מעבר של המכונה למצב “מקבל” פירושו שהיא סיימה את ריצתה ומחזירה תשובה חיובית – האיבר שיוצג על ידי הקלט אכן שייך לקבוצה שמכונת הטיורינג עוצבה כדי לבדוק שייכות אליה. מצב דוחה פירושו שהמכונה טוענת שהאיבר אינו שייך לקבוצה.</p>
+
+<p>זה הכל.</p>
+
+<p>כאן נהוג לתת דוגמה. <a href="http://plato.stanford.edu/entries/turing-machine/">לרוב</a> מציגים קודם כל מכונת טיורינג שמחשבת פונקציה (ההבדל לא גדול; במקום מצב מקבל ומצב דוחה יש “מצב סופי”, ואחרי שהמכונה נכנסת אליו הפלט הוא מה שכתוב על הסרט, או לחילופין, מה שכתוב על הסרט משמאל לראש הקורא) ובשלב הזה מדגימים כמה מסובך לכתוב מכונה שמגדילה ב-1 את הקלט (אפשר לחשוב על הקלט פשוט בתור מספר טבעי בייצוג בינארי). אוותר על התענוג המפוקפק הזה. במקום זאת אציג מכונה פשוטה שמזהה קבוצה – במקרה זה, קבוצת כל <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%98%D7%91%D7%A2%D7%99">המספרים הטבעיים</a> הזוגיים.</p>
+
+<p>לפני כן, כדאי לתת את הדעת ל”בעיה” טכנית: הקלטים שניתן להעביר למכונת טיורינג אינם בדיוק מספרים טבעיים. אלו הן סדרות סופיות של אפסים ואחדות, כולל הסדרה שאינה מכילה אף תו. חלק מהסדרות מייצגות את אותו מספר (למשל 1 ו-01). במקרים מסויימים קלט “ריק” עשוי לעניין אותנו, ולמקרה כזה אתייחס בתור “הקלט הוא ‘המילה הריקה’” (הבחירה במילה “מילה” נובעת מכך שלפעמים נהוג לדבר על מכונת טיורינג ככלי לזיהוי שפות פורמליות, כאשר “<a href="http://he.wikipedia.org/wiki/%D7%A9%D7%A4%D7%94_%D7%A4%D7%95%D7%A8%D7%9E%D7%9C%D7%99%D7%AA">שפה פורמלית</a>” היא קבוצה של סדרות של תווים – מילים. מכיוון שיותר טבעי לחשוב על זיהוי של מספרים טבעיים לא אתעמק בפורמליזם השקול הזה).</p>
+
+<p>אם כן, מבחינה פורמלית, מכונת הטיורינג שלנו מקבלת סדרה של אפסים ואחדות ובודקת האם הספרה הימנית ביותר היא 0. אם כן, היא מקבלת; אחרת, היא דוחה. הסיבה לכך היא שכאשר מספר מיוצג בצורה בינארית, 0 בספרה הימנית ביותר (ה-“<a href="http://en.wikipedia.org/wiki/Least_significant_bit">Least significant bit</a>”, שכן ההשפעה שלה על גודל המספר היא הזניחה ביותר) גורר זוגיות של המספר, ו-1 גורר אי זוגיות (נסו להבהיר לעצמכם מדוע).</p>
+
+<p>איך תפעל מכונת טיורינג שכזו? אינטואיטיבית, היא תעבור על הקלט משמאל לימין (הרי הראש הקורא מתחיל בנקודה השמאלית ביותר של הקלט). בכל רגע נתון היא תזכור האם התו האחרון שראתה היה 0 או 1. אם הראש הקורא ינסה לקרוא ויגלה שהסרט ריק, המכונה “תבין” שהתו האחרון שראתה היה הספרה הימנית ביותר, ותחליף את המצב שלה בהתאם לתו שהיא זוכרת: אם היא זוכרת 0 היא תעבור למצב מקבל, ואחרת היא תעבור למצב דוחה.</p>
+
+<p>אם כן, במכונה שלנו יהיו ארבעה מצבים: המצב המקבל והדוחה, המצב שמסמל את “התו האחרון שקראתי לא היה 0” (שתופס גם את “רק כרגע התחלתי לרוץ וטרם ראיתי תווים), והמצב שמסמל את “התו האחרון שראיתי כן היה אפס”. נסמן את המצבים הללו, בהתאמה, בסימונים:</p>
+
+<p>$latex q_{acc}$ (acc מלשון “Accept”),</p>
+
+<p>$latex q_{reg}$ (rej מלשון “Reject”),</p>
+
+<p>$latex q_1$ (מלשון “ראיתי 1 או רק התחלתי לרוץ”)</p>
+
+<p>ו-$latex q_0$ (מלשון “ראיתי 0”).</p>
+
+<p>המכונה תתחיל את ריצה במצב $latex q_1$, וכאן אני לבטח מבלבל אנשים שכבר מכירים את התחום ורגילים לכך שבדרך כלל המצב שמסומן כ-$latex q_0$ הוא המצב ההתחלתי – אני מקווה שמטרתי כאן ברורה.</p>
+
+<p>הנה דוגמה לאחד המעברים שבפונקצית המעברים: $latex \delta(q_1,0)=(q_0,0,R)$. כאן הפונקציה אומרת “בהינתן שאתה במצב $latex q_1$ והראש הקורא קרא 0, עבור למצב $latex q_0$, כתוב 0 על הסרט במקום מה שהיה שם (כלומר, אל תשנה את מה שיש על הסרט) והזז את הראש הקורא צעד אחד ימינה”. אני מקווה שלאחר הפרשנות הזו שאר המעברים יהיו ברורים (כאן b מציין “תא ריק בסרט”):</p>
+
+<p>$latex \delta(q_1,1)=(q_1,1,R)$</p>
+
+<p>$latex \delta(q_1,b)=(q_{rej},b,R)$</p>
+
+<p>$latex \delta(q_0,0)=(q_0,0,R)$<br />
+$latex \delta(q_0,1)=(q_1,1,R)$</p>
+
+<p>$latex \delta(q_0,b)=(q_{acc},b,R)$</p>
+
+<p>קרוב לודאי שהנוסחאות <a href="http://he.wikipedia.org/wiki/%D7%A7%D7%99%D7%A6%D7%95%D7%A8_%D7%AA%D7%95%D7%9C%D7%93%D7%95%D7%AA_%D7%94%D7%96%D7%9E%D7%9F">פעלו את פעולתן הסטנדרטית</a> וקיצצו ב-50% את מספר הקוראים שלי. את האחד שנותר ארגיע בכך שאומר שלא כך משתמשים במכונת טיורינג. אף אחד לא טורח לשבת ולכתוב אותה בצורה פורמלית. השימושים היחידים של ההצגה הפורמלית ככלי לכתיבת אלגוריתמים הם בתרגילי הבית והכיתה המוקדמים ביותר בקורס בחישוביות, ובספרים/בלוגים שמציגים את המכונה ורוצים לתת “תחושה” שלה. בפוסט הבא אדבר על ההרחבות הרבות של המודל – וחשוב מכך, על כך שכולן שקולות לו – ואחד הדברים שאגיד הוא שכדי לכתוב אלגוריתמיים “אמיתיים” אפשר להשתמש בפסאודו-קוד או בכל שפת תכנות מקובלת, וזה יהיה בדיוק כאילו השתמשנו במכונת טיורינג.</p>
+
+<p>אז למה מכונת טיורינג היא דבר טוב? דווקא בגלל פשוטתה היחסית. כפי שודאי הבנתם, יש Trade-off ברור בין רמת הפשטות של מרכיבי המכונה ובין המורכבות של כתיבת תוכניות בה, ואותו Trade-off קיים גם <a href="http://he.wikipedia.org/wiki/%D7%90%D7%A1%D7%9E%D7%91%D7%9C%D7%99">בעולם</a> <a href="http://he.wikipedia.org/wiki/%D7%A9%D7%A4%D7%AA_C">האמיתי</a> של <a href="http://he.wikipedia.org/wiki/%D7%A4%D7%99%D7%99%D7%AA%D7%95%D7%9F">שפות</a> <a href="http://he.wikipedia.org/wiki/%D7%A8%D7%95%D7%91%D7%99">התכנות</a>. מכונת טיורינג קלה בהרבה לתיאור מאשר <a href="http://he.wikipedia.org/wiki/%D7%A4%D7%A0%D7%98%D7%99%D7%95%D7%9D">מחשב אמיתי</a> (שגם בתיאוריו המופשטים ביותר מכיל גם “<a href="http://he.wikipedia.org/wiki/%D7%90%D7%95%D7%92%D7%A8_%28%D7%9E%D7%97%D7%A9%D7%91%D7%99%D7%9D%29">רגיסטרים</a>”, ו”<a href="http://he.wikipedia.org/wiki/ALU_%28%D7%9E%D7%97%D7%A9%D7%91%D7%99%D7%9D%29">יחידת עיבוד אריתמטית</a>” ושאר מרעין בישין) ולכן יותר קל להוכיח עליה דברים, וחשוב יותר – לבצע <strong>סימולציה</strong> שלה באמצעות אובייקטיים מתמטיים אחרים. אביא דוגמה לטענה זו בהמשך, כשאדבר על אי הכריעות של בעיית הריצוף על ידי <a href="http://en.wikipedia.org/wiki/Wang_tile">Wang tiles</a> – בעיה שלדעתי היא מהבעיות המקסימות ביותר שניתנות להצגה מייד כשמתחילים להציג את התחום.</p>
+
+<p>אבל כאמור, לפני שנגיע לבעיות לא כריעות (ובראשן <a href="http://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%99%D7%99%D7%AA_%D7%94%D7%A2%D7%A6%D7%99%D7%A8%D7%94">בעיית העצירה</a> המפורסמת), אני מקווה לומר עוד כמה דברים על המודל של טיורינג.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2007/09/23/turing_machine/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

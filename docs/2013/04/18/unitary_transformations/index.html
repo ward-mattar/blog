@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>טרנספורמציות אוניטריות | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="טרנספורמציות אוניטריות" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אני חוזר לסדרת הפוסטים שלי על אלגברה לינארית, שנעצרה במרחבי מכפלה פנימית ובסוג מעניין אחד של אופרטורים לינאריים עליהם – אופרטורים צמודים לעצמם (“הרמיטיים”). הפעם אני רוצה לדבר על סוג מעניין אחר של אופרטורים, שנקראים אופרטורים אוניטריים; בהמשך נראה איך הכל מתחבר." />
+<meta property="og:description" content="אני חוזר לסדרת הפוסטים שלי על אלגברה לינארית, שנעצרה במרחבי מכפלה פנימית ובסוג מעניין אחד של אופרטורים לינאריים עליהם – אופרטורים צמודים לעצמם (“הרמיטיים”). הפעם אני רוצה לדבר על סוג מעניין אחר של אופרטורים, שנקראים אופרטורים אוניטריים; בהמשך נראה איך הכל מתחבר." />
+<link rel="canonical" href="http://localhost:4000/blog/2013/04/18/unitary_transformations/" />
+<meta property="og:url" content="http://localhost:4000/blog/2013/04/18/unitary_transformations/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-04-19T00:12:34+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2013-04-19T00:12:34+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/04/18/unitary_transformations/"},"url":"http://localhost:4000/blog/2013/04/18/unitary_transformations/","author":{"@type":"Person","name":"gadial"},"description":"אני חוזר לסדרת הפוסטים שלי על אלגברה לינארית, שנעצרה במרחבי מכפלה פנימית ובסוג מעניין אחד של אופרטורים לינאריים עליהם – אופרטורים צמודים לעצמם (“הרמיטיים”). הפעם אני רוצה לדבר על סוג מעניין אחר של אופרטורים, שנקראים אופרטורים אוניטריים; בהמשך נראה איך הכל מתחבר.","headline":"טרנספורמציות אוניטריות","dateModified":"2013-04-19T00:12:34+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">טרנספורמציות אוניטריות</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-04-19T00:12:34+03:00" itemprop="datePublished">Apr 19, 2013
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אני חוזר לסדרת הפוסטים שלי על אלגברה לינארית, ש<a href="http://www.gadial.net/2012/04/29/inner_product_space_adjoint/">נעצרה</a> במרחבי מכפלה פנימית ובסוג מעניין אחד של אופרטורים לינאריים עליהם – אופרטורים צמודים לעצמם (“הרמיטיים”). הפעם אני רוצה לדבר על סוג מעניין אחר של אופרטורים, שנקראים <strong>אופרטורים אוניטריים</strong>; בהמשך נראה איך הכל מתחבר.</p>
+
+<p>בואו ניזכר מה זו בכלל טרנספורמציה לינארית. אם יש לנו שני מרחבים וקטוריים $latex V,W$ אז טרנספורמציה לינארית היא פונקציה $latex T:V\to W$ ש<strong>משמרת את המבנה</strong> של המרחבים הלינאריים. מבנה של מרחב לינארי מתבטא ב<strong>פעולות חשבוניות</strong> שמוגדרות עליו – חיבור של שני איברים, וכפל בסקלר של איבר. $latex T\left(v+u\right)=T\left(v\right)+T\left(u\right)$ פירושו שבהינתן שני וקטורים $latex v,u$ זה לא משנה אם קודם נחבר אותם ואז נפעיל עליהם את $latex T$ או אם קודם נפעיל עליהם את $latex T$ ואז נחבר אותם – בכל מקרה נקבל את אותה התוצאה בסוף (את הרעיון הזה מתארים לפעמים בעזרת <strong>דיאגרמה קומוטטיבית</strong> והוא חזק למדי, אבל אלו דברים שיחכו לפוסט אחר). אותו הדבר עם כפל בסקלר: $latex T\left(\lambda v\right)=\lambda T\left(v\right)$ פירושו שלא משנה אם קודם נכפול את $latex v$ בסקלר $latex \lambda$ ואז נפעיל עליו את $latex T$ או שקודם נפעיל עליו את $latex T$ ואז נכפול ב-$latex \lambda$ – בכל מקרה נקבל את אותה התוצאה.</p>
+
+<p>עכשיו, מהו מרחב מכפלה פנימית? הוא מרחב וקטורי שהוספנו לו עוד <strong>מבנה</strong>, שמתבטא בפונקציה של <strong>מכפלה פנימית</strong>, שהיא פונקציה שמקבלת שני וקטורים ומחזירה סקלר, $latex \left\langle v,u\right\rangle :V\times V\to\mathbb{C}$. אם נמשיך את קו המחשבה של שתי הדוגמאות הקודמות, אנחנו רואים שמחלקה מעניינת של טרנספורמציות לינאריות תהיה המחלקה של הטרנספורמציות ש<strong>משמרות את המכפלה הפנימית</strong>. כלומר, אם $latex V,W$ הם שני מרחבי מכפלה פנימית ו-$latex T:V\to W$, מעניין אותנו אם אפשר קודם להפעיל את $latex T$ על זוג וקטורים ואז לכפול אותם, או קודם לכפול אותם ואז להפעיל עליהם את $latex T$… רגע, רגע, רגע, משהו לא מסתדר פה!</p>
+
+<p>הנקודה שצריך לתת עליה את הדעת היא שמכפלה פנימית “מוציאה” אותנו מהמרחב $latex V$. בניגוד לחיבור, שקיבל זוג וקטורים ב-$latex V$ והחזיר וקטור ב-$latex V$, מכפלה פנימית מעבירה אותנו מ-$latex V$ אל $latex \mathbb{C}$ ולכן כל עניין ה”התחלפות” שתיארתי לא עובד. עדיין, זו אינטואיציה טובה לדרישה שאני כן הולך לדרוש: שהמכפלה הפנימית של זוג וקטורים <strong>לא תשתנה</strong> אם נפעיל עליהם את $latex T$, ובאופן פורמלי, $latex \left\langle v,u\right\rangle =\left\langle T\left(v\right),T\left(u\right)\right\rangle $. שימו לב שהמכפלה הפנימית באגף שמאל היא המכפלה הפנימית של $latex V$ ואילו זו באגף ימין היא המכפלה הפנימית של $latex W$. לטרנספורמציה לינארית שמקיימת את התכונה הזו אקרא <strong>אוניטרית</strong>. דוגמאות מיידיות לטרנספורמציות כאלו הן גאומטריות באופיין: חשבו על $latex \mathbb{R}^{2}$ עם המכפלה הפנימית הרגילה ועל הפעולות של סיבוב בזווית כלשהי סביב הראשית או של שיקוף ביחס לציר העובר דרך הראשית. אינטואיטיבית ברור למדי שאם מסובבים שני וקטורים באותה זווית גם האורכים שלהם והזווית ביניהם נשמרת, וב-$latex \mathbb{R}^{2}$ עם המכפלה הפנימית הרגילה, המכפלה הפנימית של זוג וקטורים היא מכפלת האורכים שלהם בקוסינוס הזווית ביניהם, כך שברור שהיא תשתמר. יש עוד הרבה דוגמאות אך לא אציג אותן כרגע. תחת זאת, בואו ננסה להבין אילו עוד תכונות טרנספורמציות אוניטריות מקיימות.</p>
+
+<p>ראשית כל, מכפלה פנימית הייתה קשורה בקשר הדוק לפונקציה דומה שנקראה <strong>נורמה</strong>: $latex |v|=\left\langle v,v\right\rangle $. בבירור אם $latex T$ אוניטרית אז $latex |T\left(v\right)|=\left\langle T\left(v\right),T\left(v\right)\right\rangle =\left\langle v,v\right\rangle =|v|$, כלומר $latex T$ משמרת גם את הנורמה של איברים (פורמלית: את הנורמה הספציפית שמושרית על המרחבים מהמכפלה הפנימית שביחס אליהם $latex T$ אוניטרית). גם ההפך נכון – אם $latex T$ משמרת נורמה, אז היא אוניטרית; זה נובע מכך שאם נורמה מושרית ממכפלה פנימית כלשהי, אז אפשר לכתוב את המכפלה הפנימית בתור נוסחה כלשהי שמערבת את הנורמה – <strong>זהות הפולריזציה</strong> שהראיתי <a href="http://www.gadial.net/2012/03/01/inner_product_spaces_geometry/">בפוסט קודם</a>. מכאן שכדי להראות שטרנספורמציה היא אוניטרית יספיק לי לפעמים להראות שהיא משמרת נורמה.</p>
+
+<p>עכשיו קופץ משהו אחר לעיניים: כזכור, $latex |v|=0$ אם ורק אם $latex v=0$ (וקטור האפס), ולכן אם $latex T\left(v\right)=0$ עבור $latex v$ כלשהו, הרי ש-$latex |v|=|T\left(v\right)|=|0|=0$ ומכאן נובע שגם $latex v=0$. במילים אחרות, $latex T$ מעבירה לוקטור האפס רק את וקטור האפס; מכך נובע ש-$latex T$ <strong>הפיכה</strong> (“לא סינגולרית”). אם כן, כל טרנספורמציה אוניטרית היא גם הפיכה; אם $latex T:V\to W$ היא אוניטרית ו-$latex V,W$ הם מאותו מימד סופי (כרגיל, מכאן ואילך נדבר רק על מרחבים ממימד סופי) אז נובע מכך ש-$latex T$ היא <strong>איזומורפיזם</strong> של $latex V,W$ שגם משמרת את המכפלה הפנימית שלהם. בלשון פחות פורמלית זה אומר ש-$latex V,W$ “הם אותו מרחב עד כדי שינוי שמות האיברים” וש-$latex T$ היא בדיוק מה שמבצע את השינוי של שמות האיברים הללו.</p>
+
+<p>דבר אחד ש<a href="http://www.gadial.net/2012/02/06/inner_products_intro/">הוכחנו בעבר</a> הוא שאם $latex V$ הוא מרחב מכפלה פנימית ממימד סופי, אז קיים לו בסיס אורתונורמלי $latex \left{ b_{1},\dots,b_{n}\right} $. עכשיו, אם $latex W$ הוא מרחב מאותו מימד כמו $latex V$, מה נקבל כשנפעיל טרנספורמציה אוניטרית $latex T:V\to W$ על אברי הבסיס? נקבל קבוצה $latex \left{ T\left(b_{1}\right),\dots,T\left(b_{n}\right)\right} $ שהיא בבירור בסיס ל-$latex W$ כי היא קבוצה בלתי תלויה לינארית ב-$latex W$ עם מספר וקטורים ששווה למימד של $latex W$ (למה היא בלתי תלויה? כי $latex T$ הפיכה – נסו להוכיח!). כפי שאתם ודאי מנחשים, הבסיס שקיבלנו לא יהיה “סתם” בסיס, אלא בסיס אורתונורמלי, ובכך צצה לה תכונה נוספת של טרנספורמציות אוניטריות: הן מעבירות בסיסים אורתונורמליים לבסיסים אורתונורמליים.</p>
+
+<p>העובדה שהבסיס החדש אורתונורמלי די מיידית. בסיס הוא אורתונורמלי אם לכל זוג איברים בו מתקיים $latex \left\langle b_{i},b_{j}\right\rangle =\delta_{ij}$ (כאשר $latex \delta_{ij}=\begin{cases}1 &amp; i=j\0 &amp; i\ne j\end{cases}$ נקראת <strong>הדלתא של קרונקר</strong>), ובבירור $latex \left\langle T\left(b_{i}\right),T\left(b_{j}\right)\right\rangle =\left\langle b_{i},b_{j}\right\rangle =\delta_{ij}$ כי $latex T$ אוניטרית וה-$latex b$-ים שייכים לבסיס אורתונורמלי. מה שיותר מעניין הוא שהטענה הזו עובדת גם בכיוון השני, ואפילו בגרסה יותר חזקה: אם $latex T:V\to W$ היא טרנספורמציה לינארית כלשהי כך שקיים בסיס אורתונורמלי <strong>אחד</strong> $latex \left{ b_{1},\dots,b_{n}\right} $ של $latex V$ בעל התכונה ש-$latex \left{ T\left(b_{1}\right),\dots,T\left(b_{n}\right)\right} $ הוא בסיס אורתונורמלי של $latex T$, אז $latex T$ אוניטרית. ההוכחה, כרגיל במרחבי מכפלה פנימית, תעבור דרך העובדה שאנו בדיוק איך להציג כל איבר במרחב כצירוף לינארי של איברי הבסיס האורתונורמלי: אם $latex v\in V$ אז $latex v=\sum\left\langle v,b_{i}\right\rangle b_{i}$. זה גם מאפשר לנו לדעת איך $latex T\left(v\right)$ ייראה: $latex T\left(v\right)=\sum\left\langle v,b_{i}\right\rangle T\left(b_{i}\right)$.</p>
+
+<p>בואו ניקח שני וקטורים $latex v,u\in V$. אנו רוצים להראות ש-$latex \left\langle v,u\right\rangle =\left\langle T\left(v\right),T\left(u\right)\right\rangle $. את החישוב של $latex \left\langle v,u\right\rangle $ כבר עשיתי <a href="http://www.gadial.net/2012/04/29/inner_product_space_adjoint/">בפוסט קודם</a>: מקבלים $latex \left\langle v,u\right\rangle =\sum\left\langle v,b_{i}\right\rangle \overline{\left\langle u,b_{i}\right\rangle }$. עכשיו, אם נציב ב-$latex \left\langle T\left(v\right),T\left(u\right)\right\rangle $ את הביטוי ל-$latex T\left(v\right)$ ו-$latex T\left(u\right)$ שמצאנו קודם, נקבל:</p>
+
+<p>$latex \left\langle T\left(v\right),T\left(u\right)\right\rangle =\left\langle \sum_{i}\left\langle v,b_{i}\right\rangle T\left(b_{i}\right),\sum_{j}\left\langle u,b_{j}\right\rangle T\left(b_{j}\right)\right\rangle =\sum_{i,j}\left\langle v,b_{i}\right\rangle \overline{\left\langle u,b_{j}\right\rangle }\left\langle T\left(b_{i}\right),T\left(b_{j}\right)\right\rangle $</p>
+
+<p>$latex =\sum_{i,j}\left\langle v,b_{i}\right\rangle \overline{\left\langle u,b_{j}\right\rangle }\delta_{ij}=\sum_{i}\left\langle v,b_{i}\right\rangle \overline{\left\langle u,b_{i}\right\rangle }=\left\langle v,u\right\rangle $</p>
+
+<p>מה שמסיים את ההוכחה. עכשיו יש לנו שלושה קריטריונים שקולים לכך שטרנספורמציה היא אוניטרית: היא משמרת מכפלה פנימית, היא משמרת נורמה, והיא מעבירה בסיס אורתונורמלי לבסיס אורתונורמלי.</p>
+
+<p>הבנו איך טרנספורמציה אוניטרית מתנהגת “ברמת הוקטורים”. עכשיו בואו ננסה להבין מה המבנה של אוסף כל הטרנספורמציות האוניטריות. נניח ש-$latex T,S$ הן שתי טרנספורמציות אוניטריות, מה בדבר ההרכבה, $latex TS$? די בבירור גם היא אוניטרית, כי $latex |TS\left(v\right)|=|T\left(S\left(v\right)\right)|=|S\left(v\right)|=|v|$. כמו כן, אם $latex T$ היא אוניטרית ראינו שהיא הפיכה; אני טוען שגם $latex T^{-1}$ אוניטרית, כי $latex |T^{-1}\left(v\right)|=|T\left(T^{-1}\left(v\right)\right)|=|v|$ (למי שלא ברור לו מה הלך פה, סמנו $latex u=T^{-1}\left(v\right)$ ושימו לב לכך ש-$latex |u|=|T\left(u\right)|$ כי $latex T$ אוניטרית).</p>
+
+<p>– בואו ננסה עכשיו להבין אותה לאור מה שדיברנו עליו <a href="http://www.gadial.net/2012/04/29/inner_product_space_adjoint/">בפוסט הקודם</a> על טרנספורמציות מעל מרחבי מכפלה פנימית – פעולת ההצמדה. כזכור, אם $latex T:V\to V$ הייתה אופרטור לינארי (המילה “אופרטור” כאן באה לתאר טרנספורמציות ממרחב כלשהו אל עצמו, להבדיל מ”סתם” טרנספורמציה שיכולה להיות בין שני מרחבים שונים), הוכחנו שקיים ויחיד אופרטור $latex T^{<em>}$ – ה<strong>צמוד</strong> של $latex T$, כך שמתקיים $latex \left\langle T\left(v\right),u\right\rangle =\left\langle v,T^{</em>}\left(u\right)\right\rangle $ לכל זוג וקטורים $latex v,u\in V$. אם $latex T$ אוניטרית, האם יש לצמוד עוד תכונות מעניינות?</p>
+
+<p>ובכן, זכרו שכבר ראינו כי $latex T$ הפיך, כלומר קיים אופרטור שהוא בעצמו אוניטרי $latex T^{-1}$ כך ש-$latex TT^{-1}=T^{-1}T=I$. אני טוען שההופכי הוא גם הצמוד של $latex T$; בואו ונראה למה:</p>
+
+<p>$latex \left\langle T\left(v\right),u\right\rangle =\left\langle T^{-1}T\left(v\right),T^{-1}\left(u\right)\right\rangle =\left\langle v,T^{-1}\left(u\right)\right\rangle $</p>
+
+<p>זה היה פשוט, לא? (איפה השתמשתי בכך ש-$latex T^{-1}$ אוניטרי?)</p>
+
+<p>סיימתי להגיד את כל מה שאני רוצה להגיד כרגע על טרנספורמציות אוניטריות לבדן. העניין הוא שבאלגברה לינארית יש לטרנספורמציות לינאריות בנות זוג הדוקות – מטריצות. בפוסט הבא ננסה להבין איך מטריצות נכנסות לכל עניין הטרנספורמציות צמודות-צמודות לעצמן-אוניטריות.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2013/04/18/unitary_transformations/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

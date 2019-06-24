@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>פונקציונלים לינאריים והדואלי של הדואלי של הדואלי של הדואלי | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="פונקציונלים לינאריים והדואלי של הדואלי של הדואלי של הדואלי" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסטים האחרונים עסקתי בטרנספורמציות לינאריות בין מרחבים וקטוריים, והפעם אני רוצה לדבר על סוג מסויים של טרנספורמציות שראוי לדיון בפני עצמו – פונקציונלים לינאריים. כרגיל, נסמן ב-$latex V$ מרחב וקטורי מעל שדה $latex \mathbb{F}$; פונקציונל לינארי על $latex V$ הוא פשוט טרנספורמציה לינארית $latex T:V\to\mathbb{F}$, כלומר כזו שנותנת (באופן לינארי) ערך סקלרי לאיברי $latex V$. הכי פשוט להתחיל מדוגמאות." />
+<meta property="og:description" content="בפוסטים האחרונים עסקתי בטרנספורמציות לינאריות בין מרחבים וקטוריים, והפעם אני רוצה לדבר על סוג מסויים של טרנספורמציות שראוי לדיון בפני עצמו – פונקציונלים לינאריים. כרגיל, נסמן ב-$latex V$ מרחב וקטורי מעל שדה $latex \mathbb{F}$; פונקציונל לינארי על $latex V$ הוא פשוט טרנספורמציה לינארית $latex T:V\to\mathbb{F}$, כלומר כזו שנותנת (באופן לינארי) ערך סקלרי לאיברי $latex V$. הכי פשוט להתחיל מדוגמאות." />
+<link rel="canonical" href="http://localhost:4000/blog/2011/11/02/linear_functionals/" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/11/02/linear_functionals/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-11-02T12:26:53+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2011-11-02T12:26:53+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/11/02/linear_functionals/"},"url":"http://localhost:4000/blog/2011/11/02/linear_functionals/","author":{"@type":"Person","name":"gadial"},"description":"בפוסטים האחרונים עסקתי בטרנספורמציות לינאריות בין מרחבים וקטוריים, והפעם אני רוצה לדבר על סוג מסויים של טרנספורמציות שראוי לדיון בפני עצמו – פונקציונלים לינאריים. כרגיל, נסמן ב-$latex V$ מרחב וקטורי מעל שדה $latex \\mathbb{F}$; פונקציונל לינארי על $latex V$ הוא פשוט טרנספורמציה לינארית $latex T:V\\to\\mathbb{F}$, כלומר כזו שנותנת (באופן לינארי) ערך סקלרי לאיברי $latex V$. הכי פשוט להתחיל מדוגמאות.","headline":"פונקציונלים לינאריים והדואלי של הדואלי של הדואלי של הדואלי","dateModified":"2011-11-02T12:26:53+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">פונקציונלים לינאריים והדואלי של הדואלי של הדואלי של הדואלי</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-11-02T12:26:53+02:00" itemprop="datePublished">Nov 2, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסטים האחרונים עסקתי בטרנספורמציות לינאריות בין מרחבים וקטוריים, והפעם אני רוצה לדבר על סוג מסויים של טרנספורמציות שראוי לדיון בפני עצמו – פונקציונלים לינאריים. כרגיל, נסמן ב-$latex V$ מרחב וקטורי מעל שדה $latex \mathbb{F}$; פונקציונל לינארי על $latex V$ הוא פשוט טרנספורמציה לינארית $latex T:V\to\mathbb{F}$, כלומר כזו שנותנת (באופן לינארי) ערך סקלרי לאיברי $latex V$. הכי פשוט להתחיל מדוגמאות.</p>
+
+<p>ובכן, נסתכל על $latex \mathbb{R}\left[x\right]$ – מרחב הפולינומים עם מקדמים ב-$latex x$. דוגמה לפונקציונל לינארי על המרחב הזה הוא <strong>הצבה</strong>: $latex T_{a}\left(p\left(x\right)\right)=p\left(a\right)$, כאשר $latex a\in\mathbb{R}$ כלשהו. לא קשה להוכיח שזו פעולה לינארית (כלומר, $latex T_{a}\left(\alpha p\left(x\right)+\beta q\left(x\right)\right)=\alpha p\left(a\right)+\beta q\left(a\right)$ כאשר $latex \alpha,\beta\in\mathbb{R}$), והיא אכן מעבירה כל איבר של $latex \mathbb{R}\left[x\right]$ לאיבר של $latex \mathbb{R}$. מה שמעניין כאן הוא האופן שבו הטרנספורמציה הזו משתמשת ב”מידע נוסף” שיש ב-$latex \mathbb{R}\left[x\right]$ ולא בא לידי ביטוי במבנה שלו כמרחב וקטורי – העובדה שאפשר להציב ערכים ב-$latex x$.</p>
+
+<p>עוד דוגמה דומה מאוד היא אינטגרל מסויים. אינטגרלים מסויימים מוגדרים עבור המון פונקציות, אבל לשם פשטות נוח להתמקד במרחב פונקציות שמובטח שקיים להן אינטגרל מסויים ושהן יהוו מרחב וקטורי – פונקציות רציפות על קטע סגור. נסמן ב-$latex C\left(\left[a,b\right]\right)$ את מרחב כל הפונקציות $latex f:\left[a,b\right]\to\mathbb{R}$ שהן רציפות (זו משמעות ה-$latex C$, מהמילה Continuous). כעת אפשר להגדיר פונקציונל לינארי עליהן: $latex L\left(f\right)=\int_{a}^{b}f\left(x\right)dx$. הסיבה לכך שזהו פונקציונל לינארי דורשת הצדקה כלשהי; העובדה שמתקיים $latex \int_{a}^{b}\left[\alpha f\left(x\right)+\beta g\left(x\right)\right]dx=\alpha\int_{a}^{b}f\left(x\right)dx+\beta\int_{a}^{b}g\left(x\right)dx$ נקראת <strong>לינאריות האינטגרל המסויים</strong> ויש להוכיח אותה.</p>
+
+<p>עוד דוגמה מפורסמת למדי היא <strong>עקבה</strong> (Trace) של מטריצות. אם $latex A$ היא מטריצה ריבועית $latex n\times n$, אז $latex \mbox{tr}A=\sum_{i=1}^{n}a_{ii}$, כלומר העקבה של $latex A$ היא סכום האיברים שעל האלכסון שלה. לא קשה לראות כי $latex \mbox{tr}\left(\alpha A+\beta B\right)=\alpha\mbox{tr}A+\beta\mbox{tr}B$ ולכן שוב יש לנו פונקציונל, הפעם מהמרחב $latex M_{n}\left(\mathbb{F}\right)$ (מרחב המטריצות מסדר $latex n\times n$ מעל השדה $latex \mathbb{F}$) אל $latex \mathbb{F}$. בקיצור, פונקציונלים הם משהו שמקובע היטב במציאות המתמטית היומיומית.</p>
+
+<p>בפוסטים קודמים כבר רמזתי, אם לא אמרתי במפורש, שאוסף כל הטרנספורמציות הלינאריות בין שני מרחבים נתונים הוא בעצמו מרחב וקטורי. זה מובלע בכך שהאוסף הזה איזומורפי למטריצות, שהן מרחב וקטורי, אבל כדאי לציין זאת במפורש: אם $latex V,W$ הם שני מרחבים וקטוריים, אז קבוצת כל הטרנספורמציות הלינאריות $latex T:V\to W$, שמסומנת לעתים כ-$latex \mbox{Hom}\left(V,W\right)$, היא עצמה מרחב וקטורי, עם פעולות החיבור והכפל בסקלר ה”טבעיות” (כלומר, הטרנספורמציה $latex T+S$ מוגדרת על ידי $latex \left(T+S\right)\left(v\right)=T\left(v\right)+S\left(v\right)$ ו-$latex \left(\lambda T\right)\left(v\right)=\lambda T\left(v\right)$). יתר על כן, אם $latex V,W$ הם ממימד סופי אז $latex \text{dim}\text{Hom}\left(V,W\right)=\text{dim} V\cdot\text{dim}W$ – לא מפתיע כל כך מכיוון שהמטריצות שמייצגות טרנספורמציה מ-$latex V$ אל $latex W$ הן מטריצות מסדר $latex \dim W\times\dim V$, ומרחב המטריצות מסדר $latex n\times m$ הוא ממימד $latex nm$ (חשבו על בסיס עבורו).</p>
+
+<p>כדי לחסוך בסימונים, במקום לכתוב $latex \mbox{Hom}\left(V,\mathbb{F}\right)$ כדי לתאר את מרחב הפונקציונלים הלינאריים על $latex V$, פשוט נסמן אותו כ-$latex V^{*}$. כעת, מכיוון ש-$latex \mathbb{F}$ הוא מרחב וקטורי ממימד 1 מעל עצמו, אז $latex \dim V^{*}=\dim V$, ולכן $latex V$ ו-$latex V^{*}$ איזומורפיים כמרחבים וקטוריים (כזכור, כל שני מרחבים וקטוריים סוף ממדיים מאותו מימד הם איזומורפיים). מה שמעניין כאן הוא שאני רואה ששני המרחבים איזומורפיים, אבל לא הצגתי שום איזומורפיזם מפורש עבורם; האם ניתן לעשות זאת?</p>
+
+<p>ובכן, נקבע בסיס $latex B=\left{ b_{1},\dots,b_{n}\right} $ ל-$latex V$. כעת, לכל $latex b_{i}$, נגדיר פונקציונל $latex f_{b_{i}}$ באופן הבא: $latex f_{b_{i}}\left(b_{j}\right)=\delta_{ij}$ כאשר $latex \delta_{ij}$ היא <strong>הדלתא של קרונקר</strong>: אם $latex i\ne j$ אז $latex \delta_{ij}=0$ ואם $latex i=j$ אז $latex \delta_{ij}=1$. זה בסך הכל סימון, אבל כזה שהוא נוח למדי לעתים קרובות.</p>
+
+<p>הגדרתי את הפעולה של $latex f_{b_{i}}$ רק על אברי $latex B$, אבל כבר ראינו שדי בכך כדי להגדיר את פעולת $latex f_{b_{i}}$ על כל אברי המרחב; הטענה שלי היא שקבוצת הפונקציונלים $latex B^{*}=\left{ f_{b_{1}},\dots,f_{b_{n}}\right} $ היא בסיס של $latex V^{*}$, ומכיוון שהיא מגודל $latex n$ רק צריך להראות שהיא בלתי תלויה לינארית. כלומר, נניח ש-$latex \sum\lambda_{i}f_{b_{i}}=0$ – איבר האפס כאן הוא “פונקציונל האפס”, הפונקציונל שמחזיר 0 לכל קלט. כעת, נפעיל את $latex \sum\lambda_{i}f_{b_{i}}$ על $latex b_{j}$ ונקבל $latex 0=\sum\lambda_{i}f_{b_{i}}\left(b_{j}\right)=\sum\lambda_{i}\delta_{ij}=\lambda_{j}$ וכך קיבלנו ש-$latex \lambda_{j}=0$ לכל $latex j$, כלומר הפונקציונלים אכן בלתי תלויים לינארית, והקבוצה $latex B^{*}$ היא אכן בסיס למרחב $latex V^{*}$. הדמיון הרב בין $latex V$ ל-$latex V^{*}$ גורם לנו לקרוא ל-$latex V^{*}$ <strong>המרחב הדואלי</strong> ל-$latex V$; ו-$latex B^{*}$ הוא באופן בלתי מפתיע <strong>הבסיס הדואלי</strong> ל-$latex B$.</p>
+
+<p>אם לעשות משהו פעם אחת עבד, למה לא לעשות אותו פעמיים? נשאלת השאלה מהו $latex \left(V^{*}\right)^{*}$, שאסמן בקיצור $latex V^{<strong>}$ – מהו המרחב הדואלי למרחב הדואלי של $latex V$? פורמלית זהו אוסף של פונקציונלים ש</strong>הקלטים** שלהם הם בעצמם פונקציונלים של $latex V$; אבל אני רוצה לשכנע אתכם שבמובן מאוד חזק, $latex V^{**}$ הוא בעצמו $latex V$. לשם כך אני אראה איזומורפיזם בין $latex V$ ל-$latex V^{**}$, אבל לא סתם איזומורפיזם אלא איזומורפיזם שיהיה <strong>קנוני</strong> במובן שתכף אסביר. ההגדרה שלו היא טיפה מבלבלת והופכת את הקיבה במבט ראשון (למרות שאם נודה על האמת, היא מאוד פשוטה), וזה בדיוק האפקט שאני רוצה שירגיש כאן מי שנתקל לראשונה בעניינים הללו. פשוט תחשבו שאתם ברכבת הרים ויהיה בסדר.</p>
+
+<p>ובכן, יהא $latex v\in V$ איבר כלשהו של $latex V$. בואו נגדיר פונקציונל לינארי $latex L_{v}:V^{*}\to\mathbb{F}$ באופן הבא: $latex L_{v}\left(f\right)=f\left(v\right)$. כלומר, $latex L_{v}$ הוא בסך הכל יצור מאוד דומה לפונקציונל ה”הצבה בפולינום” שראינו בתחילת הפוסט, רק שהפעם הוא מקבל כקלט פונקציונל $latex f$ ולא פולינום $latex p$, אבל הפעולה שלו זהה – הוא מציב בפונקציונל את הערך $latex v$ שהוא “hard coded” בתוך הגדרת $latex L_{v}$ ומחזיר את התוצאה. כעת צריך לבדוק שזה באמת פונקציונל לינארי, כלומר לשים לב לכך ש:</p>
+
+<p>$latex L_{v}\left(\alpha f+\beta g\right)=\left(\alpha f+\beta g\right)\left(v\right)=\alpha f\left(v\right)+\beta g\left(v\right)=\alpha L_{v}\left(f\right)+\beta L_{v}\left(g\right)$</p>
+
+<p>זה נובע ממש מההגדרות, אז אין לנו בעיה. אבל מדוע מה שתיארנו כאן הוא איזומורפיזם בין $latex V$ ובין $latex V^{**}$? ובכן, בגלל ש-</p>
+
+<p>$latex L_{\alpha v+\beta u}\left(f\right)=f\left(\alpha v+\beta u\right)=\alpha f\left(v\right)+\beta f\left(u\right)=\alpha L_{v}\left(f\right)+\beta L_{u}\left(f\right)$</p>
+
+<p>מכיוון שזה נכון לכל $latex f\in V^{*}$ אפשר פשוט לכתוב $latex L_{\alpha v+\beta u}=\alpha L_{v}+\beta L_{u}$, מה שאומר שהטרנספורמציה $latex T\left(v\right)=L_{v}$ היא טרנספורמציה לינארית $latex T:V\to V^{**}$. במילים: זו טרנספורמציה שלוקחת וקטור של $latex V$ ומחזירה פונקציונל שמקבל כקלט פונקציונל של $latex V$. יש לנו כאן שלוש רמות שונות של טרנספורמציה לינארית, ועוד היד נטויה.</p>
+
+<p>כעת, מכיוון ש-$latex \dim V^{**}=\dim V^{*}=\dim V$, כדי להשתכנע ש-$latex T$ היא איזומורפיזם מספיק להראות שהיא חח”ע, כלומר ש-$latex \dim\ker T=0$ (כי אז ינבע ש-$latex \dim\mbox{Im}T=\dim V-\dim\ker T=\dim V$ ולכן $latex \mbox{Im}T=V^{**}$). במילים אחרות, צריך להראות ש-$latex L_{v}$ הוא פונקציונל האפס רק אם $latex v=0$. כעת, אם $latex L_{v}$ הוא פונקציונל האפס זה אומר ש-$latex f\left(v\right)=0$ לכל פונקציונל $latex f:V\to\mathbb{F}$. אבל אם $latex L_{v}$ איננו פונקציונל האפס ברור שקיימים פונקציונלים שלא מתאפסים עליו; תשלימו את הקבוצה $latex \left{ v\right} $ לבסיס של $latex V$ ואז תסתכלו על אברי הבסיס הדואלי, יהיה שם פונקציונל שלא מתאפס על $latex v$…</p>
+
+<p>לסיכום, ראינו ש-$latex V^{**}$ איזומורפי ל-$latex V$. האיזומורפיזם הזה הוא קנוני במובן זה שהוא אינו תלוי בבחירת בסיס ל-$latex V$. כאשר ראינו ש-$latex V^{*}$ איזומורפי ל-$latex V$, היינו חייבים לבחור בסיס ל-$latex V$ כדי לקבל איזומורפיזם, ויש הרבה מאוד בסיסים שאפשר לבחור ולכן יש הרבה מאוד איזומורפיזמים אפשריים ולא ברור מי מהם הוא “הכי טבעי”; כאן לעומת זאת אין ממש ספק שהאיזומורפיזם שהצגתי הוא הטבעי ביותר. למי שיש בכל זאת ספק רק אעיר שאפשר לתת משמעות מתמטית לחלוטין ל”קנוניות” כאן באמצעות תורת הקטגוריות; נוותר על זה להפעם.</p>
+
+<p>עכשיו אני רוצה לדבר על משהו קצת שונה – האופן שבו אפשר להבין את הגאומטריה של מרחבים וקטוריים באמצעות פונקציונלים.</p>
+
+<p>ראשית, שימו לב שאפשר לחשוב על פונקציונל באופן כללי בתור <strong>פולינום לינארי במספר משתנים</strong>. למה הכוונה? קחו בסיס $latex B=\left{ b_{1},\dots,b_{n}\right} $ ל-$latex V$ ופונקציונל $latex f$, ובואו נסמן $latex a_{i}=f\left(b_{i}\right)$. כעת, איך $latex f$ פועלת על וקטור $latex v$ שוקטור הקואורדינטות שלו על פי $latex B$ הוא $latex \left[\lambda_{1},\dots,\lambda_{n}\right]$ (כלומר, $latex v=\sum\lambda_{i}b_{i}$)? פשוט מאוד:</p>
+
+<p>$latex f\left(v\right)=f\left(\sum\lambda_{i}v_{i}\right)=\sum\lambda_{i}f\left(b_{i}\right)=\sum a_{i}\lambda_{i}$</p>
+
+<p>זה אומר שאפשר לחשוב על $latex f$ בתור הפולינום $latex p\left(x_{1},\dots,x_{n}\right)=a_{1}x_{1}+\dots+a_{n}x_{n}$, והצבה של $latex v$ ב-$latex f$ היא כמו הצבה של וקטור הקואורדינטות של $latex v$ (על פי $latex B$) בתוך ה-$latex x$-ים של $latex p$.</p>
+
+<p>כעת, כל פונקציונל לינארי $latex f\in V^{*}$ שאיננו פונקציונל האפס בהכרח חייב לקיים $latex \mbox{Im}f=1$, כי המימד של המרחב שאליו $latex f$ הולך הוא 1. לכן $latex \dim\ker f=\dim V-\dim\mbox{Im}f=n-1$ – הגרעין של $latex f$, אוסף כל הוקטורים ש-$latex f$ מעביר לאפס, הוא ממימד קטן ב-1 מהמימד של $latex V$ עצמו. לתת-מרחב לינארי כזה, שהמימד שלו קטן ב-1 מהמימד של המרחב כולו, קוראים <strong>על-מישור</strong> (hyperplane). השם “על-מישור” מגיע מהמקרה של $latex V=\mathbb{R}^{3}$; במקרה זה העל-מישורים של המרחב הם מישורים במובן הרגיל ביותר של המילה; ולכן באופן מוכלל קוראים ליצורים כאלו “על-מישורים”. אני חושב שהדוגמה הכי קלה היא דווקא עבור $latex V=\mathbb{R}^{2}$ – במקרה זה העל-מישורים הם פשוט ישרים (ספציפית, ישרים שעוברים דרך הראשית).</p>
+
+<p>הנה דרך נוספת לחשוב על כך: פולינום בשני משתנים $latex p\left(x,y\right)=ax+by$ מגדיר לנו די בבירור קו ישר באמצעות המשוואה $latex ax+by=0$ – דיברתי כבר על כך בפוסטים קודמים ועל איך שזו “הצורה הכללית” של כל הישרים שעוברים דרך הראשית. כל הדיון למעלה הוא פשוט הכללה של זה.</p>
+
+<p>כעת, אלו מכם שזוכרים משהו מגאומטריה ודאי יודעים שחיתוך של שני מישורים הוא קו ישר. כלומר, חיתוך של שני מישורים מהווה מרחב במימד קטן ב-1 מזה של המישורים שחותכים – הוא על-מישור שלהם עצמם. האם זו תופעה כללית? כלומר, האם אפשר לקבל תת-מרחבים לינאריים יותר ויותר כלליים של $latex V$ על ידי חיתוך של על-מישורים? התשובה חיובית, וכדי לסגור את השאלה באופן מוחלט אני אכניס עוד סימון אחד ודי.</p>
+
+<p>נניח ש-$latex V$ הוא מרחב וקטורי סוף ממדי, ו-$latex W$ תת-מרחב שלו. אז נסמן ב-$latex W^{0}$ את אוסף כל הפונקציונלים הלינאריים ב-$latex V^{*}$ שמתאפסים על <strong>כל</strong> איבר ב-$latex W$. זה אוסף לא ריק, כי פונקציונל האפס תמיד שם; לא קשה לראות ש-$latex W^{0}$ הוא תת מרחב של ממש (כי אם נחבר שני פונקציונלים שמתאפסים על כל אברי $latex W$, גם התוצאה תתאפס על כל אברי $latex W$ וכך גם עם כפל בסקלר). כעת נובעת התוצאה הלא ממש מפתיעה הבאה:</p>
+
+<p>$latex \dim W+\dim W^{0}=\dim V$</p>
+
+<p>ובמילים, ככל ש-$latex W$ קטן יותר, כך קבוצת הפונקציונלים שמתאפסת עליו גדולה יותר. אם $latex W$ הוא על-מישור, אז אוסף כל הפונקציונלים שמאפסים אותו הוא חד ממדי, אבל אם $latex W$ הוא ממימד קטן ב-2 ממימד $latex V$ אז אוסף הפונקציונלים שמאפסים אותו הוא ממימד 2 וכן הלאה.</p>
+
+<p>התוצאה הזו לא מפתיעה כי היא נראית בדיוק כמו $latex \dim\ker T+\dim\mbox{Im}T=\dim V$, וההוכחה היא דומה מאוד להוכחה של המשפט ההוא: ניקח בסיס עבור $latex W$ ונשלים אותו לבסיס של $latex V$ – $latex B=\left{ b_{1},\dots,b_{m},b_{m+1},\dots,b_{n}\right} $, כאשר $latex m=\dim W$ ו-$latex m$ הוקטורים הראשונים הם הבסיס של $latex W$. כעת בואו נסתכל על הבסיס הדואלי $latex B^{*}=\left{ f_{1},\dots,f_{n}\right} $ ונטען ש-$latex \left{ f_{m+1},\dots,f_{n}\right} $ הם בדיוק בסיס ל-$latex W^{0}$, מה שיוכיח שהמימד של $latex W^{0}$ הוא בדיוק $latex n-m=\dim V-\dim W$.</p>
+
+<p>ובכן, זה שכל $latex f_{i}$ כזו עם $latex m&lt;i\le n$ מאפסת כל איבר של $latex W$ זה ברור – $latex f_{i}\left(b_{j}\right)=0$ לכל $latex 1\le j\le m$ ולכן $latex f_{i}$ מאפסת כל איבר שניתן לכתוב כצירופים לינאריים רק של $latex b_{1},\dots,b_{m}$. זה אומר ש-$latex \mbox{span}\left{ f_{m+1},\dots,f_{n}\right} \subseteq W^{0}$, אבל מה עם הכיוון השני? ובכן, אם $latex g\in W^{0}$ הוא פונקציונל שמאפס את כל אברי $latex W$, נכתוב אותו כצירוף לינארי של אברי הבסיס – $latex g=\sum\lambda_{j}f_{j}$, וכעת נציב בו לפי התור את $latex b_{i}$ עבור $latex 1\le i\le m$ – אברי הבסיס של $latex W$ שהם כמובן גם איברים של $latex W$ ולכן $latex g\left(b_{i}\right)=0$ לכל אחד מהם. נקבל $latex 0=g\left(b_{i}\right)=\sum\lambda_{j}f_{j}\left(b_{i}\right)=\sum\lambda_{j}\delta_{ij}=\lambda_{i}$ והנה – קיבלנו שבצירוף הלינארי שמרכיב את $latex g$, כל המקדמים $latex \lambda_{i}$ עבור $latex 1\le i\le m$ הם בהכרח אפס, ולכן הוקטורים שפורשים את כל ה-$latex g$-ים הללו הם $latex \left{ f_{m+1},\dots,f_{n}\right} $. זה מסיים את ההוכחה.</p>
+
+<p>בואו נסכם לרגע. ראינו שלכל תת מרחב $latex W$ של $latex V$ קיים תת-מרחב $latex W^{0}$ של $latex V^{*}$ של “הפונקציונלים שמתאפסים על $latex W$” וגם הבנו מה המימד שלו. זה כיוון אחד – מה עם הכיוון השני? האם כל תת-מרחב $latex U$ של $latex V^{*}$ מגדיר תת מרחב של $latex V$, של “כל אברי $latex V$ שמאפסים את כל הפונקציונלים ב-$latex U$”? התשובה חיובית, אבל אין צורך לעבוד שוב כדי לראות זאת; אולי כבר הבנתם שאנחנו פשוט יכולים להשתמש בתוצאה שכבר ראינו ובדואליות של $latex V$ ו-$latex V^{*}$. הבה ונניח שיש לנו תת-מרחב $latex U$ של $latex V^{*}$; אז ממה שכבר ראינו, קיים תת-מרחב $latex U^{0}$ של $latex V^{**}$ של כל האיברים של $latex V^{**}$ שמאפסים את כל אברי $latex U$. אבל מה זה $latex V^{**}$? ראינו שכל איבר בו הוא פונקציונל $latex L_{v}$ עבור $latex v\in V$, כך ש $latex L_{v}\left(f\right)=f\left(v\right)$; אם כן, מה זה אומר שפונקציונל $latex L_{v}$ מאפס את כל $latex U$? זה אומר שלכל $latex f\in U$ מתקיים $latex L_{v}\left(f\right)=0$, כלומר $latex f\left(v\right)=0$, כלומר $latex v$ הוא וקטור של $latex V$ שמאופס על ידי כל אברי $latex U$. מכאן שאפשר לחשוב על $latex U^{0}$ בתור תת-מרחב של $latex V$ (לפדנטיים – לא הוא, אלא העותק האיזומורפי שלו ב-$latex V$ על ידי האיזומורפיזם הקנוני של $latex V$ עם $latex V^{**}$) ויתקיים $latex \dim U+\dim U^{0}=\dim V^{*}$.</p>
+
+<p>שימו לב כמה זה נחמד: מצד אחד יש לנו תת-קבוצות של המרחב (למשל, מישורים וישרים ב-$latex \mathbb{R}^{3}$), מצד שני יש לנו קבוצות של פונקציונלים לינאריים (או בניסוח אחר, פולינומים לינאריים במספר משתנים) ואנחנו רואים שהקבוצות הללו הן אותו הדבר במובן מאוד חזק ואפשר לקבל מכל אחת את השניה.</p>
+
+<p>הרעיונות הללו הם בדיוק מה שעומד בבסיס הגאומטריה האלגברית; השאלה הראשונה שנשאלת כאשר מתחילים ללמוד גאומטריה אלגברית היא איך נראית הדואליות הזו כאשר רוצים לתאר מרחבים קצת יותר מחוכמים, ולשם כך מדברים על פולינומים במספר משתנים ממעלה <strong>כלשהי</strong>, לא רק פולינומים לינאריים. כך למשל המשטח שהוא פני עיגול (<strong>ספרה</strong>) ברדיוס $latex R$ ניתן לתיאור כאוסף האפסים של הפולינום $latex p\left(x,y,z\right)=x^{2}+y^{2}+z^{2}-R^{2}$ שהוא פולינום ממעלה שניה; וכשמתירים מעלה כלשהי, יכולת התיאור גדלה פלאים. הקבוצות שניתנות לתיאור באופן הזה נקראות <strong>יריעות אלגבריות</strong>, והאבחנה הבסיסית היא שמתקיימת דואליות דומה מאוד לזו שהצגתי לעיל בין יריעות אלגבריות ובין אוספים של פולינומים. עם זאת, הסיטואציה מורכבת משמעותית יותר מזו שראינו למעלה וכדי לתת ניסוחים מדוייקים למה שהולך שם צריך להשתמש במושגים מתמטיים שהאלגברה הלינארית לא נכנסת אליהם (אידאלים, חוגי מנה, טופולוגיה…) ולכן הפוסטים בנושא ייאלצו להמתין.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2011/11/02/linear_functionals/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

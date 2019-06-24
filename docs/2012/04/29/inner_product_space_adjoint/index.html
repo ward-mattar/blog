@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>מרחבי מכפלה פנימית – לפעמים הצמדה היא באמת הצמדה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="מרחבי מכפלה פנימית – לפעמים הצמדה היא באמת הצמדה" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בסוף הפוסט האחרון שלי על אלגברה לינארית הבטחתי שנדבר על מה שקורה כשלוקחים מרחב מכפלה פנימית ומתחילים לדבר על טרנספורמציות לינאריות מעליו. אני רוצה להתחיל עם הסוג הפשוט ביותר של טרנספורמציות לינאריות – פונקציונלים לינאריים." />
+<meta property="og:description" content="בסוף הפוסט האחרון שלי על אלגברה לינארית הבטחתי שנדבר על מה שקורה כשלוקחים מרחב מכפלה פנימית ומתחילים לדבר על טרנספורמציות לינאריות מעליו. אני רוצה להתחיל עם הסוג הפשוט ביותר של טרנספורמציות לינאריות – פונקציונלים לינאריים." />
+<link rel="canonical" href="http://localhost:4000/blog/2012/04/29/inner_product_space_adjoint/" />
+<meta property="og:url" content="http://localhost:4000/blog/2012/04/29/inner_product_space_adjoint/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-04-29T16:26:16+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2012-04-29T16:26:16+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/04/29/inner_product_space_adjoint/"},"url":"http://localhost:4000/blog/2012/04/29/inner_product_space_adjoint/","author":{"@type":"Person","name":"gadial"},"description":"בסוף הפוסט האחרון שלי על אלגברה לינארית הבטחתי שנדבר על מה שקורה כשלוקחים מרחב מכפלה פנימית ומתחילים לדבר על טרנספורמציות לינאריות מעליו. אני רוצה להתחיל עם הסוג הפשוט ביותר של טרנספורמציות לינאריות – פונקציונלים לינאריים.","headline":"מרחבי מכפלה פנימית – לפעמים הצמדה היא באמת הצמדה","dateModified":"2012-04-29T16:26:16+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">מרחבי מכפלה פנימית &amp;#8211; לפעמים הצמדה היא באמת הצמדה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-04-29T16:26:16+03:00" itemprop="datePublished">Apr 29, 2012
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בסוף <a href="http://www.gadial.net/?p=1522">הפוסט האחרון שלי</a> על אלגברה לינארית הבטחתי שנדבר על מה שקורה כשלוקחים מרחב מכפלה פנימית ומתחילים לדבר על טרנספורמציות לינאריות מעליו. אני רוצה להתחיל עם הסוג הפשוט ביותר של טרנספורמציות לינאריות – פונקציונלים לינאריים.</p>
+
+<p>תזכורת קצרה: $latex V$ הוא מרחב מכפלה פנימית אם הוא מרחב וקטורי מעל $latex \mathbb{C}$ שמוגדרת בו פונקציה $latex \left\langle \cdot,\cdot\right\rangle :V\times V\to\mathbb{C}$ שהיא לינארית במשתנה הראשון (כלומר, $latex \left\langle \lambda x+y,z\right\rangle =\lambda\left\langle x,z\right\rangle +\left\langle y,z\right\rangle $), הרמיטית – $latex \left\langle x,y\right\rangle =\overline{\left\langle y,x\right\rangle }$ (“כמעט” סימטרית עד כדי הצמוד למעלה, שאת הסיבות לו הסברתי בעבר) וחיובית, כלומר $latex \left\langle x,x\right\rangle \ge0$ ושוויון הוא רק כש-$latex x=0$. פונקציונל לינארי במקרה שלנו הוא פונקציה לינארית $latex f:V\to\mathbb{C}$. הדמיון למכפלה פנימית די ברור – פונקציונל פועל על איבר אחד ואילו מכפלה פנימית על שניים, אבל שניהם מחוייבים ללינאריות מסוג כלשהו. אם המרחב $latex V$ הוא סוף-ממדי (ואני מתכנן לדבר רק על מרחבי מכפלה פנימית סוף ממדיים; מה שקורה במרחבים אינסוף מימדיים הוא נושא לסדרת פוסטים ארוכה אף יותר מהנוכחית), הדמיון הוא לחלוטין לא מקרי – מסתבר ש<strong>כל</strong> פונקציונל לינארי על $latex V$ ניתן לתיאור באופן יחיד באמצעות המכפלה הפנימית (במרחב אינסוף ממדי זה פשוט לא נכון, אם כי לא אציג דוגמאות נגדיות כעת).</p>
+
+<p>בואו ראשית כל נשחק במשחק הבא: ניקח $latex y\in V$ כלשהו ונחשוב עליו כעל “קבוע”. אז אפשר להגדיר פונקציה $latex f_{y}:V\to\mathbb{C}$ של “מכפלה פנימית ב-$latex y$”, כלומר $latex f_{y}\left(x\right)=\left\langle x,y\right\rangle $. קל לראות ש-$latex f_{y}$ היא פונקציונל לינארי, פשוט בגלל הלינאריות של המכפלה הפנימית; מה שקורה במרחב סוף ממדי הוא ש<strong>כל</strong> פונקציונל לינארי $latex f$ ניתן להצגה כ-$latex f_{y}$ עבור $latex y$ אחד ויחיד ספציפי. איך מוצאים אותו? בעזרת הכלי הסטנדרטי שלנו להתמודדות עם מרחבי מכפלה פנימית – בסיסים אורתונורמליים.</p>
+
+<p>ניקח בסיס אורתונורמלי $latex u_{1},\dots,u_{n}$ למרחב. בהינתן $latex x\in V$ כלשהו, אנחנו יודעים ש-$latex x=\sum\left\langle x,u_{i}\right\rangle u_{i}$ (זוכרים? כשמייצגים איבר בבסיס אורתונורמלי, המקדם של איבר הבסיס $latex u_{i}$ בצירוף הלינארי הוא בדיוק המכפלה הפנימית של $latex x$ ב-$latex u_{i}$. קוראים לזה “מקדם פורייה” של $latex x$ בבסיס $latex u_{1},\dots,u_{n}$). אנחנו גם יודעים איך מכפלה פנימית של שני איברים כלליים נראית: אם $latex y=\sum\left\langle y,u_{i}\right\rangle u_{i}$ הוא איבר תמים אחר של $latex V$ ואנו כופלים אותו ב-$latex x$, נקבל:</p>
+
+<p>$latex \left\langle x,y\right\rangle =\left\langle \sum\left\langle x,u_{i}\right\rangle u_{i},\sum\left\langle y,u_{j}\right\rangle u_{j}\right\rangle =\sum_{i,j}\left\langle x,u_{i}\right\rangle \overline{\left\langle y,u_{j}\right\rangle }\left\langle u_{i},u_{j}\right\rangle =\sum_{i}\left\langle x,u_{i}\right\rangle \overline{\left\langle y,u_{i}\right\rangle }$</p>
+
+<p>כעת, אם נפעיל את $latex f$ על $latex x$ ונשתמש בלינאריות שלו, נקבל ש-$latex f\left(x\right)=\sum\left\langle x,u_{i}\right\rangle f\left(u_{i}\right)$. זה מאוד מזכיר את המשוואה שלמעלה, אם $latex f\left(u_{i}\right)=\overline{\left\langle y,u_{i}\right\rangle }$, ובניסוח אחר $latex \left\langle y,u_{i}\right\rangle =\overline{f\left(u_{i}\right)}$. זה מוביל אותנו ל<strong>הגדרה</strong> הבאה: $latex y=\sum\overline{f\left(u_{i}\right)}u_{i}$. כעת קל לוודא שאכן $latex f\left(x\right)=\left\langle x,y\right\rangle $ לכל $latex x\in V$. כדי לוודא ש-$latex y$ הוא יחיד, נניח כי ישנם $latex y_{1},y_{2}$ כך ש-$latex \left\langle x,y_{1}\right\rangle =f\left(x\right)=\left\langle x,y_{2}\right\rangle $ לכל $latex x$, כלומר $latex \left\langle x,y_{1}-y_{2}\right\rangle =0$ לכל $latex x$. במרחב סוף ממדי זה יכול לקרות רק אם $latex y_{1}-y_{2}=0$, כלומר $latex y_{1}=y_{2}$ (למה בעצם אם $latex \left\langle x,y\right\rangle =0$ לכל $latex x$ זה גורר ש-$latex y=0$? תרגיל טוב).</p>
+
+<p><a href="http://www.gadial.net/?p=1408">בפוסט שלי</a> על פונקציונלים לינאריים הערתי שיש איזומורפיזם בין $latex V$ ובין $latex V^{*}$- מרחב הפונקציונלים הלינאריים מעל $latex V$, אך הוא אינו “קנוני” – כלומר, עבור בחירות בסיס שונות עבור $latex V$ נקבל איזומורפיזמים שונים ואין דרך להכריע מי מביניהם יותר “נכון”. במקרה שבו $latex V$ הוא מרחב מכפלה פנימית, קיבלנו איזומורפיזם קנוני לעילא ולעילא – $latex y\mapsto f_{y}$, שאינו תלוי בבחירת בסיס זה או אחר למרחב. כמובן שאני קצת משקר כאן – האיזומורפיזם הזה עדיין תלוי בבחירת <strong>מכפלה פנימית</strong> למרחב, והיא שקולה לבחירת בסיס, אבל נעזוב את זה.</p>
+
+<p>בואו נעבור לדבר עכשיו על משהו אחר – אופרטורים לינאריים, כלומר טרנספורמציות לינאריות $latex T:V\to V$ מ-$latex V$ לעצמו. השאלה הראשונה שאני שואל היא שאלה של סימטריה: נניח שיש לי וקטורים $latex x,y$, ואני מפעיל את $latex T$ על $latex x$ ואז כופל את התוצאה עם $latex y$ – האם אקבל את אותו הדבר כאילו הפעלתי את $latex T$ על $latex y$ וכפלתי את $latex x$ בזה? כלומר, האם $latex \left\langle Tx,y\right\rangle =\left\langle x,Ty\right\rangle $? התשובה היא שלא תמיד, ושאופרטורים שמקיימים את התכונה הזו הם מעניינים למדי – הם נקראים <strong>אופרטורים הרמיטיים</strong> (ומעל $latex \mathbb{R}$- <strong>סימטריים</strong>). קחו רגע ונסו להסביר לעצמכם למה השוויון $latex \left\langle Tx,y\right\rangle =\left\langle x,Ty\right\rangle $ כלל לא מובן מאליו.</p>
+
+<p>אוקיי, אז לא תמיד מתקיים $latex \left\langle Tx,y\right\rangle =\left\langle x,Ty\right\rangle $. עדיין, התחושה האינטואיטיבית היא שמידת מה של סימטריה צריכה להיות כאן, והתחושה הזו מדוייקת – לכל אופרטור $latex T$ מותאם אופרטור $latex T^{*}$ – <strong>הצמוד ההרמיטי</strong> של $latex T$ – כך ש-$latex \left\langle Tx,y\right\rangle =\left\langle x,T^{*}y\right\rangle $. זה המשפט העיקרי שאני רוצה להוכיח בפוסט. כעת אפשר לתאר אופרטור הרמיטי בצורה קצת יותר פשוטה: זה אופרטור שמקיים $latex T=T^{*}$, כלומר הוא שווה לצמוד ההרמיטי שלו; כלומר הוא <strong>צמוד לעצמו</strong>. זה עוד שם לאופרטורים הרמיטיים.</p>
+
+<p>הוכחת הקיום של $latex T^{*}$ היא מחוכמת ואלגנטית. הבה ונקבע את $latex y$ לרגע, אז אפשר להגדיר פונקציונל לינארי $latex f\left(x\right)=\left\langle Tx,y\right\rangle $. במילים אחרות, בהינתן $latex x$ נתעלל בו על ידי הפעלת $latex T$ עליו ואז מכפלה פנימית של כל זה עם $latex y$. זה אכן פונקציונל כי $latex T$ היא טרנספורמציה לינארית ומכפלה פנימית היא לינארית. אם $latex f$ הזו היא פונקציונל, אז יש איזה שהוא $latex z$ שמגדיר אותה: $latex f\left(x\right)=\left\langle x,z\right\rangle $. במילים אחרות, $latex \left\langle x,z\right\rangle =\left\langle Tx,y\right\rangle $, ולכן אם קיים בכלל $latex T^{*}$ שהוא צמוד הרמיטי של $latex T$, אז הוא מקיים $latex \left\langle x,z\right\rangle =\left\langle x,T^{*}y\right\rangle $. במילים אחרות, אנחנו נדחפים להגדרה $latex T^{*}\left(y\right)=z$.</p>
+
+<p>באופן הזה אפשר להגדיר את $latex T^{*}$ לכל איבר $latex y\in V$. צריך לוודא שאכן קיבלנו אופרטור לינארי; שום דבר לא מבטיח לנו שהתנאי ההכרחי שמצאנו עבור $latex T^{*}$ (שקבע באופן יחיד איך הוא חייב להיראות) הוא גם מספיק כדי שהוא אכן יהיה אופרטור לינארי; זה ה”קסם” שיש כאן. אם כן, יהיו $latex y_{1},y_{2}$ כך ש-$latex T^{*}\left(y_{1}\right)=z_{1}$ ו-$latex T^{*}\left(y_{2}\right)=z_{2}$; נרצה להראות ראשית ש-$latex T^{*}\left(y_{1}+y_{2}\right)=z_{1}+z_{2}$. נסמן $latex T^{*}\left(y_{1}+y_{2}\right)=z$; אנחנו יודעים ש-</p>
+
+<p>$latex \left\langle x,z\right\rangle =\left\langle Tx,y_{1}+y_{2}\right\rangle =\left\langle Tx,y_{1}\right\rangle +\left\langle Tx,y_{2}\right\rangle =\left\langle x,z_{1}\right\rangle +\left\langle x,z_{2}\right\rangle =\left\langle x,z_{1}+z_{2}\right\rangle $</p>
+
+<p>השוויון $latex \left\langle x,z\right\rangle =\left\langle x,z_{1}+z_{2}\right\rangle $ עבור ערך ספציפי של $latex x$ לא מספיק כדי להסיק ש-$latex z=z_{1}+z_{2}$, אבל מכיוון שזה נכון עבור כל $latex x$ זה מספיק (שוב – למה?). באופן דומה גם מראים ש-$latex T^{*}\left(\lambda y\right)=\lambda T^{*}\left(y\right)$ ולכן $latex T^{*}$ אכן לינארית.</p>
+
+<p>עכשיו, אנחנו יודעים שבמרחב סוף-ממדי כל טרנספורמציה לינארית ניתנת לייצוג באמצעות מטריצות; נניח שקבענו איזה בסיס <strong>אורתונורמלי</strong> של המרחב, $latex B=\left{ u_{1},\dots,u_{n}\right} $, ואנחנו מסתכלים על $latex \left[T\right]_{B}$ – המטריצה המייצגת של $latex T$ ביחס לבסיס הזה. מה הקשר בינה ובין המטריצה המייצגת של $latex \left[T^{*}\right]_{B}$? האם יש לנו תיאור קונקרטי וקל לחישוב של האופן שבו הייצוג הנוח של $latex T$ הופך לייצוג נוח של $latex T^{*}$? התשובה חיובית, במקרה שבו $latex B$ אורתונורמלי. זכרו שהעמודה ה-$latex i$-ית של המטריצה $latex \left[T^{*}\right]_{B}$ היא בדיוק וקטור הקואורדינטות לפי $latex B$ של $latex T^{*}\left(u_{i}\right)$ (הפעלת $latex T^{*}$ על איבר הבסיס ה-$latex i$ ב-$latex B$), או במילים אחרות – הכניסה ה-$latex j,i$ של $latex \left[T^{*}\right]_{B}$ היא בדיוק $latex \left\langle T^{*}\left(u_{i}\right),u_{j}\right\rangle $. בואו נעשה תעלול אלגברי זריז:</p>
+
+<p>$latex \left\langle T^{*}\left(u_{i}\right),u_{j}\right\rangle =\overline{\left\langle u_{j},T^{*}\left(u_{i}\right)\right\rangle }=\overline{\left\langle T\left(u_{j}\right).u_{i}\right\rangle }$</p>
+
+<p>אבל מה זה $latex \left\langle T\left(u_{j}\right).u_{i}\right\rangle $? זה בדיוק המקדם של $latex u_{i}$ בצירוף הלינארי שמגדיר את $latex T\left(u_{j}\right)$. במילים אחרות, זו הכניסה ה-$latex i,j$ של המטריצה $latex \left[T\right]_{B}$!</p>
+
+<p>זה מוביל אותנו להגדרה הבאה: אם $latex A$ היא מטריצה ריבועית כלשהי מעל המרוכבים, אז <strong>המטריצה הצמודה</strong> שלה מוגדרת בתור $latex A^{*}=\overline{A^{t}}$, כלומר ביצוע שחלוף והצמדה, כלומר $latex A_{ij}^{*}=\overline{A_{ji}}$. כשמדובר במטריצות קל למדי לראות שמתקיימות התכונות הבאות של הצמדה (שאני מנסח בלשון טרנספורמציות כי הן תקפות באותה מידה גם לטרנספורמציות):</p>
+
+<ol>
+  <li>$latex \left(T+S\right)^{*}=T^{*}+S^{*}$</li>
+  <li>$latex \left(\lambda T\right)^{*}=\overline{\lambda}T^{*}$</li>
+  <li>$latex \left(TS\right)^{*}=S^{*}T^{*}$</li>
+  <li>$latex \left(T^{*}\right)^{*}=T$</li>
+</ol>
+
+<p>ארבע התכונות הללו מראות לנו שיש מבנה אלגברי כלשהו לפעולה של “קח טרנספורמציה והחזר את הצמודה שלה” – בלשון פונקציות, $latex f\left(T\right)=T^{*}$. תכונות 1 ו-2 אומרות שהפונקציה הזו היא “כמעט לינארית”, עד כדי כך שהוצאת סקלר כרוכה בהצמדה שלו – פונקציה כזו נקראת <strong>אנטי-לינארית</strong>, או <strong>לינארית-צמודה</strong>. התכונה הבאה מראה ש-$latex f$ הופכת איברים בכפל: $latex f\left(TS\right)=f\left(S\right)f\left(T\right)$.<br />
+לפונקציה שמקיימת $latex f\left(ST\right)=f\left(S\right)f\left(T\right)$ קוראים <strong>הומומורפיזם</strong> ולכן ההצמדה שלנו, שעושה מעין היפוך של זה, נקראת <strong>אנטי-הומומורפיזם</strong> (מאוד אנטי כל העסק – אנטי-לינארי, אנטי-הומומורפיזם…). לסיום, תכונה 4 אומרת ש-$latex f\left(f\left(T\right)\right)=T$ – לפונקציה שמקיימת את זה קוראים <strong>אינבולוציה</strong>. בקיצור, ההצמדה שלנו היא פעולה שמקיימת כמה תכונות מוכרות וחביבות על המתמטיקאים.</p>
+
+<p>באופן לא מפתיע, מסתבר שאפשר להשתמש בתכונות הללו כבסיס להכללה; זה הבסיס לתחום במתמטיקה של <strong>אלגברות $latex C$-כוכב</strong> (אלגבראות $latex C^{*}$), שהן אלגבראות בנך עם פונקציה שמקיימת את תכונות 1-4 ועוד כמה תכונות שלא אכנס אליהן כעת (כמו שלא אכנס להגדרה של אלגברת בנך; כל הדברים הללו קשורים לאלגברה לינארית במרחב אינסוף ממדי). לא ארחיב לכיוון הזה עכשיו, אלא אדבר דווקא על דוגמה פשוטה ביותר לפונקציה לא טריוויאלית נוספת שמקיימת את תכונות 1-4, שאולי כבר קפצה לחלקכם לראש – הצמדה של מספרים מרוכבים. תכונות 1,2,4 שלה באות באופן טבעי לחלוטין; תכונה 3 נובעת מכך ש-$latex \overline{zw}=\overline{z}\cdot\overline{w}$ ומכך שבמספרים מרוכבים הכפל הוא קומוטטיבי, כלומר $latex \overline{w}\cdot\overline{z}$. הדמיון הזה מסביר את השם <strong>צמוד</strong> בהקשר הנוכחי.</p>
+
+<p>הדמיון לא נגמר כאן. במספרים מרוכבים מתקיימת התכונה הנחמדה שאם $latex z$ הוא מספר מרוכב כלשהו, אז $latex \frac{z+\overline{z}}{2}$ הוא החלק הממשי של $latex z$, ואילו $latex \frac{z-\overline{z}}{2}$ הוא החלק המדומה של $latex z$ (בדקו בעצמכם אם אינכם זוכרים/יודעים/מאמינים). בואו נעשה דבר דומה עם טרנספורמציות: ניקח $latex T$ כלשהי ונגדיר $latex T_{R}=\frac{T+T^{*}}{2}$ ו-$latex T_{I}=\frac{T-T^{*}}{2}$.</p>
+
+<p>עכשיו, $latex T_{R}^{*}=\frac{1}{2}\left(T+T^{*}\right)^{*}=\frac{T^{*}+\left(T^{*}\right)^{*}}{2}=\frac{T+T^{*}}{2}=T_{R}$, ולכן $latex T_{R}$ צמודה לעצמה; בדומה נקבל ש-$latex T_{I}^{*}=-T_{I}$ – לטרנספורמציה שמקיימת את התכונה הזו קוראים <strong>אנטי-הרמיטית</strong>. כפי שאתם ודאי שמים לב, $latex T_{R}$ מתנהג ביחס להצמדה כמו שמספר ממשי מתנהג ביחס אליה, ו-$latex T_{I}$ מתנהג כמו שמספר מדומה טהור מתנהג ביחס אליה. כעת שימו לב לכך ש-$latex T=T_{R}+T_{I}$ , כלומר כל טרנספורמציה לינארית במרחב סוף ממדי ניתן לרשום כסכום של טרנספורמציה הרמיטית וטרנספורמציה אנטי-הרמיטית (למעשה, אפשר גם להגדיר $latex T_{I}^{\prime}=\frac{T-T^{*}}{2i}$ ולקבל טרנספורמציה הרמיטית ואז הפירוק הוא $latex T=T_{R}+iT_{I}^{\prime}$ – שוב, בדיוק כמו עם מספרים מרוכבים). האנלוגיה הזו הלהיבה אותי מאוד בשעתו; זה תמיד מעניין לראות איך תכונות שקיימות במרוכבים הן ממש לא נחלתם הבלעדית אלא מעידות כנראה על משהו עמוק יותר מתחת לפני השטח.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2012/04/29/inner_product_space_adjoint/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

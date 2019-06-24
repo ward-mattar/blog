@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>קואורדינטות, טרנספורמציות, מטריצות וחיות אחרות | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="קואורדינטות, טרנספורמציות, מטריצות וחיות אחרות" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בשעה טובה הגענו אל מה שאני מחשיב בתור אחת התוצאות היפות ביותר במתמטיקה בסיסית. לצערי קל לפספס את היופי כאן (אני כבר מתאר לעצמי קוראים נזעמים שבסוף הפוסט ירטנו שזה בכלל לא יפה או מעניין) ואני מקווה שאצליח להיות משכנע." />
+<meta property="og:description" content="בשעה טובה הגענו אל מה שאני מחשיב בתור אחת התוצאות היפות ביותר במתמטיקה בסיסית. לצערי קל לפספס את היופי כאן (אני כבר מתאר לעצמי קוראים נזעמים שבסוף הפוסט ירטנו שזה בכלל לא יפה או מעניין) ואני מקווה שאצליח להיות משכנע." />
+<link rel="canonical" href="http://localhost:4000/blog/2011/10/27/coordinates_transformations_matrices/" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/10/27/coordinates_transformations_matrices/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-28T02:23:20+03:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2011-10-28T02:23:20+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/10/27/coordinates_transformations_matrices/"},"url":"http://localhost:4000/blog/2011/10/27/coordinates_transformations_matrices/","author":{"@type":"Person","name":"gadial"},"description":"בשעה טובה הגענו אל מה שאני מחשיב בתור אחת התוצאות היפות ביותר במתמטיקה בסיסית. לצערי קל לפספס את היופי כאן (אני כבר מתאר לעצמי קוראים נזעמים שבסוף הפוסט ירטנו שזה בכלל לא יפה או מעניין) ואני מקווה שאצליח להיות משכנע.","headline":"קואורדינטות, טרנספורמציות, מטריצות וחיות אחרות","dateModified":"2011-10-28T02:23:20+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">קואורדינטות, טרנספורמציות, מטריצות וחיות אחרות</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-10-28T02:23:20+03:00" itemprop="datePublished">Oct 28, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בשעה טובה הגענו אל מה שאני מחשיב בתור אחת התוצאות היפות ביותר במתמטיקה בסיסית. לצערי קל לפספס את היופי כאן (אני כבר מתאר לעצמי קוראים נזעמים שבסוף הפוסט ירטנו שזה בכלל לא יפה או מעניין) ואני מקווה שאצליח להיות משכנע.</p>
+
+<p>נתחיל ממשהו קונקרטי. כזכור, $latex \mathbb{R}^{2}$, המרחב האוקלידי, מורכב מנקודות שכל אחת מהן היא זוג מספרים $latex \left(x,y\right)$. אנחנו חושבים על המספרים הללו בתור <strong>הקואורדינטות</strong> של הנקודה – אבל מה זו בעצם קואורדינטה?</p>
+
+<p>קואורדינטה, במובן היבש ביותר, היא מספר שבא לתאר מיקום. כדי לתאר מרחב כלשהו אנחנו צריכים להחליט על <strong>מערכת קואורדינטות</strong> עבורו, ואז כל נקודה במרחב מתוארת על ידי כמה מספרים שמתארים את האופן שבו אותה נקודה מתאימה למערכת הקואורדינטות. בדוגמה של המישור מערכת הקואורדינטות היא פשוטה – יש לנו ציר $latex x$ וציר $latex y$, שהם שניהם קווים ישרים מאונכים; לציר ה-$latex x$ יש כיוון חיובי שהוא ימינה, ולציר ה-$latex y$ יש כיוון חיובי שהוא למעלה, ונקודת המפגש שלהם נקראת “ראשית הצירים”, וכל קואורדינטה אומרת כמה צריך ללכת לאורך הצירים כדי להגיע אל הנקודה. למשל, $latex \left(3,-2\right)$ פירושו שצריך ללכת 3 יחידות לכיוון ימין על ציר $latex x$, ואז ללכת $latex 2$ יחידות לכיוון <strong>למטה</strong> (הכיוון השלילי) במקביל לציר $latex y$, ואז מגיעים אל הנקודה המבוקשת.</p>
+
+<p>מה שאני רוצה שתבינו הוא שמערכת הצירים הזו היא <strong>שרירותית</strong>. אפשר היה לכוון את אחד מהצירים בכיוון ההפוך ועדיין היינו מסוגלים לתאר את כל המישור, רק שאם למשל היינו מכוונים את ציר $latex x$ בכיוון ההפוך, הקואורדינטות של הנקודה שקודם היו $latex \left(3,-2\right)$ כעת יהיו $latex \left(-3,-2\right)$.</p>
+
+<p>אבל אפשר היה לעשות דברים יותר מעוותים מסתם לשנות כיוון. אפשר היה למחוק את ציר $latex y$ לחלוטין ולהחליף אותו בציר שאקרא לו ציר $latex d$ (מלשון diagonal) שהוא בכלל לא ניצב לציר $latex x$ אלא בזווית של 45 מעלות אליו. במילים אחרות, הוא הקו שמורכב מכל הנקודות מהצורה $latex \left(a,a\right)$ (כשם שציר $latex y$ היה הקו שמורכב מכל הנקודות מהצורה $latex \left(0,a\right)$). כעת, הנקודה שקודם הקואורדינטות שלה היו $latex \left(3,-2\right)$ תהיה כעת בעלת הקואורדינטות $latex \left(5,-2\right)$. רגע, מה?</p>
+
+<p>אנחנו כל כך רגילים למערכת צירים שבה שני הצירים מאונכים זה לזה, שבכלל לא ברור מה המשמעות של קואורדינטות במערכת צירים שבה המצב אינו כזה. לכן כדאי להכניס את האלגברה הלינארית לתמונה כמה שיותר מהר – הדרך ה”נכונה” להכליל את הרעיונות הללו היא דרכה. אפשר לחשוב על כל מערכת צירים ב-$latex \mathbb{R}^{2}$ בתור זוג וקטורים $latex v,u\in\mathbb{R}^{2}$ שהם בלתי תלויים לינארית. מכיוון שהם בלתי תלויים לינארית ו-$latex \mathbb{R}^{2}$ הוא מרחב ממימד 2, אז הם בסיס; ולכן כל וקטור $latex w\in\mathbb{R}^{2}$ ניתן להצגה יחידה בתור $latex w=\lambda v+\tau u$. ה<strong>קואורדינטות</strong> של $latex w$ במערכת הצירים שמוגדרת על ידי $latex v,u$ יהיו הזוג $latex \left(\lambda,u\right)$.</p>
+
+<p>כאשר אנחנו חושבים על $latex \mathbb{R}^{2}$ מערכת הצירים ה”רגילה” שצצה לנו לראש היא זו שנקבעת על ידי הוקטורים $latex \left(1,0\right),\left(0,1\right)$. אולי אתם זוכרים שקראתי לקבוצה הזו <strong>הבסיס הסטנדרטי</strong> של $latex \mathbb{R}^{2}$, וזו בדיוק הסיבה. במערכת הזו, הקואורדינטות של $latex \left(3,-2\right)$ הן בדיוק $latex \left(3,-2\right)$, אבל אם הבסיס שלנו היה $latex \left(1,0\right),\left(1,1\right)$ אז הקואורדינטות של ה-$latex 2$-יה $latex \left(3,-2\right)$ הן $latex \left(5,-2\right)$ כי $latex \left(3,-2\right)=5\left(1,0\right)-2\left(1,1\right)$.</p>
+
+<p>מה שקורה למעלה הוא מבלבל מאוד בגלל שאנחנו משתמשים באותו סימון הן כדי לתאר וקטור – איבר במרחב – והן כדי לתאר את הקואורדינטות שלו. כדי להבהיר מי נגד מי כדאי לחשוב על מרחב וקטורי שנראה שונה. בואו נדבר על $latex \mathbb{R}_{3}\left[x\right]$ – מרחב הפולינומים עם מקדמים ממשיים ממעלה לכל היותר 2. בסיס מתבקש למרחב הזה הוא הקבוצה $latex \left{ x^{2},x,1\right} $ (כשאברי הבסיס סדורים משמאל לימין), ואז הקואורדינטות של הפולינום $latex ax^{2}+bx+c$ על פי הבסיס הזה הן פשוט הוקטור $latex \left(a,b,c\right)$ – שלשה של מספרים מתוך $latex \mathbb{R}$. אבל, היינו יכולים לבחור גם בסיס שונה למרחב, למשל את הבסיס $latex \left{ x^{2}+1,2x,3\right} $, ואז הקואורדינטות היו שונות: הקואורדינטות של הפולינום $latex 5x^{2}+9x$ היו $latex \left(5,\frac{9}{2},-\frac{5}{3}\right)$ כי $latex 5x^{2}+9x=5\left(x^{2}+1\right)+\frac{9}{2}\left(2x\right)-\frac{5}{3}\left(3\right)$.</p>
+
+<p>זה מוביל אותנו להגדרה הפורמלית. אם $latex V$ הוא מרחב וקטורי מעל שדה $latex \mathbb{F}$ ו-$latex B=\left{b_1,\dots,b_n\right}$ הוא בסיס סופי עבורו (וכאן הסדר של הוקטורים בתוך הבסיס חשוב – אומרים במקרה הזה שזה <strong>בסיס סדור</strong>), אז לכל וקטור $latex v\in V$ מוגדר <strong>וקטור קואורדינטות</strong> של $latex v$ על פי הבסיס $latex B$ שמסומן ב-$latex \left[v\right]_{B}$. הוקטור הזה הוא וקטור ב-$latex \mathbb{F}^{n}$ והוא מוגדר כך: $latex v=\sum\lambda_{i}b_{i}$ והצירוף הלינארי הזה הוא יחיד; אז $latex \left[v\right]_{B}=\left(\lambda_{1},\dots,\lambda_{n}\right)$. למעשה, לרוב יהיה נוח לחשוב על $latex \left[v\right]<em>{B}$ בתור וקטור <strong>עמודה</strong> דווקא, כלומר $latex \left[v\right]_{B}=\left[\begin{array}{c}\lambda_{1}\\vdots\\lambda</em>{n}\end{array}\right]$.</p>
+
+<p>כאן התכונות של הבסיס הן קריטיות. העובדה שכל איבר במרחב נפרש על ידי הבסיס קריטית לכך שלכל איבר יהיה קיים וקטור קואורדינטות, והעובדה שההצגה היא יחידה קריטית לכך שההגדרה תעבוד ותהיה חופשיה משאלות נוספות כמו “אם יש כמה וקטורי קואורדינטות אפשריות, את מי בוחרים?”. אבל יש כאן משהו עמוק יותר מסתם ייצוג קומפקטי. בואו נזכור ש-$latex \mathbb{F}^{n}$ הוא מרחב וקטורי בפני עצמו עם פעולות חיבור וכפל בסקלר; ולא קשה לראות שמתקיים $latex \left[v+u\right]_{B}=\left[v\right]_{B}+\left[u\right]_{B}$ (כאן החיבור בצד שמאל הוא חיבור ב-$latex V$, אבל החיבור מימין הוא חיבור ב-$latex \mathbb{F}^{n}$), ובדומה $latex \left[\lambda v\right]_{B}=\lambda\left[v\right]<em>{B}$. כלומר, אם נחשוב על הפעולה “בהינתן וקטור, החזר את וקטור הקואורדינטות שלו על פי $latex B$” בתור פונקציה, זוהי בעצם <strong>טרנספורמציה לינארית</strong>; והיא חד-חד ערכית ועל בגלל ש-$latex B$ הוא בסיס. מה שראינו פה הוא ש<strong>כל</strong> מרחב וקטורי ממימד $latex n$ הוא <strong>איזומורפי</strong> למרחב $latex \mathbb{F}^{n}$. זו הכללה חזקה של האבחנה הישנה שלי לפיה $latex \mathbb{R}^{2}$ ו-$latex \mathbb{R}</em>{2}\left[x\right]$ איזומורפיים; כעת כל מה שהיה עלי לומר הוא “הם מרחבים וקטוריים מאותו מימד ולכן הם איזומורפיים”.</p>
+
+<p>זה מעלה את השאלה – אם כל מרחב וקטורי ממימד סופי הוא בבסיסו $latex \mathbb{F}^{n}$, למה בכלל לדבר על מרחבים אחרים? יש לכך שתי תשובות. הראשונה היא שלפעמים נקודת מבט שונה מספקת תובנות אחרות; אבל השניה והיותר קונקרטית היא שאלגברה לינארית היא לא רק תחום שמתעסק בעצמו; כל הרעיון הוא שאובייקטים רבים ושונים מתגלים בתור מרחבים וקטוריים. האובייקטים הללו לעתים נדירות כוללים <strong>רק</strong> חיבור וכפל בסקלר; לרוב יש להם מבנה נוסף, ואם נחשוב עליהם בתור $latex \mathbb{F}^{n}$ ותו לא, המבנה הזה ילך לאיבוד. עם זאת, כשמתעסקים באלגברה לינארית נטו אני מוצא שאכן נוח לעתים קרובות לחשוב על המרחב הוקטורי הכללי שבו מתעסקים בתור $latex \mathbb{F}^{n}$. שימו רק לב שכל זה תקף רק למרחבים ממימד סופי; מרחבים ממימד אינסופי הם סיפור שונה לגמרי.</p>
+
+<p>כעת, בפוסט הקודם אמרתי שכל מטריצה $latex A$ מסדר $latex m\times n$ מגדירה טרנספורמציה לינארית $latex T_{A}:\mathbb{F}^{n}\to\mathbb{F}^{m}$ שמוגדרת פשוט על ידי $latex T_{A}\left(x\right)=Ax$, כש-$latex x$ הוא וקטור של $latex \mathbb{F}^{n}$ שמיוצג כוקטור עמודה. הפאנץ’ שנובע מהשימוש בוקטורי קואורדינטות הוא ש<strong>כל</strong> טרנספורמציה לינארית בין שני מרחבים ממימד סופי ניתנת להצגה בתור $latex T_{A}$ עבור $latex A$ כלשהי. בואו ננסח את זה פורמלית: אם יש לנו טרנספורמציה לינארית $latex T:V\to W$ ויש לנו בסיסים $latex B=\left{ b_{1},\dots,b_{n}\right} $ של $latex V$ ו-$latex C=\left{ c_{1},\dots,c_{m}\right} $ של $latex W$, אז קיימת מטריצה מסדר $latex m\times n$ שמסומנת כ-$latex \left[T\right]_{B}^{C}$ (“המטריצה המייצגת של $latex T$ על פי הבסיסים $latex B,C$”) כך שמתקיים הקשר הפשוט אך המכריע</p>
+
+<p>$latex \left[T\right]_{B}^{C}\cdot\left[v\right]_{B}=\left[T\left(v\right)\right]_{C}$</p>
+
+<p>ובמילים – לכפול את $latex \left[T\right]_{B}^{C}$ בוקטור הקואורדינטות של $latex v$ על פי $latex B$ ייתן לנו את וקטור הקואורדינטות של $latex T\left(v\right)$ על פי $latex C$. זה אומר ש<strong>כל</strong> טרנספורמציה לינארית בין מרחבים ממימד סופי ניתן לראות ככפל של מטריצה בוקטור.</p>
+
+<p>אלא שקורה כאן יותר מכך. טרנספורמציות לינאריות אפשר לחבר, ואפשר לכפול אותן בסקלר, ואפשר להרכיב אותן (הרכבה של שתי טרנספורמציות לינאריות היא הטרנספורמציה שמתקבל מכך שמפעילים אחת ואז את השניה). הפעולות הללו מתאימות לחיבור מטריצות, כפל מטריצה בסקלר, ו… כפל מטריצות. זו אולי הדוגמה המרכזית לשימושיות של כפל מטריצות – <strong>כפל מטריצות מתאים להרכבת הטרנספורמציות הלינאריות שהן מייצגות</strong>. זה אומר שטרנספורמציות ומטריצות הן אותו הדבר במובן עמוק יותר מאשר “שתיהן מהוות את אותו מרחב וקטורי” – גם הפעולות המורכבות יותר של הרכבה (אצל טרנספורמציות) וכפל (אצל מטריצות) הן זהות אצלן.</p>
+
+<p>בואו נבין איך מוצאים את המטריצה המייצגת הזו ואיך מוכיחים שהיא באמת עושה את מה שאני מתיימר לטעון שהיא עושה. כמיטב מסורת האלגברה הלינארית, זו הוכחה ש”כותבת את עצמה” כמעט לגמרי – אנחנו מתחילים מדבר פשוט מאוד שחייב לקרות, וממנו הכל נובע באופן טבעי ופשוט.</p>
+
+<p>אם כן, מה יש לנו? יש לנו טרנספורמציה $latex T:V\to W$ ויש לנו בסיסים $latex B$ ל-$latex V$ ו-$latex C$ ל-$latex W$. אנחנו מחפשים את המטריצה $latex \left[T\right]<em>{B}^{C}$. הדרך לחלץ אותה היא להבין איך היא חייבת לפעול על וקטורים פשוטים – וקשה למצוא וקטורים פשוטים יותר של קואורדינטות לפי הבסיס $latex B$ מאשר וקטורי הקואורדינטות של <strong>אברי</strong> הבסיס $latex B$: וקטור הקואורדינטות של האיבר $latex b_{i}$ של הבסיס $latex B$ הוא פשוט מאוד הוקטור שכולו אפסים פרט לכניסה במקום $latex i$ שהיא 1, כי ההצגה היחידה של $latex b_{i}$ כצירוף לינארי של אברי הבסיס היא $latex b</em>{i}$ עצמו.</p>
+
+<p>כעת, $latex T\left(b_{i}\right)$הוא איבר של $latex W$ ולכן ניתן להצגה כצירוף לינארי של אברי $latex C$, כלומר $latex T\left(b_{i}\right)=\sum_{j=1}^{m}a_{ji}c_{j}$ כאשר $latex a_{ji}$ הם סקלרים – $latex a_{ji}$ הוא המקדם של הוקטור $latex c_{j}$ בצירוף הלינארי שנותן את $latex T\left(b_{i}\right)$. החלק ה”חישובי” כאן הוא למצוא את אותם $latex a_{ji}$-ים, וזה תלוי הן בטרנספורמציה $latex T$ והן בבסיסים $latex B,C$. לרוב הגיוני לבחור בסיסים שבהם החישוב יהיה יותר נוח; זה מוביל אותנו באופן טבעי לשאלה “מה הבסיסים שבהם הכי טוב לייצג טרנספורמציה $latex T$?” שנדבר עליה בהמשך.</p>
+
+<p>מרגע שנמצאו ה-$latex a_{ji}$-ים הסיפור נגמר – המטריצה, באופן לא כל כך מפתיע, היא כזו שהכניסה ה-$latex ji$ בה היא $latex a_{ji}$. בואו נבין למה זה עובד: אם $latex A$ היא המטריצה הנתונה ו-$latex v_{i}$ הוא וקטור הקואורדינטות של איבר הבסיס $latex b_{i}$, אז $latex Av_{i}$ הוא וקטור עמודה מסדר $latex m$, כך ש-$latex \left[Av_{i}\right]_{j}=\sum_{k=1}^{n}a_{jk}\left[v_{i}\right]_{k}=a_{ji}$, כי כל האיברים בסכום מתאפסים למעט זה שמתאים לכניסה היחידה של $latex v_{i}$ שאיננה אפס – הכניסה $latex i$ עצמה. קיבלנו ש-$latex \left[Av_{i}\right]_{j}$ הוא בדיוק המקדם ה-$latex j$-י של $latex T\left(b_{i}\right)$ בוקטור הקואורדינטות שלו על פי $latex C$, כפי שרצינו; זה אומר שלפחות על אברי $latex B$ המטריצה המייצגת אכן עובדת היטב.</p>
+
+<p>לכאורה עכשיו צריך לבצע את אותו חישוב עבור איבר כללי ולא רק איבר בסיס, אבל <strong>אין בכך שום צורך</strong>. הסיבה לכך היא שטרנספורמציה לינארית נקבעת באופן <strong>יחיד</strong> על ידי פעולת מקדמיה על אברי הבסיס, וזה אומר, בניסוח קצת שונה, שאם שתי טרנספורמציות לינאריות מזדהות בפעולה שלהן על אברי בסיס כלשהו, הן אותה הטרנספורמציה. לכן, מכיוון שהטרנספורמציה שמוגדרת על ידי המטריצה $latex A$ מתנהגת על אברי $latex B$ בדיוק כמו $latex T$, הם בדיוק אותה הטרנספורמציה. סוף הסיפור.</p>
+
+<p>אם לסכם באופן מילולי מה עושים בפועל: מחשבים את $latex T\left(b_{i}\right)$ לכל איבר בסיס $latex b_{i}$ ומציגים אותו כצירוף לינארי $latex T\left(b_{i}\right)=\sum\lambda_{j}c_{j}$. לוקחים את וקטור הקואורדינטות של התוצאה, והוא יהיה ה<strong>עמודה</strong> ה-$latex i$-ית במטריצה $latex \left[T\right]_{B}^{C}$. פשוט למדי.</p>
+
+<p>כעת נותרה רק עוד טענה מרכזית אחת שציינתי ואני רוצה להוכיח. נניח ש-$latex T:V\to W$ ו-$latex S:W\to U$ הן שתי טרנספורמציות לינאריות. אפשר <strong>להרכיב</strong> אותן – להגדיר טרנספורמציה חדשה $latex ST:V\to U$ שמוגדרת פשוט כ-$latex ST\left(v\right)=S\left(T\left(v\right)\right)$ (הפעלה של $latex T$ ואז הפעלה של $latex S$ על התוצאה). אם $latex B,C,D$ הם בסיסים של $latex V,W,U$ בהתאמה, אז מתקיים:</p>
+
+<p>$latex \left[ST\right]_{B}^{D}=\left[S\right]_{C}^{D}\cdot\left[T\right]_{B}^{C}$</p>
+
+<p>כלומר, הרכבת טרנספורמציות וכפל מטריצות זה אותו הדבר. אפשר היה לחשוש שההוכחה כאן תהיה טכנית ומסובכת, אבל למעשה היא טריוויאלית: פשוט צריך לשים לב לכך שמתקיים:</p>
+
+<p>$latex \left[S\right]_{C}^{D}\cdot\left[T\right]_{B}^{C}\cdot\left[v\right]_{B}=\left[S\right]_{C}^{D}\left[T\left(v\right)\right]_{C}=\left[S\left(T\left(v\right)\right)\right]_{D}=\left[ST\left(v\right)\right]_{D}$</p>
+
+<p>כלומר, $latex \left[S\right]_{C}^{D}\cdot\left[T\right]_{B}^{C}$ פועלת על $latex \left[v\right]_{B}$ בדיוק כמו $latex \left[ST\right]_{B}^{D}$, ולכן הן חייבות להיות אותה מטריצה (אם אתם עדיין לא משוכנעים שהן חייבות להיות זהות, נסו להוכיח פורמלית שלטרנספורמציה לינארית יש בדיוק מטריצה מייצגת אפשרית אחת לזוג בסיסים נתון). הסיבה שזה כל כך פשוט נובעת מכך שכפל מטריצות הוא אסוציאטיבי; זו טענה שדווקא דורשת הוכחה פורמלית ואני פשוט חמקתי ממנה (עם זאת, מעבר לכתיבה של סכום כפול אין שם שום דבר נורא).</p>
+
+<p>יש משהו יפה בכך שמשפט שאומר משהו כל כך לא מובן מאליו במבט ראשון הוא כל כך פשוט להוכחה; זה מראה שהמשהו הלא מובן מאליו הוא בעצם כן מובן מאליו, אחרי שמבינים את המובן מאליו.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2011/10/27/coordinates_transformations_matrices/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

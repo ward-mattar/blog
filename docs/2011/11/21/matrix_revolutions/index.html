@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>מטריצות הפיכות, ומה שלדטרמיננטות יש לומר בעניין | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="מטריצות הפיכות, ומה שלדטרמיננטות יש לומר בעניין" />
+<meta name="author" content="gadial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי את מושג הדטרמיננטה של מטריצה ריבועית $latex A$, שסימנתי כ-$latex \left A\right $. נתתי שלוש הגדרות שונות (אקסיומטית – הפונקציונל מולטי-לינארי על שורות $latex A$ היחיד שהוא גם מתחלף ומחזיר 1 על מטריצת היחידה), ישירה ($latex \left A\right =\sum_{\sigma}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{n}A_{i\sigma\left(i\right)}$) ורקורסיבית, וכעת נותרה לי רק תכונה מרכזית אחת של הדטרמיננטה לתאר – היא כפלית, כלומר $latex \left AB\right =\left A\right \left B\right $, כאשר $latex A,B$ מטריצות ריבועיות מאותו סדר (יש גם נוסחה בשם “נוסחת קושי-בינה” שלא אציג שמכלילה את הנוסחה הזו למקרה שבו $latex A,B$ אינן ריבועיות אך מכפלתן ריבועית). תכף אוכיח את התכונה אבל קודם כל בואו נשים לב למשהו מיידי שעולה ממנה." />
+<meta property="og:description" content="בפוסט הקודם הצגתי את מושג הדטרמיננטה של מטריצה ריבועית $latex A$, שסימנתי כ-$latex \left A\right $. נתתי שלוש הגדרות שונות (אקסיומטית – הפונקציונל מולטי-לינארי על שורות $latex A$ היחיד שהוא גם מתחלף ומחזיר 1 על מטריצת היחידה), ישירה ($latex \left A\right =\sum_{\sigma}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{n}A_{i\sigma\left(i\right)}$) ורקורסיבית, וכעת נותרה לי רק תכונה מרכזית אחת של הדטרמיננטה לתאר – היא כפלית, כלומר $latex \left AB\right =\left A\right \left B\right $, כאשר $latex A,B$ מטריצות ריבועיות מאותו סדר (יש גם נוסחה בשם “נוסחת קושי-בינה” שלא אציג שמכלילה את הנוסחה הזו למקרה שבו $latex A,B$ אינן ריבועיות אך מכפלתן ריבועית). תכף אוכיח את התכונה אבל קודם כל בואו נשים לב למשהו מיידי שעולה ממנה." />
+<link rel="canonical" href="http://localhost:4000/blog/2011/11/21/matrix_revolutions/" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/11/21/matrix_revolutions/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-11-21T15:32:33+02:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","datePublished":"2011-11-21T15:32:33+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/11/21/matrix_revolutions/"},"url":"http://localhost:4000/blog/2011/11/21/matrix_revolutions/","author":{"@type":"Person","name":"gadial"},"description":"בפוסט הקודם הצגתי את מושג הדטרמיננטה של מטריצה ריבועית $latex A$, שסימנתי כ-$latex \\left A\\right $. נתתי שלוש הגדרות שונות (אקסיומטית – הפונקציונל מולטי-לינארי על שורות $latex A$ היחיד שהוא גם מתחלף ומחזיר 1 על מטריצת היחידה), ישירה ($latex \\left A\\right =\\sum_{\\sigma}\\mbox{sgn}\\left(\\sigma\\right)\\prod_{i=1}^{n}A_{i\\sigma\\left(i\\right)}$) ורקורסיבית, וכעת נותרה לי רק תכונה מרכזית אחת של הדטרמיננטה לתאר – היא כפלית, כלומר $latex \\left AB\\right =\\left A\\right \\left B\\right $, כאשר $latex A,B$ מטריצות ריבועיות מאותו סדר (יש גם נוסחה בשם “נוסחת קושי-בינה” שלא אציג שמכלילה את הנוסחה הזו למקרה שבו $latex A,B$ אינן ריבועיות אך מכפלתן ריבועית). תכף אוכיח את התכונה אבל קודם כל בואו נשים לב למשהו מיידי שעולה ממנה.","headline":"מטריצות הפיכות, ומה שלדטרמיננטות יש לומר בעניין","dateModified":"2011-11-21T15:32:33+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js","https://www.gadial.net/wp-includes/js/xypic.js"]}
+    });
+  </script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">מטריצות הפיכות, ומה שלדטרמיננטות יש לומר בעניין</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-11-21T15:32:33+02:00" itemprop="datePublished">Nov 21, 2011
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">gadial</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <table>
+  <tbody>
+    <tr>
+      <td>בפוסט הקודם הצגתי את מושג הדטרמיננטה של מטריצה ריבועית $latex A$, שסימנתי כ-$latex \left</td>
+      <td>A\right</td>
+      <td>$. נתתי שלוש הגדרות שונות (אקסיומטית – הפונקציונל מולטי-לינארי על שורות $latex A$ היחיד שהוא גם מתחלף ומחזיר 1 על מטריצת היחידה), ישירה ($latex \left</td>
+      <td>A\right</td>
+      <td>=\sum_{\sigma}\mbox{sgn}\left(\sigma\right)\prod_{i=1}^{n}A_{i\sigma\left(i\right)}$) ורקורסיבית, וכעת נותרה לי רק תכונה מרכזית אחת של הדטרמיננטה לתאר – היא <strong>כפלית</strong>, כלומר $latex \left</td>
+      <td>AB\right</td>
+      <td>=\left</td>
+      <td>A\right</td>
+      <td>\left</td>
+      <td>B\right</td>
+      <td>$, כאשר $latex A,B$ מטריצות ריבועיות מאותו סדר (יש גם נוסחה בשם “נוסחת קושי-בינה” שלא אציג שמכלילה את הנוסחה הזו למקרה שבו $latex A,B$ אינן ריבועיות אך מכפלתן ריבועית). תכף אוכיח את התכונה אבל קודם כל בואו נשים לב למשהו מיידי שעולה ממנה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אמרתי פעם ש-$latex A$ היא מטריצה <strong>הפיכה</strong> אם קיימת מטריצה $latex A^{-1}$ כך ש-$latex AA^{-1}=A^{-1}A=I$, כאשר $latex I$ היא מטריצת היחידה (המטריצה שבה אברי האלכסון הראשי הם 1 ושאר האיברים הם 0). מהכפליות נובע ש-$latex 1=\left</td>
+      <td>I\right</td>
+      <td>=\left</td>
+      <td>AA^{-1}\right</td>
+      <td>=\left</td>
+      <td>A\right</td>
+      <td>\left</td>
+      <td>A^{-1}\right</td>
+      <td>$, כלומר $latex \left</td>
+      <td>A^{-1}\right</td>
+      <td>=\left</td>
+      <td>A\right</td>
+      <td>^{-1}$. זה אומר, בפרט, שאם מטריצה היא הפיכה, אז הדטרמיננטה שלה שונה מאפס. גם ההפך נכון – הדטרמיננטה של מטריצה שאינה הפיכה היא בהכרח אפס – אבל בואו נוכיח את הכפליות של דטרמיננטה לפני שנדבר על כך.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>על פניו נראה שההוכחה צריכה להיות טכנית להחריד, אבל התכונות היפות של הדטרמיננטה חוסכות לנו את רוב כאב הראש. אחת האבחנות שלנו בפוסט הקודם הייתה שכל פונקציה $latex f$ שהיא מולטי-לינארית ומתחלפת (עם $latex n$ משתנים שהם וקטורים ב-$latex \mathbb{F}^{n}$) נקבעת באופן יחיד על פי ערכה על וקטורי הבסיס הסטנדרטי, כלומר $latex f\left(e_{1},\dots,e_{n}\right)$. קצר יותר קונקרטית, ראינו (אם כי לא הצגתי זאת כך) ש-$latex f\left(v_{1},\dots,v_{n}\right)=\chi\left(v_{1},\dots,v_{n}\right)f\left(e_{1},\dots,e_{n}\right)$ כאשר $latex \chi\left(v_{1},\dots,v_{n}\right)$ הוא איזה סקלר שמחושב מתוך $latex v_{1},\dots,v_{n}$ באופן ש<strong>אינו תלוי ב-$latex f$</strong> אלא רק באופן שבו $latex v_{1},\dots,v_{n}$ מוצגים כצירופים לינאריים של אברי הבסיס הסטנדרטי. כעת, זכרו שהגדרנו דטרמיננטה בתור הפונקציה המולטי-לינארית המתחלפת שמחזירה 1 על וקטורי הבסיס הסטנדרטי, ולכן (אם מציבים $latex f=\det$ בנוסחה שכתבתי לפני רגע) $latex \det\left(v_{1},\dots,v_{n}\right)=\chi$. במילים אחרות, לכל פונקציה מולטי-לינארית מתחלפת $latex f$, אנו רואים ש-$latex f=f\left(e_{1},\dots,e_{n}\right)\cdot\det$. זה אומר ש-$latex \det$ פורשת את מרחב הפונקציות המולטי-לינאריות המתחלפות, ומקל עלינו מאוד את הצעד הבא.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>התעלול כעת הוא כדלהלן: אנו רוצים להוכיח כי $latex \det AB=\det A\det B$. בואו נקבע את $latex B$ ונגדיר פונקציונל מולטי-לינארי מתחלף $latex f\left(v_{1},\dots,v_{n}\right)=\det\left(v_{1}B,\dots,v_{n}B\right)$ ($latex v_{i}B$ מוגדר באמצעות כפל מטריצות רגיל – מכיוון שזה כפל של וקטור $latex 1\times n$ במטריצה $latex n\times n$ התוצאה היא שוב וקטור $latex 1\times n$). לא קשה לראות ש-$latex f$ הזה הוא באמת מולטי-לינארי מתחלף – זה נובע מתכונות $latex \det$ ומכך שכפל מטריצות הוא דיסטריביוטיבי. כעת, ראינו שכל פונקציונל מולטי-לינארי מתחלף הוא כפולה בסקלר של $latex \det$, כלומר $latex f\left(v_{1},\dots,v_{n}\right)=\det\left(v_{1},\dots,v_{n}\right)\cdot f\left(e_{1},\dots,e_{n}\right)=\det\left(v_{1},\dots,v_{n}\right)\det\left(e_{1}B,\dots,e_{n}B\right)$. כעת, מהו $latex e_{i}B$? לא קשה לראות מההגדרה שזוהי השורה ה-$latex i$ של $latex B$, ומכאן ש-$latex \det\left(e_{1}B,\dots,e_{n}B\right)=\left</td>
+      <td>B\right</td>
+      <td>$. כל מה שנשאר לעשות הוא להציב ב-$latex v_{1},\dots,v_{n}$ את שורות $latex A$ ולשים לב לכך ש-$latex v_{i}B$ הוא “השורה ה-$latex i$ במטריצה $latex AB$”, וקיבלנו ש-$latex \det AB=\det A\det B$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>עכשיו, בואו ניזכר רגע בדירוג מטריצות. אמרתי בשעתו שכל פעולה בדירוג – החלפה בין שורות, כפל שורה בסקלר או הוספת כפולה בסקלר של שורה אחת לשורה אחרת – ניתנת לתיאור באמצעות כפל במטריצה, וזוהי מטריצה הפיכה כי הפעולה הפיכה. אם $latex A$ היא מטריצה שאחרי דירוג מתקבלת ממנה $latex D$, זה אומר שקיימת $latex E$ הפיכה כך ש-$latex EA=D$. לכן גם $latex \left</td>
+      <td>E\right</td>
+      <td>\left</td>
+      <td>A\right</td>
+      <td>=\left</td>
+      <td>D\right</td>
+      <td>$, ולכן אם $latex \left</td>
+      <td>D\right</td>
+      <td>=0$ נובע שבהכרח $latex \left</td>
+      <td>A\right</td>
+      <td>=0$ שכן $latex \left</td>
+      <td>E\right</td>
+      <td>\ne0$, בהיותה מטריצה הפיכה. במילים אחרות, כדי להראות שכל מטריצה לא הפיכה $latex A$ היא בעלת דטרמיננטה אפס, מספיק להראות שאחרי דירוג אפשר להביא כל מטריצה ריבועית שאינה הפיכה למטריצה $latex D$ שיש בה שורת אפסים; מטריצה כזו בהכרח מקיימת $latex \left</td>
+      <td>D\right</td>
+      <td>=0$ (דרך פשוטה לראות זאת – מפתחים את הדטרמיננטה לפי שורת האפסים, ומקבלים שהדטרמיננטה היא סכום של איברים מהצורה אפס-כפול-משהו).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>הנימוק הוא פשוט ואלגנטי להפתיע. אנחנו יודעים שצורה מדורגת מצומצמת של מטריצה <strong>ריבועית</strong> יכולה להיות בדיוק אחד משניים: או מטריצת היחידה (1 על האלכסון הראשי ו-0 בכל מקום אחר) או מטריצה שכוללת שורות אפסים; זה נובע ישירות מההגדרה של מטריצה מצומצמת. אם אפשר לקבל מ-$latex A$ את מטריצת היחידה לאחר דירוג, זה אומר ש-$latex EA=I$ עבור $latex E$ כלשהי, ועל ידי כפל ב-$latex E^{-1}$ רואים ש-$latex A=E^{-1}$, מה שאומר ש-$latex A$ הפיכה וההופכית שלה היא $latex E$ (נקודה עדינה – אנו משתמשים כאן בכך שידוע ש-$latex E$ הפיכה; המשוואה $latex EA=I$ לבדה לא מוכיחה ש-$latex A$ הפיכה כי למטריצות עשוי להיות “הופכי חד צדדי”, כלומר בתיאוריה היה עשוי להתקיים ש-$latex AE\ne I$ ואז $latex A$ לא הייתה הפיכה).</p>
+
+<p>אני רוצה לדבר עכשיו על מה שהיה עבורי הדבר הכי קשה לעיכול, טכנית, כשלמדתי אלגברה לינארית – <strong>המטריצה הצמודה</strong> של $latex A$. למעשה, כבר כשמדברים על השם צריך להיזהר כי באלגברה לינארית השם הזה משמש לתיאור שתי מטריצות שונות לגמרי. בעברית קוראים לפעמים למטריצה שאדבר עליה עכשיו “מטריצה מצורפת” ובאנגלית קוראים לה Adjugate או classical adjoint. משסיימנו את ענייני הטרמינולוגיה, בפוסט הזה אני כן אדבר על מטריצה צמודה וחסל.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>מטריצה צמודה מכלילה במובן מסויים את המושג של מטריצה הופכית גם עבור מטריצות שאינן הפיכות. איזה מובן? אם $latex A$ היא מטריצה, אסמן את הצמודה שלה כ-$latex \mbox{adj}A$. המשפט שאוכיח עכשיו (“כלל קרמר”) הוא ש-$latex A\cdot\mbox{adj}A=\mbox{adj}A\cdot A=\left</td>
+      <td>A\right</td>
+      <td>I$. כלומר, אם $latex A$ הפיכה אז $latex A^{-1}=\frac{\mbox{adj}A}{\left</td>
+      <td>A\right</td>
+      <td>}$, ואם $latex A$ לא הפיכה אז $latex \mbox{adj}A$ מאפסת אותה.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>משזה נאמר, ההגדרה של $latex \mbox{adj}A$ היא לא הדבר הכי נעים בעולם ולא ברור כל כך איך הגיעו אליה (כנראה באמצעות הרבה חשיבה או הנדסה-לאחור של המשפט שאוכיח תכף). הכניסה ה-$latex i,j$ של $latex \mbox{adj}A$ שווה ל-$latex \left(-1\right)^{i+j}$ כפול המינור ה-$latex j,i$-י של $latex A$: $latex \left[\mbox{adj}A\right]_{ij}=\left(-1\right)^{i+j}\left</td>
+      <td>A^{ji}\right</td>
+      <td>$. כזכור, המינור ה-$latex j,i$-י הוא מה שמקבלים מ-$latex A$ כאשר מסירים את השורה ה-$latex j$ ואת העמודה ה-$latex i$ ולוקחים את הדטרמיננטה של היתר. שימו לב להיפוך שיש כאן – הכניסה בשורה ה-$latex i$ והעמודה ה-$latex j$ של הצמודה נקבעות על פי המינור של השורה ה-$latex j$ והעמודה ה-$latex i$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>טוב. אז איך נראה ש-$latex A\cdot\mbox{adj}A=\left</td>
+      <td>A\right</td>
+      <td>I$? בדם ואש, כמובן. אנחנו רוצים להראות ש-$latex \left[A\cdot\mbox{adj}A\right]_{ij}=\left</td>
+      <td>A\right</td>
+      <td>\delta_{ij}$ (הדלתא של קרונקר – אפס או אחד, בהתאם לשאלה אם $latex i\ne j$ או $latex i=j$). על פי ההגדרה, אנו יודעים ש:</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex \left[A\cdot\mbox{adj}A\right]_{ij}=\sum_{k=1}^{n}A_{ik}\left[\mbox{adj}A\right]_{kj}=\sum_{k=1}^{n}A_{ik}\left(-1\right)^{k+j}\left</td>
+      <td>A^{jk}\right</td>
+      <td>$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>אם $latex i=j$, אז הנוסחה $latex \sum_{k=1}^{n}A_{ik}\left(-1\right)^{k+i}\left</td>
+      <td>A^{ik}\right</td>
+      <td>$ היא בדיוק, אבל בדיוק, הנוסחה לפיתוח של $latex \left</td>
+      <td>A\right</td>
+      <td>$ על פי השורה ה-$latex i$. לכן אנו מקבלים $latex \sum_{k=1}^{n}A_{ik}\left(-1\right)^{k+i}\left</td>
+      <td>A^{ik}\right</td>
+      <td>=\left</td>
+      <td>A\right</td>
+      <td>$ במקרה זה. נותר לטפל במקרה שבו $latex i\ne j$. התעלול הוא כזה: בואו נדמיין מטריצה $latex B$ שזהה ל-$latex A$ בהכרח פרט לכך שהשורה ה-$latex j$ שלה שווה לשורה ה-$latex i$ שלה. שתי שורות שוות גוררות מייד $latex \det B=0$ (למה? ובכן, $latex \det$ היא פונקציה מתחלפת וזו בדיוק ההגדרה של מתחלפת…), ואפשר לכתוב את הפיתוח של $latex B$ לפי השורה ה-$latex j$ ולקבל:</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex 0=\left</td>
+      <td>B\right</td>
+      <td>=\sum_{k=1}^{n}\left(-1\right)^{j+k}B_{jk}\left</td>
+      <td>B^{jk}\right</td>
+      <td>$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>רק מה, אם אנו מסירים מ-$latex B$ את השורה ה-$latex j$, אנו מקבלים מטריצה שזהה ל-$latex A$, כלומר $latex \left</td>
+      <td>B^{jk}\right</td>
+      <td>=\left</td>
+      <td>A^{jk}\right</td>
+      <td>$; ובגלל שהשורה ה-$latex j$ של $latex B$ היא בדיוק השורה ה-$latex i$ של $latex A$, הרי ש-$latex B_{jk}=A_{ik}$. במילים אחרות –</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$latex 0=\sum_{k=1}^{n}\left(-1\right)^{j+k}B_{jk}\left</td>
+      <td>B^{jk}\right</td>
+      <td>=\sum_{k=1}^{n}\left(-1\right)^{j+k}A_{ik}\left</td>
+      <td>A^{jk}\right</td>
+      <td>=\left[A\cdot\mbox{adj}A\right]_{ij}$</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>וזה מסיים את ההוכחה הזו (עדיין צריך להוכיח ש-$latex \mbox{adj}A\cdot A=\left</td>
+      <td>A\right</td>
+      <td>I$ – הרעיון זהה).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>על פניו, עושה רושם שנוסחת קרמר נותנת לנו דרך מצויינת לחשב את ההופכי של מטריצה. אבל בפועל זו דרך גרועה למדי כי חישוב של כל כניסה של $latex \mbox{adj}A$ הוא תובעני – צריך לחשב דטרמיננטה. הדרך ה”נכונה” למצוא הופכי של מטריצה $latex A$ הוא פשוט לדרג אותה: אם $latex EA=I$ אז $latex E$ היא בדיוק ההופכית המבוקשת. כשרוצים לחשב דבר כזה בפועל באופן ידני, מה שבדרך כלל עושים הוא לדרג את $latex A$ ובו זמנית את אותן פעולות שמבצעים בדירוג של $latex A$, לבצע על מטריצת היחידה $latex I$ (כלומר – מתחילים כש-$latex A$ ו-$latex I$ כתובות האחת מעל השניה, ומתחילים לדרג את $latex A$ שלמעלה כשכל פעולה שמבצעים מבוצעת גם על המטריצה שלמטה). עם זאת, עדיין יש יתרונות לשימוש ב-$latex \mbox{adj}$ אם רוצים למצוא רק כניסה אחת מתוך המטריצה ההופכית (לפעמים זה כל מה שצריך) ובהקשרים תיאורטיים שונים ומשונים.</p>
+
+<p>בפוסט הבא נתחיל לקצור את הפירות של מה שדיברנו עליו כאן, ונדבר על מושג <strong>הערכים העצמיים</strong> של מטריצות – מושג שהעיסוק בו ידרוש פחות או יותר את כל מה שלמדנו עד כה על אלגברה לינארית.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2011/11/21/matrix_revolutions/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
