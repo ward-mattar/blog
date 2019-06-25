@@ -48,67 +48,67 @@ for i in range(tries):
 print(total / tries)
 [/python]
 
-כשהרצתי את הקוד לקח לו רגע לסיים ובסוף קיבלתי את התוצאה {::nomarkdown}\(535.3524\){:/nomarkdown}. בהרצה נוספת קיבלתי {::nomarkdown}\(540.0647\){:/nomarkdown}. זה כבר מעורר את החשד ש-10,000 זה לא מספיק ואולי עדיף 100,000 הרצות בשביל תוצאה מדויקת יותר. אז הרצתי גם 100,000 פעמים, זה לקח יותר זמן וקיבלתי {::nomarkdown}\(537.58746\){:/nomarkdown}. האם אפשר יותר מדויק, יותר מהר? ובכן, כן! אם נכניס לתמונה את תורת ההסתברות. כמו כן, כדי לפשט לעצמנו קצת את החיים נפסיק לדבר על המספר 103 דווקא ונדבר על מספר {::nomarkdown}\(N\){:/nomarkdown} כללי.
+כשהרצתי את הקוד לקח לו רגע לסיים ובסוף קיבלתי את התוצאה {% equation %}535.3524{% endequation %}. בהרצה נוספת קיבלתי {% equation %}540.0647{% endequation %}. זה כבר מעורר את החשד ש-10,000 זה לא מספיק ואולי עדיף 100,000 הרצות בשביל תוצאה מדויקת יותר. אז הרצתי גם 100,000 פעמים, זה לקח יותר זמן וקיבלתי {% equation %}537.58746{% endequation %}. האם אפשר יותר מדויק, יותר מהר? ובכן, כן! אם נכניס לתמונה את תורת ההסתברות. כמו כן, כדי לפשט לעצמנו קצת את החיים נפסיק לדבר על המספר 103 דווקא ונדבר על מספר {% equation %}N{% endequation %} כללי.
 
 יש לי <a href="https://gadial.net/2010/07/29/probability_intro/">פוסטים מפורטים יותר</a> בבלוג על תורת ההסתברות כך שלא אחזור על כל הפרטים כעת, אבל הנה הרעיון. כשאנחנו באים למדל משהו באמצעות תורת ההסתברות אנחנו קודם כל מגדירים <strong>מרחב מדגם</strong> שכולל את כל התוצאות האפשריות של ההגרלה שאנחנו מבצעים. במקרה הנוכחי אפשר לחשוב על הסיטואציה כאילו אנחנו מגרילים סדרה של זירות (שיכולה להיות סופית או אינסופית), כך שכל סדרה מסתיימת אחרי שכל זירה הופיעה לפחות פעם אחת. סדרה אינסופית מצביעה על כישלון - שיש זירה אחת לפחות שלא נראתה אף פעם. אפשר להראות שההסתברות של סדרה אינסופית שכזו היא אפס; זה לא אומר שאין סיכוי שהיא תופיע, רק שהסיכוי הזה <strong>זניח</strong> (הסבר מלא יותר יצטרך להיכנס לעובי הקורה הטכני של מרחבי הסתברות רציפים).
 
-עכשיו אפשר להגדיר על מרחב ההסתברות שלנו <strong>משתנה מקרי</strong>. משתנה מקרי זו פונקציה שלוקחת תוצאה ממרחב המדגם ומחזירה ערך מספרי כלשהו שהיא מסמלת - במקרה הזה, אפשר להתאים לכל סדרה פשוט את האורך שלה. נסמן את המשתנה המקרי הזה ב-{::nomarkdown}\(X\){:/nomarkdown}. עכשיו אפשר לשאול שאלה כמו "מה ההסתברות שאם נגריל סדרה כלשהי, הערך של {::nomarkdown}\(X\){:/nomarkdown} יהיה לפחות 17?". ואפשר גם לשאול מה יהיה הערך <strong>הממוצע</strong> של {::nomarkdown}\(X\){:/nomarkdown}. בתורת ההסתברות קוראים לערך ממוצע כזה <strong>התוחלת</strong> של {::nomarkdown}\(X\){:/nomarkdown}, מסמנים אותו ב-{::nomarkdown}\(E\left[X\right]\){:/nomarkdown} והוא מוגדר ככה: {::nomarkdown}\(E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right)\){:/nomarkdown}, כלומר - זה סכום משוקלל של כל הערכים {::nomarkdown}\(a\){:/nomarkdown} שהמשתנה המקרי עשוי להחזיר, כשהמשקל של כל {::nomarkdown}\(a\){:/nomarkdown} כזה הוא ההסתברות ש-{::nomarkdown}\(X\){:/nomarkdown} יחזיר אותו.
+עכשיו אפשר להגדיר על מרחב ההסתברות שלנו <strong>משתנה מקרי</strong>. משתנה מקרי זו פונקציה שלוקחת תוצאה ממרחב המדגם ומחזירה ערך מספרי כלשהו שהיא מסמלת - במקרה הזה, אפשר להתאים לכל סדרה פשוט את האורך שלה. נסמן את המשתנה המקרי הזה ב-{% equation %}X{% endequation %}. עכשיו אפשר לשאול שאלה כמו "מה ההסתברות שאם נגריל סדרה כלשהי, הערך של {% equation %}X{% endequation %} יהיה לפחות 17?". ואפשר גם לשאול מה יהיה הערך <strong>הממוצע</strong> של {% equation %}X{% endequation %}. בתורת ההסתברות קוראים לערך ממוצע כזה <strong>התוחלת</strong> של {% equation %}X{% endequation %}, מסמנים אותו ב-{% equation %}E\left[X\right]{% endequation %} והוא מוגדר ככה: {% equation %}E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right){% endequation %}, כלומר - זה סכום משוקלל של כל הערכים {% equation %}a{% endequation %} שהמשתנה המקרי עשוי להחזיר, כשהמשקל של כל {% equation %}a{% endequation %} כזה הוא ההסתברות ש-{% equation %}X{% endequation %} יחזיר אותו.
 
-מה שאני רוצה לעשות מכאן והלאה הוא לחשב את {::nomarkdown}\(E\left[X\right]\){:/nomarkdown} עבור בעיית הקופונים שלנו. לצורך כך אני אעזר בתכונה מועילה במיוחד: <strong>לינאריות התוחלת</strong>. מה שלינאריות התוחלת אומרת הוא פשוט מאוד: {::nomarkdown}\(E\left[X+Y\right]=E\left[X\right]+E\left[Y\right]\){:/nomarkdown}. כלומר: אם יש לנו שני משתנים מקריים, {::nomarkdown}\(X,Y\){:/nomarkdown}, ואנחנו בונים משתנה מקרי חדש שהוא סכום של שניהם (כלומר: לכל איבר במרחב המדגם הוא מפעיל את {::nomarkdown}\(X,Y\){:/nomarkdown} על האיבר הזה, מקבל תוצאות ומחבר אותן) אז התוחלת של המשתנה החדש תהיה הסכום של התוחלות של המשתנים. ההוכחה של לינאריות התוחלת לא קשה, אבל לא אציג אותה כאן.
+מה שאני רוצה לעשות מכאן והלאה הוא לחשב את {% equation %}E\left[X\right]{% endequation %} עבור בעיית הקופונים שלנו. לצורך כך אני אעזר בתכונה מועילה במיוחד: <strong>לינאריות התוחלת</strong>. מה שלינאריות התוחלת אומרת הוא פשוט מאוד: {% equation %}E\left[X+Y\right]=E\left[X\right]+E\left[Y\right]{% endequation %}. כלומר: אם יש לנו שני משתנים מקריים, {% equation %}X,Y{% endequation %}, ואנחנו בונים משתנה מקרי חדש שהוא סכום של שניהם (כלומר: לכל איבר במרחב המדגם הוא מפעיל את {% equation %}X,Y{% endequation %} על האיבר הזה, מקבל תוצאות ומחבר אותן) אז התוחלת של המשתנה החדש תהיה הסכום של התוחלות של המשתנים. ההוכחה של לינאריות התוחלת לא קשה, אבל לא אציג אותה כאן.
 
-איך זה עוזר לנו? ראשית, אם זה עובד לשני משתנים, זה עובד לכל מספר סופי של משתנים: אם {::nomarkdown}\(X=X_{1}+X_{2}+\dots+X_{N}\){:/nomarkdown} אז {::nomarkdown}\(E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]\){:/nomarkdown}. שנית, אני טוען שאת ה-{::nomarkdown}\(X\){:/nomarkdown} שלנו של בעיית הקופונים אכן אפשר להציג בתור סכום שכזה. הרעיון? המשתנה {::nomarkdown}\(X_{i}\){:/nomarkdown} סופר את מספר הסיבובים שנדרשו כדי להעלות את מספר הזירות שראינו עד כה מ-{::nomarkdown}\(i-1\){:/nomarkdown} אל {::nomarkdown}\(i\){:/nomarkdown}.
+איך זה עוזר לנו? ראשית, אם זה עובד לשני משתנים, זה עובד לכל מספר סופי של משתנים: אם {% equation %}X=X_{1}+X_{2}+\dots+X_{N}{% endequation %} אז {% equation %}E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]{% endequation %}. שנית, אני טוען שאת ה-{% equation %}X{% endequation %} שלנו של בעיית הקופונים אכן אפשר להציג בתור סכום שכזה. הרעיון? המשתנה {% equation %}X_{i}{% endequation %} סופר את מספר הסיבובים שנדרשו כדי להעלות את מספר הזירות שראינו עד כה מ-{% equation %}i-1{% endequation %} אל {% equation %}i{% endequation %}.
 
-בצורה הזו ברור ש-{::nomarkdown}\(X\){:/nomarkdown} הוא אכן הסכום המבוקש: {::nomarkdown}\(X\){:/nomarkdown} הוא מספר הסיבובים הכולל שנדרש כדי להעלות את מספר הזירות שראינו מ-0 אל {::nomarkdown}\(N\){:/nomarkdown}; זה שווה לזמן שנדרש כדי לעלות מ-0 אל 1, ועוד הזמן שנדרש לעלות מ-1 אל 2 וכן הלאה עד אשר הגענו מ-{::nomarkdown}\(N-1\){:/nomarkdown} אל {::nomarkdown}\(N\){:/nomarkdown}.
+בצורה הזו ברור ש-{% equation %}X{% endequation %} הוא אכן הסכום המבוקש: {% equation %}X{% endequation %} הוא מספר הסיבובים הכולל שנדרש כדי להעלות את מספר הזירות שראינו מ-0 אל {% equation %}N{% endequation %}; זה שווה לזמן שנדרש כדי לעלות מ-0 אל 1, ועוד הזמן שנדרש לעלות מ-1 אל 2 וכן הלאה עד אשר הגענו מ-{% equation %}N-1{% endequation %} אל {% equation %}N{% endequation %}.
 
-כל מה שנותר לעשות הוא לחשב את {::nomarkdown}\(E\left[X_{i}\right]\){:/nomarkdown} - תוחלת הזמן שנדרשת כדי להעלות את מספר הזירות שראינו כבר מ-{::nomarkdown}\(i-1\){:/nomarkdown} אל {::nomarkdown}\(i\){:/nomarkdown}. אלא שאת זה קל לעשות כי {::nomarkdown}\(X_{i}\){:/nomarkdown} הוא <strong>משתנה גאומטרי</strong>, וזה מושג מוכר ואהוב מתורת ההסתברות. משתנה גאומטרי מתעסק בשאלה "אם מטילים שוב ושוב את אותה הקוביה, כמה זמן יעבור עד שנקבל 1"? באופן כללי יותר, משתנה גאומטרי מדבר על הסיטואציה שבה יש ניסוי עם הסתברות {::nomarkdown}\(p\){:/nomarkdown} להצליח, ואנחנו חוזרים עליו שוב ושוב עד אשר הוא מצליח וסופרים כמה נסיונות נדרשו לנו.
+כל מה שנותר לעשות הוא לחשב את {% equation %}E\left[X_{i}\right]{% endequation %} - תוחלת הזמן שנדרשת כדי להעלות את מספר הזירות שראינו כבר מ-{% equation %}i-1{% endequation %} אל {% equation %}i{% endequation %}. אלא שאת זה קל לעשות כי {% equation %}X_{i}{% endequation %} הוא <strong>משתנה גאומטרי</strong>, וזה מושג מוכר ואהוב מתורת ההסתברות. משתנה גאומטרי מתעסק בשאלה "אם מטילים שוב ושוב את אותה הקוביה, כמה זמן יעבור עד שנקבל 1"? באופן כללי יותר, משתנה גאומטרי מדבר על הסיטואציה שבה יש ניסוי עם הסתברות {% equation %}p{% endequation %} להצליח, ואנחנו חוזרים עליו שוב ושוב עד אשר הוא מצליח וסופרים כמה נסיונות נדרשו לנו.
 
-את התוחלת של הדבר הזה אפשר לחשב בעזרת הנוסחה {::nomarkdown}\(E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right)\){:/nomarkdown} והיכרות כלשהי עם סכומים אינסופיים. ההוכחה תהיה קצת טכנית ואפשר לדלג עליה מבלי לפגוע בהמשך הפוסט.
+את התוחלת של הדבר הזה אפשר לחשב בעזרת הנוסחה {% equation %}E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right){% endequation %} והיכרות כלשהי עם סכומים אינסופיים. ההוכחה תהיה קצת טכנית ואפשר לדלג עליה מבלי לפגוע בהמשך הפוסט.
 
-{::nomarkdown}\(\text{P}\left(X=1\right)\){:/nomarkdown} הוא {::nomarkdown}\(p\){:/nomarkdown} (ההסתברות שנצליח בניסוי הראשון).
+{% equation %}\text{P}\left(X=1\right){% endequation %} הוא {% equation %}p{% endequation %} (ההסתברות שנצליח בניסוי הראשון).
 
-{::nomarkdown}\(\text{P}\left(X=2\right)\){:/nomarkdown} הוא {::nomarkdown}\(\left(1-p\right)p\){:/nomarkdown} (ההסתברות <strong>שניכשל</strong> בניסוי הראשון - זה ה-{::nomarkdown}\(\left(1-p\right)\){:/nomarkdown} - כפול ההסתברות שנצליח בניסוי השני).
+{% equation %}\text{P}\left(X=2\right){% endequation %} הוא {% equation %}\left(1-p\right)p{% endequation %} (ההסתברות <strong>שניכשל</strong> בניסוי הראשון - זה ה-{% equation %}\left(1-p\right){% endequation %} - כפול ההסתברות שנצליח בניסוי השני).
 
-{::nomarkdown}\(\text{P}\left(X=3\right)\){:/nomarkdown} הוא {::nomarkdown}\(\left(1-p\right)^{2}p\){:/nomarkdown} ומכאן כבר אפשר לראות את הכיוון הכללי:
+{% equation %}\text{P}\left(X=3\right){% endequation %} הוא {% equation %}\left(1-p\right)^{2}p{% endequation %} ומכאן כבר אפשר לראות את הכיוון הכללי:
 
-{::nomarkdown}\(E\left[X\right]=\sum_{n=1}^{\infty}n\text{P}\left[X=n\right]=\sum_{n=1}^{\infty}n\cdot p\cdot\left(1-p\right)^{n-1}=p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}\){:/nomarkdown}
+{% equation %}E\left[X\right]=\sum_{n=1}^{\infty}n\text{P}\left[X=n\right]=\sum_{n=1}^{\infty}n\cdot p\cdot\left(1-p\right)^{n-1}=p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}{% endequation %}
 
 וכעת מגיע להטוט לא טריוויאלי. בואו נכתוב שוב את הטור שיש לנו, אבל עם סימונים קצת שונים:
 
-{::nomarkdown}\(\sum_{n=1}^{\infty}nx^{n-1}\){:/nomarkdown}
+{% equation %}\sum_{n=1}^{\infty}nx^{n-1}{% endequation %}
 
-אלו מכם שמכירים חדו"א אולי מזהים שהאיבר שנמצא בתוך הטור נראה כמו <strong>נגזרת</strong> לפי {::nomarkdown}\(x\){:/nomarkdown} של פונקציה. כלומר, אפשר לכתוב
+אלו מכם שמכירים חדו"א אולי מזהים שהאיבר שנמצא בתוך הטור נראה כמו <strong>נגזרת</strong> לפי {% equation %}x{% endequation %} של פונקציה. כלומר, אפשר לכתוב
 
-{::nomarkdown}\(\sum_{n=1}^{\infty}nx^{n-1}=\sum_{n=1}^{\infty}\left(x^{n}\right)^{\prime}=\left(\sum_{n=1}^{\infty}x^{n}\right)^{\prime}\){:/nomarkdown}
+{% equation %}\sum_{n=1}^{\infty}nx^{n-1}=\sum_{n=1}^{\infty}\left(x^{n}\right)^{\prime}=\left(\sum_{n=1}^{\infty}x^{n}\right)^{\prime}{% endequation %}
 
 המעבר האחרון, שבו "הוצאתי את הנגזרת החוצה מהסכום" הוא לא טריוויאלי ודורש הצדקות בחדו"א - אבל במקרה הזה, זה עובד. עכשיו מה שקיבלנו בתוך הסכום הוא <strong>טור גאומטרי</strong> בסיסי שאנחנו יודעים את הנוסחה שלו:
 
-{::nomarkdown}\(\sum_{n=1}^{\infty}x^{n}=\frac{x}{1-x}\){:/nomarkdown}
+{% equation %}\sum_{n=1}^{\infty}x^{n}=\frac{x}{1-x}{% endequation %}
 
-הנוסחה הזו עובדת רק עבור {::nomarkdown}\(\left\|x\right\|&lt;1\){:/nomarkdown}, אבל מכיוון שנציב {::nomarkdown}\(x=1-p\){:/nomarkdown} ואנחנו מניחים ש-{::nomarkdown}\(p&gt;0\){:/nomarkdown} זו לא בעיה.
+הנוסחה הזו עובדת רק עבור {% equation %}\left|x\right|&lt;1{% endequation %}, אבל מכיוון שנציב {% equation %}x=1-p{% endequation %} ואנחנו מניחים ש-{% equation %}p&gt;0{% endequation %} זו לא בעיה.
 
-לבסוף, צריך עדיין <strong>לגזור</strong> את {::nomarkdown}\(\frac{x}{1-x}\){:/nomarkdown}. הנגזרת יוצאת {::nomarkdown}\(\frac{\left(1-x\right)+x}{\left(1-x\right)^{2}}=\frac{1}{\left(1-x\right)^{2}}\){:/nomarkdown}, וכשנציב {::nomarkdown}\(x=1-p\){:/nomarkdown} חזרה נקבל
+לבסוף, צריך עדיין <strong>לגזור</strong> את {% equation %}\frac{x}{1-x}{% endequation %}. הנגזרת יוצאת {% equation %}\frac{\left(1-x\right)+x}{\left(1-x\right)^{2}}=\frac{1}{\left(1-x\right)^{2}}{% endequation %}, וכשנציב {% equation %}x=1-p{% endequation %} חזרה נקבל
 
-{::nomarkdown}\(p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}=\frac{p}{\left(1-\left(1-p\right)\right)^{2}}=\frac{p}{p^{2}}=\frac{1}{p}\){:/nomarkdown}
+{% equation %}p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}=\frac{p}{\left(1-\left(1-p\right)\right)^{2}}=\frac{p}{p^{2}}=\frac{1}{p}{% endequation %}
 
-וכעת אפשר לחזור אל בעיית הקופונים שלנו. ראינו כבר ש-{::nomarkdown}\(E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]\){:/nomarkdown}. נשאר רק להבין - לכל {::nomarkdown}\(X_{i}\){:/nomarkdown}, מהו {::nomarkdown}\(p\){:/nomarkdown} שלו? מה ההסתברות להצליח?
+וכעת אפשר לחזור אל בעיית הקופונים שלנו. ראינו כבר ש-{% equation %}E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]{% endequation %}. נשאר רק להבין - לכל {% equation %}X_{i}{% endequation %}, מהו {% equation %}p{% endequation %} שלו? מה ההסתברות להצליח?
 
-הניסוי של {::nomarkdown}\(X_{i}\){:/nomarkdown} מצליח אם אנחנו מעלים בגורל זירה חדשה שטרם עלתה בגורל. עד כה עלו בגורל {::nomarkdown}\(i-1\){:/nomarkdown} זירות, מה שאומר שנותרו עוד {::nomarkdown}\(N-\left(i-1\right)\){:/nomarkdown} זירות. מספר הזירות הכולל הוא {::nomarkdown}\(N\){:/nomarkdown}, ולכן ההסתברות להעלות בגורל את אחת מהזירות החדשות היא {::nomarkdown}\(\frac{N-\left(i-1\right)}{N}\){:/nomarkdown}. כלומר:
+הניסוי של {% equation %}X_{i}{% endequation %} מצליח אם אנחנו מעלים בגורל זירה חדשה שטרם עלתה בגורל. עד כה עלו בגורל {% equation %}i-1{% endequation %} זירות, מה שאומר שנותרו עוד {% equation %}N-\left(i-1\right){% endequation %} זירות. מספר הזירות הכולל הוא {% equation %}N{% endequation %}, ולכן ההסתברות להעלות בגורל את אחת מהזירות החדשות היא {% equation %}\frac{N-\left(i-1\right)}{N}{% endequation %}. כלומר:
 
-{::nomarkdown}\(E\left[X_{i}\right]=\frac{1}{p_{i}}=\frac{N}{N-\left(i-1\right)}\){:/nomarkdown}
+{% equation %}E\left[X_{i}\right]=\frac{1}{p_{i}}=\frac{N}{N-\left(i-1\right)}{% endequation %}
 
 כלומר:
 
-{::nomarkdown}\(E\left[X_{1}\right]=\frac{N}{N}=1\){:/nomarkdown}
+{% equation %}E\left[X_{1}\right]=\frac{N}{N}=1{% endequation %}
 
-{::nomarkdown}\(E\left[X_{2}\right]=\frac{N}{N-1}\){:/nomarkdown}
+{% equation %}E\left[X_{2}\right]=\frac{N}{N-1}{% endequation %}
 
-וכן הלאה עד {::nomarkdown}\(E\left[X_{N}\right]=\frac{N}{N-\left(N-1\right)}=\frac{N}{1}\){:/nomarkdown}.
+וכן הלאה עד {% equation %}E\left[X_{N}\right]=\frac{N}{N-\left(N-1\right)}=\frac{N}{1}{% endequation %}.
 
 וקיבלנו:
 
-{::nomarkdown}\(E\left[X\right]=\sum_{i=0}^{N-1}\frac{N}{N-i}=N\sum_{i=0}^{N-1}\frac{1}{N-i}=N\sum_{i=1}^{N}\frac{1}{i}\){:/nomarkdown}
+{% equation %}E\left[X\right]=\sum_{i=0}^{N-1}\frac{N}{N-i}=N\sum_{i=0}^{N-1}\frac{1}{N-i}=N\sum_{i=1}^{N}\frac{1}{i}{% endequation %}
 
-וכאן אנחנו פוגשים חברים ותיקים (של חלקנו...). הסכום {::nomarkdown}\(\sum_{i=1}^{N}\frac{1}{i}\){:/nomarkdown} (ובסימון אחר: {::nomarkdown}\(1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{N}\){:/nomarkdown}) הוא כל כך חשוב שהוא זוכה לאות מיוחדת משלו: {::nomarkdown}\(H_{N}=\sum_{i=1}^{N}\frac{1}{i}\){:/nomarkdown}, והמספר הזה נקרא <strong>המספר ההרמוני</strong> ה-{::nomarkdown}\(N\){:/nomarkdown}-י. אלו מספרים מוכרים ואהובים שצצים במתמטיקה בשלל הזדמנויות, כך שלומר שפתרון בעיית הקופונים הוא שתוחלת הזמן עבור {::nomarkdown}\(N\){:/nomarkdown} קופונים היא {::nomarkdown}\(N\cdot H_{N}\){:/nomarkdown} היא פתרון קביל בהחלט.
+וכאן אנחנו פוגשים חברים ותיקים (של חלקנו...). הסכום {% equation %}\sum_{i=1}^{N}\frac{1}{i}{% endequation %} (ובסימון אחר: {% equation %}1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{N}{% endequation %}) הוא כל כך חשוב שהוא זוכה לאות מיוחדת משלו: {% equation %}H_{N}=\sum_{i=1}^{N}\frac{1}{i}{% endequation %}, והמספר הזה נקרא <strong>המספר ההרמוני</strong> ה-{% equation %}N{% endequation %}-י. אלו מספרים מוכרים ואהובים שצצים במתמטיקה בשלל הזדמנויות, כך שלומר שפתרון בעיית הקופונים הוא שתוחלת הזמן עבור {% equation %}N{% endequation %} קופונים היא {% equation %}N\cdot H_{N}{% endequation %} היא פתרון קביל בהחלט.
 
 אבל בואו ננסה לשכנע אתכם עוד קצת שזה אחלה פתרון.
 
@@ -117,25 +117,25 @@ print(total / tries)
  	<li>לוקח לו הרבה זמן לרוץ, יחסית.</li>
  	<li>התוצאה שהוא מחזיר היא <strong>קירוב</strong> של התוחלת, לא הערך המדויק שלה.</li>
 </ol>
-הנוסחה שמצאתי עכשיו, {::nomarkdown}\(N\cdot H_{N}\){:/nomarkdown}, לא נותנת קירוב של התוחלת אלא את התוחלת עצמה, במדויק; אבל עוד יותר חשוב מכך, אפשר לחשב אותה <strong>מהר</strong>, בשורה אחת של פייתון:
+הנוסחה שמצאתי עכשיו, {% equation %}N\cdot H_{N}{% endequation %}, לא נותנת קירוב של התוחלת אלא את התוחלת עצמה, במדויק; אבל עוד יותר חשוב מכך, אפשר לחשב אותה <strong>מהר</strong>, בשורה אחת של פייתון:
 
 [python]
 print(N * sum(1 / k for k in range(1,N+1)))
 [/python]
 
-השורה הזו מחזירה את המספר {::nomarkdown}\(537.3294902186476\){:/nomarkdown} שהוא התוחלת ה"נכונה"; אפשר לראות שתוצאת הניסוי שעשיתי קודם יצאה קרובה מאוד (537 ומשהו) אבל בשביל זה הייתי צריך להקפיץ את מספר החזרות על הניסוי מ-10,000 (שלא נתן משהו עד כדי כך מדויק) אל 100,000 וזה לקח הרבה יותר זמן. הפתרון המדויק שמצאתי הוא <strong>יעיל יותר לחישוב</strong> ולכן טוב יותר. אני מדגיש את הנקודה הזו כי הפתרון הזה הוא לא "נוסחה סגורה" - יש בו סכום שתלוי ב-{::nomarkdown}\(N\){:/nomarkdown}, ועשויה להיות רתיעה מסכומים כאלו למי שרגילים לתרגילים מקומבינטוריקה בסיסית שבהם לתת נוסחה שכזו לפעמים גורם להורדת נקודות כי זה לא פתרון פשוט "מספיק". ובכן, אם אתם סובלים (כמו שאני סבלתי) מטראומה כזו מסכומים - אל! סכומים יכולים להיות מאוד מועילים לפעמים (ודוגמא טובה מאוד היא <strong>עקרון ההכלה וההפרדה</strong> <a href="https://gadial.net/2011/12/31/inclusion_exclusion_principle/">שכתבתי עליו כבר פוסט</a>, ומאפשר להמיר בעיות חישוביות קשות למדי במשימות חישוביות הרבה יותר קלות למרות שהוא מתבסס על סכום).
+השורה הזו מחזירה את המספר {% equation %}537.3294902186476{% endequation %} שהוא התוחלת ה"נכונה"; אפשר לראות שתוצאת הניסוי שעשיתי קודם יצאה קרובה מאוד (537 ומשהו) אבל בשביל זה הייתי צריך להקפיץ את מספר החזרות על הניסוי מ-10,000 (שלא נתן משהו עד כדי כך מדויק) אל 100,000 וזה לקח הרבה יותר זמן. הפתרון המדויק שמצאתי הוא <strong>יעיל יותר לחישוב</strong> ולכן טוב יותר. אני מדגיש את הנקודה הזו כי הפתרון הזה הוא לא "נוסחה סגורה" - יש בו סכום שתלוי ב-{% equation %}N{% endequation %}, ועשויה להיות רתיעה מסכומים כאלו למי שרגילים לתרגילים מקומבינטוריקה בסיסית שבהם לתת נוסחה שכזו לפעמים גורם להורדת נקודות כי זה לא פתרון פשוט "מספיק". ובכן, אם אתם סובלים (כמו שאני סבלתי) מטראומה כזו מסכומים - אל! סכומים יכולים להיות מאוד מועילים לפעמים (ודוגמא טובה מאוד היא <strong>עקרון ההכלה וההפרדה</strong> <a href="https://gadial.net/2011/12/31/inclusion_exclusion_principle/">שכתבתי עליו כבר פוסט</a>, ומאפשר להמיר בעיות חישוביות קשות למדי במשימות חישוביות הרבה יותר קלות למרות שהוא מתבסס על סכום).
 
 אבל יש לנוסחה שהגענו אליה עוד יתרון - קיים לה <strong>קירוב</strong> טוב מאוד, שנובע מכמה טוב אנחנו מבינים מספרים הרמוניים. אפשר להראות (אין לי מושג איך - צריך יהיה לכתוב על זה פעם פוסט!) שמספרים הרמוניים מתנהגים "בערך" כמו הלוגריתם הטבעי. קצת יותר בפירוט:
 
-{::nomarkdown}\(H_{N}\approx\ln N+\gamma+\frac{1}{2N}\){:/nomarkdown}
+{% equation %}H_{N}\approx\ln N+\gamma+\frac{1}{2N}{% endequation %}
 
-כאשר {::nomarkdown}\(\gamma=0.5772156649\dots\){:/nomarkdown} נקרא <strong>קבוע אוילר-מסקרוני</strong> והוא מספר מעניין בפני עצמו (למשל: עד היום אנחנו לא יודעים אם הוא רציונלי או לא).
+כאשר {% equation %}\gamma=0.5772156649\dots{% endequation %} נקרא <strong>קבוע אוילר-מסקרוני</strong> והוא מספר מעניין בפני עצמו (למשל: עד היום אנחנו לא יודעים אם הוא רציונלי או לא).
 
-אם נכפיל את הנוסחה הזו ב-{::nomarkdown}\(N\){:/nomarkdown}, נקבל את הקירוב הבא לבעיית הקופונים:
+אם נכפיל את הנוסחה הזו ב-{% equation %}N{% endequation %}, נקבל את הקירוב הבא לבעיית הקופונים:
 
-{::nomarkdown}\(N\ln N+\gamma N+\frac{1}{2}\){:/nomarkdown}
+{% equation %}N\ln N+\gamma N+\frac{1}{2}{% endequation %}
 
-וזו נוסחה ש<strong>מאוד קל</strong> לחשב ביעילות, גם אם הערך של {::nomarkdown}\(N\){:/nomarkdown} הוא אדיר (בן מאות ספרות - מה שמונע לגמרי חישוב של הסכום {::nomarkdown}\(1+\frac{1}{2}+\dots+\frac{1}{N}\){:/nomarkdown}). ככל ש-{::nomarkdown}\(N\){:/nomarkdown} גדול יותר כך הקירוב יהיה טוב יותר; עד כמה הוא טוב עבור {::nomarkdown}\(N=103\){:/nomarkdown}? ובכן, הבה וננסה:
+וזו נוסחה ש<strong>מאוד קל</strong> לחשב ביעילות, גם אם הערך של {% equation %}N{% endequation %} הוא אדיר (בן מאות ספרות - מה שמונע לגמרי חישוב של הסכום {% equation %}1+\frac{1}{2}+\dots+\frac{1}{N}{% endequation %}). ככל ש-{% equation %}N{% endequation %} גדול יותר כך הקירוב יהיה טוב יותר; עד כמה הוא טוב עבור {% equation %}N=103{% endequation %}? ובכן, הבה וננסה:
 
 [python]
 import numpy
@@ -143,6 +143,6 @@ gamma = 0.5772156649
 print(N * numpy.log(N) + gamma * N + 1/2)
 [/python]
 
-הקוד הזה, עבור {::nomarkdown}\(N=103\){:/nomarkdown}, מניב את התוצאה {::nomarkdown}\(537.3302992723525\){:/nomarkdown} שהיא קרובה להפליא אל התוצאה המדויקת, והחישוב שלה כמובן מהיר יותר. אם אני אנסה להריץ את החישובים הקודמים עבור {::nomarkdown}\(N=1000000000000000\){:/nomarkdown} אני אכשל בצורה מזעזעת (הקוד ירוץ וירוץ ולעולם לא יסיים) אבל עם הקירוב הזה אני עדיין אקבל תוצאה תוך חלקיק שניה - ואני יודע שזו תהיה תוצאה שלא אוכל להבדיל בינה ובין התוצאה ה"אמיתית".
+הקוד הזה, עבור {% equation %}N=103{% endequation %}, מניב את התוצאה {% equation %}537.3302992723525{% endequation %} שהיא קרובה להפליא אל התוצאה המדויקת, והחישוב שלה כמובן מהיר יותר. אם אני אנסה להריץ את החישובים הקודמים עבור {% equation %}N=1000000000000000{% endequation %} אני אכשל בצורה מזעזעת (הקוד ירוץ וירוץ ולעולם לא יסיים) אבל עם הקירוב הזה אני עדיין אקבל תוצאה תוך חלקיק שניה - ואני יודע שזו תהיה תוצאה שלא אוכל להבדיל בינה ובין התוצאה ה"אמיתית".
 
 זה סוגר את בעיית הקופונים הבסיסית, אבל כמובן שמכאן והלאה המתמטיקאים משתוללים עם שלל וריאציות: מה אם לא כל קופון הוא בעל אותה הסתברות להיבחר? מה אם אנחנו לא קונים קופונים אלא מנסים להשלים את כל המדבקות באלבום של "חבורת הזבל" (כן! היה משהו כזה!) ובכל חבילת מדבקות שאנחנו קונים יש שש מדבקות ולא רק אחת? וכן הלאה וכן הלאה. אבל אני לא אתעסק בזה עכשיו ומקווה שתסלחו לי; יש לי 537 סיבובים של Super Smash Bros. Ultimate לשחק בהם.

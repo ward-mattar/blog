@@ -35,7 +35,7 @@ CR בא לתאר את הפעולה של החזרת המחזיק לתחילת ה�
 עכשיו, קצת מפתה לתת פתרון בן שורה אחת, אז אעשה את זה, אבל הוא יהיה גרוע ואחר כך אתן פתרון טוב יותר:
 
 [ruby]
-100.times{\|n\| print &quot;\r&quot; + &quot; &quot;*n + &quot;Hello world!&quot;; sleep(0.1)}
+100.times{|n| print &quot;\r&quot; + &quot; &quot;*n + &quot;Hello world!&quot;; sleep(0.1)}
 [/ruby]
 
 מה הולך כאן? פשוט מאוד: אני כותב שורה שמתחילה ב-r\ (ולכן סמן הכתיבה חוזר לתחילת השורה אם לא היה שם כבר), ואז n רווחים (כש-n מתחיל מ-0), ואז את המחרוזת שאני רוצה לצייר. זה יצור את אשליית התמונה הרצויה. אז למה הקוד גרוע? ראשית, כשהוא מסיים את הריצה שלו אין ירידת שורה, ואז ה-prompt (הדבר הזה שבו מזינים טקסט בטרמינל) מופיע באותה שורה יחד עם ההודעה וזה פשוט נראה רע. שנית, הטקסט זז ימינה עוד ועוד אבל הוא בחיים לא יחזור שמאלה ויתחיל מחדש, כך שיש גבול עד כמה אפשר להזיז אותו, וזה גם נראה קצת טיפשי. לבסוף, הקוד הזה עמוס במספרי קסם וכבר אמרתי שהם דבר רע. אז הנה קוד שפותר את הבעיות הללו:
@@ -46,7 +46,7 @@ TEXT = &quot;Hello world!&quot;
 TOTAL_TIME = 10
 SCREEN_WIDTH = 50
 
-(TOTAL_TIME*FRAMES_PER_SECOND).times do \|n\|
+(TOTAL_TIME*FRAMES_PER_SECOND).times do |n|
   print &quot;\r&quot; + &quot; &quot;*(SCREEN_WIDTH+TEXT.length) if n % SCREEN_WIDTH == 0
   print &quot;\r&quot; + &quot; &quot;*(n % SCREEN_WIDTH) + TEXT
   sleep(1.0 / FRAMES_PER_SECOND)

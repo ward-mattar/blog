@@ -14,31 +14,31 @@ tags:
 
 וכעת נעבור לבעיה אחרת, שהיא גם כן בגבול שבין אינפורמציה קוונטית וחישוב קוונטי. יש לנו את אליס ובוב, כרגיל, אבל הם מרוחקים זה מזו. אין להם ערוץ תקשורת קוונטי, אבל כן יש להם חיבור אינטרנט. בידי אליס מצוי קיוביט במצב כללי כלשהו. האם היא מסוגלת להעביר את הקיוביט הזה לבוב? כמובן, את היצור הפיזיקלי שממדל את הקיוביט אליס לא תוכל להעביר - אין לה, כאמור, ערוץ להעברת אינפורמציה קוונטית - אבל האם היא מסוגלת לעשות קסם בעזרת ערוץ התקשורת הרגיל (שיודע לשלוח רק ביטים) שאחריו יהיה בידי בוב את המצב הקוונטי של אליס?
 
-ובכן, לא, לא בלי שפן נוסף שאפשר לשלוף מהכובע - והשפן הנוסף הזה הוא משהו שאליס ובוב שיתפו ביניהם לפני שנפרדו - זוג קיוביטים שזורים, במצב {::nomarkdown}\( \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}\){:/nomarkdown} החביב עלינו. אני טוען שבעזרת הזוג הזה, וערוץ התקשורת הרגיל ביניהם, אליס יכולה לשלוח לבוב מצב קוונטי {::nomarkdown}\( \left\|\psi\right\rangle \){:/nomarkdown} שרירותי לגמרי. איך זה לא סותר את משפט ה-No Cloning? פשוט מאוד - כחלק מתהליך השליחה הזה אליס תתעלל בקיוביט שלה בצורה שתגרום ל<strong>הרס</strong> המצב הקוונטי אצלה.
+ובכן, לא, לא בלי שפן נוסף שאפשר לשלוף מהכובע - והשפן הנוסף הזה הוא משהו שאליס ובוב שיתפו ביניהם לפני שנפרדו - זוג קיוביטים שזורים, במצב {% equation %}\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}{% endequation %} החביב עלינו. אני טוען שבעזרת הזוג הזה, וערוץ התקשורת הרגיל ביניהם, אליס יכולה לשלוח לבוב מצב קוונטי {% equation %}\left|\psi\right\rangle {% endequation %} שרירותי לגמרי. איך זה לא סותר את משפט ה-No Cloning? פשוט מאוד - כחלק מתהליך השליחה הזה אליס תתעלל בקיוביט שלה בצורה שתגרום ל<strong>הרס</strong> המצב הקוונטי אצלה.
 
 התהליך הזה נקרא בשם המאוד מפוצץ "העתקה קוונטית", או "טלפורטציה קוונטית". למה מפוצץ? כי זה גורם לנו לחשוב על המשגר של "מסע בין כוכבים". אבל שימו לב שמדובר על מעבר של אינפורמציה קוונטית בלבד - הקיוביט של אליס לא משתגר לקצה השני של היקום; רק המידע שהיה "מקודד" בו ואבד. אני אשאיר לכם את ההחלטה מה המשמעויות הפילוסופיות של קיום טלפורטציה קוונטית שכזו (אבל קיומה לא שנוי במחלוקת; כבר הצליחו לממש טלפורטציה קוונטית בניסויים).
 
-איך זה עובד בפועל? הנה התהליך ממעוף הציפור. בהתחלה לאליס יש את {::nomarkdown}\( \left\|\psi\right\rangle \){:/nomarkdown} שאסמן {::nomarkdown}\( \left\|\psi\right\rangle =a\left\|0\right\rangle +b\left\|1\right\rangle \){:/nomarkdown} וזאת בנוסף לקיוביטים השזורים שלה ושל בוב, שנמצאים במצב {::nomarkdown}\( \left\|\varphi\right\rangle =\frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}\){:/nomarkdown}. המערכת המשולבת של זוג הקיוביטים הללו יחד עם המצב הקוונטי שיש לאליס היא {::nomarkdown}\( \left\|\varphi\right\rangle \otimes\left\|\psi\right\rangle \){:/nomarkdown} - כי מכפלה טנזורית היא מה שמתאר את מצב המערכת המשולבת כשאין עדיין קורלציה קוונטית כלשהי בין המערכות השונות.
+איך זה עובד בפועל? הנה התהליך ממעוף הציפור. בהתחלה לאליס יש את {% equation %}\left|\psi\right\rangle {% endequation %} שאסמן {% equation %}\left|\psi\right\rangle =a\left|0\right\rangle +b\left|1\right\rangle {% endequation %} וזאת בנוסף לקיוביטים השזורים שלה ושל בוב, שנמצאים במצב {% equation %}\left|\varphi\right\rangle =\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}{% endequation %}. המערכת המשולבת של זוג הקיוביטים הללו יחד עם המצב הקוונטי שיש לאליס היא {% equation %}\left|\varphi\right\rangle \otimes\left|\psi\right\rangle {% endequation %} - כי מכפלה טנזורית היא מה שמתאר את מצב המערכת המשולבת כשאין עדיין קורלציה קוונטית כלשהי בין המערכות השונות.
 
 בואו נכתוב בצורה מפורשת איך המערכת הזו נראית:
 
-{::nomarkdown}\( \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|100\right\rangle +b\left\|111\right\rangle \right)\){:/nomarkdown}
+{% equation %}\frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|100\right\rangle +b\left|111\right\rangle \right){% endequation %}
 
 הביט הראשון מבין השלושה מתאים לקיוביט שאליס רוצה לשלוח, הביט האמצעי מתאים לקיוביט של אליס, והביט השלישי מתאים לקיוביט של בוב. נסו לוודא לעצמכם שאתם מבינים למה זה אכן מצב המערכת המשולבת.
 
 הדבר הבא שאליס עושה הוא להפעיל קסם על המערכת. וכשאני אומר "קסם", אני מתכוון לטרנספורמציה אוניטרית שמעבירה את המערכת למצב הבא:
 
-{::nomarkdown}\( \frac{1}{2}\left\|00\right\rangle \left(a\left\|0\right\rangle +b\left\|1\right\rangle \right)+\frac{1}{2}\left\|01\right\rangle \left(a\left\|1\right\rangle +b\left\|0\right\rangle \right)+\){:/nomarkdown}
+{% equation %}\frac{1}{2}\left|00\right\rangle \left(a\left|0\right\rangle +b\left|1\right\rangle \right)+\frac{1}{2}\left|01\right\rangle \left(a\left|1\right\rangle +b\left|0\right\rangle \right)+{% endequation %}
 
-{::nomarkdown}\( \frac{1}{2}\left\|10\right\rangle \left(a\left\|0\right\rangle -b\left\|1\right\rangle \right)+\frac{1}{2}\left\|11\right\rangle \left(a\left\|1\right\rangle -b\left\|0\right\rangle \right)\){:/nomarkdown}
+{% equation %}\frac{1}{2}\left|10\right\rangle \left(a\left|0\right\rangle -b\left|1\right\rangle \right)+\frac{1}{2}\left|11\right\rangle \left(a\left|1\right\rangle -b\left|0\right\rangle \right){% endequation %}
 
-כאן הרשיתי לעצמי "לפרק" ביטוי כמו {::nomarkdown}\( \left\|101\right\rangle \){:/nomarkdown} ל-{::nomarkdown}\( \left\|10\right\rangle \left\|1\right\rangle \){:/nomarkdown}, מתוך מטרה לשמר את הקריאות של הביטוי ושנבין מה הולך פה. השאלה הראשונה שנשאלת, כמובן, היא מה הקסם שבזכותו אליס הצליחה להגיע למצב הזה; בכך נעסוק בהמשך - הרי כל עניין הטלפורטציה מיועד לתת לי מוטיבציה לתאר את הקסם. השאלה השניה היא מה זה עזר לנו.
+כאן הרשיתי לעצמי "לפרק" ביטוי כמו {% equation %}\left|101\right\rangle {% endequation %} ל-{% equation %}\left|10\right\rangle \left|1\right\rangle {% endequation %}, מתוך מטרה לשמר את הקריאות של הביטוי ושנבין מה הולך פה. השאלה הראשונה שנשאלת, כמובן, היא מה הקסם שבזכותו אליס הצליחה להגיע למצב הזה; בכך נעסוק בהמשך - הרי כל עניין הטלפורטציה מיועד לתת לי מוטיבציה לתאר את הקסם. השאלה השניה היא מה זה עזר לנו.
 
-עכשיו מגיע הפאנץ': אליס מודדת את שני הקיוביטים שלה. את זה ששזור עם הקיוביט של בוב ("הביט האמצעי") ואת זה שהיא רצתה לשלוח את המצב הקוונטי שלו ("הביט השמאלי"). כל אחת מארבע התוצאות האפשריות - {::nomarkdown}\( \left\|00\right\rangle ,\left\|01\right\rangle ,\left\|10\right\rangle ,\left\|11\right\rangle \){:/nomarkdown} היא סבירה באותה מידה, אבל ההסתברות לא מעניינת את אליס; מה שמעניין אותה הוא רק מה היו תוצאות המדידה. התוצאות הללו הן שני ביטים של מידע; את המידע הזה אליס שולחת לבוב באינטרנט.
+עכשיו מגיע הפאנץ': אליס מודדת את שני הקיוביטים שלה. את זה ששזור עם הקיוביט של בוב ("הביט האמצעי") ואת זה שהיא רצתה לשלוח את המצב הקוונטי שלו ("הביט השמאלי"). כל אחת מארבע התוצאות האפשריות - {% equation %}\left|00\right\rangle ,\left|01\right\rangle ,\left|10\right\rangle ,\left|11\right\rangle {% endequation %} היא סבירה באותה מידה, אבל ההסתברות לא מעניינת את אליס; מה שמעניין אותה הוא רק מה היו תוצאות המדידה. התוצאות הללו הן שני ביטים של מידע; את המידע הזה אליס שולחת לבוב באינטרנט.
 
-עכשיו, נניח שאליס קיבלה {::nomarkdown}\( \left\|00\right\rangle \){:/nomarkdown}. מה זה אומר? זה אומר שאחרי המדידה שלה, המערכת קרסה למצב {::nomarkdown}\( \left\|00\right\rangle \left(a\left\|0\right\rangle +b\left\|1\right\rangle \right)\){:/nomarkdown} . בפרט, הקיוביט של בוב הוא עכשיו במצב {::nomarkdown}\(  a\left\|0\right\rangle +b\left\|1\right\rangle \){:/nomarkdown}, שזה בדיוק הקיוביט שהיה לאליס בהתחלה! קסם! בוב בעצם לא צריך לעשות כלום, וסיימנו!
+עכשיו, נניח שאליס קיבלה {% equation %}\left|00\right\rangle {% endequation %}. מה זה אומר? זה אומר שאחרי המדידה שלה, המערכת קרסה למצב {% equation %}\left|00\right\rangle \left(a\left|0\right\rangle +b\left|1\right\rangle \right){% endequation %} . בפרט, הקיוביט של בוב הוא עכשיו במצב {% equation %} a\left|0\right\rangle +b\left|1\right\rangle {% endequation %}, שזה בדיוק הקיוביט שהיה לאליס בהתחלה! קסם! בוב בעצם לא צריך לעשות כלום, וסיימנו!
 
-ונניח שאליס קיבלה {::nomarkdown}\( \left\|01\right\rangle \){:/nomarkdown}. מה זה אומר? שהקיוביט של בוב קרס למצב {::nomarkdown}\( a\left\|1\right\rangle +b\left\|0\right\rangle \){:/nomarkdown}. זה כמעט המצב שרצינו, אבל התפקידים של {::nomarkdown}\( a,b\){:/nomarkdown} התהפכו. העניין הוא שבוב יכול <strong>לתקן</strong> את ההתהפכות הזו על ידי הפעלת טרנספורמציה אוניטרית מתאימה. באופן דומה גם לכל תוצאה אחרת של אליס בוב יוכל לתקן את הקיוביט שלו כך שיהיה זהה לקיוביט שאליס התחילה ממנו - אבל בוב <strong>צריך לדעת</strong> מה משובש בקיוביט שלו - לכן הוא חייב לחכות לתקשורת-דרך-האינטרנט של אליס.
+ונניח שאליס קיבלה {% equation %}\left|01\right\rangle {% endequation %}. מה זה אומר? שהקיוביט של בוב קרס למצב {% equation %}a\left|1\right\rangle +b\left|0\right\rangle {% endequation %}. זה כמעט המצב שרצינו, אבל התפקידים של {% equation %}a,b{% endequation %} התהפכו. העניין הוא שבוב יכול <strong>לתקן</strong> את ההתהפכות הזו על ידי הפעלת טרנספורמציה אוניטרית מתאימה. באופן דומה גם לכל תוצאה אחרת של אליס בוב יוכל לתקן את הקיוביט שלו כך שיהיה זהה לקיוביט שאליס התחילה ממנו - אבל בוב <strong>צריך לדעת</strong> מה משובש בקיוביט שלו - לכן הוא חייב לחכות לתקשורת-דרך-האינטרנט של אליס.
 
 אם כן, העניין כולו פשוט מאוד למעט ה"קסם" שדיברתי עליו. הקסם הזה הוא דוגמה ל<strong>חישוב קוונטי</strong> - אנחנו מתחילים עם מערכת של כמה קיוביטים, מבצעים עליה מניפולציות ומקבלים פלט שהוא קיוביטים אחרים. השאלה המרכזית היא איך לבצע את החישוב הזה. אפשר פשוט לתת את הטרנספורמציה האוניטרית, אבל מה הכיף בזה? כל הרעיון הוא להציג חישובים באמצעות סדרה של פעולות <strong>בסיסיות</strong>, כאלו שהן שימושיות בהקשרים שונים ומשונים ולא רק כדי לפתור בעיות אד-הוקיות.
 
@@ -48,94 +48,94 @@ tags:
 
 כדי לתאר שער קוונטי, צריך לתאר את האופרטור האוניטרי שמתאים לו, כלומר לתת מטריצה, או לתת תיאור של האופן שבו האופרטור הזה מטפל, נאמר, בבסיס הסטנדרטי. בואו נתחיל מלהציג את שני השערים שבהם אליס תשתמש ב"קסם" שלה.
 
-השער הראשון מסומן בתור {::nomarkdown}\( H\){:/nomarkdown}, מלשון "הדמאר" (המתמטיקאי). עזבו אתכם כרגע מהשאלה למה. מה שהוא עושה פשוט למדי, מבחינה רעיונית: הוא מעביר את הבסיס הסטנדרטי לבסיס {::nomarkdown}\( \left\|+\right\rangle ,\left\|-\right\rangle \){:/nomarkdown} שראינו בפוסט הקודם כמה הוא מועיל. למי שלא קרא את הפוסט הקודם, נזכיר את ההגדרות:
+השער הראשון מסומן בתור {% equation %}H{% endequation %}, מלשון "הדמאר" (המתמטיקאי). עזבו אתכם כרגע מהשאלה למה. מה שהוא עושה פשוט למדי, מבחינה רעיונית: הוא מעביר את הבסיס הסטנדרטי לבסיס {% equation %}\left|+\right\rangle ,\left|-\right\rangle {% endequation %} שראינו בפוסט הקודם כמה הוא מועיל. למי שלא קרא את הפוסט הקודם, נזכיר את ההגדרות:
 
-{::nomarkdown}\( \left\|+\right\rangle =\frac{\left\|0\right\rangle +\left\|1\right\rangle }{\sqrt{2}}\){:/nomarkdown}
+{% equation %}\left|+\right\rangle =\frac{\left|0\right\rangle +\left|1\right\rangle }{\sqrt{2}}{% endequation %}
 
-{::nomarkdown}\( \left\|-\right\rangle =\frac{\left\|0\right\rangle -\left\|1\right\rangle }{\sqrt{2}}\){:/nomarkdown}
+{% equation %}\left|-\right\rangle =\frac{\left|0\right\rangle -\left|1\right\rangle }{\sqrt{2}}{% endequation %}
 
-שני הוקטורים הללו מהווים בסיס אלטרנטיבי למרחב שמתאר את הקיוביט, והבסיס הזה מקיים את התכונה היפה שאם מודדים את {::nomarkdown}\( \left\|+\right\rangle \){:/nomarkdown} או את {::nomarkdown}\( \left\|-\right\rangle \){:/nomarkdown} ביחס לבסיס הסטנדרטי, כל אחת משתי התוצאות מתקבלת באותה הסתברות. הייתי אומר שהבסיס החדש הזה הוא "מאונך" לבסיס הסטנדרטי אם הייתה לכך משמעות מתמטית כלשהי.
+שני הוקטורים הללו מהווים בסיס אלטרנטיבי למרחב שמתאר את הקיוביט, והבסיס הזה מקיים את התכונה היפה שאם מודדים את {% equation %}\left|+\right\rangle {% endequation %} או את {% equation %}\left|-\right\rangle {% endequation %} ביחס לבסיס הסטנדרטי, כל אחת משתי התוצאות מתקבלת באותה הסתברות. הייתי אומר שהבסיס החדש הזה הוא "מאונך" לבסיס הסטנדרטי אם הייתה לכך משמעות מתמטית כלשהי.
 
-אז פורמלית, {::nomarkdown}\( H\){:/nomarkdown} מוגדר כך:
+אז פורמלית, {% equation %}H{% endequation %} מוגדר כך:
 
-{::nomarkdown}\( \left\|0\right\rangle \mapsto\left\|+\right\rangle \){:/nomarkdown}
+{% equation %}\left|0\right\rangle \mapsto\left|+\right\rangle {% endequation %}
 
-{::nomarkdown}\( \left\|1\right\rangle \mapsto\left\|-\right\rangle \){:/nomarkdown}
+{% equation %}\left|1\right\rangle \mapsto\left|-\right\rangle {% endequation %}
 
-אינטואיטבית, {::nomarkdown}\( H\){:/nomarkdown} מעביר את {::nomarkdown}\( \left\|0\right\rangle \){:/nomarkdown} אל הסופרפוזיציה "הכי סימטרית" שקיימת עבור קיוביט בודד. לכן כשמפעילים את {::nomarkdown}\( H\){:/nomarkdown} על אוסף של כמה קיוביטים התוצאה היא הסופרפוזיציה "הכי סימטרית" עבור המערכת שמורכבת מהקיוביטים הללו. פורמלית:
+אינטואיטבית, {% equation %}H{% endequation %} מעביר את {% equation %}\left|0\right\rangle {% endequation %} אל הסופרפוזיציה "הכי סימטרית" שקיימת עבור קיוביט בודד. לכן כשמפעילים את {% equation %}H{% endequation %} על אוסף של כמה קיוביטים התוצאה היא הסופרפוזיציה "הכי סימטרית" עבור המערכת שמורכבת מהקיוביטים הללו. פורמלית:
 
-{::nomarkdown}\( \left(H\otimes H\otimes\dots\otimes H\right)\left\|00\dots0\right\rangle =\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\left\|x\right\rangle \){:/nomarkdown}
+{% equation %}\left(H\otimes H\otimes\dots\otimes H\right)\left|00\dots0\right\rangle =\frac{1}{\sqrt{2^{n}}}\sum_{x=0}^{2^{n}-1}\left|x\right\rangle {% endequation %}
 
-כאשר כאן {::nomarkdown}\( \left\|x\right\rangle \){:/nomarkdown} הוא סימון מוסכם לכתיב של {::nomarkdown}\( x\){:/nomarkdown} בבסיס בינארי עם בדיוק {::nomarkdown}\( n\){:/nomarkdown} ספרות, עם אפסים מובילים (כלומר, אם {::nomarkdown}\( x=3\){:/nomarkdown} ו-{::nomarkdown}\( n=4\){:/nomarkdown} אז {::nomarkdown}\( \left\|x\right\rangle \){:/nomarkdown} הוא סימון מקוצר ל-{::nomarkdown}\( \left\|0011\right\rangle \){:/nomarkdown}).
+כאשר כאן {% equation %}\left|x\right\rangle {% endequation %} הוא סימון מוסכם לכתיב של {% equation %}x{% endequation %} בבסיס בינארי עם בדיוק {% equation %}n{% endequation %} ספרות, עם אפסים מובילים (כלומר, אם {% equation %}x=3{% endequation %} ו-{% equation %}n=4{% endequation %} אז {% equation %}\left|x\right\rangle {% endequation %} הוא סימון מקוצר ל-{% equation %}\left|0011\right\rangle {% endequation %}).
 
 הסופרפוזיציה הזו תהיה קריטית בהמשך, באלגוריתמים רציניים יותר - זו הדרך שבה בחישוב קוונטי אנחנו מבצעים את ה"חישוב סופר דופר מקבילי" שאוהבים לדבר עליו: אנחנו בונים מערכת שנמצאת בסופרפוזיציה של כל האפשרויות בו זמנית, ואז מחשבים פונקציה כלשהי של כל האפשרויות הללו. אבל אני מקדים את המאוחר (אני רק רוצה להזהיר שוב, כפי שעשיתי בפוסט המבוא, שחישוב קוונטי הוא ממש <strong>לא</strong> סתם "חישוב סופר דופר מקבילי" כפי שזה אולי עשוי להיראות כרגע).
 
-האופרטור השני שאני רוצה להציג כרגע הוא סוג של שער NOT שמערב שני קיוביטים ולא קיוביט בודד (לא שכחנו מה-NOT של קיוביט בודד והוא יחזור בהמשך). הוא מכונה {::nomarkdown}\( C_{not}\){:/nomarkdown}, קיצור של Controlled not, שכן עקרון הפעולה שלו על אברי בסיס הוא זה: אם הקיוביט הראשון הוא 0 אז לא לעשות כלום, ואם הקיוביט הראשון הוא 1, אז לשמש בתור NOT של הקיוביט השני. פורמלית:
+האופרטור השני שאני רוצה להציג כרגע הוא סוג של שער NOT שמערב שני קיוביטים ולא קיוביט בודד (לא שכחנו מה-NOT של קיוביט בודד והוא יחזור בהמשך). הוא מכונה {% equation %}C_{not}{% endequation %}, קיצור של Controlled not, שכן עקרון הפעולה שלו על אברי בסיס הוא זה: אם הקיוביט הראשון הוא 0 אז לא לעשות כלום, ואם הקיוביט הראשון הוא 1, אז לשמש בתור NOT של הקיוביט השני. פורמלית:
 
-{::nomarkdown}\( \left\|00\right\rangle \mapsto\left\|00\right\rangle \){:/nomarkdown}
+{% equation %}\left|00\right\rangle \mapsto\left|00\right\rangle {% endequation %}
 
-{::nomarkdown}\( \left\|01\right\rangle \mapsto\left\|01\right\rangle \){:/nomarkdown}
+{% equation %}\left|01\right\rangle \mapsto\left|01\right\rangle {% endequation %}
 
-{::nomarkdown}\( \left\|10\right\rangle \mapsto\left\|11\right\rangle \){:/nomarkdown}
+{% equation %}\left|10\right\rangle \mapsto\left|11\right\rangle {% endequation %}
 
-{::nomarkdown}\( \left\|11\right\rangle \mapsto\left\|10\right\rangle \){:/nomarkdown}
+{% equation %}\left|11\right\rangle \mapsto\left|10\right\rangle {% endequation %}
 
 לא קשה לראות שזו טרנספורמציה אוניטרית (היא גם הצמוד של עצמה וגם ההופכית של עצמה).
 
-עכשיו אפשר לתאר פורמלית את מה שאליס עושה במהלך הטלפורטציה: קודם היא מפעילה {::nomarkdown}\( C_{not}\){:/nomarkdown} על שני הקיוביטים שלה, ואז היא מפעילה {::nomarkdown}\( H\){:/nomarkdown} על הקיוביט שהיא רוצה לשכפל (ולסיום היא מודדת את שני הקיוביטים שלה).
+עכשיו אפשר לתאר פורמלית את מה שאליס עושה במהלך הטלפורטציה: קודם היא מפעילה {% equation %}C_{not}{% endequation %} על שני הקיוביטים שלה, ואז היא מפעילה {% equation %}H{% endequation %} על הקיוביט שהיא רוצה לשכפל (ולסיום היא מודדת את שני הקיוביטים שלה).
 
 בואו נראה למה זה עובד. כזכור, בהתחלה מצב המערכת כולה הוא
 
-{::nomarkdown}\( \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|100\right\rangle +b\left\|111\right\rangle \right)\){:/nomarkdown}
+{% equation %}\frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|100\right\rangle +b\left|111\right\rangle \right){% endequation %}
 
-ואז באה אליס ומפעילה את {::nomarkdown}\( C_{not}\){:/nomarkdown}, או ליתר דיוק את {::nomarkdown}\( C_{not}\otimes I\){:/nomarkdown} כי בקיוביט השלישי היא לא נוגעת. אם כן, אנו עוברים למצב
+ואז באה אליס ומפעילה את {% equation %}C_{not}{% endequation %}, או ליתר דיוק את {% equation %}C_{not}\otimes I{% endequation %} כי בקיוביט השלישי היא לא נוגעת. אם כן, אנו עוברים למצב
 
-{::nomarkdown}\( \frac{1}{\sqrt{2}}\left(a\left\|000\right\rangle +a\left\|011\right\rangle +b\left\|110\right\rangle +b\left\|101\right\rangle \right)\){:/nomarkdown}
+{% equation %}\frac{1}{\sqrt{2}}\left(a\left|000\right\rangle +a\left|011\right\rangle +b\left|110\right\rangle +b\left|101\right\rangle \right){% endequation %}
 
-עכשיו אליס מפעילה {::nomarkdown}\( H\){:/nomarkdown} על הקיוביט הראשון. זה אומר שכל וקטור כמו {::nomarkdown}\( \left\|000\right\rangle \){:/nomarkdown} הולך להתפצל לשני וקטורים, עבור שני הערכים השונים עבור הביט הראשון שלו, ושהכל יוכפל בשורש 2. מכיוון שאין שני וקטורים בסכום ששני הביטים האחרונים שלהם זהים (בזכות הפעלת {::nomarkdown}\( C_{not}\){:/nomarkdown}) נקבל שמונה מחוברים שונים:
+עכשיו אליס מפעילה {% equation %}H{% endequation %} על הקיוביט הראשון. זה אומר שכל וקטור כמו {% equation %}\left|000\right\rangle {% endequation %} הולך להתפצל לשני וקטורים, עבור שני הערכים השונים עבור הביט הראשון שלו, ושהכל יוכפל בשורש 2. מכיוון שאין שני וקטורים בסכום ששני הביטים האחרונים שלהם זהים (בזכות הפעלת {% equation %}C_{not}{% endequation %}) נקבל שמונה מחוברים שונים:
 
-{::nomarkdown}\( \frac{1}{2}a\left(\left\|000\right\rangle +\left\|100\right\rangle +\left\|011\right\rangle +\left\|111\right\rangle \right)+\){:/nomarkdown}
+{% equation %}\frac{1}{2}a\left(\left|000\right\rangle +\left|100\right\rangle +\left|011\right\rangle +\left|111\right\rangle \right)+{% endequation %}
 
-{::nomarkdown}\( \frac{1}{2}b\left(\left\|010\right\rangle +\left\|110\right\rangle +\left\|001\right\rangle +\left\|101\right\rangle \right)\){:/nomarkdown}
+{% equation %}\frac{1}{2}b\left(\left|010\right\rangle +\left|110\right\rangle +\left|001\right\rangle +\left|101\right\rangle \right){% endequation %}
 
-וכל מה שנשאר לעשות עכשיו הוא קיבוץ איברים שחולקים את שני הביטים הראשונים, ומקבלים את הצירוף שכבר ראינו קודם. הסיבה שבגללה כל המידע הרלוונטי עובר אל הקיוביט של בוב היא שבכל אחד משני זוגות הסוגריים יש בדיוק וקטור אחד עם אותם שני ביטים ראשונים, כך שכל זוג ביטים ראשונים שכזה מוכפל בסכום של משהו מהסוגר הראשון (כלומר, מוכפל ב-{::nomarkdown}\( a\){:/nomarkdown}) עם משהו מהסוגר השני (כלומר, מוכפל ב-{::nomarkdown}\( b\){:/nomarkdown}).
+וכל מה שנשאר לעשות עכשיו הוא קיבוץ איברים שחולקים את שני הביטים הראשונים, ומקבלים את הצירוף שכבר ראינו קודם. הסיבה שבגללה כל המידע הרלוונטי עובר אל הקיוביט של בוב היא שבכל אחד משני זוגות הסוגריים יש בדיוק וקטור אחד עם אותם שני ביטים ראשונים, כך שכל זוג ביטים ראשונים שכזה מוכפל בסכום של משהו מהסוגר הראשון (כלומר, מוכפל ב-{% equation %}a{% endequation %}) עם משהו מהסוגר השני (כלומר, מוכפל ב-{% equation %}b{% endequation %}).
 
 נשאר לדבר על איך בוב "מתקן" את המצב הקוונטי במקרה שבה הוא לא בדיוק המצב שממנו התחלנו (אבל בוב כן יודע בדיוק איך הוא "השתבש"). הנה שלושת המקרים האפשריים:
 <ul>
-	<li>{::nomarkdown}\( b\left\|0\right\rangle +a\left\|1\right\rangle \){:/nomarkdown}</li>
-	<li>{::nomarkdown}\( -b\left\|0\right\rangle +a\left\|1\right\rangle \){:/nomarkdown}</li>
-	<li>{::nomarkdown}\( a\left\|0\right\rangle -b\left\|1\right\rangle \){:/nomarkdown}</li>
+	<li>{% equation %}b\left|0\right\rangle +a\left|1\right\rangle {% endequation %}</li>
+	<li>{% equation %}-b\left|0\right\rangle +a\left|1\right\rangle {% endequation %}</li>
+	<li>{% equation %}a\left|0\right\rangle -b\left|1\right\rangle {% endequation %}</li>
 </ul>
-בשביל המקרה הראשון אנחנו צריכים אופרטור שמחליף בין 0 ו-1, כלומר {::nomarkdown}\( \left\|0\right\rangle \mapsto\left\|1\right\rangle \){:/nomarkdown} ו-{::nomarkdown}\( \left\|1\right\rangle \mapsto\left\|0\right\rangle \){:/nomarkdown}. לאופרטור הזה אקרא {::nomarkdown}\( X\){:/nomarkdown}. בשביל המקרה השני אנחנו צריכים לבצע את אותה החלפה אבל גם לכפול ב-{::nomarkdown}\( -1\){:/nomarkdown} את המקדם של {::nomarkdown}\( \left\|0\right\rangle \){:/nomarkdown}, כלומר {::nomarkdown}\( \left\|0\right\rangle \mapsto-\left\|1\right\rangle \){:/nomarkdown} ו-{::nomarkdown}\( \left\|1\right\rangle \mapsto\left\|0\right\rangle \){:/nomarkdown}. את האופרטור הזה אסמן בתור {::nomarkdown}\( Y\){:/nomarkdown}. לבסוף, במקרה האחרון רק צריך להכפיל ב-{::nomarkdown}\( -1\){:/nomarkdown} את המקדם של {::nomarkdown}\( \left\|1\right\rangle \){:/nomarkdown}, כלומר האופרטור יהיה {::nomarkdown}\( \left\|0\right\rangle \mapsto\left\|0\right\rangle \){:/nomarkdown} ו-{::nomarkdown}\( \left\|1\right\rangle \mapsto-\left\|1\right\rangle \){:/nomarkdown}. לאופרטור הזה אקרא {::nomarkdown}\( Z\){:/nomarkdown}. השמות של האופרטורים מגיעים ממטריצות פאולי המתאימות - אבל צריך לשים לב שההתאמה הזו לא מדויקת (לאן {::nomarkdown}\( i\){:/nomarkdown} נעלם?) ולא חייבים להבין במטריצות פאולי כאן.
+בשביל המקרה הראשון אנחנו צריכים אופרטור שמחליף בין 0 ו-1, כלומר {% equation %}\left|0\right\rangle \mapsto\left|1\right\rangle {% endequation %} ו-{% equation %}\left|1\right\rangle \mapsto\left|0\right\rangle {% endequation %}. לאופרטור הזה אקרא {% equation %}X{% endequation %}. בשביל המקרה השני אנחנו צריכים לבצע את אותה החלפה אבל גם לכפול ב-{% equation %}-1{% endequation %} את המקדם של {% equation %}\left|0\right\rangle {% endequation %}, כלומר {% equation %}\left|0\right\rangle \mapsto-\left|1\right\rangle {% endequation %} ו-{% equation %}\left|1\right\rangle \mapsto\left|0\right\rangle {% endequation %}. את האופרטור הזה אסמן בתור {% equation %}Y{% endequation %}. לבסוף, במקרה האחרון רק צריך להכפיל ב-{% equation %}-1{% endequation %} את המקדם של {% equation %}\left|1\right\rangle {% endequation %}, כלומר האופרטור יהיה {% equation %}\left|0\right\rangle \mapsto\left|0\right\rangle {% endequation %} ו-{% equation %}\left|1\right\rangle \mapsto-\left|1\right\rangle {% endequation %}. לאופרטור הזה אקרא {% equation %}Z{% endequation %}. השמות של האופרטורים מגיעים ממטריצות פאולי המתאימות - אבל צריך לשים לב שההתאמה הזו לא מדויקת (לאן {% equation %}i{% endequation %} נעלם?) ולא חייבים להבין במטריצות פאולי כאן.
 
 סיימנו עם טלפורטציה קוונטית, עכשיו בואו נדבר על ההפך. בטלפורטציה קוונטית, אנחנו משתמשים בזוג ביטים "קלאסיים" ובקיוביט שזור אחד כדי לשדר מאליס לבוב קיוביט אחד של מידע. ההפך נקרא <strong>קידוד צפוף</strong>, ובו אנחנו משתמשים בזוג שזור אחד ובקיוביט אחד נוסף על מנת לשדר מאליס לבוב שני ביטים קלאסיים של מידע. כלומר, יש כאן טריידאוף מסויים - אנחנו חוסכים בכמות המידע שצריכה לעבור בזמן אמת מאליס אל בוב (קיוביט אחד לכל שני ביטים של מידע) אבל משלמים על זה במחיר של ניצול משאב משותף שהם שיתפו ביניהם קודם (קיוביטים שזורים).
 
 ואיך הטריק הזה עובד? שלא במפתיע, די בשערים שכבר יש לנו כדי לתאר אותו, והתיאור דומה מאוד להיפוך של טלפורטציה קוונטית, רק שהפעם המערכת שלנו כוללת רק שני קיוביטים.
 
-מה שאליס עושה הוא לבדוק מה ערכם של זוג הביטים שהיא רוצה לשדר. בהתאם לערך הזה, היא מפעילה שער כלשהו על הקיוביט שלה - אחד מבין {::nomarkdown}\( I,X,Y,Z\){:/nomarkdown} ({::nomarkdown}\( I\){:/nomarkdown} הוא ה"שער" שלא עושה כלום; אפשר לוותר עליו בפועל, כמובן). אחר כך היא שולחת לבוב את הקיוביט שלה (ההנחה כאן היא שיש לה ערוץ שידור קוונטי, כמובן). כשבוב מקבל את הקיוביט, הוא עושה שלושה דברים - ראשית הוא מבצע {::nomarkdown}\( C_{not}\){:/nomarkdown} על שני הקיוביטים; מודד את הקיוביט <strong>של עצמו</strong> ומקבל מזה מידע כלשהו על מה היו שני הביטים שנשלחו; ואז הוא מפעיל את {::nomarkdown}\( H\){:/nomarkdown} על הקיוביט של אליס, מודד אותו ומקבל את מידע שמאפשר לו לשחזר את שני הביטים. פשוט מאוד.
+מה שאליס עושה הוא לבדוק מה ערכם של זוג הביטים שהיא רוצה לשדר. בהתאם לערך הזה, היא מפעילה שער כלשהו על הקיוביט שלה - אחד מבין {% equation %}I,X,Y,Z{% endequation %} ({% equation %}I{% endequation %} הוא ה"שער" שלא עושה כלום; אפשר לוותר עליו בפועל, כמובן). אחר כך היא שולחת לבוב את הקיוביט שלה (ההנחה כאן היא שיש לה ערוץ שידור קוונטי, כמובן). כשבוב מקבל את הקיוביט, הוא עושה שלושה דברים - ראשית הוא מבצע {% equation %}C_{not}{% endequation %} על שני הקיוביטים; מודד את הקיוביט <strong>של עצמו</strong> ומקבל מזה מידע כלשהו על מה היו שני הביטים שנשלחו; ואז הוא מפעיל את {% equation %}H{% endequation %} על הקיוביט של אליס, מודד אותו ומקבל את מידע שמאפשר לו לשחזר את שני הביטים. פשוט מאוד.
 
-בואו נעבור לתיאורים פורמליים והסבר למה זה עובד. בהתחלה המצב הקוונטי שאליס ובוב חולקים הוא {::nomarkdown}\( \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}\){:/nomarkdown} הסטנדרטי של זוג שזור. עכשיו בואו נראה מה הוא הופך להיות אחרי שאליס מפעילה עליו את {::nomarkdown}\( I,X,Y,Z\){:/nomarkdown}, בהתאם לזוג הביטים שהיא רוצה לשדר:
+בואו נעבור לתיאורים פורמליים והסבר למה זה עובד. בהתחלה המצב הקוונטי שאליס ובוב חולקים הוא {% equation %}\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}{% endequation %} הסטנדרטי של זוג שזור. עכשיו בואו נראה מה הוא הופך להיות אחרי שאליס מפעילה עליו את {% equation %}I,X,Y,Z{% endequation %}, בהתאם לזוג הביטים שהיא רוצה לשדר:
 <ul>
-	<li>אם הם {::nomarkdown}\( 00\){:/nomarkdown} אז היא מפעילה {::nomarkdown}\( I\){:/nomarkdown} ומקבלת {::nomarkdown}\( \frac{\left\|00\right\rangle +\left\|11\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הם {::nomarkdown}\( 01\){:/nomarkdown} אז היא מפעילה {::nomarkdown}\( X\){:/nomarkdown}ומקבלת {::nomarkdown}\( \frac{\left\|10\right\rangle +\left\|01\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הם {::nomarkdown}\( 10\){:/nomarkdown} אז היא מפעילה {::nomarkdown}\( Y\){:/nomarkdown} ומקבלת {::nomarkdown}\( \frac{-\left\|10\right\rangle +\left\|01\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הם {::nomarkdown}\( 11\){:/nomarkdown} אז היא מפעילה {::nomarkdown}\( Z\){:/nomarkdown} ומקבלת {::nomarkdown}\( \frac{\left\|00\right\rangle -\left\|11\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
+	<li>אם הם {% equation %}00{% endequation %} אז היא מפעילה {% equation %}I{% endequation %} ומקבלת {% equation %}\frac{\left|00\right\rangle +\left|11\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הם {% equation %}01{% endequation %} אז היא מפעילה {% equation %}X{% endequation %}ומקבלת {% equation %}\frac{\left|10\right\rangle +\left|01\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הם {% equation %}10{% endequation %} אז היא מפעילה {% equation %}Y{% endequation %} ומקבלת {% equation %}\frac{-\left|10\right\rangle +\left|01\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הם {% equation %}11{% endequation %} אז היא מפעילה {% equation %}Z{% endequation %} ומקבלת {% equation %}\frac{\left|00\right\rangle -\left|11\right\rangle }{\sqrt{2}}{% endequation %}.</li>
 </ul>
-עכשיו תורו של בוב. הוא מפעיל {::nomarkdown}\( C_{not}\){:/nomarkdown} על המצב הקוונטי כולו, ואנחנו מקבלים:
+עכשיו תורו של בוב. הוא מפעיל {% equation %}C_{not}{% endequation %} על המצב הקוונטי כולו, ואנחנו מקבלים:
 <ul>
-	<li>אם הביטים הם {::nomarkdown}\( 00\){:/nomarkdown} אנחנו מקבלים {::nomarkdown}\( \frac{\left\|00\right\rangle +\left\|10\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 01 אנחנו מקבלים {::nomarkdown}\( \frac{\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 10 אנחנו מקבלים {::nomarkdown}\( \frac{-\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 11 אנחנו מקבלים {::nomarkdown}\( \frac{\left\|00\right\rangle -\left\|10\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
+	<li>אם הביטים הם {% equation %}00{% endequation %} אנחנו מקבלים {% equation %}\frac{\left|00\right\rangle +\left|10\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 01 אנחנו מקבלים {% equation %}\frac{\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 10 אנחנו מקבלים {% equation %}\frac{-\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 11 אנחנו מקבלים {% equation %}\frac{\left|00\right\rangle -\left|10\right\rangle }{\sqrt{2}}{% endequation %}.</li>
 </ul>
-עכשיו בואו נראה מה קיבלנו. בכל אחד מארבעת המצבים הקוונטיים, אנחנו מקבלים סופרפוזיציה שבה הערך של הקיוביט השני זהה עבור שני המצבים האפשריים. למשל, את {::nomarkdown}\( \frac{\left\|11\right\rangle +\left\|01\right\rangle }{\sqrt{2}}\){:/nomarkdown} אפשר היה לכתוב גם בתור {::nomarkdown}\( \left(\frac{\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}\right)\otimes\left\|1\right\rangle \){:/nomarkdown} . כך שמדידה של הקיוביט השני מניבה את התוצאות הבאות:
+עכשיו בואו נראה מה קיבלנו. בכל אחד מארבעת המצבים הקוונטיים, אנחנו מקבלים סופרפוזיציה שבה הערך של הקיוביט השני זהה עבור שני המצבים האפשריים. למשל, את {% equation %}\frac{\left|11\right\rangle +\left|01\right\rangle }{\sqrt{2}}{% endequation %} אפשר היה לכתוב גם בתור {% equation %}\left(\frac{\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}\right)\otimes\left|1\right\rangle {% endequation %} . כך שמדידה של הקיוביט השני מניבה את התוצאות הבאות:
 <ul>
-	<li>אם הביטים הם 00 המדידה מחזירה 0 והקיוביט של אליס עובר למצב {::nomarkdown}\( \frac{\left\|0\right\rangle +\left\|1\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 01 המדידה מחזירה 1 והקיוביט של אליס עובר למצב {::nomarkdown}\(  \frac{\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 10 המדידה מחזירה 1 והקיוביט של אליס עובר למצב {::nomarkdown}\( \frac{-\left\|1\right\rangle +\left\|0\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
-	<li>אם הביטים הם 11 המדידה מחזירה 0 והקיוביט של אליס עובר למצב {::nomarkdown}\(  \frac{\left\|0\right\rangle -\left\|1\right\rangle }{\sqrt{2}}\){:/nomarkdown}.</li>
+	<li>אם הביטים הם 00 המדידה מחזירה 0 והקיוביט של אליס עובר למצב {% equation %}\frac{\left|0\right\rangle +\left|1\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 01 המדידה מחזירה 1 והקיוביט של אליס עובר למצב {% equation %} \frac{\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 10 המדידה מחזירה 1 והקיוביט של אליס עובר למצב {% equation %}\frac{-\left|1\right\rangle +\left|0\right\rangle }{\sqrt{2}}{% endequation %}.</li>
+	<li>אם הביטים הם 11 המדידה מחזירה 0 והקיוביט של אליס עובר למצב {% equation %} \frac{\left|0\right\rangle -\left|1\right\rangle }{\sqrt{2}}{% endequation %}.</li>
 </ul>
-במילים אחרות, אחרי המדידה הקיוביט של אליס קרס או למצב {::nomarkdown}\( \left\|+\right\rangle \){:/nomarkdown} או למצב {::nomarkdown}\( \left\|-\right\rangle \){:/nomarkdown}. כעת, את {::nomarkdown}\( H\){:/nomarkdown} הגדרתי על ידי ההעתקה {::nomarkdown}\( \left\|0\right\rangle \mapsto\left\|+\right\rangle \){:/nomarkdown} ו-{::nomarkdown}\( \left\|1\right\rangle \mapsto\left\|-\right\rangle \){:/nomarkdown}, אבל קל לראות על ידי חישוב פשוט שהיא מקיימת {::nomarkdown}\( \left\|+\right\rangle \mapsto\left\|0\right\rangle \){:/nomarkdown} ו-{::nomarkdown}\( \left\|-\right\rangle \mapsto\left\|1\right\rangle \){:/nomarkdown}. לכן, אחרי שבוב מפעיל את {::nomarkdown}\( H\){:/nomarkdown} ומודד, הוא מקבל בודאות 0 או 1 (הייתי יכול גם לומר שבוב פשוט מודד לפי הבסיס {::nomarkdown}\( \left\|+\right\rangle ,\left\|-\right\rangle \){:/nomarkdown}, כמובן). נסכם את התוצאות האפשריות:
+במילים אחרות, אחרי המדידה הקיוביט של אליס קרס או למצב {% equation %}\left|+\right\rangle {% endequation %} או למצב {% equation %}\left|-\right\rangle {% endequation %}. כעת, את {% equation %}H{% endequation %} הגדרתי על ידי ההעתקה {% equation %}\left|0\right\rangle \mapsto\left|+\right\rangle {% endequation %} ו-{% equation %}\left|1\right\rangle \mapsto\left|-\right\rangle {% endequation %}, אבל קל לראות על ידי חישוב פשוט שהיא מקיימת {% equation %}\left|+\right\rangle \mapsto\left|0\right\rangle {% endequation %} ו-{% equation %}\left|-\right\rangle \mapsto\left|1\right\rangle {% endequation %}. לכן, אחרי שבוב מפעיל את {% equation %}H{% endequation %} ומודד, הוא מקבל בודאות 0 או 1 (הייתי יכול גם לומר שבוב פשוט מודד לפי הבסיס {% equation %}\left|+\right\rangle ,\left|-\right\rangle {% endequation %}, כמובן). נסכם את התוצאות האפשריות:
 <ul>
 	<li>אם הביטים הם 00 המדידה הראשונה מחזירה 0 והשניה מחזירה 0.</li>
 	<li>אם הביטים הם 01 המדידה הראשונה מחזירה 1 והשניה מחזירה 0.</li>

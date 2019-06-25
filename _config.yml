@@ -13,8 +13,8 @@ permalink: /:year/:month/:day/:title
 # Build settings
 markdown: kramdown
 kramdown:
-  parse_span_html: true
-  parse_block_html: true
+  parse_span_html: false
+  parse_block_html: false
 theme: minima
 plugins:
   - jekyll-feed

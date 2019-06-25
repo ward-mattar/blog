@@ -16,7 +16,7 @@ tags:
 
 בואו נעבור לדוגמה קלאסית מתחום המתמטיקה - סדרת פיבונאצ'י. הכלל שמגדיר את הסדרה הזו הוא שכל איבר בה שווה לסכום שני האיברים שלפניו, פרט לשני האיברים הראשונים ששניהם פשוט 1 (או לפעמים 0 ו-1 או לפעמים 1 ו-2, זה לא חשוב). זו בבירור הגדרה רקורסיבית: כל איבר בסדרה מוגדר בעזרת איברים "פשוטים" ממנו, כאשר "פשטות" כאן פירושה קרבה גדולה יותר לתחילת הסדרה. למה בעצם שזה ייחשב "פשוט יותר"? כי כדי לחשב את הערך של האיבר השישי בסדרה באמצעות הנוסחה הרקורסיבית נצטרך בסופו של דבר לחשב את ערכם של חמישה איברים אחרים, אלו שלפניו; אבל בשביל לחשב את הערך של האיבר השביעי נצטרך לחשב את ערכם של שישה איברים אחרים, וכן הלאה.
 
-אם כן, כשאני אומר "פשוט יותר" אני לא מתכוון לפי איזה מדד אבסולוטי של פשטות, אלא לפי מעין רמת קרבה לאחד ממקרי הבסיס שבהם החישוב לא דורש הפעלה נוספת של הרקורסיה. עוד דוגמה מתמטית פשוטה היא פונקציית העצרת: !n הוא מכפלת כל המספרים הטבעיים מ-1 ועד n, כאשר מטעמי נוחות מגדירים ש-!0 שווה ל-1. זה מוביל להגדרה רקורסיבית פשוטה: {::nomarkdown}\(  n!=\begin{cases} 1 &amp; n=0\\ n\cdot\left(n-1\right)! &amp; n&gt;0 \end{cases} \){:/nomarkdown}
+אם כן, כשאני אומר "פשוט יותר" אני לא מתכוון לפי איזה מדד אבסולוטי של פשטות, אלא לפי מעין רמת קרבה לאחד ממקרי הבסיס שבהם החישוב לא דורש הפעלה נוספת של הרקורסיה. עוד דוגמה מתמטית פשוטה היא פונקציית העצרת: !n הוא מכפלת כל המספרים הטבעיים מ-1 ועד n, כאשר מטעמי נוחות מגדירים ש-!0 שווה ל-1. זה מוביל להגדרה רקורסיבית פשוטה: {% equation %} n!=\begin{cases} 1 &amp; n=0\\ n\cdot\left(n-1\right)! &amp; n&gt;0 \end{cases} {% endequation %}
 
 כמובן, כל הדוגמאות הללו לא מספקות לנו הגדרה חד משמעית של מהי רקורסיה, וברור שיש גמישות באופן שבו אנחנו נותנים את השם הזה לדברים שונים. הביטו בשלט הבא: האם מה שמתואר בו הוא בעל אופי רקורסיבי? <a href="http://www.gadial.net/wp-content/uploads/2015/11/hulda_recursion.jpg"><img class="aligncenter size-large wp-image-3303" alt="hulda_recursion" src="http://www.gadial.net/wp-content/uploads/2015/11/hulda_recursion-1024x576.jpg" width="584" height="328" /></a> יש לנו כאן רחוב שנקרא על שם ישוב שנקרא על שם נביאה (שנקראה על שם בעל חיים? קרוב לודאי שלא, אבל זה משעשע יותר כך). האם זאת רקורסיה? הטהרנים יטענו שלא, כי רקורסיה תהיה רק סיטואציה של "ישוב שנקרא על שם ישוב שנקרא על שם ישוב", אבל לדעתי אין הכרח כזה. חשבו על תהליך "בירור שם" של דבר מה - אם המשהו קרוי על שם משהו אחר, מבררים מהיכן הגיע שמו של המשהו האחר.
 
@@ -165,7 +165,7 @@ end
 def subset_sum(a, n)
 	return [] if n &lt; 0 or (n &gt; 0 and a.empty?) #empty solution set
 	return [ [] ] if n == 0   #one solution - no elements
-	return subset_sum(a[1..-1], n) + subset_sum(a[1..-1], n - a[0]).map{\|sol\| [a[0]] + sol}
+	return subset_sum(a[1..-1], n) + subset_sum(a[1..-1], n - a[0]).map{|sol| [a[0]] + sol}
 end
 [/ruby]
 
@@ -181,7 +181,7 @@ def solve_maze(maze, row, col)
 	maze[row][col] = 2
 	return true if row == 0 and col == 0
 	neighbors = row + 1, col], [row - 1, col], [row,  col + 1], [row, col - 1
-	neighbors.each{\|row, col\| return true if solve_maze(maze, row, col)}
+	neighbors.each{|row, col| return true if solve_maze(maze, row, col)}
 	maze[row][col] = 3
 	return false
 end
@@ -192,7 +192,7 @@ end
 [ruby]
 def print_maze(maze)
 	sym = {0 =&gt; &quot; &quot;, 1 =&gt; &quot;+&quot;, 2 =&gt; &quot;.&quot;, 3 =&gt; &quot; &quot;}
-	maze.map{\|row\| row.map{\|v\| sym[v]}}.each{\|row\| puts row.join(&quot;&quot;)}
+	maze.map{|row| row.map{|v| sym[v]}}.each{|row| puts row.join(&quot;&quot;)}
 end
 maze = [[0, 0, 1, 1, 1, 1, 1],
 		[1, 0, 1, 1, 1, 0, 1],

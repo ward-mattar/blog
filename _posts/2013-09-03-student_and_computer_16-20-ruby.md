@@ -62,7 +62,7 @@ Bran	Stark	60
 [ruby]
 :first_name
 :&quot;0-1-2-3-4&quot;
-:\){:/nomarkdown}23
+:$23
 :___whaat
 :&quot;:':':&quot;
 [/ruby]
@@ -87,19 +87,19 @@ Bran	Stark	60
 
 כל ההקדמה הזו לא הסבירה לנו איך אפשר לקחת קובץ CSV ולקבל ממנו מערך של Hash-ים שמתאימים לשורות שלו. אז הנה:
 [ruby]
-lines = File.open(ARGV[0], &quot;r&quot;){\|f\| f.read.split(&quot;\n&quot;)}
-data = lines.collect do \|line\|
+lines = File.open(ARGV[0], &quot;r&quot;){|f| f.read.split(&quot;\n&quot;)}
+data = lines.collect do |line|
 	parsed_line = line.split(&quot;\t&quot;)
 	{:first_name =&gt; parsed_line[0], :last_name =&gt; parsed_line[1], :grade =&gt; parsed_line[2].to_i}
 end
 [/ruby]
 
-בשורה הראשונה אני פותח את הקובץ לקריאה בלבד (זו המשמעות של ה-r), קורא את כולו בבת אחת ואז מפצל על פי שורות. התוצאה היא מערך של מחרוזות, מחרוזת לכל שורה, ששמור ב-lines. בשורה הבאה אני מתחיל תהליך שבו לוקחים כל שורה line בתוך lines, ובונים ממנה את הרשומה המתאימה: קודם כל לוקחים את השורה ומפרסרים אותה על ידי כך שמפרקים את השורה למערך של מחרוזות כשהפירוק הוא בדיוק בין תווי הטאב (t\){:/nomarkdown}. בשורה הבאה אני בונה את ה-Hash מתוך השורה המפורסרת, ועל הדרך גם ממיר את הציון ממחרוזת למספר.
+בשורה הראשונה אני פותח את הקובץ לקריאה בלבד (זו המשמעות של ה-r), קורא את כולו בבת אחת ואז מפצל על פי שורות. התוצאה היא מערך של מחרוזות, מחרוזת לכל שורה, ששמור ב-lines. בשורה הבאה אני מתחיל תהליך שבו לוקחים כל שורה line בתוך lines, ובונים ממנה את הרשומה המתאימה: קודם כל לוקחים את השורה ומפרסרים אותה על ידי כך שמפרקים את השורה למערך של מחרוזות כשהפירוק הוא בדיוק בין תווי הטאב (t\). בשורה הבאה אני בונה את ה-Hash מתוך השורה המפורסרת, ועל הדרך גם ממיר את הציון ממחרוזת למספר.
 
 התהליך הזה הוא לא מסובך, כמובן, אבל קצת מייגע לכתוב את כל הטקסט הזה בכל פעם שבה רוצים לפרסר קובץ CSV - הרי המקום היחיד שהוא לא גנרי אלא באמת יש בו התייחסות לתוכן ה-CSV הספציפי הוא השורה שבה מייצרים את ה-Hash. אז למה שלא תהיה ספריה סטנדרטית שעושה את זה? ובכן, באמת יש ספריה סטנדרטית לטיפול בקבצי CSV (גם קריאה וגם כתיבה שלהם וגם עוד דברים). יחד איתה אפשר להחליף את הקוד שלעיל בשורה אחת:
 
 [ruby]
-data = CSV.read(ARGV[0], col_sep: &quot;\t&quot;).collect{\|p\| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}
+data = CSV.read(ARGV[0], col_sep: &quot;\t&quot;).collect{|p| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}
 [/ruby]
 
 השורה הזו תמימה למראה ודי ברור מה אני עושה בה - אני משתמש בפונקציה read של הספריה CSV שלוקחת קובץ שהשם שלו נתון בתור הפרמטר הראשון, ואת סוג התו המפריד בתור פרמטר שני (פרמטר שאפשר לוותר עליו אם התו המפריד הוא אכן פסיק) ומחזירה מערך-של-מערכים כשכל מערך פנימי כזה הוא שורה אחת של הקובץ אחרי פרסור. את זה אני מעביר ל-collect שממיר את המערכים הפנימיים ב-Hash וחסל. אבל האמת היא שבשורה הזו מסתתר קסם מאוד לא טריוויאלי שיש ברובי ונוגע להעברת פרמטרים לפונקציות: ה-col_sep הזה שמופיע שם. זה נראה כאילו אני לא סתם מעביר פרמטר, אלא מעביר פרמטר <strong>עם שם</strong>. מה בעצם קורה פה?
@@ -133,20 +133,20 @@ CSV.read(ARGV[0], :col_sep =&gt; &quot;\t&quot;)
 
 [ruby]
 require 'csv'
-data = CSV.read(ARGV[0], col_sep: &quot;\t&quot;).collect{\|p\| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}
+data = CSV.read(ARGV[0], col_sep: &quot;\t&quot;).collect{|p| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}
 
-grades = data.collect{\|d\| d[:grade]}
+grades = data.collect{|d| d[:grade]}
 average = grades.inject(:+).to_f / grades.length
-best = data.max{\|a,b\| a[:grade] &lt;=&gt; b[:grade]}
-worst = data.max{\|a,b\| b[:grade] &lt;=&gt; a[:grade]}
-last_name_p_students = data.find_all{\|d\| d[:last_name] =~ /^P/}
+best = data.max{|a,b| a[:grade] &lt;=&gt; b[:grade]}
+worst = data.max{|a,b| b[:grade] &lt;=&gt; a[:grade]}
+last_name_p_students = data.find_all{|d| d[:last_name] =~ /^P/}
 
 puts &quot;Average = #{average}&quot;
 puts &quot;Reversed grade list: #{grades.reverse.inspect}&quot;
 puts &quot;Best student: #{best[:first_name]} #{best[:last_name]} (#{best[:grade]})&quot;
 puts &quot;Worst student: #{worst[:first_name]} #{worst[:last_name]} (#{worst[:grade]})&quot;
-puts &quot;#{grades.find_all{\|g\| (40..60).include? g}.length} students got between 40 and 60&quot;
-puts &quot;#{last_name_p_students.length} students whose last name starts with P: #{last_name_p_students.collect{\|d\| d[:first_name] + &quot; &quot; + d[:last_name]}.join(&quot;, &quot;)}&quot;
+puts &quot;#{grades.find_all{|g| (40..60).include? g}.length} students got between 40 and 60&quot;
+puts &quot;#{last_name_p_students.length} students whose last name starts with P: #{last_name_p_students.collect{|d| d[:first_name] + &quot; &quot; + d[:last_name]}.join(&quot;, &quot;)}&quot;
 [/ruby]
 
 כאשר מפעילים את הקוד הזה על קובץ הטקסט שהצגתי קודם, הפלט הוא:
@@ -167,7 +167,7 @@ Worst student: Jeyne Poole (21)
 שורה 5 היא מעניינת בגלל האופן שבו אני קורא ל-inject כדי לסכום את הציונים. בצורת הקריאה המלאה שלו, inject שעושה את זה ייראה ככה:
 
 [ruby]
-grades.inject(0){\|sum, x\| sum + x}
+grades.inject(0){|sum, x| sum + x}
 [/ruby]
 
 בצורת הקריאה הזו, inject מקבל שני פרמטרים - פרמטר אחד שהוא "ערך התחלתי" ופרמטר שני שהוא בלוק. הוא מאתחל את sum להיות הערך ההתחלתי, ואז מריץ סדרתית את הבלוק כאשר הוא מעביר לו את sum ובתור x מעביר לו את אברי המערך, ואחרי כל הרצה של הבלוק הוא מעדכן את sum להיות הערך שהבלוק החזיר.

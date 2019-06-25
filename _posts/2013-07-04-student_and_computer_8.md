@@ -17,8 +17,8 @@ tags:
 בספר הבעיה הייתה "נתונים שלושה מספרים, הוצא כפלט את המקסימלי מביניהם". שזה נחמד בתור המחשה להסתעפות של תוכנית על בסיס משפטי תנאי: אם a גדול מ-b, אז השווה את c ל-a והדפס את הגדול מביניהם, ואחרת השווה את c ל-b והדפס את הגדול מביניהם. אבל אני מקווה שכבר הבנו את העקרונות הללו בתרגילים קודמים, ולא נרוויח הרבה מהתרגיל הזה בתור המחשה של עבודה עם תנאים נטו. אז במקום לדבר על מציאת המקסימום של שלושה מספרים, בואו נדבר על מציאת המקסימום של כמות <strong>כלשהי</strong> של מספרים, ששמורים במערך. מערך הוא רשימה של אובייקטים מאותו הסוג, כך שאפשר לעבור על הרשימה באופן סדרתי. למשל, לכל איבר במערך יש אינדקס (ובדרך כלל האינדקס מתחיל מ-0 ולא מ-1 כמו שאפשר לצפות מהחיים האמיתיים) ואפשר לגשת לכל איבר על ידי מעבר סדרתי על האינדקסים. אלא שאני הולך לנקוט גישה קצת שונה למעבר על מערך, שקצת יותר מתאימה לאופי של רובי:
 
 [code language="ruby"]
-# puts &quot;The maximum among #{ARGV.join(&quot;, &quot;)} is #{ARGV.collect{\|x\| x.to_i}.max}&quot;
-array = ARGV.collect{\|x\| x.to_i}
+# puts &quot;The maximum among #{ARGV.join(&quot;, &quot;)} is #{ARGV.collect{|x| x.to_i}.max}&quot;
+array = ARGV.collect{|x| x.to_i}
 max = array.first
 for x in array
   max = x if x &gt; max
@@ -36,7 +36,7 @@ puts &quot;The maximum among #{ARGV.join(&quot;, &quot;)} is #{max}&quot;
 
 [code language="ruby"]
 a = [1,2,3,4,5]
-b = a.collect{\|x\| x*x}
+b = a.collect{|x| x*x}
 puts a.inspect
 puts b.inspect
 [/code]
@@ -62,13 +62,13 @@ puts b.inspect
 import System.Environment
 
 toIntArray :: [String] -&gt; [Int]
-toIntArray array = [read(x) \| x &lt;- array]
+toIntArray array = [read(x) | x &lt;- array]
 
 getMax :: [Int] -&gt; Int
 getMax [x] 	= x
 getMax (x:xs)
-  \| x &gt; m  	= x
-  \| x &lt;= m 	= m
+  | x &gt; m  	= x
+  | x &lt;= m 	= m
   where m = getMax xs
 
 main = do
@@ -92,7 +92,7 @@ f x = x*x
 
 זו הגדרה בשפת הסקל של הפונקציה הבאה:
 
-{::nomarkdown}\( f\left(x\right)=\begin{cases} 0 & x=1\\ 42 & x=2\\ x^{2} & \mbox{otherwise} \end{cases}\){:/nomarkdown}
+{% equation %}f\left(x\right)=\begin{cases} 0 & x=1\\ 42 & x=2\\ x^{2} & \mbox{otherwise} \end{cases}{% endequation %}
 
 כאשר נפעיל את f על משהו, הסקל ימצא את ההגדרה הראשונה של f שמתאימה לאותו "משהו". כפי שאנחנו רואים, הסקל יודעת לזהות קבועים בתור "משהו", אבל היא יודעת גם לעשות דברים מחוכמים יותר. השורה הראשונה בהגדרה של getMax אומרת "כך תפעלי על קלט שהוא מערך שמכיל איבר בודד שנקרא לו a". מתבקש כמובן להחזיר את a בתור האיבר המקסימלי. הייתי יכול להגדיר בדומה את getMax גם על מערך ריק, אבל לא ברור איזה ערך הגיוני להחזיר במקרה זה, אז לא עשיתי את זה.
 

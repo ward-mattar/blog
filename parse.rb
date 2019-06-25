@@ -14,10 +14,8 @@ xmldoc.elements.each("rss/channel/item") do |post|
         post_tags << c.text if c['domain'] == 'post_tag'
     end
     
-    post_content = post.elements['content:encoded'].text
-    .gsub("\\(", "{::nomarkdown}\\(").gsub("\\)", "\\){:/nomarkdown}")
-    .gsub("$latex", "{::nomarkdown}\\(").gsub("$", "\\){:/nomarkdown}")
-    .gsub('{{', '{\ {').gsub('\text{%}','%').gsub('|',"\\|")
+    post_content = post.elements['content:encoded'].text.gsub(/\$latex (.*?)\$/m, '{% equation %}\1{% endequation %}')
+    .gsub(/\\\((.*?)\\\)/m, '{% equation %}\1{% endequation %}')
     post_filename = post_date.split(" ")[0] + "-" + post_name + ".md"
     File.open("_posts/#{post_filename}", "w") do |file|
         file.puts "---"
