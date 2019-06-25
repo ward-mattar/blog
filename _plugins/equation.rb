@@ -8,7 +8,6 @@ module Jekyll
   
       def render(context)
         text = super
-        puts text
         "<span>$latex #{text}$</span>"
       end
     end
