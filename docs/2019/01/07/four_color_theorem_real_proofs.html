@@ -15,12 +15,12 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-07T00:32:53+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","datePublished":"2019-01-07T00:32:53+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/01/07/four_color_theorem_real_proofs"},"url":"http://localhost:4000/blog/2019/01/07/four_color_theorem_real_proofs","description":"בפוסט הקודם הצגתי את ההוכחה של קאמפ למשפט ארבעת הצבעים, והסברתי כיצד היא נכשלת. בפוסט הזה אני רוצה לסקור בצורה זריזה יחסית ובלי להיכנס לעומק הפרטים את ההוכחות למשפט ארבעת הצבעים שכן קיימות. למה לא להיכנס לעומק הפרטים? ראשית, כי אני לא מבין אותם; ושנית, כי הם מורכבים יחסית ואני לא חושב שאפשר להציג אותם בצורה טובה בבלוג. תחת זאת אקשר אל שלושת המאמרים הרלוונטיים כך שתוכלו לנסות ולקרוא אותם בעצמכם אם תרצו.","headline":"משפט ארבעת הצבעים (חלק ג’)","dateModified":"2019-01-07T00:32:53+02:00","@context":"https://schema.org"}</script>
+{"datePublished":"2019-01-07T00:32:53+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/01/07/four_color_theorem_real_proofs"},"url":"http://localhost:4000/blog/2019/01/07/four_color_theorem_real_proofs","description":"בפוסט הקודם הצגתי את ההוכחה של קאמפ למשפט ארבעת הצבעים, והסברתי כיצד היא נכשלת. בפוסט הזה אני רוצה לסקור בצורה זריזה יחסית ובלי להיכנס לעומק הפרטים את ההוכחות למשפט ארבעת הצבעים שכן קיימות. למה לא להיכנס לעומק הפרטים? ראשית, כי אני לא מבין אותם; ושנית, כי הם מורכבים יחסית ואני לא חושב שאפשר להציג אותם בצורה טובה בבלוג. תחת זאת אקשר אל שלושת המאמרים הרלוונטיים כך שתוכלו לנסות ולקרוא אותם בעצמכם אם תרצו.","headline":"משפט ארבעת הצבעים (חלק ג’)","dateModified":"2019-01-07T00:32:53+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [ ['$latex','$'], ["\\(","\\)"], ["\\\\(","\\\\)"] ],
+        inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
        TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
@@ -75,7 +75,7 @@
 
 <p>לזכותי ייאמר שלא רק אני הלכתי לאיבוד! הנה מה שאומרים רוברטסון ושות’ על החלק הזה של המאמר של אפל והאקן:</p>
 <blockquote>
-  <p dir="ltr">Even the part of the proof that is supposed to be checked by hand is extraordinarily complicated and tedious, and as far as we know, no one has made a complete independent check of it.</p>
+<p dir="ltr">Even the part of the proof that is supposed to be checked by hand is extraordinarily complicated and tedious, and as far as we know, no one has made a complete independent check of it.</p>
 </blockquote>
 <p>זו, אגב, כנראה הבעיה המרכזית של המאמר של אפל והאקן, ולא ההסתמכות על מחשב שאוהבים לתאר בתור הסיבה שבגללה ההוכחה הזו היא “חריגה”. תגידו, גם ההוכחה של המשפט האחרון של פרמה היא ארוכה ומסובכת, וזה בוודאי נכון; אבל ככל הנראה (לא קראתי בעצמי) ההוכחה של המשפט האחרון של פרמה <strong>יותר מעניינת</strong> עבור מי שבקיאים בחומר, ולכן יש להם יותר מוטיבציה להבין אותה עד הסוף. ההוכחה של אפל והאקן היא פשוט… מסובכת. זו לא לגמרי אשמתם - ככה זו קומבינטוריקה.</p>
 
@@ -87,7 +87,7 @@
 
 <p>ההוכחה של רוברטסון ושות’ משתמשת באותו רעיון בסיסי - אבל כאמור, עבור קבוצה <strong>שונה </strong>של קונפיגורציות; הם לא ניסו לקחת את הקבוצה של אפל והאקן ולשפר אותה. התרומה הגדולה שלהם על פני אפל והאקן הוא שאת שלב ה”בלתי נמנעת” הם הצליחו לפשט ברמה שמאפשרת לבדוק אותו באמצעות מחשב. כפי שהם אומרים בבדיחות (?):</p>
 <blockquote>
-  <p dir="ltr">The first proof needs a computer. The second can be checked by hand in a few months, or, using a computer, it can be verified in a few minutes.</p>
+<p dir="ltr">The first proof needs a computer. The second can be checked by hand in a few months, or, using a computer, it can be verified in a few minutes.</p>
 </blockquote>
 <p>כאן “ההוכחה הראשונה” היא של ה”ניתנת לצמצום” והשניה של ה”בלתי נמנעת”.</p>
 
