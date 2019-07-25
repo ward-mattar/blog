@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אז מה הקשר בין אוטומטים ופונקציות יוצרות? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אז מה הקשר בין אוטומטים ופונקציות יוצרות?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסטים הקודמים תיארתי אוטומטים סופיים ותיארתי פונקציות יוצרות. עכשיו הגיע הזמן להציג את הקשר היפה (לדעתי) בין השניים. שני הפוסטים הקודמים היו מעין מבוא מרפרף, ולכן בפוסט הזה ארשה לעצמי להיות פחות “מבואי” ולדבר יותר לעניין - ולכן הפוסט יהיה גם יותר טכני מהקודמים. ראו הוזהרתם." />
+<meta property="og:description" content="בפוסטים הקודמים תיארתי אוטומטים סופיים ותיארתי פונקציות יוצרות. עכשיו הגיע הזמן להציג את הקשר היפה (לדעתי) בין השניים. שני הפוסטים הקודמים היו מעין מבוא מרפרף, ולכן בפוסט הזה ארשה לעצמי להיות פחות “מבואי” ולדבר יותר לעניין - ולכן הפוסט יהיה גם יותר טכני מהקודמים. ראו הוזהרתם." />
+<link rel="canonical" href="http://localhost:4000/blog/2009/09/10/automata_and_generating_functions" />
+<meta property="og:url" content="http://localhost:4000/blog/2009/09/10/automata_and_generating_functions" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-09-10T19:00:41+03:00" />
+<script type="application/ld+json">
+{"datePublished":"2009-09-10T19:00:41+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2009/09/10/automata_and_generating_functions"},"url":"http://localhost:4000/blog/2009/09/10/automata_and_generating_functions","description":"בפוסטים הקודמים תיארתי אוטומטים סופיים ותיארתי פונקציות יוצרות. עכשיו הגיע הזמן להציג את הקשר היפה (לדעתי) בין השניים. שני הפוסטים הקודמים היו מעין מבוא מרפרף, ולכן בפוסט הזה ארשה לעצמי להיות פחות “מבואי” ולדבר יותר לעניין - ולכן הפוסט יהיה גם יותר טכני מהקודמים. ראו הוזהרתם.","headline":"אז מה הקשר בין אוטומטים ופונקציות יוצרות?","dateModified":"2009-09-10T19:00:41+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אז מה הקשר בין אוטומטים ופונקציות יוצרות?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-09-10T19:00:41+03:00" itemprop="datePublished">Sep 10, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסטים הקודמים <a href="http://www.gadial.net/?p=204">תיארתי אוטומטים סופיים </a>ו<a href="http://www.gadial.net/?p=206">תיארתי פונקציות יוצרות</a>. עכשיו הגיע הזמן להציג את הקשר היפה (לדעתי) בין השניים. שני הפוסטים הקודמים היו מעין מבוא מרפרף, ולכן בפוסט הזה ארשה לעצמי להיות פחות “מבואי” ולדבר יותר לעניין - ולכן הפוסט יהיה גם יותר טכני מהקודמים. ראו הוזהרתם.</p>
+
+<p>ובכן, אם יש לנו שפה רגולרית <span>$latex L$</span>, אפשר לשכוח מהמבנה הפנימי העשיר שלה ולהתמקד בשאלה כמותית - כמה מילים יש מכל אורך? נסמן ב-<span>$latex a_{n}$</span> את מספר המילים ב-<span>$latex L$</span> מאורך <span>$latex n$</span>. אפשר כעת להתאים ל-<span>$latex L$</span> פונקציה יוצרת <span>$latex f_{L}\left(x\right)$</span> שמתארת את הסדרה <span>$latex a_{n}$</span> (למי שתוהה, יש מילה אחת מאורך 0 - “המילה הריקה”, כך ש-<span>$latex a_{0}$</span> יכול להיות שווה 1). כל זה טוב ויפה - כעת השאלה היא כיצד ניתן לחשב את <span>$latex f_{L}\left(x\right)$</span>. אציג שיטה כללית לעשות זאת, אם נתון אוטומט <span>$latex A$</span> שמקבל את <span>$latex L$</span>; זה מכתיב דרך פעולה כללית בהתמודדות עם בעיה קומבינטורית שאנחנו רוצים למצוא עבורה פונקציה יוצרת - קודם כל לבדוק האם הבעיה הזו ניתנת לניסוח בתור שפה רגולרית. אם כן, קיבלנו את הפונקציה היוצרת “בחינם”.</p>
+
+<p>מכיוון שאנחנו מתמקדים בשאלה כמותית ולא במבנה של כל מילה, אפשר להתעלם מההבדלים שבין אותיות שונות, ולהתמקד בשאלה יותר פשוטה הנוגעת לאוטומט - בכמה מסלולים שונים מאורך <span>$latex n$</span> אפשר להגיע מהמצב ההתחלתי למצב המקבל? מספר המסלולים הזה הוא בדיוק <span>$latex a_{n}$</span>. עם זאת, כפי שקורה בדרך כלל בהוכחות שעוסקות באוטומטים, צריך לשאול שאלה “חזקה” יותר - נניח שאנחנו מתחילים ממצב <strong>כלשהו</strong> של האוטומט, לאו דווקא המצב ההתחלתי. כמה מסלולים מאורך <span>$latex n$</span> שמגיעים למצב מקבל יהיו כעת? אם <span>$latex q_{i}$</span> הוא המצב הזה, אפשר לסמן את המספר בתור <span>$latex a_{n}^{i}$</span>, ואת הפונקציה היוצרת המתאימה בתור <span>$latex f_{i}\left(x\right)$</span>. כדי לפשט עוד יותר את הסימונים אפשר לדבר על <strong>וקטור</strong> של פונקציות יוצרות: <span>$latex \overline{f}=\left(f_{0},f_{2},\dots,f_{k}\right)$</span> (אני מסמן את מספר המצבים הכולל של האוטומט ב-<span>$latex k+1$</span> כדי שהוקטור יראה “נחמד”).</p>
+
+<p>מכיוון שויתרנו על זהות האותיות השונות ואנחנו מתמקדים רק במספר הדרכים להגיע ממצב אחד באוטומט לאחר, אפשר להפסיק לדבר על פונקצית המעברים של האוטומט ולהסתפק במעין טבלת מעברים מופשטת - מטריצה מגודל <span>$latex \left(k+1\right)\times\left(k+1\right)$</span> שהן שורותיה והן עמודותיה מייצגות מצבים, ובתא ה-<span>$latex \left(i,j\right)$</span> שלה כתוב מספר הדרכים לעבור מהמצב <span>$latex q_{i}$</span> למצב <span>$latex q_{j}$</span> (בצורה אולטרה פורמלית, זהו <span>$latex \left|\left\{ \sigma\in\Sigma:\delta\left(q_{i},\sigma\right)=q_{j}\right\} \right|$</span>). דרך הייצוג הזו, של גרף באמצעות מטריצה, היא מאוד, מאוד נפוצה. אקרא למטריצה הזו <span>$latex T$</span>. אלו שבקיאים באלגברה לינארית ומכירים כפל מטריצות יכולים לוודא לעצמם ש-<span>$latex T^{r}$</span> היא המטריצה שבכניסה <span>$latex \left(i,j\right)$</span> שלה רשום מספר הדרכים להגיע מ-<span>$latex i$</span> אל <span>$latex j$</span> בדיוק ב-<span>$latex r$</span> צעדים.</p>
+
+<p>האבחנה הבסיסית בכל הסיפור הזה היא פשוטה ביותר. מספר המסלולים מאורך <span>$latex n$</span> שמובילים מ-<span>$latex q_{i}$</span> אל מצב מקבל כלשהו ניתן לחישוב באופן רקורסיבי. אם <span>$latex n=0$</span> אז הוא 1 אם <span>$latex q_{i}$</span> הוא בעצמו מצב מקבל ואחרת הוא 0. אפשר לסמן זאת בקומפקטיות באמצעות וקטור: <span>$latex \overline{u}$</span>יהיה וקטור שבכניסה ה-<span>$latex i$</span> שלו יש 1 אם המצב <span>$latex q_{i}$</span> הוא מקבל, ואחרת 0. אם <span>$latex n&gt;0$</span> אז אפשר להפעיל רקורסיה: לכל מצב <span>$latex q_{j}$</span> אפשר לדבר על “מספר המסלולים מאורך <span>$latex n$</span> מ-<span>$latex q_{i}$</span> למצב מקבל, שבצעד הראשון נכנסים ל-<span>$latex q_{j}$</span>”. מספר המסלולים הללו הוא בדיוק המכפלה של מספר האפשרויות לעבור מ-<span>$latex q_{i}$</span> אל <span>$latex q_{j}$</span> (כלומר, <span>$latex T_{ij}$</span>) במספר המסלולים מאורך <span>$latex n-1$</span> מ-<span>$latex q_{j}$</span> שמגיעים למצב מקבל. מכיוון ש<strong>כל</strong> מסלול מ-<span>$latex q_{i}$</span> שמגיע למצב מקבל חייב לעבור דרך <span>$latex q_{j}$</span> <strong>כלשהו</strong> בצעד הראשון, מספר המסלולים הכולל הוא סכום של המכפלות הללו, עבור כל ה-<span>$latex j$</span>-ים האפשריים. מי שבקיא באלגברה לינארית אולי רואה כבר <a href="http://he.wikipedia.org/wiki/%D7%9B%D7%A4%D7%9C_%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%95%D7%AA">כפל מטריצות</a> מול העיניים, אז אכתוב במפורש את הנוסחה: <span>$latex f_{i}\left(x\right) = u_{i}+\sum_{j}T_{ij}\cdot xf_{j}\left(x\right)=u_{i}+\left[T\right]_{i}\cdot x\overline{f}\left(x\right)$</span></p>
+
+<p>ההכפלה ב-<span>$latex x$</span> של <span>$latex f_{j}\left(x\right)$</span> היא הדרך שלנו לבטא את העובדה שמסלול מאורך <span>$latex n$</span> של <span>$latex f_{i}$</span> נבנה באמצעות מסלולים מאורך <span>$latex n-1$</span> של אגף ימין. ה-<span>$latex u_{i}$</span> שמתווסף לסכום בא לתאר בדיוק את תנאי העצירה של הרקורסיה (הוא יהיה המקדם החופשי בטור של <span>$latex f_{i}\left(x\right)$</span>).</p>
+
+<p>המשוואה שלמעלה היא משוואה כללית לכל <span>$latex i$</span>; היא בעצם מייצגת מערכת של <span>$latex k+1$</span> משוואות. את כל המערכת הזו אפשר לתאר באופן עוד יותר קומפקטי:</p>
+
+<p><span>$latex \overline{f} = u+T\cdot x\overline{f}$</span></p>
+
+<p>ועל ידי העברת אגף מקבלים:</p>
+
+<p><span>$latex \overline{f}\left(I-xT\right) = u$</span></p>
+
+<p>ומכאן:</p>
+
+<p><span>$latex \overline{f} = \left(I-xT\right)^{-1}u$</span></p>
+
+<p>וזה נותן לנו את וקטור הפונקציות היוצרות עבור כל המצבים. אם רוצים “לבודד” את הפונקציה היוצרת רק עבור המצב <span>$latex q_{0}$</span>, צריך לכפול את שני האגפים בוקטור <span>$latex \left(1,0,0,\dots,0\right)$</span> (הוקטור שכולו אפסים פרט לכניסה במקום ה-0). נסמן וקטור זה כ-<span>$latex v$</span>, ונקבל ש-<span>$latex f_{0}\left(x\right)=v\left(I-xT\right)^{-1}u$</span>. זו הנוסחה.</p>
+
+<p>חישוב של כל העסק הזה הוא לא מסובך, בהינתן שאנחנו כבר יודעים לעשות חשבון עם פולינומים. יש מערכות אלגברה ממוחשבות שעושות את זה בדיוק - אני משתמש ב-<a href="http://www.sagemath.org/">Sage</a> לצורך כך, ובה החישוב שלעיל הוא מיידי. התוצאה המתקבלת היא תמיד פונקציה רציונלית (מנה של שני פולינומים), כך שמציאת נקודות הסינגולריות שלה (הנקודות שבהן “משהו מתקלקל” ולכן אפשר ללמוד מהן על קצב הגידול של <span>$latex a_{n}$</span>) היא פשוטה למדי (אלו בדיוק הנקודות שמאפסות את המכנה).</p>
+
+<p>זה הכל. אחרי ההקדמה הארוכה שנתתי, הפשטות והמיידיות של התוצאה הן לטעמי יפות מאוד, כך שלא אכביר עליהן עוד מילים. מן הסתם נפנפתי פה בידיים ללא הרף ויש נקודות עדינות שעוד דורשות התייחסות, אך למזלי אני יכול להרשות לעצמי כאן להיות לא מדויק.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2009/09/10/automata_and_generating_functions" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,18 +1,7 @@
 ---
 layout: page
-title: About
+title: אודות
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+היי. שמי גדי אלכסנדרוביץ' ואני אוהב מתמטיקה (יש לי תואר ראשון במתמטיקה ותואר שלישי במדעי המחשב). התחלתי לכתוב את הבלוג ב-2007 כי בא לי שאחרים יכירו דברים מגניבים שאני מתלהב מהם, וכי לכתוב עליהם עוזר לי להבין אותם בעצמי. בשל כך אין לבלוג קהל יעד מסודר - אני מקווה שהוא גם מסייע לסטודנטיות למתמטיקה/מדעי המחשב שרוצות לקבל עוד אינטואיציה לגבי החומר, וגם למי שסתם סקרניות. הבלוג לא מנסה להחליף ספר לימוד, למרות שבחלק מהפוסטים אני נכנס די עמוק לטכניקה; המטרה היא להבין את הרעיונות ובשביל זה אני לפעמים מוותר על הדיוק או מנפנף בידיים. מותר לי. זה נמצא בשם של הבלוג עצמו!

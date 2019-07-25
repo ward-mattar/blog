@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>למת הניפוח לשפות רגולריות - גרסה מלאה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="למת הניפוח לשפות רגולריות - גרסה מלאה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="הצגתי כאן בעבר את למת הניפוח לשפות רגולריות, ואני רוצה לחזור עכשיו לנושא ולהציג גרסה נוספת, מוכללת, של הלמה - גרסה שהיא חזקה מספיק כדי לתת לנו תוצאת “אם ורק אם”. כזכור, למת הניפוח נתנה לנו תנאי הכרחי לכך ששפה תהיה רגולרית: דהיינו, אם השפה לא קיימה את הלמה, זו הייתה הוכחה שהשפה אינה רגולרית. הבעיה הייתה שהיו שפות שקיימו את הלמה למרות שהן לא רגולריות. הגרסה שאני אציג עכשיו לא סובלת מהבעיה הזו - שפה היא רגולרית אם ורק אם היא מקיימת את הלמה; אבל כמובן, הניסוח של הלמה מורכב הרבה יותר מאשר קודם, ולכן יהיה יותר קשה להראות ששפה לא מקיימת אותה. העניין שלי בתוצאה הזו, אם כן, הוא יחסית תיאורטי; כדי להראות ששפה היא לא רגולרית עדיין אנסה קודם כל להשתמש בלמה ה”רגילה”. אגב, לי כל זה מזכיר את משפט רייס בחישוביות; גם לו יש גרסה פשוטה שהיא חד כיוונית, וגרסה יותר מעניינת שהיא אם ורק אם." />
+<meta property="og:description" content="הצגתי כאן בעבר את למת הניפוח לשפות רגולריות, ואני רוצה לחזור עכשיו לנושא ולהציג גרסה נוספת, מוכללת, של הלמה - גרסה שהיא חזקה מספיק כדי לתת לנו תוצאת “אם ורק אם”. כזכור, למת הניפוח נתנה לנו תנאי הכרחי לכך ששפה תהיה רגולרית: דהיינו, אם השפה לא קיימה את הלמה, זו הייתה הוכחה שהשפה אינה רגולרית. הבעיה הייתה שהיו שפות שקיימו את הלמה למרות שהן לא רגולריות. הגרסה שאני אציג עכשיו לא סובלת מהבעיה הזו - שפה היא רגולרית אם ורק אם היא מקיימת את הלמה; אבל כמובן, הניסוח של הלמה מורכב הרבה יותר מאשר קודם, ולכן יהיה יותר קשה להראות ששפה לא מקיימת אותה. העניין שלי בתוצאה הזו, אם כן, הוא יחסית תיאורטי; כדי להראות ששפה היא לא רגולרית עדיין אנסה קודם כל להשתמש בלמה ה”רגילה”. אגב, לי כל זה מזכיר את משפט רייס בחישוביות; גם לו יש גרסה פשוטה שהיא חד כיוונית, וגרסה יותר מעניינת שהיא אם ורק אם." />
+<link rel="canonical" href="http://localhost:4000/blog/2015/05/14/pumping_lemma_full" />
+<meta property="og:url" content="http://localhost:4000/blog/2015/05/14/pumping_lemma_full" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-05-14T14:01:46+03:00" />
+<script type="application/ld+json">
+{"datePublished":"2015-05-14T14:01:46+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/05/14/pumping_lemma_full"},"url":"http://localhost:4000/blog/2015/05/14/pumping_lemma_full","description":"הצגתי כאן בעבר את למת הניפוח לשפות רגולריות, ואני רוצה לחזור עכשיו לנושא ולהציג גרסה נוספת, מוכללת, של הלמה - גרסה שהיא חזקה מספיק כדי לתת לנו תוצאת “אם ורק אם”. כזכור, למת הניפוח נתנה לנו תנאי הכרחי לכך ששפה תהיה רגולרית: דהיינו, אם השפה לא קיימה את הלמה, זו הייתה הוכחה שהשפה אינה רגולרית. הבעיה הייתה שהיו שפות שקיימו את הלמה למרות שהן לא רגולריות. הגרסה שאני אציג עכשיו לא סובלת מהבעיה הזו - שפה היא רגולרית אם ורק אם היא מקיימת את הלמה; אבל כמובן, הניסוח של הלמה מורכב הרבה יותר מאשר קודם, ולכן יהיה יותר קשה להראות ששפה לא מקיימת אותה. העניין שלי בתוצאה הזו, אם כן, הוא יחסית תיאורטי; כדי להראות ששפה היא לא רגולרית עדיין אנסה קודם כל להשתמש בלמה ה”רגילה”. אגב, לי כל זה מזכיר את משפט רייס בחישוביות; גם לו יש גרסה פשוטה שהיא חד כיוונית, וגרסה יותר מעניינת שהיא אם ורק אם.","headline":"למת הניפוח לשפות רגולריות - גרסה מלאה","dateModified":"2015-05-14T14:01:46+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">למת הניפוח לשפות רגולריות - גרסה מלאה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2015-05-14T14:01:46+03:00" itemprop="datePublished">May 14, 2015
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>הצגתי כאן בעבר את ל<a href="http://www.gadial.net/2015/02/03/pumping_lemma_regular_languages/">מת הניפוח לשפות רגולריות</a>, ואני רוצה לחזור עכשיו לנושא ולהציג גרסה נוספת, מוכללת, של הלמה - גרסה שהיא חזקה מספיק כדי לתת לנו תוצאת “אם ורק אם”. כזכור, למת הניפוח נתנה לנו תנאי <strong>הכרחי</strong> לכך ששפה תהיה רגולרית: דהיינו, אם השפה לא קיימה את הלמה, זו הייתה הוכחה שהשפה אינה רגולרית. הבעיה הייתה שהיו שפות שקיימו את הלמה למרות שהן לא רגולריות. הגרסה שאני אציג עכשיו לא סובלת מהבעיה הזו - שפה היא רגולרית אם ורק אם היא מקיימת את הלמה; אבל כמובן, הניסוח של הלמה מורכב הרבה יותר מאשר קודם, ולכן יהיה יותר קשה להראות ששפה לא מקיימת אותה. העניין שלי בתוצאה הזו, אם כן, הוא יחסית תיאורטי; כדי להראות ששפה היא לא רגולרית עדיין אנסה קודם כל להשתמש בלמה ה”רגילה”. אגב, לי כל זה מזכיר את <strong>משפט רייס</strong> בחישוביות; גם לו יש <a href="http://www.gadial.net/2007/10/09/rice_theorem/">גרסה פשוטה</a> שהיא חד כיוונית, ו<a href="http://www.gadial.net/2011/05/18/rice_theorem_full_version/">גרסה יותר מעניינת</a> שהיא אם ורק אם.</p>
+
+<p>הפוסט הזה, מן הסתם, מניח שאתם כבר מכירים את למת הניפוח, ולכן אצלול ישר לעומק הסיפור. אם אתם מאבדים אותי, נסו לקרוא שוב את הפוסט הקודם.</p>
+
+<p>הניסוח הכללי של הלמה לא קל לעיכול, אז בואו ניזכר לרגע מה קרה בניסוח הפשוט ואיך הגענו אליו. <span>$latex L$</span> מקיימת את הלמה אם קיים מספר טבעי <span>$latex n$</span> כך שכל מילה <span>$latex z\in L$</span> המקיימת <span>$latex \left|z\right|\ge n$</span> ניתנת לפירוק <span>$latex z=uvw$</span> כך ש-<span>$latex \left|uv\right|\le n$</span> ו-<span>$latex \left|v\right|\ge1$</span> ו-<span>$latex uv^{i}w\in L$</span> לכל <span>$latex i\ge0$</span>. למה זה עובד? כי לוקחים את <span>$latex n$</span> להיות מספר המצבים באוטומט עבור <span>$latex L$</span> ומסתכלים על ריצה שמקבלת את <span>$latex z$</span>. כבר אחרי <span>$latex n$</span> הצעדים הראשונים של הריצה יהיה מצב שחוזר על עצמו; מסמנים ב-<span>$latex u$</span> את מה שקראנו עד להגעה הראשונה למצב, ב-<span>$latex v$</span> את מה שקראנו כדי לעבור מהמצב אל עצמו, וב-<span>$latex w$</span> את יתר המילה. התנאי של ה-<span>$latex \left|uv\right|\le n$</span> נובע מכך שההגעה השניה שלנו למצב הזה היא במסגרת <span>$latex n$</span> הצעדים הראשונים.</p>
+
+<p>אם כן, הרכיב המרכזי בהוכחה הוא העניין הזה של “ביצעת יותר מ-<span>$latex n$</span> צעדים? קבל מעגל!”. הנקודה החשובה היא שזה בכלל <strong>לא חשוב</strong> מתי הצעדים הללו מתבצעים - בהתחלה, באמצע, בסוף, עם פער ביניהם, בלי פער ביניהם - אם ניקח את ריצת האוטומט על מילה, ו”נעצור כדי להציץ” את הריצה <span>$latex n+1$</span> פעמים, אז יהיו שתי הצצות כאלו לפחות שיראו שהאוטומט באותו מצב בדיוק (ב-<span>$latex n$</span> צעדים יש <span>$latex n+1$</span> “הצצות”: המצב בהתחלה והמצב אחרי כל צעד). אם זיהינו שתי הצצות שבהן האוטומט היה באותו מצב בדיוק, אז אפשר לקחת את <strong>כל הריצה בין שתיהן</strong> (לא רק את ההצצות בין שתיהן; את כל הריצה) ולשכפל אותה <span>$latex i$</span> פעמים.</p>
+
+<p>אז הנה ניסוח כללי יותר מאשר קודם: אם <span>$latex L$</span> רגולרית אז קיים <span>$latex n$</span> כך שלכל <span>$latex z\in L$</span> ולכל פירוק <span>$latex z=uv_{1}v_{2}\dots v_{n}w$</span> שלה כך ש-<span>$latex \left|v_{i}\right|\ge1$</span> לכל <span>$latex 1\le i\le n$</span>, קיימים זוג אינדקסים <span>$latex 0\le k_{1}&lt;k_{2}\le n$</span> כך ש-<span>$latex uv_{1}\dots\left(v_{k_{1}+1}\dots v_{k_{2}}\right)^{i}\dots v_{n}w\in L$</span> לכל <span>$latex i\ge0$</span>. זו בבירור הכללה של הלמה הרגילה: אם אני בוחר <span>$latex u=\varepsilon$</span> ו-<span>$latex v_{i}=z_{i}$</span> (כלומר, ה-<span>$latex v$</span>-ים הם בדיוק <span>$latex n$</span> האותיות הראשונות ב-<span>$latex z$</span>) אני אקבל את הלמה הרגילה (כאשר מי שאני קורא לו <span>$latex v$</span> בלמה הרגילה יהיו האותיות <span>$latex z_{k_{1}}\dots z_{k_{2}}$</span>).</p>
+
+<p>הניסוח הזה הוא <strong>עדיין</strong> לא אם ורק אם. כדי לקבל משהו שהוא אם ורק אם, צריך להוסיף עוד דבר אחד: במקום לדבר רק על המילים ב-<span>$latex z$</span>, צריך לדבר על <strong>כל</strong> המילים, כולל כאלו שאינן בשפה. הנה הניסוח הכללי ביותר, שהוא אם-ורק-אם:</p>
+
+<p>אם <span>$latex L$</span> רגולרית אז קיים <span>$latex n$</span> כך שלכל <span>$latex z$</span> ולכל פירוק <span>$latex z=uv_{1}v_{2}\dots v_{n}w$</span> שלה כך ש-<span>$latex \left|v_{i}\right|\ge1$</span> לכל <span>$latex 1\le i\le n$</span>, קיימים זוג אינדקסים <span>$latex 0\le k_{1}&lt;k_{2}\le n$</span> כך שלכל <span>$latex i\ge0$</span> מתקיים ש- <span>$latex z\in L\iff uv_{1}\dots\left(v_{k_{1}+1}\dots v_{k_{2}}\right)^{i}\dots v_{n}w\in L$</span>.</p>
+
+<p>במילים אחרות, עבור הפירוק הנתון, או ש<strong>כל</strong> הניפוחים שלו יהיו ב-<span>$latex L$</span>, או שאף אחד מהם לא יהיה ב-<span>$latex L$</span>. זה לא כל כך מפתיע שאם <span>$latex L$</span> רגולרית אז התכונה הזו מתקיימת: זכרו מה ניפוח עושה בפועל - הוא לוקח ריצה קיימת של אוטומט, ומשנה את מספר הפעמים שבהן אנחנו רצים על מקטע <strong>מיותר</strong> של הריצה - כזה שבתחילתו ובסופו אנחנו בדיוק באותו מצב, ולכן בין אם נשמוט אותו לגמרי ובין אם נחזור עליו אינספור פעמים - הריצה עצמה תישאר אותו דבר. המצב הסופי שנגיע אליו יהיה אותו דבר - או שהוא יהיה תמיד מקבל, או שהוא יהיה תמיד לא מקבל (אני מניח, כמובן, שהאוטומט שלנו דטרמיניסטי).</p>
+
+<p>מה שמעניין הוא שהתנאי הזה הוא גם <strong>מספיק</strong>, כלומר שאם הוא מתקיים, אז <span>$latex L$</span> רגולרית. ולמעשה, אפילו אפשר להחליש אותו קצת ולהתייחס רק למקרה שבו <span>$latex i=0$</span>. כלומר, הנה המשפט שאני רוצה להוכיח:</p>
+
+<p>בהינתן שפה <span>$latex L$</span>, אם קיים <span>$latex n$</span> כך שלכל <span>$latex z$</span> ולכל פירוק <span>$latex z=uv_{1}v_{2}\dots v_{n}w$</span> שלה כך ש-<span>$latex \left|v_{i}\right|\ge1$</span> לכל <span>$latex 1\le i\le n$</span>, קיימים זוג אינדקסים <span>$latex 0\le k_{1}&lt;k_{2}\le n$</span> כך שמתקיים <span>$latex z\in L\iff uv_{1}\dots v_{k_{1}}v_{k2+1}\dots v_{n}w\in L$</span>, אז <span>$latex L$</span> רגולרית.</p>
+
+<p>כאן <span>$latex uv_{1}\dots v_{k_{1}}v_{k2+1}\dots v_{n}w$</span> זו פשוט דרך קומפקטית לכתוב <span>$latex uv_{1}\dots\left(v_{k_{1}+1}\dots v_{k_{2}}\right)^{0}\dots v_{n}w$</span>.</p>
+
+<p>מעכשיו אקרא לדבר הזה “<strong>התכונה</strong>”. שימו לב שהתכונה הזו תלויה בפרמטר שמאפיין אותה - <span>$latex n$</span>. מכאן ואילך גם הוא יהיה קבוע.</p>
+
+<p>למה שהתכונה הזו תהיה שקולה לכך ששפה היא רגולרית? איך בכלל אפשר להראות שהשפה היא רגולרית? נבנה לה אוטומט? ובכן, לא. בואו ניזכר בקריטריון נטול אוטומטים לכך ששפה היא רגולרית: אם משפט מייהיל-נרוד חל עליה. כלומר, אם יש ליחס השקילות <span>$latex R_{L}$</span> רק מספר סופי של מחלקות שקילות, או באופן שקול - אם קיים רק מספר סופי של שפות מהצורה <span>$latex u^{-1}L$</span> (כזכור, <span>$latex u^{-1}L\triangleq\left\{ v\in\Sigma^{*}\ |\ uv\in L\right\} $</span> ).</p>
+
+<p>מה שהתכונה של למת הניפוח נותנת לנו הוא עוד משהו שהוא מעין-סופי שכזה. בניסוח מילולי התכונה אומרת “לכל מילה מאורך גדול מ-<span>$latex n$</span> אפשר למצוא מילה קצרה יותר כך ששתיהן ביחד ב-<span>$latex L$</span> או לא ב-<span>$latex L$</span>”. אם חוזרים על התהליך הזה מספיק פעמים מגיעים אל מילה מאורך לכל היותר <span>$latex n$</span> שגורלה זהה לגורל המילה המקורית שהתחלנו ממנה. זה אומר שהשפה <span>$latex L$</span> שלנו מאופיינת במובן מסויים על פי המילים עד גודל <span>$latex n$</span> ששייכות אליה. אם נצליח להוכיח ששתי שפות <strong>שונות </strong><span>$latex L_{1},L_{2}$</span> ששתיהן מקיימות את התכונה עבור אותו קבוע <span>$latex n$</span> לא יכולות להיות מאופיינות על ידי אותה קבוצה של מילים-עד-גודל <span>$latex n$</span>, נלמד מזה משהו מעניין מאוד: שיש רק מספר <strong>סופי</strong> של שפות שמקיימות את התכונה עבור <span>$latex n$</span> (אגב, אני מזהיר מראש שאני משקר כדי לתת לכם אינטואיציה: אלו לא “מילים-עד-גודל <span>$latex n$</span>” אלא “מילים-עד-גודל <span>$latex N$</span> שהוא מספר שונה לגמרי ועוד נבין בהמשך איך מגיעים אליו אבל סבלנות חברים”).</p>
+
+<p>זה מתווה לנו את האסטרטגיה להוכחה: השלב הראשון, הקל, יהיה להוכיח שאם <span>$latex L$</span> מקיימת את התכונה עבור הקבוע <span>$latex n$</span>, אז גם <span>$latex u^{-1}L$</span> מקיימת את התכונה עבור אותו קבוע <span>$latex n$</span>. השלב השני, הקשה יותר, יהיה להוכיח את מה שדיברתי עליו בפסקה הקודמת. אחרי שנסיים את שני השלבים הללו, משפט מייהיל-נרוד מסיים את העבודה: יש רק מספר סופי של שפות שמקיימות את התכונה עבור <span>$latex n$</span>, וכל <span>$latex u^{-1}L$</span> מקיימת את התכונה עבור <span>$latex n$</span>, אז יש רק מספר סופי של שפות מהצורה <span>$latex u^{-1}L$</span>.</p>
+
+<p>נתחיל עם השלב הקל. אנחנו מניחים ש-<span>$latex L$</span> מקיימת את התכונה עבור <span>$latex n$</span>. בואו ניקח <span>$latex u\in\Sigma^{*}$</span> כלשהו ונוכיח שגם <span>$latex u^{-1}L$</span> מקיימת את התכונה. כלומר, ניקח <span>$latex z\in u^{-1}L$</span> ופירוק <span>$latex z=xv_{1}v_{2}\dots v_{n}y$</span> של <span>$latex z$</span>. מה שאנחנו צריכים לעשות הוא למצוא זוג אינדקסים כך שאפשר להשמיט את ה-<span>$latex v$</span>-ים שביניהם ולקבל מילה ששקולה ל-<span>$latex z$</span> מבחינת שייכות ל-<span>$latex u^{-1}L$</span>.</p>
+
+<p>כעת, מכיוון ש-<span>$latex z\in u^{-1}L$</span>, נובע מכך ש-<span>$latex uz\in L$</span>. אז אפשר להשתמש בתכונה על <span>$latex uz$</span>: ניקח את הפירוק <span>$latex z=uxv_{1}\dots v_{n}y$</span> ונמצא שני אינדקסים <strong>עבורו</strong>. שימו לב כמה העסק פשוט - את ה-<span>$latex u$</span> שבתחילת המילה אנחנו דוחפים לאיזור של ה”לא מעניין, אין צורך למחוק מכאן דברים”, והכל ממשיך כרגיל. אנחנו מקבלים שקיימים <span>$latex k_{1},k_{2}$</span> כך ש-<span>$latex uz\in L\iff uxv_{1}\dots v_{k_{1}}v_{k2+1}\dots v_{n}y\in L$</span>; המסקנה המיידית היא ש-<span>$latex z\in u^{-1}L\iff xv_{1}\dots v_{k_{1}}v_{k2+1}\dots v_{n}y\in u^{-1}L$</span>, וזה מה שרצינו להראות. אז זה היה קל.</p>
+
+<p>בואו נעבור לחלק הקשה. בשביל החלק הקשה, אני הולך לשלוף שפן מהכובע: <strong>משפט רמזי</strong>. <a href="http://www.gadial.net/2011/08/03/ramsey_theorem/">יש לי פוסט בנושא</a>, אבל הנה הרעיון הבסיסי, בכמה ניסוחים, עבור מי שלא מכיר חלק מהטרמינולוגיות:</p>
+
+<p>לכל זוג מספרים <span>$latex r,s$</span> טבעיים קיים מספר <span>$latex R\left(r,s\right)$</span> כך שבכל קבוצה עם לפחות <span>$latex R\left(r,s\right)$</span> אנשים שכל זוג מביניהם הם או אויבים או חברים, קיימת קבוצה מגודל <span>$latex r$</span> שכולם בה חברים, או קבוצה מגודל <span>$latex s$</span> שכולם בה אויבים.</p>
+
+<p>לכל זוג מספרים <span>$latex r,s$</span> טבעיים קיים מספר <span>$latex R\left(r,s\right)$</span> כך שבכל גרף מלא עם לפחות <span>$latex R\left(r,s\right)$</span> שקשתותיו צבועות באדום או כחול, קיימת קבוצה של <span>$latex r$</span> צמתים שכל הקשתות ביניהם אדומות, או <span>$latex s$</span> צמתים שכל הקשתות ביניהם כחולות.</p>
+
+<p>לכל זוג מספרים <span>$latex r,s$</span> טבעיים קיים מספר <span>$latex R\left(r,s\right)$</span> כך שבכל גרף עם לפחות <span>$latex R\left(r,s\right)$</span> קודקודים קיים קליק מגודל <span>$latex r$</span> או קבוצה בלתי תלויה מגודל <span>$latex s$</span>. זה הניסוח שבו אני אשתמש בהמשך, ואני מקווה שהוא ברור עכשיו (קליק היא קבוצה של צמתים כך שבין כל זוג מביניהם קיימת קשת; קבוצה בלתי תלויה היא קבוצת צמתים כך שלכל זוג מביניהם אין קשת).</p>
+
+<p>יופי, איך זה קשור בכלל?</p>
+
+<p>בואו ניקח את <span>$latex N=R\left(n+1,n+1\right)$</span>. אני רוצה לטעון שאם יש לי שתי שפות <span>$latex L_{1},L_{2}$</span>, כך ש:</p>
+<ol>
+	<li><span>$latex L_{1},L_{2}$</span> מקיימות את התכונה עבור <span>$latex n$</span>.</li>
+	<li><span>$latex L_{1},L_{2}$</span> מסכימות על כל המילים עד גודל <span>$latex N-1$</span>, דהיינו <span>$latex \left\{ w\in L_{1}\ |\ \left|w\right|\le N-1\right\} =\left\{ w\in L_{2}\ |\ \left|w\right|\le N-1\right\} $</span>.</li>
+</ol>
+<p>אז מתקיים <span>$latex L_{1}=L_{2}$</span>. זה מסיים את ההוכחה, כי יש רק מספר סופי של קבוצות מילים עד גודל <span>$latex N-1$</span> (יש בדיוק <span>$latex 2^{N-1}$</span> כאלו).</p>
+
+<p>כלומר, אנחנו רוצים להוכיח ש-<span>$latex w\in L_{1}\iff w\in L_{2}$</span> לכל <span>$latex w\in\Sigma^{*}$</span>. ההוכחה תהיה באינדוקציה על האורך של <span>$latex w$</span>. הבסיס נתון לנו, עד <span>$latex \left|w\right|=N-1$</span>. לכן אפשר להניח ש-<span>$latex \left|w\right|\ge N$</span>. בואו נסמן את <span>$latex N-1$</span> האותיות הראשונות של <span>$latex w$</span> במפורש: <span>$latex w=a_{1}a_{2}\dots a_{N-1}w^{\prime}$</span>. עכשיו אפשר להגדיר את הגרף שעליו נפעיל את משפט רמזי שלנו. הצמתים יהיו פשוט המספרים <span>$latex V=\left\{ 0,2,\dots,N-1\right\} $</span> (ולכן הגרף גדול מספיק כדי שנוכל להפעיל עליו את משפט רמזי). הקשתות יהיו בין זוגות אינדקסים שעבורם התכונה של <span>$latex n$</span> מתקיימת ביחס ל-<span>$latex L_{1}$</span>, כלומר</p>
+
+<p><span>$latex E=\left\{ \left(i,j\right)\ |\ 0\le i&lt;j\le N-1,\ a_{1}a_{2}\dots a_{i}a_{j+1}\dots a_{N-1}w^{\prime}\in L_{1}\right\} $</span></p>
+
+<p>קרוב לודאי שאתם מרגישים שיש פה חוסר סימטריה מוזר - השתמשתי ב-<span>$latex L_{1}$</span>, אבל מה עם <span>$latex L_{2}$</span>? ובכן, שימו לב שהייתי יכול באותה מידה בדיוק להשתמש ב-<span>$latex L_{2}$</span> ולקבל את אותה <span>$latex E$</span>, <strong>בזכות הנחת האינדוקציה</strong> (כי אנחנו כבר משוכנעים ש-<span>$latex L_{1},L_{2}$</span> זהות על כל מילה ארוכה פחות מ-<span>$latex w$</span>).</p>
+
+<p>עכשיו אפשר להשתמש במשפט רמזי. נקבל שקיימת קבוצה <span>$latex U$</span> של <span>$latex n+1$</span> מספרים <span>$latex F=\left\{ i_{0},i_{1},\dots,i_{n}\right\} $</span>, כך שכל זוג מספרים מהקבוצה שייך ל-<span>$latex E$</span>, או שכל זוג מספרים מהקבוצה לא שייך ל-<span>$latex E$</span>.</p>
+
+<p>כעת סוף סוף אפשר להשתמש בנתון הנוסף שלנו, לפיו <span>$latex L_{1},L_{2}$</span> מקיימות את התכונה עבור <span>$latex n$</span>. אנחנו רוצים להשתמש בתכונה עבור <span>$latex w$</span>, כמובן, אבל בשביל זה אנחנו קודם כל צריכים להציג פירוק של <span>$latex w$</span>: הפירוק יתבסס על קבוצת האינדקסים שמשפט רמזי נתן לנו. נגדיר <span>$latex w=xv_{1}v_{2}\dots v_{n}y$</span> כך ש-<span>$latex v_{1}=a_{i_{0}}\dots a_{i_{1}}$</span> ו-<span>$latex v_{2}=a_{i_{1}}\dots a_{i_{2}}$</span> וכן הלאה עד <span>$latex v_{n}=a_{i_{n-1}}\dots a_{i_{n}}$</span>.</p>
+
+<p>עכשיו צריך להבדיל בין שני המקרים של משפט רמזי.</p>
+
+<p>במקרה הראשון, שבו כל זוג איברים מ-<span>$latex U$</span> מחוברים בקשת, אנחנו יודעים שלכל <span>$latex i&lt;j$</span> כך ש-<span>$latex i,j\in U$</span> נקבל ש-<span>$latex xv_{1}v_{2}\dots v_{i}\dots v_{j+1}\dots v_{n}\in L_{1}$</span> וגם <span>$latex xv_{1}v_{2}\dots v_{i}\dots v_{j+1}\dots v_{n}\in L_{2}$</span>. זו בעצם דרך “לסדר” את התכונה - התכונה הרי אומרת רק ש<strong>קיימים</strong> זוג אינדקסים שעבורם אנחנו מקבלים מילה שגורלה זהה לזה של <span>$latex w$</span>. עכשיו אנחנו אומרים שהמשחק הזה מכור מראש - לכל זוג אינדקסים שנבחר, התוצאה תהיה תמיד זהה - שייכות לשפה. רואים איך זה מסיים?</p>
+
+<p>עדיין, בואו נכתוב את זה באופן מפורש. מכיוון ש-<span>$latex L_{1}$</span> מקיימת את התכונה, קיימים <span>$latex k_{1},k_{2}$</span> כך ש-<span>$latex w\in L_{1}\iff xv_{1}\dots v_{k_{1}}\dots v_{k_{2}+1}\dots v_{n}\in L_{1}$</span>. מכיוון שאגף ימין מתקיים, אנחנו מקבלים ש-<span>$latex w\in L_{1}$</span>. באותו אופן בדיוק, מכיוון ש-<span>$latex L_{2}$</span> מקיימת את התכונה, קיימים <span>$latex t_{1},t_{2}$</span> (אולי <strong>שונים</strong> מ-<span>$latex k_{1},k_{2}$</span> - כל הפואנטה היא שזה לא משנה, בשביל זה היינו צריכים את רמזי) כך ש-<span>$latex w\in L_{2}\iff xv_{1}\dots v_{t_{1}}\dots v_{t_{2}+1}\dots v_{n}\in L_{2}$</span>, וקיבלנו שגם <span>$latex w\in L_{2}$</span>. המקרה השני של משפט רמזי הוא אותו הדבר, רק שנקבל הפעם ש-<span>$latex w\notin L_{1}$</span> וגם <span>$latex w\notin L_{2}$</span>. סך הכל קיבלנו את מה שרצינו: <span>$latex w\in L_{1}\iff w\in L_{2}$</span>. זה מסיים את ההוכחה.</p>
+
+<p>לא מגניב? מגניב. שימושי? שאלה טובה. רוצים להציע בתגובות שפות שקשה להוכיח שהן רגולריות אלא אם משתמשים בלמה הזו?</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2015/05/14/pumping_lemma_full" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

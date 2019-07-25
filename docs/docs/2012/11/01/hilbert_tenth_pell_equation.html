@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הבעיה העשירית של הילברט - איך משוואת פל קשורה לכל העניין? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הבעיה העשירית של הילברט - איך משוואת פל קשורה לכל העניין?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בואו נחזור לדבר על הבעיה העשירית של הילברט שעזבתי בשיא המתח - בדיוק לפני החלק הטכני ביותר, שנתחיל לטפל בו הפעם. תזכורת קטנה למי שאין לו כוח לקרוא את הפוסטים הקודמים: המטרה שלנו היא להוכיח שהפונקציה $latex f\left(n,k\right)=n^{k}$ - “הפונקציה האקספוננציאלית” - היא דיופנטית. כלומר, שקיימת מערכת של משוואות פולינומיות בשלמים עם המון משתנים ששלושה מהם הם $latex n,k,m$ כך שלכל הצבה של ערכים ב-$latex n,k,m$, יש פתרון למערכת המשוואות אם ורק אם $latex m=n^{k}$. אפשר, כמובן, להתחיל מלהציג את מערכת המשוואות הזו, אבל היא כוללת שתיים-עשרה משוואות ולא מעט משתנים וממבט ראשון לא יהיה ברור מה הולך שם בכלל, אז נחכה עם זה קצת בסבלנות. לפני כן נטפל בבעיה לכאורה לא קשורה, אבל כזו שתוביל אותנו כמעט ישירות אל הפונקציה האקספוננציאלית: משוואת פל." />
+<meta property="og:description" content="בואו נחזור לדבר על הבעיה העשירית של הילברט שעזבתי בשיא המתח - בדיוק לפני החלק הטכני ביותר, שנתחיל לטפל בו הפעם. תזכורת קטנה למי שאין לו כוח לקרוא את הפוסטים הקודמים: המטרה שלנו היא להוכיח שהפונקציה $latex f\left(n,k\right)=n^{k}$ - “הפונקציה האקספוננציאלית” - היא דיופנטית. כלומר, שקיימת מערכת של משוואות פולינומיות בשלמים עם המון משתנים ששלושה מהם הם $latex n,k,m$ כך שלכל הצבה של ערכים ב-$latex n,k,m$, יש פתרון למערכת המשוואות אם ורק אם $latex m=n^{k}$. אפשר, כמובן, להתחיל מלהציג את מערכת המשוואות הזו, אבל היא כוללת שתיים-עשרה משוואות ולא מעט משתנים וממבט ראשון לא יהיה ברור מה הולך שם בכלל, אז נחכה עם זה קצת בסבלנות. לפני כן נטפל בבעיה לכאורה לא קשורה, אבל כזו שתוביל אותנו כמעט ישירות אל הפונקציה האקספוננציאלית: משוואת פל." />
+<link rel="canonical" href="http://localhost:4000/blog/2012/11/01/hilbert_tenth_pell_equation" />
+<meta property="og:url" content="http://localhost:4000/blog/2012/11/01/hilbert_tenth_pell_equation" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-11-01T08:54:56+02:00" />
+<script type="application/ld+json">
+{"datePublished":"2012-11-01T08:54:56+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/11/01/hilbert_tenth_pell_equation"},"url":"http://localhost:4000/blog/2012/11/01/hilbert_tenth_pell_equation","description":"בואו נחזור לדבר על הבעיה העשירית של הילברט שעזבתי בשיא המתח - בדיוק לפני החלק הטכני ביותר, שנתחיל לטפל בו הפעם. תזכורת קטנה למי שאין לו כוח לקרוא את הפוסטים הקודמים: המטרה שלנו היא להוכיח שהפונקציה $latex f\\left(n,k\\right)=n^{k}$ - “הפונקציה האקספוננציאלית” - היא דיופנטית. כלומר, שקיימת מערכת של משוואות פולינומיות בשלמים עם המון משתנים ששלושה מהם הם $latex n,k,m$ כך שלכל הצבה של ערכים ב-$latex n,k,m$, יש פתרון למערכת המשוואות אם ורק אם $latex m=n^{k}$. אפשר, כמובן, להתחיל מלהציג את מערכת המשוואות הזו, אבל היא כוללת שתיים-עשרה משוואות ולא מעט משתנים וממבט ראשון לא יהיה ברור מה הולך שם בכלל, אז נחכה עם זה קצת בסבלנות. לפני כן נטפל בבעיה לכאורה לא קשורה, אבל כזו שתוביל אותנו כמעט ישירות אל הפונקציה האקספוננציאלית: משוואת פל.","headline":"הבעיה העשירית של הילברט - איך משוואת פל קשורה לכל העניין?","dateModified":"2012-11-01T08:54:56+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הבעיה העשירית של הילברט - איך משוואת פל קשורה לכל העניין?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-11-01T08:54:56+02:00" itemprop="datePublished">Nov 1, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בואו נחזור לדבר על הבעיה העשירית של הילברט ש<a href="http://www.gadial.net/2012/09/15/hilbert_tenth_sequence_function/">עזבתי בשיא המתח</a> - בדיוק לפני החלק הטכני ביותר, שנתחיל לטפל בו הפעם. תזכורת קטנה למי שאין לו כוח לקרוא את הפוסטים הקודמים: המטרה שלנו היא להוכיח שהפונקציה <span>$latex f\left(n,k\right)=n^{k}$</span> - “הפונקציה האקספוננציאלית” - היא דיופנטית. כלומר, שקיימת מערכת של משוואות פולינומיות בשלמים עם המון משתנים ששלושה מהם הם <span>$latex n,k,m$</span> כך שלכל הצבה של ערכים ב-<span>$latex n,k,m$</span>, יש פתרון למערכת המשוואות אם ורק אם <span>$latex m=n^{k}$</span>. אפשר, כמובן, להתחיל מלהציג את מערכת המשוואות הזו, אבל היא כוללת שתיים-עשרה משוואות ולא מעט משתנים וממבט ראשון לא יהיה ברור מה הולך שם בכלל, אז נחכה עם זה קצת בסבלנות. לפני כן נטפל בבעיה לכאורה לא קשורה, אבל כזו שתוביל אותנו כמעט ישירות אל הפונקציה האקספוננציאלית: <a href="http://www.gadial.net/2012/08/31/pell_equation/">משוואת פל</a>.</p>
+
+<p>כחלק מההכנה לפוסט הזה כתבתי פוסט על משוואת פל שאין צורך לחזור על כל מה שנאמר בו (מרטין דיוויס, במאמר על הבעיה העשירית של הילברט שאני מתבסס עליו, מוכיח מאפס את התכונות שהוא צריך באופן ישיר), אבל בואו נחזור על עיקרי הדברים הרלוונטיים. אם <span>$latex d$</span> הוא מספר טבעי שאינו ריבוע, אז משוואת פל עם הפרמטר <span>$latex d$</span> היא המשוואה <span>$latex x^{2}-dy^{2}=1$</span> (בפוסט שלי השתמשתי ב-<span>$latex N$</span> אבל עכשיו אני הולך לפי סגנון הכתיבה של דיוויס). מה שמעניין במשוואת פל הוא שלפתרונות שלה יש <strong>מבנה</strong> יפה במיוחד: קיים פתרון אחד שנקרא <strong>הפתרון היסודי</strong> ונסמן אותו בתור <span>$latex \left(x_{1},y_{1}\right)$</span>, כך שכל פתרון אחד מתקבל כמעין חזקה של הפתרון היסודי.</p>
+
+<p>ליתר דיוק, מה שעושים הוא להסתכל על המספר האלגברי <span>$latex x_{1}+\sqrt{d}y_{1}$</span> ולקחת את החזקות שלו, כלומר מגדירים <span>$latex x_{n}+\sqrt{d}y_{n}=\left(x_{1}+\sqrt{d}y_{1}\right)^{n}$</span>. למי שאין לו כוח להתעסק עם שורשים אפשר לעשות את זה גם באופן ישיר בצורה הבאה: אם <span>$latex \left(x_{n},y_{n}\right)$</span> ו-<span>$latex \left(x_{k},y_{k}\right)$</span> הם שני פתרונות של משוואת פל, אז אפשר לבנות מהם על ידי “כפל” פתרון חדש <span>$latex \left(x_{t},y_{t}\right)$</span> שנראה כך:</p>
+
+<p><span>$latex x_{t}=x_{n}x_{k}+dy_{n}y_{k}$</span></p>
+
+<p><span>$latex y_{t}=x_{n}y_{k}+x_{k}y_{n}$</span></p>
+
+<p>זוכרים משהו מזה? יפה. לא זוכרים? לא נורא, זה מה שצריך לזכור. בואו נעבור למה שדיוויס עושה. ראשית כל, <strong>למה</strong> הוא בכלל מתעניין במשוואת פל? ובכן, מצד אחד זו משוואה דיופנטית פשוטה - תנאי כמו <span>$latex x^{2}-dy^{2}=1$</span> אפשר לקודד עם האמצעים שמותר לנו להשתמש בהם. מצד שני, הקטע הזה של “כל פתרון הוא חזקה של הפתרון היסודי” מתנהג כמו, ובכן, חזקה. זהו ה”גשר” שאנו זקוקים לו בין משהו דיופנטי ומשהו אקספוננציאלי. לדעתי זה די מגניב שזה נעשה באמצעות משוואת פל.</p>
+
+<p>בשביל הצרכים שלו, דיוויס נזקק רק למשוואות פל מסוג מסויים: משוואות מהצורה <span>$latex x^{2}-dy^{2}=1$</span> (עד כאן הכל כרגיל) כך ש-<span>$latex d=a^{2}-1$</span>, עבור <span>$latex a&gt;1$</span> כלשהו. כלומר, המשוואות <span>$latex x^{2}-3y^{2}=1$</span>, <span>$latex x^{2}-8y^{2}=1$</span>, <span>$latex x^{2}-15y^{2}=1$</span> וכדומה (כזכור, אם <span>$latex d$</span> הוא ריבוע “ממש”, כלומר אם <span>$latex d=a^{2}$</span>, אז למשוואה אין פתרונות) למשוואות שבהן <span>$latex d=a^{2}-1$</span> קל מאוד לתת פתרון: <span>$latex x=a,y=1$</span> תמיד פותר את המשוואה, שהרי <span>$latex a^{2}-\left(a^{2}-1\right)1^{2}=a^{2}-a^{2}+1=1$</span>. האם זהו הפתרון היסודי, כלומר הפתרון שבעזרת “חזקות” שלו (ביחס לפעולת ה”כפל” שהצגתי למעלה) אפשר לקבל את כל שאר הפתרונות הלא טריוויאליים של המשוואה?</p>
+
+<p>כדי להוכיח את זה מספיק להוכיח שאם <span>$latex \left(x,y\right)$</span> הוא פתרון כלשהו של המשוואה, אז לא ייתכן שמתקיים <span>$latex 1&lt;x+y\sqrt{d}&lt;a+\sqrt{d}$</span>, כלמר אין פתרון למשוואה “בין” שני הפתרונות הבסיסיים <span>$latex \left(1,0\right)$</span> ו-<span>$latex \left(a,1\right)$</span>. זה מספיק כי אם <span>$latex a+\sqrt{d}&lt;x+y\sqrt{d}$</span>, אז בוודאי שגם <span>$latex a+\sqrt{d}&lt;\left(x^{2}+dy^{2}\right)+\left(xy+yx\right)$</span>, כלומר החזקה השניה של הפתרון <span>$latex \left(x,y\right)$</span> לא יכולה לתת את <span>$latex \left(a,1\right)$</span>, וגם החזקה השלישית וכן הלאה, מה שמאלץ את <span>$latex \left(a,1\right)$</span> להיות הפתרון היסודי.</p>
+
+<p>אם כן, בואו נניח בכשלילה ש-<span>$latex \left(x,y\right)$</span> הוא פתרון של המשוואה שגם מקיים <span>$latex 1&lt;x+y\sqrt{d}&lt;a+\sqrt{d}$</span>. כעת, מכיוון שמתקיים <span>$latex x^{2}-dy^{2}=1$</span> הרי שאפשר לפרק את הביטוי הזה ולקבל</p>
+
+<p><span>$latex \left(x-y\sqrt{d}\right)\left(x+y\sqrt{d}\right)=x^{2}-dy^{2}=1=a^{2}-d=\left(a-\sqrt{d}\right)\left(a+\sqrt{d}\right)$</span></p>
+
+<p>בואו נחלק את שני האגפים ב-<span>$latex x+y\sqrt{d}$</span>. נקבל:</p>
+
+<p><span>$latex x-y\sqrt{d}=a-\sqrt{d}\cdot\frac{a+\sqrt{d}}{x+y\sqrt{d}}&gt;a-\sqrt{d}$</span></p>
+
+<p>כי הרי הביטוי <span>$latex \frac{a+\sqrt{d}}{x+y\sqrt{d}}$</span> הוא גדול מ-1 אם מניחים ש-<span>$latex x+y\sqrt{d}&lt;a+\sqrt{d}$</span>. עכשיו, נכפול את שני האגפים במינוס 1, הסימן של אי השוויון יתהפך ולבסוף נקבל:</p>
+
+<p><span>$latex -x+y\sqrt{d}&lt;-a+\sqrt{d}$</span></p>
+
+<p>אם נחבר את זה לאי השוויון <span>$latex x+y\sqrt{d}&lt;a+\sqrt{d}$</span> נקבל בסופו של דבר ש-<span>$latex 2y\sqrt{d}&lt;2\sqrt{d}$</span>, כלומר <span>$latex y&lt;1$</span>. זה לכשעצמו עדיין לגיטימי - אולי <span>$latex y$</span> שלילי, או אפס? לכן אנו נזקקים לעוד תעלול. נשים לב לכך שעל פי הנחתנו, <span>$latex x+y\sqrt{d}&gt;1$</span> ולכן <span>$latex \left(x-y\sqrt{d}\right)=\frac{1}{x+y\sqrt{d}}&lt;1$</span>, ולכן <span>$latex -x+y\sqrt{d}&gt;-1$</span>, ואם נחבר את זה ל-<span>$latex 1&lt;x+y\sqrt{d}$</span> נקבל ש-<span>$latex 0&lt;y$</span>, כלומר <span>$latex 0&lt;y&lt;1$</span>, כלומר <span>$latex y$</span> בכלל לא מספר שלם, אבל רק מספרים שלמים הם פתרונות חוקיים של משוואת פל. זה מסיים את הסיפור. אני מודה, ההוכחה הזו היא לא הדבר הכי יפה בעולם.</p>
+
+<p>עכשיו, משאנחנו יודעים מהו הפתרון היסודי, אפשר לתת סימון כללי לשאר הפתרונות החיוביים. מכיוון שהמשוואה שלנו תלויה גם ב-<span>$latex d$</span>, אבל את <span>$latex d$</span> כתבנו בתור <span>$latex a^{2}-1$</span>, אנחנו משתמשים ב-<span>$latex x_{n}\left(a\right)$</span> ו-<span>$latex y_{n}\left(a\right)$</span> כדי לתאר את הפתרונות. פורמלית הסדרות הללו מוגדרות כך: <span>$latex x_{0}\left(a\right)=1,y_{0}\left(a\right)=0$</span>, ובאופן אינדוקטיבי:</p>
+
+<p><span>$latex x_{n+1}\left(a\right)=ax_{n}\left(a\right)+dy_{n}\left(a\right)$</span></p>
+
+<p><span>$latex y_{n+1}\left(a\right)=ay_{n}\left(a\right)+x_{n}\left(a\right)$</span></p>
+
+<p>או בצורה טיפה יותר אלגנטית אבל לא מפורשת, <span>$latex x_{n}\left(a\right)+y_{n}\left(a\right)\sqrt{d}=\left(a+\sqrt{d}\right)^{n}$</span>. אבחנה חביבה של דיוויס בנקודה הזו היא שהנוסחה הזו דומה באופיה לנוסחת אוילר, <span>$latex \cos\theta+i\sin\theta=e^{i\theta}$</span>. כאן <span>$latex \cos$</span> מיוצג על ידי <span>$latex x_{n}\left(a\right)$</span>, <span>$latex \sin$</span> מיוצג על ידי <span>$latex y_{n}\left(a\right)$</span>, במקום <span>$latex i$</span> יש לנו את <span>$latex \sqrt{d}$</span> ובמקום <span>$latex e^{i}$</span> יש לנו את <span>$latex a+\sqrt{d}$</span>. דיוויס מצביע על כך שניתן להשתמש בייצוג המעריכי הזה כדי לקבל בקלות נוסחאות לחיבור וחיסור (למעשה, כבר יש לנו את הנוסחה לחיבור…) שמזכירות את הנוסחאות המקבילות מטריגו - ושוב, לא במקרה! הדרך הכי טובה לפתח את הנוסחאות מטריגו היא לעבור דרך נוסחת אוילר שפשוט נותנת לנו אותן במתנה. אני מציע לכם לשחק קצת עם המשוואות ולהוכיח את הנוסחאות הללו לעצמכם בדרך הזו:</p>
+
+<p><span>$latex x_{m\pm n}=x_{m}x_{n}\pm dy_{m}y_{n}$</span></p>
+
+<p><span>$latex y_{m\pm n}=x_{n}y_{m}\pm x_{m}y_{n}$</span></p>
+
+<p>שימו לב שכבר התעצלתי מלכתוב את ה-<span>$latex \left(a\right)$</span> אחרי ה-<span>$latex x_{n},y_{n}$</span> וכך גם אמשיך לעשות בהמשך אם זהותו המדויקת של ה-<span>$latex a$</span> לא רלוונטית באותו רגע או ברורה מההקשר.</p>
+
+<p>עכשיו בואו ננסה להבין כמה תכונות תורת-מספריות של הפתרונות הללו שיהיו חשובות בהמשך. <strong>אני מזהיר מראש</strong> - מכאן ועד סוף הפוסט לא תהיה שום תובנה מהותית לגבי מה לעזאל הולך כאן. רק אוסף של הרבה תכונות, כולן פשוטות בפני עצמן, שבהן נשתמש בצורה אינטנסיבית בפוסט הבא, שבו סוף סוף נדבר על איך מוכיחים שהפונקציה האקספוננציאלית היא דיופנטית. אתם יכולים לדלג על המשך הפוסט אלא אם אתם רוצים (כמוני) לוודא שאתם מבינים את כל מה שהולך בהוכחה הזו.</p>
+
+<p>בתור התחלה, <span>$latex x_{n},y_{n}$</span> הם <strong>זרים</strong> - אין להם מחלק משותף חיובי גדול מ-1. זה מסומן בתור <span>$latex \left(x_{n},y_{n}\right)=1$</span>. למה? פשוט: אם <span>$latex d$</span> חיובי מחלק את <span>$latex x_{n}$</span> ואת <span>$latex y_{n}$</span> אז הוא בוודאי מחלק גם את <span>$latex x_{n}^{2}$</span> ואת <span>$latex dy_{n}^{2}$</span> ולכן גם מחלק את ההפרש ביניהם, שהוא 1. אם <span>$latex d$</span>הוא חיובי ומחלק את 1, הוא בהכרח 1 בעצמו.</p>
+
+<p>קצת יותר מעניינת הטענה ש-<span>$latex y_{n}$</span> מחלק את <span>$latex y_{nk}$</span>. זה מן הסתם נכון עבור <span>$latex k=1$</span> אבל לערכים גדולים יותר יש צורך להוכיח זאת באינדוקציה, בעזרת נוסחת החיבור שלנו:</p>
+
+<p><span>$latex y_{n\left(k+1\right)}=y_{nk+n}=x_{n}y_{nk}+x_{nk}y_{n}$</span></p>
+
+<p>מהנחת האינדוקציה עולה ש-<span>$latex y_{n}$</span> מחלק את <span>$latex y_{nk}$</span> ולכן את <span>$latex x_{n}y_{nk}$</span>, וברור שהוא מחלק את <span>$latex x_{nk}y_{n}$</span>, ולכן קיבלנו ש-<span>$latex y_{n}$</span> מחלק את <span>$latex y_{n\left(k+1\right)}$</span>. האם יש עוד איברים בסדרת ה-<span>$latex y$</span>-ים אותם <span>$latex y_{n}$</span> יכול לחלק? מסתבר שלא. נניח ש-<span>$latex y_{n}$</span> מחלק את <span>$latex y_{t}$</span> אבל <span>$latex n$</span> לא מחלק את <span>$latex t$</span>. אז אפשר לחלק אותם עם שארית, כלומר לכתוב <span>$latex t=qn+r$</span> כאשר <span>$latex 0&lt;r&lt;n$</span> היא השארית. נקבל: <span>$latex y_{t}=x_{r}y_{nq}+x_{nq}y_{r}$</span>. אם <span>$latex y_{n}$</span> מחלק את הביטוי הזה, אז מכיוון שאנו יודעים שהוא מחלק את <span>$latex y_{nq}$</span> נקבל שהוא חייב לחלק את <span>$latex x_{nq}y_{r}$</span>. כעת, <span>$latex \left(y_{nq},x_{nq}\right)=1$</span> ולכן לא ייתכן ש-<span>$latex y_{n}$</span> יחלק את <span>$latex x_{nq}$</span>, אחרת הוא היה גורם משותף שלו ושל <span>$latex y_{nq}$</span>. לכן בהכרח <span>$latex y_{n}$</span> מחלק את <span>$latex y_{r}$</span>, אבל זה בלתי אפשרי כי <span>$latex y_{n}&gt;y_{r}$</span>! סוף הסיפור.</p>
+
+<p>אתם בוודאי תוהים לאן אני חותר עם כל התכונות הללו. המטרה היא למצוא משהו שאפשר לקודד דיופנטית איכשהו ויאפשר לנו לאפיין את הסדרות <span>$latex x_{n},y_{n}$</span> במדויק. הכיוון המבטיח ביותר הוא תכונות של הסדרות הללו מודולו משהו. כזכור, <span>$latex a\equiv_{n}b$</span> פירושו ש-<span>$latex n$</span> מחלק את <span>$latex a-b$</span> (ובמילים אחרות, שהשארית של חלוקת <span>$latex a$</span> ו-<span>$latex b$</span> ב-<span>$latex n$</span> היא זהה). הנה דוגמה ראשונה לתכונת מודולו:</p>
+
+<p><span>$latex y_{nk}\equiv_{y_{n}^{3}}kx_{n}^{k-1}y_{n}$</span></p>
+
+<p>טוב, במבט ראשון המשוואה הזו נראית מונפצת לגמרי. איך בכלל הגיעו אליה? התשובה היא שמישהו כנראה ניסה, על מנת להבין את הסדרות <span>$latex x_{n},y_{n}$</span>, לשחק איתן כמה שיותר. הוא כנראה הסתכל על האיבר <span>$latex x_{nk}+y_{nk}\sqrt{d}=\left(x_{n}+y_{n}\sqrt{d}\right)^{k}$</span> ושאל את עצמו - הממ, מה יקרה אם פשוט נפתח את הסוגריים באמצעות הבינום של ניוטון (הדרך ה”רגילה” לפתוח סוגריים שכאלה)? התשובה היא שנקבל:</p>
+
+<p><span>$latex \left(x_{n}+y_{n}\sqrt{d}\right)^{k}=\sum_{i=0}^{k}{k \choose i}x_{n}^{k-i}\left(y_{n}\sqrt{d}\right)^{i}=\sum_{i=0}^{k}{k \choose i}x_{n}^{k-i}y_{n}^{i}d^{\frac{i}{2}}$</span></p>
+
+<p>שימו לב ל-<span>$latex d^{\frac{i}{2}}$</span>. עבור הערכים הזוגיים של <span>$latex i$</span> זהו מספר טבעי, ולכן כל הגורם <span>$latex {k \choose i}x_{n}^{k-i}y_{n}^{i}d^{\frac{i}{2}}$</span> יתרום ל-<span>$latex x_{nk}$</span> במקרה הזה. עבור <span>$latex i$</span> אי זוגי נקבל <span>$latex \sqrt{d}$</span> בחזקת משהו אי זוגי, ולכן כל הגורם יתרום ל-<span>$latex y_{nk}\sqrt{d}$</span>. אם נחלק ב-<span>$latex \sqrt{d}$</span> את שני האגפים נקבל שהגורם הזה תורם <span>$latex {k \choose i}x_{n}^{k-i}y_{n}^{i}d^{\frac{i-1}{2}}$</span> ל-<span>$latex y_{nk}$</span>. לכן קיבלנו:</p>
+
+<p><span>$latex y_{nk}=\sum_{\begin{array}{c}i=1\\i\mbox{ odd}\end{array}}^{k}{k \choose i}x_{n}^{k-i}y_{n}^{i}d^{\frac{i-1}{2}}$</span></p>
+
+<p>עכשיו משתמשים בתעלול שמשתמשים בו כל הזמן בתורת המספרים (תצטרכו להאמין לי). שמים לב לכך שפרט לאיבר הראשון בסכום, זה שמתקבל עבור <span>$latex i=1$</span>, עבור כל שאר האיברים מתקיים <span>$latex i\ge3$</span> ולכן <span>$latex y_{n}^{3}$</span> מחלק את כולם, ולכן מודולו <span>$latex y_{n}^{3}$</span> הם נעלמים (זו הסיבה שבגללה בוחרים <span>$latex y_{n}^{3}$</span> דווקא - כדי שהמודולוס יהיה גדול יחסית ועדיין יישאר לנו ביטוי פשוט יחסית. לכן נישאר רק עם האיבר הראשון:</p>
+
+<p><span>$latex y_{nk}\equiv_{y_{n}^{3}}{k \choose 1}x_{n}^{k-1}y_{n}=kx_{n}^{k-1}y_{n}$</span></p>
+
+<p>פתאום הביטוי הזה כבר לא נראה מפחיד כל כך. לפחות לא בשבילי. כמובן, עדיין לא ברור בשביל מה הוא טוב. אז הנה המסקנה המיידית שלו: מה קורה אם במשוואה שקיבלנו נציב <span>$latex k=y_{n}$</span>? נקבל מייד</p>
+
+<p><span>$latex y_{ny_{n}}\equiv_{y_{n}^{3}}y_{n}x_{n}^{y_{n}-1}y_{n}=y_{n}^{2}x_{n}^{y_{n}-1}$</span></p>
+
+<p>שזה אומר, בצורה הכי מפורשת שרק אפשר, ש-<span>$latex y_{ny_{n}}-y_{n}^{2}x_{n}^{y_{n}-1}=\alpha\cdot y_{n}^{3}$</span>, כאשר <span>$latex \alpha$</span> הוא מספר שלם לא מעניין כלשהו. נעביר אגפים, נוציא גורם משותף, ונקבל:</p>
+
+<p><span>$latex y_{ny_{n}}=y_{n}^{2}\left(x_{n}^{y_{n}-1}+\alpha y_{n}\right)$</span></p>
+
+<p>כלומר, המסקנה שלנו היא ש-<span>$latex y_{n}^{2}$</span> מחלק את <span>$latex y_{ny_{n}}$</span>. עוד תכונת התחלקות של הסדרה <span>$latex y_{n}$</span>! כמו בתכונת ההתחלקות הקודמת, אנחנו גם רוצים להבין מה קורה בכיוון ההפוך. כלומר, אם <span>$latex y_{n}^{2}$</span> מחלק <span>$latex y_{t}$</span> כלשהו, אז מה אפשר לדעת על <span>$latex t$</span>? במקרה שלנו אפשר להוכיח שבהכרח <span>$latex y_{n}$</span> מחלק את <span>$latex t$</span>. למה? טוב, ראשית, אם <span>$latex y_{n}^{2}$</span> מחלק את <span>$latex y_{t}$</span> אז בוודאי שגם <span>$latex y_{n}$</span> מחלק אותו, וכבר ראינו שזה גורר ש-<span>$latex n$</span> מחלק את <span>$latex t$</span>, כלומר אפשר לכתוב <span>$latex t=nk$</span>. עכשיו, <span>$latex y_{t}=y_{nk}\equiv_{y_{n}^{3}}kx_{n}^{k-1}y_{n}$</span>, ולכן בגלל ש-<span>$latex y_{n}^{2}$</span> מחלק את <span>$latex y_{t}$</span> נקבל שהוא מחלק גם את <span>$latex kx_{n}^{k-1}y_{n}$</span>, כלומר <span>$latex y_{n}$</span> מחלק את <span>$latex kx_{n}^{k-1}$</span>. כמו כן, <span>$latex \left(y_{n},x_{n}\right)=1$</span> ולכן <span>$latex y_{n}$</span> מחלק את <span>$latex k$</span>, אבל <span>$latex t=nk$</span> ולכן <span>$latex y_{n}$</span> מחלק את <span>$latex t$</span> - סיימנו.</p>
+
+<p>לעצור. לנשום עמוק. אני כרגע יכול לראות רק “מחלק… מחלק… מחלק…” בכל מקום. זה לא שמשהו עד כה היה מסובך במיוחד אבל זה ים של פרטים שלא ברור עדיין לאן הם מובילים. קצת סבלנות ונגיע.</p>
+
+<p>בואו נעבור לדבר עכשיו על משהו קצת שונה שקשור לסדרות <span>$latex x_{n},y_{n}$</span> - אפשר להציג אותן גם באמצעות נוסחת נסיגה. בפרט:</p>
+
+<p><span>$latex x_{n+1}=2ax_{n}-x_{n-1}$</span></p>
+
+<p><span>$latex y_{n+1}=2ay_{n}-y_{n-1}$</span></p>
+
+<p>ההוכחה כמעט מיידית באמצעות הנוסחאות שלנו ל-<span>$latex x_{n\pm m}$</span> ו-<span>$latex y_{n\pm m}$</span> ואתם מוזמנים לנסות ולמצוא אותה בעצמכם.</p>
+
+<p>מה שנחמד בנוסחאות הנסיגה הללו הוא שהן מאפשרות להוכיח טענות על הסדרות <span>$latex x_{n},y_{n}$</span> אינדוקטיבית. למשל, בואו נוכיח ש-<span>$latex y_{n}\equiv_{a-1}n$</span>: ראשית כל בודקים ישירות שזה מתקיים עבור <span>$latex n=0,1$</span>, ושנית:</p>
+
+<p><span>$latex y_{n+1}=2ay_{n}-y_{n-1}\equiv_{a-1}2n-\left(n-1\right)=n+1$</span> (השתמשתי כאן בכך ש-<span>$latex a\equiv_{a-1}1$</span>)</p>
+
+<p>כמו כן, וזה כבר מעניין למדי, אם <span>$latex a\equiv_{c}b$</span> אז לכל <span>$latex n$</span> מתקיים ש-<span>$latex x_{n}\left(a\right)\equiv_{c}x_{n}\left(b\right)$</span> ו-<span>$latex y_{n}\left(a\right)\equiv_{c}y_{n}\left(b\right)$</span>. גם ההוכחה פה היא מיידית מתוך נוסחת הנסיגה, כאשר המקרים <span>$latex n=0,1$</span>טריוויאליים (מבחן - היכן אנו משתמשים שם בכך ש-<span>$latex a\equiv_{c}b$</span>?). בכל הנוגע לצעד:</p>
+
+<p><span>$latex y_{n+1}\left(a\right)=2ay_{n}\left(a\right)-y_{n-1}\left(a\right)\equiv_{c}2by_{n}\left(b\right)-y_{n-1}\left(b\right)=y_{n+1}\left(b\right)$</span></p>
+
+<p>ואותו דבר בדיוק עבור <span>$latex x_{n}$</span>.</p>
+
+<p>עוד שעשוע הוא להיווכח בכך ש-<span>$latex y_{n}$</span> הוא זוגי עבור <span>$latex n$</span> זוגי, ואי זוגי עבור <span>$latex n$</span> אי זוגי. את זה אפשר להסיק מהסתכלות על נוסחת הנסיגה מודולו 2:</p>
+
+<p><span>$latex y_{n+1}=2ay_{n}-y_{n-1}\equiv_{2}y_{n-1}$</span></p>
+
+<p>ובגלל ש-<span>$latex y_{0}$</span> זוגי ו-<span>$latex y_{1}$</span> אי זוגי התוצאה נובעת.</p>
+
+<p>רוצים עוד משהו? לא? ובכן, אין לכם ברירה. התוצאה הבאה היא באמת משהו שנראה הזוי לחלוטין ממבט ראשון ולא ברור מאיפה זה הגיע (ועד לשלב מתקדם יותר גם לא נבין מה עושים עם זה):</p>
+
+<p><span>$latex x_{n}\left(a\right)-y_{n}\left(a\right)\left(a-y\right)\equiv_{2ay-y^{2}-1}y^{n}$</span></p>
+
+<p>מי זה <span>$latex y$</span>? מספר כלשהו. אז למה דווקא לסמן אותו ב-<span>$latex y$</span>? כדי לדבוק בסימונים של דיוויס.</p>
+
+<p>ההוכחה, כרגיל, דורשת קודם כל לבדוק את המקרה של <span>$latex n=0,1$</span>. בואו נעשה את זה במפורש הפעם:</p>
+
+<p><span>$latex x_{0}\left(a\right)-y_{0}\left(a\right)\left(a-y\right)=1-0\left(a-y\right)=1\equiv_{2ay-y^{2}-1}y^{0}$</span></p>
+
+<p><span>$latex x_{1}\left(a\right)-y_{1}\left(a\right)\left(a-y\right)=a-1\left(a-y\right)=y\equiv_{2ay-y^{2}-1}y^{1}$</span></p>
+
+<p>ועכשיו נמשיך אינדוקטיבית:</p>
+
+<p><span>$latex x_{n+1}\left(a\right)-y_{n+1}\left(a\right)\left(a-y\right)=2a\left[x_{n}\left(a\right)-y_{n}\left(a-y\right)\right]-\left[x_{n-1}\left(a\right)-y_{n-1}\left(a-y\right)\right]\equiv_{2ay-y^{2}-1}2ay^{n}-y^{n-1}$</span></p>
+
+<p>עוד לא סיימנו:</p>
+
+<p><span>$latex 2ay^{n}-y^{n-1}=y^{n-1}\left(2ay-1\right)\equiv_{2ay-y^{2}-1}y^{n-1}y^{2}=y^{n+1}$</span></p>
+
+<p>לב העניין כאן הוא המעבר <span>$latex \left(2ay-1\right)\equiv_{2ay-y^{2}-1}y^{2}$</span> - ודאו שאתם מבינים למה הוא נכון.</p>
+
+<p>עכשיו בואו נבין משהו על קצב הגידול של <span>$latex x_{n},y_{n}$</span>. נתחיל מ-<span>$latex y_{n}$</span>. כזכור, <span>$latex y_{n+1}=y_{n}x_{1}+y_{1}x_{n}=ay_{n}+x_{n}$</span>, ולכן <span>$latex y_{n+1}&gt;ay_{n}$</span> - בפרט אפשר להסיק ש-<span>$latex y_{n}$</span> חיובי לכל <span>$latex n$</span> (לא נצטרך יותר מזה).</p>
+
+<p>בכל הנוגע ל-<span>$latex x_{n}$</span>, יש לנו את הנוסחה <span>$latex x_{n+1}=x_{n}x_{1}+dy_{n}y_{1}=ax_{n}+dy_{n}$</span>. אז <span>$latex x_{n+1}&gt;ax_{n}$</span> לכל <span>$latex n$</span>, ולכן אפשר להראות באינדוקציה ש-<span>$latex x_{n}\ge a^{n}$</span>, כלומר הסדרה גדלה בקצב שהוא לפחות אקספוננציאלי. זה חסם מלמטה, אבל האם אפשר לחסום גם מלמעלה? ובכן, בקלות, עם נוסחת הנסיגה של <span>$latex x_{n}$</span>: <span>$latex x_{n+1}=2ax_{n}-x_{n-1}\le2ax_{n}$</span> ולכן <span>$latex x_{n}\le\left(2a\right)^{n}$</span>.</p>
+
+<p>עוד טיפה וסיימנו. התכונה הבאה נראית מוזר למדי במבט ראשון:</p>
+
+<p><span>$latex x_{2n\pm i}\equiv_{x_{n}}-x_{i}$</span></p>
+
+<p>אין כאן יותר מאשר שימוש בהגדרה:</p>
+
+<p><span>$latex x_{2n\pm i}=x_{n}x_{n\pm i}+dy_{n}y_{n\pm i}\equiv_{x_{n}}dy_{n}\left(y_{n}x_{i}\pm x_{n}y_{i}\right)\equiv_{x_{n}}dy_{n}^{2}x_{i}=\left(x_{n}^{2}-1\right)x_{i}\equiv_{x_{n}}-1$</span></p>
+
+<p>כאן השתמשנו בכך ש-<span>$latex x_{n}^{2}-dy_{n}^{2}=1$</span>, ולכן <span>$latex dy_{n}^{2}=x_{n}^{2}-1$</span>.</p>
+
+<p>מסקנה מיידית היא ש-<span>$latex x_{4n\pm i}\equiv_{x_{n}}x_{i}$</span>, כי <span>$latex x_{4n\pm i}=x_{2n+\left(2n\pm i\right)}\equiv_{x_{n}}-x_{2n\pm i}\equiv_{x_{n}}x_{i}$</span>.</p>
+
+<p>עכשיו לתוצאה שההוכחה שלה תהיה טיפה יותר ארוכה, אבל כבר נראית די מעניינת: אם <span>$latex x_{i}\equiv_{x_{n}}x_{j}$</span> כך ש-<span>$latex i\le j\le2n$</span> ו-<span>$latex n&gt;0$</span> אז <span>$latex i=j$</span> למעט המקרה <span>$latex a=2,n=1,i=0,j=2$</span>. זה מעניין כי זה מראה שאפשר לזהות בצורה ייחודית, בערך, איברים ב-<span>$latex x_{n}\left(a\right)$</span> על פי תכונות התחלקות שלהם, וזה משהו שאפשר לקודד דיופנטית, בערך.</p>
+
+<p>בדרך כלל כשמדברים על חישובים מודולו <span>$latex n$</span> (ל-<span>$latex n$</span> כלשהו) אנו מסתכלים על הקבוצה <span>$latex \left\{ 0,1,2,\dots,n-1\right\} $</span> ועושים בה את החשבון. אבל בתיאוריה יכלנו לעבוד גם עם הקבוצה <span>$latex \left\{ -1,0,\dots,n-2\right\} $</span> או עם הרבה קבוצות אחרות - העיקר הוא רק למצוא קבוצה שבה אין שני מספרים ששקולים מודולו <span>$latex n$</span>, ויש נציג לכל מחלקת שקילות מודולו <span>$latex n$</span> (בניסוח פשוט, לכל מספר בין <span>$latex 0$</span> ל-<span>$latex n-1$</span> יש בקבוצה איבר ששקול לו מודולו <span>$latex n$</span>). בתורת המספרים לעתים מאוד נוח לעבוד עם קבוצת נציגים שאיננה <span>$latex \left\{ 0,1,\dots,n-1\right\} $</span> אלא כוללת בחציה מספרים שליליים, כאילו הזזנו את הקבוצה <span>$latex \left\{ 0,1,\dots,n-1\right\} $</span> מרחק של חצי <span>$latex n$</span> בערך. כאשר <span>$latex n$</span> אי זוגי אין כזה דבר, “חצי <span>$latex n$</span>”, אבל אפשר לדבר על המספר <span>$latex q=\frac{n-1}{2}$</span> שהוא מספר שלם, ואז להתבונן על קבוצת הנציגים <span>$latex \left\{ -q,-q+1,\dots,-1,0,1,\dots,q\right\} $</span> שכוללת בדיוק <span>$latex q$</span> מספרים חיוביים, <span>$latex q$</span> מספרים שליליים ואת <span>$latex 0$</span>, כלומר <span>$latex 2q+1=n$</span> מספרים, ומכיוון שהם כולם ברצף ההפרש בין אף זוג שלהם לא יכול להתחלק ב-<span>$latex n$</span> (ההפרש המקסימלי הוא <span>$latex q-\left(-q\right)=2q=n-1$</span>). כלומר, זו אכן קבוצת נציגים לגיטימית. כפי שאמרתי, לעתים נוח יותר לעבוד עם הקבוצה הזו וכך גם נעשה עכשיו.</p>
+
+<p>אז בואו נניח ש-<span>$latex x_{n}$</span> הוא אי זוגי וניקח את אוסף השאריות מ-<span>$latex -q$</span> עד <span>$latex q$</span> כאשר <span>$latex q=\frac{x_{n}-1}{2}$</span>. עכשיו, בואו נסתכל לרגע במספרים <span>$latex x_{0},x_{1},x_{2},\dots,x_{n-1}$</span>. ראשית, יש בדיוק <span>$latex n$</span> כאלו. שנית, זו סדרה עולה: <span>$latex 1=x_{0}&lt;x_{1}&lt;x_{2}&lt;\dots&lt;x_{n-1}&lt;x_{n}$</span> וזאת בגלל נוסחת הנסיגה שמגדירה את ה-<span>$latex x_{n}$</span>-ים. זה בפרט אומר שכל ה-<span>$latex x_{i}$</span>-ים הללו שונים זה מזה מודולו <span>$latex x_{n}$</span> (למה?). כעת, אפשר לחסום את הגודל של האיבר המקסימלי בסדרה: אנחנו יודעים ש-<span>$latex x_{n}=ax_{n-1}+dy_{n-1}\ge ax_{n-1}$</span> ולכן <span>$latex x_{n-1}\le\frac{x_{n}}{a}\le\frac{x_{n}}{2}$</span>. נובע מזה ש-<span>$latex x_{n-1}\le q$</span> (כי <span>$latex x_{n-1}$</span> הוא שלם ואילו <span>$latex q$</span> הוא הערך השלם התחתון של <span>$latex \frac{x_{n}}{2}$</span>). במילים אחרות, ה-<span>$latex x_{i}$</span>-ים מתאימים <strong>לשאריות חיוביות</strong> בתוך הקבוצה <span>$latex \left\{ -q,-q+1,\dots,-1,0,1,\dots,q\right\} $</span>.</p>
+
+<p>בואו נסתכל עכשיו על המספרים ש<strong>מעבר</strong> ל-<span>$latex x_{n}$</span>: <span>$latex x_{n+1},x_{n+2},\dots,x_{2n}$</span>. לפני רגע ראינו את התכונה <span>$latex x_{2n\pm i}\equiv_{x_{n}}-x_{i}$</span> ועכשיו היא תועיל לנו: היא אומרת שהסדרה <span>$latex x_{n+1},x_{n+2},\dots,x_{2n}$</span> שקולה מודולו <span>$latex x_{n}$</span> לסדרה <span>$latex -x_{n-1},-x_{n-2},\dots,-x_{0}$</span>. מכיוון שה-<span>$latex x_{i}$</span>-ים התאימו לשאריות חיוביות, זה אומר שה-<span>$latex x_{n+i}$</span>-ים מתאימים לשאריות <strong>שליליות</strong> בתוך הקבוצה <span>$latex \left\{ -q,-q+1,\dots,-1,0,1,\dots,q\right\} $</span>. השאריות החיוביות והשליליות בקבוצה לא שקולות זו לזו, ולכן קיבלנו שכל ה-<span>$latex x_{i}$</span>-ים עד <span>$latex i\le2n$</span> לא שקולים האחד לשני (אם אתם עדיין לא משוכנעים נסו להשלים את ההוכחה).</p>
+
+<p>זה טיפל רק במקרה שבו <span>$latex x_{n}$</span> אי זוגי. אם הוא זוגי אז נסמן <span>$latex q=\frac{x_{n}}{2}$</span> ואוסף השאריות יהיה הפעם <span>$latex \left\{ -q+1,-q+1,\dots,-1,0,1,\dots,q\right\} $</span>, כלומר הקצה השמאלי הוא לא <span>$latex -q$</span> אלא מספר שגדול ממנו ב-1. מתי זה יכול להפריע להוכחה שלעיל? רק אם איכשהו הסדרה <span>$latex x_{i}$</span> מגיעה אל <span>$latex q$</span>, והיא יכולה להגיע רק באיבר האחרון שלה, כלומר <span>$latex x_{n-1}=q=\frac{x_{n}}{2}$</span>. זה מקרה קצה, אבל זה עשוי להתרחש. אם זה התרחש, בואו נראה מה נוסחת הנסיגה של <span>$latex x_{n}$</span> אומרת לנו:</p>
+
+<p><span>$latex x_{n}=ax_{n-1}+dy_{n-1}=a\frac{x_{n}}{2}+dy_{n-1}$</span></p>
+
+<p>מתי זה יכול לקרות? מכיוון ש-<span>$latex a\ge2$</span>, הדרך היחידה שבה נוכל לקבל שוויון היא אם <span>$latex a=2$</span> (אחרת <span>$latex a\frac{x_{n}}{2}+dy_{n-1}&gt;x_{n}$</span>), ובמקרה זה בהכרח <span>$latex y_{n-1}=0$</span>, אבל זה קורה רק עבור <span>$latex n=1$</span>. הנה הוכחנו שאנחנו במקרה הפרטי היחיד שסייגנו החוצה מראש בניסוח המשפט.</p>
+
+<p>יפה, הוכחנו את המשפט, בואו נרחיב אותו טיפה ונראה שאם <span>$latex x_{i}\equiv_{x_{n}}x_{j}$</span> תוך שאנו מאלצים את <span>$latex i$</span> להיות קטן יותר - <span>$latex 0&lt;i\le n$</span> אבל מרשים ל-<span>$latex j$</span> להיות גדול יותר - <span>$latex 0\le j&lt;4n$</span>, אז או ש-<span>$latex j=i$</span> כמקודם או ש-<span>$latex j=4n-i$</span>. ההוכחה פשוטה: אם <span>$latex j\le2n$</span> פשוט נשתמש במשפט שזה עתה הוכחנו. יש את ה”סכנה” שאנחנו במקרה היוצא מן הכלל, אבל אז <span>$latex j=0$</span> (כי אסרנו על <span>$latex i$</span> להיות 0) וזה מוביל לסתירה כי אז <span>$latex i=2&gt;1=n$</span>. בקיצור, החריג ההוא לא ממש רלוונטי במקרה הזה.</p>
+
+<p>במקרה השני <span>$latex j&gt;2n$</span>. נסמן <span>$latex t=4n-j$</span>, אז <span>$latex 0&lt;t&lt;2n$</span>. כעת, זוכרים שהוכחנו מתישהו ש-<span>$latex x_{4n\pm j}\equiv_{x_{n}}x_{j}$</span>? זה נותן לנו עכשיו ש-<span>$latex x_{t}\equiv_{x_{n}}x_{j}\equiv x_{i}$</span> ולכן שוב, מהמשפט שזה עתה הוכחנו, <span>$latex t=i$</span> (ולמה החריג למשפט לא יכול להתקיים כעת?)</p>
+
+<p>רק עוד דבר אחד וסיימנו: נניח ש-<span>$latex 0&lt;i\le n$</span> ומתקיים <span>$latex x_{i}\equiv_{x_{n}}x_{j}$</span>, בלי שום הנחות על <span>$latex j$</span>. מה נוכל לומר עליו? ובכן, בואו ננסה לחלק אותו ב-<span>$latex 4n$</span>, כלומר נרשום אותו בצורה <span>$latex j=4nt+r$</span> כאשר <span>$latex 0\le r&lt;4n$</span>. עכשיו, זכרו שוב ש-<span>$latex x_{4n\pm k}\equiv_{x_{n}}x_{k}$</span> ושאפשר לכתוב <span>$latex 4nt+r=4n+\left(4n\left(t-1\right)+r\right)$</span>, ולכן <span>$latex x_{j}=x_{4nt+r}\equiv_{x_{n}}x_{4n\left(t-1\right)+r}$</span>. אפשר להמשיך עם זה ולקבל בסופו של דבר <span>$latex x_{j}\equiv_{x_{n}}x_{r}$</span>, ולכן <span>$latex x_{r}\equiv_{x_{n}}x_{i}$</span>. עכשיו <span>$latex 0\le r&lt;4n$</span> ולכן אפשר להשתמש במשפט הקודם עליו ולקבל <span>$latex i=r$</span> או <span>$latex i=4n-r$</span>. משני המקרים הללו נקבל ש-<span>$latex j\equiv_{4n}r\equiv_{4n}\pm i$</span> (אחד משניהם, לא שניהם גם יחד!).</p>
+
+<p>זהו. זה היה מייגע ביותר, אבל עכשיו קיבלנו די והותר כלי נשק להתמודדות עם שאלת הדיופנטיות של <span>$latex \left(x_{n},y_{n}\right)$</span> בפרט, ושל הפונקציה האקספוננציאלית בכלל. בפוסט הבא זה גם יקרה בפועל.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2012/11/01/hilbert_tenth_pell_equation" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

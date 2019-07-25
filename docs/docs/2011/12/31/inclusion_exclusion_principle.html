@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>עקרון ההכלה וההפרדה, ואז הכללה והפחדה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="עקרון ההכלה וההפרדה, ואז הכללה והפחדה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אני רוצה לדבר הפעם על מושג חשוב בקומבינטוריקה ובחיים בכלל - עקרון ההכלה וההפרדה. הדובדבן שבקצפת יהיה להראות איך הוא קשור למשפט בתורת המספרים - נוסחת ההיפוך של מביוס, אבל עוד חזון למועד, בפוסט הבא. קודם כל נבין מהו עקרון ההכלה וההפרדה ואיך עושים איתו דברים מעניינים, ואז נבין מה הוא אומר באמת, כלומר נציג גרסה מוכללת שלו. יהיה אקשן. מהו עקרון ההכלה וההפרדה קומבינטוריקה אנומרטיבית היא התחום המתמטי שעוסק, פחות או יותר, בבעיה הבאה: “הנה לך קבוצה סופית, כמה איברים יש בה?”, כאשר לרוב הקבוצה הזו תלויה באיזה פרמטר $latex n$ ואנו רוצים את התשובה כפונקציה של $latex n$. הנה כמה דוגמאות לבעיות שבכולן נטפל בקרוב: קבוצת המספרים הטבעיים בין $latex 1$ ל-$latex n$ שאינם מתחלקים ב-2, 3 או 5; קבוצת המספרים בין 1 ל-$latex n$ שזרים ל-$latex n$ (כלומר, אין להם מחלקים טבעיים משותפים הגדולים מ-1), וקבוצת הפרות הסדר על $latex n$ איברים - בלשון ציורית, מספר הדרכים שבהן יכול דוור מבולבל (אם אנחנו שונאים את ניומן מסיינפלד) או מזכירה מבולבלת (אם אנחנו שונאים נשים) לחלק $latex n$ מכתבים ל-$latex n$ האנשים שאמורים לקבל אותם באופן כזה שאף מכתב לא יגיע ליעדו (למשל, אם האנשים הם 1,2,3 אז אפשרות אחת היא שהמכתב של 3 יגיע ל-1, שהמכתב של 2 יגיע ל-3, ושהמכתב של 1 יגיע ל-2)." />
+<meta property="og:description" content="אני רוצה לדבר הפעם על מושג חשוב בקומבינטוריקה ובחיים בכלל - עקרון ההכלה וההפרדה. הדובדבן שבקצפת יהיה להראות איך הוא קשור למשפט בתורת המספרים - נוסחת ההיפוך של מביוס, אבל עוד חזון למועד, בפוסט הבא. קודם כל נבין מהו עקרון ההכלה וההפרדה ואיך עושים איתו דברים מעניינים, ואז נבין מה הוא אומר באמת, כלומר נציג גרסה מוכללת שלו. יהיה אקשן. מהו עקרון ההכלה וההפרדה קומבינטוריקה אנומרטיבית היא התחום המתמטי שעוסק, פחות או יותר, בבעיה הבאה: “הנה לך קבוצה סופית, כמה איברים יש בה?”, כאשר לרוב הקבוצה הזו תלויה באיזה פרמטר $latex n$ ואנו רוצים את התשובה כפונקציה של $latex n$. הנה כמה דוגמאות לבעיות שבכולן נטפל בקרוב: קבוצת המספרים הטבעיים בין $latex 1$ ל-$latex n$ שאינם מתחלקים ב-2, 3 או 5; קבוצת המספרים בין 1 ל-$latex n$ שזרים ל-$latex n$ (כלומר, אין להם מחלקים טבעיים משותפים הגדולים מ-1), וקבוצת הפרות הסדר על $latex n$ איברים - בלשון ציורית, מספר הדרכים שבהן יכול דוור מבולבל (אם אנחנו שונאים את ניומן מסיינפלד) או מזכירה מבולבלת (אם אנחנו שונאים נשים) לחלק $latex n$ מכתבים ל-$latex n$ האנשים שאמורים לקבל אותם באופן כזה שאף מכתב לא יגיע ליעדו (למשל, אם האנשים הם 1,2,3 אז אפשרות אחת היא שהמכתב של 3 יגיע ל-1, שהמכתב של 2 יגיע ל-3, ושהמכתב של 1 יגיע ל-2)." />
+<link rel="canonical" href="http://localhost:4000/blog/2011/12/31/inclusion_exclusion_principle" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/12/31/inclusion_exclusion_principle" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-12-31T15:45:26+02:00" />
+<script type="application/ld+json">
+{"datePublished":"2011-12-31T15:45:26+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/12/31/inclusion_exclusion_principle"},"url":"http://localhost:4000/blog/2011/12/31/inclusion_exclusion_principle","description":"אני רוצה לדבר הפעם על מושג חשוב בקומבינטוריקה ובחיים בכלל - עקרון ההכלה וההפרדה. הדובדבן שבקצפת יהיה להראות איך הוא קשור למשפט בתורת המספרים - נוסחת ההיפוך של מביוס, אבל עוד חזון למועד, בפוסט הבא. קודם כל נבין מהו עקרון ההכלה וההפרדה ואיך עושים איתו דברים מעניינים, ואז נבין מה הוא אומר באמת, כלומר נציג גרסה מוכללת שלו. יהיה אקשן. מהו עקרון ההכלה וההפרדה קומבינטוריקה אנומרטיבית היא התחום המתמטי שעוסק, פחות או יותר, בבעיה הבאה: “הנה לך קבוצה סופית, כמה איברים יש בה?”, כאשר לרוב הקבוצה הזו תלויה באיזה פרמטר $latex n$ ואנו רוצים את התשובה כפונקציה של $latex n$. הנה כמה דוגמאות לבעיות שבכולן נטפל בקרוב: קבוצת המספרים הטבעיים בין $latex 1$ ל-$latex n$ שאינם מתחלקים ב-2, 3 או 5; קבוצת המספרים בין 1 ל-$latex n$ שזרים ל-$latex n$ (כלומר, אין להם מחלקים טבעיים משותפים הגדולים מ-1), וקבוצת הפרות הסדר על $latex n$ איברים - בלשון ציורית, מספר הדרכים שבהן יכול דוור מבולבל (אם אנחנו שונאים את ניומן מסיינפלד) או מזכירה מבולבלת (אם אנחנו שונאים נשים) לחלק $latex n$ מכתבים ל-$latex n$ האנשים שאמורים לקבל אותם באופן כזה שאף מכתב לא יגיע ליעדו (למשל, אם האנשים הם 1,2,3 אז אפשרות אחת היא שהמכתב של 3 יגיע ל-1, שהמכתב של 2 יגיע ל-3, ושהמכתב של 1 יגיע ל-2).","headline":"עקרון ההכלה וההפרדה, ואז הכללה והפחדה","dateModified":"2011-12-31T15:45:26+02:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">לא מדויק</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">עקרון ההכלה וההפרדה, ואז הכללה והפחדה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-12-31T15:45:26+02:00" itemprop="datePublished">Dec 31, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אני רוצה לדבר הפעם על מושג חשוב בקומבינטוריקה ובחיים בכלל - <strong>עקרון ההכלה וההפרדה</strong>. הדובדבן שבקצפת יהיה להראות איך הוא קשור למשפט בתורת המספרים - <strong>נוסחת ההיפוך של מביוס</strong>, אבל עוד חזון למועד, בפוסט הבא. קודם כל נבין מהו עקרון ההכלה וההפרדה ואיך עושים איתו דברים מעניינים, ואז נבין מה הוא אומר <strong>באמת</strong>, כלומר נציג גרסה מוכללת שלו. יהיה אקשן.</p>
+<h2><strong>מהו עקרון ההכלה וההפרדה</strong></h2>
+<p>קומבינטוריקה אנומרטיבית היא התחום המתמטי שעוסק, פחות או יותר, בבעיה הבאה: “הנה לך קבוצה סופית, כמה איברים יש בה?”, כאשר לרוב הקבוצה הזו תלויה באיזה פרמטר <span>$latex n$</span> ואנו רוצים את התשובה כפונקציה של <span>$latex n$</span>. הנה כמה דוגמאות לבעיות שבכולן נטפל בקרוב: קבוצת המספרים הטבעיים בין <span>$latex 1$</span> ל-<span>$latex n$</span> שאינם מתחלקים ב-2, 3 או 5; קבוצת המספרים בין 1 ל-<span>$latex n$</span> שזרים ל-<span>$latex n$</span> (כלומר, אין להם מחלקים טבעיים משותפים הגדולים מ-1), וקבוצת הפרות הסדר על <span>$latex n$</span> איברים - בלשון ציורית, מספר הדרכים שבהן יכול דוור מבולבל (אם אנחנו שונאים את ניומן מסיינפלד) או מזכירה מבולבלת (אם אנחנו שונאים נשים) לחלק <span>$latex n$</span> מכתבים ל-<span>$latex n$</span> האנשים שאמורים לקבל אותם באופן כזה שאף מכתב לא יגיע ליעדו (למשל, אם האנשים הם 1,2,3 אז אפשרות אחת היא שהמכתב של 3 יגיע ל-1, שהמכתב של 2 יגיע ל-3, ושהמכתב של 1 יגיע ל-2).</p>
+
+<p>בואו נתחיל מגרסה עוד יותר פשוטה של הבעיה הראשונה: כמה מספרים בין 1 ל-100 <strong>כן</strong> מתחלקים ב-2 או ב-3? ובכן, בדיוק 50 מספרים מתחלקים ב-2 - כל הזוגיים. כמו כן, 33 מתחלקים ב-3; כל המספרים שהם כפולות של 3 עד 99, ו-100 לא עוזר לנו כי אינו מתחלק ב-3. קצת מחשבה מראה לנו את הנוסחה הכללית: מספרים מ-<span>$latex 1$</span> ועד <span>$latex n$</span> שמתחלקים ב-<span>$latex k$</span> יש בדיוק, אבל בדיוק, <span>$latex \left\lfloor \frac{n}{k}\right\rfloor $</span>, כשהקווים מייצגים ערך שלם תחתון: אם התקבלה תוצאה שברית, מעגלים למטה למספר השלם הקרוב.</p>
+
+<p>אם כן, הפיתוי גדול לומר שיש <span>$latex 50+33=83$</span> מספרים בין 1 ו-100 שמתחלקים ב-2 או ב-3. אבל ספירה מהירה תראה שזה לא נכון. בעצם, עזבו אתכם ממספרים בין 1 ל-100 שקשה לספור; אם ננסה באותה שיטה לספור מספרים בין 1 ל-10 נקבל <span>$latex 8$</span> מספרים, אבל בבירור יש רק 7: <span>$latex \left\{ 2,3,4,6,8,9,10\right\} $</span>. איפה הטעות שלנו? במספר המעצבן 6, שמתחלק בו זמנית גם ב-2 וגם ב-3. ספרנו אותו פעמיים: פעם אחת כחבר בקבוצה <span>$latex \left\{ 2,4,6,8,10\right\} $</span> של מספרים שמתחלקים ב-2, ופעם אחת בקבוצה <span>$latex \left\{ 3,6,9\right\} $</span> של מספרים שמתחלקים ב-3. את הספירה הכפולה הזו צריך לתקן - פשוט נחסיר 1 מהתוצאה.</p>
+
+<p>עבור מספרים בין 1 ל-100 הרעיון דומה; יש 83 מספרים פחות כמות המספרים בין 1 ל-100 שמתחלקים גם ב-2 וגם ב-3. למזלנו קל לדעת מיהם - אלו בדיוק המספרים שמתחלקים 6, כלומר <span>$latex \left\lfloor \frac{100}{6}\right\rfloor =16$</span>. קיבלנו שיש <span>$latex 50+33-16=67$</span> מספרים בין 1 ל-100 שמתחלקים או ב-2, או ב-3, או בשניהם.</p>
+
+<p>את הרעיון הכללי אפשר לנסח כך: אם <span>$latex A,B$</span> הן קבוצות, אז <span>$latex \left|A\cup B\right|=\left|A\right|+\left|B\right|-\left|A\cap B\right|$</span> - גודל הקבוצה <span>$latex A\cup B$</span> שמכילה את כל האיברים של <span>$latex A,B$</span> הוא כסכום גדלי הקבוצות <span>$latex A,B$</span> פחות הגודל של הקבוצה <span>$latex A\cap B$</span> של איברים ששייכים הן ל-<span>$latex A$</span> והן ל-<span>$latex B$</span>. השלב הבא הוא לנסח את המשפט עבור שלוש קבוצות, <span>$latex A,B,C$</span>. הניחוש הראשוני הוא לומר ש-</p>
+
+<p><span>$latex \left|A\cup B\cup C\right|=\left(\left|A\right|+\left|B\right|+\left|C\right|\right)-\left(\left|A\cap B\right|+\left|A\cap C\right|+\left|B\cap C\right|\right)$</span></p>
+
+<p>וזה כמעט נכון, אבל לא נכון עד הסוף, כי אם יש איבר שנמצא הן ב-<span>$latex A$</span>, הן ב-<span>$latex B$</span> והן ב-<span>$latex C$</span> הוא אמנם נספר שלוש פעמים ב-<span>$latex \left|A\right|+\left|B\right|+\left|C\right|$</span> אבל לאחר מכן הוא גם מוחסר שלוש פעמים ב-<span>$latex -\left(\left|A\cap B\right|+\left|A\cap C\right|+\left|B\cap C\right|\right)$</span> ובסופו של דבר יוצא שהוא לא נספר כלל. לכן צריך לתקן את הנוסחה על ידי הוספת <span>$latex \left|A\cap B\cap C\right|$</span>.</p>
+
+<p>מכאן כבר אפשר לנחש את המקרה הכללי: אם יש לנו קבוצות <span>$latex A_{1},\dots,A_{k}$</span> ואנו רוצים לדעת מה הגודל של <span>$latex \bigcup_{i=1}^{k}A_{i}$</span>, קודם כל נסכום את הגדלים של כל הקבוצות, אחר כך נחסיר את הגודל של כל החיתוכים של שתי קבוצות, נחבר את הגודל של חיתוכים של שלוש, נחסיר את הגודל של חיתוכים של ארבע… אני אומר את זה מילולית כי לכתוב את זה בנוסחה - ובכן, איך נאמר זאת בעדינות - זה כואב. הנה הנוסחה:</p>
+
+<p><span>$latex \left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|-\sum_{1\le i&lt;j\le n}\left|A_{i}\cap A_{j}\right|+\dots+\left(-1\right)^{n+1}\left|\bigcap_{i=1}^{n}A_{i}\right|$</span></p>
+
+<p>לקצרנים שבינינו, אפשר גם עם סכום כפול:</p>
+
+<p><span>$latex \left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{t=1}^{n}\sum_{1\le i_{1}&lt;i_{2}&lt;\dots&lt;i_{t}\le n}\left(-1\right)^{t+1}\left|\bigcap_{j=1}^{t}A_{i_{j}}\right|$</span></p>
+
+<p>לא נעים כל כך, אבל העיקרון עצמו ברור למדי. עם זאת, צריך גם להוכיח שהוא עובד. הרעיון הוא להסתכל על איבר כלשהו <span>$latex x\in\bigcup_{i=1}^{n}A_{i}$</span> ולשאול את עצמנו - מה הוא תורם לאגף ימין, ומה הוא תורם לאגף שמאל? לאגף שמאל הוא תורם בדיוק 1; אגף ימין קצת יותר מסובך. נניח ש-<span>$latex x$</span> נמצא בדיוק ב-<span>$latex k$</span> קבוצות, אז לכל <span>$latex t&gt;k$</span>, פשוט לא ייתכן ש-<span>$latex x\in\bigcap_{j=1}^{t}A_{i_{j}}$</span> כי אנחנו חותכים פה יותר קבוצות מאשר יש קבוצות שמכילות את <span>$latex x$</span> ולכן הוא לא בחיתוך. לכן מה שרלוונטי מראש הוא רק <span>$latex t\le k$</span>, וגם אז - רק חיתוכים <span>$latex \bigcap_{j=1}^{t}A_{i_{j}}$</span> שבהם <strong>כל</strong> הקבוצות כוללות את <span>$latex x$</span>, כלומר כל הקבוצות נלקחות מתוך <span>$latex k$</span> הקבוצות שכוללות את <span>$latex x$</span> מלכתחילה. המספר שלהן הוא מה שמסמנים כ-<span>$latex {k \choose t}$</span>: מספר האפשרויות לבחור <span>$latex t$</span> מתוך <span>$latex k$</span>. זה אומר ש-<span>$latex x$</span> תורם לסכום באגף ימין בדיוק את תת-הסכום הבא:</p>
+
+<p><span>$latex \sum_{t=1}^{k}{k \choose t}\left(-1\right)^{t+1}$</span></p>
+
+<p>כדי לחשב את הסכום הזה משתמשים בנוסחת <a href="http://www.gadial.net/?p=543">הבינום של ניוטון</a>, שקל לראות ממנה שמתקיים <span>$latex 0=\left(1-1\right)^{k}=\sum_{t=0}^{k}{k \choose t}\left(-1\right)^{t}$</span>. לכן אנו מקבלים:</p>
+
+<p><span>$latex \sum_{t=1}^{k}{k \choose t}\left(-1\right)^{t}=\sum_{t=0}^{k}{k \choose t}\left(-1\right)^{t+1}+1=1-\sum_{t=0}^{k}{k \choose t}\left(-1\right)^{t}=1$</span></p>
+
+<p>כפי שרצינו.</p>
+<h2><strong>ואיך עושים איתו דברים מעניינים</strong></h2>
+<p>סיימנו את ההוכחה ואפשר לעבור לאקשן - פתרון של דברים אמיתיים. נתחיל עם המספרים בין 1 ל-<span>$latex n$</span> שאינם מתחלקים ב-<span>$latex 2$</span> או <span>$latex 3$</span> או <span>$latex 5$</span>: כאן הקבוצות הן של המספרים ש<strong>כן</strong> מתחלקים ב-2, ו<strong>כן</strong> מתחלקים ב-3, ו<strong>כן</strong> מתחלקים ב-5, ואנחנו רוצים לחסר את זה מהקבוצה של כלל המספרים, שהיא מגודל <span>$latex n$</span>. לכן נקבל:</p>
+
+<p><span>$latex n-\left(\left\lfloor \frac{n}{2}\right\rfloor +\left\lfloor \frac{n}{3}\right\rfloor +\left\lfloor \frac{n}{5}\right\rfloor \right)+\left(\left\lfloor \frac{n}{6}\right\rfloor +\left\lfloor \frac{n}{10}\right\rfloor +\left\lfloor \frac{n}{15}\right\rfloor \right)-\left\lfloor \frac{n}{30}\right\rfloor $</span></p>
+
+<p>חייבים להודות שהנוסחה הזו לא נראית הכי מלהיבה בעולם; אבל חשבו לרגע על הדרך הנאיבית לחשב את המספר הזה - לעבור על כל המספרים מ-<span>$latex 1$</span> עד <span>$latex n$</span> ולכל אחד לבדוק אם הוא מתחלק ב-2 או 3 או 5. אם <span>$latex n$</span> קטן זה לא נורא, אבל מה אם <span>$latex n=10^{100}$</span>? במקרה הזה האלגוריתם שלנו לעולם לא יסתיים, ואילו בעזרת הנוסחה שלנו צריך יהיה לבצע 7 פעולות חילוק ולחבר/לחסר את התוצאות וזהו, כלומר החישוב יסתיים בחלקיקי שניה גם אם <span>$latex n$</span> מפלצתי בגודלו. זו המחשה ראשונה לכוח שבהכלה והפרדה.</p>
+
+<p>בואו נעבור לדוגמה השניה: עבור טבעי <span>$latex n$</span>, <span>$latex \varphi\left(n\right)$</span> (“פונקצית אוילר”) מסמן את מספרם של המספרים הטבעיים בין 1 ל-<span>$latex n$</span> שזרים ל-<span>$latex n$</span>, כלומר שהמספר היחיד שמחלק את שניהם הוא <span>$latex 1$</span> עצמו. למשל, עבור <span>$latex 6$</span>, המספרים היחידים שקטנים ממנו וזרים לו הם 1 ו-5 ולכן <span>$latex \varphi\left(6\right)=2$</span>; עבור <span>$latex 8$</span> אלו הם <span>$latex 1,3,5,7$</span> ולכן <span>$latex \varphi\left(8\right)=4$</span>, וכן הלאה. אם תסתכלו בגרף של הפונקציה הזו תראו שהיא מתנהגת בצורה די מטורללת - כל הזמן קופצת בין ערכים קטנים לגדולים. נקודות השיא הן בראשוניים (מספרים שמתחלקים רק ב-1 ובעצמם): לכל מספר ראשוני <span>$latex p$</span> מתקיים <span>$latex \varphi\left(p\right)=p-1$</span> ולכן הערכים הגדולים ביותר של <span>$latex \varphi$</span> יתקבלו על הראשוניים, שהם עצמם מפוזרים בצורה שנראית כמעט אקראית.</p>
+
+<p>ועם זאת, יש נוסחה ל-<span>$latex \varphi\left(n\right)$</span>, שמתבססת על כך שאנו יודעים בדיוק מהם הראשוניים שמחלקים את <span>$latex n$</span>. יש לנוסחה הזו מספר הוכחות והאהובה עלי עושה שימוש במשפט חשוב למדי מאלגברה - “משפט השאריות הסיני”. לא נדבר על זה בכלל הפעם, ובמקום זאת נראה איך גישת ההכלה וההפרדה מחסלת גם היא את הבעיה בקלות.</p>
+
+<p>האבחנה האלגברית שבבסיס העניין היא שאם <span>$latex n$</span> ו-<span>$latex m$</span> לא זרים, אז קיים ראשוני <span>$latex p$</span> כלשהו שמחלק את שניהם. נניח שהמחלקים הראשוניים השונים של <span>$latex n$</span> הם בדיוק <span>$latex p_{1},\dots,p_{k}$</span>, אז הקבוצה <span>$latex A_{i}$</span> שלנו הפעם תהיה “קבוצת כל המספרים הטבעיים הקטנים או שווים ל-<span>$latex n$</span> שמתחלקים ב-<span>$latex p_{i}$</span>”. את הגודל המדויק של הקבוצה הזו אנחנו יודעים - הוא בדיוק <span>$latex \frac{n}{p_{i}}$</span>, מהנימוקים שנתתי קודם. וכמות המספרים שמתחלקים בשני ראשוניים <span>$latex p_{i},p_{j}$</span> היא <span>$latex \frac{n}{p_{i}p_{j}}$</span> וכן הלאה. אז הכלה והפרדה נותנת את הדבר הבא:</p>
+
+<p><span>$latex \varphi\left(n\right)=n-\sum_{i}\frac{n}{p_{i}}+\sum_{i,j}\frac{n}{p_{i}p_{j}}-\dots+\left(-1\right)^{k}\frac{n}{p_{1}\cdots p_{k}}$</span></p>
+
+<p>על פניו, לא ברור מה הנוסחה הזו עזרה לנו, אבל שימו לב לכך ש-<span>$latex n$</span> הוא גורם בכל אחד מהמחוברים, כך שניתן להוציא אותו החוצה ולהיוותר עם סכום מהצורה <span>$latex \left(1-\sum\frac{1}{p_{i}}+\sum\frac{1}{p_{i}p_{j}}-\dots+\left(-1\right)^{k}\frac{1}{p_{1}\cdots p_{k}}\right)$</span>. מה שטוב בסכום הזה, שעדיין נראה מפלצתי, הוא שאפשר לכתוב אותו בצורה הרבה יותר פשוטה ומסודרת כמכפלה: <span>$latex \prod_{i=1}^{k}\left(1-\frac{1}{p_{i}}\right)$</span>. כדי לראות את זה, שימו לב שאם פותחים את המכפלה הזו, מקבלים סכום של איברים כך שכל איבר הוא בעצמו מכפלה, שכל איבר בה הוא או <span>$latex 1$</span> או <span>$latex -\frac{1}{p_{i}}$</span> (הדרך הפשוטה ביותר לראות זאת - נסו לעשות זאת עם שני ראשוניים בלבד).</p>
+
+<p>אם כן, קיבלנו את הנוסחה <span>$latex \varphi\left(n\right)=n\prod_{p|n}\left(1-\frac{1}{p}\right)$</span> (<span>$latex p|n$</span> פירושו “מכפלה שנלקחת על כל הראשוניים <span>$latex p$</span> שמחלקים את <span>$latex n$</span>”) שהיא קלה ביותר לחישוב, אם יודעים מיהם ה-<span>$latex p$</span>-ים המתאימים (ולדעת מי הם - זו כבר בעיה לא פשוטה כלל).</p>
+
+<p>בואו נעבור עכשיו להפרות סדר, שגם בהן הכלה והפרדה נותנת נוסחה סגורה, אבל מרשימה אפילו יותר מאשר במקרה הקודם שכן היא לא תכלול שום מכפלה ושום סכום, בזכות תעלול מחדו”א שנשתמש בו. הפרת סדר היא בבסיסה תמורה - סידור בשורה של המספרים מ-<span>$latex 1$</span> עד <span>$latex n$</span>. יש באופן כללי <span>$latex n!=1\cdot2\cdots n$</span> תמורות; מהן אנחנו רוצים לחסר את מספר התמורות שבהן יש לפחות אינדקס אחד <span>$latex i$</span> כך שהמספר במקום ה-<span>$latex i$</span> הוא <span>$latex i$</span> עצמו (למשל, <span>$latex 4132$</span> היא תמורה כזו עם האינדקס <span>$latex i=3$</span>).</p>
+
+<p>למרבה המזל, את החישובים כאן קל מאוד לבצע. מספר התמורות שבהן <span>$latex k$</span> איברים ספציפיים נמצאים במקום הנכון שלהם הוא כמספר האפשרויות לסדר את כל יתר <span>$latex n-k$</span> האיברים בסדר שרירותי כלשהו, כלומר <span>$latex \left(n-k\right)!$</span>. שימו לב לכך שאני <strong>מרשה</strong> לאיברים נוספים פרט ל-<span>$latex k$</span> האיברים הספציפיים להיות במקום הנכון שלהם; אני פשוט לא דורש זאת במפורש. לכן <span>$latex \left(n-k\right)!$</span> אינו מספר התמורות שבהן <strong>בדיוק</strong> <span>$latex k$</span> איברים נמצאים במקום הנכון שלהם; צריך להיזהר לא לחשוב כך בטעות.</p>
+
+<p>עקרון ההכלה וההפרדה מניב לנו עכשיו את הנוסחה הבאה ל-<span>$latex D\left(n\right)$</span>, מספר הפרות הסדר של <span>$latex n$</span> איברים:</p>
+
+<p><span>$latex D\left(n\right)=n!-{n \choose 1}\left(n-1\right)!+{n \choose 2}\left(n-2\right)!-\dots+\left(-1\right)^{n}{n \choose n}\left(n-n\right)!$</span>. כדי להבין מה פשר המקדם <span>$latex {n \choose k}$</span> שמופיע שם בואו נחשוב שניה איך אמורה להיראות הנוסחה: היא אמורה להתחיל עם <span>$latex n!$</span>, ואז אמורים לחסר ממנה, לכל מקום בין 1 ל-<span>$latex n$</span>, את מספר התמורות שבהן מקום זה מקובע. לכל מקום נקבל אותו מספר - <span>$latex \left(n-1\right)!$</span>, ויש <span>$latex {n \choose 1}$</span> מקומות כאלו, ומכאן הכפל. בדומה, <span>$latex {n \choose 2}$</span> מתאים למספר האפשרויות לבחור זוג מקומות לקבע, וכן הלאה.</p>
+
+<p>בואו נכתוב שוב את הנוסחה שקיבלתי, בצורה יותר קומפקטית: <span>$latex D\left(n\right)=\sum_{k=0}^{n}\left(-1\right)^{k}{n \choose k}\left(n-k\right)!$</span>. האם יש דרך לפשט אותה עוד יותר? ובכן, <span>$latex {n \choose k}=\frac{n!}{k!\left(n-k\right)!}$</span> כך שאפשר לעשות כאן צמצום קטן ולקבל <span>$latex D\left(n\right)=\sum_{k=0}^{n}\left(-1\right)^{k}\frac{n!}{k!}=n!\left(\sum_{k=0}^{n}\frac{\left(-1\right)^{k}}{k!}\right)$</span>. הקומבינטוריקה מביאה אותנו עד כאן ותו לא, אבל עכשיו החדו”א יכול להיכנס לפעולה.</p>
+
+<p>כל מי שמכיר חדו”א ובוהה בנוסחה <span>$latex \sum_{k=0}^{n}\frac{\left(-1\right)^{k}}{k!}$</span> כנראה ירגיש משהו מצלצל לו - זה נראה כמו פונקציית ה<a href="http://www.gadial.net/?p=404">אקספוננט</a> <span>$latex e^{x}=\sum_{k=0}^{\infty}\frac{x^{k}}{k!}$</span>, רק שכאן הטור סופי ולא אינסופי. במילים אחרות, <span>$latex \sum_{k=0}^{n}\frac{\left(-1\right)^{k}}{k!}=e^{-1}-\sum_{k=n+1}^{\infty}\frac{\left(-1\right)^{k}}{k!}$</span>. אז קיבלנו שהסכום הוא “כמעט” <span>$latex \frac{1}{e}$</span>, רק שיש גם שארית מעצבנת <span>$latex \sum_{k=n+1}^{\infty}\frac{\left(-1\right)^{k}}{k!}$</span> שצריך להבין מה בדיוק, או לפחות בערך, הגודל שלה. במקרה הספציפי שלנו זה קל במיוחד כי הטור הוא מה שנקרא “טור לייבניץ” - טור מהצורה <span>$latex \sum\left(-1\right)^{n}a_{n}$</span> כש-<span>$latex a_{n}$</span> שואפת מונוטונית לאפס, וידוע שסכום של טור שכזה, בערכו המוחלט, הוא קטן או שווה לגודל האיבר הראשון בו. כלומר, <span>$latex \left|\sum_{k=n+1}^{\infty}\frac{\left(-1\right)^{k}}{k!}\right|\le\left|\frac{\left(-1\right)^{n+1}}{\left(n+1\right)!}\right|=\frac{1}{\left(n+1\right)!}$</span>.</p>
+
+<p>אם כן, קיבלנו את הנוסחה <span>$latex D\left(n\right)=n!\cdot\left(e^{-1}+\xi\left(n\right)\right)=\frac{n!}{e}+n!\xi\left(n\right)$</span>, כשכתבתי את השגיאה ב-<span>$latex \xi$</span> בדיוק כדי שתיראה מכוערת ונרצה להיפטר ממנה. מה אנחנו יודעים עליה? ש-<span>$latex \left|n!\xi\left(n\right)\right|\le\frac{n!}{\left(n+1\right)!}=\frac{1}{n}$</span>. במילים אחרות, עבור <span>$latex n\ge3$</span>, השגיאה קטנה מחצי. זה מאפשר לנו לטעון את הטענה הנועזת הבאה: <span>$latex D\left(n\right)=\left[\frac{n!}{e}\right]$</span>, כאשר הסוגריים המרובעים פירושם “ערך שלם” - המספר השלם הקרוב ביותר ל-<span>$latex \frac{n!}{e}$</span>. זה עובד מכיוון שלכל מספר ממשי, הערך השלם שלו הוא במרחק לכל היותר <span>$latex \frac{1}{2}$</span> ממנו, בעוד שכל מספר שלם אחר הוא מרחק של לפחות <span>$latex \frac{1}{2}$</span> ממנו, ולכן אם כל ה”תיקון” שנדרש כדי לעבור מ-<span>$latex \frac{n!}{e}$</span> ל-<span>$latex D\left(n\right)$</span> הוא פחות מחצי, הערך השלם יביא אותנו ל-<span>$latex D\left(n\right)$</span> בודאות. את זה ש-<span>$latex D\left(n\right)=\left[\frac{n!}{e}\right]$</span> גם עבור <span>$latex n=1,2$</span> אפשר לבדוק בצורה ישירה, והנה קיבלנו נוסחה סגורה ופשוטה ל-<span>$latex D\left(n\right)$</span>. אפשר גם להסיק מסקנה הסתברותית - ככל ש-<span>$latex n$</span> שואף לאינסוף, כך ההסתברות לקבלת הפרת סדר כשמגרילים תמורה באקראי שואפת ל-<span>$latex \frac{1}{e}$</span>; הנה לנו דוגמה נאה למקום שבו <span>$latex e$</span> צץ באופן טבעי לגמרי בבעיה קומבינטורית שבכלל לא מזכירה אותו.</p>
+<h2><strong>הכללה והפחדה</strong></h2>
+<p>כל דבר טוב שהמתמטיקאים מצליחים לעשות הם חייבים להרוס על ידי הכללה שלו ככל שרק ניתן, וגם לעקרון ההכלה וההפרדה נעשה עכשיו משהו דומה. זה יעזור לנו בפוסט שבו נדבר על נוסחת ההיפוך של מביוס (שהיא עצמה הכללה מסוג מסויים - עוד יותר כללי - של עקרון ההכלה וההפרדה) וגם יתן לנו תירוץ לראות את כל עניין ההכלה וההפרדה בתור מקרה פרטי של משהו מאלגברה לינארית. למרות שכולם מוזמנים לקרוא את החלק הזה של הפוסט אני מזהיר מראש שלא ארחם בו על הקוראים ואתם עשויים לאבד אותי (אני בעצמי הלכתי לאיבוד כשקראתי את זה).</p>
+
+<p>אם כן, תהא <span>$latex X$</span> קבוצה כלשהי בת <span>$latex n$</span> איברים (אפשר לחשוב עליה כעל קבוצה של “תכונות” אם זה עוזר לנו). ניקח מרחב וקטורי <span>$latex V$</span> של כל הפונקציות <span>$latex f:\mbox{P}\left(X\right)\to\mathbb{R}$</span>, כאשר <span>$latex \mbox{P}\left(X\right)$</span> פירושו קבוצת החזקה של <span>$latex X$</span> - אוסף כל תת-הקבוצות של <span>$latex X$</span>. במילים אחרות, כל פונקציה <span>$latex f$</span> כזו מגדירה ערך כלשהו שמתאים לתת-קבוצה של <span>$latex X$</span>. קל לראות ש-<span>$latex V$</span> הוא באמת מרחב וקטורי מעל <span>$latex \mathbb{R}$</span> (למעשה, <span>$latex \mathbb{R}$</span> לא ממש חשוב כאן וכל שדה אחר היה עובד באותה מידה). כעת נגדיר טרנספורמציה לינארית <span>$latex T:V\to V$</span> באופן הבא:</p>
+
+<p><span>$latex \left(Tf\right)\left(A\right)=\sum_{B\supseteq A}f\left(B\right)$</span></p>
+
+<p>כלומר, בהינתן <span>$latex f$</span>, הפונקציה החדשה ש-<span>$latex Tf$</span> מגדירה היא כזו שערכה על כל תת-קבוצה <span>$latex A\subseteq X$</span> הוא סכום ערכי <span>$latex f$</span> על כל ה-<span>$latex B$</span> שמכילות את <span>$latex A$</span>. חשבו על זה כך: <span>$latex f\left(A\right)$</span> אומרת כמה איברים ביקום שלנו מקיימים <strong>בדיוק</strong> את התכונות שבקבוצה <span>$latex A$</span> ושום דבר אחר; <span>$latex Tf\left(A\right)$</span> אומר כמה איברים ביקום שלנו מקיימים <strong>לפחות</strong> את התכונות שב-<span>$latex A$</span>, ואולי עוד דברים. בדרך כלל את <span>$latex f$</span> קשה לחשב ואילו את <span>$latex Tf$</span> קל, ולכן מה שאנחנו רוצים לעשות הוא “להפוך” את <span>$latex T$</span>; לקבל איכשהו מ-<span>$latex Tf$</span> את <span>$latex f$</span> עצמה. לצורך כך צריך שהטרנספורמציה הלינארית שלנו תהיה הפיכה, ועקרון ההכלה וההפרדה אומר שזה בדיוק מה שקורה, וגם נותן לנו את הנוסחה המדוייקת של <span>$latex T^{-1}$</span>:</p>
+
+<p><span>$latex \left(T^{-1}f\right)\left(A\right)=\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}f\left(B\right)$</span></p>
+
+<p>תכף נראה איך זה מתקשר לדברים שראינו עד כה, אבל לפני כן בואו נוכיח. מה שאנחנו בעצם רוצים להראות הוא שאם נגדיר טרנספורמציה לינארית <span>$latex S:V\to V$</span> על ידי <span>$latex \left(Sf\right)\left(A\right)=\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}f\left(B\right)$</span> אז יתקיים ש-<span>$latex ST=TS=I$</span>. עכשיו, כמו שבדרך כלל קורה באלגברה לינארית, כל מה שצריך לעשות הוא להציב והכל כבר מסתדר מעצמו. הבה ונראה מהו <span>$latex \left(TSf\right)$</span>:</p>
+
+<p><span>$latex \left(TSf\right)\left(A\right)=T\left(\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}f\left(B\right)\right)=\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}Tf\left(B\right)$</span></p>
+
+<p><span>$latex =\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}\left(\sum_{C\supseteq B}f\left(C\right)\right)$</span></p>
+
+<p>כעת ננקוט בתעלול הטכני הסטנדרטי של שינוי סדר הסכימה. הסכום שלמעלה שווה ממש לסכום הבא:</p>
+
+<p><span>$latex \sum_{C\supseteq A}\left(\sum_{A\subseteq B\subseteq C}\left(-1\right)^{\left|B-A\right|}\right)f\left(C\right)$</span></p>
+
+<p>האינדקס בסכום האמצעי הוא <span>$latex B$</span>. אז למה <span>$latex \left|B-A\right|$</span> יכול להיות שווה? ברור שערכיו נעים בין 0 ובין <span>$latex m=\left|C-A\right|$</span>. כמה קבוצות <span>$latex B$</span> מקיימות ש-<span>$latex \left|B-A\right|=i$</span> עבור <span>$latex 0\le i\le m$</span>? ובכן, בדיוק כמספר האיברים לבחור <span>$latex i$</span> מתוך <span>$latex m$</span> האיברים של <span>$latex C$</span> שאינם ב-<span>$latex A$</span>, כלומר <span>$latex {m \choose i}$</span>. לכן את הסכום האמצעי אפשר לכתוב גם כ-<span>$latex \sum_{i=0}^{m}\left(-1\right)^{i}{m \choose i}=\left(1-1\right)^{m}$</span> (כאן השתמשתי בבינום של ניוטון), ולכן אם <span>$latex m&gt;0$</span> אז הסכום האמצעי שווה לאפס, ואם <span>$latex m=0$</span> אז הסכום האמצעי שווה ל-1 (אני משתמש כאן בקונוונציה לפיה <span>$latex 0^{0}=1$</span>, אבל מי שלא מאמין לי יכול לבדוק ולהיווכח בכך ש-<span>$latex \sum_{A\subseteq B\subseteq C}\left(-1\right)^{\left|B-A\right|}$</span> אכן שווה 1 כאשר <span>$latex A=C$</span>, מה שמצדיק את השימוש בקונוונציה <span>$latex 0^{0}=1$</span> כאן).</p>
+
+<p>לסיכום, קיבלנו ש-<span>$latex \left(TSf\right)\left(A\right)=f\left(A\right)$</span>, וזאת לכל <span>$latex A$</span>, ולכן <span>$latex TS=I$</span> כנדרש. זה מסיים את הוכחת עקרון ההכלה וההפרדה הכללי ביותר שאני מכיר, אבל - מה בעצם עשינו כאן, לעזאזל?</p>
+
+<p>התחלתי את הפוסט עם הנוסחה <span>$latex \left|\bigcup_{i=1}^{n}A_{i}\right|=\sum_{i=1}^{n}\left|A_{i}\right|-\sum_{1\le i&lt;j\le n}\left|A_{i}\cap A_{j}\right|+\dots+\left(-1\right)^{n+1}\left|\bigcap_{i=1}^{n}A_{i}\right|$</span>. כאן חשבנו על <span>$latex A_{i}$</span> בתור “קבוצת כל האיברים שמקיימים את התכונה ה-<span>$latex i$</span> לפחות” (לא בדיוק!), ולכן על <span>$latex A_{i}\cap A_{j}$</span> בתור כל האיברים שמקיימים לפחות את התכונות <span>$latex i,j$</span> וכן הלאה. בלשון הקבוצות של המשפט שלמעלה, <span>$latex S=\left\{ 1,2,\dots,n\right\} $</span> ו-<span>$latex f\left(A\right)=\left|\bigcap_{i\in A}A_{i}\right|$</span> (כן, יש לי כאן שימוש כפול מוזר ב-<span>$latex A$</span> וב-<span>$latex A_{i}$</span> במשמעויות שונות לגמרי. אל תגידו לי שזה מה שיחסל אתכם עכשיו).</p>
+
+<p>הנוסחה שלעיל מתארת את <span>$latex \bigcup_{i=1}^{n}A_{i}$</span>, שהוא מספר האיברים שמקיימים לפחות אחת מהתכונות, אבל בדרך כלל התעניינו דווקא במספר האיברים שלא מקיימים <strong>אף אחת </strong>מהתכונות, מה שגרם לנו לחסר את הגודל של <span>$latex \bigcup_{i=1}^{n}A_{i}$</span> ממספר האיברים הכולל ב”עולם” שלנו, שזו דרך אחרת להגיד “מספר האיברים שמקיימים לפחות אפס תכונות” (מעין “חיתוך ריק” שלא ממש ברור איך לכתוב אותו).</p>
+
+<p>בואו נחדד את העניין, אם כן. נגדיר פונקציה<span>$latex f_{=}\left(A\right)$</span> ששווה למספר האיברים שמקיימים <strong>בדיוק</strong> את התכונות שב-<span>$latex A$</span>. אנחנו מעוניינים לרוב למצוא את <span>$latex f_{=}\left(\emptyset\right)$</span>, אבל לפעמים גם עבור קבוצות מחוכמות יותר. כעת, נגדיר גם <span>$latex f_{\ge}\left(A\right)$</span> בתור מספר האיברים שמקיימים <strong>לפחות</strong> את התכונות ב-<span>$latex A$</span>, כלומר בדיוק <span>$latex f_{\ge}\left(A\right)=\left|\bigcap_{i\in A}A_{i}\right|$</span>. כעת קל לראות שמתקיים הקשר</p>
+
+<p><span>$latex f_{\ge}\left(A\right)=\sum_{B\supseteq A}f_{=}\left(B\right)$</span> (הסבירו לעצמכם למה!) כלומר <span>$latex f_{\ge}=Tf_{=}$</span>, ולכן <span>$latex f_{=}=T^{-1}f_{\ge}$</span>, כלומר</p>
+
+<p><span>$latex f_{=}\left(A\right)=\sum_{B\supseteq A}\left(-1\right)^{\left|B-A\right|}f_{\ge}\left(B\right)$</span></p>
+
+<p>ובפרט עבור <span>$latex A=\emptyset$</span> נקבל</p>
+
+<p><span>$latex f_{=}\left(\emptyset\right)=\sum_{A}\left(-1\right)^{\left|A\right|}f_{\ge}\left(A\right)$</span></p>
+
+<p>וזוהי בדיוק נוסחת ההכלה וההפרדה המוכרת והאהובה שלנו, רק בניסוח יותר קומפקטי ויותר קל להבנה (כן! יותר קל! אחרי שבוהים בה הרבה, כנראה…).</p>
+
+<p>אם כן, ראינו שעקרון ההכלה וההפרדה ניתן להצגה בתור מעין “היפוך” - מתחילים מפונקציה א’ שמוגדרת באמצעות סכום על ערכים של פונקציה ב’, “הופכים” ומקבלים את פונקציה ב’ מוצגת בתור סכום משוקלל מסויים על ערכים של פונקציה א’. זה, על רגל אחת, גם התוכן של נוסחת ההיפוך של מביוס; מיהי, מהי ואיך היא מתקשרת למה שראינו פה - בפעם הבאה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><a class="u-url" href="/blog/2011/12/31/inclusion_exclusion_principle" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/gadial"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg> <span class="username">gadial</span></a></li><li><a href="https://www.twitter.com/gadialeks"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gadialeks</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
