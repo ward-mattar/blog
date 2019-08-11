@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<h1>קטגוריה: {{ page.name }}</h1>
+{%- if page.posts.size > 0 -%}
+    <h2 class="post-list-heading">פוסטים:</h2>
+    <ul class="post-list">
+    {% assign sorted = page.posts | sort: 'date' | reverse %}
+    {% for post in sorted %}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if post.summary -%}
+          {{ post.summary }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+    </ul>
+{%- endif -%}
