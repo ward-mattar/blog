@@ -6,7 +6,7 @@ layout: default
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <div id="post-list">
-<label>חיפוש</label>
+<label>חיפוש לפי כותרת</label>
 <input class="search" />
 <br />
 <label>סינון לפי קטגוריה</label>

@@ -10,36 +10,19 @@ module Jekyll
             post.data['categories'].each{|c| categories[c] << post}
             post.data['tags'].each{|c| tags[c] << post}
         end
-        categories.keys.each{|c| site.pages << CategoryPage.new(site, site.source, c, 'category', categories[c])}
-        tags.keys.each{|t| site.pages << CategoryPage.new(site, site.source, t, 'tag', tags[t])}
+        category_pages = {}
+        categories.keys.each do |c|
+            doc = site.collections['categories'].docs.find{|d| d.data['name'] == c}
+            if not doc.nil?
+                doc.data['posts'] = categories[c]
+                category_pages[c] = doc
+            else
+                puts "Error: did not find category page for #{c}"
+            end
+        end
+        for post in site.posts.docs do
+            post.data['categories'] = post.data['categories'].find_all{|c| category_pages.key? c}.map{|c| category_pages[c]}
+        end
       end
     end
-  
-     class CategoryPage < Page
-        def initialize(site, base, name, type, posts)
-            @site = site
-            @base = base
-            @dir  = type
-            @name = "#{name.to_s.gsub("?","").gsub('"',"")}.html"
-            
-            self.process(@name)
-            self.read_yaml(File.join(base, '_layouts'), 'category.html')
-            self.data['posts'] = posts
-        end
-     end
-    #   def initialize(site, base, name, type)
-    #     @site = site
-    #     @base = base
-    #     @dir  = ''
-    #     @name = 'guide.html'
-  
-    #     self.process(@name)
-    #     self.read_yaml(File.join(base, '_layouts'), 'guide.html')
-    #     self.data['episodes'] = episodes
-    #     # self.data['category'] = category
-  
-    #     # category_title_prefix = site.config['category_title_prefix'] || 'Category: '
-    #     # self.data['title'] = "#{category_title_prefix}#{category}"
-    #   end
-    # end
 end

@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בפוסטים הקודמים על שפות פורמליות הגדרתי את המושג של שפה חסרת הקשר. שפה היא חסרת הקשר אם יוצר אותה דקדוק חסר הקשר. זה מייצג גישה שונה לשפות פורמליות ביחס לזו שבה נקטתי עבור שפות רגולריות - שם הגדרתי את המחלקה לא באמצעות דקדוק שמייצר אותה (למרות שאפשר, והראיתי מחלקת דקדוקים כזו - דקדוקים לינאריים ימניים), אלא באמצעות מודל של אוטומט שמסוגל לזהות שפות. מה זה אומר “לזהות” שפה $latex L$? שהאוטומט, בהינתן קלט $latex w$, רץ על הקלט ובסוף אומר “כן” אם $latex w\in L$ ו”לא” אם $latex w\notin L$." />
 <meta property="og:description" content="בפוסטים הקודמים על שפות פורמליות הגדרתי את המושג של שפה חסרת הקשר. שפה היא חסרת הקשר אם יוצר אותה דקדוק חסר הקשר. זה מייצג גישה שונה לשפות פורמליות ביחס לזו שבה נקטתי עבור שפות רגולריות - שם הגדרתי את המחלקה לא באמצעות דקדוק שמייצר אותה (למרות שאפשר, והראיתי מחלקת דקדוקים כזו - דקדוקים לינאריים ימניים), אלא באמצעות מודל של אוטומט שמסוגל לזהות שפות. מה זה אומר “לזהות” שפה $latex L$? שהאוטומט, בהינתן קלט $latex w$, רץ על הקלט ובסוף אומר “כן” אם $latex w\in L$ ו”לא” אם $latex w\notin L$." />
-<link rel="canonical" href="/blog/2015/03/22/pushdown_automata" />
-<meta property="og:url" content="/blog/2015/03/22/pushdown_automata" />
+<link rel="canonical" href="http://localhost:4000/blog/2015/03/22/pushdown_automata" />
+<meta property="og:url" content="http://localhost:4000/blog/2015/03/22/pushdown_automata" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-03-22T17:32:10+02:00" />
 <script type="application/ld+json">
-{"headline":"אוטומט מחסנית","dateModified":"2015-03-22T17:32:10+02:00","datePublished":"2015-03-22T17:32:10+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2015/03/22/pushdown_automata"},"url":"/blog/2015/03/22/pushdown_automata","description":"בפוסטים הקודמים על שפות פורמליות הגדרתי את המושג של שפה חסרת הקשר. שפה היא חסרת הקשר אם יוצר אותה דקדוק חסר הקשר. זה מייצג גישה שונה לשפות פורמליות ביחס לזו שבה נקטתי עבור שפות רגולריות - שם הגדרתי את המחלקה לא באמצעות דקדוק שמייצר אותה (למרות שאפשר, והראיתי מחלקת דקדוקים כזו - דקדוקים לינאריים ימניים), אלא באמצעות מודל של אוטומט שמסוגל לזהות שפות. מה זה אומר “לזהות” שפה $latex L$? שהאוטומט, בהינתן קלט $latex w$, רץ על הקלט ובסוף אומר “כן” אם $latex w\\in L$ ו”לא” אם $latex w\\notin L$.","@context":"https://schema.org"}</script>
+{"headline":"אוטומט מחסנית","dateModified":"2015-03-22T17:32:10+02:00","datePublished":"2015-03-22T17:32:10+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/03/22/pushdown_automata"},"url":"http://localhost:4000/blog/2015/03/22/pushdown_automata","description":"בפוסטים הקודמים על שפות פורמליות הגדרתי את המושג של שפה חסרת הקשר. שפה היא חסרת הקשר אם יוצר אותה דקדוק חסר הקשר. זה מייצג גישה שונה לשפות פורמליות ביחס לזו שבה נקטתי עבור שפות רגולריות - שם הגדרתי את המחלקה לא באמצעות דקדוק שמייצר אותה (למרות שאפשר, והראיתי מחלקת דקדוקים כזו - דקדוקים לינאריים ימניים), אלא באמצעות מודל של אוטומט שמסוגל לזהות שפות. מה זה אומר “לזהות” שפה $latex L$? שהאוטומט, בהינתן קלט $latex w$, רץ על הקלט ובסוף אומר “כן” אם $latex w\\in L$ ו”לא” אם $latex w\\notin L$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
