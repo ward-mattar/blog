@@ -1,21 +1,24 @@
 ---
 layout: default
 ---
-Hello world, we test lists today
+<h1>רשימת הפוסטים</h1>
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <div id="post-list">
+<label>חיפוש</label>
+<input class="search" />
+<br />
+<label>סינון לפי קטגוריה</label>
 <select id="category-filter-list">
   <option value="הכל">הכל</option>
   {% for category in site.categories %}
   <option value="{{category.name}}">{{category.name}}</option>
   {% endfor %}
 </select>
-  <button id="filter-category" >Filter</button>
-  <input class="search" />
-  <span class="sort" data-sort="name">Sort by name</span>
-  <span class="sort" data-sort="timestamp">Sort by date</span>
+<br />
+  <button class="sort" data-sort="name">מיון על פי שם</button>
+  <button class="sort" data-sort="timestamp">מיון על פי תאריך</button>
   <ul class="list">
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   {%- for post in site.posts -%}
@@ -42,7 +45,7 @@ var options = {
 };
 var postList = new List('post-list', options);
 
-$('#filter-category').click(function() {
+$('#category-filter-list').change(function() {
     postList.filter(function(item) {
         var item_categories = item.values().category.split(", ")
         if ($('#category-filter-list').val() == "הכל" || item_categories.indexOf($('#category-filter-list').val()) != -1) {
