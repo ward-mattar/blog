@@ -1,6 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: page
 ---
+ברוכות וברוכים הבאים אל הבלוג "לא מדויק". המטרה שלי כאן היא פשוטה - לספר על דברים במתמטיקה שמעניינים אותי, לתת את האינטואיציה שמאחוריהם ולהתלהב מהם. לא משנה אם זה חשבון של בית הספר היסודי, מתמטיקה של התיכון, לימודים אוניברסיטאיים או סתם חידות נחמדות - להכל יש מקום.
+
+[לרשימת הפוסטים המלאה]({{site.baseurl}}/post_list.html)
