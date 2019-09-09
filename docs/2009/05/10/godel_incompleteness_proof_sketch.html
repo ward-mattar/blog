@@ -17,7 +17,8 @@
 <script type="application/ld+json">
 {"headline":"משפט אי השלמות הראשון של גדל - איך (בערך) מוכיחים אותו?","dateModified":"2009-05-10T05:19:35+03:00","datePublished":"2009-05-10T05:19:35+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2009/05/10/godel_incompleteness_proof_sketch"},"url":"http://localhost:4000/blog/2009/05/10/godel_incompleteness_proof_sketch","description":"הקדמה הרעיון המפורסם ביותר בהוכחת משפט אי השלמות הראשון של גדל (איני חושב שאוכיח כאן את השני, לפחות לא כעת) הוא הרעיון של לכסון - שיטה ששימשה כבר את גאורג קנטור בהוכחה שלו לכך שעוצמת הממשיים אינה שווה לעוצמת הטבעיים. כמעט בכל תיאור של משפט גדל מזכירים את הדמיון שלו לפרדוקס השקרן (הפרדוקס שבו איש כרתים אומר “כל אנשי כרתים משקרים תמיד”, ולכן לא ברור אם הוא אומר את האמת או משקר), ולעתים אף מגדילים לעשות ומסבירים עד כמה גאוני היה מצד גדל לחשוב על להשתמש בו - אך כאמור, קנטור כבר עשה זאת זמן מה קודם לכן. לדעתי, הגאונות האמיתית של גדל היא ברעיון, שכיום נראה אולי פשוט וברור לחלוטין - בפרט לבקיאים במדעי המחשב - להשתמש בנוסחאות שלכאורה מדברות רק על מספרים טבעיים כדי לתאר מערכות הוכחה, ולא סתם מערכות הוכחה אלא את אלו שבתוכן הנוסחאות הללו “חיות”. ברעיון הזה אפשר להתחיל את תיאור ההוכחה של גדל. מספור גדל הבה ונזכור מהי הוכחה - סדרה של טענות, כשכל טענה היא סדרה של תווים מעל אלף-בית כלשהו של סימנים. לא כל סדרת תווים היא חוקית - יש כללים שקובעים אילו סדרות הן חוקיות (לסדרות כאלו, שמהוות טענה חוקית, לפעמים קוראים “Well formed formula” ומייד מקצרים ל-wff והופכים את יתר הטקסט לבלתי קריא) ואילו לא. מה שגדל מציע הוא לקודד כל טענה באמצעות מספר באופן הבא: ראשית, לכל תו באלף-בית נצמיד מספר טבעי - כך למשל “$latex \\wedge$” שמסמל “וגם” יכול לקבל את המספר 3, בעוד “$latex x$” שהוא משתנה יכול לקבל 5 (יש אינסוף משתנים, אבל זו לא בעיה - כל משתנה יקבל מספר אחר. באופן כללי, אם $latex t$ הוא סימן כלשהו, אז $latex g\\left(t\\right)$ יהיה הערך שגדל מתאים לו.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link rel="stylesheet" href="/blog/assets/main.css">
+  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -33,27 +34,49 @@
   </script>
   
 </head>
-<body><header class="site-header" role="banner">
-
-  <div class="wrapper">
-    <a class="site-title" rel="author" href="/blog/">לא מדויק</a>
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-        <div class="trigger">
-          <a class="page-link" href="/blog/about/">אודות</a>
-        </div>
-      </nav>
-  </div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/main">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">נושאים</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown1">
+            
+            <a class="dropdown-item text-right" href="/blog/analysis">אנליזה</a>
+            
+            <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
+            
+           </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content">
+      <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -177,6 +200,8 @@
   </div>
 
 </footer>
-</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/blogassets/js/jquery-slim.min.js"><\/script>')</script><script src="/blog/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

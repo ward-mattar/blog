@@ -7,7 +7,11 @@
     <div class="carousel-inner">
     {% for carousel_item in site.data.navigation.carousel %}
         <div class="carousel-item{% if forloop.first %} active{% endif %}">
+        {% if carousel_item.image %}
+        <img class="featurette-image img-fluid mx-auto" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" src="{{site.baseurl}}/assets/img/main/{{carousel_item.image}}"/>
+        {% else %}
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+        {% endif %}        
         <div class="container">
             <div class="carousel-caption text-right">
             <h1>{{ carousel_item.title }}</h1>

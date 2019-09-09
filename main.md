@@ -1,5 +1,5 @@
 ---
-layout: carousel
+layout: main
 ---
 {%- include navbar.html -%}
 <main role="main">
