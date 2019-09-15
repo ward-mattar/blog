@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"אז מה זה אינטגרל?","dateModified":"2010-11-27T16:27:45+02:00","datePublished":"2010-11-27T16:27:45+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/11/27/integral"},"url":"http://localhost:4000/blog/2010/11/27/integral","description":"מה השטח של עיגול שרדיוסו באורך 1? אלו מכם שלמדו נוסחאות בבית הספר אולי זוכרים שזה צריך להיות $latex \\pi$, אבל למה? איך מגיעים לזה? הבעיה הזו - מדידת שטח של צורות מסובכות - העסיקה את המתמטיקאים עוד משחר היוולדה של המתמטיקה, ובפרט אצל היוונים הקדמונים. הפתרון הראשון לבעיה הופיע אצל מי שהיה ככל הנראה גדול המתמטיקאים של העת העתיקה - ארכימדס. בשיטה שלו ניתן לראות את ניצני החשבון האינפיניטסימלי, אך מכיוון שאני לא כותב כרגע פוסט היסטורי לא אכנס לפרטים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -101,7 +101,7 @@
 
 <p>פורמלית ניתן להגדיר זאת כך: לכל <span>$latex 1\le k\le n$</span> ניקח נקודה <span>$latex x_{k}$</span> בתוך המקטע <span>$latex \left[\frac{k-1}{n},\frac{k}{n}\right]$</span>, ונקבע את גובה המלבן להיות <span>$latex f\left(x_{k}\right)$</span>. כעת שטח המלבן לאותו מקטע יהיה <span>$latex f\left(x_{k}\right)\cdot\frac{1}{n}$</span>, ולכן סכום השטחים של כל המלבנים יהיה <span>$latex \sum_{k=1}^{n}f\left(x_{k}\right)\cdot\frac{1}{n}$</span>.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2010/11/600px-Riemann_sum_convergence.png"><img class="alignnone size-full wp-image-873" title="600px-Riemann_sum_convergence" src="http://www.gadial.net/wp-content/uploads/2010/11/600px-Riemann_sum_convergence.png" alt="המחשות לסכומי רימן" width="600" height="600" /></a></p>
+<p><a href="/blog/assets/img/2010/11/600px-Riemann_sum_convergence.png"><img class="alignnone size-full wp-image-873" title="600px-Riemann_sum_convergence" src="/blog/assets/img/2010/11/600px-Riemann_sum_convergence.png" alt="המחשות לסכומי רימן" width="600" height="600" /></a></p>
 
 <p>אותו תעלול בדיוק יכול לשמש אותנו גם ככלי להעריך את העבודה שכוח מבצע על גוף בתנועה. נניח שהגוף נע מהנקודה 0 לנקודה 1, ושהכוח שפועל עליו מתואר על ידי הפונקציה <span>$latex F\left(x\right)$</span>. נחלק את הקטע <span>$latex \left[0,1\right]$</span> למקטעים מגודל <span>$latex n$</span> ונניח את ההנחה המקלה שבכל מקטע הכוח שפועל על הגוף קבוע ושווה לערך של <span>$latex F$</span> באחת מהנקודות במקטע, נאמר <span>$latex x_{k}$</span>; אז אנחנו יודעים בדיוק מה העבודה על הגוף באותו מקטע - היא בדיוק <span>$latex F\left(x_{k}\right)\cdot\frac{1}{n}$</span>. לכן סכום העבודה הכולל הוא <span>$latex \sum_{k=1}^{n}f\left(x_{k}\right)\cdot\frac{1}{n}$</span>. שתי הבעיות השונות שלנו הפכו לבעיה אחת (עם הבדל אחד - בבעיה שמדבר על כוח, הפונקציה יכולה להיות גם שלילית, אבל הפתרון שנציג עובד גם במקרה זה).</p>
 

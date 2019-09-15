@@ -47,14 +47,14 @@ categories:
 
 בנייה של ab ו-a/b היא מסובכת קצת יותר ומתבססת על כך שבהינתן קו, אפשר לבנות קו שמקביל לו (ועובר דרך נקודה נתונה). הדגמה נאה לבנייה של מקביל והסבר מדוע היא עובדת ניתן למצוא <a href="http://planetmath.org/encyclopedia/CompassAndStraightedgeConstructionOfParallelLine.html">כאן</a>. כעת בנייה של ab ושל a/b היא יחסית פשוטה - מציירים את b על ציר ה-x ואת a מציירים על ישר בזווית חדה כלשהי עם ציר ה-x (קל לעשות את זה - לבנות ישר בזווית חדה זה לא מסובך מדי, ואז פשוט חותכים את הישר עם מעגל שמרכזו בראשית ורדיוסו a). כעת מחברים את הנקודה 1 על ציר ה-x עם הנקודה של a על הישר שבזווית, ומעבירים לקו שקיבלנו קו מקביל, שעובר דרך הנקודה b בציר ה-x. הנקודה שבה הוא ייחתך עם הישר של a תהיה בדיוק הנקודה ab. הנה איך שכל זה נראה בציור:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/12/straightedge_compass_1.png"><img src="http://www.gadial.net/wp-content/uploads/2008/12/straightedge_compass_1.png" alt="straightedge_compass_1" width="360" height="198" class="aligncenter size-full wp-image-3252" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/12/straightedge_compass_1.png"><img src="{{site.baseurl}}{{site.post_images}}/2008/12/straightedge_compass_1.png" alt="straightedge_compass_1" width="360" height="198" class="aligncenter size-full wp-image-3252" /></a>
 
 הסיבה שאכן קיבלנו את המכפלה נובעת מדמיון משולשים - הביטו במשולש הקטן שאורך שתי צלעותיו הן a ו-1, וכעת הביטו במשולש הגדול שנוצר מהעברת הקו המקביל - אורך צלעו האחת היא b, והיחס בינה לבין הצלע הזהה לה במשולש הקטן (שהייתה 1) הוא b, ולכן זהו היחס גם עבור הצלע השניה - כלומר, היא גדולה מ-a בדיוק פי b, ומכאן שהיא שווה ל-ab. באותה טכניקה בדיוק ניתן לחלק את a ב-b, רק שכעת יש לבצע היפוך תפקידים קטן - מחברים את הנקודה של a עם הנקודה של b, מעבירים לקו שהתקבל מקביל שעובר דרך הנקודה 1 בציר x, והוא יחתוך את הישר הזוויתי בנקודה a/b.
 
 אם כן, במקום "להסתבך" עם גאומטריה, אפשר לשחק את המשחק בצורה אלגברית לגמרי - מתחילים מ-1, וכעת מנסים לבנות את המספרים שמעניינים אותנו באמצעות פעולות של חיבור, חיסור, כפל וחילוק. את 2 בונים על ידי החישוב 1+1; את 1/2 כעת ניתן לקבל מחלוקת 1 ב-2, וכן הלאה. אוסף המספרים שניתן לבנות כך הוא בדיוק אוסף המספרים הרציונליים: בהינתן מספר רציונלי כללי a/b, די לנו בחישוב a ו-b על ידי חיבור 1 לעצמו כמספר הדרוש של פעמים, ואז חישוב a/b באמצעות פעולת החלוקה. די משעמם, עד כה - אפילו לא נזקקנו לחיסור ולכפל.
 
 אלא שבאמצעות המחוגה ניתן לעשות עוד פעולה, קצת יותר מחוכמת מבחינה אלגברית - הוצאת שורש ריבועי. הבניה שבאמצעותה עושים זאת היא פשוטה ומקסימה, והרי היא לפניכם:
-<a href="http://www.gadial.net/wp-content/uploads/2008/12/straightedge_compass_2.png"><img src="http://www.gadial.net/wp-content/uploads/2008/12/straightedge_compass_2.png" alt="straightedge_compass_2" width="442" height="254" class="aligncenter size-full wp-image-3254" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/12/straightedge_compass_2.png"><img src="{{site.baseurl}}{{site.post_images}}/2008/12/straightedge_compass_2.png" alt="straightedge_compass_2" width="442" height="254" class="aligncenter size-full wp-image-3254" /></a>
 
 השורש של a יהיה אורך הקו d. בואו וננסה להבין מדוע: ראשית, מה שעשינו היה לקחת את a, להאריך אותו ביחידה 1 ואז לצייר מעגל כך שהקו שאורכו a+1 הוא קוטרו. לצורך כך עלינו לבנות את נקודת האמצע של a+1 ולחשב רדיוס שאורכו הוא חצי מ-a+1 אבל את כל זה כבר אמרנו שניתן לעשות.
 

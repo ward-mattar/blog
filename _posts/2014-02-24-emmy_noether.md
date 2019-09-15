@@ -12,13 +12,13 @@ tags:
   - ההיסטוריה של המתמטיקה
   - נשים במתמטיקה
 ---
-<a href="http://www.gadial.net/wp-content/uploads/2014/02/emmynoether.jpg"><img class="alignnone size-full wp-image-3066" alt="emmynoether" src="http://www.gadial.net/wp-content/uploads/2014/02/emmynoether.jpg" width="274" height="326" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/02/emmynoether.jpg"><img class="alignnone size-full wp-image-3066" alt="emmynoether" src="{{site.baseurl}}{{site.post_images}}/2014/02/emmynoether.jpg" width="274" height="326" /></a>
 
 התירוץ שלי לכתוב את הפוסט הזה הוא הכתבה <a href="http://www.haaretz.co.il/news/local/.premium-1.2247070">הזו</a> ב"הארץ" על הכמות הדלה של רחובות בתל-אביב שנקראים על שם נשים, מכיוון שבכתבה הזו נזרק התירוץ של "אף אחד לא ממליץ". ובכן, אני חושב שאמי נתר היא המלצה מצויינת, ובהמשך הפוסט אני מניח שגם יתברר מדוע, אבל כדאי באופן כללי לדבר על נתר כי כדאי לדבר על אחד הסטריאוטיפים הבזויים ביותר שמתעקשים בעקשנות לשרוד גם בימינו אנו וגם במדינת ישראל ה"מודרנית" - הסטריאוטיפ לפיו גברים "טובים יותר" מאשר נשים במתמטיקה (ובשלל מקצועות "ריאליים" אחרים, אבל אני אדבר על מתמטיקה כי זה מה שאני מכיר).
 
 הנה הסיטואציה כפי שרנדל מונרו מתאר בקומיקס xkcd בצורה קולעת לחלוטין:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/02/how_it_works.png"><img class="alignnone size-full wp-image-3063" alt="how_it_works" src="http://www.gadial.net/wp-content/uploads/2014/02/how_it_works.png" width="410" height="211" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/02/how_it_works.png"><img class="alignnone size-full wp-image-3063" alt="how_it_works" src="{{site.baseurl}}{{site.post_images}}/2014/02/how_it_works.png" width="410" height="211" /></a>
 
 מי מאיתנו לא מכיר את זה? לפעמים סתם מדובר על טענה שוביניסטית לפיה גברים יותר חכמים או מוצלחים או רציונליים מנשים; לפעמים זה טיעון מחוכם יותר בכאילו שמדבר על סוגי תפיסה שונים (למשל, התמקדות ב"אובייקטים" מול התמקדות ב"קשרים בין אובייקטים", שתמיד נשמע לי כמו לומר שבהינתן גרף, גברים מסתכלים על הצמתים ונשים מסתכלים על הקשתות - אבל מי לעזאזל שמתעסק בתורת הגרפים מתמקד בצמתים או מתמקד בקשתות? בלי להתמקד בשניהם ביחד אין תורת הגרפים).
 
@@ -67,4 +67,4 @@ tags:
 </blockquote>
 <p style="text-align: right;" align="justify">ומה המצב כיום? נשים כבר מורשות להירשם לאוניברסיטה בדיוק כמו גברים (תודה באמת!) ואין חוקים שאוסרים עליהן להיות חברות סגל. יש הרבה מתמטיקאיות מוצלחות ובולטות (אבל עדיין לא מספיק!) האם המצב שוויוני? לא, עדיין לא. האם עדיין קיים דיכוי? לדעתי כן, אבל זה כבר לא דיכוי של חוקים בירוקרטיים או נאציים; זה דיכוי שהחברה מפעילה, אולי אף בלי דעת, מכיוון שהיא עדיין לא הצליחה לעכל את הרעיון שנשים ומתמטיקה זה מוצלח בדיוק כמו גברים ומתמטיקה (כפי שהיא לא מעכלת נשים בשלל תפקידים אחרים - וגם גברים, במידה פחותה, בתפקידים "נשיים"). אם לדבר לרגע על נסיוני האישי - יצא לי ללמוד כסטודנט לצד נשים, לחקור כדוקטורנט לצד נשים, ללמד נשים כמתרגל וכמרצה, ומכל אלו התחושה שלי היא פשוטה: ההבדל העיקרי בין גברים ונשים במתמטיקה, ככל שיצא לי לראות, הוא שנשים נוטות להיות בעלות כתב יד קריא יותר.</p>
 <p style="text-align: right;" align="justify">ובגלל שהרעיון הזה כל כך חשוב, אני חושב שראוי יהיה להנציח את נתר בישראל יותר מכפי שנעשה כעת (על שמה נקרא מכון מחקר למתמטיקה באוניברסיטת בר אילן). אבל זה, כאמור, סתם תירוץ כדי לכתוב פוסט שהייתי צריך לכתוב כבר לפני הרבה מאוד זמן.</p>
-<p style="text-align: right;" align="justify"><a href="http://www.gadial.net/wp-content/uploads/2014/02/how_it_works2.png"><img class="alignnone size-full wp-image-3064" alt="how_it_works2" src="http://www.gadial.net/wp-content/uploads/2014/02/how_it_works2.png" width="410" height="235" /></a></p>
+<p style="text-align: right;" align="justify"><a href="{{site.baseurl}}{{site.post_images}}/2014/02/how_it_works2.png"><img class="alignnone size-full wp-image-3064" alt="how_it_works2" src="{{site.baseurl}}{{site.post_images}}/2014/02/how_it_works2.png" width="410" height="235" /></a></p>

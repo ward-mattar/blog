@@ -19,7 +19,7 @@ tags:
 
 נסו לשחק את המשחק כעת. לא צריך לוח אינסופי - לוח דמקה רגיל שמלא בחיילי דמקה בחציו התחתון יספיק אם רוצים לקבל תחושה של המשחק. בהמשך יהיו ספוילרים למשחק אז לאלו מכם שרוצים לגבש עליו דעה באופן עצמאי, אל תקראו הלאה בינתיים.
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/08/conway_soldiers.png"><img class="alignnone size-full wp-image-1308" title="conway_soldiers" alt="תמונת משחק החיילים של קונווי" src="http://www.gadial.net/wp-content/uploads/2011/08/conway_soldiers.png" width="500" height="300" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/08/conway_soldiers.png"><img class="alignnone size-full wp-image-1308" title="conway_soldiers" alt="תמונת משחק החיילים של קונווי" src="{{site.baseurl}}{{site.post_images}}/2011/08/conway_soldiers.png" width="500" height="300" /></a>
 </strong>
 
 קרוב לודאי שכל אחד מכם יצליח להגיע למרחק 1 מהגבול (הצעד הראשון במשחק בהכרח עושה זאת), וגם להגיע למרחק 2 מהגבול זה לא קשה במיוחד; להגיע למרחק 3 זה כבר יותר מאתגר, ולהגיע למרחק 4 זה עוד יותר מאתגר. להגיע ל-5 זה כבר ממש מאתגר, בהתחשב בעובדה שזה בלתי אפשרי. זה מה שאנחנו רוצים להוכיח בפוסט הזה.

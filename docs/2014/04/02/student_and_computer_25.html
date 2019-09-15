@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פרוייקט “התלמיד והמחשב”, בעיה 25","dateModified":"2014-04-02T21:18:48+03:00","datePublished":"2014-04-02T21:18:48+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/04/02/student_and_computer_25"},"url":"http://localhost:4000/blog/2014/04/02/student_and_computer_25","description":"סוף סוף הגענו אל בעיה עם בשר אמיתי, וכזו שתיתן לנו תירוץ להזכיר קצת מתמטיקה, ברמה יותר גבוהה מזו שהוזכרה בספר. נתחיל מהבעיה עצמה, שהיא פשוטה למדי לניסוח ולמרבה הצער, מנוסחת בלשון צבאית: בפלוגה כלשהי יש לנו 100 חיילים. מהם חלק הם טוראים, חלק הם סמלים וחלק הם קצינים. משכורתו של טוראי היא 1 ש”ח, משכורתו של סמל היא 10 ש”ח ומשכורתו של קצין היא 50 ש”ח. ידוע שסכום המשכורות של כל החיילים הוא 500 ש”ח. מה מספר הטוראים, מה מספר הסמלים ומה מספר הקצינים בפלוגה?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -105,62 +105,70 @@
 
 <p>על כן, לפני שניגש לפתרונות הכלליים, בואו נראה את הפתרון שיש בספר, שהוא פתרון “ברוטלי” למדי אבל לפעמים הוא גם הכי מתאים - פשוט נחפש בכוח שלשה של מספרים שהיא פתרון. אבל גם פתרון כוח גס שכזה צריך לדעת לממש. הנה דוגמה למימוש <strong>לא טוב</strong>:</p>
 
-<p>[ruby]
-A = 1
-B = 10
-C = 50
-NUM = 100
-SUM = 500</p>
+<div class="code-block">
 
-<p>for x in (0..NUM) do
-  for y in (0..NUM) do
-    for z in (0..NUM) do
-      if (x+y+z == NUM and A<em>x+B</em>y+C*z == SUM)
-	puts "x = #{x}, y = #{y}, z = #{z}"
-      end
-    end
-  end
-end
-[/ruby]</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">A</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="no">B</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="no">C</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="no">NUM</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="no">SUM</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+  <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+    <span class="k">for</span> <span class="n">z</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span> <span class="o">==</span> <span class="no">NUM</span> <span class="n">and</span> <span class="no">A</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="no">B</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="no">C</span><span class="o">*</span><span class="n">z</span> <span class="o">==</span> <span class="no">SUM</span><span class="p">)</span>
+	<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="c1">#{x}, y = #{y}, z = #{z}&amp;quot;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>הפתרון הזה לא טוב לא בגלל שהוא לא עובד; הוא עובד, ועוצר תוך שניה ומחזיר את הפתרון הנכון (x = 60, y = 39, z = 1). הוא לא טוב כי הוא עושה עבודה מיותרת ולא עובר בצורה חכמה על המשתנים שלנו. ראשית, אין שום סיבה בעולם להשתמש ב<strong>שלוש</strong> לולאות for אחת בתוך השניה; אפשר להיעזר בכך שאנחנו יודעים ש-<span>$latex x+y+z=100$</span> ולכן אם כבר קבענו מי יהיו <span>$latex x,y$</span> אז אפשר להגדיר את <span>$latex z$</span> להיות 100 פחות שניהם:</p>
 
-<p>[ruby]
-for x in (0..NUM) do
-  for y in (0..NUM) do
-    z = NUM - (x+y)
-    if (z &gt;= 0 and A<em>x+B</em>y+C*z == SUM)
-      puts "x = #{x}, y = #{y}, z = #{z}"
-    end
-  end
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+  <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="no">NUM</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">z</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">0</span> <span class="n">and</span> <span class="no">A</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="no">B</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="no">C</span><span class="o">*</span><span class="n">z</span> <span class="o">==</span> <span class="no">SUM</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="c1">#{x}, y = #{y}, z = #{z}&amp;quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>שימו לב שעכשיו אני נאלץ לבדוק אם z הוא חיובי כי הוא עלול לצאת שלילי. הסיבה לכך היא שלא הייתי חכם ואני נותן ל-y להיות כל מספר מ-0 ועד 100, גם אם הסכום של x ו-y יעבור את 100. אז בואו נגביל את y:</p>
 
-<p>[ruby]
-for x in (0..NUM) do
-  for y in (0..(NUM-x)) do
-    z = NUM - (x+y)
-    if (A<em>x+B</em>y+C*z == SUM)
-      puts "x = #{x}, y = #{y}, z = #{z}"
-    end
-  end
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">NUM</span><span class="p">)</span> <span class="k">do</span>
+  <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="p">(</span><span class="no">NUM</span><span class="o">-</span><span class="n">x</span><span class="p">))</span> <span class="k">do</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="no">NUM</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="no">A</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="no">B</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="no">C</span><span class="o">*</span><span class="n">z</span> <span class="o">==</span> <span class="no">SUM</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="c1">#{x}, y = #{y}, z = #{z}&amp;quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>עד כאן הכל די ברור. האופטימיזציה הבאה היא טיפה יותר חכמה, וכנראה הדבר הכי חשוב מבין כל האופטמיזציות שאני מראה פה. האבחנה היא שיש לי מגבלה נוספת ברורה על הגודל המקסימלי של x,y,z - המשוואה השניה. המשוואה השניה אומרת לי, למשל, ש-z חייב להיות בין 0 ל-10, אחרת כבר 50z לבדו יהיה גדול מ-500. לכן, במקום לרוץ על כל ערכי x מ-0 ועד 100, עדיף להתחיל דווקא מלרוץ על ערכי z, אחר כך לרוץ על ערכי y, ואת x כבר לקבוע מתוך שניהם. זה מוביל לפתרון הכי טוב שלי:</p>
 
-<p>[ruby]
-for z in (0..SUM/C) do
-  for y in (0..(SUM-C<em>z)/10) do
-    x = NUM - (y+z)
-    if (A</em>x+B<em>y+C</em>z == SUM)
-      puts "x = #{x}, y = #{y}, z = #{z}"
-    end
-  end
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">for</span> <span class="n">z</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="no">SUM</span><span class="o">/</span><span class="no">C</span><span class="p">)</span> <span class="k">do</span>
+  <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="p">(</span><span class="no">SUM</span><span class="o">-</span><span class="no">C</span><span class="o">*</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="no">NUM</span> <span class="o">-</span> <span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="no">A</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="no">B</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="no">C</span><span class="o">*</span><span class="n">z</span> <span class="o">==</span> <span class="no">SUM</span><span class="p">)</span>
+      <span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="c1">#{x}, y = #{y}, z = #{z}&amp;quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>הפתרון הזה פחות קריא מהקודמים, אבל בהחלט יותר יעיל. עד כמה שאפשר לדבר על “יעילות” בהקשר הזה, שבו כל אחד מהסקריפטים שהצגתי מסיים לרוץ כהרף עין.</p>
 
@@ -168,28 +176,32 @@ end
 
 <p>בשורה התחתונה, פייתון ורובי הן שפות די דומות - שתיהן שפות סקריפטינג עם תחביר קליל יחסית (ודומה יחסית) ושתיהן רבות עוצמה ומאפשרות לעשות דברים מורכבים בפשטות יחסית, תוך תשלום של מחיר כלשהו בזמן הריצה. מצד שני, לפייתון יש יתרון מרכזי אחד על רובי - כמות גדולה יותר של משתמשים, ולכן קהילה גדולה יותר, סיכוי גדול יותר לקבל תמיכה אם נתקלים בבעיה, והכי חשוב - הרבה יותר ספריות. אפשר לומר בצחוק שיש ספריית פייתון לכל דבר בערך, וזה לא יהיה רחוק כל כך מהמציאות. הנה מה שהיה לרנדל מונרו מ-xkcd לומר כשהוא גילה את פייתון:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/03/python.png"><img src="http://www.gadial.net/wp-content/uploads/2014/03/python.png" alt="python" width="518" height="588" class="alignnone size-full wp-image-3088" /></a></p>
+<p><a href="/blog/assets/img/2014/03/python.png"><img src="/blog/assets/img/2014/03/python.png" alt="python" width="518" height="588" class="alignnone size-full wp-image-3088" /></a></p>
 
 <p>בפרט, לפייתון יש תמיכה יפה מאוד בספריות מתמטיות. בואו נתחיל מלדבר על SymPy - ספריה למתמטיקה סימבולית, שזה בדיוק מה שאנחנו צריכים - פתרון משוואות אלגבריות עם נעלמים הוא סוג של מתמטיקה סימבולית. בואו נראה תוכנית בפייתון שפותרת את הבעיה שלנו עם התבססות על חילוץ גאוסי, ואסביר אותה שורה שורה:</p>
 
-<p>[python]
-from sympy import *
-x, y, z = symbols(‘x y z’)
-sol = solve([x + y + z - 100, x + 10<em>y + 50</em>z - 500], x, y, z)
-for z_val in range(11):
-  x_val = sol[x].subs(z,z_val)
-  y_val = sol[y].subs(z,z_val)
-  if x_val.q == 1 and y_val.q == 1:
-    print "x = %d, y = %d, z = %d" % (x_val, y_val, z_val)
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s">'x y z'</span><span class="p">)</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">solve</span><span class="p">([</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">100</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="mi">50</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">500</span><span class="p">],</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">z_val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
+  <span class="n">x_val</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">z_val</span><span class="p">)</span>
+  <span class="n">y_val</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">z_val</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">x_val</span><span class="o">.</span><span class="n">q</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">y_val</span><span class="o">.</span><span class="n">q</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">,</span> <span class="n">z_val</span><span class="p">)</span></code></pre></figure>
+
+</div>
 
 <p>התחביר דומה מספיק לזה של רובי כדי שלא אבזבז זמן על הסברים שלו - אני מניח שגם מה שלא זהה הוא די ברור. בשורה 1 אני אומר לפייתון להשתמש בספריה של SymPy. בשורה 2 אני מגדיר שלושה סימבולים, x,y,z, ומציב אותם בתוך המשתנים שנקראים באותו שם (למרות שהם לא חייבים). שימו לב ש”סימבול” כאן הוא משהו שונה מסיבול של רובי - כאן סימבול הוא אובייקט של הספריה SymPy ולא קשור לסימבולים של רובי בשום צורה.</p>
 
 <p>בשורה השלישית מתבצעת המתמטיקה - אני קורא לפונקציה solve שמקבלת כקלט מערך הכולל שתי משוואות. ההנחה הסמויה של SymPy הוא שאם אני כותב ביטוי כמו “x + y + z - 100” בלי שוויון בתוכו, אני מתכוון שהוא יהיה שווה ל-0. לכן הביטוי הזה מקודד את המשוואה “x + y + z = 100”. בדומה,  “x + 10<em>y + 50</em>z - 500” מקודד את המשוואה “x + 10<em>y + 50</em>z = 500”. מה ש-SymPy עושה הוא לזהות בעצמו שמדובר על משוואה לינארית ולקרוא למימוש שלו של האלגוריתם הגאוסי שמחזיר פתרון כללי למשוואה הזו מעל הרציונליים. ואם נסתכל מה הערך של sol בשלב הזה, זה מה שנראה:</p>
 
-<p>[python]
-{x: 40<em>z/9 + 500/9, y: -49</em>z/9 + 400/9}
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="mi">40</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="mi">9</span> <span class="o">+</span> <span class="mi">500</span><span class="o">/</span><span class="mi">9</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="mi">49</span><span class="o">*</span><span class="n">z</span><span class="o">/</span><span class="mi">9</span> <span class="o">+</span> <span class="mi">400</span><span class="o">/</span><span class="mi">9</span><span class="p">}</span></code></pre></figure>
+
+</div>
 
 <p>מה שיש לנו כאן הוא Hash שמכיל שני מפתחות: את הערך של x כפונקציה של z, ואת הערך של y כפונקציה של z. הנקודה פה היא שלכל ערך של z שרק נבחר, קיים פתרון (יחיד) למערכת המשוואות, ואם נציב את z בפונקציות שמגדירות את x,y נקבל את הערכים שלהם. למשל, אם נבחר z=1 נקבל <span>$latex x=\frac{40+500}{9}=60$</span> ו-<span>$latex y=\frac{-49+400}{9}=39$</span>. זה, במקרה ממוזל, גם הפתרון הנכון של המשוואה - קיבלנו רק מספרים שלמים חיוביים.</p>
 
@@ -211,31 +223,36 @@ for z_val in range(11):
 
 <p>טוב, אז איך נראה פתרון ב-Sage לבעיה הזו? הוא יהיה מורכב משני חלקים, שאני מפריד ביניהם ברווח. בחלק הראשון מוצאים פתרון כללי למערכת, ובחלק השני שוב עושים חיפוש כוח גס מטופש אחרי הפתרון שאנחנו רוצים, סתם כי לא היה לי כוח לכתוב משהו אלגנטי יותר:</p>
 
-<p>[python]
-t = var(‘t’)
-A = matrix(ZZ, [[1,1,1],[1,10,50]])
-b = matrix(ZZ, [[100,500]]).transpose()
-(D, L, R) = A.smith_form()
-x = R<em>(D.solve_right(L</em>b) + matrix([[0,0,t]]).transpose())</p>
+<div class="code-block">
 
-<p>val = 0
-while true:
-  ((a,),(b,),(c,)) = x.subs(t=val)
-  if a &gt; 0 and b &gt; 0 and c &gt; 0:
-    print "x = %d, y = %d, z = %d" % (a,b,c)
-    break
-  val *= -1
-  if val &gt;= 0:
-    val += 1
-    [/python]</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">t</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'t'</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">ZZ</span><span class="p">,</span> <span class="p">[[</span><span class="mi">100</span><span class="p">,</span><span class="mi">500</span><span class="p">]])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">smith_form</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">R</span><span class="o">*</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">solve_right</span><span class="p">(</span><span class="n">L</span><span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">t</span><span class="p">]])</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+
+<span class="n">val</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">true</span><span class="p">:</span>
+  <span class="p">((</span><span class="n">a</span><span class="p">,),(</span><span class="n">b</span><span class="p">,),(</span><span class="n">c</span><span class="p">,))</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">a</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">x</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+    <span class="k">break</span>
+  <span class="n">val</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="k">if</span> <span class="n">val</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">val</span> <span class="o">+=</span> <span class="mi">1</span>
+    </code></pre></figure>
+
+</div>
 
 <p>החלק הראשון הוא המעניין כאן. אם נסתכל על x בסופו, זה מה שנראה:</p>
 
-<p>[python]
-[ 40<em>t - 3500]
-[-49</em>t + 4400]
-[   9*t - 800]
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="p">[</span> <span class="mi">40</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mi">3500</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="mi">49</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="mi">4400</span><span class="p">]</span>
+<span class="p">[</span>   <span class="mi">9</span><span class="o">*</span><span class="n">t</span> <span class="o">-</span> <span class="mi">800</span><span class="p">]</span></code></pre></figure>
+
+</div>
 
 <p>וזה בעצם הפתרון הכללי למערכת. מה עשיתי כדי למצוא אותו? פשוט מאוד. בשורה 1 הגדרתי את המשתנה שבו אשתמש בתור פרמטר, כמו שהגדרתי בצורה דומה משתנים ב-SymPy. בשורה השניה והשלישית הגדרתי את מערכת המשוואות שלי בעזרת מטריצות (גם וקטור עמודה הוא מטריצה). ה-ZZ שמופיע שם אומר שמדובר על מטריצות מעל השלמים. בשורה 4 מצאתי את צורת סמית (הפונקציה מחזירה גם את D וגם את L,R, כמובן). רק בשורה 5 יש סוג של קסם. מה שקורה פה הוא שקודם כל אני פותר את המשוואה <span>$latex Dy=Lb$</span> שתיארתי קודם; עכשיו, בגלל הצורה של D, הפתרון של המשוואה הזו יהיה וקטור שהכניסה האחרונה בו היא 0, אבל בעצם גם כל ערך אחר בכניסה הזו היה עובד (למה? זו אולי השאלה הכי מאתגרת אליכם בפוסט; חשבו על ההגדרה של צורת סמית שנתתי קודם). לכן אני דוחף לשם את t, ואז כופל את הכל ב-R כדי לקבל את הפתרון הכללי למערכת המקורית.</p>
 

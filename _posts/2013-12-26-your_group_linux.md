@@ -15,9 +15,9 @@ tags:
 
 מהכתובת המקורית שלו המאמר הוסר אחרי שהעליתי את הפוסט (בתקווה, תרמתי את חלקי הפעוט בסילוק הגיגיה של גנד גלילי מהרשת). נכון לכתיבת שורות אלו עדיין אפשר למצוא אותו בשלל מקומות אחרים על ידי גיגול פשוט. למען הדורות הבאים, שמרתי לעצמי צילום מסך של המאמר, אבל אין לכם צורך לקרוא אותו - אני אצטט את החלקים שרלוונטיים לנו.
 
-<a href="http://www.gadial.net/wp-content/uploads/2013/12/ענב-גנד-גלילי-חבורות-1.png"><img class="alignnone size-thumbnail wp-image-3044" alt="ענב גנד גלילי חבורות 1" src="http://www.gadial.net/wp-content/uploads/2013/12/ענב-גנד-גלילי-חבורות-1-150x150.png" width="150" height="150" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2013/12/egg-group1.png"><img class="alignnone size-thumbnail wp-image-3044" alt="ענב גנד גלילי חבורות 1" src="{{site.baseurl}}{{site.post_images}}/2013/12/egg-group1.png" width="150" height="150" /></a>
 
-<a href="http://www.gadial.net/wp-content/uploads/2013/12/ענב-גנד-גלילי-חבורות-2.png"><img class="alignnone size-thumbnail wp-image-3043" alt="ענב גנד גלילי חבורות 2" src="http://www.gadial.net/wp-content/uploads/2013/12/ענב-גנד-גלילי-חבורות-2-150x150.png" width="150" height="150" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2013/12/egg-group2.png"><img class="alignnone size-thumbnail wp-image-3043" alt="ענב גנד גלילי חבורות 2" src="{{site.baseurl}}{{site.post_images}}/2013/12/egg-group2.png" width="150" height="150" /></a>
 
 אם להיות הגונים, ככל הנראה האשמה אינה ישירות בגלילי אלא בספר שהיא מסתמכת עליו, בשילוב עם חוסר הבנה שלה במתמטיקה. הספר שהיא מביאה כרפרנס הוא "Change: Principles of Problem Formation and Problem Resolution" של Watzlawick, Weakland ו-Fisch, ואיני יודע כמה מהאשמה מוטלת עליו כי לא הצלחתי למצוא עותק שלו לקריאה (בינתיים). לכן אדבר על מה שקורה במאמר של גלילי.
 

@@ -15,11 +15,11 @@ tags:
 
 החידה היא כזו: נתון לוח משבצות עם {% equation %}2^{n}\times2^{n}{% endequation %} משבצות ({% equation %}n{% endequation %} הוא מספר טבעי חיובי). הנה דוגמה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/12/board.png"><img class="alignnone size-full wp-image-884" title="board" src="http://www.gadial.net/wp-content/uploads/2010/12/board.png" alt="" width="284" height="288" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/12/board.png"><img class="alignnone size-full wp-image-884" title="board" src="{{site.baseurl}}{{site.post_images}}/2010/12/board.png" alt="" width="284" height="288" /></a>
 
 האם ניתן לרצף אותו עם צורות דמויות "ר" שגודלן 3 משבצות - אלו שרואים בתמונה הבאה?
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/12/tiles.png"><img class="alignnone size-full wp-image-885" title="tiles" src="http://www.gadial.net/wp-content/uploads/2010/12/tiles.png" alt="" width="306" height="73" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/12/tiles.png"><img class="alignnone size-full wp-image-885" title="tiles" src="{{site.baseurl}}{{site.post_images}}/2010/12/tiles.png" alt="" width="306" height="73" /></a>
 
 ובכן, ברור שלא: לוח כזה מכיל {% equation %}2^{2n}{% endequation %} משבצות ומספר זה לא יתחלק אף פעם ב-3, אבל כל שטח שמרוצף על ידי "ר"-ים שכאלו ודאי יכיל מספר משבצות שמתחלק ב-3, כי הוא רוצף על ידי כפולה שלמה של "ר"-ים.
 
@@ -27,7 +27,7 @@ tags:
 
 בסיס האינדוקציה ברור - אם יש לנו לוח בגודל {% equation %}2\times2{% endequation %} שהסרנו ממנו את המשבצת השמאלית העליונה, אז הלוח עצמו הוא צורת "ר" ולכן בוודאי ניתן לריצוף על ידי צורת "ר" אחת. אם כן, השלב הבא הוא להניח שאנו יודעים לרצף לוח בגודל {% equation %}2^{n}\times2^{n}{% endequation %} שהוסרה ממנו המשבצת השמאלית העליונה ולנסות לרצף לוח בגודל {% equation %}2^{n+1}\times2^{n+1}{% endequation %}. הרעיון המתבקש (והנכון) הוא לחלק את הלוח לארבעה רבעים; כל רבע כזה יהיה מגודל {% equation %}2^{n}\times2^{n}{% endequation %} ולכן ניתן יהיה להפעיל עליו את הנחת האינדוקציה... אה, רגע, לא. אפשר להפעיל את הנחת האינדוקציה רק על לוח ש<strong>הוסרה ממנו המשבצת השמאלית העליונה</strong>. אז אנחנו אמנם יודעים לרצף את הלוח השמאלי העליון מבין הארבעה, אבל זהו, נתקענו.
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/12/board_divided.png"><img class="alignnone size-full wp-image-886" title="board_divided" src="http://www.gadial.net/wp-content/uploads/2010/12/board_divided.png" alt="" width="284" height="288" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/12/board_divided.png"><img class="alignnone size-full wp-image-886" title="board_divided" src="{{site.baseurl}}{{site.post_images}}/2010/12/board_divided.png" alt="" width="284" height="288" /></a>
 
 כאן מגיעה ההברקה: במקום להוכיח באינדוקציה את הטענה שלנו, ננסה להוכיח באינדוקציה <strong>טענה חזקה יותר</strong>. כל מי שלמד מתמטיקה כנראה נתקל בזה מתישהו. לנסות ולהוכיח רק את הטענה ה"צרה" שלנו באינדוקציה זה לרוב קשה כי אנחנו חייבים להשתמש ב"עותק מוקטן" של אותה טענה בדיוק בהוכחה שלנו. לעומת זאת, אם נרחיב את הטענה שאנו מוכיחים יהיה לנו כלי חזק יותר להשתמש בו במהלך ההוכחה; והוכחת הבסיס לא בהכרח תהיה קשה יותר. אם כן, הטענה שנוכיח תהיה הטענה הבאה: אם נוריד מלוח {% equation %}2^{n}\times2^{n}{% endequation %} משבצת <strong>כלשהי</strong>, עדיין יהיה ניתן לרצף אותו. זו טענה מתבקשת כי לא נראה שיש חשיבות מסויימת דווקא לפינה; ובכל זאת, ההבנה שצריך לחזק את הטענה שלנו אינה טריוויאלית.
 
@@ -35,4 +35,4 @@ tags:
 
 כל המוסיף גורע ולכן אסיים את הפוסט כאן ואתן לכם ליהנות בשקט מהפתרון.
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/12/solution.png"><img class="alignnone size-full wp-image-887" title="solution" src="http://www.gadial.net/wp-content/uploads/2010/12/solution.png" alt="" width="285" height="288" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/12/solution.png"><img class="alignnone size-full wp-image-887" title="solution" src="{{site.baseurl}}{{site.post_images}}/2010/12/solution.png" alt="" width="285" height="288" /></a>

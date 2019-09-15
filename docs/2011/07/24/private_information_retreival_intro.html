@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"ושאינו יודע מה שאלו","dateModified":"2011-07-24T02:44:39+03:00","datePublished":"2011-07-24T02:44:39+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/07/24/private_information_retreival_intro"},"url":"http://localhost:4000/blog/2011/07/24/private_information_retreival_intro","description":"אם תשאלו אותי מהי קריפטוגרפיה, אני כנראה אענה את התשובה המשעממת של “התחום במדעי המחשב שעוסק באבטחה של מידע - הצפנה, הבטחת אותנטיות, הזדהות בטוחה וכדומה”. התשובה שאני באמת ארצה לתת היא “התחום במדעי המחשב שבו קורים ניסים”; זה התחום שבו עשיית הבלתי אפשרי היא שגרת העבודה. למשל, לאפשר לשני גורמים שמעולם לא ראו זה את זה ולא תיאמו שום דבר מראש להיות מסוגלים לתקשר בצורה בטוחה (מה שמושג, למרות אי אלו בעיות שעדיין קיימות, בעזרת הצפנת מפתח ציבורי); או למשל, להוכיח לצד השני שאתה יודע דבר מה מבלי להדליף שום אינפורמציה על מה בעצם אתה יודע (מה שמושג בעזרת הוכחות אפס-ידע). אני רוצה להציג כאן עוד דוגמה - Private information retrieval, “אחזור מידע מאובטח”. כפי שבדרך כלל קורה, הבעיה שאני מנסה לפתור נראית במבט ראשון קשה ביותר, אבל הפתרונות בסופו של דבר מתבררים כפשוטים ואפילו מתבקשים למדי (אם כי יש להודות שאני מציג כאן רק את הפתרונות הפשוטים והיעילים פחות).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

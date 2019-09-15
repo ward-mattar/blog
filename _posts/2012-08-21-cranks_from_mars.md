@@ -17,7 +17,7 @@ tags:
 
 הטריגר שלי לכתוב את הפוסט הנוכחי הוא דיון פייסבוק שהתחיל לפני שבוע על העניין הזה בעמוד של אחד, דודי ממן (שאיני מכיר). הדיון כלל כמה פיתולים מרתקים, ואפשר לראות אותו בשלמותו (שמור כתמונה) כאן<strong>:</strong>
 
-<a href="http://www.gadial.net/wp-content/uploads/2012/08/moon.png"><img class="alignnone size-thumbnail wp-image-2145" title="moon" src="http://www.gadial.net/wp-content/uploads/2012/08/moon-150x150.png" alt="" width="150" height="150" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/08/moon.png"><img class="alignnone size-thumbnail wp-image-2145" title="moon" src="{{site.baseurl}}{{site.post_images}}/2012/08/moon.png" alt="" width="150" height="150" /></a>
 
 תחילת הדיון הייתה בכך שדודי פרסם נוסח סטנדרטי של הידיעה. חיש קל פרסם מישהו <a href="http://www.hayadan.org.il/mars-near-its-farest-point-2508108/">קישור לאתר הידען</a> שמפריך את הידיעה.
 
@@ -43,7 +43,7 @@ tags:
 
 נותר להבין, אם כן, איך מחשבים את הקוטר הזוויתי, וכאן נכנסת לתמונה טריגונומטריה אלמנטרית. הביטו בתמונה הבאה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2012/08/Angular_dia_formula.jpg"><img class="alignnone size-full wp-image-2144" title="Angular_dia_formula" src="http://www.gadial.net/wp-content/uploads/2012/08/Angular_dia_formula.jpg" alt="" width="583" height="227" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/08/Angular_dia_formula.jpg"><img class="alignnone size-full wp-image-2144" title="Angular_dia_formula" src="{{site.baseurl}}{{site.post_images}}/2012/08/Angular_dia_formula.jpg" alt="" width="583" height="227" /></a>
 
 כאן המשולש נוצר על ידי שני הקווים שהולכים אל נקודות הקצה של ה"דיסק" (שנראה באיור כמו אליפסה). {% equation %}d{% endequation %} הוא הקוטר של הדיסק, {% equation %}D{% endequation %} הוא המרחק שלו מאיתנו, ו-{% equation %}\delta{% endequation %} היא הקוטר הזוויתי. המשולש הגדול אינו משולש ישר זווית, אבל אפשר לחלק אותו לשני משולשים כאלו שכל אחד מהם כולל זווית של {% equation %}\frac{\delta}{2}{% endequation %}. כעת, אחת מהפונקציות הטריגונומטריות הבסיסיות היא פונקציית הטנגנס; טנגנס של זווית במשולש ישר זווית הוא המנה של הניצב שמול הזווית, והניצב שליד הזווית. כלומר, {% equation %}\tan\left(\frac{\delta}{2}\right)=\frac{1}{2}\frac{d}{D}{% endequation %} (החצי באגף ימין נובע מכך שאורך הצלע שמול הזווית הוא {% equation %}\frac{d}{2}{% endequation %} - זכרו שאנו מסתכלים רק על אחד מהמשולשים הקטנים). זה לא עוזר לנו לקבל את {% equation %}\delta{% endequation %}, אז אנחנו מפעילים על שני האגפים את הפונקציה הנגדית לטנגנס, שנקראת ארק-טנגנס (ובסימון: {% equation %}\mbox{atan}{% endequation %}) ומקבלים {% equation %}\frac{\delta}{2}=\mbox{atan}\frac{1}{2}\frac{d}{D}{% endequation %}, או {% equation %}\delta=2\mbox{atan}\frac{1}{2}\frac{d}{D}{% endequation %}. זו כל הנוסחה שאנחנו צריכים.
 

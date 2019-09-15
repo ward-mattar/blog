@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פותרים את SAT - אלגוריתם CDCL","dateModified":"2014-02-03T19:20:48+02:00","datePublished":"2014-02-03T19:20:48+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/02/03/cdcl_sat_solving"},"url":"http://localhost:4000/blog/2014/02/03/cdcl_sat_solving","description":"בפוסט הקודם על פתרונות לבעיית SAT ראינו את אלגוריתם DPLL - זה היה פחות או יותר האלגוריתם הבסיסי שרוב פותרי ה-SAT המדוייקים (להבדיל מהסתברותיים) מבוססים עליו, אבל מן הסתם פותרים מודרניים הולכים רחוק יותר ממנו, ובפוסט הזה אני רוצה להציג אלגוריתם קצת יותר מודרני שמתבסס על DPLL אבל עושה עוד דברים מתוחכמים - אלגוריתם CDCL, קיצור של Conflict-Driven Clause Learning. כמובן, כמו DPLL גם זה לא “אלגוריתם” במלוא מובן המילה אלא בעיקר “מסגרת” שלתוכה אפשר לצקת שלל שיפורים ושפצורים, אבל הרעיונות הכלליים שלו עדיין מעניינים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -113,7 +113,7 @@
 
 <p>ובכן, כל המלל שלעיל הוא קצת מסורבל. קל יותר להבין מה הלך כאן אם מציירים את זה בתור גרף:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_grap.png"><img class="alignnone size-full wp-image-3037" alt="sat_implication_grap" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_grap.png" width="976" height="293" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2014/02/sat_implication_grap.png"><img class="alignnone size-full wp-image-3037" alt="sat_implication_grap" src="/blog/assets/img/2014/02/sat_implication_grap.png" width="976" height="293" /></a></strong></p>
 
 <p>מה שיש לנו כאן מכונה Implication graph - “גרף הגרירות”. הצמתים שלו הן כל ההשמות למשתנים - הן משתני הבחירה והן המשתנים הנגררים. יש קשת מהשמה אחת להשמה אחרת אם ההשמה האחת הייתה מעורבת בגרירה של האחרת - והכיתוב של הקשת הוא הפסוקית שבה התבצעה הגרירה הזו. <span>$latex X$</span> מייצג את ההרס והחורבן של הסתירה שהגענו אליה - אם תרצו, אפשר לחשוב עליו כאילו הוא נגרר מפסוקית ש”התרוקנה”, או ממשתנה אחד שהושמו בו שני ערכים שונים (זו בעצם אינדיקציה לכך שיש שתי פסוקיות שמתרוקנות - אחת כשמציבים במשתנה הזה 0 והשניה שמתרוקנת כשמציבים בו 1).</p>
 
@@ -131,7 +131,7 @@
 
 <p>אינטואיטיבית, חתך הוא קטיעה של קשתות בגרף כך שהגרף יתפרק לשני חלקים. פורמלית, חתך הוא פשוט חלוקה של צמתי הגרף לשתי קבוצות, ונהוג לדבר על הקשתות שחוצות את החתך - כל הקשתות שקצה אחד שלהן הוא בקבוצה אחת של החתך והקצה השני בקבוצה השניה. הנה דוגמה לחתך בגרף שלנו:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_1.png"><img class="alignnone size-full wp-image-3038" alt="sat_implication_graph_cut_1" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_1.png" width="2105" height="790" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2014/02/sat_implication_graph_cut_1.png"><img class="alignnone size-full wp-image-3038" alt="sat_implication_graph_cut_1" src="/blog/assets/img/2014/02/sat_implication_graph_cut_1.png" width="2105" height="790" /></a></strong></p>
 
 <p>אז אנחנו לוקחים חתך שמקיים את התכונה הבאה: בקבוצה האחת שלו יש את כל משתני ההחלטה, ובקבוצה השניה יש לפחות אחד מהמשתנים שגרם לקונפליקט, ואת הצומת <span>$latex X$</span>. נסתכל על הקשתות שחוצות את החתך, ובאופן יותר ספציפי - בצמתים שמהם הקשתות יצאו. לא קשה במיוחד להשתכנע שאם יש לנו השמה <strong>כלשהי</strong> שמתאימה להשמות שכתובות בצמתים הללו, אז בהכרח נגיע לקונפליקט (בלי קשר לשאלה מה ההשמה עושה לשאר הצמתים). אז בכל השמה שמספקת את הפסוק, לפחות אחת מההשמות הללו חייבת להשתנות. המשמעות של זה עבור החתך הספציפי שבחרנו הוא הוספת הפסוקית הבאה לפסוק:</p>
 
@@ -139,7 +139,7 @@
 
 <p>זה כמובן הרבה יותר פשוט (ומצמצם יותר את מרחב החיפוש של אלגוריתם ה-CDCL) מאשר הפסוקית המפלצתית שתיארתי קודם. אבל זו לא האפשרות היחידה, כמובן; הנה חתך שנותן לנו את הפסוקית <span>$latex \left(x_{21}\vee x_{2}\vee x_{3}\right)$</span>:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_2.png"><img class="alignnone size-full wp-image-3039" alt="sat_implication_graph_cut_2" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_2.png" width="2105" height="953" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2014/02/sat_implication_graph_cut_2.png"><img class="alignnone size-full wp-image-3039" alt="sat_implication_graph_cut_2" src="/blog/assets/img/2014/02/sat_implication_graph_cut_2.png" width="2105" height="953" /></a></strong></p>
 
 <p>ושוב, איך מחליטים איזה חתך לקחת? אין לי תשובה נחמדה - היוריסטיקות, היוריסטיקות, היוריסטיקות. ודברים קצת יותר חכמים שאני לא הולך להיכנס אליהם עכשיו.</p>
 

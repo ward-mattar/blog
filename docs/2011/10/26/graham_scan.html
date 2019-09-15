@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"הסריקה של גרהאם","dateModified":"2011-10-26T17:22:06+03:00","datePublished":"2011-10-26T17:22:06+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/10/26/graham_scan"},"url":"http://localhost:4000/blog/2011/10/26/graham_scan","description":"אני לוקח הפסקה קצרה מהאלגברה הלינארית כי השאלה לדוגמה של תחרות התכנות של האוניברסיטה העברית (פרסומת זולה, כל עוד זה רלוונטי, מופיעה כאן) עשתה לי חשק לדבר קצת על בעיה גאומטרית ופתרונה - הבעיה של חישוב קמור של קבוצת נקודות במישור. זו בעיה ששייכת לתחום במדעי המחשב של גאומטריה חישובית - נתונה בעיה גאומטרית ואנו מחפשים פתרון אלגוריתמי עבורה, רצוי כזה שהוא יעיל ככל האפשר. בעיות כאלו צצות בכמה מהתחומים הפרקטיים ביותר במדעי המחשב - למשל, גרפיקה, ראייה ממוחשבת וכדומה - ולכן המהירות והיעילות הן קריטיות בבעיות שכאלו. הבעיה שלנו היא זו: יש קבוצה סופית של נקודות במישור, כלומר הקלט שלנו הוא סדרה של זוגות מהצורה $latex \\left(x,y\\right)$ כאשר $latex x,y$ הם מספרים ממשיים כלשהם, והמטרה שלנו היא למצוא מהו הקמור שלהן. לפני שנמצא מהו הקמור כדאי שנבין מהו קמור.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -93,7 +93,7 @@
 
 <p>דרך חביבה אחת לחשוב על הקמור היא זו: נניח שיש לנו גומיה. אנחנו מותחים אותה בכוח עד שהיא מקיפה את כל הנקודות בקבוצה, ואז משחררים - הגומיה תתכווץ מייד על נקודות הקבוצה, ולאחר שזה ייגמר מה שנקבל הוא את הקמור. הנה תמונה שמראה זאת:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/258px-ConvexHull.svg_.png"><img class="alignnone size-full wp-image-1393" title="258px-ConvexHull.svg" src="http://www.gadial.net/wp-content/uploads/2011/10/258px-ConvexHull.svg_.png" alt="" width="258" height="206" /></a>
+<p><strong><a href="/blog/assets/img/2011/10/258px-ConvexHull.svg_.png"><img class="alignnone size-full wp-image-1393" title="258px-ConvexHull.svg" src="/blog/assets/img/2011/10/258px-ConvexHull.svg_.png" alt="" width="258" height="206" /></a>
 </strong></p>
 
 <p>עוד דרך נחמדה לחשוב על הקמור היא זו: אם <span>$latex a,b$</span> הן שתי נקודות, אז אפשר לתאר את הקטע הישר שעובר ביניהן בתור הצירוף הלינארי <span>$latex \lambda_{1}a+\lambda_{2}b$</span> תחת התנאי ש-<span>$latex \lambda_{1}+\lambda_{2}=1$</span> ו-<span>$latex \lambda_{1},\lambda_{2}\ge0$</span>. כלומר, הקטע הוא בדיוק קבוצת כל הנקודות מהצורה <span>$latex \lambda_{1}a+\lambda_{2}b$</span> (עבור ערכים גדולים או קטנים יותר של המקדמים נקבל משהו שהוא עדיין על הקו הישר שמחבר את הנקודות, אבל לא בקטע שבין שתיהן). למי שקשה לו לראות את זה, חשבו על זה כך: כאשר <span>$latex \lambda_{1}=1$</span> אז <span>$latex \lambda_{2}=0$</span> ולכן אנחנו בדיוק ב-<span>$latex a$</span>; כאשר <span>$latex \lambda_{1}=0$</span> אז <span>$latex \lambda_{2}=1$</span> ולכן אנחנו בדיוק ב-<span>$latex b$</span>; ולכן בין שני הקצוות הללו אנחנו באמצע הדרך בין <span>$latex a$</span> ו-<span>$latex b$</span>. כמובן שאם זה עדיין לא משכנע אתכם הדבר הכי בטוח לעשותו הוא פשוט לחשב את משוואת הישר שעובר ב-<span>$latex a$</span> ו-<span>$latex b$</span> ולראות מה קורה.</p>
@@ -106,7 +106,7 @@
 
 <p>כעת, דרך ציורית לתאר את האלגוריתם היא זו: בכל פעם שבה הזרוע נתקלת בנקודה, היא “נשברת” - הבסיס שלה נותר תקוע על הנקודה, ואילו הזרוע מהנקודה והלאה ממשיכה בסיבוב שלה. זה נותן אינטואיציה לפיה האלגוריתם הוא פשוט “הנקודות על הקמור הן בדיוק הנקודות של הקבוצה, ממויינות על פי סדר הפגיעה של הזרוע בהן”, אבל ברור שיש כאן בעיה - לא תמיד כל הנקודות בקבוצה הן על הקמור; לרוב יש כאלו שנמצאות בתוך הקמור ולא אמורים להתחשב בהן. אז מה משתבש? גם כאן, כדאי לראות תמונה:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/GrahamScan.png"><img class="alignnone size-full wp-image-1395" title="GrahamScan" src="http://www.gadial.net/wp-content/uploads/2011/10/GrahamScan.png" alt="" width="204" height="187" /></a>
+<p><strong><a href="/blog/assets/img/2011/10/GrahamScan.png"><img class="alignnone size-full wp-image-1395" title="GrahamScan" src="/blog/assets/img/2011/10/GrahamScan.png" alt="" width="204" height="187" /></a>
 </strong></p>
 
 <p>הבעיה מתחילה עם נקודה 4. במיון של הנקודות היא באה לפני נקודה 5, אבל ברור שהיא לא צריכה להיות על הקמור והזרוע הנשברת שלי לא אמורה להגיע אליה בכלל אי פעם. אז איך אפשר לפסול אותה? כאן נמצא הרעיון המרכזי של גרהאם - שימו לב שהקו שמחבר את נקודה 4 אל נקודה 5 מהווה <strong>פנייה שמאלה</strong> ביחס לקו שמחבר את נקודה 3 עם נקודה 4. גרהאם אומר - כל עוד אנחנו פונים <strong>ימינה</strong> ביחס לקו הקודם, הכל בסדר; אם פנינו שמאלה, זה אומר שהנקודה שבה התחילה הפניה שמאלה הזו היא מיותרת ואפשר לוותר עליה ולהוציא אותה מהקמור. בואו ננסה להבין למה זה נכון: נניח שאם אנחנו הולכים מנקודה 1 (לא זו שבציור) אל נקודה 2, וממנה פונים אל נקודה 3, נשאלת השאלה - מה היה קורה אם היינו הולכים מ-1 ישירות אל 3 ופוסחים על 2? האם נקודה 2 הייתה מצד ימין או מצד שמאל שלנו?</p>

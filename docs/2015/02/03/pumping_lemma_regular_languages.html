@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"למת הניפוח לשפות רגולריות","dateModified":"2015-02-03T23:32:59+02:00","datePublished":"2015-02-03T23:32:59+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/02/03/pumping_lemma_regular_languages"},"url":"http://localhost:4000/blog/2015/02/03/pumping_lemma_regular_languages","description":"עד עכשיו בסדרת הפוסטים שלי על שפות רגולריות נראה לי שהצלחנו לקבל מושג לא רע לגבי מה הן: ראינו מצד אחד אפיון שלהן בתור שפות שניתנות לזיהוי על ידי מספר מודלי חישוב (אוטומטים), ומצד שני אפיון שלהן בתור קבוצה אינדוקטיבית של שפות שניתן להרכיב מתוך השפות הסופיות על ידי איחוד, שרשור וסגור-קלייני, והאפיון הזה גם נתן לנו שיטת תיאור נוחה לשפות כאלו - ביטויים רגולריים. ראינו שהן מקיימות שלל תכונות סגור נוספות. מה שלא באמת ראינו עד עכשיו הוא שיטה שתאפשר לנו לזהות מתי שפה איננה רגולרית.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -99,7 +99,7 @@
 
 <p>מייד ברור שאכן מתקיים <span>$latex \left|uv\right|\le n$</span> מהנימוק שנתתי קודם - אחרי <span>$latex n$</span> הצעדים הראשונים כבר היה מצב שהופיע פעמיים, ולכן כל המילה שאנחנו מספיקים לקרוא עד הפעם השניה שבה הגענו למצב הזה לא ארוכה מ-<span>$latex n$</span>. גם ברור ש-<span>$latex \left|v\right|\ge1$</span> כי אחרת היינו מקבלים ש”הפעם הראשונה” ו”הפעם השניה” שבה האוטומט מבקר ב-<span>$latex p$</span> הן אותה פעם, בסתירה לכך שזה מצב שאנחנו רואים פעמיים. נשאר רק להוכיח שהדבר הזה עם ה-<span>$latex uv^{i}w$</span> מתקיים. זה פשוט למדי אחרי שמסכמים את מה שאנחנו כבר יודעים באיור הזה, שהוא וריאציה על האיור מהפוסט הראשון עם <span>$latex \left\{ a^{n}b^{n}\ |\ n\in\mathbb{N}\right\} $</span>:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2015/02/pumping_lemma2.png"><img class="aligncenter size-large wp-image-3221" alt="pumping_lemma2" src="http://www.gadial.net/wp-content/uploads/2015/02/pumping_lemma2-1024x280.png" width="584" height="159" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2015/02/pumping_lemma2.png"><img class="aligncenter size-large wp-image-3221" alt="pumping_lemma2" src="/blog/assets/img/2015/02/pumping_lemma2.png" width="584" height="159" /></a></strong></p>
 
 <p>מה שקורה פה הוא פשוט שלא משנה כמה פעמים נחזור על הלולאה באמצע או נוותר עליה בכלל - בסוף עדיין נגיע למצב מקבל. כמובן, הוכחה באמצעות איור אינה לגיטימית, אז הנה הפורמליזם למי שזה באמת חשוב לו:</p>
 

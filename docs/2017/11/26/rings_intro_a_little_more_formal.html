@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"חוגים - מבוא קצת יותר פורמלי","dateModified":"2017-11-26T09:09:18+02:00","datePublished":"2017-11-26T09:09:18+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/11/26/rings_intro_a_little_more_formal"},"url":"http://localhost:4000/blog/2017/11/26/rings_intro_a_little_more_formal","description":"הגדרות בסיסיות אחרי פוסט המבוא שלי על חוגים, אני רוצה לתת פוסט קצת יותר פורמלי וקונקרטי, ועם קצת פחות נפנופי ידיים ויותר דוגמאות קונקרטיות. נתחיל מההגדרה הבסיסית: חוג (Ring) מורכב מקבוצה $latex R$ ושתי פעולות בינאריות מעליה שאני מסמן ב-$latex +$ וב-$latex \\cdot$ (את הכפל אני לרוב לא מסמן בכלל, כלומר במקום $latex a\\cdot b$ אני כותב $latex ab$). אנחנו דורשים ש-$latex \\left(R,+\\right)$ תהיה חבורה אבלית (כן, אני מניח שאנחנו מכירים חבורות) שנסמן את איבר היחידה שלה ב-0, ופרט לכך אנחנו דורשים: $latex a\\left(bc\\right)=\\left(ab\\right)c$ לכל $latex a,b,c\\in R$ (אסוציאטיביות הכפל) $latex a\\left(b+c\\right)=ab+ac$ ו-$latex \\left(b+c\\right)a=ba+ca$ לכל $latex a,b,c\\in R$ (דיסטריביוטיביות הכפל מעל החיבור) קיים איבר $latex 1\\in R$ כך ש-$latex a\\cdot1=1\\cdot a=a$ לכל $latex a\\in R$. לפעמים אני אשמיט את הדרישה השלישית כדי לקבל חוג בלי יחידה. דוגמא: $latex \\mathbb{Z}$ הוא חוג עם פעולות החיבור והכפל הרגילות. $latex 2\\mathbb{Z}=\\left\\{ 0,2,-2,\\dots\\right\\} $ הוא חוג עם פעולות הכפל והחיבור הרגילות, למעט הדרישה על קיום $latex 1$. אז ל-$latex 2\\mathbb{Z}$ אני לפעמים אקרא חוג בלי יחידה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

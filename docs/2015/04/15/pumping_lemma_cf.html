@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"שפות חסרות הקשר - למת הניפוח, הלמה של אוגדן ושפות רב משמעיות","dateModified":"2015-04-15T17:19:09+03:00","datePublished":"2015-04-15T17:19:09+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/04/15/pumping_lemma_cf"},"url":"http://localhost:4000/blog/2015/04/15/pumping_lemma_cf","description":"אני ממשיך לדבר על תכונות שונות ומשונות של שפות חסרות הקשר, וממשיך עם האנלוגיה לשפות רגולריות. אחד מהדברים שעשינו בשפות רגולריות היה להוכיח משהו שנקרא “למת הניפוח”, שהצביע על סוג של תבניתיות שכל שפה רגולרית חייבת לקיים. משהו מאוד דומה קיים גם עבור שפות חסרות הקשר, אבל כרגיל עם שפות חסרות הקשר, זה קצת יותר מסובך. אני אראה את המשהו המאוד דומה. ואז אני אכליל אותו עוד קצת. ואז אני אשתמש בהכללה כדי להראות משהו שנראה בלתי קשור בעליל. בלמת הניפוח לשפות רגולריות השתמשנו כדי להוכיח ששפות אינן רגולריות, ובאופן דומה אפשר להשתמש בלמת הניפוח לשפות חסרות הקשר כדי להוכיח ששפות אינן חסרות הקשר; אבל אני אוכיח גם משהו שונה לחלוטין - ששפה חסרת הקשר מסויימת היא רב-משמעית טבועה, דהיינו שכל דקדוק עבור השפה בהכרח יהיה רב משמעי (אזכיר את כל ההגדרות בהמשך). זה שימוש יפה שאני מאוד מחבב כי על פניו בכלל לא ברור מה הקשר.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -117,7 +117,7 @@
 
 <p>אז מה שנעשה, אם <span>$latex k$</span> הוא מספר המשתנים של הדקדוק שלנו, נבחר <span>$latex n=2^{k}$</span>. עכשיו בואו ניקח עץ גזירה כלשהו עבור <span>$latex z$</span>. אם נעיף את הצמתים של הטרמינלים, נקבל עץ בינארי שבו העלים הם המשתנים שהגזירה שהם ביצעו היא גזירה של טרמינלים. מכיוון שכל משתנה כזה גזר טרמינל אחד, מספר המשתנים הללו הוא בדיוק <span>$latex \left|z\right|$</span>, כלומר מספר העלים בעץ הוא לפחות <span>$latex 2^{k}$</span>, ולכן עומק העץ הוא לפחות <span>$latex k$</span>. ניקח את המסלול הארוך ביותר בעץ - מכיוון שהעומק שלו הוא לפחות <span>$latex k$</span>, הרי שכשאנחנו הולכים עליו אנחנו רואים לפחות <span>$latex k+1$</span> משתנים. מסקנה - קיימים משתנים שמופיעים פעמיים על המסלול הזה. בואו נתחיל ללכת על המסלול מהעלה לכיוון השורש, ונסמן ב-<span>$latex A$</span> את המשתנה הראשון שמופיע פעמיים. עכשיו אפשר לתת את פירוק המילה שלנו - נסמן ב-<span>$latex w$</span> את המילה שהמופע השני, הנמוך יותר, של <span>$latex A$</span> גוזר; על כן המופע הראשון של <span>$latex A$</span> גוזר מילה ש-<span>$latex w$</span> היא חלק ממנה, ונסמן את החלקים שלפני ואחרי <span>$latex w$</span> ב-<span>$latex v,w$</span> בהתאמה, כלומר <span>$latex A$</span> הראשון גוזר את המילה <span>$latex vwx$</span>. המילה הזו היא בתורה חלק מהמילה ש-<span>$latex S$</span> גוזר (כלומר, המילה של עץ הגזירה כולו) ונסמן את הלפני ואחרי ב-<span>$latex u,y$</span>, כלומר המילה כולה היא <span>$latex uvwxy$</span> - הנה הפירוק שלנו. זה מאוד מבלבל אז הנה תמונה:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2015/04/pumping_lemma_cf.png"><img class="aligncenter size-full wp-image-3236" alt="pumping_lemma_cf" src="http://www.gadial.net/wp-content/uploads/2015/04/pumping_lemma_cf.png" width="637" height="622" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2015/04/pumping_lemma_cf.png"><img class="aligncenter size-full wp-image-3236" alt="pumping_lemma_cf" src="/blog/assets/img/2015/04/pumping_lemma_cf.png" width="637" height="622" /></a></strong></p>
 
 <p>עכשיו מגיע הטיעון העדין ביותר בהוכחה. אני טוען שמבין שני המופעים של <span>$latex A$</span> שראינו, הגבוה יותר הוא כזה שתת-העץ שלו הוא מגובה <span>$latex k$</span> <strong>לכל היותר</strong>. זה נובע משני דברים. ראשית, אני טוען שהגובה של ה-<span>$latex A$</span> הזה <strong>על המסלול העמוק ביותר</strong> הוא לא יותר מ-<span>$latex k$</span>. זה די ברור, מכיוון שאם הגובה היה יותר מ-<span>$latex k$</span>, אז עוד לפני שהיינו מגיעים אל המופע הגבוה יותר של <span>$latex A$</span> כבר היינו רואים <span>$latex k+1$</span> משתנים, ולכן היה משתנה <strong>אחר</strong> שכבר היה מופיע פעמיים והיינו רואים אותו. כעת, בנוסף לכך, אני צריך לטעון שאין מסלול <strong>אחר</strong> שעובר דרך ה-<span>$latex A$</span> הזה ומגיע לעלים, והוא ארוך יותר מ-<span>$latex k$</span> - זה נובע מכך שהמסלול שלקחתי היה <strong>המסלול העמוק ביותר</strong> ולכן אין מסלול שיותר עמוק ממנו. אני מתעכב על הטיעון הזה כי זו הנקודה שבה אני טעיתי בעבר שוב ושוב כאשר הצגתי את המשפט: פשוט אמרתי משהו בסגנון “עומק העץ הוא לפחות <span>$latex k$</span> אז קיים מסלול שבו יש משתנה שמופיע פעמיים”. זה נכון, אבל לא מבטיח לנו שהמופע הראשון מבין השניים של המשתנה הזה יהיה נמוך יחסית - מגובה <span>$latex k$</span> לכל היותר.</p>
 

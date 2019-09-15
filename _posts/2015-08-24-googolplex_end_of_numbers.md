@@ -72,7 +72,7 @@ tags:
 
 גוגול תואר בצורה נפלאה ב"אני שונא מתמטיקה" של מרילין ברנס, שהוא הספר הראשון שגרם לי, כילד קטן, להתעניין במתמטיקה; הנה מה שהולך בגרסה העברית:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2015/08/googol1.jpg"><img class="aligncenter size-full wp-image-3287" alt="googol1" src="http://www.gadial.net/wp-content/uploads/2015/08/googol1.jpg" width="603" height="710" /></a> <a href="http://www.gadial.net/wp-content/uploads/2015/08/googol2.jpg"><img class="aligncenter size-large wp-image-3288" alt="googol2" src="http://www.gadial.net/wp-content/uploads/2015/08/googol2.jpg" width="524" height="680" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2015/08/googol1.jpg"><img class="aligncenter size-full wp-image-3287" alt="googol1" src="{{site.baseurl}}{{site.post_images}}/2015/08/googol1.jpg" width="603" height="710" /></a> <a href="{{site.baseurl}}{{site.post_images}}/2015/08/googol2.jpg"><img class="aligncenter size-large wp-image-3288" alt="googol2" src="{{site.baseurl}}{{site.post_images}}/2015/08/googol2.jpg" width="524" height="680" /></a></strong>
 
 ככה עושים את זה נכון.
 

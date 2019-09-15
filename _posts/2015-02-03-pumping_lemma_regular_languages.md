@@ -21,7 +21,7 @@ tags:
 
 מייד ברור שאכן מתקיים {% equation %}\left|uv\right|\le n{% endequation %} מהנימוק שנתתי קודם - אחרי {% equation %}n{% endequation %} הצעדים הראשונים כבר היה מצב שהופיע פעמיים, ולכן כל המילה שאנחנו מספיקים לקרוא עד הפעם השניה שבה הגענו למצב הזה לא ארוכה מ-{% equation %}n{% endequation %}. גם ברור ש-{% equation %}\left|v\right|\ge1{% endequation %} כי אחרת היינו מקבלים ש"הפעם הראשונה" ו"הפעם השניה" שבה האוטומט מבקר ב-{% equation %}p{% endequation %} הן אותה פעם, בסתירה לכך שזה מצב שאנחנו רואים פעמיים. נשאר רק להוכיח שהדבר הזה עם ה-{% equation %}uv^{i}w{% endequation %} מתקיים. זה פשוט למדי אחרי שמסכמים את מה שאנחנו כבר יודעים באיור הזה, שהוא וריאציה על האיור מהפוסט הראשון עם {% equation %}\left\{ a^{n}b^{n}\ |\ n\in\mathbb{N}\right\} {% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2015/02/pumping_lemma2.png"><img class="aligncenter size-large wp-image-3221" alt="pumping_lemma2" src="http://www.gadial.net/wp-content/uploads/2015/02/pumping_lemma2-1024x280.png" width="584" height="159" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2015/02/pumping_lemma2.png"><img class="aligncenter size-large wp-image-3221" alt="pumping_lemma2" src="{{site.baseurl}}{{site.post_images}}/2015/02/pumping_lemma2.png" width="584" height="159" /></a></strong>
 
 מה שקורה פה הוא פשוט שלא משנה כמה פעמים נחזור על הלולאה באמצע או נוותר עליה בכלל - בסוף עדיין נגיע למצב מקבל. כמובן, הוכחה באמצעות איור אינה לגיטימית, אז הנה הפורמליזם למי שזה באמת חשוב לו:
 

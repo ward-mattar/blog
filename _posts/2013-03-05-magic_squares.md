@@ -80,7 +80,7 @@ tags:
 
 בואו נעבור עכשיו להבין <strong>למה</strong> זה עובד, וחשוב מכך - לאילו מושגים כלליים במתמטיקה זה מתקשר. לצורך כך, הנה דרך נוחה יותר להתבונן על הריבוע הבסיסי כשרואים בעיניים את הפירוק שלו לארבע פרמוטציות:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/magic_square.png"><img class="alignnone size-medium wp-image-2374" alt="magic_square" src="http://www.gadial.net/wp-content/uploads/2013/03/magic_square-300x300.png" width="300" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/magic_square.png"><img class="alignnone size-medium wp-image-2374" alt="magic_square" src="{{site.baseurl}}{{site.post_images}}/2013/03/magic_square.png" width="300" height="300" /></a></strong>
 
 כאן צבעתי כל רביעייה בצבע שונה, ועכשיו אפשר לראות בעיניים את התכונות של הריבוע:
 <ol>

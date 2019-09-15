@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"כמה מעלות טובות לרדיאן עלינו","dateModified":"2008-01-11T15:29:33+02:00","datePublished":"2008-01-11T15:29:33+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/01/11/radians"},"url":"http://localhost:4000/blog/2008/01/11/radians","description":"אחד מהחיפושים שהוביל נפש תועה לשווא אל הבלוג הזה היה “כמה מעלות אלגברה פאי”. הניחוש שלי הוא שפשר השאלה הוא איך פאי, ברדיאנים, מתרגם למעלות. זה תירוץ מצויין לדבר קצת על מהם רדיאנים ולמה פתאום, באמצע הלימודים הבית ספריים, מפסיקים להשתמש במעלות ועוברים לדבר עליהם. לשם כך קודם כל צריך לדבר על מה שבכלל מודדות הן מעלות והן רדיאנים - זווית. זו אולי נראית שאלה פשוטה ומטופשת, אבל מהי בעצם זווית?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -89,7 +89,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>אחד מהחיפושים שהוביל נפש תועה לשווא אל הבלוג הזה היה “כמה מעלות אלגברה פאי”. הניחוש שלי הוא שפשר השאלה הוא איך <a href="http://he.wikipedia.org/wiki/%D7%A4%D7%90%D7%99">פאי</a>, ב<a href="http://he.wikipedia.org/wiki/%D7%A8%D7%93%D7%99%D7%90%D7%9F">רדיאנים</a>, מתרגם ל<a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%9C%D7%94_%28%D7%96%D7%95%D7%95%D7%99%D7%AA%29">מעלות</a>. זה תירוץ מצויין לדבר קצת על מהם רדיאנים ולמה פתאום, באמצע הלימודים הבית ספריים, מפסיקים להשתמש במעלות ועוברים לדבר עליהם. לשם כך קודם כל צריך לדבר על מה שבכלל מודדות הן מעלות והן רדיאנים - <a href="http://he.wikipedia.org/wiki/%D7%96%D7%95%D7%95%D7%99%D7%AA">זווית</a>. זו אולי נראית שאלה פשוטה ומטופשת, אבל מהי בעצם זווית?</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/01/angle.png" title="זווית"><img src="http://www.gadial.net/wp-content/uploads/2008/01/angle.png" alt="זווית" /></a>
+<p><a href="/blog/assets/img/2008/01/angle.png" title="זווית"><img src="/blog/assets/img/2008/01/angle.png" alt="זווית" /></a>
 הדרך הטובה ביותר שאני מכיר לתאר זווית היא פשוט בתור “כמות סיבוב”. נהוג לחשוב על זה כך: קחו שני קווים ישרים בעלי נקודת התחלה משותפת ואותו אורך (פורמלית קוראים לשני דברים כאלו “קטעים”, כי קו הוא אינסופי, אבל מה זה חשוב). ה”זווית” שבין שני הקווים היא כמות הסיבוב שנדרשת כדי להניח אחד מהם על השני. תכף ומייד מתברר שההגדרה הזו היא מה שמכונה במתמטיקה “לא מוגדרת היטב”, פשוט כי יש <strong>שתי</strong> דרכים לסובב את הישרים כך שיונחו אחד על השני - הדרך הקצרה והדרך הארוכה (אורך שתיהן שוות רק כששני הקווים פונים לכיוונים מנוגדים). מכאן שכל שני קווים מגדירים שתי זוויות ולא אחת.</p>
 
 <p>אם כן, זוהי זווית, אבל כדי למדוד אותה יש צורך ביחידות (אי אפשר להגיד “סיבוב קצר”, “סיבוב קצת יותר גדול” וכדומה). בשביל לעשות זאת, רצוי להתחיל מסיבוב “מלא” (לוקחים קו; מסובבים אותו סביב ציר שנמצא באחת מנקודות הקצה שלו, עד שהוא חוזר למקום שבו היה בהתחלה; מודדים את כמות הסיבוב שנדרשה לשם כך) ולהגיד כמה יחידות הוא מכיל. על פניו, הגדרה “טבעית” תהיה להגיד שסיבוב מלא הוא יחידה אחת, כלומר 1, ולכן רבע סיבוב (שיוצר את מה שמכונה “זווית ישרה”) יהיה בגודל 1/4, וכן הלאה. זה לא רעיון מופרך, אך לא משתמשים בו.</p>
@@ -102,7 +102,7 @@
 
 <p>איך זה מתקשר לרדיאנים? ובכן, הלך המחשבה הוא זה: במקום להגדיר שרירותית את גודל הסיבוב של “מעגל שלם” בתור המספר 1 או המספר 360, אפשר להשתמש בגודל “טבעי” שכבר קיים עבורו - היקפו. הבעיה היא שההיקף, כאמור, אינו קבוע ותלוי ברדיוס המעגל. אם כן, כדי לקבל מספר קבוע, מגדירים את גודל הסיבוב של “מעגל שלם” בתור היקפו חלקי רדיוסו - מקבלים שגודל הסיבוב הזה הוא המספר <span>$latex 2\pi$</span>.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/01/arclength.png" title="אורך קשת"><img src="http://www.gadial.net/wp-content/uploads/2008/01/arclength.png" alt="אורך קשת" /></a></p>
+<p><a href="/blog/assets/img/2008/01/arclength.png" title="אורך קשת"><img src="/blog/assets/img/2008/01/arclength.png" alt="אורך קשת" /></a></p>
 
 <p>כעת יש לנו גם אפשרות למדוד זוויות אחרות: באופן כללי, כשנתונה לנו זווית באמצעות שני ישרים שווי אורך, מהסוג שתיארתי קודם, אפשר לחשב את אורך הקשת שמחברת אותם (במובן מסויים זהו המרחק שהישר הראשון צריך לעבור עד שיגיע אל הישר השני - שכן הוא נע בסיבוב ולא בצורה ישרה, ולכן הקו הישר שמחבר בין שתי קצוות הישרים אינו המרחק האמיתי ביניהם) ולחלק באורכם. לרוב כדי להימנע מכל החלוקה הזו, פשוט מגדירים את הזווית באמצעות שני ישרים שאורכם 1. ה”יחידות” של אופן המדידה הזה נקראות “רדיאנים” - אבל למעשה, אלו אינן יחידות שרירותיות; מכיוון שאפשר להגדיר את הרדיאן בצורה פורמלית בתור אורך חלקי אורך (אורך הקשת חלקי אורך הישר שמסובבים), היחידות הן של מספרים “טהורים” - מה שמכונה בפיזיקה “<a href="http://he.wikipedia.org/wiki/%D7%92%D7%95%D7%93%D7%9C_%D7%97%D7%A1%D7%A8_%D7%9E%D7%9E%D7%93">גודל חסר ממד</a>” (כלומר, שאינו תלוי במערכת המדידה שלנו). יתר על כן, הצלחנו לקשר את הכמות שמתארת זווית לכמות שמתארת מושג מרכזי עוד יותר - אורך, ולכן הרדיאנים הם אכן יחידות “טבעיות”. את היתרון של ה”טבעיות” הזו אראה בפוסט הבא.</p>
 

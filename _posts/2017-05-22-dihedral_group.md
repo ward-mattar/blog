@@ -13,15 +13,15 @@ tags:
 
 ובכן, אתם עשויים להזיז את השקף ימינה/שמאלה. אתם גם עשויים להזיז אותו קדימה/אחורה על השולחן (אפשר גם לקרוא לזה "למעלה/למטה", תלוי מאיזו זווית אתם מסתכלים על השולחן). אתם גם יכולים לעשות הזזה מורכבת יותר, אבל אפשר יהיה לחשוב עליה כאילו ביצעתם הזזה ימינה/שמאלה ואז ביצעתם הזזה קדימה/אחורה: ההזזה המורכבת היא, ובכן, <strong>הרכבה</strong> של שתי ההזזות הפשוטות יותר.
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e1.png" rel="attachment wp-att-3442"><img class="aligncenter size-large wp-image-3442" src="http://www.gadial.net/wp-content/uploads/2017/05/e1-1024x561.png" alt="e1" width="584" height="320" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e1.png" rel="attachment wp-att-3442"><img class="aligncenter size-large wp-image-3442" src="{{site.baseurl}}{{site.post_images}}/2017/05/e1.png" alt="e1" width="584" height="320" /></a>
 
 עוד דבר שאתם יכולים לעשות הוא <strong>לסובב</strong> את השקף. מה זה סיבוב? בוחרים נקודה כלשהי על השולחן שהיא הציר שלנו, ומסובבים את הכל סביבה. אפשר לסובב בכל זווית שהיא בין 0 ל-360 מעלות. אפשר כמובן גם לשלב בין סיבוב ובין הזזה.
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e2.png" rel="attachment wp-att-3443"><img class="aligncenter size-large wp-image-3443" src="http://www.gadial.net/wp-content/uploads/2017/05/e2-1024x563.png" alt="e2" width="584" height="321" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e2.png" rel="attachment wp-att-3443"><img class="aligncenter size-large wp-image-3443" src="{{site.baseurl}}{{site.post_images}}/2017/05/e2.png" alt="e2" width="584" height="321" /></a>
 
 ויש עוד דבר שאפשר לעשות, ונזהרתי לא לנסח את חוקי המשחק בצורה שתאסור אותו אבל גם לא תגיד אותו במפורש: אפשר להרים את השקף מהשולחן, להזיז אותו באוויר, ולהחזיר לשולחן בסוף. על פניו אני לא מוסיף כאן משהו חדש בנוסף לסיבוב והזזה אם מסתכלים רק על המיקום הסופי של השקף, אבל למעשה אפשר לעשות עוד משהו - להחזיר את השקף לשולחן כשהוא <strong>הפוך</strong>. האפקט של זה יהיה מה שנקרא <strong>שיקוף</strong>:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e3.png" rel="attachment wp-att-3444"><img class="aligncenter size-large wp-image-3444" src="http://www.gadial.net/wp-content/uploads/2017/05/e3-1024x563.png" alt="e3" width="584" height="321" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e3.png" rel="attachment wp-att-3444"><img class="aligncenter size-large wp-image-3444" src="{{site.baseurl}}{{site.post_images}}/2017/05/e3.png" alt="e3" width="584" height="321" /></a>
 
 פעולת השיקוף היא הסיבה שבגללה אני מספר את הסיפור הזה עם שקף ולא עם סתם עצם דו-ממדי כמו דף רגיל. דף נייר עם ציור עליו הוא לא בדיוק אובייקט דו ממדי אלא תלת ממדי דק מאוד: קונספטואלית יש לו שתי שכבות לפחות, אחת של "קדימה" ואחת של "אחורה" שמסתירות זו את זו. לכן כשאנחנו הופכים דף אנחנו מעלימים שכבה אחת וחושפים את האחרת. בשקף נוצרת האשליה של שכבה בודדת, ואז היפוך משיג את האפקט של פעולת השיקוף.
 
@@ -34,31 +34,31 @@ tags:
 
 התנועות הצפידות הן דוגמה חשובה לחבורה: אפשר להרכיב אותן ולקבל תנועה צפידה חדשה, וכל תנועה אפשר "לבטל" על ידי תנועה נגדית. תנועת ה"יחידה" היא כמובן זו שלא מזיזה כלום. יש עוד כמה סיבות שבגללן זו חבורה מעניינת: היא לא אבלית, למשל כי סיבוב ואז שיקוף שונה משיקוף ואז סיבוב:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e4.png" rel="attachment wp-att-3445"><img class="aligncenter size-large wp-image-3445" src="http://www.gadial.net/wp-content/uploads/2017/05/e4-876x1024.png" alt="e4" width="584" height="683" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e4.png" rel="attachment wp-att-3445"><img class="aligncenter size-large wp-image-3445" src="{{site.baseurl}}{{site.post_images}}/2017/05/e4.png" alt="e4" width="584" height="683" /></a>
 
 היא לא בת מניה כי למשל עבור סיבוב בכל זווית שהיא מספר ממשי בין 0 ל-{% equation %}2\pi{% endequation %} נקבל תנועה קשיחה אחרת; והיא דוגמה מאוד ויזואלית לאופן שבו חבורה <strong>פועלת</strong> על קבוצה כלשהי. כאן המהות של החבורה היא לעשות משהו לנקודות של {% equation %}\mathbb{R}^{2}{% endequation %}: כל איבר בחבורה הוא טרנספורמציה של {% equation %}\mathbb{R}^{2}{% endequation %} ופעולת ה"כפל" של החבורה היא בעצם פעולת הרכבה של טרנספורמציות. הנושא של מה קורה כשלוקחים חבורה ומפעילים אותה על קבוצה הוא חשוב ומרכזי למדי - מהר מאוד רואים שלומדים מכך משהו גם על הקבוצה וגם על החבורה, כתלות בשתיהן. אני אדבר על זה יותר בפוסט בהמשך; בינתיים אני רוצה לדבר עוד קצת על תנועות צפידות.
 
 אני חושב על תנועה צפידה בתור פונקציה שפועלת על כל {% equation %}\mathbb{R}^{2}{% endequation %}. פונקציה כזו מוגדרת "נקודתית", אבל אפשר כמובן לשאול את עצמנו מה היא עושה לקבוצה של נקודות. זו אפילו הדרך שבה קל לנו בדרך כלל לדמיין פעולות. הנה למשל מה קורה כשלוקחים משולש שווה צלעות ומפעילים עליו סיבוב ב-90 מעלות ביחס למרכזו:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e5.png" rel="attachment wp-att-3446"><img class="aligncenter size-large wp-image-3446" src="http://www.gadial.net/wp-content/uploads/2017/05/e5-1024x407.png" alt="e5" width="584" height="232" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e5.png" rel="attachment wp-att-3446"><img class="aligncenter size-large wp-image-3446" src="{{site.baseurl}}{{site.post_images}}/2017/05/e5.png" alt="e5" width="584" height="232" /></a>
 
 ומה יהיה אם נעשה סיבוב של 120 מעלות? נקבל את זה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e6.png" rel="attachment wp-att-3447"><img class="aligncenter size-large wp-image-3447" src="http://www.gadial.net/wp-content/uploads/2017/05/e6-1024x341.png" alt="e6" width="584" height="194" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e6.png" rel="attachment wp-att-3447"><img class="aligncenter size-large wp-image-3447" src="{{site.baseurl}}{{site.post_images}}/2017/05/e6.png" alt="e6" width="584" height="194" /></a>
 
 מה קורה פה? שום דבר לא השתנה. אם משולש מסתובב ביער ב-120 מעלות ואף אחד לא רואה, האם הוא הסתובב? מנקודת מבט אחת, לא; התוצאה הסופית נראית כמו המקור. מצד שני, היא כן: אם נסתכל על הנקודות הבודדות שמרכיבות את המשולש, כולן זזו. בואו נצבע לרגע את הקודקודים שלו בצבעים ונראה איך הסיבוב השפיע עליהם:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e7.png" rel="attachment wp-att-3448"><img class="aligncenter size-large wp-image-3448" src="http://www.gadial.net/wp-content/uploads/2017/05/e7-1024x350.png" alt="e7" width="584" height="200" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e7.png" rel="attachment wp-att-3448"><img class="aligncenter size-large wp-image-3448" src="{{site.baseurl}}{{site.post_images}}/2017/05/e7.png" alt="e7" width="584" height="200" /></a>
 
 כלומר, הסיבוב ביצע "ערבוב" של הקודקודים. בלשון שאנחנו כבר מכירים, אם הקודקודים ממוספרים על ידי 1,2,3, הרי שהסיבוב הזה פעל על הקודקודים כמו התמורה {% equation %}\left(1\ 2\ 3\right){% endequation %}. אז יש לנו כאן ביד פונקציה מעניינת: מצד אחד היא מבצעת שינוי לא טריוויאלי של הנקודות הבודדות שמרכיבות את המשולש, ומצד שני היא משאירה את המשולש ככללותו ללא שינוי. לפונקציה כזו קוראים <strong>סימטריה</strong>.
 
 בלשון יומיומית, כשאנחנו אומרים שמשהו הוא "סימטרי" אנחנו מתכוונים בדרך כלל לכך שאפשר לחלק אותו לשני חלקים שאחד מהם הוא שיקוף של השני. במילים אחרות, שקיים ציר שביחס אליו, פעולת השיקוף היא סימטריה של המשהו. בלשון המתמטית אנחנו מרשים קצת יותר מזה - גם צורה שאפשר לסובב אותה והיא נשארת אותו דבר היא "סימטרית". למשל:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e8.png" rel="attachment wp-att-3449"><img class="aligncenter size-full wp-image-3449" src="http://www.gadial.net/wp-content/uploads/2017/05/e8.png" alt="e8" width="220" height="195" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e8.png" rel="attachment wp-att-3449"><img class="aligncenter size-full wp-image-3449" src="{{site.baseurl}}{{site.post_images}}/2017/05/e8.png" alt="e8" width="220" height="195" /></a>
 
 וגם צורה שאפשר להזיז אותה בלי שהיא תשתנה היא "סימטרית". רגע, מה? איך אפשר להזיז צורה מבלי שהיא תשתנה? ובכן, אם מדובר על צורה אינסופית, למשל על חצי מהמישור. נאמר שכולו נראה ככה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/05/e9.png" rel="attachment wp-att-3441"><img class="aligncenter size-full wp-image-3441" src="http://www.gadial.net/wp-content/uploads/2017/05/e9.png" alt="e9" width="293" height="229" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/05/e9.png" rel="attachment wp-att-3441"><img class="aligncenter size-full wp-image-3441" src="{{site.baseurl}}{{site.post_images}}/2017/05/e9.png" alt="e9" width="293" height="229" /></a>
 
 אבל אני רוצה לדבר הפעם על סוג מאוד ספציפי של סימטריות - כאלו של המשולש שווה הצלעות וההכללות שלו. מה שמיוחד במשולש שווה צלעות הוא שמדובר על מצולע משוכלל - כל הצלעות שלו מאותו האורך, וכל הזוויות שלו הן מאותו גודל. עבור מרובעים הצורה המשוכללת נקראת <strong>ריבוע</strong> (במלבן כל הזוויות מאותו גודל אבל לא כל הצלעות מאותו אורך בהכרח; במעוין כל הצלעות מאותו אורך אבל לא כל הזוויות מאותו גודל בהכרח). עבור מחומשים, משושים וכן הלאה כבר פשוט משתמשים בשם "מחומש משוכלל", "משושה משוכלל" וכן הלאה.
 

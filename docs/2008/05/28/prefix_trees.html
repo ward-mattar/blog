@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"רישא הדיון בעצי הסיומות","dateModified":"2008-05-28T13:14:29+03:00","datePublished":"2008-05-28T13:14:29+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/05/28/prefix_trees"},"url":"http://localhost:4000/blog/2008/05/28/prefix_trees","description":"האובייקט המרכזי שאיתו מתעסקים מחשבים הוא מספרים טבעיים. ברמה הבסיסית ביותר שלו, מחשב יודע לעשות פעולות רק על אפסים ואחדים - ביטים - והפעולות הללו הן פעולות אריתמטיות בסיסיות של חיבור וכפל (ופעולות לוגיות אבל נעזוב את זה). עם זאת, סוג הנתונים הנפוץ ביותר עבור המשתמשים בתוכנה איננו מספרים אלא טקסט כתוב - סדרה של תווים. ליצור הזה קוראים במדעי המחשב “מחרוזת”.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -97,13 +97,13 @@
 
 <p>הנה דוגמה ל-Trie שאליו הוכנסו המילים הבאות: “Math$”, “Suffix$”, “Suffer$”, “Journeyman$”, “Journal$”, “Journey$”. הדולר בסוף כל מילה הוא חלק סטנדרטי מכל Trie - זה סימון מוסכם ל”כאן נגמרת מילה”. בלי זה, היה קשה להבחין שהעץ מכיל גם את “Journey” וגם את “Journeyman”:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/05/trie.png" title="Trie"><img src="http://www.gadial.net/wp-content/uploads/2008/05/trie.png" alt="Trie" /></a></p>
+<p><a href="/blog/assets/img/2008/05/trie.png" title="Trie"><img src="/blog/assets/img/2008/05/trie.png" alt="Trie" /></a></p>
 
 <p>ממבט ראשון זה נראה מבלבל למדי. הרעיון הוא שכל צומת מייצג רישא של מילה כלשהי שמאוחסנת בעץ, כשהשורש מייצג את הרישא ה”ריקה”, שאינה מכילה אף אות. כל צומת מסומנת על ידי אות אחת או יותר, ומתארת את ההבדל בין שתי הרישות שהיא מחברת - למשל, הקשת שמסומנת ב-“Suff” פירושה שהרישא שמייצגת הצומת התחתונה יותר היא הרישא שמייצגת הצומת העליונה, ועוד המחרוזת “Suff” לאחר מכן. כפי שאפשר לראות, הרישא “Suff” בעצמה היא בעלת שני בנים אפשריים - גם המילה “$Suffer” וגם המילה “$Suffix” מתחילות בה.</p>
 
 <p>אם כן, זהו Trie. יש לו שימושים בפני עצמו, אבל אני רוצה להגיע בזריזות לסוג ה-Trie שמעניין אותי - עץ סיומות, Suffix Tree (ובשם אחר - “עץ סיפות”, מהמילה סיפא). מרגע שברור מהו Trie לא קשה להבין מהו עץ סיומות - זהו Trie שהמחרוזות שהוא מכיל הן בדיוק כל הסיומות של מילה כלשהי. דוגמה נפוצה היא עץ סיומות עבור המילה “$banana” - עץ שנראה כך:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/05/suffix_tree.png" title="Suffix Tree"><img src="http://www.gadial.net/wp-content/uploads/2008/05/suffix_tree.png" alt="Suffix Tree" /></a></p>
+<p><a href="/blog/assets/img/2008/05/suffix_tree.png" title="Suffix Tree"><img src="/blog/assets/img/2008/05/suffix_tree.png" alt="Suffix Tree" /></a></p>
 
 <p>יש הבדל בולט בין העץ הזה ובין Trie סטנדרטי - בצמתים עכשיו כתוב מספר. עבור עלה (צומת ללא בנים) המספר מציין את המיקום במילה שבו מתחילה הסיפא שמיוצגת על ידי העלה. כן. זה היה מבלבל. מאוד. בואו ננסה שוב, על ידי דוגמה.</p>
 

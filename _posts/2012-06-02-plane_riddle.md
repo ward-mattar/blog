@@ -17,7 +17,7 @@ tags:
 
 תחשבו על זה קצת. התשובה לאחר הקומיקס.
 
-<a href="http://www.gadial.net/wp-content/uploads/2012/06/seat_selection.png"><img class="alignnone size-full wp-image-2019" title="seat_selection" src="http://www.gadial.net/wp-content/uploads/2012/06/seat_selection.png" alt="" width="740" height="175" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/06/seat_selection.png"><img class="alignnone size-full wp-image-2019" title="seat_selection" src="{{site.baseurl}}{{site.post_images}}/2012/06/seat_selection.png" alt="" width="740" height="175" /></a>
 
 טוב, אז איך אני מתמודד עם חידה כמו זו כשאני שומע אותה? ראשית, פאניקה. יש כאן איזה שהוא תהליך בחירה ארוך ומסורבל שבו מה שקורה בכל צעד תלוי בכל מה שקרה עד אז, וזה נראה כמו קטסטרופה שאין כדוגמתה. חשוב לי להדגיש שזו התחושה הראשונית שלי, כדי להבהיר לאנשים שחשים בעצמם פחד ואימה למראה שאלה כמו זו ש<strong>זה טבעי</strong>. זה כמו פחד הבמה שיש גם לחלק מהשחקנים המנוסים. זו ממש לא אינדיקציה שצריך להתייאש ולוותר.
 

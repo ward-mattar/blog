@@ -17,22 +17,24 @@ categories:
 
 כשנתקלתי בחידה בזמנו חשבתי שאין הבדל, והגנתי בלהט על עמדת ה-50:50. מה ששכנע אותי היה כתיבת תוכנה ש"מדמה" את המשחק והגילוי שסטטיסטית, מי שמחליף דלת אכן זוכה ב-2/3 מהמקרים. למעוניינים, הנה תוכנית בשפת פייתון שעושה זאת:
 
-[python]
+<div class="code-block">
+{% highlight python %}
 from random import randint, choice
 NUM_OF_ROUNDS = 10000
-PLAYER_STRATEGY = &quot;switch&quot; #switch/stay/random
+PLAYER_STRATEGY = "switch"; #switch/stay/random
 
 def play_round(): #returns 0 for failure, 1 for success
     prize_door = randint(1,3)
     player_door = randint(1,3) 
     monty_door = choice([door for door in [1,2,3] if not door in [prize_door, player_door]]) #if two doors are possible, choose uniformly
     remaining_door = 6 - (player_door + monty_door) #1 + 2 + 3 = 6
-    player_door = {&quot;switch&quot;: remaining_door, &quot;stay&quot;: player_door, &quot;random&quot;: choice([remaining_door, player_door])}[PLAYER_STRATEGY]
+    player_door = {"switch": remaining_door, "stay": player_door, "random";: choice([remaining_door, player_door])}[PLAYER_STRATEGY]
     return 1 if (player_door == prize_door) else 0
     
 success_count = sum([play_round() for round_num in range(NUM_OF_ROUNDS)])
-print(&quot;Success: {}%&quot;.format((100.0 * success_count) / NUM_OF_ROUNDS))
-[/python]
+print("Success: {}%".format((100.0 * success_count) / NUM_OF_ROUNDS))
+{% endhighlight %}
+</div>
 
 
 עם זאת, לדעתי יש כמה דרכים פשוטות יותר להשתכנע. כמובן שניתן לכתוב את הסיטואציה באופן מתמטי-פורמלי באמצעות תורת ההסתברות והתוצאה נובעת מאליה; אבל סתם חבל לעשות זאת כשאפשר לפייס את האינטואיציה בדרכים אחרות.

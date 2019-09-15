@@ -14,21 +14,21 @@ tags:
 
 הניסוי הראשון נקרא "ניסוי שני הסדקים", והוא תואר על ידי ריצ'רד פיינמן בהרצאות שלו על תורת הקוונטים (הכרך השלישי בסדרת Feynman Lectures on Physics). הניסוי עצמו הוא ישן למדי - הוא הומצא במאה ה-19 בידי תומס יאנג - אבל פיינמן משתמש בוריאציה עליו כדי לסייע בתיאור עקרונות תורת הקוונטים. הרעיון הבסיסי הוא זה: יש לנו מקור ש"יורה" עוד ועוד אובייקטים מסוג כלשהו - בהתחלה פיינמן מדבר על קליעי רובה, אחר כך על גלי מים ובסופו של דבר על אלקטרונים - אל עבר קיר שיש בו שני סדקים שרק דרכם החלקיקים יכולים לעבור. מהצד השני של הקיר יש גלאי שמאפשר לנו לראות לאן החלקיקים הגיעו בסופו של דבר, ואנו מנסים לראות איזו תבנית נוצרת על הקיר. כך זה נראה באיור:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits1.png"><img class="aligncenter size-full wp-image-3142" alt="two_slits1" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits1.png" width="576" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits1.png"><img class="aligncenter size-full wp-image-3142" alt="two_slits1" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits1.png" width="576" height="607" /></a></strong>
 
 פיינמן מניח שמקור החלקיקים יורה אותם "קדימה", אבל בפיזור כלשהו (ההסתברות לזווית פיזור יורדת ככל שזווית הפיזור גדלה). כפי שאפשר לראות, חלקיק שנורה ממש קדימה פשוט ייתקע במחסום ולא יגיע לגלאי; מה שמעניין אותנו הם חלקיקים שמגיעים לסדקים ועוברים דרכם, או מתנגשים בהם וניתזים לכיוון השני ובסוף פוגעים באמצע הגלאי, באיזור שלכאורה "מוסתר" על ידי המחסום (כמו בתמונה). אפשר למדוד כמה קליעים הגיעו לכל נקודה בגלאי ולצייר גרף שמתאר את הכמות שלהם ביחס לכמות הכוללת של קליעים שהגיעו אל הגלאי, מה שמאפשר לנו לראות איזורים שנפגעים יותר ופחות (בצורה ציורית - איזורים בגלאי שהם "מלאים חורי קליעים" ואיזורים שפחות). כשמציירים את העקומה שמתאימה לניסוי של פיינמן היא נראית קצת מוזרה במבט ראשון - הכמות הגדולה ביותר של קליעים מגיעה למרכז, לאיזור שלכאורה מוסתר על ידי המחסום, והיא הולכת וקטנה ככל שהולכים לצדדים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits2.png"><img class="aligncenter size-full wp-image-3145" alt="two_slits2" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits2.png" width="780" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits2.png"><img class="aligncenter size-full wp-image-3145" alt="two_slits2" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits2.png" width="780" height="607" /></a></strong>
 
 (אגב, זו העקומה אצל פיינמן, אבל מקומות אחרים שמתארים את הניסוי נותנים עקומה שונה, שבה המרכז הוא לא קטן אבל לא גדול כמו ה"פסגות" שמול הסדקים; אני בחרתי להיות נאמן לפיינמן).
 
 כדי להבין את התופעה הזו, פיינמן מציע להסתכל על הקליעים שעברו דרך כל סדק בנפרד. כדי לעשות את זה אפשר לחסום באופן זמני את אחד הסדקים, ולראות מה התבנית שמתקבלת כשרק הסדק השני פתוח. בשל הסימטריה של המערכת אנו מקבלים תבנית דומה לכל אחד מהסדקים, ובצורה לא מפתיעה במיוחד גם התבנית הזו היא "חזקה במרכז וקטנה ככל שהולכים הצידה", אבל כאן המרכז שלה הוא באיזור שאליו מגיעים קליעים שפשוט עוברים דרך הסדק בלי להתנגש בו:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits3.png"><img class="aligncenter size-full wp-image-3143" alt="two_slits3" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits3.png" width="760" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits3.png"><img class="aligncenter size-full wp-image-3143" alt="two_slits3" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits3.png" width="760" height="607" /></a></strong>
 
 מה שקורה כשפותחים את שני הסדקים הוא שהעקומה שאנחנו מקבלים היא התוצאה של <strong>חיבור</strong> שתי העקומות עבור הסדקים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits4.png"><img class="aligncenter size-full wp-image-3144" alt="two_slits4" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits4.png" width="861" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits4.png"><img class="aligncenter size-full wp-image-3144" alt="two_slits4" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits4.png" width="861" height="607" /></a></strong>
 
 בואו נניח ש-{% equation %}x{% endequation %} היא נקודה כלשהי על הגלאי. נסמן ב-{% equation %}P_{x}{% endequation %} את ההסתברות שקליע יגיע אל הנקודה הזו כשהוא נורה מהמקור. את ההסתברות הזו אפשר לפרק לשניים: נסמן ב-{% equation %}P_{x}^{1}{% endequation %} את ההסתברות שהקליע יעבור בסדק מס' 1 ויגיע ל-{% equation %}x{% endequation %}, וב-{% equation %}P_{x}^{2}{% endequation %} את ההסתברות שהוא יעבור בסדק מס' 2 ויגיע ל-{% equation %}x{% endequation %}. {% equation %}P_{x}{% endequation %} מתאר את העקומה ה"כללית", בעוד ש-{% equation %}P_{x}^{1},P_{x}^{2}{% endequation %} מתארים את העקומות של כל אחד מהסדקים בנפרד, ומתקיים {% equation %}P_{x}=P_{x}^{1}+P_{x}^{2}{% endequation %} מכיוון ש-{% equation %}P_{x}^{1},P_{x}^{2}{% endequation %} הם מאורעות זרים ומשלימים, דהיינו לא ייתכן שקליע עובר הן דרך סדק 1 והן דרך סדק 2 ומגיע ל-{% equation %}x{% endequation %}, והוא חייב לעבור דרך אחד מהסדקים הללו כדי להגיע ל-{% equation %}x{% endequation %}. כמובן, אלו הנחות שאתם יכולים לחלוק עליהן ואפשר לעשות ניסויים מתוחכמים שבודקים אם הן נכונות (כי מי יודע, אולי הקליעים הם כמו "קליע הקסם" הידוע מתיאוריות הקונספירציה על התנקשות קנדי, והם כן עוברים דרך סדק אחד, חוזרים, עוברים דרך הסדק השני, עוברים את המחסום בלי לעבור באף סדק ובסוף מתפזרים לכמה חלקים ויוצרים תבנית מוזרה על הקיר?) אבל מהנסיון היומיומי שלנו עם קליעים אנחנו יודעים שההנחות נכונות. אם כן, זה האופן שבו קליעים "קלאסיים" מתנהגים בניסוי שני הסדקים - כל קליע עובר דרך חור אחד, והסתברות הפגיעה במקום מסויים היא <strong>סכום</strong> הסתברויות הפגיעה באותו מקום תוך מעבר בסדק ספציפי.
 
@@ -52,11 +52,11 @@ tags:
 
 לצורה המוזרה הזו שבה גלים מתחברים יש שם: <strong>התאבכות</strong>. כעת, איך זה מתקשר לניסוי שני הסדקים שלנו? במקום רובה שיורה קליעים, אנחנו משתמשים במקור שמייצר גל שמתפזר במעגל סביב המקור, כמו אבן שזורקים לבריכה. הגל נע עד שהוא מגיע למחסום שעוצר אותו למעט בשני הסדקים. המחסום בעצם מפרק את הגל לשני גלים שונים, שכל אחד מהם יוצא מאחד מהסדקים. ככה זה נראה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits5.png"><img class="aligncenter size-full wp-image-3146" alt="two_slits5" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits5.png" width="585" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits5.png"><img class="aligncenter size-full wp-image-3146" alt="two_slits5" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits5.png" width="585" height="607" /></a></strong>
 
 הגלאי שמצדו השני של המחסום כבר לא מודד פגיעות של קליעים, אלא את עוצמת הגל שמגיע אליו. עכשיו, אם נחסום את אחד מהסדקים ונסתכל על הגלאי, נראה שהגלאי מציג תבנית שדומה מאוד לזו של פגיעת הקליעים (עוצמת הגל נחלשת ככל שהולכים לצדדים כי ככל שהגל מתרחק, כך האנרגיה שלו מתפזרת על פני שטח גדול יותר ולכן העוצמה הנקודתית שלו נחלשת); אבל אם נפתח את שני הסדקים, נקבל משהו מופרע לגמרי:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/two_slits6.png"><img class="aligncenter size-full wp-image-3147" alt="two_slits6" src="http://www.gadial.net/wp-content/uploads/2014/07/two_slits6.png" width="941" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits6.png"><img class="aligncenter size-full wp-image-3147" alt="two_slits6" src="{{site.baseurl}}{{site.post_images}}/2014/07/two_slits6.png" width="941" height="607" /></a></strong>
 
 המשהו המופרע הזה הוא בדיוק התבנית של ההתאבכות שתיארתי קודם מבחינה מתמטית - אנחנו רואים שעוצמת הגלים המתאבכים מאוד חזקה באמצע (לא במקרה; מטעמי סימטריה די ברור שהפרש הפאזות יהיה אפס) ואז נחלשת, ואז שוב מתחזקת אבל פחות, ואז שוב נחלשת וכן הלאה וכן הלאה.
 
@@ -78,15 +78,15 @@ tags:
 
 אם נשים פילטר מקטב שאקרא לו A אל מול קרן אור "רגילה", שבה הקיטוב של הגלים שמרכיבים אותה הוא לא אחיד אלא אקראי, מה שיקרה הוא שבערך חצי מהאור יצליח לעבור את המקטב - והאור שעבר יהיה מקוטב בדיוק בזווית של המקטב. בואו נסמן ב-{% equation %}\uparrow{% endequation %} את הכיוון של המקטב A הזה.
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/07/polarization1.png"><img class="aligncenter size-full wp-image-3148" alt="polarization1" src="http://www.gadial.net/wp-content/uploads/2014/07/polarization1.png" width="813" height="607" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/07/polarization1.png"><img class="aligncenter size-full wp-image-3148" alt="polarization1" src="{{site.baseurl}}{{site.post_images}}/2014/07/polarization1.png" width="813" height="607" /></a>
 
 עכשיו, אחרי A נשים פילטר מקטב נוסף, C, שזווית הקיטוב שלו מאונכת לזו של A, כלומר היא {% equation %}\rightarrow{% endequation %}. במונחי הטיל-ומנהרה שנתתי קודם, C הוא "כיוון שמאל" אם A הוא "כיוון ימין" - כל מי שכבר מקוטב בזווית של {% equation %}\uparrow{% endequation %} ואז נתקל בקיטוב של {% equation %}\rightarrow{% endequation %} לא יצליח לעבור. התוצאה? אחרי ששמנו את C בהמשך של A לא נראה שום דבר על המסך.
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/07/polarization2.png"><img class="aligncenter size-full wp-image-3149" alt="polarization2" src="http://www.gadial.net/wp-content/uploads/2014/07/polarization2.png" width="813" height="607" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/07/polarization2.png"><img class="aligncenter size-full wp-image-3149" alt="polarization2" src="{{site.baseurl}}{{site.post_images}}/2014/07/polarization2.png" width="813" height="607" /></a></strong>
 
 עד כאן, הגיוני. עכשיו ניקח פילטר B שזווית הקיטוב שלו היא ב-45 מעלות הן ל-A והן ל-C; נסמן אותה {% equation %}\nearrow{% endequation %} אם נשים את B בין A ו-C, המצב ישתנה - פתאום כן נראה אור על המסך, בערך ב-{% equation %}\frac{1}{8}{% endequation %} העוצמה של האור המקורי. כלומר - הוספה של <strong>עוד</strong> פילטר בין שני הקיימים דווקא <strong>הגבירה</strong> את עוצמת האור. מה קורה כאן?
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/07/polarization3.png"><img class="aligncenter size-full wp-image-3150" alt="polarization3" src="http://www.gadial.net/wp-content/uploads/2014/07/polarization3.png" width="813" height="607" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/07/polarization3.png"><img class="aligncenter size-full wp-image-3150" alt="polarization3" src="{{site.baseurl}}{{site.post_images}}/2014/07/polarization3.png" width="813" height="607" /></a>
 
 ובכן, אם חושבים על האור בתור גל, זה לא כל כך מפתיע; כבר ראינו שמקטב יודע לשנות את הקיטוב של גל שנכנס אליו, תוך "מחיר" של אובדן חלק מהעוצמה שלו (הזווית בין הקיטוב של האור הנכנס ובין הקיטוב של המקטב קובעת כמה מהעוצמה תאבד). אז B משנה את הקיטוב של האור שיצא מ-A בצורה כזו שמעבר דרך C לא יהיה יותר הרסני. את כל זה אפשר להסביר כבר עם פיזיקה "קלאסית", כאמור. אלא שאור לא באמת מציית באופן מוחלט לחוקי הפיזיקה הקלאסית; יש סיטואציות שבהן האור מתנהג כמו חלקיק ולא כמו גל (למשל, האפקט הפוטואלקטרי, אם אתם רוצים לגגל), ולכן מדברים על חלקיקים יסודיים של האור - <strong>פוטונים</strong>. בדומה לאלקטרונים, כך גם פוטונים מפגינים התנהגות של חלקיק בסיטואציות מסויימות ושל גל בסיטואציות אחרות, והמידול ה"כללי" שלהם נעשה במסגרת המתמטיקה של תורת הקוונטים. אז בואו ונראה סוף סוף את המידול הזה בהקשר של קיטוב, ונראה איך הוא מסביר את הניסוי שלנו בצורה מאוד פשוטה.
 

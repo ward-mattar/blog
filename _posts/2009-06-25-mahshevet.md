@@ -10,13 +10,13 @@ categories:
 
 מחשבת הוא משחק לשחקן בודד. לוח המשחק נראה בתחילת המשחק כך:
 
-<a href="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire1.png"><img class="alignnone size-full wp-image-1040" title="PegSolitaire1" src="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire1.png" alt="" width="350" height="350" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire1.png"><img class="alignnone size-full wp-image-1040" title="PegSolitaire1" src="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire1.png" alt="" width="350" height="350" /></a>
 
 כאשר עיגול שחור בתוך משבצת מציין "חייל", בדומה לחייל של דמקה. המשחק מורכב מסדרה של מהלכים, כאשר כל מהלך דומה ל"אכילה" בדמקה: חייל א' קופץ מעל חייל ב' שצמוד אליו (מלמעלה, למטה, משמאל או מימין; לא באלכסון) אל משבצת פנויה שאחריו, ואז חייל ב' מוסר מהלוח. בתחילת המשחק יש רק ארבעה מהלכים אפשריים (מהם?) אבל מהר מאוד נפתחות המון אפשרויות שונות. המטרה: להיוותר עם חייל אחד בלבד. כדי לקבל תחושה של המשחק ועד כמה הוא מאתגר אפשר לשחק בו באחד מאתרי הרשת שמציע אותו - למשל, <a href="http://alefefes.macam98.ac.il/games/game.asp?n=19">זה</a>.
 
 לפני שנים רבות (שלושים?) רעשה וגעשה הארץ כאשר יצאה לשוק גרסה "מורחבת" של המשחק, שבה הלוח גדול יותר, ונראה כך:
 
-<a href="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire2.png"><img class="alignnone size-full wp-image-1041" title="PegSolitaire2" src="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire2.png" alt="" width="350" height="350" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire2.png"><img class="alignnone size-full wp-image-1041" title="PegSolitaire2" src="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire2.png" alt="" width="350" height="350" /></a>
 דא עקא? הלוח המורחב, בדומה למשחק ה-15 הידוע לשמצה, גורם למשחק להיות בלתי פתיר - כלומר, לא ניתן להגיע למצב שבו רק חייל בודד נותר על הלוח. עד כדי כך חמור היה הדבר עד שהידיעה הגיעה עד ל"כלבוטק". על המחדל הצביע דוקטורנט למתמטיקה, שגדל והפך לפרופסור אלי אלחדף מהפקולטה למתמטיקה בטכניון; הוא לא המציא את השיטה שאציג כאן ולא ברור מי המציא - זו אחת מאותן דוגמאות ל"פולקלור מתמטי", דברים שכנראה מתגלים במקביל במקומות רבים והם פשוטים מכדי שיתפרסם מאמר העוסק בהם, אך מעניינים מספיק כדי שיסופרו באופן לא פורמלי. מה שאעשה יהיה לתפוס שתי ציפורים במכה אחת - גם להראות שהלוח המורחב אינו פתיר, אך גם להראות שמשחק בלוח המקורי, אם הוא מסתיים בניצחון, יכול להסתיים רק באחת מבין חמש משבצות אפשריות - זו שבאמצע, או כל אחת מהמשבצות שבקצה ה"צלב". למעשה, אתחיל מלהוכיח זאת, שכן אחר כך אי הפתירות של המשחק המורחב היא כמעט מובנת מאליה.
 
 הרעיון הבסיסי הוא להשתמש בשיקול צביעה. אצבע כל משבצת בלוח בצבע מסויים, ואז התכונה שתישאר קבועה לכל אורך המשחק היא "סכום הצבעים של המשבצות שעליהן יש חיילים". לשם כך צריכה להיות משמעות למושג של "סכום צבעים", ולכן אתן תיאור פורמלי. מי שמכיר את תורת החבורות יזהה מייד שהטיעון הוא "הצבעים הם האיברים הלא טריוויאליים של חבורת קליין", אבל מי שאינו מכיר - לא נורא, רק סמכו עלי שמה שאני מציע אינו שרירותי.
@@ -29,7 +29,7 @@ categories:
 
 כעת נצבע את הלוח, באופן הבא:
 
-<a href="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire3.png"><img class="alignnone size-full wp-image-1043" title="PegSolitaire3" src="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire3.png" alt="" width="350" height="350" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire3.png"><img class="alignnone size-full wp-image-1043" title="PegSolitaire3" src="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire3.png" alt="" width="350" height="350" /></a>
 במבט ראשון הצביעה עשויה להיראות כמעט אקראית; אבל השיטה מאוד פשוטה. אני מעביר אלכסונים דרך הלוח, וצובע כל אלכסון באחד מהצבעים - תחילה ב-{% equation %}a{% endequation %}, אחר כך ב-{% equation %}b{% endequation %}, אחר כך ב-{% equation %}c{% endequation %} ואז שוב ב-{% equation %}a{% endequation %} וחוזר חלילה. האלכסונים עוברים מלמעלה מימין אל למטה משמאל. המטרה בצביעה בסגנון הזה פשוטה - להבטיח שבכל שלוש משבצות שאקח, שהן סמוכות זו לזו במאוזן, או סמוכות זו לזו במאונך, יהיו לי כל שלושת הצבעים {% equation %}a,b,c{% endequation %} יחד (בדקו שזה אכן כך!). תכף יתברר מדוע זה טוב.
 
 כזכור, הגדרנו את ה"ערך" של לוח בתור "סכום הצבעים של כל המשבצות שיש עליהן חיילים". בתחילה יש חיילים על כל משבצת פרט לאמצעית (זו שכתוב עליה {% equation %}b{% endequation %}), אז מהו הסכום הזה? דרך אחת לחשב אותו היא כך: נתבונן, למשל, בשתי השורות העליונות - באחת יש {% equation %}a,b,c{% endequation %} ובשניה יש {% equation %}b,c,a{% endequation %}. אם נסכום את האיברים בשורה הראשונה, נקבל {% equation %}e{% endequation %}, וכך עבור האיברים בשורה השניה; לכן אפשר להתעלם מהן. באותו אופן אפשר להתעלם משתי השורות האחרונות ומארבע העמודות, הימניות והשמאליות ביותר. נשארנו רק עם הריבוע שבאמצע. גם בו, אפשר להתעלם מה-{% equation %}c,a,b{% endequation %} העליון ומה-{% equation %}b,c,a{% endequation %} העליון כי סכומם {% equation %}e{% endequation %}, ולכן נותרנו רק עם השלשה האמצעית - שממנה, כאמור, {% equation %}b{% endequation %} חסר ולכן נותרנו עם {% equation %}a,c{% endequation %} שסכומם הוא {% equation %}b{% endequation %}. אם כן, הערך של הלוח בתחילת המשחק הוא {% equation %}b{% endequation %}. כעת הטענה היא שלא משנה אילו מהלכים אני מבצע במהלך המשחק, הערך הזה נותר קבוע.
@@ -42,7 +42,7 @@ categories:
 
 ועכשיו, בואו ננסה להשתמש בשיקול הזה גם על הלוח ה"מורחב":
 
-<a href="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire4.png"><img class="alignnone size-full wp-image-1044" title="PegSolitaire4" src="http://www.gadial.net/wp-content/uploads/2009/06/PegSolitaire4.png" alt="" width="350" height="350" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire4.png"><img class="alignnone size-full wp-image-1044" title="PegSolitaire4" src="{{site.baseurl}}{{site.post_images}}/2009/06/PegSolitaire4.png" alt="" width="350" height="350" /></a>
 מה נשתנה בעצם? הוספנו ללוח ארבע משבצות, שנצבעות ב-{% equation %}a,b,b,c{% endequation %}. כלומר, סכום הצבעים שלהן הוא {% equation %}a+c+b+b=b+b+b=b{% endequation %}. מכאן שסכום הצבעים הכולל של הלוח הוא {% equation %}b+b=e{% endequation %}. מכאן שגם בסוף המשחק סכום הצבעים צריך להיות {% equation %}e{% endequation %}, ומכיוון שצבע זה לא מופיע בכלל על הלוח (הוא קיים רק כ"סכום" של צבעים, מבחינתנו), לא ייתכן שבסיום המשחק (או בכל שלב שלו) יהיה חייל בודד על הלוח. כלומר- המשחק לא פתיר, סוף פסוק.
 
 ישנן דרכים רבות ושונות שבהן ניתן לתקוף את המשחק הזה, וזו שהצגתי איננה היחידה. אני חושב שהיא יפה ומעניינת במיוחד, מכיוון שהיא נדמית כל כך "תפורה" באופן שמתאים לו - השימור של סכום הצבעים נראה ממש טבעי. כמובן שזה נובע, כאמור, מבחירה חכמה הן של הצבעים (כלומר, של החבורה שבאיברים מתוכה משתמשים לצביעה) והן של הצורה שבה מבוצעת הצביעה עצמה. זה מה שהופך טיעוני צביעה ל"אמנות" בפני עצמה.

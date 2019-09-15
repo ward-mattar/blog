@@ -20,7 +20,7 @@ tags:
 
 גביש "רגיל" הוא חומר שבו הסדר הפנימי של האטומים חוזר על עצמו: יש תבנית בסיסית פשוטה, והאטומים בתוך הגביש חוזרים על התבנית הזו באופן מסודר ואחיד שממלא את המרחב כולו. גבישים הם תלת ממדיים, אבל כדי להבין את הסיפור אפשר להסתפק במקרה הדו ממדי, ובו יש לנו המחשות ויזואליות למה שמדובר עליו - "טפטים". כאן תמונה אחת באמת שווה אלף מילים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/Wallpaper_group-p4m-5.jpg"><img class="alignnone size-large wp-image-1362" title="Wallpaper_group-p4m-5" src="http://www.gadial.net/wp-content/uploads/2011/10/Wallpaper_group-p4m-5-1024x1013.jpg" alt="" width="450" height="445" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/Wallpaper_group-p4m-5.jpg"><img class="alignnone size-large wp-image-1362" title="Wallpaper_group-p4m-5" src="{{site.baseurl}}{{site.post_images}}/2011/10/Wallpaper_group-p4m-5.jpg" alt="" width="450" height="445" /></a>
 </strong>
 
 מה שיש לנו כאן הוא תמונה שחוזרת על עצמה שוב ושוב ושוב. כשאנחנו רואים כזה דבר, המילה "סימטריה" כנראה קופצת לנו לראש מייד, אבל מה זה בעצם אומר? מבחינה מתמטית פורמלית, סימטריה של אובייקט היא פעולה כלשהי שניתן לבצע על האובייקט שאחריה הוא נראה כאילו לא בוצע בו שום שינוי. כשאנחנו מדברים על אובייקטים גאומטריים כמו טפטים או גבישים, לרוב אנחנו מגבילים את עצמנו מראש לדיבורים על סימטריות שהן <strong>איזומטריות</strong> - אם נחשוב על האובייקט כמורכב מנקודות, אז הפעולות שמותר לבצע עליו הן כאלו שבסופן המרחק בין כל זוג נקודות זהה למרחק שהיה ביניהן בהתחלה.
@@ -41,26 +41,26 @@ tags:
 
 אמרנו כבר שהדרישה הבסיסית מחבורה קריסטלוגרפית מישורית היא שתכיל הזזות בשני כיוונים בלתי תלויים. הסוג האחר של סימטריות שיכול להיכנס לחבורות קריסטלוגרפיות מישוריות הוא סימטריה לסיבובים. כדי להבין את ההבדל, הנה תמונה של טפט שיש לו סימטריה להזזות אך לא לסיבובים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p1.svg_.png"><img class="alignnone size-full wp-image-1364" title="800px-SymBlend_p1.svg" src="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p1.svg_.png" alt="" width="800" height="286" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p1.svg_.png"><img class="alignnone size-full wp-image-1364" title="800px-SymBlend_p1.svg" src="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p1.svg_.png" alt="" width="800" height="286" /></a>
 </strong>
 
 החצים מראים את ההזות כאן. הנה דוגמה לטפט שיש לו גם סימטריה להזזות וגם סימטריה ל-3-סיבובים, כלומר סיבובים של שליש מעגל, כלומר של 120 מעלות, כלומר של משולש שווה צלעות:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p3.svg_.png"><img class="alignnone size-full wp-image-1366" title="800px-SymBlend_p3.svg" src="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p3.svg_.png" alt="" width="800" height="286" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p3.svg_.png"><img class="alignnone size-full wp-image-1366" title="800px-SymBlend_p3.svg" src="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p3.svg_.png" alt="" width="800" height="286" /></a>
 </strong>
 
 כאן המשולשים מופיעים על צירי הסיבוב.
 
 והנה דוגמה שבה יש (בין היתר) סימטריה ל-4-סיבובים, כלומר של 90 מעלות:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p4m.svg_.png"><img class="alignnone size-full wp-image-1367" title="800px-SymBlend_p4m.svg" src="http://www.gadial.net/wp-content/uploads/2011/10/800px-SymBlend_p4m.svg_.png" alt="" width="800" height="286" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p4m.svg_.png"><img class="alignnone size-full wp-image-1367" title="800px-SymBlend_p4m.svg" src="{{site.baseurl}}{{site.post_images}}/2011/10/800px-SymBlend_p4m.svg_.png" alt="" width="800" height="286" /></a>
 </strong>
 
 ועכשיו אפשר לדבר על המשפט הכללי: בחבורה קריסטלוגרפית סוגי הסיבובים היחידים שיכולים להופיע הם עבור 2,3,4,6-סיבובים (כלומר: 180,120,90 ו-60 מעלות). סיבובים בזוויות אחרות פשוט <strong>לא</strong> יכולים לתת סימטריה עבור אובייקט שכבר יש לו סימטריה להזזה בשני כיוונים שונים. זה בדיוק המשפט שהגביש של שכטמן הפר.
 
 אם נסתכל על התמונה שבה שכטמן מדבר עם ראש הממשלה, כנראה שזה בדיוק מה שהוא מסביר לו:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/2729522810.jpg"><img class="alignnone size-full wp-image-1368" title="2729522810" src="http://www.gadial.net/wp-content/uploads/2011/10/2729522810.jpg" alt="" width="436" height="326" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/2729522810.jpg"><img class="alignnone size-full wp-image-1368" title="2729522810" src="{{site.baseurl}}{{site.post_images}}/2011/10/2729522810.jpg" alt="" width="436" height="326" /></a>
 </strong>
 
 ההוכחה של המשפט הולכת בערך כך: אם קבוצת הסימטריות להזזה שלנו נוצרת על ידי שתי סימטריות הזזה בלתי תלויות, נובע מכך שקיימת הזזה "קצרה ביותר" שמזיזה למרחק גדול מאפס. בלי להוכיח זאת פורמלית, לא קשה להבין את ההגיון - אם לכל מרחק, קטן ככל שיהיה, הייתה לנו סימטריה להזזה שלא עוברת יותר מאת המרחק הזה, אז הצורה שלנו הייתה פשוט נראית אותו הדבר בכל מקום (פורמלית זה נובע מהדרישה שהאובייקט שלנו יהיה בדיד). עכשיו, אם מכניסים לתמונה גם סימטריות של סיבוב, אז אפשר לבנות סימטריות הזזה חדשות על ידי כך שלוקחים את ההזזה הקצרה ביותר ומפעילים יחד עם הפעלת סיבובים, ופתאום מקבלים הזזה קצרה עוד יותר. אני מעדיף להתחמק עכשיו מניסוח מדויק של המשפט כי הפוסט הזה הוא בעיקרו לא פורמלי, והוכחה מדויקת של המשפט דורשת הכנסה של מושגים נוספים.
@@ -75,12 +75,12 @@ tags:
 
 הנה תמונה של אריחי פנרוז:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/225px-Kite_Dart.svg_.png"><img class="alignnone size-full wp-image-1369" title="225px-Kite_Dart.svg" src="http://www.gadial.net/wp-content/uploads/2011/10/225px-Kite_Dart.svg_.png" alt="" width="225" height="140" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/225px-Kite_Dart.svg_.png"><img class="alignnone size-full wp-image-1369" title="225px-Kite_Dart.svg" src="{{site.baseurl}}{{site.post_images}}/2011/10/225px-Kite_Dart.svg_.png" alt="" width="225" height="140" /></a>
 </strong>
 
 והנה (חלק מ-) ריצוף על ידי האריחים הללו:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/10/500px-Penrose_Tiling_Rhombi.svg_.png"><img class="alignnone size-full wp-image-1370" title="500px-Penrose_Tiling_(Rhombi).svg" src="http://www.gadial.net/wp-content/uploads/2011/10/500px-Penrose_Tiling_Rhombi.svg_.png" alt="" width="500" height="500" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/10/500px-Penrose_Tiling_Rhombi.svg_.png"><img class="alignnone size-full wp-image-1370" title="500px-Penrose_Tiling_(Rhombi).svg" src="{{site.baseurl}}{{site.post_images}}/2011/10/500px-Penrose_Tiling_Rhombi.svg_.png" alt="" width="500" height="500" /></a>
 </strong>
 
 בתמונה הזו אפשר לראות די בבירור סימטריה מחומשת סביב המרכז; באופן מעניין למדי, זו הסימטריה המחומשת היחידה (לא קשה להוכיח שאכן יכולה להיות רק אחת כזו), אם כי כשמסתכלים רק על איזורים קטנים של הריצוף יש בהם סימטריה סיבובית "מקומית".

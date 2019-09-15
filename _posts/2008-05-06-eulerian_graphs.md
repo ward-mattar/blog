@@ -9,13 +9,13 @@ categories:
 ---
 שעשוע ידוע שנהוג לתת לילדים הוא זה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/euler_house.png" title="Euler House"><img src="http://www.gadial.net/wp-content/uploads/2008/05/euler_house.png" alt="Euler House" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/euler_house.png" title="Euler House"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/euler_house.png" alt="Euler House" /></a>
 
 האתגר כאן פשוט - האם ניתן לצייר את ה"בית" מבלי להרים את העפרון מהדף, כלומר בקו אחד. התשובה חיובית - נסו למצוא איך.
 
 אחרי שהילדים פותרים את החידה הזו, נותנים להם חדשה דומה מאוד, זו:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/euler_impossible.png" title="Euler impossible"><img src="http://www.gadial.net/wp-content/uploads/2008/05/euler_impossible.png" alt="Euler impossible" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/euler_impossible.png" title="Euler impossible"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/euler_impossible.png" alt="Euler impossible" /></a>
 
 מה ההבדל המהותי בין שני המקרים? והאם יש שיטה כללית ("<a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D">אלגוריתם</a>") שבודקת האם ניתן לצייר במשיכה אחת צורה כלשהי, ואם כן, איך?
 
@@ -23,7 +23,7 @@ categories:
 
 ראשית, צריך להבהיר על מה אנחנו מדברים, כי למילה "גרף" מספר משמעויות שונות, גם במתמטיקה. אנחנו <strong>לא</strong> מדברים על הדבר הבא:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/sinplot.png" title="Sin plot"><img src="http://www.gadial.net/wp-content/uploads/2008/05/sinplot.png" alt="Sin plot" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/sinplot.png" title="Sin plot"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/sinplot.png" alt="Sin plot" /></a>
 
 הדבר שלעיל מכונה "גרף של פונקציה", והוא אובייקט חשוב בפני עצמו, אבל לא מה שעליו אנחנו מדברים כאן. הגרפים "שלנו" מזכירים מאוד את שתי התמונות למעלה. התמונות הללו הורכבו מקווים ישרים ומנקודות חיבור שלהן ("קודקודים"); גרף פשוט מכליל את המושג והופך אותו לאבסטרקטי יותר.
 
@@ -37,9 +37,9 @@ categories:
 
 הנה דוגמאות סטנדרטיות לגרפים:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/graph.png" title="Graph 1"><img src="http://www.gadial.net/wp-content/uploads/2008/05/graph.png" alt="Graph 1" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/graph.png" title="Graph 1"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/graph.png" alt="Graph 1" /></a>
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/graph2.png" title="Graph 2"><img src="http://www.gadial.net/wp-content/uploads/2008/05/graph2.png" alt="Graph 2" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/graph2.png" title="Graph 2"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/graph2.png" alt="Graph 2" /></a>
 
 הגרף השני מכוון והראשון לא, אבל פרט לכך אלו בדיוק אותם גרפים; אותם קודקודים (A,B,C,D,E) ואפילו אותן קשתות. אם מוחקים את החצים מהקשתות בגרף השני, מקבלים את הגרף הראשון (אומרים בכזו סיטואציה שהגרף הלא מכוון הוא "גרף התשתית" של הגרף המכוון). זוהי דרך הציור הסטנדרטית והמקובלת של גרפים (למי שתוהה, הגרפים הללו ציורו באמצעות התוכנות שבחבילה <a href="http://www.graphviz.org/">graphviz</a>, שמאפשרות ציור אוטומטי של גרפים אם מספקים תיאור סכמטי טקסטואלי פשוט שלהם. מומלץ בחום).
 

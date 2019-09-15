@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"אז איך פותרים משוואה ממעלה שלישית?","dateModified":"2018-07-17T01:40:28+03:00","datePublished":"2018-07-17T01:40:28+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/07/17/solving_cubic_equations"},"url":"http://localhost:4000/blog/2018/07/17/solving_cubic_equations","description":"סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\\ge5$ וכן פתירה עבור $latex n\\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\\text{Gal}\\left(E/F\\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\\supset G_{1}\\supset\\dots\\supset G_{k}=\\left\\{ e\\right\\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\\subset E_{1}\\subset\\dots\\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

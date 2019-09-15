@@ -49,7 +49,7 @@ tags:
 
 עכשיו בואו נעבור לדבר על מערכת קצת יותר מחוכמת, זו:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png"><img class="alignnone size-full wp-image-1432" title="597px-Coupled_Harmonic_Oscillator.svg" src="http://www.gadial.net/wp-content/uploads/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png" alt="" width="597" height="156" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png"><img class="alignnone size-full wp-image-1432" title="597px-Coupled_Harmonic_Oscillator.svg" src="{{site.baseurl}}{{site.post_images}}/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png" alt="" width="597" height="156" /></a>
 </strong>
 
 כאן יש לנו שני גופים שמחוברים בקפיצים הן זה לזה והן כל אחד לקיר אחר. נניח שהמסות של הגופים זהות (ונסמן את המסה הזו ב-{% equation %}m{% endequation %}) ושקבוע הקפיץ של כל הקפיצים זהה (ונסמן אותו ב-{% equation %}k{% endequation %}). עכשיו יש לנו שתי פונקציות: {% equation %}f_{1}\left(t\right){% endequation %} ו-{% equation %}f_{2}\left(t\right){% endequation %} שמגדירות את מיקומי הגופים כפונקציה של הזמן. אפשר לחשוב על זה כעל וקטור של פונקציות: {% equation %}\overline{f}\left(t\right)=\left(f_{1}\left(t\right),f_{2}\left(t\right)\right){% endequation %}.

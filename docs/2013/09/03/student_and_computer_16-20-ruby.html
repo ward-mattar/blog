@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פרוייקט “התלמיד והמחשב”, בעיות 16-20 - רובי","dateModified":"2013-09-03T20:47:20+03:00","datePublished":"2013-09-03T20:47:20+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/09/03/student_and_computer_16-20-ruby"},"url":"http://localhost:4000/blog/2013/09/03/student_and_computer_16-20-ruby","description":"אני רוצה להתעסק הפעם עם סדרה די ארוכה של תרגילים בבת אחת, כי כולם זהים ברוחם: קראו כמות נתונים גדולה כלשהי לאיזה ייצוג פנימי שלכם, ובצעו מניפולציות על הנתונים הללו. בעיות כאלו הן הלחם והחמאה של שפות סקריפטינג - רבות מהן נולדו מלכתחילה כדי לטפל בבעיות מסוג זה. בפרט Perl, שהיא כנראה שפת הסקריפטינג הידועה ביותר וההשפעות שלה על רובי חזקות מאוד (גילוי נאות: אני שונא, מתעב ממש, את Perl. לדעתי זו שפה שמעודדת כתיבה של קוד דוחה ובלתי קריא. אם הייתי רוצה להיות ממש טרול הייתי אומר שהיא גם מעודדת את המתכנת להתלהב מעצמו יתר על המידה).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -126,9 +126,11 @@ Bran	Stark	60
 
 <p>דרך סטנדרטית ליצור Hash עם ערכים קיימים מראש היא לכתוב סוגריים מסולסלים ובתוכם לכתוב זוגות של מפתח ואז הערך שהמפתח מצביע עליו בתוך ה-Hash, כשכל זוג כזה מופרד בפסיקים מיתר הזוגות, ובין המפתח לערך שהוא מצביע עליו מצויר חץ. כלומר, ה-Hash שמתאים לשורה הראשונה בקובץ שלעיל הוא זה:</p>
 
-<p>[ruby]
-{"first_name" =&gt; "Eddard", "last_name" =&gt; "Stark", "grade" =&gt; 43}
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">first_name</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Eddard</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">last_name</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Stark</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">grade</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">43</span><span class="p">}</span></code></pre></figure>
+
+</div>
 
 <p>זה Hash לגיטימי לכל דבר, אבל לא תראו יותר מדי ממנו ברובי בגלל השימוש במחרוזות בתור מפתחות. זה לא ש<strong>אסור</strong> להשתמש במחרוזות בתור מפתחות, פשוט יש משהו יותר טוב שמשתמשים בו והגיע הזמן להציג - סימבולים (Symbols). סימבולים הם משהו יחסית ייחודי לרובי, בגלל שהגישה של רובי למחרוזות היא טיפה שונה מאשר זו של שפות אחרות. ההסבר הקצר, למי שבקיאים בפרטים הטכניים: ברובי מחרוזת הן תמיד mutable ואפשר לחשוב על סימבול בתור מחרוזת שהיא immutable ולכן השימוש בהן חוסך זמן ומקום. הנה ההסבר הארוך, למי שלא בקיאים:</p>
 
@@ -138,62 +140,75 @@ Bran	Stark	60
 
 <p>בקיצור, בהקשר של מפתחות של Hash, או כל הקשר אחר של מחרוזת שאנחנו לא באמת נרצה לבצע בה שינויים, עדיף להשתמש בסימבול במקום במחרוזת. איך כותבים סימבול? כמו שכותבים מחרוזת, אבל עם נקודותיים בהתחלה; ובמקרה שבו המחרוזת היא משהו שיכול להיות שם חוקי של משתנה או פונקציה (הכללים שקובעים את זה הם לא טריוויאליים - למשל, בהמשך נראה שהסימן + הוא חוקי מהבחינה הזו - אבל כלל אצבע טוב בשבילכם הוא משהו שמכיל רק אותיות, מספרים וקו תחתון ולא מתחיל במספר), אפשר גם להסיר את המרכאות לגמרי. הנה כמה דוגמאות לסימבולים:</p>
 
-<p>[ruby]
-:first_name
-:"0-1-2-3-4"
-:$23
-:___whaat
-:":’:’:"
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">:first_name</span>
+<span class="ss">:&amp;</span><span class="n">quot</span><span class="p">;</span><span class="mi">0</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span>
+<span class="p">:</span><span class="vg">$23</span>
+<span class="ss">:___whaat</span>
+<span class="ss">:&amp;</span><span class="n">quot</span><span class="p">;</span><span class="ss">:':':&amp;</span><span class="n">quot</span><span class="p">;</span></code></pre></figure>
+
+</div>
 
 <p>שמתי כמה סימבולים מאוד מוזרים שם - בדרך כלל סימבולים נראים כמו זה של first_name, בלי התחכמויות מיותרות.</p>
 
 <p>עכשיו אפשר לומר איך הרשומה של השורה הראשונה בקובץ אמורה להיראות ברובי:</p>
 
-<p>[ruby]</p>
-<p>[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="ss">:first_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Eddard</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="ss">:last_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Stark</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="ss">:grade</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">43</span><span class="p">}</span></code></pre></figure>
+
+</div>
 
 <p>שימו לב שאת הערכים של השמות אני כן שומר כמחרוזות ולא כסימבולים, פשוט כי במקרה שלהם זה הרבה פחות חשוב (מה שכדאי שיהיה סימבול הוא <strong>המפתחות</strong>). עוד סיבה שבגללה לא כדאי לשמור את הערכים הללו כסימבולים הוא שמרגע שסימבול נוצר, הוא הולך להמשיך להתקיים לאורך כל חיי התוכנית (להבדיל ממחרוזת, שברגע שהתוכנית מפסיקה להשתמש בה - ויש לרובי דרך לגלות את זה - היא הופכת ל”זומבי” שעלול להיות מושמד כל רגע כדי לפנות מקום כחלק מתהליך שנקרא “איסוף אשפה”).</p>
 
 <p>החל מגרסה 1.9.1 של רובי יש גם תחביר נוסף שבו אפשר להשתמש כשמגדירים Hash שנראה קצת “נקי” יותר:</p>
 
-<p>[ruby]
-{first_name: "Eddard", last_name: "Stark", grade: 43}
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="ss">first_name: </span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Eddard</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="ss">last_name: </span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Stark</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="ss">grade: </span><span class="mi">43</span><span class="p">}</span></code></pre></figure>
+
+</div>
 
 <p>יש כאן מוסכמה שצריך להיות מודעים אליה - אם בתוך הגדרה של Hash יש לנו מפתח ש<strong>נראה כמו משתנה</strong> אבל אחריו במקום החץ הרגיל שיש ב-Hash מופיעות נקודותיים, אז המפתח הזה הוא בעצם סימבול. <strong>אי אפשר</strong> לעשות תעלול כמו לכתוב מחרוזת במרכאות ואחריה נקודותיים; התעלול הזה עובד רק עם סימבולים שמלכתחילה אפשר היה לכתוב בלי מרכאות. המון אנשים מתעבים את התחביר החדש הזה, אבל אני די מחבב אותו.</p>
 
-<p>כל ההקדמה הזו לא הסבירה לנו איך אפשר לקחת קובץ CSV ולקבל ממנו מערך של Hash-ים שמתאימים לשורות שלו. אז הנה:
-[ruby]
-lines = File.open(ARGV[0], "r"){|f| f.read.split("\n")}
-data = lines.collect do |line|
-	parsed_line = line.split("\t")
-	{:first_name =&gt; parsed_line[0], :last_name =&gt; parsed_line[1], :grade =&gt; parsed_line[2].to_i}
-end
-[/ruby]</p>
+<p>כל ההקדמה הזו לא הסבירה לנו איך אפשר לקחת קובץ CSV ולקבל ממנו מערך של Hash-ים שמתאימים לשורות שלו. אז הנה:</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">lines</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">r</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;){</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">n</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;)}</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">lines</span><span class="p">.</span><span class="nf">collect</span> <span class="k">do</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+	<span class="n">parsed_line</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">t</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;)</span>
+	<span class="p">{</span><span class="ss">:first_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">parsed_line</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">:last_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">parsed_line</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ss">:grade</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">parsed_line</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">to_i</span><span class="p">}</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>בשורה הראשונה אני פותח את הקובץ לקריאה בלבד (זו המשמעות של ה-r), קורא את כולו בבת אחת ואז מפצל על פי שורות. התוצאה היא מערך של מחרוזות, מחרוזת לכל שורה, ששמור ב-lines. בשורה הבאה אני מתחיל תהליך שבו לוקחים כל שורה line בתוך lines, ובונים ממנה את הרשומה המתאימה: קודם כל לוקחים את השורה ומפרסרים אותה על ידי כך שמפרקים את השורה למערך של מחרוזות כשהפירוק הוא בדיוק בין תווי הטאב (t). בשורה הבאה אני בונה את ה-Hash מתוך השורה המפורסרת, ועל הדרך גם ממיר את הציון ממחרוזת למספר.</p>
 
 <p>התהליך הזה הוא לא מסובך, כמובן, אבל קצת מייגע לכתוב את כל הטקסט הזה בכל פעם שבה רוצים לפרסר קובץ CSV - הרי המקום היחיד שהוא לא גנרי אלא באמת יש בו התייחסות לתוכן ה-CSV הספציפי הוא השורה שבה מייצרים את ה-Hash. אז למה שלא תהיה ספריה סטנדרטית שעושה את זה? ובכן, באמת יש ספריה סטנדרטית לטיפול בקבצי CSV (גם קריאה וגם כתיבה שלהם וגם עוד דברים). יחד איתה אפשר להחליף את הקוד שלעיל בשורה אחת:</p>
 
-<p>[ruby]
-data = CSV.read(ARGV[0], col_sep: "\t").collect{|p| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">data</span> <span class="o">=</span> <span class="no">CSV</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">col_sep: </span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">t</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;).</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="p">{</span><span class="ss">:first_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">:last_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ss">:grade</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">to_i</span><span class="p">}}</span></code></pre></figure>
+
+</div>
 
 <p>השורה הזו תמימה למראה ודי ברור מה אני עושה בה - אני משתמש בפונקציה read של הספריה CSV שלוקחת קובץ שהשם שלו נתון בתור הפרמטר הראשון, ואת סוג התו המפריד בתור פרמטר שני (פרמטר שאפשר לוותר עליו אם התו המפריד הוא אכן פסיק) ומחזירה מערך-של-מערכים כשכל מערך פנימי כזה הוא שורה אחת של הקובץ אחרי פרסור. את זה אני מעביר ל-collect שממיר את המערכים הפנימיים ב-Hash וחסל. אבל האמת היא שבשורה הזו מסתתר קסם מאוד לא טריוויאלי שיש ברובי ונוגע להעברת פרמטרים לפונקציות: ה-col_sep הזה שמופיע שם. זה נראה כאילו אני לא סתם מעביר פרמטר, אלא מעביר פרמטר <strong>עם שם</strong>. מה בעצם קורה פה?</p>
 
 <p>הנה עוד מוסכמה שפועלת מאחורי הקלעים ברובי: כשמעבירים פרמטרים לפונקציה, אם הפרמטר האחרון הוא Hash, אפשר לכתוב אותו בלי הסוגריים המסולסלים. הנה דוגמא:</p>
 
-<p>[ruby]
-def f(a,b)
-  puts a.inspect
-  puts b.inspect
-end</p>
+<div class="code-block">
 
-<p>f({x: 1, y: 2}, {z: 3, w: 4})
-f({x: 1, y: 2}, z: 3, w: 4)
-f(x: 1, y: 2, z: 3, w: 4)
-[/ruby]</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="n">a</span><span class="p">.</span><span class="nf">inspect</span>
+  <span class="nb">puts</span> <span class="n">b</span><span class="p">.</span><span class="nf">inspect</span>
+<span class="k">end</span>
+
+<span class="n">f</span><span class="p">({</span><span class="ss">x: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">y: </span><span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="ss">z: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">w: </span><span class="mi">4</span><span class="p">})</span>
+<span class="n">f</span><span class="p">({</span><span class="ss">x: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">y: </span><span class="mi">2</span><span class="p">},</span> <span class="ss">z: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">w: </span><span class="mi">4</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="ss">x: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">y: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">z: </span><span class="mi">3</span><span class="p">,</span> <span class="ss">w: </span><span class="mi">4</span><span class="p">)</span></code></pre></figure>
+
+</div>
 
 <p>שתי הקריאות הראשונות ל-f ידפיסו בדיוק את אותו הדבר; לעומת זאת, הקריאה השלישית פשוט תיכשל ורובי תגיד שהיא ציפתה לקבל שני פרמטרים אבל קיבלה רק אחד.</p>
 
@@ -201,31 +216,35 @@ f(x: 1, y: 2, z: 3, w: 4)
 
 <p>למה נוקטים בדרך העברת פרמטרים שכזו? פשוט, כי יש הרבה מאוד אפשרויות שאפשר להעביר ל-read, אבל ברוב המקרים המשתמש לא יצטרך את כולן. ברור לגמרי שאי אפשר להעביר אותן בתור פרמטרים בצורה הרגילה, כי זה יכריח את המשתמש לכתוב ערכים לכל האפשרויות (שימוש בערכי ברירת מחדל הוא בעייתי כי מה אם האפשרות שהמשתמש רוצה לשנות היא אחרונה?) וזה יצריך אותו לבדוק מה הסדר הנכון של הפרמטרים בחתימה של הפונקציה שהוא מפעיל, וזה יהיה סיוט אחד גדול. לכן צריך להעביר את כל האפשרויות כשהן מקובצות למשתנה יחיד שלא חייב להכיל את כולן במפורש, ו-Hash הוא הבחירה המתאימה לשם כך. התחביר החדש של כתיבת Hash-ים גורם לקריאה הזו להיראות נחמד; בגרסאות ישנות יותר של רובי היינו צריכים לכתוב</p>
 
-<p>[ruby]
-CSV.read(ARGV[0], :col_sep =&gt; "\t")
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">CSV</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">:col_sep</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">t</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;)</span></code></pre></figure>
+
+</div>
 
 <p>שגם הוא לא נורא בכלל אבל נראה קצת פחות טוב לטעמי.</p>
 
 <p>עכשיו אפשר להציג סוף סוף את הקוד שפותר את התרגיל במלואו:</p>
 
-<p>[ruby]
-require ‘csv’
-data = CSV.read(ARGV[0], col_sep: "\t").collect{|p| {:first_name =&gt; p[0], :last_name =&gt; p[1], :grade =&gt; p[2].to_i}}</p>
+<div class="code-block">
 
-<p>grades = data.collect{|d| d[:grade]}
-average = grades.inject(:+).to_f / grades.length
-best = data.max{|a,b| a[:grade] &lt;=&gt; b[:grade]}
-worst = data.max{|a,b| b[:grade] &lt;=&gt; a[:grade]}
-last_name_p_students = data.find_all{|d| d[:last_name] =~ /^P/}</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'csv'</span>
+<span class="n">data</span> <span class="o">=</span> <span class="no">CSV</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">col_sep: </span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">t</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;).</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="nb">p</span><span class="o">|</span> <span class="p">{</span><span class="ss">:first_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="ss">:last_name</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="ss">:grade</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nb">p</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">to_i</span><span class="p">}}</span>
 
-<p>puts "Average = #{average}"
-puts "Reversed grade list: #{grades.reverse.inspect}"
-puts "Best student: #{best[:first_name]} #{best[:last_name]} (#{best[:grade]})"
-puts "Worst student: #{worst[:first_name]} #{worst[:last_name]} (#{worst[:grade]})"
-puts "#{grades.find_all{|g| (40..60).include? g}.length} students got between 40 and 60"
-puts "#{last_name_p_students.length} students whose last name starts with P: #{last_name_p_students.collect{|d| d[:first_name] + " " + d[:last_name]}.join(", ")}"
-[/ruby]</p>
+<span class="n">grades</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="p">[</span><span class="ss">:grade</span><span class="p">]}</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">grades</span><span class="p">.</span><span class="nf">inject</span><span class="p">(:</span><span class="o">+</span><span class="p">).</span><span class="nf">to_f</span> <span class="o">/</span> <span class="n">grades</span><span class="p">.</span><span class="nf">length</span>
+<span class="n">best</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">max</span><span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">a</span><span class="p">[</span><span class="ss">:grade</span><span class="p">]</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="ss">:grade</span><span class="p">]}</span>
+<span class="n">worst</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">max</span><span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">|</span> <span class="n">b</span><span class="p">[</span><span class="ss">:grade</span><span class="p">]</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">a</span><span class="p">[</span><span class="ss">:grade</span><span class="p">]}</span>
+<span class="n">last_name_p_students</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">find_all</span><span class="p">{</span><span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="p">[</span><span class="ss">:last_name</span><span class="p">]</span> <span class="o">=~</span> <span class="sr">/^P/</span><span class="p">}</span>
+
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Average</span> <span class="o">=</span> <span class="c1">#{average}&amp;quot;</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Reversed</span> <span class="n">grade</span> <span class="ss">list: </span><span class="c1">#{grades.reverse.inspect}&amp;quot;</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Best</span> <span class="ss">student: </span><span class="c1">#{best[:first_name]} #{best[:last_name]} (#{best[:grade]})&amp;quot;</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Worst</span> <span class="ss">student: </span><span class="c1">#{worst[:first_name]} #{worst[:last_name]} (#{worst[:grade]})&amp;quot;</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="c1">#{grades.find_all{|g| (40..60).include? g}.length} students got between 40 and 60&amp;quot;</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="c1">#{last_name_p_students.length} students whose last name starts with P: #{last_name_p_students.collect{|d| d[:first_name] + &amp;quot; &amp;quot; + d[:last_name]}.join(&amp;quot;, &amp;quot;)}&amp;quot;</span></code></pre></figure>
+
+</div>
 
 <p>כאשר מפעילים את הקוד הזה על קובץ הטקסט שהצגתי קודם, הפלט הוא:</p>
 
@@ -244,9 +263,11 @@ Worst student: Jeyne Poole (21)
 
 <p>שורה 5 היא מעניינת בגלל האופן שבו אני קורא ל-inject כדי לסכום את הציונים. בצורת הקריאה המלאה שלו, inject שעושה את זה ייראה ככה:</p>
 
-<p>[ruby]
-grades.inject(0){|sum, x| sum + x}
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">grades</span><span class="p">.</span><span class="nf">inject</span><span class="p">(</span><span class="mi">0</span><span class="p">){</span><span class="o">|</span><span class="n">sum</span><span class="p">,</span> <span class="n">x</span><span class="o">|</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">x</span><span class="p">}</span></code></pre></figure>
+
+</div>
 
 <p>בצורת הקריאה הזו, inject מקבל שני פרמטרים - פרמטר אחד שהוא “ערך התחלתי” ופרמטר שני שהוא בלוק. הוא מאתחל את sum להיות הערך ההתחלתי, ואז מריץ סדרתית את הבלוק כאשר הוא מעביר לו את sum ובתור x מעביר לו את אברי המערך, ואחרי כל הרצה של הבלוק הוא מעדכן את sum להיות הערך שהבלוק החזיר.</p>
 

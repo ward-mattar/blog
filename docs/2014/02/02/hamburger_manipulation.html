@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"המניפולציה המתמטית של ההמבורגר","dateModified":"2014-02-02T20:13:36+02:00","datePublished":"2014-02-02T20:13:36+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/02/02/hamburger_manipulation"},"url":"http://localhost:4000/blog/2014/02/02/hamburger_manipulation","description":"לא מזמן ראיתי סרטון פרסומת שהשווה בין כמות הקלוריות שבהמבורגר של מקדונלד’ס ובין כמות הקלוריות שבמנה של פריכיות אורז עם גבינה לבנה. לא מדובר על פרסומת חדשה אלא על משהו משנת 2010 שהוקם לתחיה בגרסה חדשה על ידי מקדונלד’ס לאחרונה. באופן כללי, כשאני צופה בפרסומות אני כמובן חשדן לגבי תוכנן; אבל הפרסומת הזו של מקדונלד’ס קורצת מאוד מכיוון שהיא עוסקת בנתונים מספריים מדוייקים, ולכן כל אחד יכול לבדוק את התוכן שלה בבית, בעצמו, אפילו בראש (אבל אני מעדיף חישובים במחשב או עם נייר), ותוך שימוש במתמטיקה של חטיבת ביניים. עומק מתמטי ודאי שלא יהיה כאן, אבל מה רע בשימוש במתמטיקה בסיסית בשביל לצחוק על פרסומות שקריות?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -97,23 +97,25 @@
 
 <p>אבל די עם ההטפות, בואו ניגש לאקשן. נתחיל עם השאלה הפשוטה - כמה קלוריות יש בפריכיית אורז? מה משקלה של פריכיית אורז? כמה קלוריות יש בגבינה לבנה? כמובן, אפשר ללכת למכולת ולשאוב משם את הנתונים, אבל יותר הגון לדעתי לעבוד עם הנתונים שמקדונלד’ס עובדים איתם - כך אפשר יהיה לחשוף כשלים חשבוניים שיש אצל מקדונלד’ס (אם יש כאלו) ולא סתם לחשוף שמקדולנד’ס עובדים עם רשימת ערכים תזונתיים שונה (ואולי יותר מדוייקת?) משלנו. הבעיה היא שבמאמר של מקדונלד’ס אין בכלל מידע מפורש על המשקל וכמות הקלוריות של פריכיות ושל גבינה. השאלה היא האם ניתן <strong>להסיק</strong> אותו איכשהו ממה שכן נאמר.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/02/mc2g.jpg"><img src="http://www.gadial.net/wp-content/uploads/2014/02/mc2g.jpg" alt="mc2g" width="445" height="575" class="alignnone size-full wp-image-3026" /></a></p>
+<p><a href="/blog/assets/img/2014/02/mc2g.jpg"><img src="/blog/assets/img/2014/02/mc2g.jpg" alt="mc2g" width="445" height="575" class="alignnone size-full wp-image-3026" /></a></p>
 
 <p>ובכן, מודעת פרסומת אחת משווה בין “5 פריכיות אורז מלא (40 גרם) עם גבינה 5 אחוז (154 גרם)” ששווה ערך ל-299 קלוריות, אל מול המבורגר כלשהו. זה מצוין, כי זה מלמד אותנו שפריכית אורז אחת היא במשקל <span>$latex \frac{40}{5}=8$</span> גרם. כבר למדנו משהו. האם אנחנו יכולים לדעת מה הערך הקלורי של פריכיות אורז ושל גבינה לבנה? עוד לא. אבל בואו נסמן ב-<span>$latex x$</span> את הערך הקלורי של פריכית אורז אחת וב-<span>$latex y$</span> את הערך הקלורי של 100 גרם גבינה לבנה, אז קיבלנו את המשוואה <span>$latex 5x+1.54y=299$</span>.</p>
 
 <p>עכשיו, יש לנו משוואה לינארית בשני נעלמים (“לינארית” פירושו שהנעלמים הם בחזקה ראשונה ולא מוכפלים זה בזה; אין לנו משהו כמו <span>$latex 5x^{2}+2xy+y^{3}$</span> בפנים). בשביל לפתור אותה אנחנו צריכים עוד משוואה באותם שני נעלמים וקצת מזל (שהמשוואה השניה לא תהיה כפולה באיזה קבוע של המשוואה הראשונה או משהו). למרבה המזל, במאמר יש עוד מודעת פרסומת עם נתונים מדוייקים, שמציגה 3.5 פריכיות (שזה <span>$latex 3\frac{1}{2}\times8=28$</span> גרם - וגם בפרסומת מסכימים איתי) ו-100 גרם גבינה לבנה ששווים ל-202 קלוריות. כלומר, קיבלנו את המשוואה השניה <span>$latex 3\frac{1}{2}x+y=202$</span>. מצוין, זה בדיוק מה שהיינו צריכים! רק שלרוע המזל, כמו שקורה בחיים האמיתיים, המספרים לא כל כך נחמדים. לא נורא, זה מה שיש ועם זה ננצח.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/02/mc3g.jpg"><img src="http://www.gadial.net/wp-content/uploads/2014/02/mc3g.jpg" alt="mc3g" width="445" height="575" class="alignnone size-full wp-image-3025" /></a></p>
+<p><a href="/blog/assets/img/2014/02/mc3g.jpg"><img src="/blog/assets/img/2014/02/mc3g.jpg" alt="mc3g" width="445" height="575" class="alignnone size-full wp-image-3025" /></a></p>
 
 <p>הדרך של חטיבת הביניים להתמודד עם התרגיל הזה היא לחלץ את <span>$latex y$</span> מהמשוואה השניה, להציב בראשונה ולהתחיל לפשט דברים. אבל לשמחתי אני כבר לא בחטיבת הביניים, אז אני פשוט נותן למחשב - במקרה הזה, מערכת האלגברה הממוחשבת Sage שאני מאוד מחבב - לעשות את העבודה במקומי:</p>
 
-<p>[python]
-sage: x,y = var(‘x’,’y’)</p>
+<div class="code-block">
 
-<p>sage: solve([5<em>x+1.54</em>y == 299, 3.5*x+y == 202],x,y)</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sage</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s">'x'</span><span class="p">,</span><span class="s">'y'</span><span class="p">)</span>
 
-<p>[[x == (1208/39), y == (3650/39)]]
-[/python]</p>
+<span class="n">sage</span><span class="p">:</span> <span class="n">solve</span><span class="p">([</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">1.54</span><span class="o">*</span><span class="n">y</span> <span class="o">==</span> <span class="mi">299</span><span class="p">,</span> <span class="mf">3.5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="o">==</span> <span class="mi">202</span><span class="p">],</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="p">[[</span><span class="n">x</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1208</span><span class="o">/</span><span class="mi">39</span><span class="p">),</span> <span class="n">y</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3650</span><span class="o">/</span><span class="mi">39</span><span class="p">)]]</span></code></pre></figure>
+
+</div>
 
 <p>קיבלנו, בקירוב, שפריכית אורז שווה 31 קלוריות, ו-100 גרם גבינה לבנה 93.5 קלוריות. הנתונים שאני מכיר קצת שונים (פריכית אורז מכילה פחות קלוריות וגבינה לבנה 5 אחוז מכילה קצת יותר) אבל זה רק ממחיש למה חשוב לעבוד עם הנתונים שמקדונלד’ס עצמם מספקים.</p>
 
@@ -129,7 +131,7 @@ sage: x,y = var(‘x’,’y’)</p>
 
 <p>הנתון הבא שמקדונלד’ס נותנים הוא “על פי הבדיקות שבידינו פריכית נאכלת עם מריחת גבינה במשקל 15-25 גרם בכל פריכית”. בואו ננקוט בגישה המחמירה ביותר - 25 גרם גבינה לכל פריכית. חמושים בנתון הזה, בואו נסתכל בתמונה שמופיעה מתחת לטקסט “כפי שניתן לראות איננו מסתירים שום מידע ומדייקים בכל נתון” במאמר - בתמונה רואים שלוש פריכיות עם גבינה לבנה (אחת מהן לא מרוחה בגבינה לבנה אבל נניח שהיא כן) עם הכיתוב “175 קלוריות ל-100 גרם”. שלוש פריכיות הוא אכן המספר הנכון לכתוב פה: משקלן הכולל הוא 24 גרם, כך שנותרים לנו 76 גרם של גבינה לבנה - <span>$latex 25\frac{1}{3}$</span> לכל פריכית, שזה מתאים למשקל שהם ציינו קודם. עכשיו, לפי הנתונים שחישבנו קודם של <span>$latex x,y$</span>, מה הערך הקלורי הכולל כאן, כלומר מהו <span>$latex 3x+\frac{76}{100}y$</span>? חישוב מהיר מראה שזה בערך 164 קלוריות. אופס! איך הם הגיעו ל-175?!</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/02/mc1g.jpg"><img src="http://www.gadial.net/wp-content/uploads/2014/02/mc1g.jpg" alt="mc1g" width="445" height="575" class="alignnone size-full wp-image-3024" /></a></p>
+<p><a href="/blog/assets/img/2014/02/mc1g.jpg"><img src="/blog/assets/img/2014/02/mc1g.jpg" alt="mc1g" width="445" height="575" class="alignnone size-full wp-image-3024" /></a></p>
 
 <p>תאמרו, מה משנות כבר 10 קלוריות לכאן או לכאן? חברים, אני <strong>מסכים</strong>! לכן כל כך עגום לי לראות שמקדונלד’ס התעקשו בכל זאת לרמות על 10 קלוריות, כי הרי מה 10 קלוריות כבר משנות. לי לא מפריעות ה-10 קלוריות, מפריע לי שהמתמטיקה של מקדונלד’ס יוצאת לא עקבית ואז הם מאשימים אחרים ב”מניפולציה מתמטית”. למען השם, מדובר על חשבון פשוט, איך יכלתם להיכשל בו?</p>
 
@@ -139,7 +141,7 @@ sage: x,y = var(‘x’,’y’)</p>
 
 <p>כל זה - מהמאמר של 2010. עכשיו בואו ננסה להבין את הפרסומת החדשה לאור הנתונים שהיו במאמר הישן. כמובן, ייתכן שמאז מקדונלד'ס חישבו לעצמם נתונים חדשים - אבל הם לא משחררים אותם בפרסומת החדשה אז אין לי עם מה לעבוד.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/02/mc4.png"><img src="http://www.gadial.net/wp-content/uploads/2014/02/mc4.png" alt="mc4" width="624" height="454" class="alignnone size-full wp-image-3029" /></a></p>
+<p><a href="/blog/assets/img/2014/02/mc4.png"><img src="/blog/assets/img/2014/02/mc4.png" alt="mc4" width="624" height="454" class="alignnone size-full wp-image-3029" /></a></p>
 <p>הפרסומת החדשה מציגה 30 גרם פריכיות ו-160 גרם גבינה לבנה, כלומר משקל כולל 190 גרם וערך קלורי כולל של 270 קלוריות. האם זה עקבי עם הנתונים הישנים? ובכן, אם ממשיכים עם החישוב של 8 גרם לפריכית, 30 גרם פריכיות זה לא 3.5 פריכיות אלא 3.75 (בפרסומת רואים שלוש פריכיות ועוד פריכית חתוכה כלשהי - אפשר להניח שהיא נחתכה כך שהיא שלושת-רבעי ולא חצי. לי זה נראה כמו חצי אבל אין לי ראייה מרחבית). עכשיו, כמה גבינה לבנה יש לכל פריכית? 160 לחלק ל-3.75 זה <span>$latex 42\frac{2}{3}$</span>; במילים אחרות, מקדונלד'ס כבר זנחו מזמן את טענת ה-"עד 25 גרם גבינה לבנה לפריכית" ועובדים עם מספרים חדשים - ולי המספרים הללו כבר נשמעים מופרכים למדי (אבל מה אני יודע? אני לא אוכל פריכיות אורז עם גבינה לבנה).</p>
 
 <p>נו, והאם פרט לכך החשבון המספרי יוצא? ובכן, הרבה יותר קרוב, אבל עדיין לא! אם מחשבים את <span>$latex 3.75x+\frac{160}{100}y$</span> מקבלים בערך 266 קלוריות! למה, הו, למה אתם מתעקשים לעשות לי את זה, מקדונלד'ס? כולה 4 קלוריות! למה לרמות?</p>

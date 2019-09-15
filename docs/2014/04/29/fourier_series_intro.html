@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"טורי פורייה - מה זה בכלל?","dateModified":"2014-04-29T01:39:20+03:00","datePublished":"2014-04-29T01:39:20+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/04/29/fourier_series_intro"},"url":"http://localhost:4000/blog/2014/04/29/fourier_series_intro","description":"מתמטיקאים אוהבים לפרק דברים לגורמים. כל מספר טבעי קל יותר להבין אם מפרקים אותו למכפלה של ראשוניים. גם עם פונקציות ממשיות זה עובד כך - אחד מהדברים האהובים על מתמטיקאים הוא לקחת פונקציה ממשית $latex f\\left(x\\right)$ ולכתוב אותה בתור טור חזקות: $latex f\\left(x\\right)=\\sum_{n=0}^{\\infty}a_{n}x^{n}$. בצורה הזו הפונקציה נכתבת כסכום אינסופי של פונקציות פשוטות במיוחד - $latex x^{n}$ - כשלכל פונקציה פשוטה שכזו יש מקדם, $latex a_{n}$, שהוא מספר ממשי שמלמד אותנו עד כמה הרכיב $latex x^{n}$ משתתף בסכום שמהווה את $latex f\\left(x\\right)$. אם אנחנו יודעים ייצוג של $latex f\\left(x\\right)$ כטור חזקות קל מאוד לעשות איתה דברים מסויימים - למשל, כדי לגזור אותה די לנו לגזור את הטור “איבר איבר”, ואת זה קל מאוד לעשות כי אנחנו יודעים איך גוזרים פונקציה פשוטה כמו $latex x^{n}$ - מקבלים $latex f^{\\prime}\\left(x\\right)=\\sum_{n=1}^{\\infty}na_{n}x^{n-1}$. באופן דומה גם אינטגרל לפונקציה ניתן לתיאור על ידי ביצוע אינטגרציה לטור “איבר איבר”. אמנם, לא כל פונקציה אפשר לתאר כטור שכזה, ולא תמיד קל למצוא את הטור, אבל זו המחשה פשוטה ונאה לכוח שבפירוק שכזה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -155,7 +155,7 @@
 
 <p>וכמובן, אפשר להרחיב את הפונקציה הזו לכל <span>$latex \mathbb{R}$</span> באופן מחזורי (כלומר, שיתקיים <span>$latex f\left(x+2\pi\right)=f\left(x\right)$</span>). התוצאה היא פונקציה שנראית כך:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/04/step_func.png"><img class="alignnone size-full wp-image-3097" src="http://www.gadial.net/wp-content/uploads/2014/04/step_func.png" alt="step_func" width="864" height="473" /></a></p>
+<p><a href="/blog/assets/img/2014/04/step_func.png"><img class="alignnone size-full wp-image-3097" src="/blog/assets/img/2014/04/step_func.png" alt="step_func" width="864" height="473" /></a></p>
 
 <p>זה מזכיר את סינוס בכך שזו פונקציה מחזורית שהערכים המינימלי והמקסימלי שלה הם <span>$latex -1$</span> ו-<span>$latex 1$</span>, אבל כאן הדמיון נגמר - סינוס עוברת בצורה רציפה בין כל הערכים שלה והפונקציה הזו לא; סינוס היא פונקציה עגולה ונחמדה, והפונקציה הזו ישרה. איך סכום של הרבה סינוסים יכול לתת לנו את הזוועה הזו?</p>
 
@@ -181,7 +181,7 @@
 
 <p>בואו ונראה איך נראה, למשל, סכום 15 האיברים הראשונים של הטור שבאגף ימין (בכחול):</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/04/step_fourier_15.png"><img class="alignnone size-full wp-image-3098" src="http://www.gadial.net/wp-content/uploads/2014/04/step_fourier_15.png" alt="step_fourier_15" width="858" height="463" /></a></p>
+<p><a href="/blog/assets/img/2014/04/step_fourier_15.png"><img class="alignnone size-full wp-image-3098" src="/blog/assets/img/2014/04/step_fourier_15.png" alt="step_fourier_15" width="858" height="463" /></a></p>
 
 <p>זה נראה די טוב! המבנה הכללי זהה לזה של הפונקציה שאנחנו מנסים לקרב עם הטור. ה-0 ב-<span>$latex x=0$</span> די ברור כעת - זה בדיוק השלב שבו הטור (שמגדיר פונקציה רציפה) “מטייל” בין <span>$latex 1$</span> ל-<span>$latex -1$</span>. הדבר היחיד שנראה קצת מציק הוא הצ’ופצ’יקים הבולטים בקצוות של הקטעים, בדיוק ליד נקודות אי-הרציפות של הפונקציה המקורית. הצ’ופצ’יקים הללו נמצאים שם לא במקרה - מדובר על תופעה שנקראת <strong>אפקט גיבס</strong> ואולי אתאר מתישהו בפוסט נפרד. לבינתיים, הנה משהו שחלקכם יוכלו לשחק איתו: גרסה אינטראקטיבית של הטור שבה אתם יכולים לבחור את כמות האיברים בסכום ולראות מה קורה - איך מתרחש הקסם שבו אוסף של סינוסים הופך לאט לאט למשהו שנראה בדיוק כמו <span>$latex f$</span> (ושימו לב איך הקפיצה ליד נקודות אי הרציפות אמנם מתכווצת מבחינת הרוחב שלה, אבל הגובה שלה נותר תמיד מעל רמה מסויימת ולא טריוויאלית של שגיאה).</p>
 <div id="content"></div>

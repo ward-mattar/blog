@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"קבוצת קנטור, ואיך לכל הרוחות המימד שלה הוא בערך 0.63?","dateModified":"2010-04-21T19:55:00+03:00","datePublished":"2010-04-21T19:55:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/04/21/cantor_set"},"url":"http://localhost:4000/blog/2010/04/21/cantor_set","description":"מהו מימד? זו שאלה שכבר התייחסתי אליה בעבר, ואז אמרתי כי “יש הגדרות שונות לאותו מושג אינטואיטיבי, שמנסות להשיג מטרות שונות”. אז עסקתי בהגדרה הנאיבית והפשוטה ביותר של מימד, ואילו הפעם אני רוצה לדבר על הגדרה מסובכת יותר, שנוטה לגרום לאנשים לחוש תחושת “מה לעזאזל” כשהם שומעים לראשונה על תוצאותיה - מימד פרקטלי. ומדוע “מה לעזאזל”? כי המימד הפרקטלי של קבוצות עשוי שלא להיות מספר טבעי - למעשה, ברוב המקרים הוא אינו טבעי, אלא מספר אי רציונלי כלשהו. כך למשל קבוצת קנטור, שאותה אציג בפוסט הזה, היא בעלת מימד פרקטלי של בערך $latex 0.63$. מה ההגיון שמאחורי דבר כזה?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -99,7 +99,7 @@
 
 <p>הנה ציור המדגים את שלבי הבניה הראשונים של הקבוצה:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2010/04/729px-Cantor_set_in_seven_iterations.svg_.png"><img class="alignnone size-full wp-image-474" title="729px-Cantor_set_in_seven_iterations.svg" alt="ציור של האיטרציות הראשונות בבניית קבוצת קנטור" src="http://www.gadial.net/wp-content/uploads/2010/04/729px-Cantor_set_in_seven_iterations.svg_.png" width="729" height="118" /></a></p>
+<p><a href="/blog/assets/img/2010/04/729px-Cantor_set_in_seven_iterations.svg_.png"><img class="alignnone size-full wp-image-474" title="729px-Cantor_set_in_seven_iterations.svg" alt="ציור של האיטרציות הראשונות בבניית קבוצת קנטור" src="/blog/assets/img/2010/04/729px-Cantor_set_in_seven_iterations.svg_.png" width="729" height="118" /></a></p>
 
 <p>כמו שאפשר לראות, מהר מאוד הקבוצה הופכת להיות דלילה למדי, בלי קטעים “שמנים”. דרך פורמלית לתאר זאת היא על ידי חישוב המידה הכוללת של כל הקטעים שמוצאים מתוך הקבוצה. מידה של קטע, לצורך הדיון הזה, תהיה פשוט אורכו - אין לנו צורך בהגדרה מורכבת יותר. באיטרציה הראשונה מסולק מ-<span>$latex C_{0}$</span> הקטע <span>$latex \left(\frac{1}{3},\frac{2}{3}\right)$</span> שאורכו <span>$latex \frac{1}{3}$</span>; באיטרציה השניה מסולקים הקטעים <span>$latex \left(\frac{1}{9},\frac{2}{9}\right)$</span> ו-<span>$latex \left(\frac{7}{9},\frac{8}{9}\right)$</span> - שני קטעים שאורכם <span>$latex \frac{1}{9}$</span>; ובאופן כללי, באיטרציה ה-<span>$latex n$</span> מסולקים <span>$latex 2^{n-1}$</span> קטעים שאורכם <span>$latex \frac{1}{3^{n}}$</span> כל אחד, ולכן האורך הכולל שלהם הוא <span>$latex \frac{2^{n-1}}{3^{n}}$</span>. שימו לב שכל הקטעים הללו זרים זה לזה, ולכן המידה של האיחוד של כולם שווה לסכום המידות שלהם, ולא סתם מהווה חסם עליון עבורו, ומכאן שניתן לחשב אותה במדוייק: המידה הכוללת של כל הקטעים שאותם מוציאים מקבוצת קנטור היא <span>$latex \sum_{n=1}^{\infty}\frac{2^{n-1}}{3^{n}}$</span>, או בסימון פשוט מעט יותר, <span>$latex \sum_{n=0}^{\infty}\frac{2^{n}}{3^{n+1}}$</span>. אלא שאת הסכום הזה ניתן לחשב במדוייק, אם שמים לב לכך שזהו פשוט טור הנדסי אינסופי מתכנס: <span>$latex \sum_{n=0}^{\infty}\frac{2^{n}}{3^{n+1}}=\frac{1}{3}\sum_{n=0}^{\infty}\left(\frac{2}{3}\right)^{n}=\frac{1}{3}\cdot\frac{1}{1-\frac{2}{3}}=\frac{1}{3}\cdot\frac{1}{\frac{1}{3}}=1$</span>.</p>
 

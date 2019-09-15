@@ -55,7 +55,7 @@ tags:
 
 ראשית, תזכורת קטנה על מה מדובר:
 
-<a href="http://www.gadial.net/wp-content/uploads/2007/04/220px-15-puzzle-loyd.svg_.png" rel="attachment wp-att-1169"><img class="aligncenter size-full wp-image-1169" src="http://www.gadial.net/wp-content/uploads/2007/04/220px-15-puzzle-loyd.svg_.png" alt="220px-15-puzzle-loyd.svg" width="220" height="220" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2007/04/220px-15-puzzle-loyd.svg_.png" rel="attachment wp-att-1169"><img class="aligncenter size-full wp-image-1169" src="{{site.baseurl}}{{site.post_images}}/2007/04/220px-15-puzzle-loyd.svg_.png" alt="220px-15-puzzle-loyd.svg" width="220" height="220" /></a>
 
 המשחק בנוי על לוח {% equation %}4\times4{% endequation %} עם 15 לוחיות ממוספרות ועוד לוחית אחת חסרה. בכל צעד אנחנו מזיזים לוחית כלשהי אל המקום הפנוי של הלוחית החסרה - רעיונית, אנחנו מבצעים חילוף בין הלוחית שהזזנו ובין הלוחית החסרה. באופן הזה מתערבבים המספרים שעל הלוח, והיעד הוא להגיע ממצב של לוח מסודר למצב של לוח מסודר פרק להחלפה בין ה-14 וה-15 (זה מה שרואים באיור).
 

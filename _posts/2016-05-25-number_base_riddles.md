@@ -24,7 +24,7 @@ tags:
 
 אלו החידות. בואו נצא להפסקה קצרה עם קומיקס לא קשור של xkcd, נחשוב איך פותרים אותן, ואז נחזור ונקלקל לעצמנו את הכיף עם הפתרונות.
 
-[caption id="attachment_3342" align="aligncenter" width="348"]<a href="http://www.gadial.net/wp-content/uploads/2016/05/background_screens.png" rel="attachment wp-att-3342"><img class="wp-image-3342 size-full" src="http://www.gadial.net/wp-content/uploads/2016/05/background_screens.png" alt="No way, we gotta rewind and cross-reference this map with the list of coordinates we saw on the other screen. This Greenland thing could be big." width="348" height="481" /></a> http://xkcd.com/1451/[/caption]
+[caption id="attachment_3342" align="aligncenter" width="348"]<a href="{{site.baseurl}}{{site.post_images}}/2016/05/background_screens.png" rel="attachment wp-att-3342"><img class="wp-image-3342 size-full" src="{{site.baseurl}}{{site.post_images}}/2016/05/background_screens.png" alt="No way, we gotta rewind and cross-reference this map with the list of coordinates we saw on the other screen. This Greenland thing could be big." width="348" height="481" /></a> http://xkcd.com/1451/[/caption]
 
 את הרעיון שמאחורי הפתרון האלגנטי לשתי החידות הללו אפשר לתמצת למילים <strong>בסיס ספירה</strong>. בואו נראה קודם כל מה קורה בחידת שיקוי ההיעלמות. כדי לא להבריח מייד את הקהל הלא מתמטי שהגיע עד לכאן עם מילים כמו "בסיס בינארי", בואו נתחיל מלדבר על הוריאציה של 20 תלמידים ו-100 בקבוקים.
 

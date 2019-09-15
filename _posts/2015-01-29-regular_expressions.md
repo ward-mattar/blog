@@ -48,7 +48,7 @@ tags:
 
 התשובה גם כן פשוטה: בשביל לעשות חיפושים מתוחכמים. קרוב לודאי שכולכם ביצעתם חיפוש כלשהו במסמך. חיפושים "רגילים" תמיד מחפשים מחרוזת ספציפית אחת - רצף של תווים (לאו דווקא כזה שמרכיב מילה שלמה, אולי גם חלק ממילה). אבל לפעמים אנחנו רוצים לחפש משהו שאנחנו לא יודעים איך בדיוק הוא כתוב, אלא רק מה התבנית הכללית שלו; ולפעמים אנחנו רוצים לחפש הרבה דברים בבת אחת, ואנחנו יודעים מה התבנית המשותפת שלהם. בקיצור, אנחנו רוצים לבצע חיפוש אחרי איברים ששייכים לקבוצה כלשהי של מילים - שפה. לפעמים, כפי שרנדל מונרו מ-xkcd מדגים, זה יכול להציל חיים:
 
-<a href="http://www.gadial.net/wp-content/uploads/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="http://www.gadial.net/wp-content/uploads/2015/01/regular_expressions.png" width="600" height="607" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="{{site.baseurl}}{{site.post_images}}/2015/01/regular_expressions.png" width="600" height="607" /></a>
 
 איך זה עובד בפועל? הרעיון הכללי הוא להשתמש בכלים שכבר הצגתי. בהינתן ביטוי רגולרי, אפשר לפענח אותו ולבנות אוטומט אי-דטרמיניסטי שמקבל אותו. את האוטומט הזה אפשר להריץ על טקסט ולראות אם האוטומט מגיע למצב מקבל. אם הוא מקבל, אז מצאנו מילה בשפה שהאוטומט מקבל שמתחילה בתחילת הטקסט ומסתיימת במקום שבו האוטומט הגיע למצב מקבל. אם לא מצאנו (ובפרט אם הגענו אל "בור" או שהחישוב נתקע) אז אנחנו יודעים שאפשר לדלג על האות הראשונה בטקסט ולהתחיל מחדש חיפוש באות הבאה, וכן הלאה. בנוסף, לא חייבים לעצור אחרי שמגיעים למצב מקבל - אפשר לנקוט בגישה "חמדנית" שבה ממשיכים עד המילה הארוכה ביותר שאותה מצליחים לקבל.
 
@@ -152,6 +152,6 @@ tags:
 
 ואם הגעתי לנקודה הזו, יש רק דרך אחת לסיים. באתר השאלות והתשובות stackoverflow מישהו שאל פעם בדיוק על זה - פרסור הטמל עם ביטויים רגולריים. הוא קיבל "<a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">תשובה</a>" שאמנם קשה לומר שהיא תשובה מועילה יותר מדי, אבל היא אחד מהדברים המשעשעים ביותר שקשורים לביטויים רגולריים שאני מכיר (הו, יש המון! בדיחות ביטויים רגולריים זה אדיר!). היא כל כך מוצלחת שאני לא רק מקשר אליה אלא שם צילום מסך, שיהיה לתמיד (ולא, שום דבר לא מקולקל בצילום המסך או במחשב שלכם, כל הפונטים שם הם בכוונה):
 
-<a href="http://www.gadial.net/wp-content/uploads/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="http://www.gadial.net/wp-content/uploads/2015/01/cthulhu.png" width="729" height="684" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="{{site.baseurl}}{{site.post_images}}/2015/01/cthulhu.png" width="729" height="684" /></a>
 
 </div>

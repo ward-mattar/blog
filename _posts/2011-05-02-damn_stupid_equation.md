@@ -37,4 +37,4 @@ tags:
 
 אם כן, למחשב זה פשוט וקל, אך אנחנו כנראה נוסיף להשתמש בביטויים אריתמטיים באופן המוכר והחביב לנו; <a href="http://xkcd.com/645/">xkcd</a> הפליא לתאר את הסיבה העיקרית לכך:
 
-<a href="http://www.gadial.net/wp-content/uploads/2011/05/rps.png"><img class="alignnone size-full wp-image-1116" title="Reverse Polish Sausage" alt="A sausage is sitting to the right of an empty bun." src="http://www.gadial.net/wp-content/uploads/2011/05/rps.png" width="276" height="260" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2011/05/rps.png"><img class="alignnone size-full wp-image-1116" title="Reverse Polish Sausage" alt="A sausage is sitting to the right of an empty bun." src="{{site.baseurl}}{{site.post_images}}/2011/05/rps.png" width="276" height="260" /></a>

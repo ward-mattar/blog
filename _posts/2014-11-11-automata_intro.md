@@ -19,7 +19,8 @@ tags:
 
 הנה קוד נאיבי שפותר את הבעיה (עונה True עבור מספר זוגי של 1-ים ו-False עבור מספר אי זוגי):
 
-[python]
+<div class="code-block">
+{% highlight python %}
 count = 0
 while (c = read_next_char):
 	if c == 1:
@@ -28,7 +29,8 @@ if count % 2 == 0:
 	return true
 return false
 
-[/python]
+{% endhighlight %}
+</div>
 
 בקוד הזה אנחנו סופרים את מספר ה-1-ים במחרוזת, ובסוף בודקים אם הוא זוגי או לא ועונים בהתאם. נשאלת השאלה - בכמה זכרון אנחנו משתמשים כאן?
 
@@ -38,7 +40,8 @@ return false
 
 האם אפשר לתקן את האלגוריתם כך שישתמש בזכרון חסום? כמובן. אנחנו רק רוצים לדעת את הזוגיות של count, לא את ערכו האמיתי. מספיק לשם כך ביט בודד:
 
-[python]
+<div class="code-block">
+{% highlight python %}
 count = 0
 while (c = read_next_char):
 	if c == 1:
@@ -46,13 +49,14 @@ while (c = read_next_char):
 if count % 2 == 0:
 	return true
 return false
-[/python]
+{% endhighlight %}
+</div>
 
 קיבלנו קוד שהוא תיאור חוקי לגמרי של אלגוריתם שפועל בזכרון חסום. אבל הקוד הזה הוא ייצוג מסורבל למדי מבחינה מתמטית - הוא כולל כל מני פעולות אריתמטיות, ולולאות, ופיצולים (if) והשוואות וכדומה. האמת היא שאנחנו <strong>לא בהכרח צריכים</strong> את כל המידע הזה. אנחנו מחפשים דרך לבצע לו אבסטרקציה - להיפטר מהחלקים הלא רלוונטיים ולהישאר עם המהות של האלגוריתם.
 
 אם חושבים על זה קצת, רואים שהאלגוריתם יכול להיות באחד משני "מצבים" אפשריים - או ש-count שווה 0, או שהוא שווה 1. מה שקורה בכל צעד של האלגוריתם תלוי בתו הבא מהקלט שקראנו: אם קראנו 0 המצב שלנו לא משתנה; ואם קראנו 1 אנחנו עוברים מהמצב שלנו למצב השני. אנחנו מתחילים במצב של 0, והפלט שלנו אמור להיות "כן" רק אם גם סיימנו במצב של 0. את כל המידע הזה אפשר לקודד באיור באופן הבא:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram001.png"><img src="http://www.gadial.net/wp-content/uploads/2014/11/diagram001.png" alt="תיאור האוטומט" width="307" height="119" class="aligncenter size-full wp-image-3189" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/11/diagram001.png"><img src="{{site.baseurl}}{{site.post_images}}/2014/11/diagram001.png" alt="תיאור האוטומט" width="307" height="119" class="aligncenter size-full wp-image-3189" /></a>
 
 מה שנכלל באיור הזה הוא <strong>מצבים</strong>, שהם עיגולים, ונתתי להם את השמות {% equation %}q_{0},q_{1}{% endequation %}. יש <strong>מעברים</strong> בין מצבים שמתוארים על ידי חצים ("אי שינוי מצב" מתואר על ידי מעבר ממצב לעצמו) כשעל החצים יש את סימון התו מהקלט שקראנו וגרם למעבר הזה. את {% equation %}q_{0}{% endequation %} סימנו בשני עיגולים כדי לומר שזה מצב <strong>מקבל</strong>, כזה שאם האלגוריתם מסיים את ריצתו בו אז התשובה של האלגוריתם היא "כן", וכמו כן יש חץ משום מקום שנכנס לתוך {% equation %}q_{0}{% endequation %} כדי לתאר שזה המצב <strong>ההתחלתי</strong> שבו האלגוריתם מתחיל את ריצתו.
 
@@ -114,7 +118,7 @@ return false
 
 עכשיו, מכיוון ש-{% equation %}i&lt;j{% endequation %} הרי ש-{% equation %}n-j+i&lt;n{% endequation %} ולכן האוטומט קיבל מילה שאינה בשפה. סוף הסיפור. אם עדיין לא ברור למה זה עבד, הנה איור שממחיש את זה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/11/pumping_lemma.png"><img src="http://www.gadial.net/wp-content/uploads/2014/11/pumping_lemma-1024x296.png" alt="pumping_lemma" width="584" height="168" class="aligncenter size-large wp-image-3192" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/11/pumping_lemma.png"><img src="{{site.baseurl}}{{site.post_images}}/2014/11/pumping_lemma.png" alt="pumping_lemma" width="584" height="168" class="aligncenter size-large wp-image-3192" /></a>
 
 האיור איננו של אוטומט, אלא תיאור סכמטי של מסלול החישוב שהאוטומט מבצע על המילה הספציפית {% equation %}a^nb^n{% endequation %}. חץ "מזגזג" במקום חץ ישר באיור פירושו שמוסתר כאן מסלול שלם, שעובר במצבים שאני לא טורח לצייר. הכיתוב של החץ אומר מה המילה שנקראת במהלך הריצה במסלול הזה. הצומת שבמרכז הוא הצומת שבו מבקרים פעמיים. האיור הזה מסייע לטעמי מאוד להבין מה קורה כאן - בסך הכל ויתרנו על הלולאה האמצעית; החישוב עדיין אמור להסתיים באותו מצב מקבל למרות שהוא קרא פחות {% equation %}a{% endequation %}-ים ממה שהוא היה "אמור" לקרוא.
 

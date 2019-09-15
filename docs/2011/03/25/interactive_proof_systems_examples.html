@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"מערכות הוכחה אינטראקטיביות - דוגמאות","dateModified":"2011-03-25T15:37:52+03:00","datePublished":"2011-03-25T15:37:52+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/03/25/interactive_proof_systems_examples"},"url":"http://localhost:4000/blog/2011/03/25/interactive_proof_systems_examples","description":"בפוסט הקודם הצגתי את המושג של מערכת הוכחה אינטראקטיבית ועכשיו הייתי רוצה לתת כמה דוגמאות. לרוע המזל, מציאת דוגמאות קונקרטיות היא לא עניין פשוט כל כך. הסיבה לכך היא זו: ראשית, לכל בעיה ששייכת למחלקה $latex \\mbox{NP}$ יש מערכת הוכחה אינטראקטיבית טריוויאלית - המוכיח פשוט שולח את ההוכחה הכתובה שלו והבודק בודק אותה. זהו, לא צריך שום אינטראקציה. זה מבטל את הצורך במערכת הוכחה אינטראקטיבית עבור בעיות ב-$latex \\mbox{NP}$, ולכן מחסל את מרבית הדוגמאות הטבעיות לבעיות שאנחנו מכירים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -97,7 +97,7 @@
 
 <p>שני גרפים הם איזומורפיים אם הם זהים עד כדי הסימון שאנחנו נותנים לצמתים. אצלנו תמיד נסמן את הצמתים במספרים טבעיים, כלומר <span>$latex V=\left\{ 1,2,3,\dots,n\right\} $</span>, ואז שני גרפים <span>$latex G_{1}=\left(V_{1},E_{1}\right)$</span> ו-<span>$latex G_{2}=\left(V_{2},E_{2}\right)$</span> הם איזומורפיים אם קיימת תמורה <span>$latex \sigma$</span> של הקבוצה <span>$latex \left\{ 1,\dots,n\right\} $</span> (תמורה היא סידור מחדש של אברי הקבוצה - פונקציה חד-חד ערכית ועל מהקבוצה לעצמה) כך ש-<span>$latex \left(u,v\right)\in E_{1}$</span> אם ורק אם <span>$latex \left(\sigma\left(u\right),\sigma\left(v\right)\right)\in E_{2}$</span>. במילים: שני צמתים בגרף <span>$latex G_{1}$</span> מחוברים בקשת אם ורק אם שני הצמתים ב-<span>$latex G_{2}$</span> שאליהם <span>$latex \sigma$</span> מעבירה אותם גם הם מחוברים בקשת. כרגיל, תמונה אחת שווה אלף מילים:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2011/03/GNI.png"><img class="alignnone size-full wp-image-1065" title="GNI" src="http://www.gadial.net/wp-content/uploads/2011/03/GNI.png" alt="" width="552" height="214" /></a></p>
+<p><a href="/blog/assets/img/2011/03/GNI.png"><img class="alignnone size-full wp-image-1065" title="GNI" src="/blog/assets/img/2011/03/GNI.png" alt="" width="552" height="214" /></a></p>
 
 <p>כאן יש שני גרפים. בשניהם <span>$latex V=\left\{ 1,2,3,4\right\} $</span>, אבל בראשון <span>$latex E_{1}=\left\{ \left(1,2\right),\left(1,3\right),\left(2,4\right),\left(3,4\right)\right\} $</span> ובשני <span>$latex E_{2}=\left\{ \left(1,2\right),\left(1,4\right),\left(2,3\right),\left(3,4\right)\right\} $</span>. הגרפים הללו “נראים” שונה, אבל הם איזומורפיים: <span>$latex \sigma\left(1\right)=1,\sigma\left(2\right)=2,\sigma\left(3\right)=4,\sigma\left(4\right)=3$</span>, ששווה ערך להחלפת צמתים 3 ו-4 (דמיינו שאתם עושים זאת לגרף הראשון בלי “לקרוע” את הקשתות) הוא האיזומורפיזם המתאים.</p>
 

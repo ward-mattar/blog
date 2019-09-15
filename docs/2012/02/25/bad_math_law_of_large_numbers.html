@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"חוק המספרים הגדולים עושה אותך כזה קטן","dateModified":"2012-02-25T12:31:54+02:00","datePublished":"2012-02-25T12:31:54+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/02/25/bad_math_law_of_large_numbers"},"url":"http://localhost:4000/blog/2012/02/25/bad_math_law_of_large_numbers","description":"הפנו אותי אל מאמר מתוך “דה-מרקר” שבתורו נלקח, לא פחות, מה”ניו-יורק טיימס”. המאמר מתהדר בכותרת “סיבה לדאגה לאפל? “חוק המספרים הגדולים יוביל לנפילתה”” ובכותרת המשנה “החוק שהוכיח מתמטיקאי שווייצי בן המאה ה-17 עשוי לבשר על כך שגורלה של אפל יהיה זהה לזה של חברות ענק קודמות” - וזה, מה נאמר, כמו דם במים בשביל כריש.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -105,7 +105,7 @@
 
 <p>טוב, בואו נדבר על “מה כן” במקום על “מה לא” כל הזמן. בניסוח הכי לא פורמלי שאני יכול לתת, מה שחוק המספרים הגדולים <strong>כן</strong> אומר הוא שאם תטילו קוביה הרבה מאוד פעמים ותנהלו רישום של התוצאה הממוצעת שקיבלתם (כלומר, תחלקו את <strong>סכום</strong> התוצאות שהיו עד כה ב<strong>מספר</strong> ההטלות שהיו עד כה), אז ככל שמספר ההטלות יגדל, כך הממוצע שרשום אצלכם יתקרב לממוצע התיאורטי שאפשר לחזות רק מתוך היכרות עם הקוביה: לממוצע התיאורטי הזה יש שם מתמטי - <strong>תוחלת</strong>. מה שחוק המספרים הגדולים אומר הוא בעצם שמושג התוחלת <strong>עובד</strong>. בדוגמה הקונקרטית של קוביה, אותו ממוצע תיאורטי צפוי הוא <span>$latex 3.5$</span> (ואסביר עוד מעט בדיוק למה), ואכן אם תכתבו תוכנית מחשב שמטילה לה קוביות וירטואליות ומבצעת את חישוב הממוצע תראו - בודאות! אני מבטיח! - שהממוצע הזה הולך ומתקבע לו בסביבת <span>$latex 3.5$</span> ככל שהחישוב מתמשך. בויקיפדיה האנגלית אפילו יש להם גרף יפה שמתאר בדיוק את זה.</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/02/600px-Largenumbers.svg_.png"><img class="alignnone size-full wp-image-1517" title="600px-Largenumbers.svg" src="http://www.gadial.net/wp-content/uploads/2012/02/600px-Largenumbers.svg_.png" alt="" width="600" height="480" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2012/02/600px-Largenumbers.svg_.png"><img class="alignnone size-full wp-image-1517" title="600px-Largenumbers.svg" src="/blog/assets/img/2012/02/600px-Largenumbers.svg_.png" alt="" width="600" height="480" /></a></strong></p>
 
 <p>כמובן, חוק המספרים הגדולים לא מדבר רק על הטלות קוביה. “הטלת קוביה” כאן היא מטאפורה לכל ניסוי הסתברותי שיש לו כמה תוצאות מספריות אפשריות. לדבר כזה קוראים <strong>משתנה מקרי</strong>. אפרט עוד קצת בהמשך.</p>
 

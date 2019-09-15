@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"קוסטים, משפט לגראנז’ וחבורות מנה","dateModified":"2017-02-08T12:44:02+02:00","datePublished":"2017-02-08T12:44:02+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/02/08/cosets_and_quotient_groups"},"url":"http://localhost:4000/blog/2017/02/08/cosets_and_quotient_groups","description":"בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \\left|H\\right||\\left|G\\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -104,7 +104,7 @@
 <p>עכשיו, בואו ניקח את <span>$latex H$</span> ונחבר לכל אבריה את <span>$latex \left(0,1\right)$</span> - וקטור היחידה האנכי. נקבל את מה שאסמן בתור <span>$latex H+\left(0,1\right)=\left\{ \left(a,1\right)\ |\ a\in\mathbb{R}\right\} $</span>. הדבר הזה הוא הקו האופקי בגובה <span>$latex y=1$</span>. זו לא תת-חבורה כי אין סגירות, אבל אפשר לחשוב על זה בתור “עותק” של ציר <span>$latex x$</span> שפשוט הזזנו קצת למעלה. באופן דומה אם נחבר לכל אברי <span>$latex H$</span> את <span>$latex \left(1,1\right)$</span> עדיין נקבל את אותו קוסט בדיוק - תחשבו על מה שקורה כשאתם לוקחים קו ישר אינסופי ומרימים אותו למעלה, ומה קורה כשאתם מרימים אותו באלכסון למעלה ושמאלה - מכיוון שהקו אינסופי, תקבלו בסופו של דבר את אותו הדבר בדיוק. לכן, כל עוד נחבר ל-<span>$latex H$</span> איבר מהצורה <span>$latex \left(x,1\right)$</span>, ולא משנה מהו <span>$latex x$</span>, נקבל את אותו קוסט. בקרוב נדון עוד בשאלה הזו, “מי האיברים שכשמחברים אותם לתת-החבורה מקבלים את אותו קוסט”.</p>
 
 <p>שאר הקוסטים של <span>$latex H$</span> הם שאר הישרים האופקיים, והשאלה עכשיו היא מה קורה עם תת-חבורות דומות אחרות. למשל, <span>$latex H=\left\{ \left(a,a\right)\ |\ \left(a\in\mathbb{R}\right)\right\} $</span>. זה תרגיל נחמד להראות שקוסט כאן הוא תמיד מהצורה <span>$latex H+\left(x,0\right)=\left\{ \left(a+x,a\right)\ |\ a\in\mathbb{R}\right\} $</span> ויוצא שקוסט כזה הוא קו ישר עם שיפוע של 45 מעלות, כמו <span>$latex H$</span> עצמה, אבל שנקודת החיתוך שלו עם ציר <span>$latex x$</span> היא שונה מ-<span>$latex \left(0,0\right)$</span>. זה גם מה שיקרה באופן כללי: כל ישר שעובר דרך הראשית הוא תת-חבורה של <span>$latex \mathbb{R}^{2}$</span>, ולכל ישר כזה, הקוסטים הם כל הישרים המקבילים לו. הנה איור:<strong>
-<a href="http://www.gadial.net/wp-content/uploads/2017/02/cosets.png" rel="attachment wp-att-3424"><img class="aligncenter size-large wp-image-3424" src="http://www.gadial.net/wp-content/uploads/2017/02/cosets-1024x672.png" alt="cosets" width="584" height="383" /></a></strong></p>
+<a href="/blog/assets/img/2017/02/cosets.png" rel="attachment wp-att-3424"><img class="aligncenter size-large wp-image-3424" src="/blog/assets/img/2017/02/cosets.png" alt="cosets" width="584" height="383" /></a></strong></p>
 
 <p>כאן תת-החבורה היא בשחור וחלק מהקוסטים האחרים שלה הם בצבעים עליזים. אני אומר <strong>חלק</strong> מהקוסטים כי אי אפשר לצייר את כולם - איחוד כל הקוסטים יתן לנו את כל המישור.</p>
 

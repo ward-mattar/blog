@@ -16,7 +16,7 @@ tags:
 
 אני לא יכול להתאפק מלהזכיר את הפעם הראשונה שבה אני נתקלתי בעניין הזה - בספר הנפלא "אני שונא מתמטיקה", שדווקא בסוגיה הזו של להסביר למה 1 אינו ראשוני עושה עבודה איומה ונוראה (מה גם שלא ברור אילו חומרים משני תודעה צרך מי שתרגם את העמוד שאני שם פה ומלא טעויות וניסוחים מוזרים):
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/11/אני-שונא-מתמטיקה-ראשוניים.jpg" rel="attachment wp-att-3521"><img class="aligncenter size-full wp-image-3521" src="http://www.gadial.net/wp-content/uploads/2017/11/אני-שונא-מתמטיקה-ראשוניים.jpg" alt="אני שונא מתמטיקה - ראשוניים" width="662" height="960" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/11/i-hate-math-primes.jpg" rel="attachment wp-att-3521"><img class="aligncenter size-full wp-image-3521" src="{{site.baseurl}}{{site.post_images}}/2017/11/i-hate-math-primes.jpg" alt="אני שונא מתמטיקה - ראשוניים" width="662" height="960" /></a>
 
 לענות "הוא פשוט אינו כזה ודי!" זה בדיוק מה ש<strong>לא</strong> צריך לעשות. והאם מישהו מצליח להבין מה הכוונה ב"הוא בכלל לא מספר אלא תואר"? עד היום אין לי מושג, למרות שעוד מעט נראה משהו מאוד דומה לכך אצל מתמטיקאי רציני לגמרי.
 

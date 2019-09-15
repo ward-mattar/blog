@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"רקורסיה","dateModified":"2015-11-03T16:29:01+02:00","datePublished":"2015-11-03T16:29:01+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/11/03/recusrion"},"url":"http://localhost:4000/blog/2015/11/03/recusrion","description":"בלוג על מתמטיקה ומדעי המחשב","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -87,7 +87,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p><a href="http://www.gadial.net/wp-content/uploads/2015/11/escher_hands.jpg"><img class="aligncenter size-full wp-image-3304" alt="escher_hands" src="http://www.gadial.net/wp-content/uploads/2015/11/escher_hands.jpg" width="259" height="194" /></a></p>
+    <p><a href="/blog/assets/img/2015/11/escher_hands.jpg"><img class="aligncenter size-full wp-image-3304" alt="escher_hands" src="/blog/assets/img/2015/11/escher_hands.jpg" width="259" height="194" /></a></p>
 
 <p>הבדיחה הידועה אומרת שבמילון ההגדרה של רקורסיה היא “עיין ערך רקורסיה”. אבל כנראה שזה לא מספיק טוב, כי ביקשו ממני פוסט על רקורסיות, וספציפית על רקורסיות במדעי המחשב. כך שהפוסט הזה הולך להיות עם מבוא כללי לא טכני, ואחר כך עם גלישה לפסים טכניים שיכולים להיות מאוד מעניינים עבור מי שמתעניין בדברים הללו ועוד לא מכיר.</p>
 
@@ -97,7 +97,7 @@
 
 <p>אם כן, כשאני אומר “פשוט יותר” אני לא מתכוון לפי איזה מדד אבסולוטי של פשטות, אלא לפי מעין רמת קרבה לאחד ממקרי הבסיס שבהם החישוב לא דורש הפעלה נוספת של הרקורסיה. עוד דוגמה מתמטית פשוטה היא פונקציית העצרת: !n הוא מכפלת כל המספרים הטבעיים מ-1 ועד n, כאשר מטעמי נוחות מגדירים ש-!0 שווה ל-1. זה מוביל להגדרה רקורסיבית פשוטה: <span>$latex  n!=\begin{cases} 1 &amp; n=0\\ n\cdot\left(n-1\right)! &amp; n&gt;0 \end{cases} $</span></p>
 
-<p>כמובן, כל הדוגמאות הללו לא מספקות לנו הגדרה חד משמעית של מהי רקורסיה, וברור שיש גמישות באופן שבו אנחנו נותנים את השם הזה לדברים שונים. הביטו בשלט הבא: האם מה שמתואר בו הוא בעל אופי רקורסיבי? <a href="http://www.gadial.net/wp-content/uploads/2015/11/hulda_recursion.jpg"><img class="aligncenter size-large wp-image-3303" alt="hulda_recursion" src="http://www.gadial.net/wp-content/uploads/2015/11/hulda_recursion-1024x576.jpg" width="584" height="328" /></a> יש לנו כאן רחוב שנקרא על שם ישוב שנקרא על שם נביאה (שנקראה על שם בעל חיים? קרוב לודאי שלא, אבל זה משעשע יותר כך). האם זאת רקורסיה? הטהרנים יטענו שלא, כי רקורסיה תהיה רק סיטואציה של “ישוב שנקרא על שם ישוב שנקרא על שם ישוב”, אבל לדעתי אין הכרח כזה. חשבו על תהליך “בירור שם” של דבר מה - אם המשהו קרוי על שם משהו אחר, מבררים מהיכן הגיע שמו של המשהו האחר.</p>
+<p>כמובן, כל הדוגמאות הללו לא מספקות לנו הגדרה חד משמעית של מהי רקורסיה, וברור שיש גמישות באופן שבו אנחנו נותנים את השם הזה לדברים שונים. הביטו בשלט הבא: האם מה שמתואר בו הוא בעל אופי רקורסיבי? <a href="/blog/assets/img/2015/11/hulda_recursion.jpg"><img class="aligncenter size-large wp-image-3303" alt="hulda_recursion" src="/blog/assets/img/2015/11/hulda_recursion.jpg" width="584" height="328" /></a> יש לנו כאן רחוב שנקרא על שם ישוב שנקרא על שם נביאה (שנקראה על שם בעל חיים? קרוב לודאי שלא, אבל זה משעשע יותר כך). האם זאת רקורסיה? הטהרנים יטענו שלא, כי רקורסיה תהיה רק סיטואציה של “ישוב שנקרא על שם ישוב שנקרא על שם ישוב”, אבל לדעתי אין הכרח כזה. חשבו על תהליך “בירור שם” של דבר מה - אם המשהו קרוי על שם משהו אחר, מבררים מהיכן הגיע שמו של המשהו האחר.</p>
 
 <p>ציור הידיים של אשר, שבראש הפוסט, גם הוא סוג של דוגמה לרקורסיה, למרות שאחת מופרעת שאין לה תנאי עצירה ושרשרת ההפעלות שלה היא לולאה. זה לא משהו מציאותי במיוחד, אבל אשר מעולם לא התיימר להיות מציאותי.</p>
 
@@ -117,43 +117,57 @@
 
 <p>בואו נתחיל לראות קוד (קוד רובי, כי זו השפה שאני אוהב). הנה פונקציה רקורסיבית שמחשבת עצרת:</p>
 
-<p>[ruby]
-def factorial(n)
-	return 1 if n == 0
-	return n * factorial(n-1)
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+	<span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>השורה הראשונה היא מקרה הבסיס - החזר 1 עבור הקלט 0; והשורה השניה היא הקריאה הרקורסיבית. ועכשיו הנה ההזדמנות לדברי כפירה - הפונקציה הרקורסיבית הזו <strong>מיותרת</strong>. הנה מימוש לא רקורסיבי:</p>
 
-<p>[ruby]def factorial(n)
-	result = 1
-	for k in 1..n do
-		result *= k
-	end
-	return result
-end[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="mi">1</span><span class="o">..</span><span class="n">n</span> <span class="k">do</span>
+		<span class="n">result</span> <span class="o">*=</span> <span class="n">k</span>
+	<span class="k">end</span>
+	<span class="k">return</span> <span class="n">result</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>(קצת סירבלתי, אפשר לעשות את זה פשוט יותר ברובי, אבל זה לא פוסט רובי). איזה משני המימושים עדיף? חד משמעית, השני. אבל למה? הראשון הרי נראה אלגנטי יותר! ובכן, השני <strong>יקר פחות</strong>. אתם מבינים, כשמפעילים רקורסיה, מאחורי הקלעים קורים דברים - המהומות הרגילות של קריאה לפונקציה, דחיפת מידע למחסנית, וכדומה. זה לוקח זמן, וזה גוזל מקום. לכל בעיה כזו כדאי להתייחס בנפרד. מבחינת זמן, ההבדל בזמן הריצה בין שתי הגרסאות שלי עשוי להיות ממש זניח עבור הרצה בודדת של הפונקציה, אבל צריך לזכור כשכותבים קוד שלעתים קרובות אחרי שנכתב קוד, קורה האסון שאנשים אשכרה משתמשים בו. אולי כחלק מדברים אחרים שהם כותבים. ופונקציה תמימה לכאורה עשויה להיקרא מיליארדי פעמים. ובעיה “קלה” בזמן ריצה הופכת לבעיה חמורה, וכדומה. לא פעם ולא פעמיים בעבר כבר חיסלתי פונקציה רקורסיבית והמרתי אותה בפונקציה לא רקורסיבית שקולה פשוט כדי לחסוך זמן והחסכון היה משמעותי.</p>
 
 <p><strong>מקום</strong> הוא בעיה אפילו יותר רלוונטית. תחשבו שאנחנו רוצים לחשב את 1000 עצרת - אנחנו הולכים לשמור על המחסנים 1,000 עותקים של הרקורסיה. יש למחסנית כמות מקום מוגבלת. מתישהו היא תיגמר והתוכנית תקרוס, בזמן הריצה. הודעת השגיאה הרלוונטית, stack overflow, היא כל כך נפוצה ומוכרת שהיא הפכה לשמו של אתר שאלות ותשובות בנושאי תכנות סופר-פופולרי. במימוש איטרטיבי באמצעות לולאה לרוב אפשר להסתפק בכמות <strong>קבועה</strong> של מקום, בלי תלות בכמות האיטרציות שלנו (וגם כשאי אפשר, לרוב עדיין יש חסכון כלשהו). לכן כלל ברזל ברקורסיות הוא: זה אחלה להשתמש בהן, אבל תוודאו בינכם לבין עצמכם שאתם באמת צריכים את זה, או שאין שום סכנה של “התפוצצות” עם קלטים גדולים. והנה עוד דוגמה שממחישה סכנה גדולה אפילו עוד יותר - חישוב מספרי פיבונאצ’י:</p>
 
-<p>[ruby]def fib(n)
-	return 0 if n == 0
-	return 1 if n == 1
-	return fib(n-1) + fib(n-2)
-end[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+	<span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+	<span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>&lt;\pre&gt; הפונקציה הקטנה והחביבה הזו היא <strong>אסון מוחלט</strong>. היא אחד מקטעי הקוד הגרועים ביותר שניתן להציג. למה? כי היא עושה המון עבודה כפולה. כדי לחשב את מספר פיבונאצ’י עבור 5, הפונקציה קוראת רקורסיבית לחישוב של 4. כחלק מהחישוב של 4 היא מחשבת גם את 3 ו-2, וכן הלאה. אחרי שהיא סיימה היא חוזרת לחישוב של 5 עם הערך של 4, ואז קוראת לחישוב של 3. <strong>אבל כבר חישבנו את 3 קודם</strong>! המידע פשוט לא שמור בשום מקום והלך לאיבוד. ככל שמספר פיבונאצ’י שאנחנו רוצים לחשב גדל, מספר ה”חישובים הכפולים” שלנו גדל אקספוננציאלית. התוצאה היא בזבוז עצום של זמן ריצה. אל תנסו את זה בבית. אז מה עושים? כמובן, במקרה הנוכחי אפשר פשוט לתת פתרון איטרטיבי:</p>
 
-<p>[ruby]def fib(n)
-	return 0 if n == 0
-	a, b = 0, 1
-	for k in 2..n do
-		a, b = b, a + b
-	end
-	return b
-end[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+	<span class="k">return</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+	<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+	<span class="k">for</span> <span class="n">k</span> <span class="k">in</span> <span class="mi">2</span><span class="o">..</span><span class="n">n</span> <span class="k">do</span>
+		<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+	<span class="k">end</span>
+	<span class="k">return</span> <span class="n">b</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>ובמקרים מורכבים יותר, כשבכל זאת רוצים סוג של קריאה רקורסיבית? אז משתמשים במבנה נתונים שנגיש לכל הקריאות של הפונקציה (למשל, כי מעבירים מצביע אליו בכל קריאה של הפונקציה) שבו מאחסנים את המידע של תוצאות הביניים כדי שלא נחשב אותן מחדש בכל פעם. מה שנקרא “תכנון דינמי” זה בדיוק הדבר הזה. לפעמים זה אפילו לא עניין של מידע שכבר חושב, אלא סתם לדעת ש”כבר היינו כאן”. למשל, אלגוריתם סטנדרטי למציאת יציאה ממבוך הוא DFS: כשמריצים DFS על משבצת במבוך, אם היא איננה היציאה, אנחנו מריצים DFS על כל אחד מהשכנים של המשבצת. מן הסתם חייבים לסמן איכשהו שכנים שבהם כבר ביקרנו אחרת עוד יצא שנלך ימינה-שמאלה בין אותן שתי משבצות עד אינסוף (ליתר דיוק, עד שנקבל stack overflow). כשהייתי קטן ובניתי משחק של “סוגר שטחים”, זה בדיוק מה שקרה לי - כשנסגר שטח ניסיתי לצבוע את כל המשבצות שבתוכו על ידי אלגוריתם רקורסיבי שצובע משבצת ואז מטפל רקורסיבית בשכניה; ברוב חוכמתי פשוט אמרתי “צבע את המשבצת” ולא “אם המשבצת צבועה, אל תעשה כלום; אחרת…”. כמובן שקיבלתי stack overflow והייתי מאוד עצוב לראות שאפילו על כמות קטנה של משבצות הרקורסיה שלי מתה ללא סיבה.</p>
 
@@ -163,76 +177,87 @@ end[/ruby]</p>
 
 <p>הפתרון הרקורסיבי כאן הוא מקסים, כי הוא מציג במדויק את כוחה של החשיבה הרקורסיבית. הוא מחלק את הפתרון לשלושה שלבים: קודם כל נשים הצידה לרגע את כל הטבעות <strong>מלבד התחתונה</strong> (כלומר, נשים במגדל העזר); אחר כך נעביר את התחתונה אל מגדל היעד שלנו; ואחר כך ניקח את כל הטבעות ששמנו בצד ונעביר למגדל היעד. את הפעולה האמצעית אנחנו יודעים איך לבצע כי היא כוללת רק העברת טבעת אחת, אבל איך אנחנו יכולים להעביר את כל הטבעות “בבת אחת” ממגדל המקור אל מגדל העזר, וממגדל העזר למגדל היעד? ובכן, פשוט מאוד - נפעיל רקורסיבית את הפתרון שלנו… זה אומר שלרגע פשוט נשכח מכך שיש את הטבעת הגדולה שמסתובבת אי שם ונשחק כאילו היא לא קיימת; מכיוון שהיא הגדולה ביותר, היא לא יכולה להפריע לאחרות ולכן מבחינת ההפעלה הרקורסיבית היא באמת לא קיימת. הנה הקוד הפשוט מאוד.</p>
 
-<p>[ruby]def solve_hanoi(n, source_tower, aux_tower, goal_tower)
-	return if n == 0
-	solve_hanoi(n-1, source_tower, goal_tower, aux_tower)
-	goal_tower.push source_tower.pop
-	solve_hanoi(n-1, aux_tower, source_tower, goal_tower)
-end[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">solve_hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">)</span>
+	<span class="k">return</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+	<span class="n">solve_hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">)</span>
+	<span class="n">goal_tower</span><span class="p">.</span><span class="nf">push</span> <span class="n">source_tower</span><span class="p">.</span><span class="nf">pop</span>
+	<span class="n">solve_hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">)</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>הקוד הזה הוא דוגמה לסיבה שבגללה בחרתי לכתוב דווקא ברובי - הוא כמעט פסאודו-קוד, אבל כזה שעובד ואפשר להריץ. הרעיון הוא שה”מגדלים” נתונים בתור מערכים ברובי, וככאלה הם תומכים בפעולות pop (הוצא את האיבר האחרון והחזר אותו) ו-push (דחוף לסוף המערך). כמו כן, צריך להיות מודעים לכך שמשתנים ברובי תמיד מועברים לפונקציה By Reference; כלומר, לא נוצר עותק נפרד שלהם אלא המשתנה שהפונקציה עובדת איתו הוא בדיוק אותו משתנה שמי שקרא לפונקציה עבד איתו, ולכן שינויים במשתנה שמתרחשים בתוך הפונקציה משפיעים גם מחוצה לה.</p>
 
 <p>ברקורסיה הנוכחית התכונה הזו מנוצלת בצורה חכמה כדי “להחליף תפקידים” בין המגדלים השונים. בקריאה הרקורסיבית הראשונה, מי שהיה מגדל העזר הופך למגדל היעד, ומי שהיה מגדל היעד הופך למגדל העזר. בקריאה השניה החלפה דומה מתבצעת בין מגדל העזר ומגדל המקור. ה”חוכמה” של הפתרון מקופלת כולה בשרשרת החלפות התפקידים הללו שמתבצעת (נסו לעקוב אחרי האופן שבו רצה רקורסיה עבור n שווה 5 כדי לראות כמה החלפות תפקידים כאלו מתבצעות עוד לפני שמזיזים את הטבעת הראשונה). כמובן, אם תרוצו להריץ את התוכנית הזו תתאכזבו נורא כי היא לא עושה שום דבר שאתם מסוגלים לראות. אין הדפסה של המגדלים או משהו דומה. אז למי שרוצה את זה, הנה קוד יותר מלא שגם מדפיס וגם מאתחל וגם הכל:</p>
 
-<p>[ruby]class Hanoi
-	def initialize(n)
-		@source_tower = (1..n).to_a
-		@aux_tower = []
-		@goal_tower = []
-		print_state
-		solve(n, @source_tower, @aux_tower, @goal_tower)
-	end
-	def print_state
-		puts @source_tower.inspect
-		puts @aux_tower.inspect
-		puts @goal_tower.inspect
-		puts
-	end
-	def solve(n, source_tower, aux_tower, goal_tower)
-			return if n == 0
-			solve(n-1, source_tower, goal_tower, aux_tower)
-			goal_tower.push source_tower.pop
-			print_state
-			solve(n-1, aux_tower, source_tower, goal_tower)
-	end
-end
-Hanoi.new(4)
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Hanoi</span>
+	<span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+		<span class="vi">@source_tower</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="n">n</span><span class="p">).</span><span class="nf">to_a</span>
+		<span class="vi">@aux_tower</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="vi">@goal_tower</span> <span class="o">=</span> <span class="p">[]</span>
+		<span class="n">print_state</span>
+		<span class="n">solve</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="vi">@source_tower</span><span class="p">,</span> <span class="vi">@aux_tower</span><span class="p">,</span> <span class="vi">@goal_tower</span><span class="p">)</span>
+	<span class="k">end</span>
+	<span class="k">def</span> <span class="nf">print_state</span>
+		<span class="nb">puts</span> <span class="vi">@source_tower</span><span class="p">.</span><span class="nf">inspect</span>
+		<span class="nb">puts</span> <span class="vi">@aux_tower</span><span class="p">.</span><span class="nf">inspect</span>
+		<span class="nb">puts</span> <span class="vi">@goal_tower</span><span class="p">.</span><span class="nf">inspect</span>
+		<span class="nb">puts</span>
+	<span class="k">end</span>
+	<span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">)</span>
+			<span class="k">return</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>
+			<span class="n">solve</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">)</span>
+			<span class="n">goal_tower</span><span class="p">.</span><span class="nf">push</span> <span class="n">source_tower</span><span class="p">.</span><span class="nf">pop</span>
+			<span class="n">print_state</span>
+			<span class="n">solve</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">aux_tower</span><span class="p">,</span> <span class="n">source_tower</span><span class="p">,</span> <span class="n">goal_tower</span><span class="p">)</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+<span class="no">Hanoi</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span></code></pre></figure>
+
+</div>
 
 <p>נעבור עכשיו לדוגמה אחרת - ייצור פרמוטציות. פרמוטציה של מערך היא מערך אחר שכולל את אותם איברים בדיוק, אבל בסדר שונה (לצורך העניין נניח שכל האיברים שונים זה מזה). לא קשה להראות שאם במערך יש n איברים, אז מספר הפרמוטציות שלו הוא !n, כך שפונקציה שמוציאה את כל הפרמוטציות של מערך תצטרך לעבוד קשה רק כדי לכתוב את כולן עבור ערכים גדולים של n. לכן די מתבקש להשתמש בפתרון רקורסיבי פה ממילא, כל עוד הוא לא לוקה בבזבוז משווע.</p>
 
 <p>הרעיון הנאיבי הוא זה: תעברו על המערך איבר איבר. לכל איבר - הוציאו אותו מהמערך, בנו רקורסיבית את כל הפרמוטציות של המערך שנשאר, והוסיפו את האיבר שהוצאתם לכולן. הנה קוד שעושה את זה:</p>
 
-<p>[ruby]
-def permutations(a)
-	n == a.length
-	return [a] if n == 1
-	result = []
-	for i in (0…n) do
-		temp_elem, temp_a = a[i], a[0…i] + a[i+1…n]
-		for p in permutations(temp_a) do
-			result &lt;&lt; ([temp_elem] + p)
-		end
-	end
-	return result
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">permutations</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+	<span class="n">n</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="nf">length</span>
+	<span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">n</span><span class="p">)</span> <span class="k">do</span>
+		<span class="n">temp_elem</span><span class="p">,</span> <span class="n">temp_a</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="o">...</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">...</span><span class="n">n</span><span class="p">]</span>
+		<span class="k">for</span> <span class="nb">p</span> <span class="k">in</span> <span class="n">permutations</span><span class="p">(</span><span class="n">temp_a</span><span class="p">)</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="p">([</span><span class="n">temp_elem</span><span class="p">]</span> <span class="o">+</span> <span class="nb">p</span><span class="p">)</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+	<span class="k">return</span> <span class="n">result</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>הקוד הזה הוא בבירור בזבזני - אנחנו יוצרים עותק חדש של המערך על כל הפעלה של הרקורסיה שאנחנו מבצעים. זה אמנם טוב לצורך הדגמת האופן שבו רקורסיה מנצלת את זה שבכל קריאה שלה היא מקבלת מקום נפרד עבור המשתנים שהיא מגדירה, אבל כאן זה מרגיש בזבזני. האם אפשר היה לעשות משהו טוב יותר? התשובה חיובית, אבל לא לגמרי קל לעלות על האלגוריתם או להבין למה הוא עובד. האלגוריתם הזה נקרא “Heap’s Algorithm” והרעיון שבו הוא שמספיק לבצע שינויים <strong>בתוך המערך</strong> שקיבלנו כקלט , וליצור עותק מהמערך רק כשאנחנו מקבלים פרמוטציה שאנחנו רוצים להוסיף לפלט הסופי. הנה איך שזה נראה בקוד:<strong>
 </strong></p>
 
-<p>[ruby]
-def permutations_heap(n, a)
-	return [a.dup] if n == 1
-	result = []
-	for i in (0…n) do
-		result += permutations_heap(n-1,a)
-		a[i], a[n-1] = a[n-1], a[i] if n % 2 == 0
-		a[0], a[n-1] = a[n-1], a[0] if n % 2 != 0
-	end
-	return result
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">permutations_heap</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">.</span><span class="nf">dup</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">n</span><span class="p">)</span> <span class="k">do</span>
+		<span class="n">result</span> <span class="o">+=</span> <span class="n">permutations_heap</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+		<span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+		<span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span>
+	<span class="k">end</span>
+	<span class="k">return</span> <span class="n">result</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>בואו נעבור עכשיו לדבר על סוג שונה של בעיות - בעיות הכרעה, ובעיות ספירה נלוות. בבעיות הכרעה מהסוג הנפוץ יש לנו קלט שהוא אובייקט כלשהו שאנחנו תוהים אם הוא מקיים או לא מקיים תכונה מסויימת. בבעיות ספירה גם רוצים לדעת בכמה דרכים שונות התכונה מתקיימת. הנה הדוגמה שאני הולך לפתור - הקלט הוא מערך של מספרים חיוביים ומספר “יעד” כלשהו, והשאלה היא אם אפשר לסכום חלק מאברי המערך כדי להגיע אל היעד - ושאלת ההמשך היא בכמה דרכים שונות אפשר לעשות את זה. הבעיה הזו נקראת Subset Sum וזו בעיה NP-שלמה מפורסמת, למי שהביטוי הזה אומר לו משהו. התכל’ס של מה שזה אומר הוא שלא סביר שנצליח למצוא פתרון שהוא ממש יעיל, אז יאללה, בואו נתפרע עם רקורסיה.</p>
 
@@ -240,13 +265,15 @@ end
 
 <p>עם קצת להטוטי רובי אפשר לכתוב את הפתרון בשלוש שורות:</p>
 
-<p>[ruby]
-def subset_sum(a, n)
-	return [] if n &lt; 0 or (n &gt; 0 and a.empty?) #empty solution set
-	return [ [] ] if n == 0   #one solution - no elements
-	return subset_sum(a[1..-1], n) + subset_sum(a[1..-1], n - a[0]).map{|sol| [a[0]] + sol}
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">subset_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+	<span class="k">return</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span> <span class="n">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="mi">0</span> <span class="n">and</span> <span class="n">a</span><span class="p">.</span><span class="nf">empty?</span><span class="p">)</span> <span class="c1">#empty solution set</span>
+	<span class="k">return</span> <span class="p">[</span> <span class="p">[]</span> <span class="p">]</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span>   <span class="c1">#one solution - no elements</span>
+	<span class="k">return</span> <span class="n">subset_sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="n">subset_sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]).</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">sol</span><span class="o">|</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> <span class="n">sol</span><span class="p">}</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>השורה השלישית אולי נראית קצת מפחידה. אני בסך הכל אומר לקחת את כל הפתרונות לגודל n שמערבים את המערך בלי האיבר הראשון, ולהוסיף להם את כל הפתרונות שמערבים את המערך בלי האיבר הראשון, עבור הסכום n פחות האיבר הראשון, כשאני לוקח כל פתרון כזה ומוסיף לו בהתחלה את האיבר הראשון.</p>
 
@@ -254,38 +281,42 @@ end
 
 <p>ואיך אפשר בלי פתרון מבוך. אני מניח שהמבוך נתון על ידי מערך דו ממדי שבו 0 מייצג משבצת פנויה ו-1 מייצג קיר, ושהמטרה היא להגיע אל 0,0. אני מרשה לעצמי “לקשקש” על המבוך - לכתוב 2 כדי לתאר משבצת שכרגע היא פוטנציאל למסלול היציאה, ו-3 למשבצת שכבר ויתרנו עליה. כך, אם נמצא מסלול ליציאה, הוא יהיה כתוב בתוך המבוך על ידי המשבצות שבהן כתוב 2:</p>
 
-<p>[ruby]
-def solve_maze(maze, row, col)
-	return false if row &lt; 0 or col &lt; 0 or row &gt;= maze.length or col &gt;= maze.first.length or maze[row][col] != 0
-	maze[row][col] = 2
-	return true if row == 0 and col == 0
-	neighbors = row + 1, col], [row - 1, col], [row,  col + 1], [row, col - 1
-	neighbors.each{|row, col| return true if solve_maze(maze, row, col)}
-	maze[row][col] = 3
-	return false
-end
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">solve_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+	<span class="k">return</span> <span class="kp">false</span> <span class="k">if</span> <span class="n">row</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span> <span class="n">or</span> <span class="n">col</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="mi">0</span> <span class="n">or</span> <span class="n">row</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">maze</span><span class="p">.</span><span class="nf">length</span> <span class="n">or</span> <span class="n">col</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="o">=</span> <span class="n">maze</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">length</span> <span class="n">or</span> <span class="n">maze</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span>
+	<span class="n">maze</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+	<span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">row</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">and</span> <span class="n">col</span> <span class="o">==</span> <span class="mi">0</span>
+	<span class="n">neighbors</span> <span class="o">=</span> <span class="n">row</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">],</span> <span class="p">[</span><span class="n">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">],</span> <span class="p">[</span><span class="n">row</span><span class="p">,</span>  <span class="n">col</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">-</span> <span class="mi">1</span>
+	<span class="n">neighbors</span><span class="p">.</span><span class="nf">each</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="o">|</span> <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">solve_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)}</span>
+	<span class="n">maze</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+	<span class="k">return</span> <span class="kp">false</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>ולמי שרוצה לראות את זה בפועל, הנה עוד קצת קוד שמאפשר לצייר מבוך ואת המסלול ליציאה שבתוכו, אם יש, ודוגמת הרצה:</p>
 
-<p>[ruby]
-def print_maze(maze)
-	sym = {0 =&gt; " ", 1 =&gt; "+", 2 =&gt; ".", 3 =&gt; " "}
-	maze.map{|row| row.map{|v| sym[v]}}.each{|row| puts row.join("")}
-end
-maze = [[0, 0, 1, 1, 1, 1, 1],
-		[1, 0, 1, 1, 1, 0, 1],
-		[1, 0, 1, 0, 0, 0, 1],
-		[1, 0, 1, 0, 1, 0, 1],
-		[1, 0, 0, 0, 1, 0, 1],
-		[1, 1, 1, 1, 1, 1, 1]
-	   ]</p>
+<div class="code-block">
 
-<p>print_maze(maze)
-puts
-solve_maze(maze,4,5)
-print_maze(maze)
-[/ruby]</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">)</span>
+	<span class="n">sym</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="mi">1</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="o">+&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="mi">2</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;.</span><span class="nf">&amp;</span><span class="n">quot</span><span class="p">;,</span> <span class="mi">3</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;}</span>
+	<span class="n">maze</span><span class="p">.</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="p">.</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">sym</span><span class="p">[</span><span class="n">v</span><span class="p">]}}.</span><span class="nf">each</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">row</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;)}</span>
+<span class="k">end</span>
+<span class="n">maze</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+		<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+		<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+		<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+		<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+		<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+	   <span class="p">]</span>
+
+<span class="n">print_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">)</span>
+<span class="nb">puts</span>
+<span class="n">solve_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">print_maze</span><span class="p">(</span><span class="n">maze</span><span class="p">)</span></code></pre></figure>
+
+</div>
 
 <p>ואפשר להמשיך ולתת עוד ועוד דוגמאות, אבל נראה לי שהבנו את הרעיון ואפשר לעצור כאן. למרות שאם אתם עדיין לא מרוצים, נסו לקרוא את הפוסט שלי <a href="http://www.gadial.net/2015/11/03/recusrion/">כאן</a>.</p>
 

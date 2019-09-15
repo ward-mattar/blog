@@ -16,17 +16,17 @@ categories:
 
 לפני שאמשיך, הנה דוגמה לאיך זה עובד. קחו את שתי התמונות הבאות ונסו להדביק אותן זו על זו כשלבן משמש כצבע שקוף:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/08/vs_share1.png" target="_blank" title="Visual Crypto share 1"><img src="http://www.gadial.net/wp-content/uploads/2008/08/vs_share1.png" alt="Visual Crypto share 1" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/08/vs_share1.png" target="_blank" title="Visual Crypto share 1"><img src="{{site.baseurl}}{{site.post_images}}/2008/08/vs_share1.png" alt="Visual Crypto share 1" /></a>
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/08/vs_share2.png" target="_blank" title="Visual Crypto share 2"><img src="http://www.gadial.net/wp-content/uploads/2008/08/vs_share2.png" alt="Visual Crypto share 2" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/08/vs_share2.png" target="_blank" title="Visual Crypto share 2"><img src="{{site.baseurl}}{{site.post_images}}/2008/08/vs_share2.png" alt="Visual Crypto share 2" /></a>
 
 על פניו זה נראה כאילו אני צוחק עליכם והעליתי שתי תמונות זהות. עם זאת, כששמים אותן זו על זו, זה מה שמקבלים:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/08/vs_result.png" target="_blank" title="Visual Crypto result"><img src="http://www.gadial.net/wp-content/uploads/2008/08/vs_result.png" alt="Visual Crypto result" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/08/vs_result.png" target="_blank" title="Visual Crypto result"><img src="{{site.baseurl}}{{site.post_images}}/2008/08/vs_result.png" alt="Visual Crypto result" /></a>
 
 מה הולך כאן? זו בפירוש לא תמונה מונוכרומטית “סטנדרטית”. למעשה, המקור של התמונה הזו היה התמונה המונוכרומטית הבאה של <a href="http://he.wikipedia.org/wiki/%D7%94%D7%95%D7%9E%D7%A8_%D7%A1%D7%99%D7%9E%D7%A4%D7%A1%D7%95%D7%9F" target="_blank">הומר סימפסון</a>:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/08/visual_crypto_origianl.gif" target="_blank" title="Visual Crypto original"><img src="http://www.gadial.net/wp-content/uploads/2008/08/visual_crypto_origianl.gif" alt="Visual Crypto original" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/08/visual_crypto_origianl.gif" target="_blank" title="Visual Crypto original"><img src="{{site.baseurl}}{{site.post_images}}/2008/08/visual_crypto_origianl.gif" alt="Visual Crypto original" /></a>
 
 שהיא אמנם בשחור לבן, אבל הצבעים בה הרבה יותר ברורים - יש קטעים רציפים של לבן, והאיזורים הכהים יותר מנוקדים לסירוגין בשחור ולבן. לעומת זאת בתמונה ה”משולבת” הכל כהה; אבל יש איזורים כהים יותר, ואיזורים כהים פחות. ה”לבן” של התמונה שלעיל מיוצג באיזורים שהם כהים-אבל-פחות; העין מסוגלת לעשות את ההפרדה בצורה אוטומטית (כמובן, גם מחשב יכול לבצע את ההפרדה הזו, ואפילו “לנקות” את התמונה ולחזור לתמונה המקורית; אך כל הרעיון בקריפטוגרפיה ויזואלית הוא שלא צריך מחשב כדי לבצע “שיחזור”).
 
@@ -36,7 +36,7 @@ categories:
 
 הנה כמה דוגמאות לפיקסלים שונים שיכולים להיווצר על ידי צביעת חלק מתת-הפיקסלים:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/subpixel.png" target="_blank" title="Subpixels"><img src="http://www.gadial.net/wp-content/uploads/2008/09/subpixel.png" alt="Subpixels" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/subpixel.png" target="_blank" title="Subpixels"><img src="{{site.baseurl}}{{site.post_images}}/2008/09/subpixel.png" alt="Subpixels" /></a>
 
 כעת לרעיון המהותי: אם נשים שני פיקסלים כאלו אחד על השני (כשלבן משמש כשקוף, כמובן) אנחנו יכולים לקבל כמעט כל הרכב שנרצה. לדוגמה, תת הפיקסל התחתון משמאל הוא יחסית לבן (כי חצי ממנו לבן). אם נניח אותו על עצמו (כלומר - בשתי התמונות באותו פיקסל החצי הימני יהיה צבוע בשחור והשמאלי יהיה שקוף) נקבל את עצמו - משהו שעדיין נראה לבן יחסית. לעומת זאת, אם נניח אותו על שכנו מימין, הפיקסל שחלקו הימני שקוף והשמאלי שחור - נקבל פיקסל שהוא שחור לחלוטין.
 

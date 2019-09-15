@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"איך מוצאים את הסכום של סדרה חשבונית וסדרה הנדסית?","dateModified":"2019-05-30T18:16:39+03:00","datePublished":"2019-05-30T18:16:39+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/05/30/arithmetic_and_geometric_series"},"url":"http://localhost:4000/blog/2019/05/30/arithmetic_and_geometric_series","description":"אני רוצה להקדיש פוסט ייעודי לדברים שכבר הופיעו בבלוג שלל פעמים, בתור הערות אגב בפוסטים אחרים: הסכומים של סדרות חשבוניות והנדסיות. אם אתם לא יודעים מהן הסדרות הללו, עד סוף הפוסט תדעו; אבל אם אתם כבר יודעים, אז אפשר לגשת לעניין - המטרה של הפוסט הזה היא להסביר למה הנוסחאות הבאות הן נכונות: $latex S_{n}=\\frac{n\\left(a_{1}+a_{n}\\right)}{2}$ עבור טור חשבוני. $latex S_{n}=a_{1}\\frac{q^{n}-1}{q-1}$ עבור טור הנדסי. נתחיל עם אגדה ידועה על המתמטיקאי קארל פרידריך גאוס, שתעזור לנו להבין על מה מדובר.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -94,7 +94,7 @@
 </ul>
 <p>נתחיל עם אגדה ידועה על המתמטיקאי קארל פרידריך גאוס, שתעזור לנו להבין על מה מדובר.</p>
 
-<p><img class="alignnone size-full wp-image-3777" src="https://gadial.net/wp-content/uploads/2019/05/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg" alt="" width="220" height="280" /></p>
+<p><img class="alignnone size-full wp-image-3777" src="/blog/assets/img/2019/05/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg" alt="" width="220" height="280" /></p>
 
 <p>האגדה אומרת שכאשר גאוס היה בבית הספר היסודי, המורה שלו התעצל ונתן לתלמידים את המשימה המייגעת של חישוב הסכום <span>$latex 1+2+3+\dots+100$</span> - כלומר, סכום כל המספרים עד 100. הרעיון היה שהם יבלו חצי יום בעבודה טכנית מייגעת וחסרת כל טעם, והמורה ינוח. הבעיה היא שגאוס הקטן בא אל המורה תוך כמה דקות עם הפתרון. האם זה קרה בגלל שגאוס היה מחשבון אנושי? לא! בדיוק ההפך! גאוס המחיש בצורה הטובה ביותר את גישת <strong>מתמטיקאים הם עצלנים</strong>. במקום לבצע את החישוב, הוא מצא “דרך קיצור” שנותנת לו את הסכום בלי שיצטרך לחשב את כולו במפורש.</p>
 

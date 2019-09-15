@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"איך אלגברה לינארית מתקשרת לשרשראות מרקוב (ואיך כל זה קשור לגוגל)","dateModified":"2012-01-19T13:18:24+02:00","datePublished":"2012-01-19T13:18:24+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/01/19/markov_chains_and_linear_algebra"},"url":"http://localhost:4000/blog/2012/01/19/markov_chains_and_linear_algebra","description":"שרשראות מרקוב סדרת הפוסטים על אלגברה לינארית הגיעה במזל טוב לנקודה שבה אפשר לעצור ולעשות סיכומי ביניים לפני שצוללים בחומר הכבד הבא (מכפלות פנימיות), ולכן אני רוצה לנצל את ההזדמנות ולהציג נושא שהזכרתי בחטף קודם ולא דורש ידע באלגברה לינארית שטרם הוצג - שרשראות מרקוב. זה נושא ששייך לתורת ההסתברות ולכן הצגה פורמלית עד הסוף שלו תדרוש ממני לגלוש למונחים בהסתברות שעשויים לחסל קוראים שבסך הכל רוצים לראות שימוש מגניב באלגברה לינארית, ולכן אמנע עד כמה שאפשר מהם. מכיוון שאני עושה רק דברים פשוטים, איכשהו אצא מזה בשלום. או שלא.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -100,7 +100,7 @@
 
 <p>אני הולך לדבר רק על שרשראות שמרחב המצבים שלהן סופי, כי שרשראות כאלו ניתנות לתיאור באמצעות <strong>מטריצות</strong>. זאת מכיוון שאפשר לחשוב על כל שרשרת מרקוב בזמן בדיד בתור <strong>הילוך בגרף</strong> מכוון, כאשר הצמתים של הגרף הם המצבים של השרשרת, ועל הקשתות יש משקלים שמתאימים להסתברות המעבר בין צומת אחד לשני. לצורך פשטות, מסמנים את המצבים במספרים מ-1 ועד <span>$latex n$</span>, ואז אפשר לתאר את השרשרת בעזרת מטריצה <span>$latex P$</span> מסדר <span>$latex n\times n$</span> כך ש-<span>$latex P_{ij}$</span> היא ההסתברות לעבור מהמצב <span>$latex i$</span> למצב <span>$latex j$</span>. הנה דוגמה לאיך שזה נראה:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/01/markov1.png"><img class="alignnone size-full wp-image-1487" title="markov1" alt="" src="http://www.gadial.net/wp-content/uploads/2012/01/markov1.png" width="177" height="184" /></a>
+<p><strong><a href="/blog/assets/img/2012/01/markov1.png"><img class="alignnone size-full wp-image-1487" title="markov1" alt="" src="/blog/assets/img/2012/01/markov1.png" width="177" height="184" /></a>
 </strong></p>
 
 <p>המטריצה המתאימה כאן היא <span>$latex P=\left(\begin{array}{ccc}\frac{1}{3} &amp; \frac{1}{3} &amp; \frac{1}{3}\\\frac{1}{2} &amp; 0 &amp; \frac{1}{2}\\1 &amp; 0 &amp; 0\end{array}\right)$</span>. שימו לב לכך שבמטריצה הזו סכום כל שורה הוא 1. זה לא במקרה; השורה ה-<span>$latex i$</span> מייצגת את ההסתברויות לעבור מ-<span>$latex i$</span> לכל אחד מהמצבים האחרים (או להישאר במקום, מה שממודל בתור מעבר ל-<span>$latex i$</span>). מכיוון שאחד מאלו <strong>חייב</strong> לקרות, סכום כל ההסתברויות הוא בדיוק 1. למטריצה כזו, ששורותיה מסתכמות כולן ל-1, קוראים <strong>מטריצה סטוכסטית</strong>, ועוד נראה חשיבות לתכונה הזו בהמשך.</p>
@@ -113,7 +113,7 @@
 <h2><strong>ואיך אלגברה לינארית מתקשרת אליהן</strong></h2>
 <p>עכשיו בואו נעבור לאקשן. אגנוב דוגמה מהספר של Norris על שרשראות מרקוב פשוט כי היא כל כך מוצלחת. בואו נסתכל על השרשרת הפשוטה הבאה:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/01/markov2.png"><img class="alignnone size-full wp-image-1486" title="markov2" alt="" src="http://www.gadial.net/wp-content/uploads/2012/01/markov2.png" width="161" height="184" /></a>
+<p><strong><a href="/blog/assets/img/2012/01/markov2.png"><img class="alignnone size-full wp-image-1486" title="markov2" alt="" src="/blog/assets/img/2012/01/markov2.png" width="161" height="184" /></a>
 </strong></p>
 
 <p>לצורך פשטות לא ציירתי את הקשתות מצומת לעצמו (אפשר להסיק מה הערכים שלהן). המטריצה של השרשרת הזו היא <span>$latex P=\left(\begin{array}{ccc}0 &amp; 1 &amp; 0\\0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\\frac{1}{2} &amp; 0 &amp; \frac{1}{2}\end{array}\right)$</span>. כעת נותנים לנו תרגיל - למצוא נוסחה כללית עבור ההסתברות לפיה אם נתחיל מהמצב <span>$latex 1$</span>, אז כעבור <span>$latex n$</span> צעדים גם כן נהיה במצב 1. בניסוח מטריציוני, שואלים אותנו מהי <span>$latex \left[P^{n}\right]_{11}$</span>. זוהי שאלת אלגברה לינארית למהדרין, והדרך לפתרון שלה עוברת דרך ערכים עצמיים, אז בואו נתחיל מלמצוא את הערכים העצמיים לפי הספר. כאן יש לנו מזל - המטריצה קטנה, אז קל למצוא את הערכים העצמיים שלה, אבל לפעמים זה יכול להיות קשה למדי. הפולינום האופייני הוא</p>

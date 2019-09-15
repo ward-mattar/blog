@@ -24,7 +24,7 @@ categories:
 
 6) "גרף סינוס וקוסינוס" - הנה גרף סינוס:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/sinplot.png" title="Sin plot"><img src="http://www.gadial.net/wp-content/uploads/2008/05/sinplot.png" alt="Sin plot" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/sinplot.png" title="Sin plot"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/sinplot.png" alt="Sin plot" /></a>
 
 גרף של קוסינוס הוא אותו הדבר בדיוק, פרט לכך שצריך "להזיז" אותו טיפה שמאלה, כך שראש הגבעה הראשונה מימין לציר y תהיה בדיוק על ציר y.
 

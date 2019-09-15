@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"(קצת על) הגאומטריה של מרחבי מכפלה פנימית","dateModified":"2012-03-01T22:08:19+02:00","datePublished":"2012-03-01T22:08:19+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry"},"url":"http://localhost:4000/blog/2012/03/01/inner_product_spaces_geometry","description":"בפוסט הקודם על אלגברה לינארית הצגנו את מושג המכפלה הפנימית וכמה מושגים נלווים, אבל לא דיברנו על מה שלדעתי הוא הדבר העיקרי פה - האופן שבו מכפלה פנימית משרה על מרחבים וקטורים גאומטריה, במובן זה שאם יש לנו מכפלה פנימית על מרחב יש לנו מושגים של אורך וזווית ודברים שנובעים מהם.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -143,14 +143,14 @@
 
 <p>ההמחשה הטובה ביותר לאופי של הנורמות הללו, לטעמי, היא הציור של “מעגל היחידה” בכל אחד מהן - אוסף כל הנקודות שהמרחק שלהן מהראשית הוא 1, כלומר הוקטור שמתחיל בראשית ונגמר בהן הוא מנורמה 1:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png"><img class="alignnone size-full wp-image-1524" title="140px-Vector_norms.svg" src="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png" alt="" width="140" height="460" /></a>
+<p><strong><a href="/blog/assets/img/2012/03/140px-Vector_norms.svg_.png"><img class="alignnone size-full wp-image-1524" title="140px-Vector_norms.svg" src="/blog/assets/img/2012/03/140px-Vector_norms.svg_.png" alt="" width="140" height="460" /></a>
 </strong></p>
 
 <p>למי שהאיור הזה נראה לו מופרך לגמרי - נסו זאת בעצמכם! נסו לחשוב כיצד לצייר את מעגלי היחידה עבור שתי הנורמות ה”חדשות”. זה קל באופן מפתיע ואחרי זה המעגלים הללו לא ייראו מוזר כל כך.</p>
 
 <p>כעת אני רוצה לטעון שיש תכונה שכל נורמה שמושרית ממכפלה פנימית חייבת לקיים - תכונה שהיא גאומטרית במהותה: <strong>כלל המקבילית</strong>. נניח שיש לנו שני וקטורים, <span>$latex a,b$</span>. אפשר לחשוב עליהם כעל שתי צלעות של מקבילית. לא קשה לראות שהאלכסונים של אותה מקבילית יהיו <span>$latex a+b$</span> ו-<span>$latex a-b$</span>:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png"><img class="alignnone size-full wp-image-1525" title="Parallelogram_law" src="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png" alt="" width="311" height="414" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2012/03/Parallelogram_law.png"><img class="alignnone size-full wp-image-1525" title="Parallelogram_law" src="/blog/assets/img/2012/03/Parallelogram_law.png" alt="" width="311" height="414" /></a></strong></p>
 
 <p>כעת, כלל המקבילית הוא מין הכללה של משפט פיתגורס: סכום ריבועי אורכי כל צלעות המקבילית שווה לסכום ריבועי אורכי האלכסונים. בלשון נורמות:</p>
 

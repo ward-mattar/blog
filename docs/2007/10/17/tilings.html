@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"השארת הרצף","dateModified":"2007-10-17T23:01:52+03:00","datePublished":"2007-10-17T23:01:52+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/10/17/tilings"},"url":"http://localhost:4000/blog/2007/10/17/tilings","description":"ריצוף הוא מאותם נושאים מתמטים שקיים סיכוי שגם לא-מתמטיקאים יוכלו להבין ולהינות ממנו בקלות רבה יחסית; בסופו של דבר, אנו נתקלים בריצופים בכל עת בחיי היום-יום, וגם באמנות הם לא חסרים (ומובאים לשיא ביצירותיו של אשר, שאחת מהן מוצגת למעלה).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -94,7 +94,7 @@
 
 <p>אני מסוגל לחשוב מיידית על מספר משחקי ריצוף שכאלו שאתם בוודאי מכירים. בראשון נתונות מספר צורות שונות ומשונות והמטרה היא לסדר אותן כך שיצרו ריבוע, מלבן, או משהו דומה. הנה דוגמה למשחק שכזה, שבו הצורות יוצרות “כמעט ריבוע” (ריבוע שהפינות הוסרו ממנו):</p>
 
-<p><img src="http://puzzler.sourceforge.net/docs/images/pentominoes-8x8-corners.png" height="162" width="162" /></p>
+<p><img src="http://puzzler.sourceforge.net/docs/images/pentominoes-corners.png" height="162" width="162" /></p>
 
 <p>אבני המשחק כאן מורכבות מריבועים שחוברו זה לזה, ומכונות “פוליומינוס” (<a href="http://en.wikipedia.org/wiki/Polyomino">Polyominoes</a>). אולי ארחיב על האבנים הללו (שהן גם כוכבות המשחק “<a href="http://he.wikipedia.org/wiki/%D7%98%D7%98%D7%A8%D7%99%D7%A1">טטריס</a>” כשמרכיבים אותן בדיוק 4 ריבועים) בעתיד.</p>
 
@@ -104,7 +104,7 @@
 
 <p>עוד סוג של פאזל הוא מה שאכנה, בשל מחסור בשם טוב יותר (מישהו מכיר?) בשם “פאזל-9”. משחק פאזל שבו יש רק 9 ריבועים, אבל אין לקצות הריבועים צורה ייחודית; במקום זה, כל אחד מארבעת צדדיו של כל ריבוע מכיל חצי תמונה, והמטרה היא לחבר את הריבועים כך שכל התמונות משלימות זו את זו. מכיוון שאותם חצאי תמונה חוזרים מספר פעמים בצירופים שונים, המשחק מתגלה כמאתגר למדי.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2007/10/1706_0.jpg" title="פאזל-9"><img src="http://www.gadial.net/wp-content/uploads/2007/10/1706_0.jpg" alt="פאזל-9" /></a></p>
+<p><a href="/blog/assets/img/2007/10/1706_0.jpg" title="פאזל-9"><img src="/blog/assets/img/2007/10/1706_0.jpg" alt="פאזל-9" /></a></p>
 
 <p>המשחק הזה מוביל אותי לנושא העיקרי שעליו רציתי לדבר - <a href="http://en.wikipedia.org/wiki/Wang_tile">Wang tiles</a>, שאכנה מעכשיו פשוט בתור “אריחי וונג”.</p>
 

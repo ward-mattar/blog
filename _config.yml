@@ -8,6 +8,8 @@ facebook_username: לא-מדויק-163347110378474
 facebook_linkame: "לא מדויק"
 permalink: /:year/:month/:day/:title
 
+post_images: /assets/img
+
 # Build settings
 markdown: kramdown
 kramdown:

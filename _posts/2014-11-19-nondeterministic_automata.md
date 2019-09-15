@@ -23,7 +23,7 @@ tags:
 
 כשמציירים את האוטומט בתור גרף, קל להדגים אי דטרמיניזם - בסך הכל מדובר על מצבים שמהם לא יוצא חץ עבור אות מסויימת, או שיוצא יותר מחץ אחד עבור אות מסויימת:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram0011.png"><img class="aligncenter size-full wp-image-3196" alt="diagram001" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram0011.png" width="433" height="114" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/11/diagram0011.png"><img class="aligncenter size-full wp-image-3196" alt="diagram001" src="{{site.baseurl}}{{site.post_images}}/2014/11/diagram0011.png" width="433" height="114" /></a></strong>
 
 אבל איך מתארים אוטומט כזה בצורה פורמלית? דרך אחת היא להגיד שאין לנו יותר פונקציית מעברים אלא <strong>יחס</strong> מעברים - אוסף של שלשות מהצורה {% equation %}\left(q,\sigma,p\right){% endequation %} שבא לומר שהאוטומט יכול, אם הוא במצב {% equation %}q{% endequation %} וקורא {% equation %}\sigma{% endequation %}, לעבור למצב {% equation %}p{% endequation %} (מבחינה פורמלית פונקציה היא פשוט מקרה פרטי של יחס, עם דרישות נוספות שמבטיחות שלכל קלט יהיה פלט אחד ויחיד). עם זאת, אני מעדיף דווקא לנקוט בגישה השניה, שאומרת שעדיין יכולה להיות לנו פונקציית מעברים, אם רק נשנה את הטווח שלה. דרך הפתרון שאני מציג כאן היא די סטנדרטית כאשר רוצים להגדיר פונקציות "רב ערכיות" בצורה פורמלית.
 
@@ -77,7 +77,7 @@ tags:
 
 זה מסיים את הטיפול במודל האי דטרמיניסטי, אבל עדיין לא סיימנו - אני עדיין צריך לטפל בהקלה השניה על כללי המשחק ולהסתכל על המודל שבו אפשר לבצע מעבר בין מצבים בלי לקרוא אות. למעבר כזה אני אקרא "מעבר-{% equation %}\varepsilon{% endequation %}". ונתחיל בדוגמא לאוטומט שמשתמש במעברים כאלו:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram002.png"><img class="aligncenter size-full wp-image-3197" alt="diagram002" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram002.png" width="419" height="119" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/11/diagram002.png"><img class="aligncenter size-full wp-image-3197" alt="diagram002" src="{{site.baseurl}}{{site.post_images}}/2014/11/diagram002.png" width="419" height="119" /></a>
 
 האוטומט הזה מקבל את כל המילים שבנויות מרצף של 0 או יותר {% equation %}a{% endequation %}-ים, אחריו רצף של 0 או יותר {% equation %}b{% endequation %}-ים ואחריו רצף של 0 או יותר {% equation %}c{% endequation %}-ים. בהמשך נראה איך ייראה אוטומט בלי מעברי-{% equation %}\varepsilon{% endequation %} שעושה את זה ועד כמה מעברי ה-{% equation %}\varepsilon{% endequation %} מפשטים את דרך ההצגה שלנו, אבל בינתיים אני ממליץ לכם לנסות ולבנות אוטומט כזה (אי דטרמיניסטי!) בעצמכם ולראות כמה אתם מסתבכים כדי שתוכלו להעריך את הפשטות היחסית של האוטומט הזה. מה שהוא עושה הוא זה: כל עוד יש {% equation %}a{% endequation %}-ים לקרוא, קורא אותם. אחר כך קופץ למצב הבא על ידי מעבר {% equation %}\varepsilon{% endequation %}, קורא שם {% equation %}b{% endequation %}-ים כל עוד יש, ואז קופץ למצב האחרון וקורא שם {% equation %}c{% endequation %}-ים כל עוד יש, עד (בתקווה) סוף המילה. כמובן, שימו לב שאני מייחס לאוטומט מעין חוכמה שאין לו (לדעת מתי ה-{% equation %}a{% endequation %}-ים "נגמרו") - בפועל מה שקורה הוא שיש לאוטומט המון מסלולי חישוב אפשריים שרובם פשוט "נתקעים" (למשל, אם האות הראשונה במילה היא {% equation %}a{% endequation %} אבל האוטומט בחר לבצע את מסע ה-{% equation %}\varepsilon{% endequation %} אל {% equation %}q_{1}{% endequation %} במקום לקרוא אותה) ואני פשוט מתאר את הריצה המקבלת. שימו לב איך אני נעזר בכך שהאוטומט הוא אי-דטרמיניסטי, ולא "רק" יכול לבצע מסעי-{% equation %}\varepsilon{% endequation %}.
 
@@ -125,4 +125,4 @@ tags:
 
 זה מסיים את ההוכחה, והחל מהפוסט הבא נוכל להשתמש בחופשיות באוטומטים אי-דטרמיניסטיים עם מסעי-{% equation %}\varepsilon{% endequation %} כדי לעשות דברים. רק תרגול אחד לסיום - נסו לקחת את האוטומט שמצויר לעיל ולסלק לו את מסעי ה-{% equation %}\varepsilon{% endequation %}. הנה מה שאמור להתקבל:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram003.png"><img class="aligncenter size-full wp-image-3195" alt="diagram003" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram003.png" width="460" height="192" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/11/diagram003.png"><img class="aligncenter size-full wp-image-3195" alt="diagram003" src="{{site.baseurl}}{{site.post_images}}/2014/11/diagram003.png" width="460" height="192" /></a>

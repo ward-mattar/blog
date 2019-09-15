@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "he" }}" dir="rtl">
+<html lang="{{ page.lang | default: site.lang | default: 'he' }}" dir="rtl">
 
   {%- include head.html -%}
 
@@ -7,7 +7,7 @@
 
     {%- include navbar.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         {{ content }}
       </div>

@@ -12,7 +12,7 @@ tags:
   - חישוביות
   - מודלים חישוביים
 ---
-<a href="http://www.gadial.net/wp-content/uploads/2012/06/Alan_Turing_photo.jpg"><img class="alignnone size-full wp-image-2045" title="Alan_Turing_photo" src="http://www.gadial.net/wp-content/uploads/2012/06/Alan_Turing_photo.jpg" alt="" width="355" height="444" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/06/Alan_Turing_photo.jpg"><img class="alignnone size-full wp-image-2045" title="Alan_Turing_photo" src="{{site.baseurl}}{{site.post_images}}/2012/06/Alan_Turing_photo.jpg" alt="" width="355" height="444" /></a>
 
 היום מלאו 100 שנים בדיוק להולדתו של אלן טיורינג, וזו הזדמנות מצויינת לכתוב עליו כמה מילים ולהבטיח סדרת פוסטים שאוטוטו באה.
 

@@ -11,17 +11,17 @@ tags:
 ---
 הכירו את ונוס החתולה (אמיתית לגמרי, זה לא פוטושופ):
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/venus.jpg"><img class="alignnone size-full wp-image-2304" alt="venus" src="http://www.gadial.net/wp-content/uploads/2013/01/venus.jpg" width="300" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/venus.jpg"><img class="alignnone size-full wp-image-2304" alt="venus" src="{{site.baseurl}}{{site.post_images}}/2013/01/venus.jpg" width="300" height="300" /></a></strong>
 
 כמו הלהיט הנוכחי Tard the Grumpy Cat (גגלו!) כך גם ונוס הפכה ללהיט אינטרנט אדיר אפילו ביחס לחתולה (חתולים הם שליטי האינטרנט הבלתי מעורערים) בשל הפנים המחולקות באופן מושלם שלה: צד ימין שלהן שחור, וצד שמאל כתום. בהתחלה רציתי לעשות את הפוסט הנוכחי עם דו-פרצוף של באטמן; אחרי מבט במספר תמונות הגעתי למסקנה שחתולה מגניבה עדיפה על הזוועה הדו-פרצופית הקומיקסית. אבל לאיזו מטרה גייסתי את ונוס?
 
 ובכן, נניח שונוס תתבונן במראה. הנה התמונה שהיא תראה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/venus_flipped.jpg"><img class="alignnone size-full wp-image-2306" alt="venus_flipped" src="http://www.gadial.net/wp-content/uploads/2013/01/venus_flipped.jpg" width="300" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/venus_flipped.jpg"><img class="alignnone size-full wp-image-2306" alt="venus_flipped" src="{{site.baseurl}}{{site.post_images}}/2013/01/venus_flipped.jpg" width="300" height="300" /></a></strong>
 
 כלומר, ונוס תראה במראה חתולה שונה מהונוס שאנחנו מכירים; היא תראה חתולה שצד <strong>שמאל</strong> של פניה שחור, ואילו צד ימין הוא הכתום. עד כאן אין שום דבר מוזר בעניין - כולנו כנראה נתקלנו אי-אז במראה ולמדנו על התופעה שבה היא הופכת דברים. אבל הנה שאלה שייתכן שחלקכם לא נתקלו בה עד כה: למה המראה הופכת את צד ימין ושמאל של ונוס, אבל לא הופכת אותה גם למעלה-למטה? במילים אחרות, למה התמונה של ונוס היא לא כזו?
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/venus_double_flipped.jpg"><img class="alignnone size-full wp-image-2308" alt="venus_double_flipped" src="http://www.gadial.net/wp-content/uploads/2013/01/venus_double_flipped.jpg" width="300" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/venus_double_flipped.jpg"><img class="alignnone size-full wp-image-2308" alt="venus_double_flipped" src="{{site.baseurl}}{{site.post_images}}/2013/01/venus_double_flipped.jpg" width="300" height="300" /></a></strong>
 
 יש כאן חוסר סימטריה מוזר בין ימין-שמאל ולמעלה-למטה. הוא בא לידי ביטוי, למשל, באופן שבו יצרתי את התמונה של "ונוס בראי" - בעורך התמונות שלי בחרתי באופציה "Flip horizontally'', הפעלתי אותה, וחסל. למה האופציה של "Flip vertically" לא נדרשה כאן? איך הראי יודע "להבדיל" בין ימין-שמאל ובין למעלה-למטה?
 
@@ -31,30 +31,30 @@ tags:
 
 ראשית כל, המושג המרכזי בפוסט הזה הולך להיות <strong>שיקוף</strong>. שיקוף הוא תמיד ביחס ל<strong>ציר</strong> מסוים, אז בואו ניזכר איך נראית מערכת צירים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/axis.png"><img class="alignnone size-full wp-image-2311" alt="axis" src="http://www.gadial.net/wp-content/uploads/2013/01/axis.png" width="313" height="321" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/axis.png"><img class="alignnone size-full wp-image-2311" alt="axis" src="{{site.baseurl}}{{site.post_images}}/2013/01/axis.png" width="313" height="321" /></a></strong>
 
 ציר ה-{% equation %}x{% endequation %} הוא הציר האופקי, וציר ה-{% equation %}y{% endequation %} הוא הציר האנכי. שיקוף ביחס לציר פירושו לקחת כל נקודה בצד אחד של הציר, למתוח קו מאונך ממנה אל הציר, להמשיך אותו מצדו השני של הציר באותו אורך, ואז להחליף בין שתי נקודות הקצה. זה נראה כך:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/reflection.png"><img class="alignnone size-full wp-image-2312" alt="reflection" src="http://www.gadial.net/wp-content/uploads/2013/01/reflection.png" width="313" height="321" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/reflection.png"><img class="alignnone size-full wp-image-2312" alt="reflection" src="{{site.baseurl}}{{site.post_images}}/2013/01/reflection.png" width="313" height="321" /></a></strong>
 
 מה שקראתי לו קודם "היפוך מאוזן" הוא בעצם דרך אחרת לומר "שיקוף של התמונה ביחס לציר {% equation %}y{% endequation %} כאשר התמונה משמאל לציר והוא נוגע בקצה הימני שלה". ככה זה נראה (הציר הוא הקו השחור באמצע):
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/venus-hor-ref.jpg"><img class="alignnone size-full wp-image-2313" alt="venus-hor-ref" src="http://www.gadial.net/wp-content/uploads/2013/01/venus-hor-ref.jpg" width="613" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/venus-hor-ref.jpg"><img class="alignnone size-full wp-image-2313" alt="venus-hor-ref" src="{{site.baseurl}}{{site.post_images}}/2013/01/venus-hor-ref.jpg" width="613" height="300" /></a></strong>
 
 שימו לב שאפשר גם את האפשרות האחרת, "שיקוף של התמונה ביחס לציר {% equation %}y{% endequation %} כאשר התמונה <strong>מימין</strong> לציר והוא נוגע בקצה ה<strong>שמאלי</strong> שלה":
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/venus-hor-ref2.jpg"><img class="alignnone size-full wp-image-2316" alt="venus-hor-ref2" src="http://www.gadial.net/wp-content/uploads/2013/01/venus-hor-ref2.jpg" width="610" height="299" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/venus-hor-ref2.jpg"><img class="alignnone size-full wp-image-2316" alt="venus-hor-ref2" src="{{site.baseurl}}{{site.post_images}}/2013/01/venus-hor-ref2.jpg" width="610" height="299" /></a></strong>
 
 אפשר היה גם לשקף ביחס לציר {% equation %}y{% endequation %} שעובר באמצע התמונה ואז במקום לקבל שני עותקים היינו פשוט מקבלים את התמונה במהופך.<strong>
 </strong>
 
 בשלב הזה אני מקווה שאתם כבר מתחילים לקבל תחושה שמה שקורה במראה הוא לא בדיוק שיקוף ביחס לציר {% equation %}y{% endequation %}, למרות שכך יצרתי את התמונה של "מה ונוס רואה במראה". הסיבה לכך היא ששיקוף ביחס לציר {% equation %}y{% endequation %} היה אמור ליצור את הדמות שבמראה <strong>ליד</strong> ונוס עצמה, ולא <strong>מול</strong> ונוס. אבל כשאני מדבר על "מול" אני מכניס לתמונה את השחקן שעד כה לא דיברתי עליו - המימד השלישי, ציר {% equation %}z{% endequation %}.
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/3d_axis.png"><img class="alignnone size-full wp-image-2318" alt="3d_axis" src="http://www.gadial.net/wp-content/uploads/2013/01/3d_axis.png" width="313" height="321" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/3d_axis.png"><img class="alignnone size-full wp-image-2318" alt="3d_axis" src="{{site.baseurl}}{{site.post_images}}/2013/01/3d_axis.png" width="313" height="321" /></a></strong>
 
 אם ציר {% equation %}x{% endequation %} הוא "ימינה/שמאלה" וציר {% equation %}y{% endequation %} הוא "למעלה/למטה" אז ציר {% equation %}z{% endequation %} הוא "קדימה/אחורה". בתלת מימד שיקופים הם כבר לא ביחס לציר, הם ביחס ל<strong>מישור</strong>. אפשר לחשוב על מישור כעל קיר: נניח שאתם בחדר ובוהים בקיר. הקיר שמולכם עולה למעלה ויורד למטה, והולך ימינה ושמאלה, ולכן הוא דוגמה למישור שמורכב מהצירים {% equation %}xy{% endequation %}; לעומת זאת, הקיר שמימינכם עולה מעלה ויורד למטה, אבל הולך "קדימה" ו"אחורה" (מנקודת מבטכם) ולכן הוא מישור שמורכב מהצירים {% equation %}yz{% endequation %}; ואילו התקרה הולכת קדימה ואחורה וימינה ושמאלה אבל לא למעלה-מטה, ולכן היא מישור שמורכב מהצירים {% equation %}xz{% endequation %}. הנה קוביה שבה מסומנים המישורים הללו בבירור (ה-xy הוא על הקיר הקדמי/אחורי):
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/cube.png"><img class="alignnone size-full wp-image-2319" alt="cube" src="http://www.gadial.net/wp-content/uploads/2013/01/cube.png" width="363" height="303" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/cube.png"><img class="alignnone size-full wp-image-2319" alt="cube" src="{{site.baseurl}}{{site.post_images}}/2013/01/cube.png" width="363" height="303" /></a></strong>
 
 אם כן, כשאנו מתבוננים בראי שעומד מולנו, אנחנו מתבוננים בשיקוף שלנו ביחס למישור {% equation %}xy{% endequation %}. מה שקריטי להבין כעת - זו כנראה הנקודה המרכזית בפוסט - הוא שהשיקוף הזה <strong>לא הופך את ימין ושמאל!</strong> קל מאוד לראות את זה - אם תניפו את היד שבצד ימין <strong>שלכם</strong>, אז הדמות שבראי תניף את היד שבצד ימין <strong>של הראי</strong>. אם הראי היה הופך בין ימין ושמאל, היינו מצפים לראות את מה שקורה בצד ימין שלכם משתנה דווקא בצד שמאל של הראי.
 
@@ -68,7 +68,7 @@ tags:
 
 נחזור לסיטואציה שבה ונוס עומדת מול סונו. אפשר לעשות עם ונוס משהו שונה לגמרי - לסובב אותה לא סביב ציר {% equation %}y{% endequation %} אלא סביב ציר {% equation %}x{% endequation %}. במילים אחרות, אתם באים אל ונוס מאחורה, תופסים אותה בזנב ומרימים למעלה. ונוס האומללה מתהפכת - עכשיו הפנים שלה פונות אליכם, הראש שלה הפוך, הרגליים הקדמיות מתחת לאחוריות, והרגליים האחוריות הן הדבר הגבוה ביותר בה. עכשיו אתם הולכים ושמים את ונוס מעל סונו וצועקים "רואה? רואה שהן שונות?". לכך אני משיב ב"למה? החלק השחור של הפנים שלהן הוא עדיין בצד ימין עבור שתיהן!"
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/suno_and_venus.jpg"><img class="alignnone size-full wp-image-2320" alt="suno_and_venus" src="http://www.gadial.net/wp-content/uploads/2013/01/suno_and_venus.jpg" width="297" height="600" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/suno_and_venus.jpg"><img class="alignnone size-full wp-image-2320" alt="suno_and_venus" src="{{site.baseurl}}{{site.post_images}}/2013/01/suno_and_venus.jpg" width="297" height="600" /></a></strong>
 
 אתם משתתקים לרגע, חושבים, ואז צועקים עלי בחזרה "נכון! אבל ונוס הפוכה וסונו לא הפוכה!"
 

@@ -12,7 +12,7 @@ tags:
 ---
 להיט עכשיו בפייסבוק העברי הוא צילום המסך הזה של פוסט שלא חשוב על ידי מי נכתב, כי הוא מופץ במטרה ללעוג לכותב:
 
-<img class="alignnone size-full wp-image-3755" src="https://gadial.net/wp-content/uploads/2019/03/DivideByZero.png" alt="" width="738" height="753" />
+<img class="alignnone size-full wp-image-3755" src="{{site.baseurl}}{{site.post_images}}/2019/03/DivideByZero.png" alt="" width="738" height="753" />
 
 אותי פחות מעניין ללעוג לכותב ויותר לשאול שאלות ולנסות לענות להן. למשל:
 <ol>

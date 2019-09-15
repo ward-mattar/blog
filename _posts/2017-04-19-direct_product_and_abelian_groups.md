@@ -97,11 +97,11 @@ tags:
 
 ואני רוצה לסיים עם אזכור של חבורות אבליות מפורסמות למדי: <strong>עקומים אליפטיים</strong>. בנפנוף ידיים קל (כי יש הגדרות כלליות יותר), עקום אליפטי הוא אוסף כל הפתרונות של משוואה מהצורה {% equation %}y^{2}=x^{3}+ax+b{% endequation %} (עם עוד דרישה על הפרמטרים שלא אציג כרגע). הנה תמונה של עקום טיפוסי:
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/05/ec.png" rel="attachment wp-att-488"><img class="aligncenter size-full wp-image-488" src="http://www.gadial.net/wp-content/uploads/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/05/ec.png" rel="attachment wp-att-488"><img class="aligncenter size-full wp-image-488" src="{{site.baseurl}}{{site.post_images}}/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a>
 
 ליצור הזה מוסיפים עוד נקודה אחת "באינסוף" שתשתמש בתור איבר יחידה, ומקנים לו מבנה של חבורה בצורה המוזרה-לכאורה הבאה: חיבור של שתי נקודות פירושו לקחת את הישר שעובר דרכן, ואם הוא חותך את העקום - לשקף את נקודת החיתוך ביחס לציר {% equation %}x{% endequation %} וזו תהיה התוצאה. אם הישר לא חותך את העקום, אז התוצאה היא הנקודה "באינסוף". מתברר שעם ההגדרה הזו מקבלים חבורה אבלית. מאיפה ההגדרה הזו הגיעה? יש דרכים יפות להגיע אליה אבל אני לא אכנס לזה כרגע.
 
-<a href="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg" rel="attachment wp-att-489"><img class="aligncenter size-full wp-image-489" src="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2010/05/elliptic.jpg" rel="attachment wp-att-489"><img class="aligncenter size-full wp-image-489" src="{{site.baseurl}}{{site.post_images}}/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a>
 
 העניין הוא שקצת הסתרתי מכם פרטים. אמרתי "אוסף כל הפתרונות של משוואה מהצורה כך-וכך", אבל לא אמרתי <strong>מאיפה</strong> אפשר לקחת את הפתרונות. אפשר לדבר, למשל, על אוסף כל הפתרונות של המשוואה מעל המרוכבים. במקרה הזה אפשר להוכיח שהחבורה שנקבל איזומורפית ל<strong>טורוס</strong>. אפשר לדבר על הפתרונות מעל הממשיים, או מעל הרציונליים (החקירה של הפתרונות הרציונליים של עקומים אליפטיים היא תחום מרתק; היא מתקשרת, למשל, להוכחת המשפט האחרון של פרמה). אפשר גם לדבר על הפתרונות מעל שדות סופיים (מושג שטרם הגדרתי בסדרת הפוסטים הזו, אבל תחשבו על {% equation %}\mathbb{Z}_{p}{% endequation %} עם פעולות חיבור וכפל; זו דוגמה פשוטה). במקרה האחרון נקבל חבורות סופיות, כי יש רק מספר סופי של פתרונות. הופה! חבורה אבלית סופית? אנחנו כבר יודעים בדיוק איך היא נראית, יש לנו את משפט המיון!
 

@@ -18,13 +18,13 @@ tags:
 
 <strong>גרף אוילרי</strong> הוא גרף שאפשר לצייר מבלי להרים את העפרון מהדף - כזה שיש בו מסלול שעובר דרך כל הקשתות בדיוק פעם אחת. הנה דוגמא לגרף שיש בו גם את זה וגם את זה:
 
-<img class="alignnone size-full wp-image-3771" src="https://gadial.net/wp-content/uploads/2019/04/pasted1.png" alt="" width="394" height="580" />
+<img class="alignnone size-full wp-image-3771" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted1.png" alt="" width="394" height="580" />
 
 הגרף הזה הוא בעצם ציור הבית מחידת ה"האם אפשר לצייר בית עם איקס בתוכו מבלי להרים את העפרון מהדף" למעט זה שבמקום להשלים את האיקס בתוכו, הקשת שמחברת את הפינה הימנית-תחתונה והפינה השמאלית-עליונה עוברת <strong>מחוץ</strong> לבית כדי לא לחתוך את הקשת שעוברת בתוך הבית. זה מראה שהגרף הזה הוא <strong>מישורי</strong>, בנוסף לכך שהוא אוילרי. כפי שאפשר לנחש, הוא הולך לככב בהמשך הפוסט שלנו.
 
 כשיש לנו ציור של גרף מישורי אפשר לדבר לא רק על הצמתים והקשתות שלו אלא גם על <strong>הפאות</strong> שלו - השטחים הסגורים שנתחמים על ידי הקשתות (המילה "פאות" מגיעה מההקשר המקורי של נוסחת אוילר, עבור פאונים; לא אדבר על כך בפוסט הזה):
 
-<img class="alignnone size-full wp-image-3772" src="https://gadial.net/wp-content/uploads/2019/04/pasted2.png" alt="" width="405" height="570" />
+<img class="alignnone size-full wp-image-3772" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted2.png" alt="" width="405" height="570" />
 
 בתמונה הנוכחית צבעתי את הפאות בצבעים עליזים - ורוד, ירוק, כחול, צהוב ולבן. רגע, איפה הלבן כאן? ובכן, גם השטח ש"מחוץ" לגרף נחשב לאחת מהפאות שלו, "הפאה החיצונית". כלומר, הצביעה העליזה שלי מראה לנו שלגרף יש חמש פאות. בנוסף לכך יש לו חמישה צמתים (הנקודות הכחולות) ויש לו שמונה קשתות (הקווים השחורים העבים שמחברים צמתים). אם נסמן את מספר הצמתים ב-{% equation %}V{% endequation %}, את מספר הקשתות ב-{% equation %}E{% endequation %} ואת מספר הפאות ב-{% equation %}F{% endequation %} נגלה שמתקיים
 
@@ -40,35 +40,35 @@ tags:
 
 בואו נעקוב אחרי תהליך הציור של התמונה לעיל, עם ספירה של מספר הקשתות והפאות בכל רגע נתון. כל חמשת הצמתים יופיעו כל הזמן - כלומר, {% equation %}V=5{% endequation %} הולך להיות קבוע. בהתחלה יש רק את הצמתים, ודמיינו שאנחנו עומדים בצומת הימני-תחתון ומחכים בהתרגשות לתחילת המסע שלנו בגרף:
 
-<img class="alignnone size-full wp-image-3764" src="https://gadial.net/wp-content/uploads/2019/04/pasted3.png" alt="" width="262" height="458" />
+<img class="alignnone size-full wp-image-3764" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted3.png" alt="" width="262" height="458" />
 
 כאן {% equation %}E=0{% endequation %} ו-{% equation %}F=1{% endequation %} (כי הפאה החיצונית, הלבנה).
 
 עכשיו נבצע את הצעד הראשון:
 
-<img class="alignnone size-full wp-image-3765" src="https://gadial.net/wp-content/uploads/2019/04/pasted4.png" alt="" width="250" height="497" />
+<img class="alignnone size-full wp-image-3765" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted4.png" alt="" width="250" height="497" />
 
 ועכשיו {% equation %}E=1{% endequation %} ו-{% equation %}F=1{% endequation %} נשאר כמו קודם - מכיוון שהקשת הגיעה לצומת שטרם ביקרנו בו, לא יצרנו פאה חדשה. אנחנו רואים שלבקר בצומת שטרם ביקרנו בו זה משעמם, אז בואו נבצע את כל יתר הצעדים הנדרשים כדי שנבקר <strong>בכל</strong> הצמתים; מרגע זה והלאה, כל צעד נוסף יצור פאה חדשה:
 
-<img class="alignnone size-full wp-image-3766" src="https://gadial.net/wp-content/uploads/2019/04/pasted5.png" alt="" width="236" height="455" />
+<img class="alignnone size-full wp-image-3766" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted5.png" alt="" width="236" height="455" />
 
 כרגע {% equation %}E=4{% endequation %} (כמספר הצמתים פחות אחד - לא מקרי, כמובן, הקשר {% equation %}E=V-1{% endequation %} מתקיים בכל <strong>עץ</strong>) ו-{% equation %}F=1{% endequation %}. כלומר, כבר כרגע מתקיימת הנוסחה {% equation %}V-E+F=2{% endequation %}, וזה לא מפתיע כי הגרף שקיבלנו כרגע הוא גם מישורי וגם <strong>קשיר</strong> (זוכרות? קשירות הייתה הכרחית בשביל נוסחת אוילר, בדיוק בגלל שצמתים מבודדים כמו בתמונות הקודמות לא משפיעים על {% equation %}E{% endequation %} ועל {% equation %}F{% endequation %} ואפשר להוסיף כמה מהם שרוצים). מה שיקרה מכאן ואילך הוא שכל צעד <strong>ישמר</strong> את הקשר הזה, {% equation %}V-E+F=2{% endequation %}; כי כל צעד גם יוסיף קשת אחת (יגדיל את {% equation %}E{% endequation %} ב-1) וגם יצור פאה חדשה (יגדיל את {% equation %}F{% endequation %} ב-1). בואו נראה את זה קורה בפעם הראשונה:
 
-<img class="alignnone size-full wp-image-3767" src="https://gadial.net/wp-content/uploads/2019/04/pasted6.png" alt="" width="243" height="448" />
+<img class="alignnone size-full wp-image-3767" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted6.png" alt="" width="243" height="448" />
 
 מה שנחמד פה הוא שהפאה שיצרנו לא מופיעה בתמונה הסופית, פשוט כי הצעד הבא מפרק אותה לשתי פאות:
 
-<img class="alignnone size-full wp-image-3768" src="https://gadial.net/wp-content/uploads/2019/04/pasted7.png" alt="" width="220" height="449" />
+<img class="alignnone size-full wp-image-3768" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted7.png" alt="" width="220" height="449" />
 
 ונראה לי שהרעיון ברור אז אני אצייר את שתי הקשתות הבאות ביחד:
 
-<img class="alignnone size-full wp-image-3769" src="https://gadial.net/wp-content/uploads/2019/04/pasted8.png" alt="" width="366" height="553" />
+<img class="alignnone size-full wp-image-3769" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted8.png" alt="" width="366" height="553" />
 
 זה מסיים את ה"הוכחה", אבל עדיין צריך להתייחס למקרה שבו הגרף המישורי שלנו איננו אוילרי, מה שמחזיר אותנו לשאלה בסיסית קצת יותר - מתי גרף הוא <strong>כן</strong> אוילרי? כאן נדרשים שני דברים. ראשית, שהגרף יהיה קשיר; אבל אנחנו מניחים שהגרף המישורי שלנו קשיר, כך שזה לא רלוונטי. שנית, צריך ש<strong>הדרגה</strong> של כל צומת תהיה זוגית, פרט אולי לשני צמתים בדיוק. דרגה של צומת היא מספר הקשתות שנוגעות בו; מכיוון שבמסלול אוילרי בכל פעם שבה אנחנו נכנסים לצומת ו"שורפים" את הקשת שאיתה נכנסנו אנחנו גם יוצאים ממנו ו"שורפים" את הקשת שאיתה יצאנו, קל לראות שמספר הקשתות שמתאימות לכל צומת חייב להיות זוגי למעט בצמתי ההתחלה והסיום. האתגר הגדול יותר הוא להראות שזה גם <strong>תנאי מספיק</strong> לכך שיהיה מסלול אוילרי בגרף, אבל אני לא אעשה את זה כאן הפעם אלא רק אשתמש בזה.
 
 בגלל שהקריטריון הזה לאוילריות של גרף הוא כל כך פשוט, אנחנו יכולים לנצל אותו ולהפוך גרף לאוילרי בקלי קלות - פשוט נכפיל את מספר הקשתות. הנה דוגמא:
 
-<img class="alignnone size-full wp-image-3770" src="https://gadial.net/wp-content/uploads/2019/04/pasted9.png" alt="" width="876" height="366" />
+<img class="alignnone size-full wp-image-3770" src="{{site.baseurl}}{{site.post_images}}/2019/04/pasted9.png" alt="" width="876" height="366" />
 
 הגרף הימני הוא הגרף המפורסם של "בעיית הגשרים של קניגסברג" שאוילר פתר. כל הצמתים שם מדרגה אי זוגית ולכן הגרף אינו אוילרי, למרות שהוא בבירור מישורי ובבירור מקיים את נוסחת אוילר ({% equation %}V=4{% endequation %} ו-{% equation %}E=7{% endequation %} ו-{% equation %}F=5{% endequation %}). הגרף השמאלי הוא מה שקורה לגרף הימני כשאני לוקח כל קשת ומפצל אותה לשתיים. ההשפעה של הפיצול הזה על הגרף היא זו:
 <ol>

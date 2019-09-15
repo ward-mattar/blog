@@ -12,7 +12,7 @@ categories:
 
 <a href="http://aprettiershell.gadial.net/">http://aprettiershell.gadial.net/</a>
 
-<a href="http://www.gadial.net/wp-content/uploads/2012/07/Wiley-Coyote-Help.jpg"><img class="alignnone size-full wp-image-2083" title="Wiley-Coyote-Help" src="http://www.gadial.net/wp-content/uploads/2012/07/Wiley-Coyote-Help.jpg" alt="" width="309" height="425" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/07/Wiley-Coyote-Help.jpg"><img class="alignnone size-full wp-image-2083" title="Wiley-Coyote-Help" src="{{site.baseurl}}{{site.post_images}}/2012/07/Wiley-Coyote-Help.jpg" alt="" width="309" height="425" /></a>
 
 קצת רקע למי שלא מכיר אותי: אני גדי, סיימתי תואר שלישי במדעי המחשב לא מזמן, ואני כותב את הבלוג המתמטי הזה כבר חמש שנים בערך. ואני צריך את עזרתכם.
 

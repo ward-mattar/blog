@@ -56,4 +56,4 @@ You can indeed see in the margin how we operated, namely that we added the first
 
 וכמובן, xkcd כבר <a href="http://xkcd.com/895/">אמר את זה</a> הרבה יותר טוב לפני, אפילו אם "לפני" היה בשבוע שעבר.
 
-<a href="http://www.gadial.net/wp-content/uploads/2011/05/teaching_physics.png"><img class="alignnone size-full wp-image-1132" title="teaching_physics" src="http://www.gadial.net/wp-content/uploads/2011/05/teaching_physics.png" alt="" width="692" height="313" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2011/05/teaching_physics.png"><img class="alignnone size-full wp-image-1132" title="teaching_physics" src="{{site.baseurl}}{{site.post_images}}/2011/05/teaching_physics.png" alt="" width="692" height="313" /></a>

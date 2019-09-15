@@ -9,7 +9,7 @@ tags:
   - ספרים
   - תורת הקבוצות
 ---
-<a href="https://github.com/gadial/math-books/raw/master/Set%20Theory.pdf"><img src="http://www.gadial.net/wp-content/uploads/2012/05/hilbert.png" alt="" width="350" height="400" /></a>
+<a href="https://github.com/gadial/math-books/raw/master/Set%20Theory.pdf"><img src="{{site.baseurl}}{{site.post_images}}/2012/05/hilbert.png" alt="" width="350" height="400" /></a>
 
 בשעה טובה אני מרגיש מספיק בטוח בעצמי כדי לשחרר לאוויר העולם גרסה ראשונית של הספר שאני כותב בתורת הקבוצות. <a href="https://github.com/gadial/math-books/raw/master/Set%20Theory.pdf">הנה הוא</a>. <strong>הספר לא גמור</strong>, אבל במצבו הנוכחי אני חושב שהוא כבר יכול לשמש אנשים ולאפשר מתן פידבק. כמה הערות:
 <ul>

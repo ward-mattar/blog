@@ -28,7 +28,7 @@ tags:
 
 אני הולך לדבר רק על שרשראות שמרחב המצבים שלהן סופי, כי שרשראות כאלו ניתנות לתיאור באמצעות <strong>מטריצות</strong>. זאת מכיוון שאפשר לחשוב על כל שרשרת מרקוב בזמן בדיד בתור <strong>הילוך בגרף</strong> מכוון, כאשר הצמתים של הגרף הם המצבים של השרשרת, ועל הקשתות יש משקלים שמתאימים להסתברות המעבר בין צומת אחד לשני. לצורך פשטות, מסמנים את המצבים במספרים מ-1 ועד {% equation %}n{% endequation %}, ואז אפשר לתאר את השרשרת בעזרת מטריצה {% equation %}P{% endequation %} מסדר {% equation %}n\times n{% endequation %} כך ש-{% equation %}P_{ij}{% endequation %} היא ההסתברות לעבור מהמצב {% equation %}i{% endequation %} למצב {% equation %}j{% endequation %}. הנה דוגמה לאיך שזה נראה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/01/markov1.png"><img class="alignnone size-full wp-image-1487" title="markov1" alt="" src="http://www.gadial.net/wp-content/uploads/2012/01/markov1.png" width="177" height="184" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/01/markov1.png"><img class="alignnone size-full wp-image-1487" title="markov1" alt="" src="{{site.baseurl}}{{site.post_images}}/2012/01/markov1.png" width="177" height="184" /></a>
 </strong>
 
 המטריצה המתאימה כאן היא {% equation %}P=\left(\begin{array}{ccc}\frac{1}{3} &amp; \frac{1}{3} &amp; \frac{1}{3}\\\frac{1}{2} &amp; 0 &amp; \frac{1}{2}\\1 &amp; 0 &amp; 0\end{array}\right){% endequation %}. שימו לב לכך שבמטריצה הזו סכום כל שורה הוא 1. זה לא במקרה; השורה ה-{% equation %}i{% endequation %} מייצגת את ההסתברויות לעבור מ-{% equation %}i{% endequation %} לכל אחד מהמצבים האחרים (או להישאר במקום, מה שממודל בתור מעבר ל-{% equation %}i{% endequation %}). מכיוון שאחד מאלו <strong>חייב</strong> לקרות, סכום כל ההסתברויות הוא בדיוק 1. למטריצה כזו, ששורותיה מסתכמות כולן ל-1, קוראים <strong>מטריצה סטוכסטית</strong>, ועוד נראה חשיבות לתכונה הזו בהמשך.
@@ -41,7 +41,7 @@ tags:
 <h2><strong>ואיך אלגברה לינארית מתקשרת אליהן</strong></h2>
 עכשיו בואו נעבור לאקשן. אגנוב דוגמה מהספר של Norris על שרשראות מרקוב פשוט כי היא כל כך מוצלחת. בואו נסתכל על השרשרת הפשוטה הבאה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/01/markov2.png"><img class="alignnone size-full wp-image-1486" title="markov2" alt="" src="http://www.gadial.net/wp-content/uploads/2012/01/markov2.png" width="161" height="184" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/01/markov2.png"><img class="alignnone size-full wp-image-1486" title="markov2" alt="" src="{{site.baseurl}}{{site.post_images}}/2012/01/markov2.png" width="161" height="184" /></a>
 </strong>
 
 לצורך פשטות לא ציירתי את הקשתות מצומת לעצמו (אפשר להסיק מה הערכים שלהן). המטריצה של השרשרת הזו היא {% equation %}P=\left(\begin{array}{ccc}0 &amp; 1 &amp; 0\\0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\\frac{1}{2} &amp; 0 &amp; \frac{1}{2}\end{array}\right){% endequation %}. כעת נותנים לנו תרגיל - למצוא נוסחה כללית עבור ההסתברות לפיה אם נתחיל מהמצב {% equation %}1{% endequation %}, אז כעבור {% equation %}n{% endequation %} צעדים גם כן נהיה במצב 1. בניסוח מטריציוני, שואלים אותנו מהי {% equation %}\left[P^{n}\right]_{11}{% endequation %}. זוהי שאלת אלגברה לינארית למהדרין, והדרך לפתרון שלה עוברת דרך ערכים עצמיים, אז בואו נתחיל מלמצוא את הערכים העצמיים לפי הספר. כאן יש לנו מזל - המטריצה קטנה, אז קל למצוא את הערכים העצמיים שלה, אבל לפעמים זה יכול להיות קשה למדי. הפולינום האופייני הוא

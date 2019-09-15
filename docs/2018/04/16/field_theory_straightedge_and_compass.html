@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"שלוש בעיות הבניה בסרגל ומחוגה של היוונים (או: למה אי אפשר לרבע את המעגל)","dateModified":"2018-04-16T17:48:43+03:00","datePublished":"2018-04-16T17:48:43+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/04/16/field_theory_straightedge_and_compass"},"url":"http://localhost:4000/blog/2018/04/16/field_theory_straightedge_and_compass","description":"אני רוצה לדבר בפוסט הזה על אחד מהסיפורים היפים במתמטיקה - שלוש בעיות בניה שראשיתן בימי יוון העתיקה, שבמשך 2,000 שנים בערך הביסו את כל המתמטיקאים שניסו להתמודד איתן, עד שבמאה ה-19 התברר שכלל אין להן פתרון, מה שגרר את הפיכת אחת מהן למטבע לשון - לא ניתן לרבע את המעגל. בפוסט הזה נסביר מה הבעיות היו (את זה כולם יכולים להבין) ואיך התפתחה המתמטיקה עד לשלב שבו תוכל להתמודד איתן בכבוד (גם את זה כולם יכולים להבין) וגם ניכנס לפרטים הטכניים של למה בדיוק הן לא פתירות (וזה יצריך היכרות כלשהי עם הנושאים שאני מכסה בסדרת הפוסטים הנוכחית בבלוג על אלגברה מופשטת, ובפרט את הפוסט האחרון שעסק בהרחבת שדות). אמנם, כבר יש לי סדרת פוסטים מלפני עשור שעסקה בדיוק בנושא הזה (הנה הפוסט הפותח שלה) אבל אז בגלל המחסור ברקע נתתי סדרת פוסטים מפוזרת למדי; הפעם אני מתכנן לתת פוסט יחיד, שיעמוד בזכות עצמו ככל הניתן (ובתקווה יהיה כתוב טוב יותר מהפוסטים ההם, כי אני מכיר את הנושא טוב יותר כיום). חלק ראשון, ובו יסופר על תלס, אוקלידס, ומה שביניהם אם תשאלו אותי “איפה התחילה המתמטיקה”, התשובה שלי תהיה כפולה: ראשית, היא התחילה מאז הפרהיסטוריה. עוד לפני שהיו לנו שפות, כבר ידענו לספור וכבר היו לנו כלים ששימשו למטרה זו. תרבויות רבות ושונות התעסקו בחישובים שונים ומתוחכמים כבר לפני 4,000 שנים, כשהמפורסמות שבהן הן התרבויות הבבלית והמצרית. עם זאת, למתמטיקה כפי שאנחנו מכירים אותה כיום - התחום הזה עם הוכחות וטענות ומשפטים ואקסיומות - יש נקודת התחלה מאוד ברורה וחד משמעית: יוון העתיקה. ספציפית, נקודת הזמן שבה המתמטיקה כפי שאנחנו מכירים אותה נולדה היא פרק הזמן שבין תאלס - הפילוסוף היווני הידוע הראשון, שחי בסביבות 600 לפני הספירה, ועד אוקלידס שחי בסביבות 300 לפני הספירה. ב-300 השנים הללו התפתחה תורה מתמטית מפוארת למדי שהיו לה תורמים רבים. אז למה לסיים את תקופת הפתיחה עם אוקלידס? בגלל הספר שאוקלידס חיבר, “יסודות”, שהיה סוג של סיכום של הידע המתמטי של התקופה - גאומטריה של המישור, גאומטריה של המרחב ותורת המספרים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>שלוש האקסיומות הראשונות ב”יסודות” מתארות את כללי המשחק הבסיסיים של הגאומטריה בספר. האקסיומות הראשונה והשניה אומרות שבהינתן שתי נקודות, אפשר למתוח <strong>קטע ישר</strong> בין שתיהן ולמשיך את הקטע הזה עד אין קץ בכל אחד משני הכיוונים שלו. האקסיומה השניה אומרת שבהינתן שתי נקודות, אפשר לצייר <strong>מעגל</strong> שמרכזו באחת מהנקודות והוא עובר דרך השניה (“מעגל” הוא אוסף של נקודות בעלות מרחק שווה מנקודה נתונה - “המרכז”; במילים אחרות, הוא לא כל ה”תוכן”, לדבר הזה קוראים <strong>עיגול</strong>). האקסיומות הללו לא הגיעו משום מקום - הן מתארות את “כלי המשחק” שאיתם היוונים עשו גאומטריה - <strong>סרגל ומחוגה</strong>. את שניהם אנחנו מכירים גם כיום:</p>
 
-<p><img class="alignnone size-medium wp-image-3601" src="http://gadial.net/wp-content/uploads/2018/04/Régua_e_compasso-300x208.jpg" alt="" width="300" height="208" /></p>
+<p><img class="alignnone size-medium wp-image-3601" src="http://gadial.net/wp-content/uploads/2018/04/Régua_e_compasso.jpg" alt="" width="300" height="208" /></p>
 
 <p>סרגלים מאפשרים להעביר קווים ישרים; מחוגות מאפשרות להעביר מעגלים. הבדל אחד בין הסרגלים “שלנו” והסרגל של אוקלידס הוא שבסרגלים “שלנו” יש גם שנתות שמאפשרות למדוד אורכים; אצל אוקלידס אין הנחה שקיים דבר כזה וזה לא חלק מהמשחק. באנגלית יש הבחנה בין שני סוגי הסרגלים: בלי שנתות זה Straightedge ועם שנתות זה Ruler.</p>
 
@@ -125,7 +125,7 @@
 
 <p>מה היה כל כך גאוני בגאומטריה אנליטית? שזה היה תחום שהמיר לחלוטין את הדיון על אובייקטים גאומטריים כמו ישר או מעגל בדיון על <strong>פתרונות של מערכות של משוואות</strong>, כלומר זו המרה מוחלטת של הגאומטריה לאלגברה. בגאומטריה האנליטית “שדה המשחק” הוא הקבוצה <span>$latex \mathbb{R}\times\mathbb{R}$</span> של זוגות של מספרים ממשיים שמייצגים נקודות במישור - <span>$latex \left(a,b\right)$</span> היא הנקודה שקואורדינטת ה-<span>$latex x$</span> שלה היא <span>$latex a$</span> וקואורדינטת ה-<span>$latex y$</span> שלה היא <span>$latex b$</span>.</p>
 
-<p><img class="alignnone size-medium wp-image-3602" src="http://gadial.net/wp-content/uploads/2018/04/376px-2D_Cartesian_Coordinates.svg_-300x259.png" alt="" width="300" height="259" /></p>
+<p><img class="alignnone size-medium wp-image-3602" src="http://gadial.net/wp-content/uploads/2018/04/376px-2D_Cartesian_Coordinates.svg_.png" alt="" width="300" height="259" /></p>
 
 <p>המושגים הללו נראים לנו כל כך טבעיים היום, שצריך להזכיר שוב ושוב שפעם <strong>הם לא היו טבעיים בכלל</strong>. היה צריך להמציא אותם. היום אנחנו רואים אותם בבית הספר, ובגרפים שונים ומשונים, ובכל מקום. <strong>ברוב ההיסטוריה האנושית הם לא היו קיימים</strong>. זה מדהים במיוחד, בהתחשב בעובדה שקואורדינטות דו-ממדיות היו קיימות עוד מהעת העתיקה ב<strong>מפות</strong>. מפות חייבות קווי אורך ורוחב, והאנושות הכירה את המושגים הללו מאז מי יודע מתי; אבל הקישור בין המושגים הללו ובין העולם המתמטי לא היה קיים.</p>
 

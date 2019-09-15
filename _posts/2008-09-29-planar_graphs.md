@@ -9,7 +9,7 @@ categories:
 ---
 די מפתיעה אותי כמות הנשמות התועות שמגיעות לבלוג הזה בחיפושים נואשים אחרי פתרון לחידת ה"מים, חשמל, גז". גיגול קצר הראה כי החידה המטופשת הזו אכן פופולרית למדי - אפילו יש <a href="http://www.flashy.co.il/games/online/SuPuzzle/806/">משחקי פלאש</a> עבורה. הנה תיאור קצר למי שאינו מכיר: ישנם שלושה בתים ושלושה מקורות שונים - מקור מים, מקור חשמל ומקור גז. רוצים להעביר קווים מכל אחד מהמקורות לכל אחד מהבתים (על דף דו ממדי) בלי שאף שני קווים יחתכו זה את זה. כיצד ניתן לעשות זאת?
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/gas-water-electricity1.png"><img class="alignnone size-full wp-image-366" title="gas-water-electricity" alt="" src="http://www.gadial.net/wp-content/uploads/2008/09/gas-water-electricity1.png" width="319" height="248" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/gas-water-electricity1.png"><img class="alignnone size-full wp-image-366" title="gas-water-electricity" alt="" src="{{site.baseurl}}{{site.post_images}}/2008/09/gas-water-electricity1.png" width="319" height="248" /></a>
 
 ובכן, התשובה הקצרה: <strong>לא ניתן</strong>. זו מהחידות האידיוטיות שאין להן פתרון, אבל מצליחות לשגע כמות לא מועטה של ילדים קטנים שמישהו עם נטיות סאדיסטיות מחליט להשתעשע איתם. זה לא הוגן, שכן למרות שהוכחה לכך שהחידה אינה פתירה איננה כה מסובכת, קשה לצפות מהאדם הממוצע לעלות עליה.
 
@@ -19,13 +19,13 @@ categories:
 
 נתחיל ב<a href="http://www.gadial.net/?p=125">תזכורת</a> קצרה. <a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%92%D7%A8%D7%A4%D7%99%D7%9D">גרף מתמטי</a> (מהסוג שעליו אנחנו מדברים - לא זה שהוא שרטוט של פונקציה) הוא אוסף של <strong>צמתים</strong>, שמסומנים לרוב בנקודות או בעיגולים, ו<strong>קשתות</strong> שמחברות חלק מזוגות הצמתים. באופן כללי גרף לא צריך להיות מתואר באמצעות ציור; מספיק לתאר אותו באמצעות קבוצת הצמתים (שיכולה פשוט להיות קבוצה של מספרים: "צומת מס' 1", "צומת מס' 2" וכו') וקבוצת הקשתות ("צומת 3 מחובר לצומת 5"...). כל גרף ניתן לצייר בהמוני דרכים שונות על נייר, בפרט אם לא דורשים שהקשתות יהיו קווים ישרים; הנה דוגמה לאותו גרף כשאנו מציירים אותו בשתי דרכים שונות:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/pg1.png"><img class="aligncenter size-full wp-image-3156" alt="pg1" src="http://www.gadial.net/wp-content/uploads/2008/09/pg1.png" width="712" height="352" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/pg1.png"><img class="aligncenter size-full wp-image-3156" alt="pg1" src="{{site.baseurl}}{{site.post_images}}/2008/09/pg1.png" width="712" height="352" /></a>
 
 מה שמעניין כאן הוא שבציור השמאלי, הקשתות של הגרף חותכות זו את זו (הקשת שמחברת את 2 עם 3 חותכת את הקשת שמחברת את 4 עם 1), אבל בציור הימני אף קשת לא חותכת אף קשת אחרת. מכאן אנו למדים שהתכונה "אם מציירים את הגרף על נייר, אין שתי קשתות שחותכות זו את זו" איננה טריוויאלית לחלוטין; יכולים להיות גרפים שהתיאור הרגיל שלהם על הנייר נראה מסובך ומלא חיתוכים פנימיים, אבל אפשר איכשהו לצייר אותם בלי שאף שתי קשתות יחתכו זו את זו. לגרף כזה, שניתן לצייר איכשהו על נייר דו ממדי ("מישור") מבלי שאף שתי קשתות יחתכו זו את זו קוראים "גרף מישורי" (Planar Graph).
 
 כעת יש לנו ניסוח טוב יותר של חידת המים-חשמל-גז: האם הגרף הבא הוא מישורי?
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/pg2.png"><img class="aligncenter size-full wp-image-3157" alt="pg2" src="http://www.gadial.net/wp-content/uploads/2008/09/pg2.png" width="505" height="348" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/pg2.png"><img class="aligncenter size-full wp-image-3157" alt="pg2" src="{{site.baseurl}}{{site.post_images}}/2008/09/pg2.png" width="505" height="348" /></a>
 
 לגרף הזה יש שם: "הגרף הדו צדדי השלם עם 3 על 3 צמתים". גרף דו צדדי הוא גרף שניתן לחלק את צמתיו לשתי קבוצות (ללא איברים משותפים), כך שאין קשת בין אברי אותה קבוצה (ובמילים אחרות - קשת עוברת רק בין איבר מקבוצה א' לאיבר מקבוצה ב'). כאן אברי הקבוצה האחת מסומנים במספרים, ואברי הקבוצה האחרת - באותיות. בדוגמה המקורית קבוצה אחת הייתה קבוצת הבתים, והקבוצה השנייה הייתה קבוצת המקורות. פירוש המילה "שלם" כאן היא שכל קשת אפשרית (שתשאיר את הגרף דו-צדדי) קיימת בגרף - כל צומת מקבוצה א' מחובר לכל צומת מקבוצה ב'. ה"3 על 3 צמתים" פירושו שכל אחת משתי הקבוצות היא מגודל 3. את הגרף הדו צדדי הספציפי הזה מסמנים בתור {% equation %}K_{3,3}{% endequation %} (באופן כללי, {% equation %}K_{p,q}{% endequation %} פירושו גרף דו צדדי שלם על קבוצות מגודל {% equation %}p{% endequation %} ו-{% equation %}q{% endequation %}).
 
@@ -35,17 +35,17 @@ categories:
 
 הרעיון הבסיסי הוא זה: נסתכל על המעגל שנוצר מחיבור הקשתות 1-א'-2-ב'-3-ג'-1 (הקשת מ-1 אל א'; הקשת מא' אל 2, וכו'). זה לא מעגל במובן הרגיל מגאומטריה, אלא פשוט מסלול בגרף שמתחיל ומסתיים באותו מקום. בכל צורה שבה נצייר את הגרף במישור, אוסף כל הקשתות הללו יתחום איזור כלשהו ויחלק אותו ל"פנים" ו"חוץ". גם את זה כדאי להמחיש עם ציור:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/pg3.png"><img class="aligncenter size-full wp-image-3158" alt="pg3" src="http://www.gadial.net/wp-content/uploads/2008/09/pg3.png" width="576" height="380" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/pg3.png"><img class="aligncenter size-full wp-image-3158" alt="pg3" src="{{site.baseurl}}{{site.post_images}}/2008/09/pg3.png" width="576" height="380" /></a>
 
 נניח לרגע שהקשת שעוברת בין 1 לב' עוברת בתוך ה"פנים" של המעגל; כפי שנראה בהמשך, ההנחה הזו לא פוגעת בהוכחה. אחרי שנעביר את הקשת נקבל את הדבר הבא:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/pg4.png"><img class="aligncenter size-full wp-image-3154" alt="pg4" src="http://www.gadial.net/wp-content/uploads/2008/09/pg4.png" width="597" height="432" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/pg4.png"><img class="aligncenter size-full wp-image-3154" alt="pg4" src="{{site.baseurl}}{{site.post_images}}/2008/09/pg4.png" width="597" height="432" /></a>
 
 מה קורה כעת עם הקשת א'-3? היא חייבת להימתח מחוץ לפנים המעגל; כי אם היא נמתחת בפנים, היא בהכרח תחתוך את הקשת 1-ב'. זה ברור מהציור, אבל גם פורמלית ניתן להראות זאת, בהסתמך על כך שהמעגל 1-ב'-3-ג'-1 מחלק את העולם ל"פנים" ו"חוץ" בעצמו, והנקודה א' נמצאת ב"חוץ", כך שקו שנמצא ב"פנים" ומגיע אל א' חייב לעבור דרך קשתות המעגל בשלב מסויים.
 
 אם כן, נמתח את הקשת בחוץ ונקבל משהו שכזה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/09/pg5.png"><img class="aligncenter size-full wp-image-3155" alt="pg5" src="http://www.gadial.net/wp-content/uploads/2008/09/pg5.png" width="597" height="466" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/09/pg5.png"><img class="aligncenter size-full wp-image-3155" alt="pg5" src="{{site.baseurl}}{{site.post_images}}/2008/09/pg5.png" width="597" height="466" /></a>
 
 אבל כעת לא ניתן למתוח קו מ-2 אל ג', מאותם נימוקים. אם מלכתחילה היינו מציירים את 1-ב' בחוץ היינו "כולאים" צומת כלשהי בצורה דומה לכך שצומת מס' 2 נכלאה, ולכן גם אז היינו מגיעים לסתירה.
 

@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"מספרים קונגרואנטים, ואיך זה קשור לעקומים אליפטיים","dateModified":"2010-05-02T12:31:01+03:00","datePublished":"2010-05-02T12:31:01+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/05/02/congruent_numbers_and_elliptic_curves"},"url":"http://localhost:4000/blog/2010/05/02/congruent_numbers_and_elliptic_curves","description":"עקומים אליפטיים זכו לחשיפה רחבה יחסית בעשורים האחרונים, במיוחד בשל הקשר שלהם להוכחת המשפט האחרון של פרמה, והקשר שלהם לקריפטוגרפיה. לטעמי אכן מדובר בתחום מעניין ביותר, אף כי איני מבין בו כמעט שום דבר. למרות זאת אנסה לתאר (כאן ובפוסטים עתידיים) מקצת מהתיאוריה שלהם; בתקווה, אוכל אפילו לתאר באופן כללי ביותר את הרעיון שמאחורי הוכחת המשפט האחרון של פרמה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -121,7 +121,7 @@
 
 <p>הנה איך כל זה נראה מעל <span>$latex \mathbb{R}$</span>:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2010/05/ec.png"><img class="alignnone size-full wp-image-488" title="ec" src="http://www.gadial.net/wp-content/uploads/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2010/05/ec.png"><img class="alignnone size-full wp-image-488" title="ec" src="/blog/assets/img/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a></strong></p>
 
 <p>התמונה קצת מבלבלת כי יש עקומים שלא נראים כך, ומורכבים רק מחתיכה אחת, אבל זה נותן את הרעיון הכללי. כמו שאפשר לראות מהתמונה, עקומים אליפטיים לא מזכירים בכלל אליפסות. אז למה “אליפטיים”? מסיבות היסטוריות (קשר לאינטגרלים אליפטיים, שנקראים כך כי הם צצו לראשונה בהקשר של חישוב אורך קשת של אליפסה) שלא אציג כרגע.</p>
 
@@ -129,7 +129,7 @@
 
 <p>כעת הפאנץ’ - כל עקום אליפטי מהווה חבורה אבלית, ביחס לפעולת “חיבור”משונה למדי (משונה, במבט ראשון). מכיוון שהתגובה הראשונית לתיאור הפעולה הזו היא משעשעת למדי, אתאר אותה כאן בזריזות - הסבר אמיתי יגיע בפוסט נפרד. באופן כללי, הרעיון הוא כזה: כדי לחבר שתי נקודות <span>$latex P,Q$</span> על העקום, יש להעביר את הישר שעובר דרך שתיהן. אם הוא לא חתך שוב את העקום, אז סכום הנקודות יהיה <span>$latex \mathcal{O}$</span>; אבל אם הוא כן חתך אותו שוב… ובכן, מתבקש להגדיר את נקודות החיתוך בתור <span>$latex P+Q$</span>, נכון? אבל במקום זה, לוקחים את השיקוף ביחס לציר <span>$latex x$</span> של נקודת החיתוך בתור <span>$latex P+Q$</span>. מה, לא ברור?</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg"><img class="alignnone size-full wp-image-489" title="elliptic" src="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2010/05/elliptic.jpg"><img class="alignnone size-full wp-image-489" title="elliptic" src="/blog/assets/img/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a></strong></p>
 
 <p>הנקודה באינסוף <span>$latex \mathcal{O}$</span> משמשת בתור היחידה ביחס לחיבור, כלומר <span>$latex P+\mathcal{O}=P$</span> לכל <span>$latex P$</span>. ההופכי של כל נקודה <span>$latex P$</span> הוא פשוט השיקוף שלה ביחס לציר <span>$latex x$</span>, ולכן אפשר לתאר את כלל החיבור גם באופן הבא: אם <span>$latex P,Q,R$</span> הן שלוש נקודות של העקום שנמצאות על אותו ישר, אז <span>$latex P+Q+R=\mathcal{O}$</span> (למה זה באמת שקול למה שתיארתי קודם?). לבסוף צריך להבהיר איך מחברים נקודה עם עצמה - אם רוצים לחשב את <span>$latex P+P$</span> הרי לא ניתן להעביר ישר “דרך <span>$latex P$</span> וגם דרך <span>$latex P$</span>“כי ישנם אינסוף ישרים שכאלו. מה שכן עושים הוא לקחת את הישר ש<strong>משיק</strong> לעקום האליפטי בנקודה <span>$latex P$</span> (כאן נכנסת לתמונה העובדה שהעקום הוא חלק, ולכן ניתן להעביר לו משיק שכזה), ומכאן ממשיכים כרגיל - מוצאים את נקודת החיתוך הנוספת עם העקום (אם אין כזו, <span>$latex P+P=\mathcal{O}$</span>) ולוקחים את השיקוף שלה.</p>
 

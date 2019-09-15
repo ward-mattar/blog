@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"משפט הערך הממוצע של לגראנז’","dateModified":"2019-06-17T17:59:37+03:00","datePublished":"2019-06-17T17:59:37+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem"},"url":"http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem","description":"ביקשו ממני לסגור את אחד החורים המציקים שיש בבלוג - לתאר את משפט הערך הממוצע של לגראנז’, שהוא אחד מהתוצאות הבסיסיות והמעניינות ביותר שמלמדים על נגזרות. כתבתי בשעתו פוסט שמתאר מהן נגזרות והוא הרקע שדרוש כדי להבין את משפט לגראנז’; אבל אל לגראנז’ עצמו לא הגעתי. אז נתחיל עם תזכורת קטנה על מה מדובר.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -107,7 +107,7 @@
 
 <p>ראשית, אי אפשר בלי להזכיר את האופן הגאומטרי שבו אנחנו רואים את המשפט. כשאנחנו מציירים פונקציה, אנחנו מציירים נקודות שהקואורדינטות שלהן הן מהצורה <span>$latex \left(x,f\left(x\right)\right)$</span> (כלומר, <span>$latex f\left(x\right)$</span> היא קואורדינטת ה-<span>$latex y$</span> של הציור). נקודות הקצה של הפונקציה הן <span>$latex \left(a,f\left(a\right)\right)$</span> ו-<span>$latex \left(b,f\left(b\right)\right)$</span>. אם ניזכר איך הולכים דברים בגאומטריה אנליטית נראה שהביטוי <span>$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}$</span> הוא <strong>שיפוע הישר</strong> שמחבר את שתי הנקודות הללו. עכשיו, מה זו נגזרת? המשמעות של נגזרת בנקודה כלשהי היא <strong>שיפוע המשיק</strong> לפונקציה בנקודה הזו. לכן לגראנז’ אומר שיש נקודה כלשהי על גרף הפונקציה ששיפוע המשיק לאותה נקודה זהה לשיפוע הישר שמחבר את שני קצוות הפונקציה. הנה איור באדיבות ויקיפדיה העברית:</p>
 
-<p><img class="alignnone size-full wp-image-3781" src="https://gadial.net/wp-content/uploads/2019/06/Mv4_he.svg_.png" alt="" width="1024" height="931" /></p>
+<p><img class="alignnone size-full wp-image-3781" src="/blog/assets/img/2019/06/Mv4_he.svg_.png" alt="" width="1024" height="931" /></p>
 
 <p>איך מוכיחים את המשפט? כאן צריך להיזהר עם האינטואיציה שלנו, שעשויה להטעות אותנו. נחזור אל דוגמת הרכב שנסע במהירות של 100 קמ”ש ואז ירד למהירות של 40 קמ”ש. האינטואיציה שלנו אומרת שבירידה מ-100 קמ”ש אל 40 קמ”ש הייתה חייבת להיות שניה שבה המהירות הייתה 80 קמ”ש, כי אנחנו חושבים על מהירות בתור משהו ש<strong>משתנה באופן רציף</strong>. יש לדבר הזה פורמליזם בחדו”א: פונקציה <span>$latex f$</span> היא <strong>רציפה</strong> בנקודה <span>$latex a$</span> אם <span>$latex \lim_{x\to a}f\left(x\right)=f\left(a\right)$</span> (כלומר, הערך שנראה ש-<span>$latex f$</span> “אמורה לקבל” ב-<span>$latex a$</span> הוא מה שמתקבל בפועל). אם יש לנו פונקציה רציפה, אז יש לנו עבורה משהו שנקרא <strong>משפט ערך הביניים</strong> שאומר שאם <span>$latex y$</span> הוא ערך כלשהו שנמצא בין <span>$latex f\left(a\right)$</span> ו-<span>$latex f\left(b\right)$</span>, אז קיים <span>$latex x\in\left[a,b\right]$</span> כך ש-<span>$latex f\left(x\right)=y$</span>. בפרט, מהירות של 80 קמ”ש נמצאת בין 100 קמ”ש ו-40 קמ”ש ולכן היא חייבת להתקבל מתישהו.</p>
 

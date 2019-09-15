@@ -16,13 +16,13 @@ categories:
 
 הנה דוגמה ל-Trie שאליו הוכנסו המילים הבאות: "Math$", "Suffix$", "Suffer$", "Journeyman$", "Journal$", "Journey$". הדולר בסוף כל מילה הוא חלק סטנדרטי מכל Trie - זה סימון מוסכם ל"כאן נגמרת מילה". בלי זה, היה קשה להבחין שהעץ מכיל גם את "Journey" וגם את "Journeyman":
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/trie.png" title="Trie"><img src="http://www.gadial.net/wp-content/uploads/2008/05/trie.png" alt="Trie" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/trie.png" title="Trie"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/trie.png" alt="Trie" /></a>
 
 ממבט ראשון זה נראה מבלבל למדי. הרעיון הוא שכל צומת מייצג רישא של מילה כלשהי שמאוחסנת בעץ, כשהשורש מייצג את הרישא ה"ריקה", שאינה מכילה אף אות. כל צומת מסומנת על ידי אות אחת או יותר, ומתארת את ההבדל בין שתי הרישות שהיא מחברת - למשל, הקשת שמסומנת ב-"Suff" פירושה שהרישא שמייצגת הצומת התחתונה יותר היא הרישא שמייצגת הצומת העליונה, ועוד המחרוזת "Suff" לאחר מכן. כפי שאפשר לראות, הרישא "Suff" בעצמה היא בעלת שני בנים אפשריים - גם המילה "$Suffer" וגם המילה "$Suffix" מתחילות בה.
 
 אם כן, זהו Trie. יש לו שימושים בפני עצמו, אבל אני רוצה להגיע בזריזות לסוג ה-Trie שמעניין אותי - עץ סיומות, Suffix Tree (ובשם אחר - "עץ סיפות", מהמילה סיפא). מרגע שברור מהו Trie לא קשה להבין מהו עץ סיומות - זהו Trie שהמחרוזות שהוא מכיל הן בדיוק כל הסיומות של מילה כלשהי. דוגמה נפוצה היא עץ סיומות עבור המילה "$banana" - עץ שנראה כך:
 
-<a href="http://www.gadial.net/wp-content/uploads/2008/05/suffix_tree.png" title="Suffix Tree"><img src="http://www.gadial.net/wp-content/uploads/2008/05/suffix_tree.png" alt="Suffix Tree" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2008/05/suffix_tree.png" title="Suffix Tree"><img src="{{site.baseurl}}{{site.post_images}}/2008/05/suffix_tree.png" alt="Suffix Tree" /></a>
 
 יש הבדל בולט בין העץ הזה ובין Trie סטנדרטי - בצמתים עכשיו כתוב מספר. עבור עלה (צומת ללא בנים) המספר מציין את המיקום במילה שבו מתחילה הסיפא שמיוצגת על ידי העלה. כן. זה היה מבלבל. מאוד. בואו ננסה שוב, על ידי דוגמה.
 

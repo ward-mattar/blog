@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"האלגוריתם האוקלידי וחוגים אוקלידיים","dateModified":"2011-09-12T18:51:18+03:00","datePublished":"2011-09-12T18:51:18+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/09/12/euclidean_algorithm_and_rings"},"url":"http://localhost:4000/blog/2011/09/12/euclidean_algorithm_and_rings","description":"האלגוריתם האוקלידי הוא אחד מאותם דברים שכל מי שמתעניין ולו קצת במתמטיקה צריך לדעת. הוא גם אחת מהדוגמאות העתיקות ביותר לאלגוריתם לא טריוויאלי, גם אחד מאבני היסוד של תורת המספרים האלגוריתמית, וגם רעיון בסיסי בעל הכללות חשובות בתורת החוגים. למרות שהזכרתי אותו קצת בעבר בבלוג הגיע הזמן לתת לו (ולהכללה הרעיונית שלו) פוסט משל עצמו.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -112,13 +112,15 @@
 	<li> הצב <span>$latex a\leftarrow b,b\leftarrow r$</span>.</li>
 	<li> חזור אל 1.</li>
 </ol>
-<p>אני אישית חושב שלראות קוד אמיתי אפילו יותר ברור כאן, אז הנה קוד בשפת רובי, שמשתמש ברקורסיה:
-[ruby]
-def gcd(a,b)
-  return a if b == 0
-  return gcd(b, a % b)
-end
-[/ruby]</p>
+<p>אני אישית חושב שלראות קוד אמיתי אפילו יותר ברור כאן, אז הנה קוד בשפת רובי, שמשתמש ברקורסיה:</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">a</span> <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 
 <p>בעולם האמיתי רצוי לשפר את הקוד כך שיטפל גם במקרים שבהם <span>$latex a&lt;b$</span> או שהמספרים לא בהכרח חיוביים, אבל נעזוב את זה.</p>
 
@@ -128,17 +130,19 @@ end
 
 <p><span>$latex \left(a,b\right)=\left(b,r\right)=bx+\left(a-qb\right)y=ay+\left(x-qy\right)b$</span></p>
 
-<p>וכאן אני מקווה שהעיקרון כבר אמור להיות ברור - אני <strong>מאוד</strong> ממליץ לכם להפסיק לקרוא לרגע ולכתוב בעצמכם את האלגוריתם שמבצע את החישוב הכללי. למי שמתעצל, הנה הקוד שאני כתבתי:
-[ruby]
-def extended_gcd(a,b)
-  return [a,1,0] if b == 0
-  q = a / b
-  r = a % b
-  gcd, x, y = extended_gcd(b,r)
-  return [gcd, y, x-q*y]
-end
-[/ruby]
-אם כן, בסופו של דבר גם האלגוריתם האוקלידי המורחב הוא פשוט מאוד למימוש. בספרים בדרך כלל לא נכנסים לפירוט הזה אלא מסתפקים בלהראות איזו דוגמה ולהגיד שאפשר למצוא את <span>$latex x,y$</span> על ידי “חזרה לאחור” בחישוב של האלגוריתם האוקלידי הרגיל, וחבל.</p>
+<p>וכאן אני מקווה שהעיקרון כבר אמור להיות ברור - אני <strong>מאוד</strong> ממליץ לכם להפסיק לקרוא לרגע ולכתוב בעצמכם את האלגוריתם שמבצע את החישוב הכללי. למי שמתעצל, הנה הקוד שאני כתבתי:</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">extended_gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="n">q</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+  <span class="n">gcd</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">extended_gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">r</span><span class="p">)</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">gcd</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">-</span><span class="n">q</span><span class="o">*</span><span class="n">y</span><span class="p">]</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
+<p>אם כן, בסופו של דבר גם האלגוריתם האוקלידי המורחב הוא פשוט מאוד למימוש. בספרים בדרך כלל לא נכנסים לפירוט הזה אלא מסתפקים בלהראות איזו דוגמה ולהגיד שאפשר למצוא את <span>$latex x,y$</span> על ידי “חזרה לאחור” בחישוב של האלגוריתם האוקלידי הרגיל, וחבל.</p>
 
 <p>זה מסיים את נושא האלגוריתם האוקלידי. לטעמי הוא דוגמה קלאסית לנושא שפשוט חייבים ללמד בבית הספר ופשוט לא עושים את זה, וחבל. כעת אעבור לדבר על נושא שלא מלמדים בבית הספר, ומזל, כי זה כבר כנראה קצת יותר מדי - מה קורה כשרוצים להכליל את האלגוריתם האוקלידי גם לדברים שאינם המספרים השלמים.</p>
 

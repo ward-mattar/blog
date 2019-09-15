@@ -24,7 +24,8 @@ tags:
 
 הנה הקוד שלי:
 
-[ruby]
+<div class="code-block">
+{% highlight ruby %}
 class Array
   def exist?
     each{|x| return true if yield(x)}
@@ -38,7 +39,8 @@ end
 sides = ARGV.collect{|x| x.to_i}
 print &quot;il&quot; if sides.exist?{|a| 2*a &gt; sides.sum}
 puts &quot;legal triangle&quot;
-[/ruby]
+{% endhighlight %}
+</div>
 
 שורה 12 היא העיקר כאן. אני משתמש בתעלול דלוח שמתבסס על כך שההבדל באנגלית בין לומר "משולש חוקי" ובין לומר "משולש לא חוקי" הוא il שמופיעות בהתחלה, והתנאי לכתיבה של il הזה הוא בדיוק מה שאמרתי קודם - מבין הצלעות של המשולש, קיימת כזו שהגודל שלה כפול 2 גדול מסכום אורכי הצלעות.
 
@@ -49,30 +51,36 @@ puts &quot;legal triangle&quot;
 
 כאן אני קצת תוהה מה השאלה הזו עושה בחלק השני של הספר - היא קלה ולא מחכימה. אבל מילא. הפתרון הוא של שורה קצרה אחת וזהו:
 
-[ruby]
+<div class="code-block">
+{% highlight ruby %}
 a, b = ARGV.collect{|x| x.to_i}
 puts (a/b) + 1
-[/ruby]
+{% endhighlight %}
+</div>
 
 למה זה עובד? כי {% equation %}a/b{% endequation %} נותן את מה שמקבלים כשמחלקים את {% equation %}a{% endequation %} ב-{% equation %}b{% endequation %} כשהוא מעוגל כלפי מטה לשלם הקרוב ביותר. תוסיפו לזה 1, ומובטח שכפל ב-{% equation %}b{% endequation %} יקפיץ אותנו מעל {% equation %}a{% endequation %}. אפילו לא הצלחתי לחשוב על אספקט מעניין של רובי שאפשר לתאר פה. בואו נעבור הלאה.
 
 <strong>בעיה מס' 23</strong>
 כאן מקבלים מספר כלשהו ומוצאים מה המספר שצריך להוסיף לו כדי לקבל משהו שמתחלק ב-10. הפתרון המקורי בספר מסובך נורא, כי כנראה חסר לו אופרטור סטנדרטי בשפות תכנות, של מודולו. {% equation %}a % b{% endequation %} הוא שארית החלוקה של {% equation %}a{% endequation %} ב-{% equation %}b{% endequation %} וכמעט מה שאנחנו צריכים פה:
 
-[ruby]
+<div class="code-block">
+{% highlight ruby %}
 a = ARGV.first.to_i
 puts (10 - a) % 10
-[/ruby]
+{% endhighlight %}
+</div>
 
 ההוכחה שזה עובד היא חשבון מודולרי בסיסי ואשאיר אותה לכם. רק שימו לב להתנהגות של % על מספרים שליליים: למשל, {% equation %}-3 % 10 = 7{% endequation %}. הסיבה לכך היא שההגדרה של מודולו היא בעצם קצת יותר מורכבת מזו שנתתי למעלה - המשמעות המדויקת של {% equation %}a % b{% endequation %} היא "המספר {% equation %}x{% endequation %} בין 0 ל-{% equation %}b-1{% endequation %} כך שההפרש {% equation %}a-x{% endequation %} מתחלק על ידי {% equation %}b{% endequation %}".
 
 <strong>בעיה מס' 24</strong>
 זו השאלה ה"קלה מדי" האחרונה, ובמובן מסויים גם הגרועה שבכולן. נתון לנו ריבוע עם אורך צלע {% equation %}a{% endequation %} ובונים ממנו ריבוע חדש, על ידי כך שמותחים קווים בין אמצעי הצלעות של הריבוע הקיים. השאלה היא מה שטח הריבוע החדש. הנה פתרון ישיר:
 
-[ruby]
+<div class="code-block">
+{% highlight ruby %}
 a = ARGV.first.to_i
 puts 2*(a.to_f/2)**2
-[/ruby]
+{% endhighlight %}
+</div>
 
 מה עשיתי פה? משפט פיתגורס. אם אורך הצלע של הריבוע המקורי היא {% equation %}a{% endequation %} אז ממשפט פיתגורס, <strong>ריבוע</strong> אורך הצלע של הריבוע החדש - כלומר, השטח שלו - הוא {% equation %}2\left(\frac{a}{2}\right)^2{% endequation %}. למה? כי ציירו את זה רגע לעצמכם ושימו לב שכל צלע של הריבוע החדש היא היתר במשולש ישר זווית שבו הניצבים הם חצי מצלע הריבוע. אם הייתי טורח לפתוח את הביטוי הייתם רואים ששטח הריבוע הוא בדיוק חצי משטח הריבוע המקורי (וגם תעלול של חפיפת משולשים יראה את זה, למי שרוצים הוכחה גאומטרית).
 

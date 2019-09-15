@@ -66,14 +66,14 @@ tags:
 
 ההמחשה הטובה ביותר לאופי של הנורמות הללו, לטעמי, היא הציור של "מעגל היחידה" בכל אחד מהן - אוסף כל הנקודות שהמרחק שלהן מהראשית הוא 1, כלומר הוקטור שמתחיל בראשית ונגמר בהן הוא מנורמה 1:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png"><img class="alignnone size-full wp-image-1524" title="140px-Vector_norms.svg" src="http://www.gadial.net/wp-content/uploads/2012/03/140px-Vector_norms.svg_.png" alt="" width="140" height="460" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/03/140px-Vector_norms.svg_.png"><img class="alignnone size-full wp-image-1524" title="140px-Vector_norms.svg" src="{{site.baseurl}}{{site.post_images}}/2012/03/140px-Vector_norms.svg_.png" alt="" width="140" height="460" /></a>
 </strong>
 
 למי שהאיור הזה נראה לו מופרך לגמרי - נסו זאת בעצמכם! נסו לחשוב כיצד לצייר את מעגלי היחידה עבור שתי הנורמות ה"חדשות". זה קל באופן מפתיע ואחרי זה המעגלים הללו לא ייראו מוזר כל כך.
 
 כעת אני רוצה לטעון שיש תכונה שכל נורמה שמושרית ממכפלה פנימית חייבת לקיים - תכונה שהיא גאומטרית במהותה: <strong>כלל המקבילית</strong>. נניח שיש לנו שני וקטורים, {% equation %}a,b{% endequation %}. אפשר לחשוב עליהם כעל שתי צלעות של מקבילית. לא קשה לראות שהאלכסונים של אותה מקבילית יהיו {% equation %}a+b{% endequation %} ו-{% equation %}a-b{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png"><img class="alignnone size-full wp-image-1525" title="Parallelogram_law" src="http://www.gadial.net/wp-content/uploads/2012/03/Parallelogram_law.png" alt="" width="311" height="414" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/03/Parallelogram_law.png"><img class="alignnone size-full wp-image-1525" title="Parallelogram_law" src="{{site.baseurl}}{{site.post_images}}/2012/03/Parallelogram_law.png" alt="" width="311" height="414" /></a></strong>
 
 כעת, כלל המקבילית הוא מין הכללה של משפט פיתגורס: סכום ריבועי אורכי כל צלעות המקבילית שווה לסכום ריבועי אורכי האלכסונים. בלשון נורמות:
 

@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פרוייקט “התלמיד והמחשב”, בעיות 21-24","dateModified":"2014-03-30T01:38:04+03:00","datePublished":"2014-03-30T01:38:04+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/03/30/student_and_computer_21-24"},"url":"http://localhost:4000/blog/2014/03/30/student_and_computer_21-24","description":"בשעה טובה הגענו בפרוייקט &quot;התלמיד והמחשב&quot; לחלקו השני של הספר - חלק שאמור להבטיח שאלות קצת יותר מעניינות מאשר בחלק הראשון, אבל בתרגילים הראשונים שעליהם אדבר הפעם לא ממש מקיים. לכן אעבור על הבעיות יחסית במהירות ואפתור אותן רק ברובי. עדיין, יש כמה דברים נחמדים שיצא לי לספר תוך כדי, אז אל תברחו.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -103,21 +103,23 @@
 
 <p>הנה הקוד שלי:</p>
 
-<p>[ruby]
-class Array
-  def exist?
-    each{|x| return true if yield(x)}
-    false
-  end
-  def sum
-    inject(:+)
-  end
-end</p>
+<div class="code-block">
 
-<p>sides = ARGV.collect{|x| x.to_i}
-print "il" if sides.exist?{|a| 2*a &gt; sides.sum}
-puts "legal triangle"
-[/ruby]</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Array</span>
+  <span class="k">def</span> <span class="nf">exist?</span>
+    <span class="n">each</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="k">return</span> <span class="kp">true</span> <span class="k">if</span> <span class="k">yield</span><span class="p">(</span><span class="n">x</span><span class="p">)}</span>
+    <span class="kp">false</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">sum</span>
+    <span class="n">inject</span><span class="p">(:</span><span class="o">+</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">sides</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">.</span><span class="nf">to_i</span><span class="p">}</span>
+<span class="nb">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">il</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="k">if</span> <span class="n">sides</span><span class="p">.</span><span class="nf">exist?</span><span class="p">{</span><span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span> <span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">sides</span><span class="p">.</span><span class="nf">sum</span><span class="p">}</span>
+<span class="nb">puts</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="n">legal</span> <span class="n">triangle</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span></code></pre></figure>
+
+</div>
 
 <p>שורה 12 היא העיקר כאן. אני משתמש בתעלול דלוח שמתבסס על כך שההבדל באנגלית בין לומר “משולש חוקי” ובין לומר “משולש לא חוקי” הוא il שמופיעות בהתחלה, והתנאי לכתיבה של il הזה הוא בדיוק מה שאמרתי קודם - מבין הצלעות של המשולש, קיימת כזו שהגודל שלה כפול 2 גדול מסכום אורכי הצלעות.</p>
 
@@ -128,30 +130,36 @@ puts "legal triangle"
 
 <p>כאן אני קצת תוהה מה השאלה הזו עושה בחלק השני של הספר - היא קלה ולא מחכימה. אבל מילא. הפתרון הוא של שורה קצרה אחת וזהו:</p>
 
-<p>[ruby]
-a, b = ARGV.collect{|x| x.to_i}
-puts (a/b) + 1
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">.</span><span class="nf">to_i</span><span class="p">}</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span></code></pre></figure>
+
+</div>
 
 <p>למה זה עובד? כי <span>$latex a/b$</span> נותן את מה שמקבלים כשמחלקים את <span>$latex a$</span> ב-<span>$latex b$</span> כשהוא מעוגל כלפי מטה לשלם הקרוב ביותר. תוסיפו לזה 1, ומובטח שכפל ב-<span>$latex b$</span> יקפיץ אותנו מעל <span>$latex a$</span>. אפילו לא הצלחתי לחשוב על אספקט מעניין של רובי שאפשר לתאר פה. בואו נעבור הלאה.</p>
 
 <p><strong>בעיה מס' 23</strong>
 כאן מקבלים מספר כלשהו ומוצאים מה המספר שצריך להוסיף לו כדי לקבל משהו שמתחלק ב-10. הפתרון המקורי בספר מסובך נורא, כי כנראה חסר לו אופרטור סטנדרטי בשפות תכנות, של מודולו. <span>$latex a % b$</span> הוא שארית החלוקה של <span>$latex a$</span> ב-<span>$latex b$</span> וכמעט מה שאנחנו צריכים פה:</p>
 
-<p>[ruby]
-a = ARGV.first.to_i
-puts (10 - a) % 10
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="nb">puts</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span></code></pre></figure>
+
+</div>
 
 <p>ההוכחה שזה עובד היא חשבון מודולרי בסיסי ואשאיר אותה לכם. רק שימו לב להתנהגות של % על מספרים שליליים: למשל, <span>$latex -3 % 10 = 7$</span>. הסיבה לכך היא שההגדרה של מודולו היא בעצם קצת יותר מורכבת מזו שנתתי למעלה - המשמעות המדויקת של <span>$latex a % b$</span> היא “המספר <span>$latex x$</span> בין 0 ל-<span>$latex b-1$</span> כך שההפרש <span>$latex a-x$</span> מתחלק על ידי <span>$latex b$</span>”.</p>
 
 <p><strong>בעיה מס' 24</strong>
 זו השאלה ה”קלה מדי” האחרונה, ובמובן מסויים גם הגרועה שבכולן. נתון לנו ריבוע עם אורך צלע <span>$latex a$</span> ובונים ממנו ריבוע חדש, על ידי כך שמותחים קווים בין אמצעי הצלעות של הריבוע הקיים. השאלה היא מה שטח הריבוע החדש. הנה פתרון ישיר:</p>
 
-<p>[ruby]
-a = ARGV.first.to_i
-puts 2*(a.to_f/2)**2
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">first</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="nb">puts</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="nf">to_f</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span></code></pre></figure>
+
+</div>
 
 <p>מה עשיתי פה? משפט פיתגורס. אם אורך הצלע של הריבוע המקורי היא <span>$latex a$</span> אז ממשפט פיתגורס, <strong>ריבוע</strong> אורך הצלע של הריבוע החדש - כלומר, השטח שלו - הוא <span>$latex 2\left(\frac{a}{2}\right)^2$</span>. למה? כי ציירו את זה רגע לעצמכם ושימו לב שכל צלע של הריבוע החדש היא היתר במשולש ישר זווית שבו הניצבים הם חצי מצלע הריבוע. אם הייתי טורח לפתוח את הביטוי הייתם רואים ששטח הריבוע הוא בדיוק חצי משטח הריבוע המקורי (וגם תעלול של חפיפת משולשים יראה את זה, למי שרוצים הוכחה גאומטרית).</p>
 

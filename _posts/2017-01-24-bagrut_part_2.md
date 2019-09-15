@@ -13,7 +13,7 @@ tags:
 
 הבגרות היא שאלון 317 של קיץ 2016.
 <h1>שאלה 1</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/2-question1.png" rel="attachment wp-att-3405"><img class="aligncenter size-full wp-image-3405" src="http://www.gadial.net/wp-content/uploads/2017/01/2-question1.png" alt="2-question1" width="825" height="490" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/2-question1.png" rel="attachment wp-att-3405"><img class="aligncenter size-full wp-image-3405" src="{{site.baseurl}}{{site.post_images}}/2017/01/2-question1.png" alt="2-question1" width="825" height="490" /></a>
 
 אה, גאומטריה אנליטית. זה הולך להיות מעניין. מצד אחד, זה תחום חשוב ומועיל ואהבתי אותו בבית הספר ואני גם סוג של משתמש בו פה ושם בימינו. מצד שני, אני בטוח שאני לא שולט בכל מה שצריך בשביל לפתור מבחן בבית הספר (מעולם לא למדתי אליפסות, למשל). בואו נראה איך אסתדר.
 <h1>סעיף א</h1>
@@ -79,7 +79,7 @@ tags:
 <h1>מה דעתי על השאלה?</h1>
 לטעמי זו שאלה טובה, אם מקבלים את זה שכדאי ללמוד גאומטריה אנליטית, ולדעתי כדאי ללמוד גאומטריה אנליטית. אבל קצת הפריע לי שאין לי מושג איך פותרים את ג' בדרך כללית, אם זה אפשרי בכלל. לא כי זה פוגם בשאלה עבורי, אלא כי אני לא בטוח מה תלמיד בית ספר עושה כשהוא צריך להתמודד עם שאלה כמו זו.
 <h1>שאלה 2</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/2-question2.png" rel="attachment wp-att-3406"><img class="aligncenter size-full wp-image-3406" src="http://www.gadial.net/wp-content/uploads/2017/01/2-question2.png" alt="2-question2" width="864" height="293" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/2-question2.png" rel="attachment wp-att-3406"><img class="aligncenter size-full wp-image-3406" src="{{site.baseurl}}{{site.post_images}}/2017/01/2-question2.png" alt="2-question2" width="864" height="293" /></a>
 
 הא, שאלת וקטורים. הנה וידוי אפל: זו לא הפעם הראשונה שבה השתעשעתי במחשבה על כתיבת פוסט פתרון בגרות. בפעם הקודמת ניגשתי לבגרות אקראית, ניסיתי קודם כל לפתור את שאלת הוקטורים שלהם, כי "פחחח זה כמו אלגברה לינארית אני אוכל את זה בלי מלח", ואז לא הצלחתי לפתור אותה. בכלל. בואו נראה אם זה מה שיקרה גם הפעם...
 <h1>סעיף א'</h1>
@@ -121,7 +121,7 @@ tags:
 <h1>מה דעתי על השאלה?</h1>
 בכל הנושא הזה של וקטורים יש לי תחושה ש"עוברים ליד" אלגברה לינארית אבל לא באמת נוגעים בה - לא באמת יצא לי לפתור תרגילים כמו זה אי פעם. מצד שני, אלגברה לינארית מופשטת יותר זה משהו שכנראה אי אפשר ללמד בבית הספר, ואילו החומר הזה נראה לי אפילו שימושי למי שהולכים לתחומים יותר פיזיקליים/הנדסיים באופיים. קשה לי להתלונן.
 <h1>שאלה 3</h1>
-<img class="aligncenter size-full wp-image-3407" src="http://www.gadial.net/wp-content/uploads/2017/01/2-question3.png" alt="2-question3" width="928" height="559" />
+<img class="aligncenter size-full wp-image-3407" src="{{site.baseurl}}{{site.post_images}}/2017/01/2-question3.png" alt="2-question3" width="928" height="559" />
 <h1>סעיף א'</h1>
 נתון לנו מספר מרוכב מחריד, אבל מן הסתם אפשר לפשט אותו. אני לא זוכר מתי לאחרונה כתבתי {% equation %}\text{CIS}{% endequation %} ואין לי כוונה להתחיל עכשיו - אשתמש בסימון הסטנדרטי יותר במתמטיקה, {% equation %}e^{i\theta}=\cos\theta+i\sin\theta{% endequation %}. בסימון הזה המונה הוא {% equation %}e^{i\left(\pi/9\right)}{% endequation %} ואילו המכנה הוא... אה, יש מינוס ליד הסינוס. זה אומר שלוקחים מינוס של כל הזווית, כלומר המכנה הוא {% equation %}e^{-i\left(\pi/12\right)}{% endequation %}. עכשיו קל לבצע העלאה בחזקה - פשוט כופלים את המעריך של האקספוננט בחזקה הזו, כמו בחוקי חזקות רגילים, וגם חלוקה מתבצעת בדרך דומה:
 
@@ -147,7 +147,7 @@ tags:
 
 מצד שני, אולי זה בעצם בסדר? על מה בדיוק אפשר לשאול כשמדובר על מספרים מרוכבים מעבר לרמת ההגדרות הבסיסיות? משפט אינטגרל קושי? ואני כן חושב שכדאי לראות מספרים מרוכבים בבית הספר כדי להיות מודעים לקיום היצורים הללו. אז יש סיכוי טוב שאני מתלונן על כלום.
 <h1>שאלה 4</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/2-question4.png" rel="attachment wp-att-3408"><img class="aligncenter size-full wp-image-3408" src="http://www.gadial.net/wp-content/uploads/2017/01/2-question4.png" alt="2-question4" width="937" height="533" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/2-question4.png" rel="attachment wp-att-3408"><img class="aligncenter size-full wp-image-3408" src="{{site.baseurl}}{{site.post_images}}/2017/01/2-question4.png" alt="2-question4" width="937" height="533" /></a>
 
 הא. שוב חדו"א. אף פעם לא הבנתי למה יש שני סוגי חדו"א בבגרות. כאילו, מה כבר ההבדל הגדול בין שניהם?
 <h1>סעיף א'</h1>
@@ -163,7 +163,7 @@ tags:
 
 נשאר לצייר סקיצה. בסקיצה אני מתחשב בדברים הבאים: א) נקודת המינימום ב) האסימפטוטה ג) נקודת החיתוך עם ציר {% equation %}y{% endequation %} ב-{% equation %}x=1{% endequation %} ד) כל הדיון שניהלתי למעלה על קמירות וקעירות. הנה הסקיצה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/sketch4.png" rel="attachment wp-att-3411"><img class="aligncenter size-full wp-image-3411" src="http://www.gadial.net/wp-content/uploads/2017/01/sketch4.png" alt="sketch4" width="343" height="311" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/sketch4.png" rel="attachment wp-att-3411"><img class="aligncenter size-full wp-image-3411" src="{{site.baseurl}}{{site.post_images}}/2017/01/sketch4.png" alt="sketch4" width="343" height="311" /></a>
 <h1>סעיף ב'</h1>
 הייתה לי טעות מטופשת במיוחד בסעיף הזה - חישבתי בהתחלה את השטח הלא נכון. במקום לחשב את השטח שמוגבל על ידי גרף הפונקציה <strong>מתחת</strong> לאסימפטוטה, חישבתי את זה ש<strong>מעל</strong> האסימפטוטה. זו אשמתי המלאה - קריאה לא נכונה של התיאור שלהם את השטח שאמורים לחשב. זו כבר טעות מפגרת שניה שלי במבחן. האם זה אומר שאני פותר אותו בשעות מאוחרות מדי? האם בזמן אמת הייתי עושה את אותן טעויות? לא יודע.
 
@@ -187,7 +187,7 @@ tags:
 <h1>מה דעתי על השאלה?</h1>
 זו שאלת חדו"א סטנדרטית. כאמור, לא ברור לי מה ההבדל המהותי בינה לבין שאלות החדו"א בחלק א' של המבחן, ואני לא מבין למה צריך כל כך הרבה חדו"א. אז בחלק א' הפונקציות היו טריגונומטריות וכאן הן אקספוננטים. למי אכפת?
 <h1>שאלה 5</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/2-question5.png" rel="attachment wp-att-3409"><img class="aligncenter size-full wp-image-3409" src="http://www.gadial.net/wp-content/uploads/2017/01/2-question5.png" alt="2-question5" width="688" height="805" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/2-question5.png" rel="attachment wp-att-3409"><img class="aligncenter size-full wp-image-3409" src="{{site.baseurl}}{{site.post_images}}/2017/01/2-question5.png" alt="2-question5" width="688" height="805" /></a>
 
 השאלה הזו מזכירה לי במבט ראשון את השאלה ההיא מחלק א' שאהבתי. בואו נקווה שזה לא יתגלה בתור דמיון שטחי נטו.
 <h1>סעיף א'</h1>
@@ -205,7 +205,7 @@ tags:
 
 בשרטוט אני מתחשב בדברים הבאים: א) תחום ההגדרה ב) האסימפטוטות האנכיות שמצאתי ג) האסימפטוטה האופקית המדוברת ד) נקודת המקסימום ב-{% equation %}x=4{% endequation %} ה) העובדה שהפונקציה עולה ויורדת כמו {% equation %}f{% endequation %}.
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/01/sketch5.png" rel="attachment wp-att-3410"><img class="aligncenter size-full wp-image-3410" src="http://www.gadial.net/wp-content/uploads/2017/01/sketch5.png" alt="sketch5" width="321" height="342" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/01/sketch5.png" rel="attachment wp-att-3410"><img class="aligncenter size-full wp-image-3410" src="{{site.baseurl}}{{site.post_images}}/2017/01/sketch5.png" alt="sketch5" width="321" height="342" /></a>
 
 <strong>מה דעתי על השאלה?</strong>
 

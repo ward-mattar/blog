@@ -55,7 +55,7 @@ tags:
 
 כעת, הגרף שעליו ישחקו את ה-{% equation %}\mbox{GG}{% endequation %} (בהינתן פסוק ה-{% equation %}\mbox{TQBF}{% endequation %} שהוא אמור לסמלץ) יהיה בנוי משני רכיבים - הראשון מסמלץ את השלב שבו השחקנים בוחרים השמה למשתנים של {% equation %}\varphi{% endequation %}, והשני יסמלץ נסיון של השחקן השני להראות לשחקן הראשון ש-{% equation %}\varphi{% endequation %} לא סופק, כלומר להציג בפני השחקן הראשון פסוקית ב-{% equation %}\varphi{% endequation %} שהשחקן הראשון, לכאורה, לא יכול לספק. כרגיל, תמונה אחת שווה אלף מילים אז הנה איך הגרף נראה, ואנסה גם להסביר קצת מה הולך פה במילים:
 
-<a href="http://www.gadial.net/wp-content/uploads/2011/04/TQBF_to_GG.png"><img class="alignnone size-full wp-image-1075" title="TQBF_to_GG" src="http://www.gadial.net/wp-content/uploads/2011/04/TQBF_to_GG.png" alt="" width="700" height="1020" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2011/04/TQBF_to_GG.png"><img class="alignnone size-full wp-image-1075" title="TQBF_to_GG" src="{{site.baseurl}}{{site.post_images}}/2011/04/TQBF_to_GG.png" alt="" width="700" height="1020" /></a>
 
 הרכיב הראשון (השמאלי) מסמלץ את הבחירות באופן הבא: לכל משתנה {% equation %}x_{i}{% endequation %} יש צומת. מהצומת הזה יוצאות שתי קשתות, אל צמתים שמסומנים ב-{% equation %}x_{i}=\mbox{F}{% endequation %} ו-{% equation %}x_{i}=\mbox{T}{% endequation %}. הבחירה של השחקן לאיזה משני הצמתים ללכת תתורגם, בסופו של דבר, להשמה למשתנה {% equation %}x_{i}{% endequation %}.
 

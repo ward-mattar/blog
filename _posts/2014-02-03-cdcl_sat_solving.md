@@ -37,7 +37,7 @@ tags:
 
 ובכן, כל המלל שלעיל הוא קצת מסורבל. קל יותר להבין מה הלך כאן אם מציירים את זה בתור גרף:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_grap.png"><img class="alignnone size-full wp-image-3037" alt="sat_implication_grap" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_grap.png" width="976" height="293" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_grap.png"><img class="alignnone size-full wp-image-3037" alt="sat_implication_grap" src="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_grap.png" width="976" height="293" /></a></strong>
 
 מה שיש לנו כאן מכונה Implication graph - "גרף הגרירות". הצמתים שלו הן כל ההשמות למשתנים - הן משתני הבחירה והן המשתנים הנגררים. יש קשת מהשמה אחת להשמה אחרת אם ההשמה האחת הייתה מעורבת בגרירה של האחרת - והכיתוב של הקשת הוא הפסוקית שבה התבצעה הגרירה הזו. {% equation %}X{% endequation %} מייצג את ההרס והחורבן של הסתירה שהגענו אליה - אם תרצו, אפשר לחשוב עליו כאילו הוא נגרר מפסוקית ש"התרוקנה", או ממשתנה אחד שהושמו בו שני ערכים שונים (זו בעצם אינדיקציה לכך שיש שתי פסוקיות שמתרוקנות - אחת כשמציבים במשתנה הזה 0 והשניה שמתרוקנת כשמציבים בו 1).
 
@@ -55,7 +55,7 @@ tags:
 
 אינטואיטיבית, חתך הוא קטיעה של קשתות בגרף כך שהגרף יתפרק לשני חלקים. פורמלית, חתך הוא פשוט חלוקה של צמתי הגרף לשתי קבוצות, ונהוג לדבר על הקשתות שחוצות את החתך - כל הקשתות שקצה אחד שלהן הוא בקבוצה אחת של החתך והקצה השני בקבוצה השניה. הנה דוגמה לחתך בגרף שלנו:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_1.png"><img class="alignnone size-full wp-image-3038" alt="sat_implication_graph_cut_1" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_1.png" width="2105" height="790" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_graph_cut_1.png"><img class="alignnone size-full wp-image-3038" alt="sat_implication_graph_cut_1" src="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_graph_cut_1.png" width="2105" height="790" /></a></strong>
 
 אז אנחנו לוקחים חתך שמקיים את התכונה הבאה: בקבוצה האחת שלו יש את כל משתני ההחלטה, ובקבוצה השניה יש לפחות אחד מהמשתנים שגרם לקונפליקט, ואת הצומת {% equation %}X{% endequation %}. נסתכל על הקשתות שחוצות את החתך, ובאופן יותר ספציפי - בצמתים שמהם הקשתות יצאו. לא קשה במיוחד להשתכנע שאם יש לנו השמה <strong>כלשהי</strong> שמתאימה להשמות שכתובות בצמתים הללו, אז בהכרח נגיע לקונפליקט (בלי קשר לשאלה מה ההשמה עושה לשאר הצמתים). אז בכל השמה שמספקת את הפסוק, לפחות אחת מההשמות הללו חייבת להשתנות. המשמעות של זה עבור החתך הספציפי שבחרנו הוא הוספת הפסוקית הבאה לפסוק:
 
@@ -63,7 +63,7 @@ tags:
 
 זה כמובן הרבה יותר פשוט (ומצמצם יותר את מרחב החיפוש של אלגוריתם ה-CDCL) מאשר הפסוקית המפלצתית שתיארתי קודם. אבל זו לא האפשרות היחידה, כמובן; הנה חתך שנותן לנו את הפסוקית {% equation %}\left(x_{21}\vee x_{2}\vee x_{3}\right){% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_2.png"><img class="alignnone size-full wp-image-3039" alt="sat_implication_graph_cut_2" src="http://www.gadial.net/wp-content/uploads/2014/02/sat_implication_graph_cut_2.png" width="2105" height="953" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_graph_cut_2.png"><img class="alignnone size-full wp-image-3039" alt="sat_implication_graph_cut_2" src="{{site.baseurl}}{{site.post_images}}/2014/02/sat_implication_graph_cut_2.png" width="2105" height="953" /></a></strong>
 
 ושוב, איך מחליטים איזה חתך לקחת? אין לי תשובה נחמדה - היוריסטיקות, היוריסטיקות, היוריסטיקות. ודברים קצת יותר חכמים שאני לא הולך להיכנס אליהם עכשיו.
 

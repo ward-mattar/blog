@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"בעיית וויל האנטינג","dateModified":"2010-02-18T23:36:04+02:00","datePublished":"2010-02-18T23:36:04+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/02/18/will_hunting_problem"},"url":"http://localhost:4000/blog/2010/02/18/will_hunting_problem","description":"נקודת המוצא העלילתית של הסרט “סיפורו של וויל האנטינג” (וכאן אני עומד לגלות טיפה מפרטי העלילה - אבל לא משהו שלא מתגלה ממילא בעשר הדקות הראשונות של הסרט, ואיננו מהותי כל כך) היא חידה מתמטית שפרופסור ב-MIT נותן לסטודנטים בקורס מתקדם שלו, בתקווה שמישהו מהם יצליח לפתור אותה עד סוף הסמסטר ובכך יכנס להיכל התהילה. את החידה פותר כבדרך אגב דווקא השרת של הבניין, מה שחושף אותו כגאון מתמטי חבוי, וכל השאר היסטוריה. אולם מהי החידה שבחרו יוצרי הסרט לתת? מסיבות השמורות עמם, הם החליטו לאפשר לקהל לראות את החידה כתובה במלואה על הלוח, כמו גם את הפתרון. אציג את החידה, ולאחר מכן אסביר כיצד פותרים אותה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -96,7 +96,7 @@
 	<li>מצאו את הפונקציה היוצרת של המסלולים מ-<span>$latex i$</span> אל <span>$latex j$</span>.</li>
 	<li>מצאו את הפונקציה היוצרת של המסלולים מ-<span>$latex 1$</span> אל <span>$latex 3$</span>.</li>
 </ol>
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2010/02/will-hunting-one.png"><img class="alignnone size-full wp-image-360" title="Will Hunting Question" alt="חידת וויל האנטינג" src="http://www.gadial.net/wp-content/uploads/2010/02/will-hunting-one.png" width="640" height="309" /></a>
+<p><strong><a href="/blog/assets/img/2010/02/will-hunting-one.png"><img class="alignnone size-full wp-image-360" title="Will Hunting Question" alt="חידת וויל האנטינג" src="/blog/assets/img/2010/02/will-hunting-one.png" width="640" height="309" /></a>
 </strong></p>
 
 <p>כבר בניסוח שלה, השאלה מרגישה יותר כמו תרגיל סטנדרטי ולא כמו אתגר מתמטי כביר. ואכן, כפי שאראה בקרוב, מדובר בשאלה פשוטה למדי ב<a href="http://en.wikipedia.org/wiki/Algebraic_graph_theory">תורת הגרפים האלגברית</a> - מה שקצת מוזר, בהתחשב בכך שהמרצה מציג את החידה בסרט בתור “Advanced Fourier System”, בסוף שיעור שעוסק באנליזת פורייה (דהיינו, המרצה ממלמל משהו על משפט פרסבל, ששייך לאנליזת פורייה). אני סקרן לדעת איך התגלגלה השאלה הספציפית הזו לתסריט הסרט ואשמח אם מישהו שיודע זאת יספר.</p>
@@ -127,7 +127,7 @@
 
 <p>כעת השאלה היא האם באופן כללי בהינתן מטריצה <span>$latex B$</span>, יש נוסחה “יפה”עבור הכניסה ה-<span>$latex ij$</span> בהופכית שלה, כלומר <span>$latex \left[B^{-1}\right]_{ij}$</span>? התשובה היא שכן (אם כי “יפה” זה עניין סובייקטיבי כאן) והיא מכונה “כלל קרמר”. הכלל מסתמך על שני מושגים לא פשוטים - <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%98%D7%A8%D7%99%D7%A6%D7%94_%D7%9E%D7%A6%D7%95%D7%A8%D7%A4%D7%AA">מטריצה מצורפת</a> (Adjugate) ו<a href="http://he.wikipedia.org/wiki/%D7%93%D7%98%D7%A8%D7%9E%D7%99%D7%A0%D7%A0%D7%98%D7%94">דטרמיננטה</a> של מטריצה, ולכן עבור מי שאינו מכיר את המושגים הללו הנוסחה תיראה פשוט כמו אוסף של סימנים חסרי משמעות - אבל זה לא חשוב כל כך לבינתיים. הנקודה היא ששני היצורים הללו ניתנים לחישוב יחסית באופן פשוט. כעת, כלל קרמר אומר כי <span>$latex B^{-1}=\frac{\mbox{Adj}B}{\det B}$</span> (כאן אנו מחלקים מטריצה - <span>$latex \mbox{Adj}B$</span> - בסקלר - <span>$latex \det B$</span>). לכן <span>$latex \left[B^{-1}\right]_{ij}=\frac{\left[AdjB\right]_{ij}}{\det B}$</span>. אם רוצים לפשט את הביטוי עוד יותר צריך לחפור בהגדרה של <span>$latex \mbox{Adj}B$</span>: הכניסה ה-<span>$latex ij$</span> של <span>$latex \mbox{Adj}B$</span> מוגדרת בתור <span>$latex \left(-1\right)^{i+j}M_{ji}$</span>, כאשר <span>$latex M_{ji}$</span> הוא המינור ה-<span>$latex ji$</span>-י של <span>$latex B$</span> - הדטרמיננטה של המטריצה שמתקבלת ממחיקת השורה ה-<span>$latex j$</span> והעמודה ה-<span>$latex i$</span> של <span>$latex B$</span>. כאן כנראה וויל משתעמם ומשתמש בסימונים שאיני מכיר, כי הנוסחה הסופית שהוא כותב על הלוח היא <span>$latex \frac{\det\left(B_{ij}\right)}{\det B}$</span> - אני משער שכוונתו זהה לכוונה שלי (למעשה, הוא לא כותב <span>$latex B$</span> אלא <span>$latex I-Ax$</span> כמו שכתבתי קודם - ולמעשה, אפילו לא את זה, אלא <span>$latex I-zA$</span>, שכמובן אומר את אותו הדבר בדיוק).</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2010/02/will-hunting-one1.png"><img class="alignnone size-full wp-image-362" title="Will Hunting Solution" alt="חידת וויל האנטיג - הפתרון" src="http://www.gadial.net/wp-content/uploads/2010/02/will-hunting-one1.png" width="638" height="315" /></a>
+<p><strong><a href="/blog/assets/img/2010/02/will-hunting-one1.png"><img class="alignnone size-full wp-image-362" title="Will Hunting Solution" alt="חידת וויל האנטיג - הפתרון" src="/blog/assets/img/2010/02/will-hunting-one1.png" width="638" height="315" /></a>
 </strong></p>
 
 <p>לסיכום, מדובר בשאלה חביבה והפתרון שלה נאה ביותר בכך שהוא מצביע על הקשר שבין תורת הגרפים ובין האלגברה הלינארית; אבל זו בהחלט לא שאלה שפרופסור למתמטיקה צריך להשתאות מכך שמישהו הצליח לפתור.</p>

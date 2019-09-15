@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"על משוואות בלי פתרון, ולמה זה לא רציונלי","dateModified":"2007-06-12T00:48:46+03:00","datePublished":"2007-06-12T00:48:46+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/06/12/irrational_numbers"},"url":"http://localhost:4000/blog/2007/06/12/irrational_numbers","description":"בניית מערכת המספרים שלנו הגיעה בפעם הקודמת לנקודת שיא מסויימת - קיבלנו את השדה (ממציין 0…) הקטן ביותר - ולכן גם האובייקט הבסיסי בענף של תורת השדות. משמעות המילה “שדה” היא שקיבלנו סגירות לארבע פעולות החשבון הבסיסיות, ולכן גם את היכולת לפתור כל משוואה ממעלה ראשונה. אולם הצרות מתחילות כבר במשוואות ממעלה שנייה - ולמעשה, עד שנגיע אל המרוכבים הן לא ייפתרו לגמרי. הבעיה הראשונה היא כבר במשוואה $latex x^2-2=0$ שאין לה פתרון: את המספר שאנו מכנים “שורש שתיים”, שמשמעותו היא “המספר החיובי שכשמעלים אותו בריבוע מקבלים שתיים” לא ניתן להציג בתור מספר רציונלי - כלומר, בתור מנה של שני מספרים שלמים. מכאן שהוא לא מספר רציונלי, או כפי שנהוג לומר - הוא מספר אי רציונלי (Irrational).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>אולם יש לשורש שתיים יתרון עצום, שאין ל-i המסכן: יש לו אינטואיציה גאומטרית, ואחת חזקה מאוד.</p>
 
-<p><a title="ריבוע" href="http://www.gadial.net/wp-content/uploads/2007/06/square.png"><img alt="ריבוע" src="http://www.gadial.net/wp-content/uploads/2007/06/square.png" /></a></p>
+<p><a title="ריבוע" href="/blog/assets/img/2007/06/square.png"><img alt="ריבוע" src="/blog/assets/img/2007/06/square.png" /></a></p>
 
 <p>כשאנו מציירים קטע, אנו מייחסים לו אוטומטית מספר כלשהו - ה”אורך” שלו. המשמעות הפורמלית של המושג הזה לא ברורה בכלל, אבל המשמעות האינטואיטיבית (שהיא זו שמעניינת אותנו כאן) ברורה לחלוטין - ומבלי שנרד לעומקם של דברים, אנו (טוב, לפחות אני) מרגישים שהאורך הזה “קיים” במובן שבו מספרים קיימים. (אגב, שימו לב לכך שהדבר נותן משמעות רק למספרים <strong>חיוביים</strong> - איננו מכירים קטעים בעלי אורך שלילי, ואפילו לא בעלי אורך אפס, למרות ש”נקודה” היא מועמד טוב לכך - אבל זה כבר דיון פילוסופי אחר לגמרי).
 כעת, אחת מהצורות הגיאומטריות הפשוטות ביותר היא הריבוע - יצור המורכב מארבעה קטעים באותו אורך המתחברים זה לזה בזוויות ישרות. נסמן את אורך כל אחד מהקטעים הללו בתור “1”. זוהי בחירה שרירותית, שפירושה שנמדוד אורכי קטעים אחרים <strong>ביחס</strong> לצלע הריבוע: כך למשל אם קטע כלשהו הוא מאורך “2” פירוש הדבר הוא שאורכו כפול מאורך צלע הריבוע. גם למספרים רציונליים קל לחשוב על משמעות: אם קטע כלשהו הוא באורך 3/5, פירוש הדבר הוא שאורכו כפול חמש שווה בגודלו לאורך צלע הריבוע כפול שלוש. בגישה אחרת, ניתן לומר שזה אומר שקיים קטע קטן עוד יותר, שנכנס מספר שלם של פעמים הן בצלע הריבוע והן בקטע שאורכו 3/5 - במקרה שלנו קטע זה הוא 1/5, שנכנס שלוש פעמים בקטע שבאורך 3/5, וחמש פעמים בצלע הריבוע. אם קטע קטן משותף שכזה קיים עבור שני קטעים, אומרים שיש להם <strong>מידה משותפת</strong>. לא קשה להראות (נסו!) שאם יש לקטע כלשהו מידה משותפת עם קטע באורך 1, אורכו של קטע זה הוא מספר רציונלי.

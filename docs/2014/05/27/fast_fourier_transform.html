@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"התמרת פורייה המהירה","dateModified":"2014-05-27T22:10:00+03:00","datePublished":"2014-05-27T22:10:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/05/27/fast_fourier_transform"},"url":"http://localhost:4000/blog/2014/05/27/fast_fourier_transform","description":"בפוסט הקודם הצגתי את התמרת פורייה הבדידה, והבאתי דוגמה אחת לשימוש בה - כפל מהיר של פולינומים. אמרתי גם שכדי שהכפל באמת יהיה מהיר, עלינו לדעת לבצע את התמרת פורייה מהר; ואמרתי גם שהתמרת פורייה הבדידה מיוחדת בכך שהיא עוסקת בכמות סופית של מידע, ולכן אפשר לתכנת אותה במחשב בצורה פשוטה. כפי שאתם ודאי מנחשים מכל זה, הפוסט הנוכחי יהיה הרבה יותר מוטה לכיוון של מדעי המחשב מאשר הפוסטים הקודמים על פורייה; בפרט, אני הולך לדבר על שאלות של סיבוכיות ולהציג אלגוריתמים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -147,19 +147,21 @@
 
 <p>הנה פסאודו-קוד של האלגוריתם. מכיוון שאני חסיד גדול של גישת “לתת פסאודו-קוד שבאמת אפשר להריץ”, הוא כתוב עבור מערכת האלגברה הממוחשבת Sage, שמשתמשת בשפה שהיא כמעט פייתון, עם כמה הרחבות (למשל, הסימן של החזקה). הדברים היחידים שנאלצתי לכתוב כאן ולא הייתי כותב בפסאודו קוד הם I במקום i בשביל השורש של מינוס 1, והמרה מפורשת של <span>$latex \frac{n}{2}$</span> למספר שלם, אחרת Sage לא מוכן לבצע פעולות מודולו <span>$latex \frac{n}{2}$</span>.</p>
 
-<p>[python]
-def fft(a):
-  n = len(a)
-  if (n == 1):
-    return a
-  omega = e^(2<em>pi</em>I/n)
-  a0 = [a[2<em>k] for k in range(n/2)]
-  a1 = [a[2</em>k+1] for k in range(n/2)]
-  b0 = fft(a0)
-  b1 = fft(a1)
-  b = [b0[k % Integer(n/2)] + omega^k*b1[k % Integer(n/2)] for k in range(n)]
-  return b
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span>
+  <span class="n">omega</span> <span class="o">=</span> <span class="n">e</span><span class="o">^</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">a0</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+  <span class="n">a1</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+  <span class="n">b0</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">a0</span><span class="p">)</span>
+  <span class="n">b1</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">b0</span><span class="p">[</span><span class="n">k</span> <span class="o">%</span> <span class="n">Integer</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> <span class="o">+</span> <span class="n">omega</span><span class="o">^</span><span class="n">k</span><span class="o">*</span><span class="n">b1</span><span class="p">[</span><span class="n">k</span> <span class="o">%</span> <span class="n">Integer</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+  <span class="k">return</span> <span class="n">b</span></code></pre></figure>
+
+</div>
 
 <p>כמובן, הקוד הזה מסתיר בתוכו מורכבות בסיסית ש-Sage מטפל בה אוטומטית אבל בשפות תכנות פשוטות אין אותה - אריתמטיקה עם שורשי היחידה <span>$latex \omega_{n}^{k}$</span>. אנחנו מעלים אותם בחזקות, ומחברים אותם, ובלאגן שלם. מי שירצה לממש את התמרת פורייה יצטרך, כמובן, לממש קודם את החלק שמתעסק באריתמטיקה של המספרים הללו (ולכן של מספרים מרוכבים בכלל). לרוב פשוט מתבססים על ספריות קיימות.</p>
 
@@ -187,22 +189,26 @@ def fft(a):
 
 <p>אם לסכם את מה שעשינו כאן, ה-<span>$latex a$</span>-ים שלנו מתקבלים מה-<span>$latex c$</span>-ים בצורה הבאה: את כל ה-<span>$latex c$</span>-ים כופלים ב-<span>$latex \frac{1}{n}$</span>; את האיבר הראשון שלהם משאירים ללא שינוי; את הסדר של היתר הופכים. במילים אחרות, אם <span>$latex c=\left(1,2,3,4\right)$</span> אז נקבל <span>$latex a=\left(\frac{1}{4},1,\frac{3}{4},\frac{1}{2}\right)$</span>. זה יוצא מאוד פשוט בקוד פייתון, שבו יש קונבנציה שאינדקסים שליליים ברשימה עוברים עליה מהסוף להתחלה:</p>
 
-<p>[python]
-def inverse_fft(b):
-  n = len(b)
-  return fft([b[k] / n for k in reversed(range(-(n-1),1))])
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">inverse_fft</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">fft</span><span class="p">([</span><span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">/</span> <span class="n">n</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">))])</span></code></pre></figure>
+
+</div>
 
 <p>ומכאן קצרה הדרך לקוד עבור קונבולוציה:</p>
 
-<p>[python]
-def convolution(a,b):
-  a_pad = a + [0 for i in range(len(a))]
-  b_pad = b + [0 for i in range(len(b))]
-  A = fft(a_pad)
-  B = fft(b_pad)
-  return inverse_fft([A[k]*B[k] for k in range(len(A))])[0:len(a)+len(b)-1]
-[/python]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">convolution</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+  <span class="n">a_pad</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
+  <span class="n">b_pad</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">))]</span>
+  <span class="n">A</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">a_pad</span><span class="p">)</span>
+  <span class="n">B</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">b_pad</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">inverse_fft</span><span class="p">([</span><span class="n">A</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))])[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></figure>
+
+</div>
 
 <p>הקוד הזה הוא נאיבי, במובן זה שהוא מניח ששתי הרשימות הן באותו האורך (ושהאורך הזה הוא חזקה של 2). יותר מזה, הוא גם עושה משהו מוזר - “מרפד” כל רשימה עם אפסים באופן שמכפיל את גודלה. למה? ובכן, כי שיקרתי קצת בפוסט הקודם: יצרתי את הרושם שקונבולוציה של שתי רשימות סופיות של מספרים אוטומטית מניחה שכל שאר המקומות הם 0, וזה אכן מה שצפוי שיהיה ומה שאנחנו משתמשים בו כשאנחנו כופלים פולינומים, למשל, אבל זה <strong>לא</strong> מה שהתמרת פורייה הבדידה עובדת איתו. זכרו שהתמרת פורייה הבדידה מתייחסת לרשימה של מספרים כאילו הם מייצגים פונקציה <strong>מחזורית</strong>, כלומר מחוץ לגבולות הרשימה הפונקציה מתחילה לחזור על עצמה. זה אומר שהקונבולוציה שאותה התמרת פורייה יודעת להפוך לכפל היא כזו שמניחה שהפונקציה היא מחזורית. הריפוד הוא פשוט דרך להתחמק מזה - אנחנו שמים אפסים בכל המקומות שעשויים להשפיע על החישוב, ואז מתעלמים מהאיברים ה”מיותרים” שנוצרו במהלך חישוב הקונבולוציה. זה מרגיש מלוכלך נורא, אבל זה למעשה לא פתרון כזה גרוע.</p>
 

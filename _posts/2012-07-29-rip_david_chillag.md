@@ -8,7 +8,7 @@ categories:
 tags: 
   - דוד צילג
 ---
-<a href="http://www.gadial.net/wp-content/uploads/2012/07/chillag.jpg"><img class="alignnone size-full wp-image-2128" title="chillag" src="http://www.gadial.net/wp-content/uploads/2012/07/chillag.jpg" alt="" width="401" height="458" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/07/chillag.jpg"><img class="alignnone size-full wp-image-2128" title="chillag" src="{{site.baseurl}}{{site.post_images}}/2012/07/chillag.jpg" alt="" width="401" height="458" /></a>
 
 אגדה טכניונית עזבה אותנו היום - דוד צילג, מרצה למתמטיקה שהמילה "מיתולוגי" קטנה עליו, נפטר.
 
@@ -20,4 +20,4 @@ tags:
 
 יהי זכרו ברוך.
 
-<a href="http://www.gadial.net/wp-content/uploads/2012/07/0.jpg"><img class="alignnone size-full wp-image-2129" title="0" src="http://www.gadial.net/wp-content/uploads/2012/07/0.jpg" alt="" width="480" height="360" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/07/0.jpg"><img class="alignnone size-full wp-image-2129" title="0" src="{{site.baseurl}}{{site.post_images}}/2012/07/0.jpg" alt="" width="480" height="360" /></a>

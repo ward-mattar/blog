@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"משפט מייהיל-נרוד - נקודת מבט נוספת, ואלגוריתמי מינימיזציה","dateModified":"2015-05-07T12:37:34+03:00","datePublished":"2015-05-07T12:37:34+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/05/07/automata_minimization"},"url":"http://localhost:4000/blog/2015/05/07/automata_minimization","description":"בכל הנושא של תורת השפות הפורמליות, המשפט החביב עלי הוא משפט מייהיל-נרוד. כל כך חביב עלי, שבפוסט הזה אני הולך להציג אותו שוב, ובצורה שונה מזו שבה הצגתי אותו בפוסט הקודם שלי בנושא. שתי נקודות המבט על המשפט הן דואליות באופיין (הן אומרות את אותו הדבר, אבל כל אחת מסתכלת על הדבר הזה מנקודת מבט שונה ואפילו מנוגדת קצת), וזו שאציג עכשיו תהיה שימושית בהמשך, עם עוד כמה תוצאות יפות שאני רוצה להראות. בפרט, היא תהיה שימושית כדי לטפל בבעיה שעד כה לא התייחסתי אליה - איך אפשר למצוא בפועל את האוטומט המינימלי עבור שפה שמשפט מייהיל-נרוד מבטיח את קיומו. אראה שני אלגוריתמים שעושים את זה - הראשון הוא נחמד ואינטואיטיבי יחסית, והשני הוא משהו פסיכי לחלוטין: כשראיתי אותו בפעם הראשונה התגובה שלי הייתה “מה, לעזאזל?!”. הטיזר הזה מספיק לכם כדי שיתחשק לכם לראות איך אני מנסח מחדש את כל המונחים של נרוד בלשון אחרת? אחלה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -143,15 +143,15 @@
 
 <p>כדי לקבל אינטואיציה כלשהי לכך שזה עובד, בואו נראה דוגמת צעצוע. אני אקח אוטומט עבור שפת כל המילים מאורך אי-זוגי מעל <span>$latex \left\{ a,b\right\} $</span> ובכוונה האוטומט הזה יהיה לא מינימלי - במקום שני מצבים יהיו לו שלושה, כשבבירור אפשר לאחד את המצב הראשון והשלישי:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2015/05/diagram005.png"><img class="aligncenter size-full wp-image-3245" alt="diagram005" src="http://www.gadial.net/wp-content/uploads/2015/05/diagram005.png" width="448" height="75" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2015/05/diagram005.png"><img class="aligncenter size-full wp-image-3245" alt="diagram005" src="/blog/assets/img/2015/05/diagram005.png" width="448" height="75" /></a></strong></p>
 
 <p>הדבר הראשון שנעשה יהיה היפוך של האוטומט הזה. אני הופך את כיווני הקשתות, הופך כל מצב התחלתי למקבל, וכל מצב מקבל להתחלתי. כאן יש רק מצב מקבל אחד אז אני לא מקבל תופעה מוזרה של אוטומט עם כמה מצבים התחלתיים (כבר ראינו שאוטומט כזה הוא לגיטימי ושקול למודל הדטרמיניסטי):</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2015/05/diagram006.png"><img class="aligncenter size-full wp-image-3246" alt="diagram006" src="http://www.gadial.net/wp-content/uploads/2015/05/diagram006.png" width="322" height="162" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2015/05/diagram006.png"><img class="aligncenter size-full wp-image-3246" alt="diagram006" src="/blog/assets/img/2015/05/diagram006.png" width="322" height="162" /></a></strong></p>
 
 <p>ועכשיו אני מבצע דטרמיניזציה:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2015/05/diagram007.png"><img class="aligncenter size-full wp-image-3247" alt="diagram007" src="http://www.gadial.net/wp-content/uploads/2015/05/diagram007.png" width="398" height="129" /></a>הופס! קיבלנו רק שני מצבים במקום שלושה - איכשהו הדטרמיניזציה זיהתה ש-<span>$latex q_{0},q_{2}$</span> הם אותו הדבר מבחינתנו והם נדחסו למצב יחיד. למעשה, מה שקיבלנו הוא כבר אוטומט עבור השפה שלנו - לא צריך את ההיפוך והדטרמיניזציה הנוספים, והם גם לא משנים את האוטומט כלל (למה?).</p>
+<p><a href="/blog/assets/img/2015/05/diagram007.png"><img class="aligncenter size-full wp-image-3247" alt="diagram007" src="/blog/assets/img/2015/05/diagram007.png" width="398" height="129" /></a>הופס! קיבלנו רק שני מצבים במקום שלושה - איכשהו הדטרמיניזציה זיהתה ש-<span>$latex q_{0},q_{2}$</span> הם אותו הדבר מבחינתנו והם נדחסו למצב יחיד. למעשה, מה שקיבלנו הוא כבר אוטומט עבור השפה שלנו - לא צריך את ההיפוך והדטרמיניזציה הנוספים, והם גם לא משנים את האוטומט כלל (למה?).</p>
 
 <p>כדי להבין למה כאן הספיק לנו רק “חצי” מהאלגוריתם, הנה המשפט הכללי שעליו אני מסתמך באלגוריתם. לפני כן, הגדרה אחרונה: נאמר שאוטומט <span>$latex A$</span> הוא <strong>קו-בלהבלה</strong>, כאשר במקום “בלהבלה” קחו את התכונה החביבה עליכם, אם <span>$latex A^{R}$</span> מקיים את בלהבלה. למשל, <span>$latex A$</span> הוא קו-דטרמיניסטי אם <span>$latex A^{R}$</span> הוא דטרמיניסטי; והוא קו-נגיש אם <span>$latex A^{R}$</span> נגיש, כלומר כל מצבי <span>$latex A^{R}$</span> ישיגים. הנה המשפט: אם <span>$latex A$</span> הוא קו-דטרמיניסטי וקו-נגיש, אז <span>$latex A_{\mbox{min}}=A_{\mbox{det}}$</span>. מכאן יותר קל להבין מה קרה בנוסחה <span>$latex A_{\mbox{min}}=\left(\left(\left(A^{R}\right)_{\mbox{det}}\right)^{R}\right)_{\mbox{det}}$</span>: החלק הפנימי, <span>$latex \left(\left(A^{R}\right)_{\mbox{det}}\right)^{R}$</span>, הוא פשוט מה שצריך לעשות כדי לקבל מ-<span>$latex A$</span> שהתחלנו ממנו אוטומט שקול שהוא קו-דטרמיניסטי וקו-נגיש (שתי התכונות הללו מושגות בו זמנית על ידי ביצוע דטרמיניזציה). בדוגמת הצעצוע שנתתי, <span>$latex A$</span> שלי <strong>לא</strong> היה קו-דטרמיניסטי, אבל מה שכן היה נכון הוא ש-<span>$latex A^{R}$</span> קיבל את אותה שפה כמו <span>$latex A$</span> (כי מילה היא מאורך אי זוגי אם ורק אם ההיפוך שלה כזה), ואותו <span>$latex A^{R}$</span> דווקא <strong>כן</strong> מקיים את התכונה שהוא קו-דטרמיניסטי וקו-נגיש (כי <span>$latex A$</span> היה דטרמיניסטי ונגיש). לכן כשביצענו את הדטרמיניזציה של <span>$latex A^{R}$</span> קיבלנו אוטומט מינימלי עבור השפה של <span>$latex A^{R}$</span>, ובמקרה שלנו זו הייתה השפה שאנחנו מחפשים.</p>
 

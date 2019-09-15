@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"אוטומטים אי דטרמיניסטיים ושאר מריעין בישין","dateModified":"2014-11-19T18:51:21+02:00","datePublished":"2014-11-19T18:51:21+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/11/19/nondeterministic_automata"},"url":"http://localhost:4000/blog/2014/11/19/nondeterministic_automata","description":"בפוסט הקודם הצגתי את המושג של אוטומט סופי דטרמיניסטי והגדרתי אותו בצורה פורמלית. בשביל מתמטיקאים, הגדרה פורמלית היא סדין אדום. מייד מתעוררות שאלות - למה להגדיר כך ולא אחרת? האם כל ההנחות שהשתמשנו בהן נחוצות? מה קורה אם משנים קצת את כללי המשחק? אם מקלים על הנחות מסויימות? וכן הלאה. ובכן, בואו ננסה לחשוב על ההנחות שלנו ועל אילו מהן אפשר לוותר.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -101,7 +101,7 @@
 
 <p>כשמציירים את האוטומט בתור גרף, קל להדגים אי דטרמיניזם - בסך הכל מדובר על מצבים שמהם לא יוצא חץ עבור אות מסויימת, או שיוצא יותר מחץ אחד עבור אות מסויימת:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram0011.png"><img class="aligncenter size-full wp-image-3196" alt="diagram001" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram0011.png" width="433" height="114" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2014/11/diagram0011.png"><img class="aligncenter size-full wp-image-3196" alt="diagram001" src="/blog/assets/img/2014/11/diagram0011.png" width="433" height="114" /></a></strong></p>
 
 <p>אבל איך מתארים אוטומט כזה בצורה פורמלית? דרך אחת היא להגיד שאין לנו יותר פונקציית מעברים אלא <strong>יחס</strong> מעברים - אוסף של שלשות מהצורה <span>$latex \left(q,\sigma,p\right)$</span> שבא לומר שהאוטומט יכול, אם הוא במצב <span>$latex q$</span> וקורא <span>$latex \sigma$</span>, לעבור למצב <span>$latex p$</span> (מבחינה פורמלית פונקציה היא פשוט מקרה פרטי של יחס, עם דרישות נוספות שמבטיחות שלכל קלט יהיה פלט אחד ויחיד). עם זאת, אני מעדיף דווקא לנקוט בגישה השניה, שאומרת שעדיין יכולה להיות לנו פונקציית מעברים, אם רק נשנה את הטווח שלה. דרך הפתרון שאני מציג כאן היא די סטנדרטית כאשר רוצים להגדיר פונקציות “רב ערכיות” בצורה פורמלית.</p>
 
@@ -155,7 +155,7 @@
 
 <p>זה מסיים את הטיפול במודל האי דטרמיניסטי, אבל עדיין לא סיימנו - אני עדיין צריך לטפל בהקלה השניה על כללי המשחק ולהסתכל על המודל שבו אפשר לבצע מעבר בין מצבים בלי לקרוא אות. למעבר כזה אני אקרא “מעבר-<span>$latex \varepsilon$</span>”. ונתחיל בדוגמא לאוטומט שמשתמש במעברים כאלו:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram002.png"><img class="aligncenter size-full wp-image-3197" alt="diagram002" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram002.png" width="419" height="119" /></a></p>
+<p><a href="/blog/assets/img/2014/11/diagram002.png"><img class="aligncenter size-full wp-image-3197" alt="diagram002" src="/blog/assets/img/2014/11/diagram002.png" width="419" height="119" /></a></p>
 
 <p>האוטומט הזה מקבל את כל המילים שבנויות מרצף של 0 או יותר <span>$latex a$</span>-ים, אחריו רצף של 0 או יותר <span>$latex b$</span>-ים ואחריו רצף של 0 או יותר <span>$latex c$</span>-ים. בהמשך נראה איך ייראה אוטומט בלי מעברי-<span>$latex \varepsilon$</span> שעושה את זה ועד כמה מעברי ה-<span>$latex \varepsilon$</span> מפשטים את דרך ההצגה שלנו, אבל בינתיים אני ממליץ לכם לנסות ולבנות אוטומט כזה (אי דטרמיניסטי!) בעצמכם ולראות כמה אתם מסתבכים כדי שתוכלו להעריך את הפשטות היחסית של האוטומט הזה. מה שהוא עושה הוא זה: כל עוד יש <span>$latex a$</span>-ים לקרוא, קורא אותם. אחר כך קופץ למצב הבא על ידי מעבר <span>$latex \varepsilon$</span>, קורא שם <span>$latex b$</span>-ים כל עוד יש, ואז קופץ למצב האחרון וקורא שם <span>$latex c$</span>-ים כל עוד יש, עד (בתקווה) סוף המילה. כמובן, שימו לב שאני מייחס לאוטומט מעין חוכמה שאין לו (לדעת מתי ה-<span>$latex a$</span>-ים “נגמרו”) - בפועל מה שקורה הוא שיש לאוטומט המון מסלולי חישוב אפשריים שרובם פשוט “נתקעים” (למשל, אם האות הראשונה במילה היא <span>$latex a$</span> אבל האוטומט בחר לבצע את מסע ה-<span>$latex \varepsilon$</span> אל <span>$latex q_{1}$</span> במקום לקרוא אותה) ואני פשוט מתאר את הריצה המקבלת. שימו לב איך אני נעזר בכך שהאוטומט הוא אי-דטרמיניסטי, ולא “רק” יכול לבצע מסעי-<span>$latex \varepsilon$</span>.</p>
 
@@ -203,7 +203,7 @@
 
 <p>זה מסיים את ההוכחה, והחל מהפוסט הבא נוכל להשתמש בחופשיות באוטומטים אי-דטרמיניסטיים עם מסעי-<span>$latex \varepsilon$</span> כדי לעשות דברים. רק תרגול אחד לסיום - נסו לקחת את האוטומט שמצויר לעיל ולסלק לו את מסעי ה-<span>$latex \varepsilon$</span>. הנה מה שאמור להתקבל:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2014/11/diagram003.png"><img class="aligncenter size-full wp-image-3195" alt="diagram003" src="http://www.gadial.net/wp-content/uploads/2014/11/diagram003.png" width="460" height="192" /></a></p>
+<p><a href="/blog/assets/img/2014/11/diagram003.png"><img class="aligncenter size-full wp-image-3195" alt="diagram003" src="/blog/assets/img/2014/11/diagram003.png" width="460" height="192" /></a></p>
 
   </div>
 

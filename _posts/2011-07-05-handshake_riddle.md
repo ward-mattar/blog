@@ -17,7 +17,7 @@ tags:
 
 לבינתיים, הנה שעשועים בחסות <a href="http://www.smbc-comics.com">SMBC</a>:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/07/smbc-handshake.gif"><img class="alignnone size-full wp-image-1217" title="smbc handshake" src="http://www.gadial.net/wp-content/uploads/2011/07/smbc-handshake.gif" alt="" width="504" height="566" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/07/smbc-handshake.gif"><img class="alignnone size-full wp-image-1217" title="smbc handshake" src="{{site.baseurl}}{{site.post_images}}/2011/07/smbc-handshake.gif" alt="" width="504" height="566" /></a>
 </strong>
 
 טוב, הדבר הראשון שעושים הוא לשכוח לרגע את מר כהן ולנסות להבין איך סיטואציית לחיצות הידיים בכלל הגיונית. אילו תשובות אנשים בכלל יכולים לתת לשאלה "כמה ידיים לחצת"? מספר שהוא בין 0 ל-8. למה רק 8? כי אדם לא לוחץ ידיים לא לעצמו ולא לבן זוגו. כעת, מכיוון שיש 9 תשובות, אז התשובות הן בהכרח {% equation %}0,1,2,3,4,5,6,7,8{% endequation %}. אוקיי, נסמן את האנשים על פי המספרים הללו.

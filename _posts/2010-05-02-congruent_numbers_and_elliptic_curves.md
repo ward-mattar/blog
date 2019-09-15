@@ -45,7 +45,7 @@ tags:
 
 הנה איך כל זה נראה מעל {% equation %}\mathbb{R}{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2010/05/ec.png"><img class="alignnone size-full wp-image-488" title="ec" src="http://www.gadial.net/wp-content/uploads/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2010/05/ec.png"><img class="alignnone size-full wp-image-488" title="ec" src="{{site.baseurl}}{{site.post_images}}/2010/05/ec.png" alt="עקום אליפטי" width="484" height="321" /></a></strong>
 
 התמונה קצת מבלבלת כי יש עקומים שלא נראים כך, ומורכבים רק מחתיכה אחת, אבל זה נותן את הרעיון הכללי. כמו שאפשר לראות מהתמונה, עקומים אליפטיים לא מזכירים בכלל אליפסות. אז למה "אליפטיים"? מסיבות היסטוריות (קשר לאינטגרלים אליפטיים, שנקראים כך כי הם צצו לראשונה בהקשר של חישוב אורך קשת של אליפסה) שלא אציג כרגע.
 
@@ -53,7 +53,7 @@ tags:
 
 כעת הפאנץ' - כל עקום אליפטי מהווה חבורה אבלית, ביחס לפעולת "חיבור"משונה למדי (משונה, במבט ראשון). מכיוון שהתגובה הראשונית לתיאור הפעולה הזו היא משעשעת למדי, אתאר אותה כאן בזריזות - הסבר אמיתי יגיע בפוסט נפרד. באופן כללי, הרעיון הוא כזה: כדי לחבר שתי נקודות {% equation %}P,Q{% endequation %} על העקום, יש להעביר את הישר שעובר דרך שתיהן. אם הוא לא חתך שוב את העקום, אז סכום הנקודות יהיה {% equation %}\mathcal{O}{% endequation %}; אבל אם הוא כן חתך אותו שוב... ובכן, מתבקש להגדיר את נקודות החיתוך בתור {% equation %}P+Q{% endequation %}, נכון? אבל במקום זה, לוקחים את השיקוף ביחס לציר {% equation %}x{% endequation %} של נקודת החיתוך בתור {% equation %}P+Q{% endequation %}. מה, לא ברור?
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg"><img class="alignnone size-full wp-image-489" title="elliptic" src="http://www.gadial.net/wp-content/uploads/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2010/05/elliptic.jpg"><img class="alignnone size-full wp-image-489" title="elliptic" src="{{site.baseurl}}{{site.post_images}}/2010/05/elliptic.jpg" alt="הפעולה שמוגדרת על עקום אליפטי" width="490" height="499" /></a></strong>
 
 הנקודה באינסוף {% equation %}\mathcal{O}{% endequation %} משמשת בתור היחידה ביחס לחיבור, כלומר {% equation %}P+\mathcal{O}=P{% endequation %} לכל {% equation %}P{% endequation %}. ההופכי של כל נקודה {% equation %}P{% endequation %} הוא פשוט השיקוף שלה ביחס לציר {% equation %}x{% endequation %}, ולכן אפשר לתאר את כלל החיבור גם באופן הבא: אם {% equation %}P,Q,R{% endequation %} הן שלוש נקודות של העקום שנמצאות על אותו ישר, אז {% equation %}P+Q+R=\mathcal{O}{% endequation %} (למה זה באמת שקול למה שתיארתי קודם?). לבסוף צריך להבהיר איך מחברים נקודה עם עצמה - אם רוצים לחשב את {% equation %}P+P{% endequation %} הרי לא ניתן להעביר ישר "דרך {% equation %}P{% endequation %} וגם דרך {% equation %}P{% endequation %}"כי ישנם אינסוף ישרים שכאלו. מה שכן עושים הוא לקחת את הישר ש<strong>משיק</strong> לעקום האליפטי בנקודה {% equation %}P{% endequation %} (כאן נכנסת לתמונה העובדה שהעקום הוא חלק, ולכן ניתן להעביר לו משיק שכזה), ומכאן ממשיכים כרגיל - מוצאים את נקודת החיתוך הנוספת עם העקום (אם אין כזו, {% equation %}P+P=\mathcal{O}{% endequation %}) ולוקחים את השיקוף שלה.
 

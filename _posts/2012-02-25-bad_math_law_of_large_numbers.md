@@ -30,7 +30,7 @@ tags:
 
 טוב, בואו נדבר על "מה כן" במקום על "מה לא" כל הזמן. בניסוח הכי לא פורמלי שאני יכול לתת, מה שחוק המספרים הגדולים <strong>כן</strong> אומר הוא שאם תטילו קוביה הרבה מאוד פעמים ותנהלו רישום של התוצאה הממוצעת שקיבלתם (כלומר, תחלקו את <strong>סכום</strong> התוצאות שהיו עד כה ב<strong>מספר</strong> ההטלות שהיו עד כה), אז ככל שמספר ההטלות יגדל, כך הממוצע שרשום אצלכם יתקרב לממוצע התיאורטי שאפשר לחזות רק מתוך היכרות עם הקוביה: לממוצע התיאורטי הזה יש שם מתמטי - <strong>תוחלת</strong>. מה שחוק המספרים הגדולים אומר הוא בעצם שמושג התוחלת <strong>עובד</strong>. בדוגמה הקונקרטית של קוביה, אותו ממוצע תיאורטי צפוי הוא {% equation %}3.5{% endequation %} (ואסביר עוד מעט בדיוק למה), ואכן אם תכתבו תוכנית מחשב שמטילה לה קוביות וירטואליות ומבצעת את חישוב הממוצע תראו - בודאות! אני מבטיח! - שהממוצע הזה הולך ומתקבע לו בסביבת {% equation %}3.5{% endequation %} ככל שהחישוב מתמשך. בויקיפדיה האנגלית אפילו יש להם גרף יפה שמתאר בדיוק את זה.
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/02/600px-Largenumbers.svg_.png"><img class="alignnone size-full wp-image-1517" title="600px-Largenumbers.svg" src="http://www.gadial.net/wp-content/uploads/2012/02/600px-Largenumbers.svg_.png" alt="" width="600" height="480" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/02/600px-Largenumbers.svg_.png"><img class="alignnone size-full wp-image-1517" title="600px-Largenumbers.svg" src="{{site.baseurl}}{{site.post_images}}/2012/02/600px-Largenumbers.svg_.png" alt="" width="600" height="480" /></a></strong>
 
 כמובן, חוק המספרים הגדולים לא מדבר רק על הטלות קוביה. "הטלת קוביה" כאן היא מטאפורה לכל ניסוי הסתברותי שיש לו כמה תוצאות מספריות אפשריות. לדבר כזה קוראים <strong>משתנה מקרי</strong>. אפרט עוד קצת בהמשך.
 

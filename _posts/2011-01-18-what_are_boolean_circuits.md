@@ -24,7 +24,7 @@ tags:
 
 בואו נעבור להגדרה של מעגל בוליאני - מה זה בכלל? כרגיל בעניינים כאלו, תמונה אחת שווה אלף מילים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/01/Boolean-Circuit.png"><img class="alignnone size-medium wp-image-982" title="Boolean Circuit" src="http://www.gadial.net/wp-content/uploads/2011/01/Boolean-Circuit-224x300.png" alt="" width="224" height="300" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/01/Boolean-Circuit.png"><img class="alignnone size-medium wp-image-982" title="Boolean Circuit" src="{{site.baseurl}}{{site.post_images}}/2011/01/Boolean-Circuit.png" alt="" width="224" height="300" /></a>
 </strong>
 
 פורמלית, מעגל בוליאני הוא גרף מכוון וחסר מעגלים (מהו המושג הזה? יש לי <a href="http://www.gadial.net/?p=125">פוסטים על גרפים</a>, אבל אני מקווה שגם מבט בתמונה מספיק כדי להבהיר את זה), שכל צומת "כניסה" שלו (צומת שאין קשתות שנכנסות אליו) מסומן במשתנה, כל צומת פנימי שלו מסומן ב-{% equation %}\wedge{% endequation %} או ב-{% equation %}\vee{% endequation %} או ב-{% equation %}\neg{% endequation %}, וכל צומת שאין ממנו קשתות יוצאות נחשב צומת פלט. כדי לפשט את העניינים מניחים שיש רק צומת פלט יחיד, אבל רוב מה שמדברים עליו עובד גם עבור מספר צמתי פלט (שמאפשרים לדבר על פונקציות שמוציאות כפלט יותר מביט בודד). לצמתי {% equation %}\neg{% endequation %} יכולה להיכנס רק קשת בודדה, אבל לצמתי {% equation %}\wedge{% endequation %} ו-{% equation %}\vee{% endequation %} יכול להיכנס מספר קשתות כלשהו, אם כי עוד מעט נגיד למה כן צריך להגביל את זה לפעמים.

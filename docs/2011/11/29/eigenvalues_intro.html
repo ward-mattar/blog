@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"ערכים עצמיים - מי, מה, כמה ולמה","dateModified":"2011-11-29T22:31:22+02:00","datePublished":"2011-11-29T22:31:22+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/11/29/eigenvalues_intro"},"url":"http://localhost:4000/blog/2011/11/29/eigenvalues_intro","description":"אחת המניפולציות הפשוטות ביותר שאנו יודעים להפעיל על תמונות היא שיקוף. נניח עכשיו שאתם רוצים להבין איך לבצע שיקוף בעצמכם, מה זה בכלל אומר? איך ניגשים לזה פורמלית? מייד ברור שיש כמה סוגי שיקופים - יש שיקוף אופקי, ושיקוף אנכי, ואנחנו מבינים אינטואיטיבית מה הם אומרים; אבל פורמלית? בואו נגדיר את זה פורמלית.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -127,7 +127,7 @@
 
 <p>עכשיו בואו נעבור לדבר על מערכת קצת יותר מחוכמת, זו:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png"><img class="alignnone size-full wp-image-1432" title="597px-Coupled_Harmonic_Oscillator.svg" src="http://www.gadial.net/wp-content/uploads/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png" alt="" width="597" height="156" /></a>
+<p><strong><a href="/blog/assets/img/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png"><img class="alignnone size-full wp-image-1432" title="597px-Coupled_Harmonic_Oscillator.svg" src="/blog/assets/img/2011/11/597px-Coupled_Harmonic_Oscillator.svg_.png" alt="" width="597" height="156" /></a>
 </strong></p>
 
 <p>כאן יש לנו שני גופים שמחוברים בקפיצים הן זה לזה והן כל אחד לקיר אחר. נניח שהמסות של הגופים זהות (ונסמן את המסה הזו ב-<span>$latex m$</span>) ושקבוע הקפיץ של כל הקפיצים זהה (ונסמן אותו ב-<span>$latex k$</span>). עכשיו יש לנו שתי פונקציות: <span>$latex f_{1}\left(t\right)$</span> ו-<span>$latex f_{2}\left(t\right)$</span> שמגדירות את מיקומי הגופים כפונקציה של הזמן. אפשר לחשוב על זה כעל וקטור של פונקציות: <span>$latex \overline{f}\left(t\right)=\left(f_{1}\left(t\right),f_{2}\left(t\right)\right)$</span>.</p>

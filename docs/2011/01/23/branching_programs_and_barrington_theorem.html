@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"תוכניות מתפצלות ומשפט ברינגטון","dateModified":"2011-01-23T23:43:07+02:00","datePublished":"2011-01-23T23:43:07+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/01/23/branching_programs_and_barrington_theorem"},"url":"http://localhost:4000/blog/2011/01/23/branching_programs_and_barrington_theorem","description":"בפוסט הקודם בסדרת הפוסטים של פרוייקט “תוצאות מפתיעות בסיבוכיות” הצגתי מודל חישובי מרכזי בתורת הסיבוכיות - מעגלים בוליאניים. עכשיו אני רוצה להציג מודל קצת יותר אזוטרי אבל עדיין חשוב ומעניין בזכות עצמו - תוכניות מתפצלות. משפט ברינגטון, שאת הניסוח שלו אציג בסוף הפוסט, הוא הסיבה שבגללה אני מתאר כאן תוכניות מתפצלות. הוא אומר, בפשטות, שתוכניות מתפצלות הן חזקות הרבה יותר ממה שנדמה במבט ראשון, כשההשוואה של הכוח שלהן הוא לכוח שיש למעגלים בוליאניים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -93,7 +93,7 @@
 
 <p>כרגיל, תמונה אחת שווה אלף מילים. הנה תוכנית מתפצלת עבור הפונקציה <span>$latex \mbox{MAJORITY}\left(x_{1},x_{2},x_{3}\right)$</span> שמחזירה את הערך הבוליאני שמצוי אצל רוב הקלטים. נסו “לסמלץ” את הריצה של התוכנית על כמה קלטים ובדקו מה קורה.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2011/01/bp_maj.png"><img class="alignnone size-full wp-image-996" title="bp_maj" src="http://www.gadial.net/wp-content/uploads/2011/01/bp_maj.png" alt="" width="392" height="166" /></a></p>
+<p><a href="/blog/assets/img/2011/01/bp_maj.png"><img class="alignnone size-full wp-image-996" title="bp_maj" src="/blog/assets/img/2011/01/bp_maj.png" alt="" width="392" height="166" /></a></p>
 
 <p>אולי אתם תוהים למה הגדרתי הגדרה מסובכת שכזו לתוכנית מתפצלת - כל העסק עם מחיקת הקשתות ועם “אם <strong>קיים</strong> מסלול…”. למה לא אמרתי פשוט “בהינתן קלט נצא לטיול בגרף - כאשר אנחנו בצומת <span>$latex x_{i}$</span> נתבונן בערך המשתנה <span>$latex x_{i}$</span> והצעד הבא שלנו ייקבע על פי ערך זה, ואם אין לנו קשת יוצאת מתאימה ניתקע”? ובכן, זה אכן מספיק עבור מה שנתעסק בו, אבל באופן כללי ייתכן שמאותו צומת תצא יותר מקשת אחת שמסומנת ב-1 (או יותר מקשת אחת שמסומנת ב-0) וכל מה שיעניין אותו הוא ש<strong>קיימת</strong> דרך כלשהי להגיע מ-<span>$latex s$</span> אל <span>$latex t$</span>. מי שזה מבלבל אותו - לא נורא, אתם בהחלט יכולים לחשוב על ההגדרה שהצגתי כרגע כאילו היא הגדרה שקולה.</p>
 
@@ -113,7 +113,7 @@
 
 <p>כדי להראות חסם תחתון על תוכניות מתפצלות, כדאי לתקוף קודם כל פונקציה קונקרטית אחת ולהראות שהיא קשה. עבור מעגלים בוליאניים הצליחו להשתמש ב-<span>$latex \bigoplus$</span> (שמבצעת XOR של כל הביטים שלה) בתור פונקציה שכזו - הוכיחו כי היא אינה ב-<span>$latex \mbox{AC}^{0}$</span> (מעגלים בוליאניים מעומק <strong>קבוע</strong> - שוב ה”קבוע” הזה - עם דרגת כניסה לא מוגבלת של הצמתים). אחרי שיש דוגמה קונקרטית אחת ביד, אפשר לרוב להראות עבור פונקציות רבות אחרות שהן לא שייכות למחלקה על ידי טיעון בסגנון “אם הן כן היו שייכות, אפשר היה להשתמש בהן כדי לחשב גם את <span>$latex \bigoplus$</span>”. לרוע המזל, את <span>$latex \bigoplus$</span> קל מאוד לחשב עם תוכנית מתפצלת מרוחב 2: קוראים ביט ביט, וכל המידע שצריך לזכור הוא “האם סכום הביטים עד כה היה 0 או 1 מודולו 2”. הנה התוכנית המתפצלת המתאימה עבור <span>$latex \bigoplus\left(x_{1},x_{2},x_{3},x_{4},x_{5}\right)$</span>:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/01/xor_bp.png"><img class="alignnone size-full wp-image-999" title="xor_bp" src="http://www.gadial.net/wp-content/uploads/2011/01/xor_bp.png" alt="" width="605" height="229" /></a>
+<p><strong><a href="/blog/assets/img/2011/01/xor_bp.png"><img class="alignnone size-full wp-image-999" title="xor_bp" src="/blog/assets/img/2011/01/xor_bp.png" alt="" width="605" height="229" /></a>
 </strong></p>
 
 <p>ובכן, מי כן מועמד טוב להיות פונקציה שתוכניות מתפצלות לא יכולות לחשב? רצוי שזו תהיה פונקציה פשוטה, כזו שאפשר לחשב ביעילות במודלים פשוטים אחרים - זכרו שבסופו של דבר אנחנו רוצים להצביע על קושי של בעיות שנראות פשוטות יחסית (זהו למשל העניין בשאלת <span>$latex \mbox{P=NP}$</span>; המחלקה <span>$latex \mbox{NP}$</span> מורכבת מבעיות שבמובן מסויים הן קלות, ולכן חשוב לנו להוכיח שלמרות זאת הן קשות; את זה שקיימות בכלל בעיות שאינן ב-<span>$latex \mbox{P}$</span> קל להוכיח). לצורך העניין, מחלקה פשוטה מספיק שעדיין נראית כמו כר מתאים לחיפוש אחר פונקציות קשות לחישוב היא <span>$latex \mbox{NC}^{1}$</span> - מה שבא בתור אחרי <span>$latex \mbox{AC}^{0}$</span>. ב-<span>$latex \mbox{NC}^{1}$</span>, כזכור, נמצאות כל הפונקציות שניתנות לחישוב על ידי מעגל מעומק <strong>לוגריתמי</strong> וגודל פולינומי, שבו דרגת הכניסה של כל שער היא לכל היותר 2. הרבה פונקציות פשוטות (למשל, הפונקציות האריתמטיות) נמצאות שם; וגם הפונקציה <span>$latex \mbox{MAJORITY}$</span> שהזכרתי בהתחלה. אותה <span>$latex \mbox{MAJORITY}$</span> נראתה כבעלת פוטנציאל רב לתקיפת תוכניות מתפצלות; כמו שאפשר לראות בתוכנית המתפצלת שציירתי בהתחלה, נראה שהרוחב תלוי בצורה חזקה בכמות המשתנים. ובאמת, צריך “לזכור” כמה משתנים היו 0 וכמה משתנים היו 1 עד כה, או לפחות מה היה ההפרש ביניהם, והוא יכול להיות גדול באופן שרירותי, לא? זה לא נראה כמו משהו שאפשר לתפוס עם תוכניות מתפצלות מרוחב קבוע. זה הוביל להשערה בראשית שנות השמונים לפיה כל תוכנית מתפצלת מרוחב חסום עבור <span>$latex \mbox{MAJORITY}$</span> לא תהיה פולינומית באורכה. די מהר הוכיחו גם חסם תחתון נאיבי יחסית - שתוכנית מתפצלת מרוחב חסום עבור פונקציה זו לא יכולה להיות <strong>לינארית</strong> באורכה (כלומר, <span>$latex O\left(n\right)$</span>). על פניו כיוון המחקר הזה נראה מבטיח.</p>

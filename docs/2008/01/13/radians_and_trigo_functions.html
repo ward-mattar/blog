@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"כמה מעלות טובות לרדיאן עלינו (דבר הסנגוריה: סינוסים וקוסינוסים)","dateModified":"2008-01-13T22:42:36+02:00","datePublished":"2008-01-13T22:42:36+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/01/13/radians_and_trigo_functions"},"url":"http://localhost:4000/blog/2008/01/13/radians_and_trigo_functions","description":"בפוסט הקודם הצגתי את יחידת המידה ה”טבעית” לזווית - הרדיאן. היחידה הוגדרה כך: קחו קטע כלשהו, סובבו אותו על ציר שנמצא על אחד מקצותיו בזווית כלשהי. חלקו את אורך הקשת שהקצה השני שלו עבר באורכו - זה גודל הזווית, ברדיאנים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>הגבול נראה תמים למדי ממבט ראשון, וגם כשלומדים אותו הוא לרוב נראה כמו דוגמה סתמית ל<a href="http://he.wikipedia.org/wiki/%D7%9B%D7%9C%D7%9C_%D7%94%D7%A1%D7%A0%D7%93%D7%95%D7%95%D7%99%D7%A5'">כלל הסנדוויץ'</a>; אבל למעשה, מדובר באחד מהגבולות החשובים ביותר באינפי, ובבסיס שעליו נשען כל האינפי של הפונקציות ה<a href="http://he.wikipedia.org/wiki/%D7%98%D7%A8%D7%99%D7%92%D7%95%D7%A0%D7%95%D7%9E%D7%98%D7%A8%D7%99%D7%94">טריגונומטריות.</a></p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/01/trig1.png" title="Trig1"><img src="http://www.gadial.net/wp-content/uploads/2008/01/trig1.png" alt="Trig1" /></a></p>
+<p><a href="/blog/assets/img/2008/01/trig1.png" title="Trig1"><img src="/blog/assets/img/2008/01/trig1.png" alt="Trig1" /></a></p>
 
 <p>הפונקציות הטריגונומטריות הן פונקציות שמקבלות זווית כפרמטר, ומחזירות מספר ממשי. המפורסמות שבהן הן סינוס וקוסינוס, ואת האחרות (למשל טנגנס) ניתן לגזור מהן. ההגדרה ה”בסיסית” היא רק עבור זוויות בין 0 מעלות ו-90 מעלות (0 רדיאנים ו-<span>$latex \frac{\pi}{2}$</span> רדיאנים): מציירים משולש ישר זווית, ומגדירים סינוס של זווית בתור היחס בין השוק שמול הזווית ליתר, ואת קוסינוס בתור היחס בין השוק שליד הזווית ליתר. כבר מההגדרה הזו אפשר לקבל את כל הזהויות הטריגונומטריות ששברנו עליהן את השיניים בבית הספר; ההוכחות הן גאומטריות במהותן ואינן מסובכות עד כדי כך (הנה <a href="http://www.themathpage.com/aTrig/sum-proof.htm">דוגמה</a> להוכחה של נוסחת הסכום וההפרש).</p>
 

@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"קרוסקל את פרים - בוני מבוכים בע”מ","dateModified":"2013-09-22T23:28:19+03:00","datePublished":"2013-09-22T23:28:19+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/09/22/kruskal_and_prim_maze_builders"},"url":"http://localhost:4000/blog/2013/09/22/kruskal_and_prim_maze_builders","description":"נתחיל מהשורה התחתונה - בפוסט הזה אני רוצה להסביר איך אפשר לכתוב תוכנית מחשב שמייצרת מבוכים כמו זה:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -89,7 +89,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>נתחיל מהשורה התחתונה - בפוסט הזה אני רוצה להסביר איך אפשר לכתוב תוכנית מחשב שמייצרת מבוכים כמו זה:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2013/09/maze.png"><img src="http://www.gadial.net/wp-content/uploads/2013/09/maze.png" alt="maze" width="472" height="472" class="alignnone size-full wp-image-2865" /></a></p>
+<p><a href="/blog/assets/img/2013/09/maze.png"><img src="/blog/assets/img/2013/09/maze.png" alt="maze" width="472" height="472" class="alignnone size-full wp-image-2865" /></a></p>
 
 <p>אבל כרגיל, יש לי גם מטרה נסתרת זדונית; אני רוצה להשתמש במבוכים כתירוץ כדי להציג שלל אלגוריתמים בסיסיים בתורת הגרפים, יחד עם מימוש שלהם, ודיון על סיבוכיות זמן ריצה ומבני נתונים ועוד שלל דברים נפלאים. כך שהמבוכים הם רק תירוץ, ואני מצהיר מראש שאני הולך לעשות דברים בדרך שעשויה להיראות טיפה מסובכת שלא לצורך (ובחלק מהמקרים היא תהיה בכוונה מסובכת שלא לצורך) כך שאני מבקש שתהיו סבלניים איתי.</p>
 
@@ -97,7 +97,7 @@
 
 <p>את הבעיה הזו אפשר לראות בתור מקרה פרטי של בעיה מתמטית כללית יותר, ומטרת הפוסטים שלי היא לעסוק בבעיה הזו ובבעיות קשורות לה ובניסוח המתמטי הרלוונטי, ובדיוק בגלל זה אני רוצה שנתחיל דווקא בלי לדבר עליה בכלל, אלא נציג את רעיון הפתרון ה”פרטי”, עבור מבוכים בלבד. הגישה שלי היא כזו - אני מתחיל ממבוך שמורכב ממשבצות כאשר כל משבצת מוקפת קירות מכל עבר:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2013/09/maze2.png"><img src="http://www.gadial.net/wp-content/uploads/2013/09/maze2.png" alt="maze2" width="475" height="473" class="alignnone size-full wp-image-2867" /></a></p>
+<p><a href="/blog/assets/img/2013/09/maze2.png"><img src="/blog/assets/img/2013/09/maze2.png" alt="maze2" width="475" height="473" class="alignnone size-full wp-image-2867" /></a></p>
 
 <p>ועכשיו אני פשוט הולך להסיר קירות, אחד אחרי השני, עד שאשאר עם מבוך כמו בתמונה למעלה. השאלה היא רק איך לבחור אילו קירות כדאי לי להסיר. התשובה היא שבאופן פחות או יותר אקראי, אבל אם אני סתם בוחר קירות באופן אקראי ומסיר אותם אין ממש סיכוי שאשאר עם פתרון יחיד או שיהיה מובטח לי שיש פתרון - סדר צריך להיות. לכן הגישה היא לבחור קיר באופן אקראי, ואז לחשוב אם באמת כדאי לי להסיר אותו או לא, ורק אם כדאי - להסיר. איך אני מחליט שכדאי להסיר קיר? הקריטריון פשוט: כדאי להסיר קיר רק אם ההסרה שלו <strong>לא מחברת תאים במבוך שכבר יש דרך אחרת ביניהם</strong>. למה? כי אם כבר יש דרך ביניהם, אז אחרי הסרת הקיר יהיו שתי דרכים ביניהם (הדרך הקצרה של פשוט לעבור מהאחד אל השני מייד - כי אין קיר - והדרך הארוכה של לעבור באותה דרך אחרת שאמרנו שקיימת). זה יוצר “לולאה” בתוך המבוך, ולולאה כזו מבטיחה שאם יש פתרון למבוך, זה לא יהיה פתרון יחיד. למה? אשאיר את זה בינתיים כאתגר עבורכם; כשנגיע לניסוח המתמטי המדויק זה יתברר.</p>
 

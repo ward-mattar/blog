@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"בעיית המעגל של גאוס (וגם קצת על טרחנות)","dateModified":"2011-12-11T22:35:39+02:00","datePublished":"2011-12-11T22:35:39+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/12/11/gauss_circle_problem"},"url":"http://localhost:4000/blog/2011/12/11/gauss_circle_problem","description":"הפנו אותי לאתר הבא, שבו מציג כותב ישראלי משהו בשם “Q-space theory” שהיא “An attempt to intuitively unify physics”. ובכן, אתם ודאי יכולים לנחש מה אני חושב כשאני רואה משהו כזה. רוב תוכנו של האתר הוא קישורים לסרטוני יוטיוב שכבר הוסרו, אבל הסיבה שבגללה קישרו אותי אליו היא קובץ שבו מדובר על “התכנסות לערכו של פאי דרך הפתרונות הפיתגוראיים הטבעיים”. ובכן, אתם ודאי יכולים לנחש מה אני חושב כשאני רואה משהו כזה. אבל, כמו תמיד בעניינים הללו, לא הייתי טורח לכתוב על זה אם לא הייתה מתמטיקה מעניינת בפנים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -116,7 +116,7 @@ print [N(n) for n in range(10)]</code></p>
 
 <p>בואו נעבור להוכחת הטענה של גאוס (עם קבוע קצת יותר גדול ממה שנטען בויקיפדיה) באופן פורמלי יותר, אבל עדיין לא פורמלי עד הסוף כי אשתמש בשיקולים גיאומטריים שיהיו רבע נפנוף ידיים. ראשית, תמונה אחת שווה כאן אלף מילים:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/12/gauss_circle.png"><img class="alignnone size-full wp-image-1447" title="gauss_circle" alt="" src="http://www.gadial.net/wp-content/uploads/2011/12/gauss_circle.png" width="484" height="484" /></a></strong></p>
+<p><strong><a href="/blog/assets/img/2011/12/gauss_circle.png"><img class="alignnone size-full wp-image-1447" title="gauss_circle" alt="" src="/blog/assets/img/2011/12/gauss_circle.png" width="484" height="484" /></a></strong></p>
 
 <p>העיגול שלנו מסומן בקו האחיד. הרעיון הוא זה שאמרתי קודם - יש התאמה בין ריבועי היחידה שקודקודיהם הם בעלי קואורדינטות שהן מספר שלם, והנקודות עם קואורדינטות שלמות במישור - לכל ריבוע פשוט מתאימים את הקודקוד הימני-עליון שלו. כעת, כל ריבוע שמוכל כולו בתוך העיגול, בפרט גם הקודקוד הימני-עליון שלו נמצא בתוך העיגול, ולכן התרומה של הריבוע לשטח (1) נספרת בהתאמה עם זה שהקודקוד של הריבוע נספר. אז מתי משהו יכול להשתבש? ברור שלא בריבועים שכולם מחוץ לעיגול - גם הקודקוד הימני-עליון שלהם מחוץ לעיגול ולכן איננו נספר. בעיה יכולה להתקיים באחד משני מקרים: או ריבוע שחלקו בתוך העיגול אבל הקודקוד הימני-עליון שלו בחוץ, ואז הוא תורם חלקית לשטח העיגול אבל לא לספירת הנקודות שבעיגול; או ריבוע שחלקו בתוך העיגול כולל הקודקוד הימני-עליון, אבל לא כולו בתוך העיגול ואז הוא לא תרם מספיק לשטח העיגול כדי לכסות על זה שהוא תרם נקודה לספירה.</p>
 

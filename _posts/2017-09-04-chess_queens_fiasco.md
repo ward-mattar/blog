@@ -14,7 +14,7 @@ tags:
 ---
 נפתח עם <a href="http://phdcomics.com/comics/archive.php?comicid=1174">התיאור הקולע ביותר שראיתי מימי</a> של הקשר הבעייתי בין מדע ותקשורת, פרי מכחולו ועטו של חורחה צ'ם, היוצר של PHD Comics:
 
-<a href="http://www.gadial.net/wp-content/uploads/2017/09/phd051809s.gif" rel="attachment wp-att-3511"><img class="aligncenter size-full wp-image-3511" src="http://www.gadial.net/wp-content/uploads/2017/09/phd051809s.gif" alt="phd051809s" width="600" height="667" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2017/09/phd051809s.gif" rel="attachment wp-att-3511"><img class="aligncenter size-full wp-image-3511" src="{{site.baseurl}}{{site.post_images}}/2017/09/phd051809s.gif" alt="phd051809s" width="600" height="667" /></a>
 
 הסיפור מתחיל עם חוקרים, שכותבים על פי רוב מאמר רציני ומפרסמים אותו בכתב עת רציני, שם הוא יזכה לתשומת לבם של עמיתים לתחום שיכולים להעריך את תוכנו. אבל הסיפור לא נגמר שם. לאוניברסיטאות חשוב מאוד, הרי, להראות שהן מתעסקות בדברים חשובים, או לפחות מעניינים ומגניבים. ולכן משרד יחסי הציבור של האוניברסיטה נכנס לפעילות בכל פעם שבה יש מאמר עם פוטנציאל עניין כזה. התוצאה היא לרוב נסיון פופולריזציה של המאמר, שעשוי להיות מבלבל ומטעה למדי, אבל עדיין מחובר איכשהו למציאות המחקרית כי המידע מגיע ישירות מהחוקרים.
 

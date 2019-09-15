@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"הבעיה של מונטי הול","dateModified":"2008-02-23T12:26:52+02:00","datePublished":"2008-02-23T12:26:52+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/02/23/monty_hall"},"url":"http://localhost:4000/blog/2008/02/23/monty_hall","description":"אתם משתתפים בתוכנית טלוויזיה. המנחה מציג בפניכם שלוש דלתות סגורות. מאחורי שתיים מהן יש עז, ומאחורי השלישית - מכונית. המשחק - אתם בוחרים דלת, וזוכים במה שמאחוריה. מן הסתם אתם רוצים לזכות במכונית. אתם מצביעים על אחת משלוש הדלתות, ואז מגיע הטוויסט: המנחה הולך ופותח דלת אחרת, מראה שמאחוריה יש עז, ושואל אם בא לכם להחליף את הבחירה שלכם לדלת השלישית (הדלת שבה לא בחרתם והוא לא פתח). משתלם להחליף, או לא?","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -97,22 +97,24 @@
 
 <p>כשנתקלתי בחידה בזמנו חשבתי שאין הבדל, והגנתי בלהט על עמדת ה-50:50. מה ששכנע אותי היה כתיבת תוכנה ש”מדמה” את המשחק והגילוי שסטטיסטית, מי שמחליף דלת אכן זוכה ב-2/3 מהמקרים. למעוניינים, הנה תוכנית בשפת פייתון שעושה זאת:</p>
 
-<p>[python]
-from random import randint, choice
-NUM_OF_ROUNDS = 10000
-PLAYER_STRATEGY = "switch" #switch/stay/random</p>
+<div class="code-block">
 
-<p>def play_round(): #returns 0 for failure, 1 for success
-    prize_door = randint(1,3)
-    player_door = randint(1,3) 
-    monty_door = choice([door for door in [1,2,3] if not door in [prize_door, player_door]]) #if two doors are possible, choose uniformly
-    remaining_door = 6 - (player_door + monty_door) #1 + 2 + 3 = 6
-    player_door = {"switch": remaining_door, "stay": player_door, "random": choice([remaining_door, player_door])}[PLAYER_STRATEGY]
-    return 1 if (player_door == prize_door) else 0</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">choice</span>
+<span class="n">NUM_OF_ROUNDS</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">PLAYER_STRATEGY</span> <span class="o">=</span> <span class="s">"switch"</span><span class="p">;</span> <span class="c1">#switch/stay/random
+</span>
+<span class="k">def</span> <span class="nf">play_round</span><span class="p">():</span> <span class="c1">#returns 0 for failure, 1 for success
+</span>    <span class="n">prize_door</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">player_door</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
+    <span class="n">monty_door</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="n">door</span> <span class="k">for</span> <span class="n">door</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">door</span> <span class="ow">in</span> <span class="p">[</span><span class="n">prize_door</span><span class="p">,</span> <span class="n">player_door</span><span class="p">]])</span> <span class="c1">#if two doors are possible, choose uniformly
+</span>    <span class="n">remaining_door</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">-</span> <span class="p">(</span><span class="n">player_door</span> <span class="o">+</span> <span class="n">monty_door</span><span class="p">)</span> <span class="c1">#1 + 2 + 3 = 6
+</span>    <span class="n">player_door</span> <span class="o">=</span> <span class="p">{</span><span class="s">"switch"</span><span class="p">:</span> <span class="n">remaining_door</span><span class="p">,</span> <span class="s">"stay"</span><span class="p">:</span> <span class="n">player_door</span><span class="p">,</span> <span class="s">"random"</span><span class="p">;:</span> <span class="n">choice</span><span class="p">([</span><span class="n">remaining_door</span><span class="p">,</span> <span class="n">player_door</span><span class="p">])}[</span><span class="n">PLAYER_STRATEGY</span><span class="p">]</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="k">if</span> <span class="p">(</span><span class="n">player_door</span> <span class="o">==</span> <span class="n">prize_door</span><span class="p">)</span> <span class="k">else</span> <span class="mi">0</span>
+    
+<span class="n">success_count</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">play_round</span><span class="p">()</span> <span class="k">for</span> <span class="n">round_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NUM_OF_ROUNDS</span><span class="p">)])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Success: {}</span><span class="si">%</span><span class="s">"</span><span class="o">.</span><span class="nb">format</span><span class="p">((</span><span class="mf">100.0</span> <span class="o">*</span> <span class="n">success_count</span><span class="p">)</span> <span class="o">/</span> <span class="n">NUM_OF_ROUNDS</span><span class="p">))</span></code></pre></figure>
 
-<p>success_count = sum([play_round() for round_num in range(NUM_OF_ROUNDS)])
-print("Success: {}%".format((100.0 * success_count) / NUM_OF_ROUNDS))
-[/python]</p>
+</div>
 
 <p>עם זאת, לדעתי יש כמה דרכים פשוטות יותר להשתכנע. כמובן שניתן לכתוב את הסיטואציה באופן מתמטי-פורמלי באמצעות תורת ההסתברות והתוצאה נובעת מאליה; אבל סתם חבל לעשות זאת כשאפשר לפייס את האינטואיציה בדרכים אחרות.</p>
 

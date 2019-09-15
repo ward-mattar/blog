@@ -76,7 +76,7 @@ tags:
 
 וכמובן, אפשר להרחיב את הפונקציה הזו לכל {% equation %}\mathbb{R}{% endequation %} באופן מחזורי (כלומר, שיתקיים {% equation %}f\left(x+2\pi\right)=f\left(x\right){% endequation %}). התוצאה היא פונקציה שנראית כך:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/04/step_func.png"><img class="alignnone size-full wp-image-3097" src="http://www.gadial.net/wp-content/uploads/2014/04/step_func.png" alt="step_func" width="864" height="473" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/04/step_func.png"><img class="alignnone size-full wp-image-3097" src="{{site.baseurl}}{{site.post_images}}/2014/04/step_func.png" alt="step_func" width="864" height="473" /></a>
 
 זה מזכיר את סינוס בכך שזו פונקציה מחזורית שהערכים המינימלי והמקסימלי שלה הם {% equation %}-1{% endequation %} ו-{% equation %}1{% endequation %}, אבל כאן הדמיון נגמר - סינוס עוברת בצורה רציפה בין כל הערכים שלה והפונקציה הזו לא; סינוס היא פונקציה עגולה ונחמדה, והפונקציה הזו ישרה. איך סכום של הרבה סינוסים יכול לתת לנו את הזוועה הזו?
 
@@ -102,7 +102,7 @@ tags:
 
 בואו ונראה איך נראה, למשל, סכום 15 האיברים הראשונים של הטור שבאגף ימין (בכחול):
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/04/step_fourier_15.png"><img class="alignnone size-full wp-image-3098" src="http://www.gadial.net/wp-content/uploads/2014/04/step_fourier_15.png" alt="step_fourier_15" width="858" height="463" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/04/step_fourier_15.png"><img class="alignnone size-full wp-image-3098" src="{{site.baseurl}}{{site.post_images}}/2014/04/step_fourier_15.png" alt="step_fourier_15" width="858" height="463" /></a>
 
 זה נראה די טוב! המבנה הכללי זהה לזה של הפונקציה שאנחנו מנסים לקרב עם הטור. ה-0 ב-{% equation %}x=0{% endequation %} די ברור כעת - זה בדיוק השלב שבו הטור (שמגדיר פונקציה רציפה) "מטייל" בין {% equation %}1{% endequation %} ל-{% equation %}-1{% endequation %}. הדבר היחיד שנראה קצת מציק הוא הצ'ופצ'יקים הבולטים בקצוות של הקטעים, בדיוק ליד נקודות אי-הרציפות של הפונקציה המקורית. הצ'ופצ'יקים הללו נמצאים שם לא במקרה - מדובר על תופעה שנקראת <strong>אפקט גיבס</strong> ואולי אתאר מתישהו בפוסט נפרד. לבינתיים, הנה משהו שחלקכם יוכלו לשחק איתו: גרסה אינטראקטיבית של הטור שבה אתם יכולים לבחור את כמות האיברים בסכום ולראות מה קורה - איך מתרחש הקסם שבו אוסף של סינוסים הופך לאט לאט למשהו שנראה בדיוק כמו {% equation %}f{% endequation %} (ושימו לב איך הקפיצה ליד נקודות אי הרציפות אמנם מתכווצת מבחינת הרוחב שלה, אבל הגובה שלה נותר תמיד מעל רמה מסויימת ולא טריוויאלית של שגיאה).
 <div id="content"></div>

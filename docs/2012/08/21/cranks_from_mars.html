@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"מתמטיקאים מהירח וטרחנים ממאדים","dateModified":"2012-08-21T03:17:26+03:00","datePublished":"2012-08-21T03:17:26+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/08/21/cranks_from_mars"},"url":"http://localhost:4000/blog/2012/08/21/cranks_from_mars","description":"אל תאמינו לכל מה שאתם קוראים באינטרנט.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>הטריגר שלי לכתוב את הפוסט הנוכחי הוא דיון פייסבוק שהתחיל לפני שבוע על העניין הזה בעמוד של אחד, דודי ממן (שאיני מכיר). הדיון כלל כמה פיתולים מרתקים, ואפשר לראות אותו בשלמותו (שמור כתמונה) כאן<strong>:</strong></p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2012/08/moon.png"><img class="alignnone size-thumbnail wp-image-2145" title="moon" src="http://www.gadial.net/wp-content/uploads/2012/08/moon-150x150.png" alt="" width="150" height="150" /></a></p>
+<p><a href="/blog/assets/img/2012/08/moon.png"><img class="alignnone size-thumbnail wp-image-2145" title="moon" src="/blog/assets/img/2012/08/moon.png" alt="" width="150" height="150" /></a></p>
 
 <p>תחילת הדיון הייתה בכך שדודי פרסם נוסח סטנדרטי של הידיעה. חיש קל פרסם מישהו <a href="http://www.hayadan.org.il/mars-near-its-farest-point-2508108/">קישור לאתר הידען</a> שמפריך את הידיעה.</p>
 
@@ -121,7 +121,7 @@
 
 <p>נותר להבין, אם כן, איך מחשבים את הקוטר הזוויתי, וכאן נכנסת לתמונה טריגונומטריה אלמנטרית. הביטו בתמונה הבאה:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2012/08/Angular_dia_formula.jpg"><img class="alignnone size-full wp-image-2144" title="Angular_dia_formula" src="http://www.gadial.net/wp-content/uploads/2012/08/Angular_dia_formula.jpg" alt="" width="583" height="227" /></a></p>
+<p><a href="/blog/assets/img/2012/08/Angular_dia_formula.jpg"><img class="alignnone size-full wp-image-2144" title="Angular_dia_formula" src="/blog/assets/img/2012/08/Angular_dia_formula.jpg" alt="" width="583" height="227" /></a></p>
 
 <p>כאן המשולש נוצר על ידי שני הקווים שהולכים אל נקודות הקצה של ה”דיסק” (שנראה באיור כמו אליפסה). <span>$latex d$</span> הוא הקוטר של הדיסק, <span>$latex D$</span> הוא המרחק שלו מאיתנו, ו-<span>$latex \delta$</span> היא הקוטר הזוויתי. המשולש הגדול אינו משולש ישר זווית, אבל אפשר לחלק אותו לשני משולשים כאלו שכל אחד מהם כולל זווית של <span>$latex \frac{\delta}{2}$</span>. כעת, אחת מהפונקציות הטריגונומטריות הבסיסיות היא פונקציית הטנגנס; טנגנס של זווית במשולש ישר זווית הוא המנה של הניצב שמול הזווית, והניצב שליד הזווית. כלומר, <span>$latex \tan\left(\frac{\delta}{2}\right)=\frac{1}{2}\frac{d}{D}$</span> (החצי באגף ימין נובע מכך שאורך הצלע שמול הזווית הוא <span>$latex \frac{d}{2}$</span> - זכרו שאנו מסתכלים רק על אחד מהמשולשים הקטנים). זה לא עוזר לנו לקבל את <span>$latex \delta$</span>, אז אנחנו מפעילים על שני האגפים את הפונקציה הנגדית לטנגנס, שנקראת ארק-טנגנס (ובסימון: <span>$latex \mbox{atan}$</span>) ומקבלים <span>$latex \frac{\delta}{2}=\mbox{atan}\frac{1}{2}\frac{d}{D}$</span>, או <span>$latex \delta=2\mbox{atan}\frac{1}{2}\frac{d}{D}$</span>. זו כל הנוסחה שאנחנו צריכים.</p>
 

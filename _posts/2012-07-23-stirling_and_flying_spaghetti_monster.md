@@ -12,7 +12,7 @@ tags:
 דף הפייסבוק של "כנסיית מפלצת הספגטי המעופפת" פרסם את <a href="https://www.facebook.com/mifletzet/posts/405446739503293">הסטטוס הבא</a>:
 <blockquote>הרמתי היום מטבע, והתפללתי להוד איטריותה שבחצי מהזריקות אני אקבל עץ ובחצי השני אני אקבל פלי. בעזרת הדרכתה של אטרייתה הקדושה, המשאלה התגשמה.</blockquote>
 <blockquote>מה גדול כוחה, ונאמר ר'אמן.</blockquote>
-<a href="http://www.gadial.net/wp-content/uploads/2012/07/Flying_Spaghetti_Monster.jpg"><img class="alignnone size-full wp-image-2121" title="Flying_Spaghetti_Monster" src="http://www.gadial.net/wp-content/uploads/2012/07/Flying_Spaghetti_Monster.jpg" alt="" width="514" height="514" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/07/Flying_Spaghetti_Monster.jpg"><img class="alignnone size-full wp-image-2121" title="Flying_Spaghetti_Monster" src="{{site.baseurl}}{{site.post_images}}/2012/07/Flying_Spaghetti_Monster.jpg" alt="" width="514" height="514" /></a>
 
 בהנחה שזה נכון (ואין סיבה שלא נאמין שזה נכון - זה נכתב בדף הפייסבוק של כנסיית מפלצת הספגטי המעופפת!), אני רוצה לשכנע אתכם שזה מוכיח שמפלצת הספגטי המעופפת קיימת. כלומר, שההסתברות של מה שתואר בציטוט היא אפסית.
 

@@ -6,7 +6,7 @@ layout: post
 categories: 
   - כללי
 ---
-<img class="alignnone size-medium wp-image-3543" src="http://testwordpress.gadial.net/wp-content/uploads/2018/02/division-by-zero-300x240.jpg" alt="" width="300" height="240" />
+<img class="alignnone size-medium wp-image-3543" src="http://testwordpress.gadial.net/wp-content/uploads/2018/02/division-by-zero.jpg" alt="" width="300" height="240" />
 
 ייתכן ששמתם לב שביומיים האחרונים האתר נעלם ועכשיו הוא חזר אבל נראה מזעזע. לא, לא חילקתי באפס. קרה הדבר שקורה לכולם - מישהו פרץ איכשהו לאתר והחדיר קוד זדוני, והייתי צריך להסיר את הכל ולשחזר מגיבוי, ועל הדרך להתקין את הגרסה העדכנית ביותר של וורדפרס. מכיוון שהיה לי חשוב שהאתר יחזור לפעילות כמה שיותר מהר התפשרתי על זה שיעלה אתר שנראה מזעזע על פני אתר שייראה מזעזע גם כן אבל לפחות בסגנון הישן.
 

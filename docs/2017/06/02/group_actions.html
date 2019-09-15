@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פעולה של חבורה על קבוצה","dateModified":"2017-06-02T13:28:53+03:00","datePublished":"2017-06-02T13:28:53+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/06/02/group_actions"},"url":"http://localhost:4000/blog/2017/06/02/group_actions","description":"מה זה בכלל בפוסט הקודם שלי דיברתי על סימטריות. סימטריה של צורה כלשהי הייתה פונקציה מהמישור לעצמו (הפיכה ומשמרת מרחקים) שכשהיא הופעלה על הצורה הזו החזירה כפלט את הצורה עצמה. אולי היא “ערבבה” את הנקודות שמרכיבות את הצורה, אבל קבוצת כל הנקודות של הצורה עברה לעצמה. סימטריות היו חבורה, ביחס לפעולה של הרכבת פונקציות; זו דוגמא אחת לאופן שבו אנחנו חושבים על האיברים של חבורה כלשהי בתור משהו שפועל על קבוצה ו”מערבב” אותה. דרך ההתבוננות הזו היא טבעית למדי והרבה חבורות של תמורות צצות מלכתחילה מכך שאנחנו מסתכלים על אובייקט ושואלים את עצמנו מה יכול לפעול עליו ואיך. בנוסף לכך, יש כאן לרוב סימביוזה: היכרות טובה עם חבורה שפועלת על אובייקט כלשהו עוזרת לנו להבין את האובייקט, והיכרות טובה עם אובייקט שחבורה כלשהי פועלת עליו עוזרת לנו להבין את החבורה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -168,7 +168,7 @@
 
 <p>בשביל מה כל זה היה טוב? קומבינטוריקה! הלמה של ברנסייד עוזרת לספור דברים בצורה שמאפשרת להיפטר בנוחות מספירות כפולות מטעמי סימטריה. בואו ניתן דוגמא קלאסית שמופיעה גם בויקיפדיה האנגלית - ספירת צביעות של קוביה.</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2017/06/330px-Face_colored_cube.png" rel="attachment wp-att-3452"><img class="aligncenter size-full wp-image-3452" src="http://www.gadial.net/wp-content/uploads/2017/06/330px-Face_colored_cube.png" alt="330px-Face_colored_cube" width="330" height="330" /></a></p>
+<p><a href="/blog/assets/img/2017/06/330px-Face_colored_cube.png" rel="attachment wp-att-3452"><img class="aligncenter size-full wp-image-3452" src="/blog/assets/img/2017/06/330px-Face_colored_cube.png" alt="330px-Face_colored_cube" width="330" height="330" /></a></p>
 
 <p>נניח שיש לי <span>$latex n$</span> צבעים. בכמה דרכים שונות אני יכול לצבוע קוביה באמצעות הצבעים? על פניו, לקוביה יש 6 פאות. לכל פאה בוחרים בנפרד צבע, ולכן יש <span>$latex n^{6}$</span> אפשרויות. מצד שני, האם יש הבדל בין המקרה שבו צבענו את כל הקוביה באדום למעט הפאה העליונה שנצבעה בכחול, והמקרה שבו הכל אדום למעט הפאה התחתונה שהיא כחולה? מצד אחד כן, אם אנחנו חושבים על הפאות “למעלה” ו”למטה” כדברים נפרדים; מצד שני, אם יתנו לי שתי קוביות שנצבעו בשתי הדרכים הנ”ל אני אוכל לערבב אותן ביד שלי ולסובב אותן ולהגיש לכם בחזרה ולא תוכלו לדעת מי זו מי, אז שתיהן גם זהות במובן מסויים. אם נוקטים בגישה הראשונה, התשובה של <span>$latex n^{6}$</span> היא הנכונה; ננקוט כעת בגישה השניה, לפיה שתי צביעות הן זהות אם אפשר לסובב את הקוביה בדרך כלשהי שמעבירה את הצביעה הראשונה אל השניה. בדרך הזו המושג של פעולת החברה בא מעצמו - <span>$latex X$</span> היא קבוצת כל הצביעות (יש <span>$latex n^{6}$</span> כאלו בסך הכל) ואילו <span>$latex G$</span> היא קבוצת כל הסיבובים האפשריים של הקוביה. מה שאנחנו רוצים למצוא הוא את מספר <strong>המסלולים</strong> של פעולת <span>$latex G$</span> על <span>$latex X$</span> - כל מסלול כזה מייצג את כל הצביעות שהן “זהות עד כדי סיבוב”. הלמה של ברנסייד מנחה אותנו למצוא עכשיו לכל סיבוב אפשרי את כל הצביעות שמקובעות על ידו.</p>
 

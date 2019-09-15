@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"הונאה מעבר לגבול","dateModified":"2008-01-21T01:36:00+02:00","datePublished":"2008-01-21T01:36:00+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/01/21/lim_sin_x_over_x"},"url":"http://localhost:4000/blog/2008/01/21/lim_sin_x_over_x","description":"בפוסט הקודם דיברתי על החשיבות הרבה של הגבול הבא: $latex \\lim_{x\\to 0}\\frac{\\sin(x)}{x}=1$. בקצרה - ממנו נובע כל החשבון האינפיניטסימלי של פונקציות טריגונומטריות. כזכור, היה עוד גבול מעצבן שהייתי צריך להתמודד איתו - $latex \\lim_{x\\to 0}\\frac{1-\\cos(x)}{x}$, אך בעזרת הגבול הקודם ושימוש ברציפות של הפונקציות הטריגונומטריות (דבר שבפני עצמו צריך להוכיח אך אינו קשה עד כדי כך) לא קשה להוכיח שהוא 0 (כופלים ומחלקים ב-$latex 1+\\cos(x)$ ומשתמשים בכך ש-$latex \\sin^2(x)+\\cos^2(x)=1$).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>אם כן, הבעיה שבגבול הזה אינה קשורה לאינפי. היא קשורה לאי השוויון <span>$latex \sin(x)\le x\le\tan(x)$</span>, שאינו קשור לאינפי דווקא, אלא מהותית לקשר שבין גודל זווית וגודל הפונקציות הטריגונומטריות שמוגדרות עליה. הדרך להוכיח את אי השוויון הזה עוברת, באופן בלתי נמנע, דרך הגאומטריה - ובפרט, דרך שרטוט שאפשר לראות כמעט בכל ספר אינפי שמכבד את עצמו:</p>
 
-<p><a title="sinx/x" href="http://www.gadial.net/wp-content/uploads/2008/01/sinxx.png"><img alt="sinx/x" src="http://www.gadial.net/wp-content/uploads/2008/01/sinxx.png" /></a></p>
+<p><a title="sinx/x" href="/blog/assets/img/2008/01/sinxx.png"><img alt="sinx/x" src="/blog/assets/img/2008/01/sinxx.png" /></a></p>
 
 <p>מה הולך כאן? ציירנו את מעגל היחידה (כלומר, המעגל שרדיוסו 1 - ולכן אורכי הקטעים OB ו-OE הוא 1). בתוך המעגל הזה ציירנו זווית x כלשהי, קטנה מ-90 מעלות). את הזווית מציירים באמצעות שני רדיוסים - בחרנו אחד מהם להיות מאוזן (OB), והעלינו ממנו אנך, BC (כלומר - ישר שנמצא בזווית של 90 מעלות ביחס ל-OB). את הרדיוס השני, OE, המשכנו עד שפגש את האנך BC בנקודה C. בנוסף, הורדנו מ-E אנך אל OB וסימנו את נקודת החיתוך בתור D. עד כאן - בניה גאומטרית סטנדרטית.</p>
 
@@ -115,11 +115,11 @@
 
 <p>השאלה הראשונה שיש לעסוק בה היא מהו בעצם האורך של הקשת BE. בעוד שאורך של ישר הוא ברור לנו לחלוטין (אפשר לפתוח דיון גם על זה, אבל בואו נניח זאת לבינתיים…), “אורך של קשת” (ובהכללה, אורך של עקומה כלשהי) לא מוגדר בצורה פשוטה שכזו. הגישה הנפוצה להגדרתו היא זו: לוקחים <strong>קירוב</strong> של הקשת בידי קווים ישרים, וסוכמים את אורכם; אורך הקשת הוא החסם העליון של אורכי כל הקירובים שמתקבלים בצורה הזו. ב”קירוב” הכוונה היא לדבר הבא: מציירים מספר נקודות על הקשת, כשנקודת ההתחלה והסיום תמיד מופיעות, ומחברים כל שתי נקודות סמוכות בישר. כך זה נראה:</p>
 
-<p><a title="Arc length" href="http://www.gadial.net/wp-content/uploads/2008/01/arclength1.png"><img alt="Arc length" src="http://www.gadial.net/wp-content/uploads/2008/01/arclength1.png" /></a></p>
+<p><a title="Arc length" href="/blog/assets/img/2008/01/arclength1.png"><img alt="Arc length" src="/blog/assets/img/2008/01/arclength1.png" /></a></p>
 
 <p>כאן הקשת היא AB, והוספנו עליה שתי נקודות נוספות, C,D, וציירנו קו שבור שעובר דרכן - כלומר, מורכב מהקווים AC, CD, DB. אורך הקו הזה הוא קירוב לאורך הקשת. מכיוון שאורך הקשת מוגדר כחסם העליון של אורכי הקירובים הפוליגונליים, הרי שקיים קירוב פוליגונלי שאורכו “קרוב כרצוננו” לאורך הקשת, בכל מידת דיוק שנבחר. זה מאפשר לנו להימנע מהוכחה ישירה שהקשת עצמה קטנה מהישר BC בשרטוט המקורי; מספיק שנראה את זה לכל קירוב פוליגונלי שלה, וזאת מהטעם הפשוט שחסם עליון של קבוצה <strong>מוגדר</strong> בתור החסם הקטן ביותר של איבריה - כלומר, חסם כזה שכל חסם אחר גדול ממנו. אם כן, מספיק להראות ש-BC הוא “חסם אחר” שכזה. כאן האינפי עוזב אותנו לחלוטין, ואנו נותרים עם טיעונים גאומטריים נטו. כאן נכנסת לעניין הבנייה הבאה:</p>
 
-<p><a title="sinxxextra" href="http://www.gadial.net/wp-content/uploads/2008/01/sinxxextra.png"><img alt="sinxxextra" src="http://www.gadial.net/wp-content/uploads/2008/01/sinxxextra.png" /></a>
+<p><a title="sinxxextra" href="/blog/assets/img/2008/01/sinxxextra.png"><img alt="sinxxextra" src="/blog/assets/img/2008/01/sinxxextra.png" /></a>
 מה עשיתי פה? לקחתי קירוב פוליגונלי כלשהו למעגל, והעפתי מהציור את הפרטים הלא רלוונטיים - בפרט, את המעגל עצמו. כעת העברתי מהנקודה O קווים אל BC שחותכים את הקירוב הפוליגונלי בנקודות המפגש בין הצלעות שלו. חשוב לשים לב שהדבר יוצר משולשים שווי שוקיים - כי הצלעות של כל משולש (שבסיסו הוא אחד מהקווים בקירוב הפוליגונלי) הן רדיוסים, ולכן באורך זהה. לכן גם זווית הבסיס של המשולשים הללו זהות. זה גם מה ש-Moise מצייר, וכאן הוא נכנע: הוא אומר שמשיקולים גאומטריים “פשוטים” קל לראות שכל אחד מהקטעים בקירוב הפוליגונלי קטן מהקטע ש”מתאים לו” על BC. זה אמנם נראה ברור, אבל איך מוכיחים זאת? הנה חמש האגורות שלי (כלומר, אין לי מושג אם מה שאני כותב נכון - ובפרט, אין לי מושג אם יש הוכחה פשוטה יותר):</p>
 
 <p>כל קטע בקירוב הפוליגונלי (חוץ מהתחתון ביותר) העברתי מקביל “מאחוריו”, כדי שינוח על BC ובכך ייצור משולש. כך למשל המשולש התחתון ביותר הוא <span>$latex Ba_1b_1$</span>, המשולש הבא הוא <span>$latex b_1a_2b_2$</span>, וכן הלאה. המקביל לכל קטע בקירוב הפוליגונלי הוא בודאות גדול ממנו - זאת בשל דמיון משולשים (המקביל הוא בסיס למשולש שווה שוקיים בעל אורך צלע גדול יותר וזווית בסיס זהה). לכן מספיק להראות שלכל אחד מהמשולשים הללו, הצלע ש”עומדת ישר” היא הגדולה ביותר. למשל, במשולש <span>$latex b_1a_2b_2$</span> צריך להראות שהצלע <span>$latex b_1b_2$</span> גדולה מהצלע <span>$latex b_1a_2$</span>, וכן הלאה.</p>

@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"“הוא חיפש על העץ…”","dateModified":"2008-05-18T14:33:54+03:00","datePublished":"2008-05-18T14:33:54+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/05/18/search_trees"},"url":"http://localhost:4000/blog/2008/05/18/search_trees","description":"יש שתי גישות אפשריות לעיסוק בגרפים; האחת היא לחשוב על הגרף כעל יצור מתמטי אבסטרקטי ולנסות לחקור אותו - מה התכונות שלו, ואיזה אלגוריתמים בודקים אותן בצורה יעילה. משפט אוילר שעליו דיברתי בפוסט שעבר הוא דוגמה לאופן פעולה זה. הרעיון בגישה זו הוא שידוע לנו שגרף הוא אבסטרקציה שניתן להחיל על אלף ואחד דוגמאות שונות, ולכן אם פתרנו בעיה עבור גרף, פתרנו אותה גם עבור כל הדוגמאות הללו “בבת אחת” - ובחלקן ייתכן מאוד שלבעיה יש חשיבות. בפוסט הקודם ראינו שיש לפתרון של בעיית המסלולים האוילריאניים חשיבות הן לשאלה של צורות שאפשר לצייר מבלי להרים את הדף מהנייר, והן לשאלה של טיול שעובר בכל גשר בדיוק פעם אחת.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -92,7 +92,7 @@
 <p>הגישה השנייה היא זו שמנסה להשתמש בגרפים לא בתור אבסטרקציה לכלום אלא בתור אובייקט מתמטי עם חיים משל עצמו, וליצור גרפים “מועילים”. הדוגמאות הבולטות ביותר לגישה זו הן של העצים השונים והמשונים שבהם משתמשים במדעי המחשב - וכדי להציג אותן, כדאי ראשית כל להגדיר את המושג של “<a href="http://he.wikipedia.org/wiki/%D7%A2%D7%A5_(%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%92%D7%A8%D7%A4%D7%99%D7%9D)">עץ</a>”. לפני ההגדרה הפורמלית, הגדרה לא פורמלית: עץ הוא גרף שנראה כמו אילן יוחסין.
 הגדרה פורמלית לעץ (לא מכוון) היא “גרף קשיר וחסר מעגלים”. בפועל, עץ הוא גרף שנראה, למשל, כך:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/05/tree.png" title="Tree"><img src="http://www.gadial.net/wp-content/uploads/2008/05/tree.png" alt="Tree" /></a>
+<p><a href="/blog/assets/img/2008/05/tree.png" title="Tree"><img src="/blog/assets/img/2008/05/tree.png" alt="Tree" /></a>
 כלומר, הוא מורכב ממספר “ענפים” ש”מתפצלים” שוב ושוב (למרות שגם “שרוך” אחד ארוך נחשב עץ). הרעיון הבסיסי בעץ הוא שבין כל שני צמתים שבו מחבר מסלול אחד ויחיד. מכאן שאם נבחר צומת “בסיסי”, אפשר לחשוב על כל שאר העץ כצמתים שאליהם מגיעים על ידי מסלולים שיוצאים מאותו צומת בסיסי. לצומת הזה קוראים “שורש”. אם לוקחים עץ לא מכוון ורוצים לכוון אותו, בוחרים צומת שישמש כשורש, ומכוונים את הקשתות בצורה שתשמר את העובדה שלכל צומת ניתן להגיע מהשורש - כלומר, אם במסלול שיוצא מהשורש אל הצומת B מגיעים אליו מהצומת A, אז הקשת שבין A ו-B תכוון מ-A אל B. בסופו של דבר מגיעים לצמתים שרק אפשר להיכנס אליהם, לא לצאת - צמתים כאלו נקראים “עלים” (נסו לחשוב מדוע לעלה נכנסת רק קשת בודדת ולא כמה).</p>
 
 <p>ישנה סדרה של תכונות שקולות שמגדירות עץ, ועוזרות לתת אינטואיציה לגביו. הנה כמה מהן - נסו לחשוב מדוע בכל עץ הן מתקיימות, ומדוע אם הן מתקיימות, הגרף הוא עץ:</p>
@@ -126,7 +126,7 @@
 
 <p>כל זה מאוד נחמד, אבל למרבה הצער, חסר ערך לחלוטין. הסיבה לכך היא שסיבוכיות אלגוריתם החיפוש במקרה הגרוע ביותר היא כעומק העץ (כלומר, כאורך המסלול הארוך ביותר מהשורש עד לאחד מהעלים), ועומק העץ עשוי להיות זהה (או קרוב מאוד) למספר הצמתים שבו - למשל, אם העץ הוא “שרוך” - ושרוך שכזה הוא פשוט רשימה מקושרת בתחפושת:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2008/05/sroch.png" title="Sroch"><img src="http://www.gadial.net/wp-content/uploads/2008/05/sroch.png" alt="Sroch" /></a>
+<p><a href="/blog/assets/img/2008/05/sroch.png" title="Sroch"><img src="/blog/assets/img/2008/05/sroch.png" alt="Sroch" /></a>
 עם זאת, כל עוד שומרים על העץ <strong>מאוזן</strong>, כלומר שבתת העץ הימני של כל צומת יהיה בערך אותו מספר צמתים כמו בתת העץ השמאלי, העומק של העץ הוא לוגריתמי במספר הצמתים שבו, ולכן אלגוריתם החיפוש יהיה יעיל. על כן, עיקר העיסוק בעצי חיפוש הוא בעצים שמצליחים להישאר מאוזנים גם כאשר מכניסים ומוציאים מהם איברים, תוך הקטנת הזמן שפעולות אלו דורשות ככל הניתן. שתי דוגמאות לעצי חיפוש מאוזנים שכאלו הם <a href="http://he.wikipedia.org/wiki/%D7%A2%D7%A5_AVL">עצי AVL</a> ו<a href="http://he.wikipedia.org/wiki/%D7%A2%D7%A5_%D7%90%D7%93%D7%95%D7%9D_%D7%A9%D7%97%D7%95%D7%A8">עצים אדומים-שחורים</a>; בשניהם מאחסנים מידע נוסף בכל צומת שמקל על שימור האיזון של העץ.</p>
 
 <p>דוגמת עצי החיפוש היא סטנדרטית ובסיסית; משתמשים בהם בכל מקום. עם זאת, אני חותר לדוגמה שלטעמי היא מעניינת עוד יותר, ובעלת יישומים מפתיעים יותר - <a href="http://he.wikipedia.org/wiki/%D7%A2%D7%A5_%D7%A1%D7%99%D7%A4%D7%95%D7%AA">עצי סיומות</a> (Suffix trees) ושימושיהם בחיפוש מילים בטקסט ובכיווץ מידע.</p>

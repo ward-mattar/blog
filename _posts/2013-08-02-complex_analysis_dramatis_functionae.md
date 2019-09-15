@@ -35,16 +35,16 @@ tags:
 
 איך מציירים פונקציות ממשיות כולנו יודעים. הנה למשל הגרף של {% equation %}f\left(x\right)=x^{2}{% endequation %}:
 
-<strong>  <a href="http://www.gadial.net/wp-content/uploads/2013/08/x_2.png"><img class="alignnone size-medium wp-image-2695" alt="x_2" src="http://www.gadial.net/wp-content/uploads/2013/08/x_2-300x222.png" width="300" height="222" /></a> </strong>
+<strong>  <a href="{{site.baseurl}}{{site.post_images}}/2013/08/x_2.png"><img class="alignnone size-medium wp-image-2695" alt="x_2" src="{{site.baseurl}}{{site.post_images}}/2013/08/x_2.png" width="300" height="222" /></a> </strong>
 
 הרעיון בגרף הוא פשוט: ציר אחד מתאר את ערכי ה-{% equation %}x{% endequation %} שהפונקציה מקבלת, והציר השני מתאר את ערכי הפלטים הפלטים שהפונקציה יכולה לקבל. אנחנו מסמנים כל נקודה מהצורה {% equation %}\left(x,f\left(x\right)\right){% endequation %}, וקיבלנו ייצוג ויזואלי יפה של הפונקציה. אפשר לעשות תעלול דומה גם עבור פונקציות שמקבלות שני מספרים ממשיים ומחזירות מספר ממשי בודד - במקרה הזה הגרף ייראה כמו <strong>משטח</strong>, שהערך של הפונקציה קובע את ה<strong>גובה</strong> שלו. הנה המשטח שמתאים ל-{% equation %}f\left(x,y\right)=x^{2}+y^{2}{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/3d.png"><img class="alignnone size-medium wp-image-2690" alt="3d" src="http://www.gadial.net/wp-content/uploads/2013/08/3d-300x300.png" width="300" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/3d.png"><img class="alignnone size-medium wp-image-2690" alt="3d" src="{{site.baseurl}}{{site.post_images}}/2013/08/3d.png" width="300" height="300" /></a></strong>
 
 פורמלית, הגרף הזה הוא אוסף כל השלשות {% equation %}\left(x,y,f\left(x,y\right)\right){% endequation %} במרחב, כלומר תת-קבוצה של {% equation %}\mathbb{R}^{3}{% endequation %}.
 
 כל זה טוב ויפה, אבל מה עושים עם פונקציות מרוכבות? כל מספר מרוכב מתואר על ידי <strong>זוג</strong> של מספרים ממשיים, כך שהגרף של פונקציה מרוכבת יהיה אוסף של נקודות שנראות ככה: {% equation %}\left(a+bi,\mbox{Re}f\left(a+bi\right)+\mbox{Im}f\left(a+bi\right)i\right){% endequation %}, או כשננסה לצייר אותן בתוך מרחב ממשי כלשהו, רביעיות של נקודות שנראות כך: {% equation %}\left(a,b,\mbox{Re}f\left(a+bi\right),\mbox{Im}f\left(a+bi\right)\right){% endequation %}. הבעיה היא שאנחנו לא יודעים לצייר דברים ארבע-ממדיים בצורה נוחה במיוחד. זה לא אומר שאי אפשר לעשות את זה - אפשר להשתמש, למשל, בצבעים כדי להוסיף מימד נוסף לתמונה וגם עושים את זה - אבל אני לא הכי אוהב את הגישה הזו. יש גישה אחרת לכל העניין, שבמובנים מסויימים עוזרת הרבה יותר להבין את הפונקציות - להסתכל לא על כל הפונקציה בבת אחת, אלא לראות מה היא עושה לתת-קבוצות "נחמדות" של {% equation %}\mathbb{R}^{2}{% endequation %}. בשיטה הזו מציירים גרף אחד שהוא תת-קבוצה של המישור המרוכב לפני הפעלת הפונקציה, וגרף אחר שהוא התמונה של אותה תת-קבוצה אחרי הפעלת הפונקציה. לעתים קרובות גם מוסיפים חצים במרווחים שווים כדי לתת תחושה של כמה הפונקציה "מנפחת" או "מכווצת". הדרך הטובה ביותר להסביר את זה היא לתת דוגמה:
-<strong></strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/z_2.png"><img class="alignnone size-full wp-image-2696" alt="z_2" src="http://www.gadial.net/wp-content/uploads/2013/08/z_2.png" width="783" height="413" /></a>
+<strong></strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/z_2.png"><img class="alignnone size-full wp-image-2696" alt="z_2" src="{{site.baseurl}}{{site.post_images}}/2013/08/z_2.png" width="783" height="413" /></a>
 
 מה הולך כאן בכלל? ובכן, ראשית אני מתנצל אם האיורים נראים חובבניים - הם באמת כאלו! לא הצלחתי למצוא שום כלי שייצר בדיוק את מה שרציתי, אז כתבתי סקריפט ב-Sage (שאפשר לראות <a href="http://gadial.net/stuff/complex_plot.sage">כאן</a>) שיעשה את זה בשבילי. אני מקווה שהאיורים מספיק ברורים כדי להבין את הנקודות שאני רוצה להמחיש.
 
@@ -58,7 +58,7 @@ tags:
 
 הפונקציה המתבקשת היא אקספוננט: אנחנו מתארים ממילא מספרים מרוכבים עם אקספוננט, אז למה לא לקחת את זה לשלב הבא?
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/exp.png"><img class="alignnone size-full wp-image-2693" alt="exp" src="http://www.gadial.net/wp-content/uploads/2013/08/exp.png" width="784" height="408" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/exp.png"><img class="alignnone size-full wp-image-2693" alt="exp" src="{{site.baseurl}}{{site.post_images}}/2013/08/exp.png" width="784" height="408" /></a></strong>
 
 מה הולך כאן? יש לנו שתי קבוצות של ישרים - אופקיים ואנכיים. הישרים האופקיים עוברים לישרים שיוצאים מהראשית בזווית כלשהי ("קרניים"); הישרים האנכיים הופכים <strong>למעגלים</strong>. למה זה? פשוט למדי. המשוואה של ישר אופקי היא {% equation %}z\left(t\right)=t+bi{% endequation %} כאשר {% equation %}b{% endequation %} קבוע ומתאר את ה<strong>גובה</strong> של הישר ביחס לציר {% equation %}x{% endequation %} (גובה שיכול להיות גם שלילי, כמובן). אחרי הפעלת אקספוננט, נקבל {% equation %}e^{t+bi}=e^{t}\cdot e^{bi}{% endequation %}. כלומר, ישר שנמצא בזווית {% equation %}b{% endequation %} עם הכיוון החיובי של ציר {% equation %}x{% endequation %}. נסו רגע לדמיין בעיני רוחכם אנימציה (צר לי, אני לא מוכשר מספיק כדי לתכנת משהו אינטראקטיבי) - קחו ישר אופקי והרימו/הורידו אותו, ודמיינו את התמונה שלו <strong>מסתובבת</strong> בהתאם.
 
@@ -72,17 +72,17 @@ tags:
 
 והנה התמונה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/cos_ellipse.png"><img class="alignnone size-full wp-image-2691" alt="cos_ellipse" src="http://www.gadial.net/wp-content/uploads/2013/08/cos_ellipse.png" width="784" height="414" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/cos_ellipse.png"><img class="alignnone size-full wp-image-2691" alt="cos_ellipse" src="{{site.baseurl}}{{site.post_images}}/2013/08/cos_ellipse.png" width="784" height="414" /></a></strong>
 
 (שימו לב - והסבירו לעצמכם - לכיווני החצים על האליפסות השונות).
 
 כל זה - רק עבור ישרים אופקיים, שבהם {% equation %}a{% endequation %} משתנה ו-{% equation %}b{% endequation %} קבוע. מה קורה עבור ישרים אנכיים, מהצורה {% equation %}a+ti{% endequation %}? טוב, כאן קורה משהו מוזר מאוד שיש סיכוי שלא יהיה מוכר ללא מעט קוראים, כי בבית הספר בכלל לא נתקלים במשהו כזה. אנחנו נקבל עקום מהצורה {% equation %}\left(\frac{e^{t}+e^{-t}}{2}\cos a,\frac{e^{t}-e^{-t}}{2}\sin a\right){% endequation %} (קצת הפכתי את הסימן של {% equation %}t{% endequation %} כדי שיתאים לסטנדרט שאני בא לתאר) אם עכשיו אסמן {% equation %}\alpha=\cos a{% endequation %} ו-{% equation %}\beta=\sin a{% endequation %} אני אוכל לכתוב את העקום גם בצורה שונה: {% equation %}\left(\alpha\cosh t,\beta\sinh t\right){% endequation %}, כאשר {% equation %}\cosh{% endequation %} ו-{% equation %}\sinh{% endequation %} הן פונקציות ממשיות שידועות בתור <strong>פונקציות היפרבוליות</strong>, וראוי להקדיש להן פוסט שלם משל עצמן - מה שלא אעשה כעת. רק אעיר שהן מוגדרות בתור {% equation %}\cosh x=\frac{e^{x}+e^{-x}}{2}{% endequation %} ו-{% equation %}\sinh x=\frac{e^{x}-e^{-x}}{2}{% endequation %} (הדמיון בין הגדרה זו להגדרה של סינוס וקוסינוס מרוכבים הוא כמובן לא מקרי, וגם לא הבחירה בשמות "קוסינוס היפרבולי" ו"סינוס היפרבולי" עבור הפונקציות). כפי שהעקום שמתואר על ידי הפרמטריזציה {% equation %}\left(\alpha\cos t,\beta\sin t\right){% endequation %} מתאר <strong>אליפסה</strong>, כך העקום שמתואר על ידי הפרמטריזציה {% equation %}\left(\alpha\cosh t,\beta\sinh t\right){% endequation %} מתאר <strong>היפרבולה</strong>, ומכאן ה"היפרבולי" בשם הפונקציות. לכן לא מפתיע כל כך - עבור מי שיודע איך היפרבולה אמורה להיראות - לראות את התמונה הבאה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/cos_hyperbole.png"><img class="alignnone size-full wp-image-2692" alt="cos_hyperbole" src="http://www.gadial.net/wp-content/uploads/2013/08/cos_hyperbole.png" width="784" height="414" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/cos_hyperbole.png"><img class="alignnone size-full wp-image-2692" alt="cos_hyperbole" src="{{site.baseurl}}{{site.post_images}}/2013/08/cos_hyperbole.png" width="784" height="414" /></a></strong>
 
 אפשר לנחש בשלב הזה שתמונה של סינוס תהיה דומה, אולי עם החלפת תפקידים של ישרים אנכיים ואופקיים, אבל כאן מצפה לנו עוד הפתעה קטנה - החלק השני של ההיפרבולה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/08/sin.png"><img class="alignnone size-full wp-image-2694" alt="sin" src="http://www.gadial.net/wp-content/uploads/2013/08/sin.png" width="784" height="414" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/08/sin.png"><img class="alignnone size-full wp-image-2694" alt="sin" src="{{site.baseurl}}{{site.post_images}}/2013/08/sin.png" width="784" height="414" /></a></strong>
 
 מאיפה זה הגיע? ובכן, אפשר לבצע את החישוב המפורש או לנקוט בדרכי קיצור, אבל בסופו של דבר זה נובע מהתכונה הישנה לפיה קוסינוס היא פונקציה זוגית ואילו סינוס היא פונקציה אי זוגית.
 

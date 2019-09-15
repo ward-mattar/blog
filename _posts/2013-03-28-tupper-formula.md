@@ -19,7 +19,7 @@ tags:
 
 המשוואה הזו מכילה שני משתנים - {% equation %}x,y{% endequation %}. שניהם יכולים לקבל כל ערך שהוא מספר ממשי. עכשיו משחקים את המשחק הבא: מסתכלים על המישור {% equation %}\mathbb{R}^{2}{% endequation %} שהוא אוסף כל הנקודות {% equation %}\left(x,y\right){% endequation %} שהן מספרים ממשיים. לכל נקודה {% equation %}\left(x,y\right){% endequation %} כזו, אם כאשר מציבים את {% equation %}x,y{% endequation %} בנוסחה אי השוויון שבה אכן מתקיים, צובעים את הנקודה {% equation %}\left(x,y\right){% endequation %} בצבע שחור; אם השוויון לא מתקיים, מותירים את הנקודה לבנה. כעת, אם נסתכל על התמונה שנקבל נראה שקיבלנו תמונה אינסופית שבה המוני נקודות פזורות פה ושם וקשה להבין מה קורה, אבל אם נצטמצם לריבוע קטן יחסית - באורך 17 וברוחב 105 - ונלך למקום המתאים, נראה את התמונה הבאה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/tupper.png"><img class="alignnone size-medium wp-image-2401" alt="tupper" src="http://www.gadial.net/wp-content/uploads/2013/03/tupper-300x48.png" width="300" height="48" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/tupper.png"><img class="alignnone size-medium wp-image-2401" alt="tupper" src="{{site.baseurl}}{{site.post_images}}/2013/03/tupper.png" width="300" height="48" /></a></strong>
 
 רגע, מה? זו תמונה של המשוואה שבעזרתה יצרנו את התמונה מלכתחילה! יש לנו כאן סוג של הפניה עצמית - משוואה שיודעת <strong>לצייר</strong> את עצמה. הזוי לחלוטין, ומתעלה אפילו על <a href="http://www.gadial.net/2009/05/10/godel_incompleteness_proof_sketch/">משפטי אי השלמות של גדל</a> ותוכניות המחשב <a href="http://www.gadial.net/2009/11/27/quine_and_recursion_theorem/">שיודעות להדפיס את הקוד של עצמן</a>!
 
@@ -106,4 +106,4 @@ draw_from_k(ctx,k);
 אלו מכם שיסתכלו על הקוד שמייצר את התמונות מתוך המספרים למעלה יראו שזה מה שאני עושה - לוקח את המספר, מחלק ב-17 ואז אוכל אותו ביט ביט ומחליט על פי מה לצייר. המימוש הוא פשוט ביותר (אם כי נדרשת ספריה למספרים גדולים) וכל העסק הוא פשוט למדי אחרי שחושבים עליו קצת.
 
 כל זה לא מפחית, לטעמי, מתחושת הפליאה הראשונית, ומכמה שההתעסקות בנוסחה הזו כיפית. והנה מה שיש לשחר אבן-דר מנדל <strong></strong> לומר על זה:
-<a href="http://www.gadial.net/wp-content/uploads/2013/03/tupper_shachar.jpg"><img src="http://www.gadial.net/wp-content/uploads/2013/03/tupper_shachar.jpg" alt="tupper_shachar" width="480" height="324" class="alignnone size-full wp-image-2406" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2013/03/tupper_shachar.jpg"><img src="{{site.baseurl}}{{site.post_images}}/2013/03/tupper_shachar.jpg" alt="tupper_shachar" width="480" height="324" class="alignnone size-full wp-image-2406" /></a>

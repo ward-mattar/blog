@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"עיון בהיר במיון מהיר","dateModified":"2012-07-20T14:25:46+03:00","datePublished":"2012-07-20T14:25:46+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/07/20/quick_quicksort"},"url":"http://localhost:4000/blog/2012/07/20/quick_quicksort","description":"מבין כל אלגוריתמי המיון המפורסמים, מיון מהיר הוא החביב עלי, בגלל שהוא כל כך מוזר. ראשית, זה אלגוריתם מיון שזמן הריצה שלו במקרה הגרוע שלו הוא $latex \\Theta\\left(n^{2}\\right)$, ובפועל הביצועים שלו גרועים במקרה הזה יותר מאשר אלו של מיון בחירה ומיון הכנסה, ולמרות זאת במקרה ה”ממוצע” (מה זה? נסביר בהמשך) הביצועים שלו דווקא מצויינים; שנית, המקרה הגרוע ביותר עבור המימוש הנאיבי שלו הוא זה שבו המערך כבר ממוין, וזה משעשע. לבסוף, הוא כל כך פשוט מבחינה רעיונית שאפשר לתאר אותו, בשפת התכנות המתאימה, בעזרת קוד פשוט ביותר: quicksort :: Ord a =&gt; [a] -&gt; [a] quicksort [] = [] quicksort (x:xs) = (quicksort smaller) ++ [x] ++ (quicksort larger) where smaller = [a | a &lt;- xs, a &lt;= x] larger = [b | b &lt;- xs, b &gt; x] קטע הקוד הזה, בשפת Haskell, הוא דוגמה פופולרית בספרים/מאמרים על השפה (היפהפיה) הזו, שממחיש יפה את האופי ה”מתמטי” של ההגדרה של המיון. השורה הראשונה עשויה להיראות מפחיד למי שלא בקיאים בסינטקס של הסקל אבל היא בסך הכל אומרת ש-quicksort היא פונקציה שלוקחת רשימה של איברים מטיפוס a (כש-a הוא Ord - משהו שניתן להשוואה) ומחזירה רשימה של איברים מטיפוס a. כלומר, זו פשוט הגדרה מתמטית של פונקציה. השורה הבאה בסך הכל אומרת שעל רשימה ריקה, quicksort מחזיר רשימה ריקה. לאחר מכן מגיעה ההגדרה של מה ש-quicksort עושה בפועל: הוא מקבל קלט שעליו הוא חושב בתור איבר $latex x$ (“איקס”) ועוד רשימה של איברים $latex xs$ (“איקסים”). כלומר, אנחנו אוטומטית מפרקים את הרשימה שקיבלנו ל”איבר ראשון ועוד רשימה של כל יתר האיברים”. והפלט שאנחנו מחזירים הוא שרשור של שלוש רשימות: רשימה בשם smaller שאותה אנחנו ממיינים רקורסיבית עם quicksort; רשימה שהאיבר היחיד בה הוא $latex x$, ורשימה בשם larger שגם אותה אנחנו ממיינים עם quicksort. ואיך מוגדרות הרשימות הללו? זה מה שכתוב אחרי ה-where: הרשימה smaller כוללת את כל האיברים של $latex xs$ שקטנים או שווים ל-$latex x$, ואילו larger כוללת את כל האיברים של $latex xs$ שגדולים מ-$latex x$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

@@ -19,7 +19,7 @@ tags:
 
 יאללה, בואו נתחיל.
 <h1>שאלה 1</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-1.png" rel="attachment wp-att-3390"><img class="aligncenter size-full wp-image-3390" src="http://www.gadial.net/wp-content/uploads/2016/12/question-1.png" alt="question-1" width="780" height="446" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-1.png" rel="attachment wp-att-3390"><img class="aligncenter size-full wp-image-3390" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-1.png" alt="question-1" width="780" height="446" /></a>
 <h2>סעיף א</h2>
 בשאלה הזו ברור מייד שהאתגר העיקרי יהיה לתרגם את השאלה המילולית למשוואות אלגבריות. בסיטואציות כאלו צריך לעבור שורה שורה בזהירות כדי לפספס משהו. בקריאה הראשונית שלי פספסתי את "ביום העבודה הראשון הרכיבו שני הטכנאים אותו מספר של מחשבים" ובהיתי בדף כשאני תוהה איפה הנתון שחסר לי.
 
@@ -65,7 +65,7 @@ tags:
 <h1>שאלה 2</h1>
 &nbsp;
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-2.png" rel="attachment wp-att-3392"><img class="aligncenter size-full wp-image-3392" src="http://www.gadial.net/wp-content/uploads/2016/12/question-2.png" alt="question-2" width="806" height="386" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-2.png" rel="attachment wp-att-3392"><img class="aligncenter size-full wp-image-3392" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-2.png" alt="question-2" width="806" height="386" /></a>
 <h2>סעיף א'</h2>
 הסעיף הזה עוסק בסכום של סדרות חשבוניות, אז קודם כל צריך להיזכר בנוסחת הסכום. יש בדפי הנוסחאות, כמובן, אבל אני לא מסתכל בדפי הנוסחאות בלי סיבה. בואו ננסה לפתח את זה בעצמנו: התעלול הישן של גאוס למציאת סכום של סדרה חשבונית התבסס על חיבור האיבר הראשון והאחרון, ואז הצבעה על כך שהסכום הזה שווה גם לסכום של האיבר השני והלפני אחרון וכן הלאה, כך שמספיק לכפול את הסכום הזה במספר האיברים הכולל בסדרה חלקי 2 (כי כל זוג משתמש בשני איברים מהסדרה). לכן נוסחה אפשרית אחת לסכום היא זו: אם הסדרה שלנו היא {% equation %}a_{1},a_{2},\dots,a_{n}{% endequation %} אז הסכום שלה הוא {% equation %}\left(a_{1}+a_{n}\right)\frac{n}{2}{% endequation %}. למה אני הולך דווקא על הנוסחה הזו? כי יש לי יכולת ראיית הנולד (או ליתר דיוק, כי אחרי שחשבתי קצת על התרגיל הגעתי למסקנה שזו הדרך הכי פשוטה): הסדרה החדשה שאני בונה תהיה מאוד דומה לנוכחית בפרמטרים שיש כאן. האיבר הראשון והאחרון שלה יהיו אותם איברים, וההפרש בין איברים סמוכים לא משחק תפקיד בכלל בנוסחה הזו. כל מה שחשוב הוא מספר האיברים הכולל. בסדרה החדשה הוספתי איבר חדש אחרי כל איבר קיים בסדרה המקורית, למעט האיבר האחרון. כלומר הוספתי {% equation %}n-1{% endequation %} איברים חדשים וקיבלתי סדרה עם {% equation %}2n-1{% endequation %} איברים בסך הכל. לכן סכום הסדרה החדשה הוא {% equation %}\left(a_{1}+a_{n}\right)\frac{2n-1}{2}{% endequation %}. קל לראות שהיחס בין שני הערכים הללו אכן יוצא {% equation %}\frac{2n-1}{n}{% endequation %}.
 
@@ -81,7 +81,7 @@ tags:
 <h2>מה דעתי על השאלה?</h2>
 גם זו נראית לי כמו שאלה טובה אם אנחנו רוצים לבדוק יכולות אלגבריות בסיסיות. סדרות חשבוניות הם יצורים מתמטיים טובים ללימוד בתיכון - מצד אחד, הם לא חסרי כל קשר למציאות (כן אפשר להתקל פה ושם בסדרות חשבוניות בפועל) ומצד שני, הם פשוטים מאוד - אפשר להבין אותם לא רע עד הסוף (למשל, קל למצוא את נוסחת הסכום או את הנוסחה לאיבר כללי). השאלה הזו דורשת חשיבה ולא סתם הצבה בנוסחאות - צריך להבין מה בדיוק משתנה כשמשנים את הסדרה, ומה לא; העובדה שבחרתי לפתור את הסעיף הראשון בעזרת נוסחת הסכום שמבוססת על סכום האיבר הראשון והאחרון פישטה לי מאוד את העבודה - עם נוסחה אחרת הייתי ממש מסתבך ואולי לא מצליח להוכיח בכלל. השאלות פה הן גם יחסית אבסטרקטיות - הראשונה ממש מבקשת להוכיח שמשהו מתקיים, והשניה מבקשת פתרון שתלוי בפרמטר. לא רע.
 <h1>שאלה 3</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-3.png" rel="attachment wp-att-3393"><img class="aligncenter size-full wp-image-3393" src="http://www.gadial.net/wp-content/uploads/2016/12/question-3.png" alt="question-3" width="776" height="445" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-3.png" rel="attachment wp-att-3393"><img class="aligncenter size-full wp-image-3393" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-3.png" alt="question-3" width="776" height="445" /></a>
 <h2>סעיף א'</h2>
 נתחיל קודם כל מלתת שמות לדברים. ההסתברות שיעל תנצח היא {% equation %}p{% endequation %}, ההסתברות שאנה תנצח היא {% equation %}q{% endequation %}, ולכן ההסתברות לתיקו ביניהן היא {% equation %}1-\left(p+q\right){% endequation %}. בסעיף הזה אנחנו מתבקשים למצוא את {% equation %}p{% endequation %}. הנתון שיש לנו נוגע להסתברות של יעל לנצח ב-2 או 3 משחקים, ובהסתברות שלה לנצח ב-4 משחקים. איזו סוג של התפלגות יש לנו פה? אני לא יודע איך קוראים לזה בתיכון או אילו משוואות נותנים, אבל זו התפלגות בינומית: אם יש לנו {% equation %}n{% endequation %} משחקים עם הסתברות {% equation %}p{% endequation %} לנצח בכל משחק, אז ההסתברות לנצח בדיוק ב-{% equation %}k{% endequation %} משחקים היא {% equation %}{n \choose k}p^{k}\left(1-p\right)^{n-k}{% endequation %} (לכל בחירה של {% equation %}k{% endequation %} מתוך {% equation %}n{% endequation %} משחקים אנחנו סופרים את האפשרות שיעל תנצח בדיוק במשחקים הללו; לשם כך עליה לנצח בדיוק בהם - זה {% equation %}k{% endequation %} פעמים ההסתברות {% equation %}p{% endequation %} - ולהפסיד בכל היתר - זה {% equation %}n-k{% endequation %} פעמים ההסתברות {% equation %}1-p{% endequation %}).
 
@@ -132,7 +132,7 @@ tags:
 <h1>שאלה 4</h1>
 אוי לי. גאומטריה. מזה פחדתי. אם יש משהו שאני בטוח שאפשל בו, זה זה. טוב, בואו נראה את השאלה...
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-4.png" rel="attachment wp-att-3394"><img class="aligncenter size-full wp-image-3394" src="http://www.gadial.net/wp-content/uploads/2016/12/question-4.png" alt="question-4" width="812" height="571" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-4.png" rel="attachment wp-att-3394"><img class="aligncenter size-full wp-image-3394" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-4.png" alt="question-4" width="812" height="571" /></a>
 <h2>סעיף א</h2>
 כן, אין לי מושג.
 
@@ -142,7 +142,7 @@ tags:
 
 אז מה אני מגגל? ראשית כל, את "מרובע בר חסימה במעגל" - זה משהו שאני לא זוכר שלמדתי מעולם. גיגול מהיר מוצא תשובה מפורום כלשהי שאומרת "כדי שיהיה ניתן לחסום מרובע במעגל, סכום זוג אחד של זוויות נגדיות במרובע חייב להיות 180 מעלות". יופי, זה כבר מקדם אותי מאוד, לשמחתי. הדבר השני שאני צריך בסעיף הזה הוא להיזכר איך מוכיחים שישרים הם מקבילים. אני זוכר שאם ישרים הם מקבילים אז יש כל מני קסמים עם הזוויות שנשענות עליהם; אבל האם זה כך גם בכיוון ההפוך? אני די בטוח שכן, אבל למה לנחש - אני מגגל "להוכיח ישרים מקבילים" ומוצא מישהו שאומר "אם בין שני ישרים זוויות מתחלפות שוות אזי הישרים מקבילים". יופי, זה כל מה שאני צריך. זה, ולזכור מה אלו הזוויות המתחלפות. אני מגגל "מקבילים מתחלפות" ומקבל תמונה נחמדה שמזכירה לי. הנה תמונה אחרת בשבילכם שבה כבר יש יותר מידע (בשלי היה רק את המתחלפות ואני לא מוצא אותה כרגע):
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/pairs_of_angles_in_parallel_lines.gif" rel="attachment wp-att-3398"><img class="aligncenter size-full wp-image-3398" src="http://www.gadial.net/wp-content/uploads/2016/12/pairs_of_angles_in_parallel_lines.gif" alt="pairs_of_angles_in_parallel_lines" width="459" height="153" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/pairs_of_angles_in_parallel_lines.gif" rel="attachment wp-att-3398"><img class="aligncenter size-full wp-image-3398" src="{{site.baseurl}}{{site.post_images}}/2016/12/pairs_of_angles_in_parallel_lines.gif" alt="pairs_of_angles_in_parallel_lines" width="459" height="153" /></a>
 
 כאן זה לא לגמרי מתאים לי כי אין שתי זוויות מתחלפות שאפשר לתת להן שמות מפורשים. יותר קל לי יהיה לעבוד עם הזוויות ה... איך קראו לזה? אה, כן, חד צדדיות! אני מגגל "מקבילים חד צדדיות" ומקבל לשמחתי את מה שקיוויתי לקבל - "משפט: אם עבור שני ישרים הנחתכים על-ידי ישר שלישי, מתקיים שסכום שתי זוויות חד-צדדיות הוא {% equation %}180^{\circ}{% endequation %} אזי הישרים הנחתכים הם מקבילים".
 
@@ -166,7 +166,7 @@ tags:
 
 לא אלאה אתכם בכיוונים השונים והמשונים שחשבתי עליהם כאן. בהתחלה הייתי בטוח שיש כאן משפט הקוסינוסים ומשפט הסינוסים ומה לא. בסוף, כשהתחלתי לנסות להשתמש בהם, ראיתי שכל זה היה מיותר לגמרי. האבחנה שמפילה את האסימון היא שהמשולש {% equation %}PKL{% endequation %} דומה למשולש {% equation %}PAB{% endequation %}, למרות שבתמונה זה לא נראה כך בכלל; הוא פשוט דומה לו עם היפוך הצלעות. יש לנו את זווית הראש {% equation %}\angle KPL{% endequation %} שהיא משותפת, וקל לראות שגם {% equation %}\angle AKL=\angle ABP{% endequation %}, משיקולים דומים לאלו של סעיף א'. עכשיו היתר מגיע מאליו: אורך הצלע {% equation %}PA{% endequation %} הוא 3 על פי הנתון. אורך הצלע {% equation %}PL{% endequation %} הוא {% equation %}PB+BL{% endequation %} כאשר {% equation %}BL{% endequation %} הוא הנתון החדש שלנו. כלומר, אורך {% equation %}PL{% endequation %} הוא 9. מכאן שקבוע הפרופורציה בין המשולשים הוא 3, ולכן קבוע הפרופורציה בין השטחים שלהם הוא 9, ולכן שטח {% equation %}PKL{% endequation %} הוא {% equation %}9S{% endequation %} ולכן שטח {% equation %}KLCD=25S-9S=16S{% endequation %}. קל מאוד, כשמבינים מה לעשות!
 <h1>שאלה 5</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-5.png" rel="attachment wp-att-3395"><img class="aligncenter size-full wp-image-3395" src="http://www.gadial.net/wp-content/uploads/2016/12/question-5.png" alt="question-5" width="794" height="388" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-5.png" rel="attachment wp-att-3395"><img class="aligncenter size-full wp-image-3395" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-5.png" alt="question-5" width="794" height="388" /></a>
 <h2>סעיף א'</h2>
 הדבר הראשון שקופץ לי לראש הוא השאלה הקודמת: אם הטרפז חסום במעגל, אז זוויות נגדיות משלימות ל-{% equation %}180^{\circ}{% endequation %}. ביחד עם זה ש-{% equation %}AB{% endequation %} מקביל ל-{% equation %}CD{% endequation %} אני מקבל שגם זוויות סמוכות משלימות ל-{% equation %}180^{\circ}{% endequation %}, ומכאן שהטרפז הוא שווה שוקיים. וזה עוזר לי... אין לי מושג איך.
 
@@ -248,7 +248,7 @@ tags:
 
 האם צריך שאלות כמו אלו במבחן? מצד אחד, הן באמת בודקות יכולת פתרון בעיות שמזכירה את פתרון הבעיות שסטודנט למתמטיקה מתמודד איתן; מצד שני, האם אנחנו באמת רוצים לבחון תלמידי תיכון על הדבר הזה? לא יודע.
 <h1>שאלה 6</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-6.png" rel="attachment wp-att-3396"><img class="aligncenter size-full wp-image-3396" src="http://www.gadial.net/wp-content/uploads/2016/12/question-6.png" alt="question-6" width="787" height="520" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-6.png" rel="attachment wp-att-3396"><img class="aligncenter size-full wp-image-3396" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-6.png" alt="question-6" width="787" height="520" /></a>
 
 אה. חדו"א. איזה כיף. ניחוש שלי מראש: יהיה לי קל. יהיה לי טכני ומגעיל. לא סותר.
 <h2>סעיף א'</h2>
@@ -264,7 +264,7 @@ tags:
 
 אז עכשיו לשרטוט. בגלל שהפונקציה היא זוגית אני אשרטט משהו סימטרי ביחס לציר {% equation %}y{% endequation %}. מה הדברים שאני מתחשב בהם בשרטוט? ב-{% equation %}0{% endequation %} יש לי נקודת מקסימום בגובה חצי. ב-{% equation %}\frac{\pi}{4}{% endequation %} יהיה חיתוך עם ציר {% equation %}x{% endequation %}. ב-{% equation %}\frac{\pi}{2}{% endequation %} תהיה אסימפטוטה אנכית. אז נראה שזה יהיה גרף פשוט - גבעה כזו שצונחת עד אינסוף. הנה השרטוט האומלל שלי:
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/sketch0.png" rel="attachment wp-att-3401"><img class="aligncenter size-full wp-image-3401" src="http://www.gadial.net/wp-content/uploads/2016/12/sketch0.png" alt="sketch0" width="321" height="338" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/sketch0.png" rel="attachment wp-att-3401"><img class="aligncenter size-full wp-image-3401" src="{{site.baseurl}}{{site.post_images}}/2016/12/sketch0.png" alt="sketch0" width="321" height="338" /></a>
 <h2>סעיף ג'</h2>
 שטח? זה שם קוד לאינטגרל פה. "ברביע הראשון" זה אומר להסתכל על התחום {% equation %}0\le x\le\frac{\pi}{4}{% endequation %}, כי ערכי {% equation %}x{% endequation %} קטנים יותר מוציאים אותנו מהרביע הראשון אל הרביע השני, ועבור ערכי {% equation %}x{% endequation %} גדולים יותר ערכי הפונקציה שליליים ולכן נהיה ברביע הרביעי. אז בואו נחשב: {% equation %}\int_{0}^{\frac{\pi}{4}}\left(1-\frac{1}{2\cos^{2}x}\right)dx{% endequation %}
 
@@ -280,17 +280,17 @@ tags:
 
 הערה קטנה לסיום: חשבתי כמה פעמים במהלך התרגיל להשתמש בזהות שאני זוכר במעורפל, {% equation %}\cos^{2}x=\frac{1+\cos2x}{2}{% endequation %}. זה אפילו נראה כאילו {% equation %}f\left(x\right){% endequation %} הונדסה כדי שנשתמש בזהות הזו כדי לפשט אותה על ההתחלה. בסוף לא הרגשתי צורך להשתמש בה בשום מקום. אולי זו טעות.
 <h1>שאלה 7</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-7.png" rel="attachment wp-att-3397"><img class="aligncenter size-full wp-image-3397" src="http://www.gadial.net/wp-content/uploads/2016/12/question-7.png" alt="question-7" width="803" height="779" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-7.png" rel="attachment wp-att-3397"><img class="aligncenter size-full wp-image-3397" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-7.png" alt="question-7" width="803" height="779" /></a>
 <h2>סעיף א'</h2>
 זו שאלה... מעניינת! אני לא זוכר משהו דומה לזה בזמני. כאן יש לנו פונקציה שלא נתונה בצורה מפורשת אלא רק על ידי גרף וצריך להסיק דברים עליה.
 
 מה שרואים מייד על הפונקציה היא שעבור {% equation %}x&gt;0{% endequation %} הפונקציה היא מונוטונית עולה, ועבור {% equation %}x&lt;0{% endequation %} היא מונוטונית יורדת. כלומר, הנגזרת חיובית עבור {% equation %}x&gt;0{% endequation %} ושלילית עבור {% equation %}x&lt;0{% endequation %}. עכשיו, האם הנגזרת קבועה או משתנה? נגזרת קבועה באה לידי ביטוי בפונקציה לינארית, וכאן זה בבירור לא המצב. עבור {% equation %}x&gt;0{% endequation %} ככל ש-{% equation %}x{% endequation %} שואף ל-0 כך הנגזרת שואפת לאינסוף, ואילו כאשר {% equation %}x{% endequation %} שואף לאינסוף, הנגזרת שואפת לאפס. לכן הנגזרת עצמה היא מונוטונית יורדת. בדומה, עבור {% equation %}x&lt;0{% endequation %}, הנגזרת (השלילית) תצא מונוטונית יורדת - שואפת לאפס כש-{% equation %}x{% endequation %} שואף למינוס אינסוף, שואפת למינוס אינסוף כש-{% equation %}x{% endequation %} שואף ל-{% equation %}0{% endequation %}. אז הנה סקיצה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/sketch1.png" rel="attachment wp-att-3399"><img class="aligncenter size-full wp-image-3399" src="http://www.gadial.net/wp-content/uploads/2016/12/sketch1.png" alt="sketch1" width="319" height="327" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/sketch1.png" rel="attachment wp-att-3399"><img class="aligncenter size-full wp-image-3399" src="{{site.baseurl}}{{site.post_images}}/2016/12/sketch1.png" alt="sketch1" width="319" height="327" /></a>
 
 עכשיו צריך לשחק את אותו המשחק גם עם הנגזרת השניה. בואו נחשוב על זה לרגע: בשני המקרים, {% equation %}x&gt;0{% endequation %} וגם {% equation %}x&lt;0{% endequation %}, הנגזרת יורדת. כך שהנגזרת השניה תמיד שלילית. כאשר {% equation %}x&gt;0{% endequation %} קצב הירידה מתחיל גדול והולך וקטן עם הזמן, כלומר הנגזרת השלילית הולכת וגדלה (הולכת ומתקרבת לאפס) עד שהיא שואפת לאפס באינסוף (ולמינוס אינסוף באפס). כאשר {% equation %}x&lt;0{% endequation %} קורה אותו הדבר: במינוס אינסוף, הנגזרת שואפת לאפס, בעוד שבאפס היא שואפת למינוס אינסוף. זה נותן לי את הסקיצה הבאה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/sketch2.png" rel="attachment wp-att-3400"><img class="aligncenter size-full wp-image-3400" src="http://www.gadial.net/wp-content/uploads/2016/12/sketch2.png" alt="sketch2" width="347" height="324" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/sketch2.png" rel="attachment wp-att-3400"><img class="aligncenter size-full wp-image-3400" src="{{site.baseurl}}{{site.post_images}}/2016/12/sketch2.png" alt="sketch2" width="347" height="324" /></a>
 <h2>סעיף ב'</h2>
 זה ממשיך להיות מעניין. עכשיו נותנים לנו את (הערך המוחלט של) האינטגרל המסוים של הנגזרת השניה בין {% equation %}x=1{% endequation %} ובין {% equation %}x=2{% endequation %} ומבקשים שנגיד מה ההפרש בין ערכי הנגזרת הראשונה בין שתי הנקודות הללו (אני קצת מתרגם לעברית את הניסוח הגאומטרי שלהם). לי ברור מייד שהתשובה היא פשוט 5.25, כי זו המהות של המשפט היסודי של החדו"א: {% equation %}5.25=\int_{1}^{2}g^{\prime\prime}\left(x\right)dx=g^{\prime}\left(2\right)-g^{\prime}\left(1\right){% endequation %}. במילים אחרות, אין כאן בכלל שאלה חישובית אלא סתם שאלה של "נראה אם הבנתם את החומר". אני מתרשם. אני באמת מתרשם. לא זכור לי משהו כזה בזמני.
 <h2>סעיף ג'</h2>
@@ -298,7 +298,7 @@ tags:
 
 בואו ניזכר שניה מה קרה בסעיף הקודם. טענתי ש-{% equation %}g^{\prime}\left(2\right)-g^{\prime}\left(1\right)=5.25{% endequation %} בגלל המשפט היסודי של החדו"א, אבל שכחתי שם שרגע לפני כן אמרתי בעצמי שה-5.25 הוא לא האינטגרל {% equation %}\int_{1}^{2}g^{\prime\prime}\left(x\right)dx{% endequation %} אלא הערך המוחלט שלו. זה נגרם בגלל שהם נותנים לי את "השטח שכלוא בין כך וכך" אבל אינטגרל על פונקציה שלילית (כמו {% equation %}g^{\prime\prime}{% endequation %}) לא נותן את השטח אלא את מינוס השטח. בקיצור, מה שקיבלתי הוא ש-{% equation %}g^{\prime}\left(1\right)-g^{\prime}\left(2\right)=5.25{% endequation %} - ועכשיו אני רואה שזה מה שביקשו מאיתנו בסעיף ב' אז התשובה שלי בו עדיין נכונה. רק פה אני צריך לבצע היפוך, ולקבל {% equation %}\frac{21}{4}=a\left(1-\frac{1}{8}\right){% endequation %}, כלומר {% equation %}a=\frac{21}{4}\cdot\frac{8}{7}=6{% endequation %}.
 <h1>שאלה 8</h1>
-<a href="http://www.gadial.net/wp-content/uploads/2016/12/question-8.png" rel="attachment wp-att-3391"><img class="aligncenter size-full wp-image-3391" src="http://www.gadial.net/wp-content/uploads/2016/12/question-8.png" alt="question-8" width="765" height="254" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2016/12/question-8.png" rel="attachment wp-att-3391"><img class="aligncenter size-full wp-image-3391" src="{{site.baseurl}}{{site.post_images}}/2016/12/question-8.png" alt="question-8" width="765" height="254" /></a>
 <h2>סעיף א'</h2>
 זה נראה כמו שאלת מינימום ומקסימום פשוטה כשהסעיף הראשון הזה הוא יותר הכוונה מאשר אתגר אמיתי. יש לי משולש {% equation %}ABC{% endequation %} ישר זווית כך ש-{% equation %}BC=k{% endequation %} ו-{% equation %}AB=x{% endequation %} ומבקשים תיאור של {% equation %}BC{% endequation %} באמצעות {% equation %}k,x{% endequation %}. ובכן, אנחנו במשולש ישר זווית. אם לא נשתמש כאן בפיתגורס, מתי נשתמש? על כן {% equation %}BC=\sqrt{k^{2}-x^{2}}{% endequation %}.
 <h2>סעיף ב'</h2>

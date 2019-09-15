@@ -12,7 +12,7 @@ tags:
 ---
 באינטרנט מסתובב לו לאחרונה להיט חדש: שיטת כפל שלכאורה נלמדת על ידי היפנים בבית הספר היסודי - מעכשיו אכנה אותה "כפל יפני", למרות שאין לי שום מושג (וזה גם לא ממש מעניין אותי) אם אכן השיטה נלמדת ביפן או לא. איך זה עובד? בואו נתחיל עם תמונה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/כפל_מקלות.jpg"><img class="alignnone size-full wp-image-2330" alt="כפל_מקלות" src="http://www.gadial.net/wp-content/uploads/2013/01/כפל_מקלות.jpg" width="320" height="245" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/stick_multiplication.jpg"><img class="alignnone size-full wp-image-2330" alt="כפל_מקלות" src="{{site.baseurl}}{{site.post_images}}/2013/01/stick_multiplication.jpg" width="320" height="245" /></a></strong>
 
 והנה גם סרטון שמסביר את השיטה:
 
@@ -26,7 +26,7 @@ http://www.youtube.com/watch?v=85Vd0NpL32k
 
 התגובות לשיטה הזו ברחבי האינטרנט משתפכות למדי - הביטוי "Mind blown'' מופרח פה ושם, ובאתר 9GAG אפשר למצוא המחשה נאה (ומטופשת למדי) לאופן שבו מתייחסים בחלק מהמקומות לדבר הזה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2013/01/6066420_700b.jpg"><img class="alignnone size-medium wp-image-2334" alt="6066420_700b" src="http://www.gadial.net/wp-content/uploads/2013/01/6066420_700b-110x300.jpg" width="110" height="300" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2013/01/6066420_700b.jpg"><img class="alignnone size-medium wp-image-2334" alt="6066420_700b" src="{{site.baseurl}}{{site.post_images}}/2013/01/6066420_700b.jpg" width="110" height="300" /></a>
 
 עכשיו, אני לא רוצה לקלקל לאף אחד את המסיבה, ואני עצמי חושב ששיטת הכפל היפני הזו היא חמודה למדי ובהחלט לא יזיק להראות אותה לתלמידים או סתם להכיר אותה לידע כללי, אבל אני חושב שיש לא מעט אירוניה בכך שהשיטה הזו זוכה להתלהבות גדולה וקריאות Mind blown בזמן שהשיטה ה"רגילה" לכפל, שהיא מדהימה הרבה יותר, נתפסת אצלנו בתור מובן מאליו. זה כמובן בלתי נמנע; אנשים לומדים את שיטת הכפל ה"רגילה" בגיל צעיר מאוד ולא עוצרים אף פעם להעריך עד כמה היא גאונית, או עד כמה העובדה שאנחנו עובדים בשיטת ספירה על בסיס מיקום היא גאונית - אנחנו מקבלים כמובן מאליו את זה שכבר בכיתות הנמוכות של בית הספר היסודי אנחנו משתמשים במה שמבחינה טכנולוגית היה מהפכה אדירה.
 
@@ -74,7 +74,7 @@ http://www.youtube.com/watch?v=85Vd0NpL32k
 
 כאן {% equation %}a_{0}b_{0}{% endequation %} הוא מספר החיתוכים של שתי קבוצות הקווים בקו הרוחב הימני ביותר, {% equation %}a_{1}b_{0}+a_{1}b_{0}{% endequation %} הוא מספר החיתוכים של קבוצות הקווים בקו הרוחב ה"אמצעי" (שכולל, כפי שאפשר לראות בתמונה, שתי קבוצות מובחנות שונות של חיתוכים) ו-{% equation %}a_{1}b_{1}{% endequation %} מתאים לקו הרוחב השמאלי. החזקות של 10 שמוכפלות באיברים הללו מצדיקות את הטענה המקורית שלי שהקבוצה הימנית ביותר מתאימה לספרת האחדות, זו שאחריה לספרת העשרות וכן הלאה.
 
-<strong><strong><a href="http://www.gadial.net/wp-content/uploads/2013/01/כפל_מקלות.jpg"><img alt="כפל_מקלות" src="http://www.gadial.net/wp-content/uploads/2013/01/כפל_מקלות.jpg" width="320" height="245" /></a></strong></strong>
+<strong><strong><a href="{{site.baseurl}}{{site.post_images}}/2013/01/stick_multiplication.jpg"><img alt="כפל_מקלות" src="{{site.baseurl}}{{site.post_images}}/2013/01/stick_multiplication.jpg" width="320" height="245" /></a></strong></strong>
 
 אם יש לנו שתי סדרות, {% equation %}a_{0},a_{1},\dots,a_{n}{% endequation %} ו-{% equation %}b_{0},b_{1},\dots,b_{n}{% endequation %} אז ביטוי מהצורה {% equation %}\sum_{i=0}^{k}a_{i}b_{k-i}{% endequation %} נקרא <strong>קונבולוציה</strong> של שתי הסדרות - הקונבולוציה ה-{% equation %}k{% endequation %}-ית. דרך ציורית חזקה מאוד להדגמת הרעיון בקונבולוציה היא זו: ראשית כתבו את הסדרה הראשונה. כעת כתבו מתחתיה את הסדרה השניה כשהיא <strong>הפוכה </strong>ומוזזת כך שהאיבר ה-{% equation %}k{% endequation %} בה נמצא בדיוק מתחת לאיבר {% equation %}a_{0}{% endequation %} של הסדרה הראשונה. כעת כפלו כל זוג איברים של הסדרות שנמצאים האחד מעל השני, וסכמו. כל הקונבולוציות האפשריות של שתי הסדרות מתקבלים כשלוקחים את הסדרה התחתונה ובכל שלב מזיזים אותה צעד אחד שמאלה, ומחשבים את הקונבולציה שהתקבלה הפעם.
 

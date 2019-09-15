@@ -14,13 +14,13 @@ tags:
 ---
 היום חל "יום פאי", כלומר תאריך היום הוא ה-14/3, שבארצות פחות מתוקנות נכתב כ-3.14, כלומר כמו התחלת הפיתוח העשרוני של הקבוע {% equation %}\pi{% endequation %}, פאי (היחס בין היקף מעגל לקוטרו בגאומטריה האוקלידית) - ומכאן, תירוץ לחגוג ולאכול פאי עם פאי.
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/03/pi-pie.jpg"><img class="alignnone size-full wp-image-3079" alt="pi pie" src="http://www.gadial.net/wp-content/uploads/2014/03/pi-pie.jpg" width="176" height="176" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/03/pi-pie.jpg"><img class="alignnone size-full wp-image-3079" alt="pi pie" src="{{site.baseurl}}{{site.post_images}}/2014/03/pi-pie.jpg" width="176" height="176" /></a></strong>
 
 מבחינתי זה תירוץ לכתוב פוסט על משהו שבו מופיע {% equation %}\pi{% endequation %}, ורצוי משהו קליל יחסית. דוגמה נפלאה ל"משהו" כזה שטרם הופיע בבלוג בשום צורה היא בעיית המחט של בופון. בפשטות, הבעיה אומרת את הדבר הבא: יש לנו מחברת שורות ואנחנו זורקים עליה מחט. מה ההסתברות שהמחט תיפול על קו מפריד כלשהו במחברת?
 
 ברור שהשאלה הזו תלויה בשני פרמטרים - אורך המחט, והרוחב של כל שורה (דהיינו, מה המרחק בין כל שני קווים מפרידים של שורות). נסמן את אורך המחט ב-{% equation %}l{% endequation %} ואת הרוחב של שורה ב-{% equation %}d{% endequation %}. בציור הבא אפשר לראות את השורות ברוחב {% equation %}d{% endequation %} ושני מחטים באורך {% equation %}l{% endequation %}, שאחת מהן לא נפלה על אף קו מפריד, ואחת כן נפלה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/03/needles1.png"><img class="alignnone size-full wp-image-3080" alt="needles1" src="http://www.gadial.net/wp-content/uploads/2014/03/needles1.png" width="811" height="399" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/03/needles1.png"><img class="alignnone size-full wp-image-3080" alt="needles1" src="{{site.baseurl}}{{site.post_images}}/2014/03/needles1.png" width="811" height="399" /></a></strong>
 
 קל להגיע למסקנה שיש הבדל כלשהו בין הסיטואציה שבה {% equation %}l&gt;d{% endequation %}, כלומר המחט גדולה מרוחב שורה ולכן אם היא נופלת בזווית שמאונכת לקווים המפרידים היא על בטוח חוצה קו מפריד שכזה, ובין הסיטואציה שבה {% equation %}l\le d{% endequation %}. אני הולך לדבר <strong>רק</strong> על הסיטואציה השניה, מהטעם הפשוט שהנוסחה יוצאת הרבה יותר פשוטה ונחמדה בה, והרעיון עבור {% equation %}l&gt;d{% endequation %} הוא אותו רעיון, עם עוד פרטים טכניים.
 
@@ -30,7 +30,7 @@ tags:
 
 אוקיי, אז מה עושים? ראשית כל צריך לחדד עניינים כמו מה מרחב ההסתברות שלנו וכדומה. כשאנחנו "זורקים" מחט, מה אנחנו בעצם מגרילים? שני דברים - את ה<strong>זווית</strong> שלה (ביחס לציר {% equation %}x{% endequation %}, כפי שבדרך כלל מחשבים זווית של ישרים) ואת ה<strong>מיקום</strong> שלה. אני אסתכל על אחת מהקצוות של המחט בתור ה"ראשית" שלה, והמיקום של המחט יהיה המיקום של הראשית הזו. הזווית תימדד ביחס לסיבוב שבו משאירים את הראשית קבועה (כלומר, מסובבים את המחט סביב הראשית ובודקים כמה סיבוב עם כיוון השעון נדרש כדי "להחזיר" אותה למצב שבו היא מתלכדת עם ציר {% equation %}x{% endequation %}). לא קשה לראות שהמיקום ה<strong>אופקי</strong> של המחט, או השאלה באיזו שורה במחברת הראשית של המחט נפלה, הן חסרות חשיבות - כל מה שחשוב הוא הזווית, שהיא מספר {% equation %}0\le\theta\le2\pi{% endequation %} (הנה פאי!) והגובה של הראשית מעל הקו המפריד התחתון בשורה, {% equation %}0\le h\le d{% endequation %}. הנה ציור שמבהיר את זה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/03/needles2.png"><img class="alignnone size-full wp-image-3081" alt="needles2" src="http://www.gadial.net/wp-content/uploads/2014/03/needles2.png" width="811" height="204" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/03/needles2.png"><img class="alignnone size-full wp-image-3081" alt="needles2" src="{{site.baseurl}}{{site.post_images}}/2014/03/needles2.png" width="811" height="204" /></a></strong>
 
 המספרים {% equation %}\theta,h{% endequation %} הללו נבחרים בהתפלגות אחידה מתוך התחומים שלהם. לכן (מנימוקים סטנדרטיים בהסתברות), ההסתברות שהמחט תחצה קו מפריד היא בדיוק היחס בין שטח של קבוצת כל הנקודות {% equation %}\left(\theta,h\right){% endequation %} שעבורן המחט חוצה קו מפריד ובין השטח של כל הנקודות {% equation %}\left(\theta,h\right){% endequation %} הרלוונטיות בכלל. אם כן, נשאלת השאלה: בהינתן {% equation %}\theta{% endequation %}, מה הערכים של {% equation %}h{% endequation %} שעבורם יש חצייה?
 
@@ -70,19 +70,19 @@ tags:
 
 כאן מגיע הקסם הנפלא, שבזכותו ההוכחה הזו כל כך אדירה. כבר ראינו קודם שמחט ארוכה אפשר לקחת ולחשוב עליה כעל שתי מחטים קטנות יותר "דבוקות" זו לזו - כל מה שחשוב הוא שסכום אורכי המחטים הוא אורך המחט המקורית. הנקודה היא שאפשר לעשות את זה גם בצורה קיצונית יותר - גם אם המחט שלנו היא <strong>לא קו ישר</strong> אלא אוסף של קווים ישרים מחוברים - "עקום פוליגונלי". למשל זה:
 
-<a href="http://www.gadial.net/wp-content/uploads/2014/03/needles3.png"><img class="alignnone size-full wp-image-3082" alt="needles3" src="http://www.gadial.net/wp-content/uploads/2014/03/needles3.png" width="811" height="267" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2014/03/needles3.png"><img class="alignnone size-full wp-image-3082" alt="needles3" src="{{site.baseurl}}{{site.post_images}}/2014/03/needles3.png" width="811" height="267" /></a>
 
 זה לא משנה איך ה"מחטים" שמהם מורכב העקום מחוברות זו לזו - כל מה שחשוב הוא סכומי האורכים שלהן. אפשר לחשוב על ניסוי השלכת הצורה הפוליגונלית על המחברת בתור אוסף של השלכות של כל המחטים האינדיבידואליות; כמובן, בגלל שהמחטים דבוקות זו לזו אז הניסויים הללו תלויים מבחינה הסתברותית, אבל כבר אמרתי שהקטע עם "התוחלת היא סכום התוחלות" <strong>לא מושפע</strong> מזה.
 
 ועכשיו הפאנץ': בואו ניקח בתור ה"מחט" שלנו <strong>מעגל</strong>. כמובן, מעגל הוא לא עקום פוליגונלי, אבל אפשר לקרב אותו כרצוננו עם עקומים פוליגונליים כך שכדי להוכיח את מה שאטען כרגע על מעגל רק צריך עוד קצת ביסוס טכני שלא אכנס אליו (הוא תרגיל מצויין כדי לוודא שהבנתם מה קורה פה). אז חזרה למעגל - אני אקח מעגל שקוטרו הוא בדיוק {% equation %}d{% endequation %}. מעגל כזה, לא משנה איך תשימו אותו, הולך להכיל בדיוק שני חיתוכים עם קווים מפרידים (שוב, ייתכן שהוא רק ישיק לשניהם, אבל זה מקרה עם הסתברות 0 ואפשר גם לדבר על "נגיעה בקווים מפרידים" במקום "חיתוך" אם זה מפריע למישהו). הנה, תראו הוכחה על ידי תמונה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/03/needles4.png"><img class="alignnone size-full wp-image-3083" alt="needles4" src="http://www.gadial.net/wp-content/uploads/2014/03/needles4.png" width="820" height="381" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/03/needles4.png"><img class="alignnone size-full wp-image-3083" alt="needles4" src="{{site.baseurl}}{{site.post_images}}/2014/03/needles4.png" width="820" height="381" /></a></strong>
 
 אם כן, אנחנו יודעים שעבור {% equation %}l=\pi d{% endequation %} (היקף מעגל שקוטרו {% equation %}d{% endequation %}, כמובן) מתקיים {% equation %}E\left[\pi d\right]=c\pi d=2{% endequation %}, כלומר {% equation %}c=\frac{2}{\pi d}{% endequation %} וסיימנו. לא יודע מה איתכם, אותי הטיעון הזה, עם המעגל שבא משום מקום, פשוט הפיל לקרקע מרוב שהוא אדיר.
 
 מי שהמציא/גילה את ההוכחה הנפלאה הזו הוא המתמטיקאי הצרפתי Joseph-Émile Barbier. אבל הוא לא עצר כאן - למעשה, מה שעשינו כאן הוא הוכחה לתוצאה עוד יותר מעניינת, שמושגת כאשר הופכים את מה שעשינו כאן על פיו. לצורך כך, בואו נאמר שצורה קמורה היא בעלת <strong>רוחב קבוע</strong> {% equation %}d{% endequation %} אם לכל שני קווים מקבילים שמשיקים לצורה, המרחק ביניהם הוא {% equation %}d{% endequation %}. מעגל הוא בבירור צורה כזו, עם רוחב ששווה לקוטר שלה, אבל יש עוד צורות, למשל "<a href="http://en.wikipedia.org/wiki/Reuleaux_triangle">משולש רולו</a>":
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2014/03/triangle.jpg"><img class="alignnone size-full wp-image-3084" alt="triangle" src="http://www.gadial.net/wp-content/uploads/2014/03/triangle.jpg" width="160" height="160" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2014/03/triangle.jpg"><img class="alignnone size-full wp-image-3084" alt="triangle" src="{{site.baseurl}}{{site.post_images}}/2014/03/triangle.jpg" width="160" height="160" /></a></strong>
 
 כעת, בהוכחה של הנוסחה עבור המחט של בופון השתמשנו במעגל עם קוטר {% equation %}d{% endequation %} כי זו צורה פשוטה ונחמדה, אבל <strong>כל צורה קמורה</strong> עם רוחב קבוע {% equation %}d{% endequation %} הייתה עובדת באותה המידה. הרוחב הקבוע אומר שלא משנה איך נשליך אותה על המחברת שלנו (כלומר, איך "סובבנו" אותה), או ששני קווי גבול במחברת ישיקו לה, או שבדיוק קו גבול אחד יעבור דרכה - ומכיוון שהיא קמורה, המשמעות היא שהוא יחתוך אותה בדיוק בשתי נקודות (לצורות לא קמורות זה לא עובד).
 

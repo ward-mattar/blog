@@ -55,7 +55,7 @@ categories:
 אם כן, זו הגישה ה"אלגברית" לכל זה. אבל מה הבבלים עשו? האם יש אינטואיציה לפתרון שהיא מעבר ל"אם נעשה את המניפולציה הזו והזו על הסמלים הזה והזה, יצא לנו משהו נחמד"?
 
 הבבלים עוסקים בשאלה שבמבט ראשון נראית קשורה רק למחצה, במקרה הטוב: נתון להם מלבן. הם יודעים את שטח המלבן ואת ההפרש בין אורך צלעותיו של המלבן. המטרה: לגלות את אורך הצלעות. ראשית אציג את הדרך שבה פותרים את הבעיה הזו; אחר כך אסביר מדוע עבור מקרים רבים זו הבעיה שלנו, בתחפושת. נתחיל בתמונה אחת ששווה אלף מילים - תיאור התהליך כולו.
-<a title="Completion" href="http://www.gadial.net/wp-content/uploads/2008/01/completion_to_square.png"><img alt="Completion" src="http://www.gadial.net/wp-content/uploads/2008/01/completion_to_square.png" /></a>
+<a title="Completion" href="{{site.baseurl}}{{site.post_images}}/2008/01/completion_to_square.png"><img alt="Completion" src="{{site.baseurl}}{{site.post_images}}/2008/01/completion_to_square.png" /></a>
 
 כעת להסבר. אנחנו מתחילים ממלבן A שאורך צלעותיו הוא הנעלמים {% equation %}x,y{% endequation %}. מה אנחנו כן יודעים? את שטחו {% equation %}xy{% endequation %} ואת הערך {% equation %}y-x{% endequation %}.
 

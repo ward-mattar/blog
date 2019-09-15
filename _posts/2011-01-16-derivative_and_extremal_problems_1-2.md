@@ -11,7 +11,7 @@ tags:
 ---
 <a href="http://www.gadial.net/?p=969">בפוסט הקודם</a> עסקנו בשתי בעיות "מציאותיות" ובסופו של דבר בנינו מודל מתמטי עבורן שבא לידי ביטוי בפונקציה ממשית מסויימת. זה מעביר אותנו לבעיה הכללית הבאה: נתונה פונקציה ממשית {% equation %}f\left(x\right){% endequation %}, ואנו רוצים למצוא ערכי {% equation %}x{% endequation %} שעבורם {% equation %}f\left(x\right){% endequation %} היא מקסימלית או מינימלית. הנחת היסוד שלנו הוא ש-{% equation %}f\left(x\right){% endequation %} היא פונקציה "נחמדה" - ניתן לגזור אותה, ולהפיק מהנגזרת מידע על {% equation %}f{% endequation %} עצמה. כמו כן, אם {% equation %}f{% endequation %} גזירה אז היא בפרט רציפה ולכן ניתן לצייר אותה בצורה פשוטה בתור קו אחד רציף. באופן פשטני, פונקציה כזו תיראה בתור קו שעולה למעלה, ואז יורד למטה, ואז שוב עולה, ואז שוב יורד, וכדומה (כמובן, היא יכולה להיות אפילו יותר משעממת - {% equation %}f\left(x\right)=x{% endequation %} היא "קו ישר שכל הזמן עולה"). בואו נסתכל על דוגמה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/01/silly_function.png"><img class="alignnone size-full wp-image-974" title="silly_function" src="http://www.gadial.net/wp-content/uploads/2011/01/silly_function.png" alt="" width="275" height="364" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/01/silly_function.png"><img class="alignnone size-full wp-image-974" title="silly_function" src="{{site.baseurl}}{{site.post_images}}/2011/01/silly_function.png" alt="" width="275" height="364" /></a></strong>
 
 מה שאנחנו רואים הוא שלפונקציה יכולות להיות הרבה נקודות מינימום ומקסימום <strong>מקומיות</strong>. נקודות שאם מסתכלים רק בהן ובסביבה קטנה שלהן, בהן הפונקציה מקבלת את הערך המקסימלי/מינימלי באותה הסביבה. אם אנחנו רוצים להבין איך הפונקציה פחות או יותר נראית, כל הנקודות הללו מעניינות אותנו; ואם אנחנו מעוניינים רק בערך המקסימלי שלה בכלל, גם אז הן מעניינות אותנו - נמצא את כולן ונבדוק באיזו מהן הפונקציה מקבלת את הערך הגדול ביותר.
 
@@ -27,13 +27,13 @@ tags:
 
 אם כן, שיטת העבודה שלנו כדי למצוא נקודות מינימום ומקסימום היא פשוטה - גוזרים את הפונקציה ובודקים באילו נקודות הנגזרת מתאפסת. כל נקודת מינימום או מקסימום תצוץ כך. לרוע המזל, יש סיכוי שיצוצו עוד נקודות. הביטו בגרף של {% equation %}f\left(x\right)=x^{3}{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2011/01/x3.png"><img class="alignnone size-full wp-image-975" title="x3" src="http://www.gadial.net/wp-content/uploads/2011/01/x3.png" alt="" width="402" height="408" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2011/01/x3.png"><img class="alignnone size-full wp-image-975" title="x3" src="{{site.baseurl}}{{site.post_images}}/2011/01/x3.png" alt="" width="402" height="408" /></a></strong>
 
 בנקודה {% equation %}x=0{% endequation %} הפונקציה מתיישרת לשניה, והנגזרת ({% equation %}3x^{2}{% endequation %}) אכן מתאפסת. אבל הפונקציה ממשיכה לעלות גם אחר כך. לפונקציה הזו בכלל אין נקודות מינימום ומקסימום. אז מה קרה כאן? ב-{% equation %}x=0{% endequation %} היה לפונקציה מה שמכונה "נקודת פיתול". נקודה שבה היא עוברת מ<strong>קמירות</strong> ל<strong>קעירות</strong> או להיפך; והנה כי כן צריך להבין גם את שני המושגים הללו כדי להבין עד הסוף מה המידע שהנגזרת נותנת לנו.
 
 בואו נביט בגרפים של שתי הפונקציות הבאות, {% equation %}f\left(x\right)=x^{2}{% endequation %} ו-{% equation %}g\left(x\right)=\sqrt{x}{% endequation %}:
 
-<a href="http://www.gadial.net/wp-content/uploads/2011/01/concave_and_convex.png"><img class="alignnone size-full wp-image-976" title="concave_and_convex" src="http://www.gadial.net/wp-content/uploads/2011/01/concave_and_convex.png" alt="" width="387" height="369" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2011/01/concave_and_convex.png"><img class="alignnone size-full wp-image-976" title="concave_and_convex" src="{{site.baseurl}}{{site.post_images}}/2011/01/concave_and_convex.png" alt="" width="387" height="369" /></a>
 
 שתיהן פונקציות עולות. שתיהן מקיימות {% equation %}f\left(0\right)=g\left(0\right)=0{% endequation %} {% equation %}f\left(1\right)=g\left(1\right)=1{% endequation %}, כלומר הן מתחילות מגובה 0 בזמן 0, ומגיעות לגובה 1 בזמן 1, ועם זאת מבט אחד בגרף של שתיהן מבהיר לנו ששתיהן בעלות אופי שונה לגמרי. מה ההבדל? ש-{% equation %}f\left(x\right)=x^{2}{% endequation %} היא פונקציה <strong>קמורה</strong> בעוד {% equation %}g\left(x\right)=\sqrt{x}{% endequation %} היא פונקציה <strong>קעורה</strong>. השמות מבלבלים: {% equation %}f\left(x\right)=x^{2}{% endequation %} היא הפונקציה שיותר דומה לקערה ("פרבולה צוחקת" - זה יהיה יותר ברור אם נצייר את הפונקציה גם לערכים שליליים של {% equation %}x{% endequation %}) ולמרות זאת המילה "קעורה" שמורה לפונקציה שנראית כמו קערה הפוכה. באנגלית המילה המתאימה ל"קמורה" היא Convex ול"קעורה" היא Concave ויש קצת יותר הגיון בהן, אבל לא ניכנס לכך כאן.
 

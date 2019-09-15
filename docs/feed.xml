@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-05T11:01:51+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">לא מדויק</title><subtitle>בלוג על מתמטיקה ומדעי המחשב</subtitle><entry><title type="html">משפט הערך הממוצע של לגראנז’</title><link href="http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem" rel="alternate" type="text/html" title="משפט הערך הממוצע של לגראנז'" /><published>2019-06-17T17:59:37+03:00</published><updated>2019-06-17T17:59:37+03:00</updated><id>http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem</id><content type="html" xml:base="http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem">&lt;p&gt;ביקשו ממני לסגור את אחד החורים המציקים שיש בבלוג - לתאר את &lt;strong&gt;משפט הערך הממוצע &lt;/strong&gt;של לגראנז’, שהוא אחד מהתוצאות הבסיסיות והמעניינות ביותר שמלמדים על &lt;strong&gt;נגזרות&lt;/strong&gt;. כתבתי בשעתו &lt;a href=&quot;https://gadial.net/2010/11/21/derivative/&quot;&gt;פוסט שמתאר מהן נגזרות&lt;/a&gt; והוא הרקע שדרוש כדי להבין את משפט לגראנז’; אבל אל לגראנז’ עצמו לא הגעתי. אז נתחיל עם תזכורת קטנה על מה מדובר.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-15T12:51:50+03:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">לא מדויק</title><subtitle>בלוג על מתמטיקה ומדעי המחשב</subtitle><entry><title type="html">משפט הערך הממוצע של לגראנז’</title><link href="http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem" rel="alternate" type="text/html" title="משפט הערך הממוצע של לגראנז'" /><published>2019-06-17T17:59:37+03:00</published><updated>2019-06-17T17:59:37+03:00</updated><id>http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem</id><content type="html" xml:base="http://localhost:4000/blog/2019/06/17/lagrange_mean_value_theorem">&lt;p&gt;ביקשו ממני לסגור את אחד החורים המציקים שיש בבלוג - לתאר את &lt;strong&gt;משפט הערך הממוצע &lt;/strong&gt;של לגראנז’, שהוא אחד מהתוצאות הבסיסיות והמעניינות ביותר שמלמדים על &lt;strong&gt;נגזרות&lt;/strong&gt;. כתבתי בשעתו &lt;a href=&quot;https://gadial.net/2010/11/21/derivative/&quot;&gt;פוסט שמתאר מהן נגזרות&lt;/a&gt; והוא הרקע שדרוש כדי להבין את משפט לגראנז’; אבל אל לגראנז’ עצמו לא הגעתי. אז נתחיל עם תזכורת קטנה על מה מדובר.&lt;/p&gt;
 
 &lt;p&gt;אנחנו מדברים על &lt;strong&gt;פונקציות ממשיות&lt;/strong&gt;: פונקציות &lt;span&gt;$latex f:\mathbb{R}\to\mathbb{R}$&lt;/span&gt;. אם יש לנו מספיק מזל, הפונקציות הללו הן “נחמדות”, והקצב שבו הן משתנות ניתן גם הוא לתיאור על ידי פונקציה, שנקראת &lt;strong&gt;הנגזרת&lt;/strong&gt; של &lt;span&gt;$latex f$&lt;/span&gt;. פורמלית, אנחנו מגדירים את הנגזרת של &lt;span&gt;$latex f$&lt;/span&gt; בנקודה &lt;span&gt;$latex a$&lt;/span&gt; בתור הערך של הגבול &lt;span&gt;$latex \lim_{h\to0}\frac{f\left(a+h\right)-f\left(a\right)}{h}$&lt;/span&gt;, במקרה שבו הוא קיים. בואו נסתכל שניה על הביטוי הזה יותר בפירוט כדי להבין מה הוא אומר: אפשר לכתוב אותו גם בתור&lt;/p&gt;
 
@@ -18,7 +18,7 @@
 
 &lt;p&gt;ראשית, אי אפשר בלי להזכיר את האופן הגאומטרי שבו אנחנו רואים את המשפט. כשאנחנו מציירים פונקציה, אנחנו מציירים נקודות שהקואורדינטות שלהן הן מהצורה &lt;span&gt;$latex \left(x,f\left(x\right)\right)$&lt;/span&gt; (כלומר, &lt;span&gt;$latex f\left(x\right)$&lt;/span&gt; היא קואורדינטת ה-&lt;span&gt;$latex y$&lt;/span&gt; של הציור). נקודות הקצה של הפונקציה הן &lt;span&gt;$latex \left(a,f\left(a\right)\right)$&lt;/span&gt; ו-&lt;span&gt;$latex \left(b,f\left(b\right)\right)$&lt;/span&gt;. אם ניזכר איך הולכים דברים בגאומטריה אנליטית נראה שהביטוי &lt;span&gt;$latex \frac{f\left(b\right)-f\left(a\right)}{b-a}$&lt;/span&gt; הוא &lt;strong&gt;שיפוע הישר&lt;/strong&gt; שמחבר את שתי הנקודות הללו. עכשיו, מה זו נגזרת? המשמעות של נגזרת בנקודה כלשהי היא &lt;strong&gt;שיפוע המשיק&lt;/strong&gt; לפונקציה בנקודה הזו. לכן לגראנז’ אומר שיש נקודה כלשהי על גרף הפונקציה ששיפוע המשיק לאותה נקודה זהה לשיפוע הישר שמחבר את שני קצוות הפונקציה. הנה איור באדיבות ויקיפדיה העברית:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3781&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/06/Mv4_he.svg_.png&quot; alt=&quot;&quot; width=&quot;1024&quot; height=&quot;931&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3781&quot; src=&quot;/blog/assets/img/2019/06/Mv4_he.svg_.png&quot; alt=&quot;&quot; width=&quot;1024&quot; height=&quot;931&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;איך מוכיחים את המשפט? כאן צריך להיזהר עם האינטואיציה שלנו, שעשויה להטעות אותנו. נחזור אל דוגמת הרכב שנסע במהירות של 100 קמ”ש ואז ירד למהירות של 40 קמ”ש. האינטואיציה שלנו אומרת שבירידה מ-100 קמ”ש אל 40 קמ”ש הייתה חייבת להיות שניה שבה המהירות הייתה 80 קמ”ש, כי אנחנו חושבים על מהירות בתור משהו ש&lt;strong&gt;משתנה באופן רציף&lt;/strong&gt;. יש לדבר הזה פורמליזם בחדו”א: פונקציה &lt;span&gt;$latex f$&lt;/span&gt; היא &lt;strong&gt;רציפה&lt;/strong&gt; בנקודה &lt;span&gt;$latex a$&lt;/span&gt; אם &lt;span&gt;$latex \lim_{x\to a}f\left(x\right)=f\left(a\right)$&lt;/span&gt; (כלומר, הערך שנראה ש-&lt;span&gt;$latex f$&lt;/span&gt; “אמורה לקבל” ב-&lt;span&gt;$latex a$&lt;/span&gt; הוא מה שמתקבל בפועל). אם יש לנו פונקציה רציפה, אז יש לנו עבורה משהו שנקרא &lt;strong&gt;משפט ערך הביניים&lt;/strong&gt; שאומר שאם &lt;span&gt;$latex y$&lt;/span&gt; הוא ערך כלשהו שנמצא בין &lt;span&gt;$latex f\left(a\right)$&lt;/span&gt; ו-&lt;span&gt;$latex f\left(b\right)$&lt;/span&gt;, אז קיים &lt;span&gt;$latex x\in\left[a,b\right]$&lt;/span&gt; כך ש-&lt;span&gt;$latex f\left(x\right)=y$&lt;/span&gt;. בפרט, מהירות של 80 קמ”ש נמצאת בין 100 קמ”ש ו-40 קמ”ש ולכן היא חייבת להתקבל מתישהו.&lt;/p&gt;
 
@@ -218,7 +218,7 @@
 &lt;/ul&gt;
 &lt;p&gt;נתחיל עם אגדה ידועה על המתמטיקאי קארל פרידריך גאוס, שתעזור לנו להבין על מה מדובר.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3777&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/05/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;280&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3777&quot; src=&quot;/blog/assets/img/2019/05/220px-Carl_Friedrich_Gauss_1840_by_Jensen.jpg&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;280&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;האגדה אומרת שכאשר גאוס היה בבית הספר היסודי, המורה שלו התעצל ונתן לתלמידים את המשימה המייגעת של חישוב הסכום &lt;span&gt;$latex 1+2+3+\dots+100$&lt;/span&gt; - כלומר, סכום כל המספרים עד 100. הרעיון היה שהם יבלו חצי יום בעבודה טכנית מייגעת וחסרת כל טעם, והמורה ינוח. הבעיה היא שגאוס הקטן בא אל המורה תוך כמה דקות עם הפתרון. האם זה קרה בגלל שגאוס היה מחשבון אנושי? לא! בדיוק ההפך! גאוס המחיש בצורה הטובה ביותר את גישת &lt;strong&gt;מתמטיקאים הם עצלנים&lt;/strong&gt;. במקום לבצע את החישוב, הוא מצא “דרך קיצור” שנותנת לו את הסכום בלי שיצטרך לחשב את כולו במפורש.&lt;/p&gt;
 
@@ -298,13 +298,13 @@
 
 &lt;p&gt;&lt;strong&gt;גרף אוילרי&lt;/strong&gt; הוא גרף שאפשר לצייר מבלי להרים את העפרון מהדף - כזה שיש בו מסלול שעובר דרך כל הקשתות בדיוק פעם אחת. הנה דוגמא לגרף שיש בו גם את זה וגם את זה:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3771&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted1.png&quot; alt=&quot;&quot; width=&quot;394&quot; height=&quot;580&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3771&quot; src=&quot;/blog/assets/img/2019/04/pasted1.png&quot; alt=&quot;&quot; width=&quot;394&quot; height=&quot;580&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;הגרף הזה הוא בעצם ציור הבית מחידת ה”האם אפשר לצייר בית עם איקס בתוכו מבלי להרים את העפרון מהדף” למעט זה שבמקום להשלים את האיקס בתוכו, הקשת שמחברת את הפינה הימנית-תחתונה והפינה השמאלית-עליונה עוברת &lt;strong&gt;מחוץ&lt;/strong&gt; לבית כדי לא לחתוך את הקשת שעוברת בתוך הבית. זה מראה שהגרף הזה הוא &lt;strong&gt;מישורי&lt;/strong&gt;, בנוסף לכך שהוא אוילרי. כפי שאפשר לנחש, הוא הולך לככב בהמשך הפוסט שלנו.&lt;/p&gt;
 
 &lt;p&gt;כשיש לנו ציור של גרף מישורי אפשר לדבר לא רק על הצמתים והקשתות שלו אלא גם על &lt;strong&gt;הפאות&lt;/strong&gt; שלו - השטחים הסגורים שנתחמים על ידי הקשתות (המילה “פאות” מגיעה מההקשר המקורי של נוסחת אוילר, עבור פאונים; לא אדבר על כך בפוסט הזה):&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3772&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted2.png&quot; alt=&quot;&quot; width=&quot;405&quot; height=&quot;570&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3772&quot; src=&quot;/blog/assets/img/2019/04/pasted2.png&quot; alt=&quot;&quot; width=&quot;405&quot; height=&quot;570&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;בתמונה הנוכחית צבעתי את הפאות בצבעים עליזים - ורוד, ירוק, כחול, צהוב ולבן. רגע, איפה הלבן כאן? ובכן, גם השטח ש”מחוץ” לגרף נחשב לאחת מהפאות שלו, “הפאה החיצונית”. כלומר, הצביעה העליזה שלי מראה לנו שלגרף יש חמש פאות. בנוסף לכך יש לו חמישה צמתים (הנקודות הכחולות) ויש לו שמונה קשתות (הקווים השחורים העבים שמחברים צמתים). אם נסמן את מספר הצמתים ב-&lt;span&gt;$latex V$&lt;/span&gt;, את מספר הקשתות ב-&lt;span&gt;$latex E$&lt;/span&gt; ואת מספר הפאות ב-&lt;span&gt;$latex F$&lt;/span&gt; נגלה שמתקיים&lt;/p&gt;
 
@@ -320,35 +320,35 @@
 
 &lt;p&gt;בואו נעקוב אחרי תהליך הציור של התמונה לעיל, עם ספירה של מספר הקשתות והפאות בכל רגע נתון. כל חמשת הצמתים יופיעו כל הזמן - כלומר, &lt;span&gt;$latex V=5$&lt;/span&gt; הולך להיות קבוע. בהתחלה יש רק את הצמתים, ודמיינו שאנחנו עומדים בצומת הימני-תחתון ומחכים בהתרגשות לתחילת המסע שלנו בגרף:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3764&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted3.png&quot; alt=&quot;&quot; width=&quot;262&quot; height=&quot;458&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3764&quot; src=&quot;/blog/assets/img/2019/04/pasted3.png&quot; alt=&quot;&quot; width=&quot;262&quot; height=&quot;458&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כאן &lt;span&gt;$latex E=0$&lt;/span&gt; ו-&lt;span&gt;$latex F=1$&lt;/span&gt; (כי הפאה החיצונית, הלבנה).&lt;/p&gt;
 
 &lt;p&gt;עכשיו נבצע את הצעד הראשון:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3765&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted4.png&quot; alt=&quot;&quot; width=&quot;250&quot; height=&quot;497&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3765&quot; src=&quot;/blog/assets/img/2019/04/pasted4.png&quot; alt=&quot;&quot; width=&quot;250&quot; height=&quot;497&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ועכשיו &lt;span&gt;$latex E=1$&lt;/span&gt; ו-&lt;span&gt;$latex F=1$&lt;/span&gt; נשאר כמו קודם - מכיוון שהקשת הגיעה לצומת שטרם ביקרנו בו, לא יצרנו פאה חדשה. אנחנו רואים שלבקר בצומת שטרם ביקרנו בו זה משעמם, אז בואו נבצע את כל יתר הצעדים הנדרשים כדי שנבקר &lt;strong&gt;בכל&lt;/strong&gt; הצמתים; מרגע זה והלאה, כל צעד נוסף יצור פאה חדשה:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3766&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted5.png&quot; alt=&quot;&quot; width=&quot;236&quot; height=&quot;455&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3766&quot; src=&quot;/blog/assets/img/2019/04/pasted5.png&quot; alt=&quot;&quot; width=&quot;236&quot; height=&quot;455&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כרגע &lt;span&gt;$latex E=4$&lt;/span&gt; (כמספר הצמתים פחות אחד - לא מקרי, כמובן, הקשר &lt;span&gt;$latex E=V-1$&lt;/span&gt; מתקיים בכל &lt;strong&gt;עץ&lt;/strong&gt;) ו-&lt;span&gt;$latex F=1$&lt;/span&gt;. כלומר, כבר כרגע מתקיימת הנוסחה &lt;span&gt;$latex V-E+F=2$&lt;/span&gt;, וזה לא מפתיע כי הגרף שקיבלנו כרגע הוא גם מישורי וגם &lt;strong&gt;קשיר&lt;/strong&gt; (זוכרות? קשירות הייתה הכרחית בשביל נוסחת אוילר, בדיוק בגלל שצמתים מבודדים כמו בתמונות הקודמות לא משפיעים על &lt;span&gt;$latex E$&lt;/span&gt; ועל &lt;span&gt;$latex F$&lt;/span&gt; ואפשר להוסיף כמה מהם שרוצים). מה שיקרה מכאן ואילך הוא שכל צעד &lt;strong&gt;ישמר&lt;/strong&gt; את הקשר הזה, &lt;span&gt;$latex V-E+F=2$&lt;/span&gt;; כי כל צעד גם יוסיף קשת אחת (יגדיל את &lt;span&gt;$latex E$&lt;/span&gt; ב-1) וגם יצור פאה חדשה (יגדיל את &lt;span&gt;$latex F$&lt;/span&gt; ב-1). בואו נראה את זה קורה בפעם הראשונה:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3767&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted6.png&quot; alt=&quot;&quot; width=&quot;243&quot; height=&quot;448&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3767&quot; src=&quot;/blog/assets/img/2019/04/pasted6.png&quot; alt=&quot;&quot; width=&quot;243&quot; height=&quot;448&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;מה שנחמד פה הוא שהפאה שיצרנו לא מופיעה בתמונה הסופית, פשוט כי הצעד הבא מפרק אותה לשתי פאות:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3768&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted7.png&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;449&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3768&quot; src=&quot;/blog/assets/img/2019/04/pasted7.png&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;449&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ונראה לי שהרעיון ברור אז אני אצייר את שתי הקשתות הבאות ביחד:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3769&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted8.png&quot; alt=&quot;&quot; width=&quot;366&quot; height=&quot;553&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3769&quot; src=&quot;/blog/assets/img/2019/04/pasted8.png&quot; alt=&quot;&quot; width=&quot;366&quot; height=&quot;553&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;זה מסיים את ה”הוכחה”, אבל עדיין צריך להתייחס למקרה שבו הגרף המישורי שלנו איננו אוילרי, מה שמחזיר אותנו לשאלה בסיסית קצת יותר - מתי גרף הוא &lt;strong&gt;כן&lt;/strong&gt; אוילרי? כאן נדרשים שני דברים. ראשית, שהגרף יהיה קשיר; אבל אנחנו מניחים שהגרף המישורי שלנו קשיר, כך שזה לא רלוונטי. שנית, צריך ש&lt;strong&gt;הדרגה&lt;/strong&gt; של כל צומת תהיה זוגית, פרט אולי לשני צמתים בדיוק. דרגה של צומת היא מספר הקשתות שנוגעות בו; מכיוון שבמסלול אוילרי בכל פעם שבה אנחנו נכנסים לצומת ו”שורפים” את הקשת שאיתה נכנסנו אנחנו גם יוצאים ממנו ו”שורפים” את הקשת שאיתה יצאנו, קל לראות שמספר הקשתות שמתאימות לכל צומת חייב להיות זוגי למעט בצמתי ההתחלה והסיום. האתגר הגדול יותר הוא להראות שזה גם &lt;strong&gt;תנאי מספיק&lt;/strong&gt; לכך שיהיה מסלול אוילרי בגרף, אבל אני לא אעשה את זה כאן הפעם אלא רק אשתמש בזה.&lt;/p&gt;
 
 &lt;p&gt;בגלל שהקריטריון הזה לאוילריות של גרף הוא כל כך פשוט, אנחנו יכולים לנצל אותו ולהפוך גרף לאוילרי בקלי קלות - פשוט נכפיל את מספר הקשתות. הנה דוגמא:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3770&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/04/pasted9.png&quot; alt=&quot;&quot; width=&quot;876&quot; height=&quot;366&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3770&quot; src=&quot;/blog/assets/img/2019/04/pasted9.png&quot; alt=&quot;&quot; width=&quot;876&quot; height=&quot;366&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;הגרף הימני הוא הגרף המפורסם של “בעיית הגשרים של קניגסברג” שאוילר פתר. כל הצמתים שם מדרגה אי זוגית ולכן הגרף אינו אוילרי, למרות שהוא בבירור מישורי ובבירור מקיים את נוסחת אוילר (&lt;span&gt;$latex V=4$&lt;/span&gt; ו-&lt;span&gt;$latex E=7$&lt;/span&gt; ו-&lt;span&gt;$latex F=5$&lt;/span&gt;). הגרף השמאלי הוא מה שקורה לגרף הימני כשאני לוקח כל קשת ומפצל אותה לשתיים. ההשפעה של הפיצול הזה על הגרף היא זו:&lt;/p&gt;
 &lt;ol&gt;
@@ -472,7 +472,7 @@
 
 &lt;p&gt;ועוד הבדל לטובת בנך הוא שמשפט ברואר הוא לא קונסטרוקטיבי - הוא לא נותן לנו דרך למצוא את נקודת השבת, רק מוכיח שהיא קיימת. זאת בשונה ממשפט בנך, שמראה דרך מפורשת “לבנות” אותה בתור גבול של סדרה. למעשה, העובדה שהמשפט המפורסם שלו עצמו לא קונסטרוקטיבי הייתה אחת מהדברים שגרמו לברואר לאמץ את הגישה ה&lt;strong&gt;אינטואיציוניסטית&lt;/strong&gt; לפילוסופיה של המתמטיקה, שבה הוכחות לא קונסטרוקטיביות כאלו אינן מתקבלות בברכה (וכמובן, ראויה לפוסט משל עצמה שמי יודע אם אי פעם אכתוב).&lt;/p&gt;</content><author><name></name></author><category term="משפט נקודת השבת של בנך" /><category term="משפט נקודת השבת של ברואר" /><category term="נקודת שבת" /><summary type="html">מבוא בואו נתחיל עם סיפור קצרצר בן פסקה אחת של חורחה לואיס בורחס בשם “על הדיוק במדע” שאני מביא פה בתרגום יורם ברונובסקי: ...באימפריה זו הגיעה אמנות כתיבת המפות למידת שלמות כזו, שמפתו של מחוז אחד השתרעה על פני עיר שלמה ואילו מפתה של האימפריה כולה - על פני המחוז כולו. ברבות הימים לא סיפקו עוד מפות ענק אלה את התשובות וועדות כותבי המפות החלו להכין את מפת האימפריה שגודלה כגודל האימפריה עצמה, והיא זהה עמה בכל נקודה ונקודה. הדורות הבאים היו אדוקים פחות במדע כתיבת המפות, הם גרסו שמפה נרחבת זו היא מיותרת והפקידו אותה לאכזריות השמש והחורף. במדבריות המערב שרדו כמה חורבות של המפה, שם שוכנים חיות בר וקבצנים, בארץ כולה לא היו שרידים נוספים של מדע כתיבת הארץ.</summary></entry><entry><title type="html">האם כל המתמטיקה בעצם מבוססת על כשלים לוגיים?</title><link href="http://localhost:4000/blog/2019/03/23/math_based_on_logical_fallacies" rel="alternate" type="text/html" title="האם כל המתמטיקה בעצם מבוססת על כשלים לוגיים?" /><published>2019-03-23T08:41:47+02:00</published><updated>2019-03-23T08:41:47+02:00</updated><id>http://localhost:4000/blog/2019/03/23/math_based_on_logical_fallacies</id><content type="html" xml:base="http://localhost:4000/blog/2019/03/23/math_based_on_logical_fallacies">&lt;p&gt;להיט עכשיו בפייסבוק העברי הוא צילום המסך הזה של פוסט שלא חשוב על ידי מי נכתב, כי הוא מופץ במטרה ללעוג לכותב:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3755&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/03/DivideByZero.png&quot; alt=&quot;&quot; width=&quot;738&quot; height=&quot;753&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3755&quot; src=&quot;/blog/assets/img/2019/03/DivideByZero.png&quot; alt=&quot;&quot; width=&quot;738&quot; height=&quot;753&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אותי פחות מעניין ללעוג לכותב ויותר לשאול שאלות ולנסות לענות להן. למשל:&lt;/p&gt;
 &lt;ol&gt;
@@ -555,7 +555,7 @@
 
 &lt;p&gt;ולאלו שעדיין מחפשים “סתירות” במתמטיקה - למה אתם עושים את זה בעצם? למה לשחק עם משוואות טיפשיות כשאתם יכולים לשחק עם דברים מגניבים כמו &lt;a href=&quot;https://gadial.net/2010/05/02/congruent_numbers_and_elliptic_curves/&quot;&gt;עקומים אליפטיים&lt;/a&gt;? המתמטיקה מגניבה. אל תחפשו בה סתירות אלא כיף! תתעוררו, אנשים!&lt;/p&gt;</content><author><name></name></author><category term="חוגי פולינומים" /><category term="סתירות לוגיות במתמטיקה" /><summary type="html">להיט עכשיו בפייסבוק העברי הוא צילום המסך הזה של פוסט שלא חשוב על ידי מי נכתב, כי הוא מופץ במטרה ללעוג לכותב:</summary></entry><entry><title type="html">בעיית איסוף הקופונים</title><link href="http://localhost:4000/blog/2019/02/13/coupon_collector_problem" rel="alternate" type="text/html" title="בעיית איסוף הקופונים" /><published>2019-02-13T16:34:18+02:00</published><updated>2019-02-13T16:34:18+02:00</updated><id>http://localhost:4000/blog/2019/02/13/coupon_collector_problem</id><content type="html" xml:base="http://localhost:4000/blog/2019/02/13/coupon_collector_problem">&lt;p&gt;הנה לכם סיפור על איך בעיות מתמטיות צצות מעצמן. זה לא מכבר יצא לאוויר העולם משחק הוידאו Super Smash Bros. Ultimate שהוא נצר לשושלת ארוכה ומפוארת של משחקי מכות שמאחדים דמויות משלל משחקים בלתי קשורים בעליל על מנת שירביצו אחד לשני באווירה של כאוס מוחלט בשלל זירות שונות ומשונות שנלקחות גם כן משלל משחקים בלתי קשורים בעליל. המשחק הנוכחי החליט לקחת את המופרכות הזו לשיאים חדשים על ידי כך שיאגד את כל הדמויות והזירות מכל המשחקים שיצאו עד כה בסדרה, ויוסיף עוד. כתוצאה מכך יש לא פחות מ-103 זירות במשחק. מסך בחירת הזירות נראה כך:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3748&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/02/gw44pdhlx3i11.png&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;900&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3748&quot; src=&quot;/blog/assets/img/2019/02/gw44pdhlx3i11.png&quot; alt=&quot;&quot; width=&quot;1600&quot; height=&quot;900&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;עם כל כך הרבה זירות, למי יש זמן לבחור בכלל? אני תמיד בוחר בסימן השאלה למעלה שבוחר אחת מ-103 הזירות באקראי, כך שיש הסתברות שווה לכל אחת מהזירות. והנה שמתי לב שגם עכשיו, אחרי חודשיים של משחק, עדיין קורה שאני משחק בזירה שאני לא זוכר שראיתי קודם. זה העלה אצלי את השאלה הבאה: תוך כמה סיבובים של המשחק אפשר לראות את כל הזירות?&lt;/p&gt;
 
@@ -567,28 +567,30 @@
 
 &lt;p&gt;כמובן, אין טעם באמת לתת לשחקנים לשחק; אפשר לעשות משהו מהיר יותר - סימולציה במחשב. אז הנה קוד בשפת פייתון שעושה בדיוק את זה:&lt;/p&gt;
 
-&lt;p&gt;[python]
-import random&lt;/p&gt;
+&lt;div class=&quot;code-block&quot;&gt;
 
-&lt;p&gt;def experiment(n):
-    visited = [False] * n
-    visited_count = 0
-    rounds = 0
-    while visited_count &amp;lt; n:
-        rounds += 1
-        i = random.randrange(n)
-        if not visited[i]:
-            visited[i] = True
-            visited_count += 1         &lt;br /&gt;
-    return rounds&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
 
-&lt;p&gt;tries = 10000
-N = 103
-total = 0
-for i in range(tries):
-    total += experiment(N)
-print(total / tries)
-[/python]&lt;/p&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;experiment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;visited_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;rounds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;rounds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;visited&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;visited_count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;           
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rounds&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;tries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;103&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;experiment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;כשהרצתי את הקוד לקח לו רגע לסיים ובסוף קיבלתי את התוצאה &lt;span&gt;$latex 535.3524$&lt;/span&gt;. בהרצה נוספת קיבלתי &lt;span&gt;$latex 540.0647$&lt;/span&gt;. זה כבר מעורר את החשד ש-10,000 זה לא מספיק ואולי עדיף 100,000 הרצות בשביל תוצאה מדויקת יותר. אז הרצתי גם 100,000 פעמים, זה לקח יותר זמן וקיבלתי &lt;span&gt;$latex 537.58746$&lt;/span&gt;. האם אפשר יותר מדויק, יותר מהר? ובכן, כן! אם נכניס לתמונה את תורת ההסתברות. כמו כן, כדי לפשט לעצמנו קצת את החיים נפסיק לדבר על המספר 103 דווקא ונדבר על מספר &lt;span&gt;$latex N$&lt;/span&gt; כללי.&lt;/p&gt;
 
@@ -661,9 +663,11 @@ print(total / tries)
 &lt;/ol&gt;
 &lt;p&gt;הנוסחה שמצאתי עכשיו, &lt;span&gt;$latex N\cdot H_{N}$&lt;/span&gt;, לא נותנת קירוב של התוחלת אלא את התוחלת עצמה, במדויק; אבל עוד יותר חשוב מכך, אפשר לחשב אותה &lt;strong&gt;מהר&lt;/strong&gt;, בשורה אחת של פייתון:&lt;/p&gt;
 
-&lt;p&gt;[python]
-print(N * sum(1 / k for k in range(1,N+1)))
-[/python]&lt;/p&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;השורה הזו מחזירה את המספר &lt;span&gt;$latex 537.3294902186476$&lt;/span&gt; שהוא התוחלת ה”נכונה”; אפשר לראות שתוצאת הניסוי שעשיתי קודם יצאה קרובה מאוד (537 ומשהו) אבל בשביל זה הייתי צריך להקפיץ את מספר החזרות על הניסוי מ-10,000 (שלא נתן משהו עד כדי כך מדויק) אל 100,000 וזה לקח הרבה יותר זמן. הפתרון המדויק שמצאתי הוא &lt;strong&gt;יעיל יותר לחישוב&lt;/strong&gt; ולכן טוב יותר. אני מדגיש את הנקודה הזו כי הפתרון הזה הוא לא “נוסחה סגורה” - יש בו סכום שתלוי ב-&lt;span&gt;$latex N$&lt;/span&gt;, ועשויה להיות רתיעה מסכומים כאלו למי שרגילים לתרגילים מקומבינטוריקה בסיסית שבהם לתת נוסחה שכזו לפעמים גורם להורדת נקודות כי זה לא פתרון פשוט “מספיק”. ובכן, אם אתם סובלים (כמו שאני סבלתי) מטראומה כזו מסכומים - אל! סכומים יכולים להיות מאוד מועילים לפעמים (ודוגמא טובה מאוד היא &lt;strong&gt;עקרון ההכלה וההפרדה&lt;/strong&gt; &lt;a href=&quot;https://gadial.net/2011/12/31/inclusion_exclusion_principle/&quot;&gt;שכתבתי עליו כבר פוסט&lt;/a&gt;, ומאפשר להמיר בעיות חישוביות קשות למדי במשימות חישוביות הרבה יותר קלות למרות שהוא מתבסס על סכום).&lt;/p&gt;
 
@@ -679,11 +683,13 @@ print(N * sum(1 / k for k in range(1,N+1)))
 
 &lt;p&gt;וזו נוסחה ש&lt;strong&gt;מאוד קל&lt;/strong&gt; לחשב ביעילות, גם אם הערך של &lt;span&gt;$latex N$&lt;/span&gt; הוא אדיר (בן מאות ספרות - מה שמונע לגמרי חישוב של הסכום &lt;span&gt;$latex 1+\frac{1}{2}+\dots+\frac{1}{N}$&lt;/span&gt;). ככל ש-&lt;span&gt;$latex N$&lt;/span&gt; גדול יותר כך הקירוב יהיה טוב יותר; עד כמה הוא טוב עבור &lt;span&gt;$latex N=103$&lt;/span&gt;? ובכן, הבה וננסה:&lt;/p&gt;
 
-&lt;p&gt;[python]
-import numpy
-gamma = 0.5772156649
-print(N * numpy.log(N) + gamma * N + 1/2)
-[/python]&lt;/p&gt;
+&lt;div class=&quot;code-block&quot;&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gamma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5772156649&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gamma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/div&gt;
 
 &lt;p&gt;הקוד הזה, עבור &lt;span&gt;$latex N=103$&lt;/span&gt;, מניב את התוצאה &lt;span&gt;$latex 537.3302992723525$&lt;/span&gt; שהיא קרובה להפליא אל התוצאה המדויקת, והחישוב שלה כמובן מהיר יותר. אם אני אנסה להריץ את החישובים הקודמים עבור &lt;span&gt;$latex N=1000000000000000$&lt;/span&gt; אני אכשל בצורה מזעזעת (הקוד ירוץ וירוץ ולעולם לא יסיים) אבל עם הקירוב הזה אני עדיין אקבל תוצאה תוך חלקיק שניה - ואני יודע שזו תהיה תוצאה שלא אוכל להבדיל בינה ובין התוצאה ה”אמיתית”.&lt;/p&gt;
 
@@ -699,11 +705,17 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;כדי להסביר מה מחשב קוונטי בעצם &lt;strong&gt;עושה&lt;/strong&gt;, אני זקוק לחתולים. תודה ל&lt;a href=&quot;https://noa.null.co.il/&quot;&gt;נועה ליברמן-פלשקס&lt;/a&gt; שאיירה לי את המחשב הקוונטי הראשון בעולם שנבנה באמצעות חתולים!&lt;/p&gt;
 
-&lt;p&gt;[caption id=”attachment_3740” align=”alignnone” width=”1000”]&lt;img class=&quot;wp-image-3740 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/02/Catputer-color-A.jpg&quot; alt=&quot;שלושה חתולים יושבים על מה שנראה דומה למחשב קוונטי אמיתי&quot; width=&quot;1000&quot; height=&quot;1000&quot; /&gt; מחשב קוונטי מבוסס חתולים! (איור: נועה ליברמן-פלשקס)[/caption]&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/blog/assets/img/2019/02/Catputer-color-A.jpg&quot; alt=&quot;שלושה חתולים יושבים על מה שנראה דומה למחשב קוונטי אמיתי&quot; /&gt;
+    &lt;figcaption&gt;איור: נועה ליברמן-פלשקס&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;מה הולך פה? יש לנו משהו מוזר שכולל שלושה חתולים, שאתן להם שמות במקום סתם לקרוא להם א’, ב’, ג’: ארצ’יבלד, בהמות וגריזלדה (מלמעלה למטה). כרגע שלושתם נראים חייכנים ומרוצים מהחיים, אבל חכו חכו, עוד רגע המחשב יופעל ויקרה להם משהו מוזר מאוד!&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/blog/assets/img/2019/02/Catputer-color-B.jpg&quot; alt=&quot;המחשב הקוונטי שהפך לענן שמתוכו מציצות שתי גרסאות של כל חתול&quot; /&gt;
+    &lt;figcaption&gt;איור: נועה ליברמן-פלשקס&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;[caption id=”attachment_3741” align=”alignnone” width=”1000”]&lt;img class=&quot;wp-image-3741 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/02/Catputer-color-B.jpg&quot; alt=&quot;המחשב הקוונטי שהפך לענן שמתוכו מציצות שתי גרסאות של כל חתול - &amp;quot;נחמדה&amp;quot; ו&amp;quot;מוזרה&amp;quot;&quot; width=&quot;1000&quot; height=&quot;1000&quot; /&gt; ותהא סופרפוזיציה חתולית! (איור: נועה ליברמן-פלשקס)[/caption]&lt;/p&gt;
 &lt;h2&gt;סופרפוזיציה, או: מה הולך פה בכלל?&lt;/h2&gt;
 &lt;p&gt;אם במחשב רגיל יחידת המידע הבסיסית נקראת &lt;strong&gt;ביט&lt;/strong&gt;, אז במחשב קוונטי יחידת המידע הבסיסית נקראת &lt;strong&gt;קיוביט&lt;/strong&gt;. להבדיל מביט שיכול להיות או 0 או 1 וזהו, קיוביט יכול להיות &lt;strong&gt;סופרפוזיציה&lt;/strong&gt; של הערכים 0 ו–1. סופרפוזיציה היא התופעה הבסיסית שביסוד תורת הקוונטים, והיא מה שהופך מחשבים קוונטיים לשונים כל כך ממחשבים רגילים. לכן אנחנו צריכים להבין מה המושג הזה אומר ומה הוא לא אומר. אני מייצג בתמונה סופרפוזיציה בתור “ענן של מהומה” אבל צריך להסביר מה קורה בתוך הענן הזה.&lt;/p&gt;
 
@@ -711,7 +723,7 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;בסיטואציה “קלאסית” (המילה “קלאסית” באה לדבר על התיאור של המציאות שנותנת הפיזיקה הקלאסית, זו שלפני מכניקת הקוונטים) היינו מצפים שגריזלדה תהיה “נחמדה” או “מוזרה” אבל לא שתי האפשרויות בו זמנית. בסיטואציה קוונטית המצב מורכב יותר: גריזלדה עדיין &lt;strong&gt;לא בשתי האפשרויות בו זמנית&lt;/strong&gt; אלא בתערובת כלשהי שלהן. מה זה אומר “תערובת”? זה מה שהמתמטיקאים משתמשים בביטוי “צירוף לינארי” כדי לתאר אותו. זה אומר שהתיאור המתמטי המדויק של מה שעובר על גריזלדה יכול להיראות כך:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3742&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/02/grizelda_superposition.jpg&quot; alt=&quot;&quot; width=&quot;434&quot; height=&quot;90&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3742&quot; src=&quot;/blog/assets/img/2019/02/grizelda_superposition.jpg&quot; alt=&quot;&quot; width=&quot;434&quot; height=&quot;90&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;לא חייבים להבין את הסימונים עד הסוף אלא רק את העיקרון - בתמונה רואים את שני &lt;strong&gt;המצבים&lt;/strong&gt; האפשריים של גריזלדה - “נחמדה” ו”מוזרה”, כשהם נמצאים בין סימון שנראה כמו &lt;span&gt;$latex \left|\cdot\right\rangle $&lt;/span&gt; והוא מופיע כאן כי זה הסימון המקובל בפיזיקה (השם שלו הוא ket) כל אחד מהמצבים הללו מוכפל במספר &lt;span&gt;$latex \frac{\sqrt{2}}{2}$&lt;/span&gt;, שהוא &lt;strong&gt;המקדם&lt;/strong&gt; של המצב. המקדמים הללו הם אלו שקובעים את ה”אופי” של הסופרפוזיציה; מספרים שונים מובילים לסופרפוזיציות שמתנהגות שונה. במקרה הנוכחי שני המספרים זהים וזה אומר ששני המצבים הם “בעלי אותו משקל” מבחינת הסופרפוזיציה, אבל באופן כללי זה ממש לא חייב להיות המצב.&lt;/p&gt;
 
@@ -729,7 +741,7 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;זו נקודה שבה האיור למעלה פשוט &lt;strong&gt;משקר&lt;/strong&gt; כדי לא להוסיף יותר מדי בלאגן. באיור למעלה רואים רק גרסה אחת של כל מצב אפשרי של כל חתול. אבל בסיטואציה שכוללת שזירה, המצבים הבסיסיים שמהם המערכת מורכבת יכולים לכלול כל שלשה שבה משתתף אחד משני המצבים של החתולים. כלומר: מצב בסיס אחד הוא שלושת החתולים כשכולם “נחמדים” ומצב בסיס אחר הוא שלושת כשכולם “מוזרים” ומצב בסיס אחד הוא כשארצ’יבלד “נחמד” ואילו בהמות וגריזלדה “מוזרים” וכן הלאה - אם סופרים מגיעים לכך שישנם &lt;strong&gt;שמונה&lt;/strong&gt; מצבי בסיס שונים. הנה תיאור מתמטי של העניין:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3743&quot; src=&quot;https://gadial.net/wp-content/uploads/2019/02/semifull.png&quot; alt=&quot;&quot; width=&quot;657&quot; height=&quot;297&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3743&quot; src=&quot;/blog/assets/img/2019/02/semifull.png&quot; alt=&quot;&quot; width=&quot;657&quot; height=&quot;297&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אם הייתי רוצה שהאיור של המחשב הקוונטי בפעולה יהיה מדויק, הייתי צריך לדרוש שהוא יכלול ייצוג לכל השלשות הללו, אבל אז מרוב מהומה לא היה אפשר להבין שום דבר.&lt;/p&gt;
 
@@ -827,13 +839,13 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;נתחיל מהבהרה קטנה לעניין “למה מפות וגרפים הן בערך אותו דבר”. אם אני אצייר עיגול קטן בתוך כל מדינה (“עיר בירה”) ואמתח קווים בין העיגולים של מדינות סמוכות (“קווי רכבת”), אני אקבל גרף מישורי; לכן הדיבורים על מפות ומדינות הן דרך אחרת לומר “כל גרף מישורי הוא 4-צביע”. הנה דוגמא לאופן שבו זה נעשה על חלק ממפת ארה”ב (כמובן, מבלי ש”ערי הבירה” יתאימו לערי הבירה האמיתיות של המדינות):&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3702 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/map-with-cities.png&quot; alt=&quot;&quot; width=&quot;559&quot; height=&quot;622&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3702 size-full&quot; src=&quot;/blog/assets/img/2018/12/map-with-cities.png&quot; alt=&quot;&quot; width=&quot;559&quot; height=&quot;622&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כמובן, התיאור הזה הוא פשטני מדי; מסתתרת כאן הוכחה לא טריוויאלית, אבל אני לא אכנס אליה כלל.&lt;/p&gt;
 
 &lt;p&gt;סיבה אחת שבגללה גרפים מישוריים מעניינים אותנו היא שהם מקיימים את &lt;strong&gt;נוסחת אוילר&lt;/strong&gt;. נוסחת אוילר מקשרת את מספר הצמתים של גרף מישורי, מספר הקשתות שלו ומספר הפאות שלו. מה אלו צמתים, קשתות ופאות? צמתים הם המרכיבים הבסיסיים של הגרף - אפשר לחשוב עליהם בתור עיגולים קטנים אם רוצים. קשתות הן הקווים שמחברים זוגות של צמתים. גרף הוא &lt;strong&gt;מישורי&lt;/strong&gt; אם אין שתי קשתות שדורכות זו על זו (פורמלית, גרף הוא מישורי אם &lt;strong&gt;אפשר&lt;/strong&gt; לצייר אותו בצורה כזו ועדיין לשמור על התכונה של אילו צמתים מחוברים). ופאות? בגרף מישורי, פאות הם האיזורים ש”נראים כמו מדינות” - איזורים שמוקפים כולם בקשתות. בנוסף לאלו יש גם פאה אחת נוספת, ה”חיצונית”.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3703 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/planar-graph.png&quot; alt=&quot;&quot; width=&quot;562&quot; height=&quot;662&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3703 size-full&quot; src=&quot;/blog/assets/img/2018/12/planar-graph.png&quot; alt=&quot;&quot; width=&quot;562&quot; height=&quot;662&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אנחנו רואים שגרף מישורי בעצם נראה כמו… מפה. כלומר, אם ניקח מפה תמימה ונבנה ממנה גרף מישורי, בעצם נקבל מפה אחרת, שנקראת &lt;strong&gt;הדואלית&lt;/strong&gt; שלה. בואו נבין איך דברים משתנים במעבר הזה:&lt;/p&gt;
 &lt;ul&gt;
@@ -841,7 +853,7 @@ print(N * numpy.log(N) + gamma * N + 1/2)
  	&lt;li&gt;קשת בגרף הדואלי (&quot;קו רכבת בין ערי בירה&quot;) הייתה קשת שונה במפה המקורית (&quot;קו גבול בין שתי מדינות סמוכות&quot;).&lt;/li&gt;
  	&lt;li&gt;פאה בגרף הדואלי (&quot;מסלול מעגלי של רכבות&quot;) הייתה צומת במפה המקורית (&quot;נקודת מפגש של גבולות&quot;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3704 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/dual-graph.png&quot; alt=&quot;&quot; width=&quot;568&quot; height=&quot;611&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3704 size-full&quot; src=&quot;/blog/assets/img/2018/12/dual-graph.png&quot; alt=&quot;&quot; width=&quot;568&quot; height=&quot;611&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;באיור, שבו הוספתי סימון עבור נקודות המפגש של שלושה גבולות ויותר, קל יחסית להבין את המעבר הזה. אם הייתה לנו מדינה בגרף המקורי, אז הצומת שמתאים לה הוא הצומת היחיד שנמצא בתוך “שטח” המדינה. עבור קשתות, כל קשת בגרף הדואלי חוצה בדיוק קשת אחת בגרף המקורי, מה שנותן את ההתאמה ביניהן. מה שאולי קצת מבלבל הוא ה”קסם” שבמסגרתו כל צומת מהגרף המקורי (מפגש של כמה גבולות) נמצאת עכשיו בתוך פאה בודדת של הגרף הדואלי, אבל העקרון ברור - אפשר לעבור במסלול מעגלי על כל המדינות שהגבול שלהן משתתף בצומת הזה.&lt;/p&gt;
 
@@ -883,53 +895,53 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;ובכן, יש לנו חמישה מקרים לטפל בהם, החל מצומת עם שכן אחד וכלה בצומת עם חמישה שכנים. שלושת המקרים הראשונים קלים. אם יש לנו צומת עם לכל היותר שלושה שכנים, אפשר פשוט להסיר אותו מהגרף, לצבוע את הגרף שהתקבל כתוצאה מכך, ואז לחזור אל הגרף המקורי. הצומת שהסרנו קודם הוא בעל שלושה שכנים בלבד, ויש לרשותנו ארבעה צבעים שבהם אפשר לצבוע את הגרף; פשוט נבחר עבור הצומת שנותר לנו לצבוע צבע כלשהו שאין לשכניו (מובטח שיהיה לפחות אחד כזה, במקרה שבו כל השכנים צבועים בצבעים שונים):&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3705 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color3.png&quot; alt=&quot;&quot; width=&quot;566&quot; height=&quot;594&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3705 size-full&quot; src=&quot;/blog/assets/img/2018/12/color3.png&quot; alt=&quot;&quot; width=&quot;566&quot; height=&quot;594&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;באיור הזה הסרתי את הצומת שמתאים למדינת קליפורניה ויש לו שלושה שכנים. הוא צבוע בלבן כדי לסמן שהוא טרם נצבע, והקשתות שיוצאות ממנו הן מקווקוות כדי לסמן שהן “לא חלק מהגרף”, וכעת צבעתי את יתר הגרף בארבעה צבעים. עכשיו אפשר להסתכל על קליפורניה ולראות במה נצבעו שכנותיה: בירוק, באדום ובצהוב, כך שהצבע הכחול פנוי.&lt;/p&gt;
 
 &lt;p&gt;בואו נעבור עכשיו למקרה של צומת עם ארבעה שכנים. נניח שכבר צבענו את יתר הגרף, אבל לרוע המזל כל השכנים של הצומת נצבעו בצבעים שונים. מה עושים עכשיו?&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3707 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-1.png&quot; alt=&quot;&quot; width=&quot;757&quot; height=&quot;505&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3707 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-1.png&quot; alt=&quot;&quot; width=&quot;757&quot; height=&quot;505&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כאן קאמפ הציע את הרעיון היפה שלו. נבחר את אחד מהשכנים, נאמר את שכן מספר 1, ונחליף את הצבע שלו לצבע של שכן מס’ 3. במקרה שלנו שכן מס’ 1 הוא אדום ואילו 3 הוא צהוב, אז נצבע מחדש את שכן מס’ 1 בצהוב. בזאת “פינינו” את הצבע האדום ואפשר לצבוע בו בלב שקט את הצומת שבאמצע. רק מה, שינוי הצבע של שכן מספר 1 עלול לגרום לבעיות חדשות. מה אם לשכן מס’ 1 יש שכנים ש&lt;strong&gt;כבר&lt;/strong&gt; צבועים בצהוב?&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3708 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-2.png&quot; alt=&quot;&quot; width=&quot;779&quot; height=&quot;610&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3708 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-2.png&quot; alt=&quot;&quot; width=&quot;779&quot; height=&quot;610&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ובכן, במקרה הזה קאמפ מציע פשוט לשנות את הצבע של השכנים הללו לאדום. אבל אם יש להם שכנים אדומים? ובכן, שיוחלפו בצהובים, וכן הלאה וכן הלאה. אנחנו מקבלים מעין &lt;strong&gt;תגובת שרשרת&lt;/strong&gt; לשינוי הצבע, אבל אין כאן משהו לא חוקי. במקרה הכי גרוע נקבל החלפה “מלאה” של הצבעים בגרף - כל הצמתים הצהובים יהפכו לאדומים, וכל הצמתים האדומים יהפכו לצהובים. עדיין נקבל גרף עם צביעה חוקית, אבל… אבל אם הצבע של שכן מס’ 3 יתהפך מצהוב לאדום בעצם לא הרווחנו כלום - עדיין כל השכנים של הצומת באמצע יהיו צבועים בצבעים שונים זה מזה.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3709 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-3.png&quot; alt=&quot;&quot; width=&quot;765&quot; height=&quot;668&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3709 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-3.png&quot; alt=&quot;&quot; width=&quot;765&quot; height=&quot;668&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;קאמפ אומר שכדי ששינוי הצבע של צומת מס’ 1 ישפיע ככה על צומת מס’ 3, חייבת להתקיים &lt;strong&gt;שרשרת&lt;/strong&gt; שמובילה מצומת 1 לצומת 3 והצמתים בה צבועים לסירוגין באדום וצהוב. שרשרת מסוג זה נקראת כיום על שמו - &lt;strong&gt;שרשרת קאמפ&lt;/strong&gt;. כמובן שאין מניעה לכך שבאמת תהיה כזו שרשרת וקל לבנות גרפים שבהם זה קורה. בואו נחזור לסיטואציה המקורית בגרף לדוגמא שלנו ונדגיש בה את השרשרת:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3711 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-4-1.png&quot; alt=&quot;&quot; width=&quot;789&quot; height=&quot;627&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3711 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-4-1.png&quot; alt=&quot;&quot; width=&quot;789&quot; height=&quot;627&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אז מה עושים?&lt;/p&gt;
 
 &lt;p&gt;אה-הא! בואו לא נשכח שיש לנו גם את צומת 2 וצומת 4! אפשר לעשות את תעלול החלפת הצבעים גם עבורן! וגם… וגם עבורן הוא עשוי להיכשל באותו האופן בדיוק, עם שרשרת קאמפ:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3712 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-5.png&quot; alt=&quot;&quot; width=&quot;971&quot; height=&quot;782&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3712 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-5.png&quot; alt=&quot;&quot; width=&quot;971&quot; height=&quot;782&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אבל כאן נכנס טיעון המחץ של קאמפ - הגרף הוא &lt;strong&gt;מישורי&lt;/strong&gt; ולכן השרשרת מ-1 אל 3 והשרשרת מ-2 אל 4 בהכרח &lt;strong&gt;מתנגשות&lt;/strong&gt; - כלומר, חייב להיות להן צומת משותף (אחרת יהיו קשתות מהשרשראות שחותכות זו את זו) אבל לא יכול להיות לשרשראות צומת משותף כי שרשרת אחת היא בצבעי אדום-צהוב והשניה בצבעי כחול-ירוק. זה מסיים את הטיעון הזה. אין פה שום טעות - זה עובד, ועובד נפלא. אפשר לכתוב אלגוריתם על פי השיטה שקאמפ הציע פה והוא אכן יצליח “לתקן” את הצביעה של הגרף בהתאם ולאפשר צביעה של הצומת הנוסף בצבע שלא מתנגש עם שכניו.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3714 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color4-6-1.png&quot; alt=&quot;&quot; width=&quot;1023&quot; height=&quot;780&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3714 size-full&quot; src=&quot;/blog/assets/img/2018/12/color4-6-1.png&quot; alt=&quot;&quot; width=&quot;1023&quot; height=&quot;780&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;אז מה הבעיה? הבעיה היא שצריך לטפל גם במקרה של צומת עם &lt;strong&gt;חמישה&lt;/strong&gt; שכנים. כאן קאמפ ניסה להשתמש בטיעון דומה ויצא לו משהו מאוד משכנע, עם טעות מאוד עדינה שקשה להבחין בה במבט ראשון - אבל תנסו!&lt;/p&gt;
 
 &lt;p&gt;אם לצומת יש חמישה שכנים, אז בצביעה של הגרף בלי הצומת הזה, בהכרח יש צבע אחד לפחות שמופיע פעמיים. כמובן, אם לא כל ארבעת הצבעים מופיעים אנחנו שוב במקרה טריוויאלי, ולכן אנחנו מניחים שכל ארבעת הצבעים מופיעים, ואחד מהם מופיע בשני צמתים שונים. עכשיו אפשר להבדיל בין שתי אפשרויות שונות. הראשונה היא שהצבע הכפול - בואו נאמר שהוא האדום - מופיע בשתי מדינות “סמוכות” אבל ללא גבול משותף:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3715 size-medium&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color5alt-282x300.png&quot; alt=&quot;&quot; width=&quot;282&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3715 size-medium&quot; src=&quot;/blog/assets/img/2018/12/color5alt.png&quot; alt=&quot;&quot; width=&quot;282&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;זו סיטואציה שניתנת לטיפול כמו קודם: קודם כל ננסה להפוך את הצהוב לכחול. אם הצלחנו, מה טוב. אם לא, יש שרשרת קאמפ שמחברת את הצהוב והכחול ולכן “מבודדת” את הירוק מהאדומים. אפשר אם כן להפוך את הירוק לאדום, וסיימנו. גם פה אין טעות.&lt;/p&gt;
 
 &lt;p&gt;הסיטואציה המעניינת היא זו שבה שתי המדינות האדומות לא יכולות להיות “סמוכות” כי בין כל שני שכנים סמוכים של הצומת המרכזי יש קשת. הנה דוגמא לסיטואציה הזו:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3716 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color5.png&quot; alt=&quot;&quot; width=&quot;596&quot; height=&quot;696&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3716 size-full&quot; src=&quot;/blog/assets/img/2018/12/color5.png&quot; alt=&quot;&quot; width=&quot;596&quot; height=&quot;696&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כאן פשוט &lt;strong&gt;אי אפשר&lt;/strong&gt; להפוך אף צומת לאדום, כי כל אחד מהצמתים הוא שכן של אדום. לכן הפתרון שעבד עבור ארבעה צמתים לא יעבוד כאן - מה שהוא לכל היותר מבטיח שהוא שנוכל לקחת את &lt;strong&gt;אחד&lt;/strong&gt; מהצמתים האדומים ולשנות את הצבע שלו, אבל זה ישאיר אותנו עם צומת אדום אחר. לכן צריך כאן טיעון מתוחכם יותר, וזה מה שקאמפ עושה.&lt;/p&gt;
 
 &lt;p&gt;קאמפ אומר - בואו ניקח את הירוק ונבדוק אם אפשר להפוך אותו לכחול או צהוב. אם אפשר, יופי! אחרת, יש שרשרת ירוק-כחול ויש שרשרת ירוק-צהוב שמקלקלות לנו. באיור הרשיתי לעצמי לשים את שרשרת הירוק-צהוב בים - פשוט תדמיינו שהרחבתי את ארה”ב עם עוד מדינות רלוונטיות.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3717 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color5-chains.png&quot; alt=&quot;&quot; width=&quot;870&quot; height=&quot;709&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3717 size-full&quot; src=&quot;/blog/assets/img/2018/12/color5-chains.png&quot; alt=&quot;&quot; width=&quot;870&quot; height=&quot;709&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;מה שקורה עכשיו הוא ששני הצמתים האדומים מוחבאים “בתוך” השרשראות - האדום השמאלי מנותק מהצומת הכחול, והאדום הימני מנותק מהצומת הצהוב (שימו לב שזה עדיין יקרה אם אם השרשרת הירוקה-צהובה לא תקיף אותו בכלל אלא תקיף את השרשרת הירוקה-כחולה; גם זה תרחיש אפשרי). פירוש הדבר הוא שאפשר לשנות את האדום הימני לצהוב ואת האדום השמאלי לכחול, ובכך להיפטר כליל מהצבע האדום ואז אפשר לצבוע בו את הצומת שבמרכז.&lt;/p&gt;
 
@@ -939,13 +951,13 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;הנה הסבר עקרוני על מה ש&lt;strong&gt;יכול&lt;/strong&gt; להשתבש. האיור שלמעלה מטעה כי הוא נותן תחושה ששרשראות הצהוב-ירוק והכחול-ירוק הן נפרדות לגמרי זו מזו. אבל האמת העצובה היא שהן עלולות להיות “מעורבבות” - אחת מהן יכולה לעבור דרך השניה ואז לצאת חזרה מהצד השני, כי הן יכולות לשתף צמתים ירוקים. הנה דוגמא אפשרית:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3719 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color5cross-1.png&quot; alt=&quot;&quot; width=&quot;770&quot; height=&quot;786&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3719 size-full&quot; src=&quot;/blog/assets/img/2018/12/color5cross-1.png&quot; alt=&quot;&quot; width=&quot;770&quot; height=&quot;786&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כאן הקו המקווקו העבה הוא השרשרת הצהובה-ירוקה ואילו הקו המקווקו הדק יותר הוא השרשרת הכחולה-ירוקה, ואנחנו רואים בבירור איך השרשרת הצהובה-ירוקה חותכת את השניה. ואנחנו גם רואים משהו עוד יותר גרוע בפנים - הצומת האדום הימני יותר, זה ש&lt;strong&gt;אמור&lt;/strong&gt; להיות מוחלף לצהוב, מחובר לאחד מהצמתים הצהובים על השרשרת הצהובה-ירוקה. זה אומר שכאשר נחליף אותו לצהוב, &lt;strong&gt;נשבור את השרשרת&lt;/strong&gt; הצהובה-ירוקה - חלק ממנה יהפוך לאדום. ברגע שבו זה קרה, ההיפוך של האדום &lt;strong&gt;השני&lt;/strong&gt;, זה שאמור להפוך לכחול, עשוי לגרום לכחול הנוסף שמחובר לצומת המרכזי שלנו להתהפך. כלומר, &lt;strong&gt;ההיפוך של האדום הראשון יצר שרשרת אדום-כחול שלא הייתה קיימת קודם&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;בואו נראה את זה קורה:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3720 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/12/color5cross2.png&quot; alt=&quot;&quot; width=&quot;805&quot; height=&quot;821&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3720 size-full&quot; src=&quot;/blog/assets/img/2018/12/color5cross2.png&quot; alt=&quot;&quot; width=&quot;805&quot; height=&quot;821&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;כאן הפכתי את האדום הימני לצהוב, ולכן את שכנו הצהוב לאדום. עכשיו הוספתי עוד צמתים כדי להראות כיצד יכולה להתקבל שרשרת אדום-כחול חדשה, שמנצלת את האדום החדש שזה עתה נוצר. ה”מצור” של השרשרת הצהובה-ירוקה נפרץ.&lt;/p&gt;
 
@@ -965,21 +977,21 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;בואו נתבונן במפה של ארצות הברית, שנבחרה בגלל הצורה הנחמדה שבה היא מתחלקת למדינות, וריבוי המדינות שבה (והיא כנראה לא תהיה ידידותית מספיק לעיוורי צבעים ועמכם הסליחה):&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3687 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/11/900px-Map_of_USA_with_state_names_2.svg_.png&quot; alt=&quot;&quot; width=&quot;900&quot; height=&quot;556&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3687 size-full&quot; src=&quot;/blog/assets/img/2018/11/900px-Map_of_USA_with_state_names_2.svg_.png&quot; alt=&quot;&quot; width=&quot;900&quot; height=&quot;556&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;המדינות של ארצות הברית במפה הזו נצבעו בארבעה צבעים: סגול (אורגון), ירוק (קליפורניה), צהוב (אריזונה) ואדום (נבדה - בואו נניח שזה אדום). חוץ מזה יש גם כחול בשביל הים וחום בשביל קנדה ומקסיקו, אבל בואו לא נחשיב את זה כחלק מהתמונה. ה”חוק” שמאחורי הצביעה הזו הוא ששתי מדינות עם גבול משותף לא יהיו צבועות באותו הצבע, פשוט כי אז יהיה יותר קשה להבדיל ביניהן. אפשר כמובן גם לצבוע את המפה עם יותר צבעים:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3689&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/11/USA.jpg&quot; alt=&quot;&quot; width=&quot;272&quot; height=&quot;185&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-3689&quot; src=&quot;/blog/assets/img/2018/11/USA.jpg&quot; alt=&quot;&quot; width=&quot;272&quot; height=&quot;185&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;וככה היא אולי נראית יותר יפה, אבל אם אנחנו רוצים להיות חסכוניים, אנחנו שואלים כמה צבעים אנחנו &lt;strong&gt;חייבים&lt;/strong&gt; כדי לשמר את עניין ה”אין שתי מדינות שכנות עם אותו צבע”. האם יכלנו לצבוע את מפת ארה”ב עם שלושה צבעים בלבד? ובכן, לא. בואו נסתכל לצורך כך על החוף המערבי. קליפורניה ונבדה הן מדינות שכנות ולכן חייבות להיות צבועות בצבעים שונים, למשל ירוק ואדום כמו בתמונה. כעת, אריזונה היא שכנה משותפת של קליפורניה ונבדה ולכן לא יכולה להיות צבועה בצבעים שלהן, לכן היא צריכה להיות צבועה בצבע חדש, למשל צהוב כמו בתמונה. האם אפשר להסתפק בירוק, אדום וצהוב, ולא לצבוע אף מדינה בסגול?&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3687 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/11/900px-Map_of_USA_with_state_names_2.svg_.png&quot; alt=&quot;&quot; width=&quot;900&quot; height=&quot;556&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3687 size-full&quot; src=&quot;/blog/assets/img/2018/11/900px-Map_of_USA_with_state_names_2.svg_.png&quot; alt=&quot;&quot; width=&quot;900&quot; height=&quot;556&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;בתמונה יוטה נצבעה בסגול, אבל היא לא שכנה של קליפורניה כך שבעצם אפשר לצבוע אותה בירוק (אבל לא בצהוב או אדום כי היא שכנה של נבדה ואריזונה). זה מכריח את איידהו להיות צבועה בצהוב (שכנה של יוטה שהפכנו לירוקה, ונבדה האדומה), אבל אז אנחנו נתקעים באורגון: אורגון היא שכנה של שלוש מדינות שכולן נצבעו בצבעים שונים מתוך הכרח: קליפורניה, נבדה ואיידהו. היא חייבת להיות צבועה בצבע רביעי.&lt;/p&gt;
 
 &lt;p&gt;המשחק הנחמד הזה מלמד אותנו את השיעור הראשון על ענייני הצביעה הללו. הנה יש לנו מצב שבו שלושה צבעים לא מספיקים למרות שבשום מקום אין ארבע מדינות ש&lt;strong&gt;כולן שכנות זו של זו&lt;/strong&gt;. הנה “מפה” מלאכותית שבה יש ארבע מדינות שכולן שכנות:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3690 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/11/220px-Fourcolorsmap.svg_.png&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;225&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3690 size-full&quot; src=&quot;/blog/assets/img/2018/11/220px-Fourcolorsmap.svg_.png&quot; alt=&quot;&quot; width=&quot;220&quot; height=&quot;225&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;מבט אחד בתמונה הזו מבהיר שחייבים ארבעה צבעים לפחות עבור מפות מסויימות, אבל זה לא מבהיר שהצורך הזה עלול לבוא אלינו בצורה &lt;strong&gt;ערמומית&lt;/strong&gt; שכזו; כלומר, שהדוגמאות הנגדיות יהיו מתוחכמות ולאו דווקא יכילו את מה שנראה כמו המכשול המובן מאליו של המשפט. זה לקח שאנשים שונים ומשונים שניסו להוכיח את המשפט למדו על בשרם (או חמור מכך, לא למדו אותו למרות שהיו צריכים).&lt;/p&gt;
 
@@ -987,7 +999,7 @@ print(N * numpy.log(N) + gamma * N + 1/2)
 
 &lt;p&gt;עכשיו, משהבנו מה בעצם אומר המשפט, בואו נדבר קצת על ההיסטוריה שלו. אולי אפשר לחשוב שהעניין הזה של ארבעת הצבעים יהיה ידוע כבר אלפי שנים, כי אנשים מתעסקים עם מפות כבר אלפי שנים, אבל בואו נודה באמת - לאף אחד לא אכפת ממספר הצבעים הקטן ביותר שנדרש כדי לצבוע מפות. לא קורה כלום אם מפה נצבעת בחמישה צבעים במקום בארבעה. כך שהמשפט הוא מלכתחילה קוריוז אינטלקטואלי, וככזה האדם הראשון שידוע לנו שהמציא אותו היה צעיר בן 21 בשם פרנסיס גאתרי, סטודנט למתמטיקה שלימים הפך גם לפרופסור למתמטיקה, שישב וצבע לו את מפת המחוזות של אנגליה (למה? למה אנשים צובעים את מפת המחוזות של אנגליה?)&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3691 size-full&quot; src=&quot;https://gadial.net/wp-content/uploads/2018/11/800px-England_Admin_Counties_1965-1974.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;992&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone wp-image-3691 size-full&quot; src=&quot;/blog/assets/img/2018/11/800px-England_Admin_Counties_1965-1974.png&quot; alt=&quot;&quot; width=&quot;800&quot; height=&quot;992&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;לא לגמרי ברור אם לגאתרי הייתה הוכחה כלשהי בראש או שהוא סתם ניחש שהמשפט אמור להתקיים. הוא סיפר עליו לאחיו, שהיה אז סטודנט של המתמטיקאי אוגסטוס דה-מורגן, והאח בא אל דה-מורגן אחרי השיעור ושאל אותו על המשפט הזה - האם הוא כבר ידוע, ואיך מוכיחים אותו. לדה-מורגן לא היה מושג, אבל היה לו משהו חשוב יותר - הוא &lt;strong&gt;התלהב&lt;/strong&gt; מהשאלה הזו. הוא ניסה לפתור אותה, ולא הצליח; והוא סיפר עליה לכל מי שרק היה מוכן להקשיב. העדות הכתובה הראשונה לקיום הבעיה היא מכתב ששלח דה-מורגן למתמטיקאי המילטון ב-23 באוקטובר, 1852, ובו הוא תיאר את הבעיה וביקש סיוע. משעשע לראות עד כמה דה-מורגן חשב שיש פה פתרון פשוט שחומק ממנו: הוא סיים את המכתב ב-&lt;/p&gt;
 &lt;blockquote&gt;

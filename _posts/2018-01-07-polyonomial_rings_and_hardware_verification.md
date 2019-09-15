@@ -20,7 +20,7 @@ tags:
 
 צורה מקובלת מאוד בתחום לתאר מעגל היא באמצעות שערי AND ו-NOT בלבד, ואפילו בצורה מפושטת: בגרף מציירים רק שערי AND, ואילו שערי ה-NOT מופיעים בתור סימונים שיכולים להופיע על הקשתות שנכנסות לשערי ה-AND. הנה דוגמא מתוך המאמר:
 
-<a href="http://www.gadial.net/wp-content/uploads/2018/01/CircuitsAndPolynomialRings.png" rel="attachment wp-att-3531"><img class="aligncenter size-full wp-image-3531" src="http://www.gadial.net/wp-content/uploads/2018/01/CircuitsAndPolynomialRings.png" alt="CircuitsAndPolynomialRings" width="571" height="338" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2018/01/CircuitsAndPolynomialRings.png" rel="attachment wp-att-3531"><img class="aligncenter size-full wp-image-3531" src="{{site.baseurl}}{{site.post_images}}/2018/01/CircuitsAndPolynomialRings.png" alt="CircuitsAndPolynomialRings" width="571" height="338" /></a>
 
 במעגל השמאלי ביותר הפונקציה שמחושבת היא {% equation %}g=a\wedge\neg b{% endequation %}. באמצעי החישוב כבר כולל שלושה צמתי ביניים:
 <ul>

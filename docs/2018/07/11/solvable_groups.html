@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"חבורות פתירות","dateModified":"2018-07-11T14:42:34+03:00","datePublished":"2018-07-11T14:42:34+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/07/11/solvable_groups"},"url":"http://localhost:4000/blog/2018/07/11/solvable_groups","description":"הפוסט הזה בא להשלים כמה פינות קטנות שחסרות לי בתורת החבורות על מנת לסגור את הקשר שגלואה יצר בין חבורות ובין פתרונות של משוואות פולינומיות. אני רוצה לעשות פה כמה דברים שקשורים למושג של חבורה פתירה: להסביר מה זה בכלל (כי מי זוכר). להוכיח את האפיון ההוא שמשתמש בחבורות ציקליות ובו השתמשתי בפוסט הקודם שהתעסק בתורת גלואה. להוכיח שחבורת מנה של חבורה פתירה היא פתירה (גם בזה השתמשתי בפוסט הקודם). להוכיח ש-$latex S_{n}$ (חבורת התמורות על $latex n$ איברים) היא לא פתירה עבור $latex n\\ge5$ (זה הדבר הגדול הבא שאזדקק לו בהמשך הדרך). פתירות של כל מני דברים בואו נתחיל עם ההגדרה שאני אוהב, למרות שהיא זו שפחות רלוונטית לענייננו, כי אני מרגיש שיותר קל לעכל אותה במבט ראשון: אם $latex a,b$ הם שני איברים בחבורה, אז הקומוטטור שלהם מוגדר בתור $latex \\left[a,b\\right]\\triangleq a^{-1}b^{-1}ab$. אם $latex a,b$ מתחלפים בכפל אז $latex \\left[a,b\\right]=e$ - היחידה; לכן באופן עקרוני אפשר לחשוב על הקומוטטור בתור מדד של “עד כמה $latex a,b$ לא מתחלפים בכפל”. עכשיו, אם $latex H,K\\subseteq G$ הן שתי תת-חבורות כלשהן, אז אפשר להגדיר את הקומוטטור שלהן באופן הבא: $latex \\left[H,K\\right]\\triangleq\\left\\{ \\left[a,b\\right]\\ |\\ a\\in H,b\\in K\\right\\} $. בעזרת ההגדרה הזו אפשר להגדיר את תת-החבורה הנגזרת של חבורה $latex G$, באופן הבא: $latex G^{\\prime}=\\left[G,G\\right]$. הרעיון מאחורי תת-החבורה הזו היא שהיא תמיד נורמלית ב-$latex G$, ואם מחלקים בה את $latex G$ מקבלים חבורה אבלית - המנה האבלית הגדולה ביותר של $latex G$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

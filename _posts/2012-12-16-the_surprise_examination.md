@@ -27,7 +27,7 @@ tags:
 
 מה רבה הייתה הפתעתם משהגיע יום שלישי ופרופסור גונוסובסקי נכנס לכיתה והכריז על בוחן פתע ושכל התלמידים יוציאו תכף ומייד נייר ועט!
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2012/12/hashed-mehshvieit_big.jpg"><img class="alignnone size-full wp-image-2279" title="hashed mehshvieit_big" src="http://www.gadial.net/wp-content/uploads/2012/12/hashed-mehshvieit_big.jpg" alt="" width="324" height="500" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2012/12/hashed-mehshvieit_big.jpg"><img class="alignnone size-full wp-image-2279" title="hashed mehshvieit_big" src="{{site.baseurl}}{{site.post_images}}/2012/12/hashed-mehshvieit_big.jpg" alt="" width="324" height="500" /></a></strong>
 
 הרשיתי לעצמי להתעלל קצת בגיבורי "השד מהשביעית" (המומלץ מאוד, במיוחד אם אתם רוצים לראות מה התרחש בעימות האמיתי בין השד ובין פרופסור גונוסבסקי) כדי להציג פרדוקס שממבט ראשון נראה לי תמים ואפילו טיפשי, אבל לשמחתי גיליתי שטעיתי והוא הרבה יותר מגניב משחשבתי - פרדוקס בוחן הפתע. כמו בכל פרדוקס, הוא מתאר סיטואציה שבה נראה לנו שקיימת סתירה כלשהי ולא מובן מאליו במבט ראשון מה גורם לה; זה מכריח אותנו לנסות ולבחון את ההנחות ואופני ההסקה שלנו באופן יסודי, ובצורה הזו אנחנו מגלים עליהם דברים מעניינים למדי.
 

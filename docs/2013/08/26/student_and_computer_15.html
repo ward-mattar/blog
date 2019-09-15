@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"פרוייקט “התלמיד והמחשב”, בעיה 15","dateModified":"2013-08-26T03:15:22+03:00","datePublished":"2013-08-26T03:15:22+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/08/26/student_and_computer_15"},"url":"http://localhost:4000/blog/2013/08/26/student_and_computer_15","description":"בעיה 15 בספר מעמידה אותי בפני אתגר מסוג שונה לגמרי מאלו שהיו עד כה, ואתגר שהוא בכלל לא מתמטי באופיו. המטרה היא כזו: לכתוב קוד שכשהוא מורץ גורם לאנימציה של טקסט ש”רץ” על המסך מצד שמאל לימין. “כמו בשלט פרסומת” בלשונו של הכותב (ראיתם שלט פרסומת כזה לאחרונה, בעצם?)","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,9 +95,11 @@
 
 <p>כדי לכתוב סימנים “מיוחדים” בתוך מחרוזת כמו ירידת שורה, טאב וכדומה כותבים אותם באופן עקיף: קודם כל כותבים לוכסן, הסימן \, ואחריו כותבים אות שמתאימה לסימן שרוצים לכתוב. כך למשל טאב הוא t\ ואילו ירידת שורה היא n:</p>
 
-<p>[ruby]
-print "Hello world!\n"
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="p">\</span><span class="n">n</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span></code></pre></figure>
+
+</div>
 
 <p>השורה הזו תדפיס “Hello world!” ותרד שורה בסוף. אותו הדבר בדיוק כמו לכתוב puts בלי ה-n\ בסוף. אלא שמה שקורה מאחורי הקלעים הוא קצת יותר מלוכלך, למרבה הצער, והסיבה לכך היא שהסימן לירידת שורה הוא שונה במערכות הפעלה שונות.</p>
 
@@ -105,7 +107,7 @@ print "Hello world!\n"
 
 <p>מה שכן, אני כן רוצה לדבר על הסימן הנוסף שצץ לנו פתאום ויהיה חשוב מאוד בהמשך - r. מי זה ומה הוא אומר? השם שלו הוא carrige return (או CR), ומקורו הוא בכלל במכונות כתיבה. מכונות כתיבה ידניות הורכבו ממקשים שחוברו ל”פטישים” - ברזלים יצוקים עם אותיות על כל אחד מהם - בכל הקשה על מקש, הפטיש זינק קדימה, עבר דרך סרט דיו וגרם לו להתנגש בנייר שלפניו ולהטביע עליו אות. הנייר עצמו היה נתון במחזיק נע, ואחרי כל הקשת מקש המחזיק זז טיפה הצידה. כאשר הגענו לסוף השורה היה צורך לעשות שתי פעולות: להחזיר את המחזיק אחורה, לתחילת השורה; ולהזיז את הנייר כך שהפטישים יכו כעת בשורה הבאה. אויש, מכונות מכניות זה כזה דבר נפלא.</p>
 
-<center><a href="http://www.gadial.net/wp-content/uploads/2013/08/TypewriterHermes.jpg"><img src="http://www.gadial.net/wp-content/uploads/2013/08/TypewriterHermes-300x225.jpg" alt="TypewriterHermes" width="300" height="225" class="alignnone size-medium wp-image-2750" /></a></center>
+<center><a href="/blog/assets/img/2013/08/TypewriterHermes.jpg"><img src="/blog/assets/img/2013/08/TypewriterHermes.jpg" alt="TypewriterHermes" width="300" height="225" class="alignnone size-medium wp-image-2750" /></a></center>
 
 <p>CR בא לתאר את הפעולה של החזרת המחזיק לתחילת השורה. לעומתו, n\ בא לתאר את התהליך של ירידת השורה עצמה (הוא לרוב נקרא LF, מלשון Line feed). עכשיו, אני בטוח שבמהלך ההיסטוריה היו מכונות כתיבה מכל הסוגים והמינים - כאלו שכאשר ביצענו בהם (ידנית! הכל היה ידני!) פעולת CR אז זה גרם לפעולת LF להתבצע; כאלו שבהן אם ביצענו LF זה גרם ל-CR להתבצע; וכאלו שבהן היינו צריכים לבצע את שתיהן באופן ידני. כל אלו הן נסיבות היסטוריות שמנסות להסביר מאיפה הגיעו הסימנים המוזרים הללו, אבל לא רק, כי ל-r\ יש תפקיד עצמאי שאינו מתאר רק ירידת שורה: הוא מאפשר לנו לחזור לתחילת השורה הנוכחית ו<strong>לכתוב מחדש עליה</strong>. זה מה שיאפשר לנו לבצע אנימציה-בת-שורה כפי שאנחנו רוצים. ולמי שזה נשמע לו מטופש ומיותר, חשוב לזכור שזה דווקא מאוד מועיל - בצורה הזו תוכניות ללא ממשק משתמש גרפי מסוגלות להציג סטטוס התקדמות (תכף אתן דוגמה) ובאופן כללי לתת למשתמש אינדיקציה לכך שהן עושות משהו ולא נתקעו, וזאת מבלי למלא את כל המסך בג’יבריש.</p>
 
@@ -113,25 +115,29 @@ print "Hello world!\n"
 
 <p>עכשיו, קצת מפתה לתת פתרון בן שורה אחת, אז אעשה את זה, אבל הוא יהיה גרוע ואחר כך אתן פתרון טוב יותר:</p>
 
-<p>[ruby]
-100.times{|n| print "\r" + " "*n + "Hello world!"; sleep(0.1)}
-[/ruby]</p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">100</span><span class="p">.</span><span class="nf">times</span><span class="p">{</span><span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="nb">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">r</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;;</span> <span class="nb">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)}</span></code></pre></figure>
+
+</div>
 
 <p>מה הולך כאן? פשוט מאוד: אני כותב שורה שמתחילה ב-r\ (ולכן סמן הכתיבה חוזר לתחילת השורה אם לא היה שם כבר), ואז n רווחים (כש-n מתחיל מ-0), ואז את המחרוזת שאני רוצה לצייר. זה יצור את אשליית התמונה הרצויה. אז למה הקוד גרוע? ראשית, כשהוא מסיים את הריצה שלו אין ירידת שורה, ואז ה-prompt (הדבר הזה שבו מזינים טקסט בטרמינל) מופיע באותה שורה יחד עם ההודעה וזה פשוט נראה רע. שנית, הטקסט זז ימינה עוד ועוד אבל הוא בחיים לא יחזור שמאלה ויתחיל מחדש, כך שיש גבול עד כמה אפשר להזיז אותו, וזה גם נראה קצת טיפשי. לבסוף, הקוד הזה עמוס במספרי קסם וכבר אמרתי שהם דבר רע. אז הנה קוד שפותר את הבעיות הללו:</p>
 
-<p>[ruby]
-FRAMES_PER_SECOND = 20
-TEXT = "Hello world!"
-TOTAL_TIME = 10
-SCREEN_WIDTH = 50</p>
+<div class="code-block">
 
-<p>(TOTAL_TIME<em>FRAMES_PER_SECOND).times do |n|
-  print "\r" + " "</em>(SCREEN_WIDTH+TEXT.length) if n % SCREEN_WIDTH == 0
-  print "\r" + " "*(n % SCREEN_WIDTH) + TEXT
-  sleep(1.0 / FRAMES_PER_SECOND)
-end
-puts
-[/ruby]</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">FRAMES_PER_SECOND</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="no">TEXT</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="no">Hello</span> <span class="n">world!</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span>
+<span class="no">TOTAL_TIME</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="no">SCREEN_WIDTH</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="p">(</span><span class="no">TOTAL_TIME</span><span class="o">*</span><span class="no">FRAMES_PER_SECOND</span><span class="p">).</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">r</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="o">*</span><span class="p">(</span><span class="no">SCREEN_WIDTH</span><span class="o">+</span><span class="no">TEXT</span><span class="p">.</span><span class="nf">length</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="no">SCREEN_WIDTH</span> <span class="o">==</span> <span class="mi">0</span>
+  <span class="nb">print</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;\</span><span class="n">r</span><span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">+</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span> <span class="o">&amp;</span><span class="n">quot</span><span class="p">;</span><span class="o">*</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="no">SCREEN_WIDTH</span><span class="p">)</span> <span class="o">+</span> <span class="no">TEXT</span>
+  <span class="nb">sleep</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="no">FRAMES_PER_SECOND</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="nb">puts</span></code></pre></figure>
+
+</div>
 
 <p>שורה 7 דורשת הסבר קצר - אני מוחק בה את השורה הקיימת, מכיוון שכתיבת r\ רק מחזירה אותי לתחילת השורה אבל לא מוחקת את תוכן השורה (ממש כמו במכונת כתיבה אמיתית). האופן שבו טקסט קיים בשורה יכול להימחק הוא רק על ידי כתיבת טקסט חדש עליו, אז אני פשוט כותב רווחים על כל החלק הרלוונטי בשורה.</p>
 

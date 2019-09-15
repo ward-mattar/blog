@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"חבורות של תמורות","dateModified":"2017-03-14T11:40:23+02:00","datePublished":"2017-03-14T11:40:23+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/03/14/permutation_groups"},"url":"http://localhost:4000/blog/2017/03/14/permutation_groups","description":"מבוא עד כה בסדרת הפוסטים שלי על תורת החבורות ראינו תוצאות אבסטרקטיות שנכונות לכל החבורות (או לכל החבורות הסופיות), ובתור דוגמא ראינו את חבורת השלמים. הבעיה היא שזו דוגמא פשוטה מדי: ראינו שהשלמים הם חבורה ציקלית, וגם החבורות שמוגדרות באמצעותה (תתי-החבורות וחבורות המנה שלה) הן ציקליות. חבורות ציקליות הן מאוד פשוטות וכבר הבנו את המבנה שלהן עד הסוף; אם כן, בשביל מה צריך את כל תורת החבורות? ברור שאנחנו חייבים לראות עוד דוגמאות קונקרטיות לחבורות, וכאלו שהן מסובכות יותר, כדי שיהיה טעם בכל העסק הזה. את הפוסט הזה אני הולך להקדיש כולו להצגה של מה שהוא ככל הנראה סוג החבורות החשוב ביותר: חבורות של תמורות (פרמוטציות). בהמשך הפוסט נראה שבמובן מסויים, זו גם הדוגמה הכללית ביותר, כי על כל חבורה אפשר לחשוב בתור חבורת תמורות, כפי שעל פי חבורה ציקלית היה אפשר לחשוב בתור חבורה של שלמים מודולו משהו.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -134,7 +134,7 @@
 
 <p>ראשית, תזכורת קטנה על מה מדובר:</p>
 
-<p><a href="http://www.gadial.net/wp-content/uploads/2007/04/220px-15-puzzle-loyd.svg_.png" rel="attachment wp-att-1169"><img class="aligncenter size-full wp-image-1169" src="http://www.gadial.net/wp-content/uploads/2007/04/220px-15-puzzle-loyd.svg_.png" alt="220px-15-puzzle-loyd.svg" width="220" height="220" /></a></p>
+<p><a href="/blog/assets/img/2007/04/220px-15-puzzle-loyd.svg_.png" rel="attachment wp-att-1169"><img class="aligncenter size-full wp-image-1169" src="/blog/assets/img/2007/04/220px-15-puzzle-loyd.svg_.png" alt="220px-15-puzzle-loyd.svg" width="220" height="220" /></a></p>
 
 <p>המשחק בנוי על לוח <span>$latex 4\times4$</span> עם 15 לוחיות ממוספרות ועוד לוחית אחת חסרה. בכל צעד אנחנו מזיזים לוחית כלשהי אל המקום הפנוי של הלוחית החסרה - רעיונית, אנחנו מבצעים חילוף בין הלוחית שהזזנו ובין הלוחית החסרה. באופן הזה מתערבבים המספרים שעל הלוח, והיעד הוא להגיע ממצב של לוח מסודר למצב של לוח מסודר פרק להחלפה בין ה-14 וה-15 (זה מה שרואים באיור).</p>
 

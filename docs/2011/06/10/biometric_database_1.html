@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"אז מה הקטע עם המאגר הביומטרי?","dateModified":"2011-06-10T01:46:12+03:00","datePublished":"2011-06-10T01:46:12+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/06/10/biometric_database_1"},"url":"http://localhost:4000/blog/2011/06/10/biometric_database_1","description":"אני רוצה לעסוק הפעם בנושא שקשור לבלוג רק בעקיפין - המאגר הביומטרי. לאבטחת מידע יש חלק חשוב בכל הסיפור הזה - הסיבה שבגללה דנים על המאגר היא בגלל כשלי אבטחת מידע, והמאגר עצמו צריך לעמוד בסטנדרטים גבוהים של אבטחת מידע - וזה נותן לי תירוץ לדבר עליו כאן, אבל בסופו של דבר זה רק תירוץ. הבעיות האמיתיות עם המאגר והדיון האמיתי עליו מתנהל במעגלים שונים לגמרי - למשל, אלו של יחסי הכוחות בין המדינה לאזרחיה; והשאלות שנשאלות הן ברובן לא מתמטיות-מדמ”חניקיות אלא פרקטיות בהרבה - למשל, האם המידע שבמאגר יכול לסייע למשטרה. ובכל זאת אני חושב שחשוב לדבר על המאגר בכל מקום אפשרי ולכן אדבר עליו גם כאן, ואנסה לעשות זאת בצורה הכי “מתמטית” שאני יכול - לשאול שאלות קונקרטיות, לענות לעצמי תשובות קונקרטיות ולנסות לדבוק כמה שאפשר בגישה הלוגית והמדויקת ולנסות להימנע מאמוציות. אני מזהיר מראש שלא אצליח.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -179,7 +179,7 @@
 <h2>מה הסיכון שהמאגר ידלוף?</h2>
 <p>כל שאלה שעוסקת באבטחת מידע חייבת להתחיל עם הקומיקס הבא:</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/06/116730_460s.jpg"><img class="alignnone size-full wp-image-1193" title="116730_460s" src="http://www.gadial.net/wp-content/uploads/2011/06/116730_460s.jpg" alt="" width="460" height="480" /></a>
+<p><strong><a href="/blog/assets/img/2011/06/116730_460s.jpg"><img class="alignnone size-full wp-image-1193" title="116730_460s" src="/blog/assets/img/2011/06/116730_460s.jpg" alt="" width="460" height="480" /></a>
 </strong></p>
 
 <p>זה לב העניין. צריך להבין שמבחינה טכנולוגית בימינו, למצפינים יש יתרון <strong>אדיר</strong> על פורצי הצפנים. המחשבים שינו לחלוטין את חוקי המשחק, והפכו פריצת צפנים מאובטחים באופן ישיר למשהו קשה ביותר, על גבול הבלתי אפשרי לחלוטין. אבל כל מערכות ההצפנה וההגנות המחוכמות שביקום לא יועילו לנו אם מישהו בחר ססמא טריוויאלית שאפשר לנחש. האויב הגדול ביותר של בונה מערכות ההצפנה הוא לא האקר מחוכם שהוא גם גאון מחשבים וגם גאון בתורת המספרים וגם ג’יימס בונד; האויב הגדול ביותר הוא משתמש הקצה המפגר. משאנחנו זוכרים את זה, בואו נאפסן את משתמש הקצה המפגר בארון ונחשוב על בעיות אחרות.</p>

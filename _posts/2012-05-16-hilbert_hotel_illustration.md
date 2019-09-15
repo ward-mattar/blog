@@ -9,7 +9,7 @@ tags:
   - איור
   - המלון של הילברט
 ---
-<a href="http://www.gadial.net/wp-content/uploads/2012/05/hilbert.png"><img class="alignnone size-full wp-image-1640" title="hilbert" src="http://www.gadial.net/wp-content/uploads/2012/05/hilbert.png" alt="" width="600" height="457" /></a>
+<a href="{{site.baseurl}}{{site.post_images}}/2012/05/hilbert.png"><img class="alignnone size-full wp-image-1640" title="hilbert" src="{{site.baseurl}}{{site.post_images}}/2012/05/hilbert.png" alt="" width="600" height="457" /></a>
 
 (איור: תמר עקביה. לחצו על התמונה לאיור בגודל מלא)
 

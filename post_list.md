@@ -7,7 +7,7 @@ layout: default
 
 <div id="post-list">
 <label>חיפוש לפי כותרת</label>
-<input class="search" />
+<input class="search" id="header-search"/>
 <br />
 <label>סינון לפי קטגוריה</label>
 <select id="category-filter-list">
@@ -19,7 +19,7 @@ layout: default
 <br />
   <button class="sort" data-sort="name">מיון על פי שם</button>
   <button class="sort" data-sort="timestamp">מיון על פי תאריך</button>
-  <ul class="list">
+  <ul class="list" id="post-list">
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
   {%- for post in site.posts -%}
     <li>
@@ -57,5 +57,10 @@ $('#category-filter-list').change(function() {
     return false;
 });
 
+var url_string = window.location.href;
+var url = new URL(url_string);
+var c = url.searchParams.get("s");
+$('#header-search').val(c);
+postList.search(c);
 });
 </script>

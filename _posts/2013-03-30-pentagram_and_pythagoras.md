@@ -15,7 +15,7 @@ tags:
 ---
 על מה אתם חושבים כשאתם רואים את הסמל הבא?
 
-<strong><strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram1.png"><img alt="Pentagram1" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram1-300x284.png" width="300" height="284" /></a></strong></strong>
+<strong><strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram1.png"><img alt="Pentagram1" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram1.png" width="300" height="284" /></a></strong></strong>
 
 באופן מצער למדי, הסמל הזה - <strong>פנטגרמה</strong> - הפך בימינו למזוהה עם כת השטן והפך למעט מוקצה מחמת מיאוס (כמובן, הרבה פחות מאשר <a href="http://he.wikipedia.org/wiki/%D7%A6%D7%9C%D7%91_%D7%A7%D7%A8%D7%A1">סמל אחר</a>, ההוא שההודים משתמשים בו זה אלפי שנים). זה חבל הן מסיבות תרבותיות, שכן פנטגרמה מופיעה בשלל הקשרים תרבותיים אחרים שכלל אינם קשורים לכת השטן (ויש גם ניואנסים; אם קודקוד הפנטגרמה כלפי מטה זו כת השטן, ואם הוא מעלה זה פאגניזם וכיוצא בזה), אבל גם בגלל שמבחינה מתמטית מדובר על צורה גיאומטרית מגניבה ביותר, ובפוסט הזה אני רוצה להראות את אחת מהדרכים שבהן היא מגניבה - הוכחת קיום של מספרים אי רציונליים, כלומר כאלו שאינם ניתנים להצגה כיחס בין שני מספרים שלמים.
 
@@ -25,30 +25,30 @@ tags:
 
 ראשית כל יש להבין כיצד פנטגרמה נוצרת. אנחנו מתחילים מצורה פשוטה יותר - מחומש משוכלל:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram2.png"><img alt="Pentagram2" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram2-300x284.png" width="300" height="284" /></a>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram2.png"><img alt="Pentagram2" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram2.png" width="300" height="284" /></a>
 </strong>
 
 הרעיון במחומש משוכלל הוא שזהו מצולע בעל 5 צלעות שוות באורכן, שכל הזוויות בו שוות.
 
 עכשיו, בהינתן מחומש אפשר לקבל ממנו פנטגרמה באופן הבא - פשוט מציירים את כל האלכסונים, כלומר את כל הקווים שמחברים קודקודים שאינם סמוכים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Basis.png"><img class="alignnone size-medium wp-image-2430" alt="Basis" src="http://www.gadial.net/wp-content/uploads/2013/03/Basis-300x284.png" width="300" height="284" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Basis.png"><img class="alignnone size-medium wp-image-2430" alt="Basis" src="{{site.baseurl}}{{site.post_images}}/2013/03/Basis.png" width="300" height="284" /></a></strong>
 
 בעצם, הציור שלעיל הוא מה שקורה כשלוקחים את חמשת הקודקודים של מחומש ומחברים כל קודקוד לכל הקודקודים האחרים האפשריים. זו צורה מעניינת באופן כללי - בתורת הגרפים היא אחד משני ה<a href="http://www.gadial.net/2008/09/29/planar_graphs/">גרפים הבסיסיים ביותר שאינם מישוריים</a>, אבל לא אדבר על כך הפעם.
 
 עכשיו, אם נסתכל בתוך הפנטגרמה, נראה שמתחבא בתוכה מחומש משוכלל קטן יותר, הפוך:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram3.png"><img class="alignnone size-medium wp-image-2431" alt="Pentagram3" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram3-300x284.png" width="300" height="284" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram3.png"><img class="alignnone size-medium wp-image-2431" alt="Pentagram3" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram3.png" width="300" height="284" /></a></strong>
 
 אבל אם קיבלנו מחומש משוכלל, אפשר למתוח את האלכסונים <strong>שלו</strong>, ולקבל <strong>עוד</strong> פנטגרמה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram4.png"><img class="alignnone size-medium wp-image-2432" alt="Pentagram4" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram4-300x284.png" width="300" height="284" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram4.png"><img class="alignnone size-medium wp-image-2432" alt="Pentagram4" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram4.png" width="300" height="284" /></a></strong>
 
 וכפי שאתם מנחשים, אפשר להמשיך את התהליך הזה עד לאינסוף - בונים מחומש, ובתוכו פנטגרמה, ובתוכה מחומש, ובתוכו פנטגרמה, ובתוכה מחומש... ובכל פעם נקבל מחומשים ופנטגרמות קטנים יותר ויותר. זה יהיה רעיון המפתח בהוכחה שלנו.
 
 בואו נסתכל לרגע על אחד מהמשולשים שמופיעים בתוך המחומש-עם-פנטגרמה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram5.png"><img class="alignnone size-medium wp-image-2433" alt="Pentagram5" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram5-296x300.png" width="296" height="300" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram5.png"><img class="alignnone size-medium wp-image-2433" alt="Pentagram5" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram5.png" width="296" height="300" /></a></strong>
 
 זה בבירור משולש שווה שוקיים, שאורך כל שוק בו הוא אורך צלע הפנטגרמה - בואו נסמן אותה ב-{% equation %}A{% endequation %}, ואורך הבסיס שלו הוא אורך צלע המחומש - בואו נסמן אותה ב-{% equation %}B{% endequation %}. בכל מחומש-עם-פנטגרמה שנצייר, היחס {% equation %}\frac{A}{B}{% endequation %} בין אורך צלע הפנטגרמה ואורך צלע המחומש יהיה זהה (זה נובע מדמיון משולשים על המשולש שציירתי למעלה). כעת יש שתי שאלות: מהו היחס הזה, והאם הוא מספר רציונלי? לשאלה מהו היחס הזה אחזור בסוף הפוסט; כרגע אני רוצה לשכנע אתכם שהוא מספר אי רציונלי, כלומר שלא ניתן לתאר אותו על ידי מנה של שני מספרים שלמים.
 
@@ -62,33 +62,33 @@ tags:
 
 בואו נתחיל עם שאלה פשוטה: במחומש משוכלל כל הזוויות שוות, כבר אמרנו, אבל לכמה שווה כל זווית? דרך פשוטה לגלות זאת היא לפרק את המחומש לחמישה משולשים:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram6.png"><img class="alignnone size-medium wp-image-2434" alt="Pentagram6" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram6-300x293.png" width="300" height="293" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram6.png"><img class="alignnone size-medium wp-image-2434" alt="Pentagram6" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram6.png" width="300" height="293" /></a></strong>
 
 בגלל הסימטריה של המחומש אנחנו יודעים שכל המשולשים זהים, ושהם כולם שווי שוקיים, ולכן גם זוויות הבסיס שלהם שוות. מהי זווית הראש? סכום זוויות הראש של כל המשולשים יחד מרכיב מעגל שלם, כלומר 360 מעלות, ולכן זווית הראש היא בת {% equation %}\frac{360}{5}=72{% endequation %} מעלות. זה מותיר לשתי זוויות הבסיס {% equation %}180-72=108{% endequation %} מעלות, ולכן כל זווית בסיס שכזו היא בת {% equation %}54{% endequation %} מעלות. כעת, כל זווית במחומש היא סכום של שתי זוויות בסיס ולכן הזווית במחומש היא 108 מעלות.
 
 עכשיו, כל זווית של המחומש מחולקת על ידי הפנטגרמה לשלושה חלקים. שניים מהם בבירור זהים מטעמי סימטריה; בקשר לזווית האמצעית אנחנו קצת פחות בטוחים. בואו נסמן את הזוויות הצדדיות ב-{% equation %}\alpha{% endequation %} ואת הזווית הפנימית ב-{% equation %}\beta{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram7.png"><img class="alignnone size-medium wp-image-2435" alt="Pentagram7" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram7-300x284.png" width="300" height="284" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram7.png"><img class="alignnone size-medium wp-image-2435" alt="Pentagram7" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram7.png" width="300" height="284" /></a></strong>
 
 אז יש לנו את המשוואה {% equation %}2\alpha+\beta=108^{\circ}{% endequation %}. זה לכשעצמו לא מספיק כדי לדעת מהם {% equation %}\alpha,\beta{% endequation %}, אבל אפשר למצוא עוד משוואה אם מסתכלים על המשולש:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram8.png"><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram81.png"><img class="alignnone size-medium wp-image-2442" alt="Pentagram8" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram81-300x284.png" width="300" height="284" /></a></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram8.png"><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram81.png"><img class="alignnone size-medium wp-image-2442" alt="Pentagram8" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram81.png" width="300" height="284" /></a></a></strong>
 
 זווית הראש במשולש היא {% equation %}\beta{% endequation %}, ואילו שתי זוויות הבסיס הן {% equation %}\alpha+\beta{% endequation %}. לכן נקבל את המשוואה {% equation %}\beta+2\left(\alpha+\beta\right)=180^{\circ}{% endequation %}, כלומר {% equation %}2\alpha+3\beta=180^{\circ}{% endequation %}. קיבלנו שתי משוואות בשתי נעלמים, ואת זה קל לפתור - מחסרים את המשוואה הראשונה מהשניה ומקבלים {% equation %}2\beta=72^{\circ}{% endequation %}, כלומר {% equation %}\beta=36^{\circ}{% endequation %}, ולכן גם {% equation %}\alpha=36^{\circ}{% endequation %}. כלומר, הפנטגרמה מחלקת את הזוויות של המחומש לשלושה חלקים שווים שכל אחד מהם הוא {% equation %}36^{\circ}{% endequation %}. הסימטריה המושלמת הזו היא המפתח להמשך.
 
 עכשיו, בואו נסתכל לרגע על צלע הפנטגרמה:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram9.png"><img class="alignnone size-medium wp-image-2437" alt="Pentagram9" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram9-300x284.png" width="300" height="284" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram9.png"><img class="alignnone size-medium wp-image-2437" alt="Pentagram9" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram9.png" width="300" height="284" /></a></strong>
 
 שימו לב לכך שהיא מחולקת לשלושה חלקים. אורך החלק האמצעי הוא בדיוק {% equation %}b{% endequation %} - אורך צלע המחומש הקטן. מה אורך שני החלקים האחרים? מסימטריה ברור שהוא שווה; נסמן אותו {% equation %}x{% endequation %}. קיבלנו את המשוואה {% equation %}A=b+2x{% endequation %}. כמו קודם, משוואה אחת לא מספיקה לנו, אז בואו נביט במשולש הבא:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram10.png"><img class="alignnone size-medium wp-image-2438" alt="Pentagram10" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram10-300x282.png" width="300" height="282" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram10.png"><img class="alignnone size-medium wp-image-2438" alt="Pentagram10" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram10.png" width="300" height="282" /></a></strong>
 
 זה נראה כמו משולש שווה שוקיים, ואכן, די קל להשתכנע ששתי זווית הבסיס הן בנות 72 מעלות, בעזרת מה שכבר ראינו על הזוויות במחומש-פנטגרמה (הוכיחו זאת לעצמכם!). אחת השוקיים היא באורך {% equation %}B{% endequation %} ואילו השניה היא באורך {% equation %}b+x{% endequation %}, כך שקיבלנו את המשוואה {% equation %}B=b+x{% endequation %}. נכפול את המשוואה הזו ב-2 ונחסר ממנה את הראשונה, ונקבל {% equation %}b=2B-A{% endequation %}, כפי שהבטחתי למעלה.
 
 עכשיו הגיע הזמן לטפל בפנטגרמה-שבתוך-המחומש-שבתוך-הפנטגרמה<strong>. </strong>מה אורך הצלע שלה? ובכן, כבר היכרנו אותו - זה בדיוק מה שסימנתי בתור {% equation %}x{% endequation %}:
 
-<strong><a href="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram11.png"><img class="alignnone size-medium wp-image-2439" alt="Pentagram11" src="http://www.gadial.net/wp-content/uploads/2013/03/Pentagram11-300x285.png" width="300" height="285" /></a></strong>
+<strong><a href="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram11.png"><img class="alignnone size-medium wp-image-2439" alt="Pentagram11" src="{{site.baseurl}}{{site.post_images}}/2013/03/Pentagram11.png" width="300" height="285" /></a></strong>
 
 בציור הזה אנחנו רואים עוד משולש שווה שוקיים, שבו השוקיים הן בדיוק צלע הפנטגרמה הקטנה, והחלק של צלע הפנטגרמה הגדולה שסימנתי בתור {% equation %}x{% endequation %}. זוויות הבסיס של המשולש הן בנות 36 מעלות - שוב, זה נובע ממה שכבר ראינו עליהן - ולכן זה אכן משולש שווה שוקיים. המסקנה: {% equation %}A=2a+b{% endequation %}, אבל אנחנו כבר יודעים מהו {% equation %}b{% endequation %} במונחים של {% equation %}A,B{% endequation %}: {% equation %}b=2B-A{% endequation %}. נציב ונקבל: {% equation %}2a+2B-A=A{% endequation %}, כלומר {% equation %}2a=2A-2B{% endequation %}, כלומר {% equation %}a=A-B{% endequation %} - שוב, כמו שהבטחתי. זה מסיים את ההוכחה.
 

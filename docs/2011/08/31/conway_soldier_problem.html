@@ -17,7 +17,7 @@
 <script type="application/ld+json">
 {"headline":"חידת החיילים של קונווי","dateModified":"2011-08-31T16:06:17+03:00","datePublished":"2011-08-31T16:06:17+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/08/31/conway_soldier_problem"},"url":"http://localhost:4000/blog/2011/08/31/conway_soldier_problem","description":"הפוסט הראשון שנכתב בבלוג עסק ברעיון מתמטי מקסים - שמורות, והאופן שבו אפשר להשתמש בהן כדי להראות שדברים מסויימים הם בלתי אפשריים. פוסט נוסף שפרסמתי בעבר עסק במשחק “מחשבת” (Peg Solitaire) ובאופן שבו שמורות אכלו גם אותו בלי מלח, או ליתר דיוק הראו שוריאציה עליו איננה פתירה. כעת אני רוצה לעסוק בוריאציה מחוכמת נוספת של המשחק שהומצאה על ידי המתמטיקאי ג’ון קונווי אי שם בשנות השישים, ובהוכחת אי-קיום מבוססת שמורות שקשורה אליו והיא מחוכמת קצת יותר מההוכחות שהראיתי עד כה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/main.css">
+<link rel="stylesheet" href="/blog/assets/css/main.css">
   <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -69,13 +69,13 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש">
+      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
     </div>
   </nav>
-</header><main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content" role="main">
       <div class="wrapper text-right">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -95,7 +95,7 @@
 
 <p>נסו לשחק את המשחק כעת. לא צריך לוח אינסופי - לוח דמקה רגיל שמלא בחיילי דמקה בחציו התחתון יספיק אם רוצים לקבל תחושה של המשחק. בהמשך יהיו ספוילרים למשחק אז לאלו מכם שרוצים לגבש עליו דעה באופן עצמאי, אל תקראו הלאה בינתיים.</p>
 
-<p><strong><a href="http://www.gadial.net/wp-content/uploads/2011/08/conway_soldiers.png"><img class="alignnone size-full wp-image-1308" title="conway_soldiers" alt="תמונת משחק החיילים של קונווי" src="http://www.gadial.net/wp-content/uploads/2011/08/conway_soldiers.png" width="500" height="300" /></a>
+<p><strong><a href="/blog/assets/img/2011/08/conway_soldiers.png"><img class="alignnone size-full wp-image-1308" title="conway_soldiers" alt="תמונת משחק החיילים של קונווי" src="/blog/assets/img/2011/08/conway_soldiers.png" width="500" height="300" /></a>
 </strong></p>
 
 <p>קרוב לודאי שכל אחד מכם יצליח להגיע למרחק 1 מהגבול (הצעד הראשון במשחק בהכרח עושה זאת), וגם להגיע למרחק 2 מהגבול זה לא קשה במיוחד; להגיע למרחק 3 זה כבר יותר מאתגר, ולהגיע למרחק 4 זה עוד יותר מאתגר. להגיע ל-5 זה כבר ממש מאתגר, בהתחשב בעובדה שזה בלתי אפשרי. זה מה שאנחנו רוצים להוכיח בפוסט הזה.</p>
