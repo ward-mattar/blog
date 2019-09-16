@@ -4,33 +4,17 @@
   text: "הפוסט הראשון אי פעם!!!!!!"
 - title: "צ'ומפ צ'ומפ"
   url: "/2007/08/14/chomp"
-  image: "2007/08/chomp.png"
+  image: "/2007/08/chomp.png"
   text: "משחק לאנשים רעבים"
 - title: "על נמלים, נזירים ומסלולים צרים"
-  url: "2007/09/12/ants_on_a_table"
-  image: "2007/09/ant1.png"
+  url: "/2007/09/12/ants_on_a_table"
+  image: "/2007/09/ant1.png"
   text: "איך חידה מסובכת הופכת לפשוטה במצמוץ אחד"
 - title: "עולמם המופלא של אליס ובוב"
-  url: "2007/11/17/cryptography_intro"
+  url: "/2007/11/17/cryptography_intro"
   image:
   text: "מבוא לקריפטוגרפיה על קצה המזלג"
 - title: "הבעיה של מונטי הול"
   url: "/2008/02/23/monty_hall"
   image:
   text: "החידה פשוטה לניסוח, אבל אפילו מתמטיקאים רבו על הפתרון הנכון שלה"
-- title: 
-  url: 
-  image:
-  text:
-- title: 
-  url: 
-  image:
-  text:
-- title: 
-  url: 
-  image:
-  text:
-- title: 
-  url: 
-  image:
-  text:
