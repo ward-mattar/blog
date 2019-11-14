@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"שערים ומעגלים קוונטיים - מבוא על קצה המזלג","dateModified":"2014-08-20T00:36:39+03:00","datePublished":"2014-08-20T00:36:39+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/08/20/quantum_circuits_intro"},"url":"http://localhost:4000/blog/2014/08/20/quantum_circuits_intro","description":"הפוסט הזה הולך להתעסק בפרטי ה-Low level של חישוב קוונטי - הרכיבים הבסיסיים שבהם אנחנו משתמשים בחישוב כזה (שערים קוונטיים) ומה שאנחנו בונים באמצעותם (מעגלים קוונטיים). כשאני אומר Low-level הכוונה היא אך ורק לזה שאנחנו מתעסקים בפרטים הבסייסים שמהם מורכבים חישובים סבוכים; זה בשום פנים ואופן לא אומר שזה תחום “ירוד” מבחינת ערכו (כי הוא לא) או לא מעניין (כי הוא מעניין נורא) או פשוט (כי הוא לא פשוט בכלל). מה שכן, הפוסט עצמו כן יהיה ירוד; אני אתאר את התחום הזה בצורה מאוד High-level - רעיונות כלליים ותו לא, בלי להיכנס לעומק הפרטים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"שקילות אוטומט מחסנית ודקדוק חסר הקשר","dateModified":"2015-03-31T16:04:13+03:00","datePublished":"2015-03-31T16:04:13+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv"},"url":"http://localhost:4000/blog/2015/03/31/pushdown_automata_cfg_equiv","description":"בפוסט הקודם הצגתי את המודל של אוטומט מחסנית. המטרה הייתה להציג מודל של אוטומט שמחלקת השפות שמתאימה לו היא בדיוק מחלקת השפות חסרות ההקשר. לצורך זה, חשבתי על אלגוריתם פשוט לזיהוי שפה של דקדוק חסר הקשר כלשהו, ואז לקחתי מודל של אוטומט שמסוגל לממש בקלות את האלגוריתם הזה. בכך הוכחתי את הכיוון ה”קל” - שאוטומט מחסנית מקבל כל שפה חסרת הקשר. עכשיו הגיע הזמן לכיוון הקשה יותר - שהשפה של אוטומט מחסנית היא תמיד חסרת הקשר - דהיינו, שבהינתן אוטומט מחסנית $latex M$ קיים דקדוק חסר הקשר $latex G$ כך ש-$latex L\\left(G\\right)=L\\left(M\\right)$. זה קשה, כי אנחנו צריכים איכשהו “לסמלץ” אוטומט עם דקדוק, מה שנראה לא קשור בעליל במבט ראשון ואכן ידרוש מאיתנו בניה חכמה למדי - כנראה הדבר הכי מסובך שראינו עד כה בסדרת הפוסטים על שפות פורמליות, אבל עדיין לא משהו עד כדי כך מסובך, לא לדאוג.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

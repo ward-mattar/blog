@@ -2,6 +2,7 @@ import os
 import sys
 import subprocess
 import re
+from datetime import datetime
 
 LYX_EXE = r'c:\Program Files (x86)\LyX 2.3\bin\LyX2.3.exe'
 BASIC_REPLACEMENTS = {
@@ -107,7 +108,26 @@ def remove_L_tag(text):
         idx = text.find("\L{")
     return text
 
-def peform_all_changes(text):
+def front_matter(text):
+    title = re_search(r'title\{(.*)\}', text)
+    date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    categories = ['cat']
+    tags = ['tagg']
+    front_matter_elements = []
+    front_matter_elements.append('---')
+    front_matter_elements.append('title: {}'.format(title))
+    front_matter_elements.append('date: {}'.format(date))
+    front_matter_elements.append('layout: post')
+    front_matter_elements.append('categories:')
+    for c in categories:
+        front_matter_elements.append('  - {}'.format(c))
+    front_matter_elements.append('tags:')
+    for t in tags:
+        front_matter_elements.append('  - {}'.format(t))
+    front_matter_elements.append('---')
+    return "\n".join(front_matter_elements)
+
+def perform_all_changes(text):
     text = get_content(text)
     text = find_problems(text)
     text = parentheses_fix(text)
@@ -127,6 +147,6 @@ if __name__ == '__main__':
 #    convert_lyx_to_tex(filename)
     with open(filename + ".tex") as texfile:
         text = texfile.read()
-    text = peform_all_changes(text)
+    text = front_matter(text) + perform_all_changes(text)
     with open(filename + ".blog", "w") as output_file:
         output_file.write(text)

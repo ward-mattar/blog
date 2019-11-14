@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"IP=PSPACE - ההוכחה (חלק ב’)","dateModified":"2011-05-15T02:29:15+03:00","datePublished":"2011-05-15T02:29:15+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/05/15/ip_equals_pspace_proof_1-2"},"url":"http://localhost:4000/blog/2011/05/15/ip_equals_pspace_proof_1-2","description":"בפוסט הקודם שעסק בהוכחה ש-$latex \\mbox{IP}=\\mbox{PSPACE}$ הראיתי מערכת הוכחה אינטראקטיבית עבור השפה $latex \\overline{3\\mbox{SAT}}$. זו הייתה הדוגמה הראשונה למערכת הוכחה “רצינית”, כזו שמשתמשת בכל הכוח של האינטראקטיביות; במערכות האחרות שהראיתי תוך סיבוב או שניים המשחק נגמר, ואילו כאן ההוכחה הייתה דיאלוג ארוך ומתמשך, שבו לאט לאט המוכיח והמוודא התקרבו אל עצם העניין. הרעיון, כזכור, היה כזה: בהינתן פסוק לוגי $latex \\varphi$, אפשר היה לתרגם אותו לפולינום $latex P_{\\varphi}\\left(X_{1},\\dots,X_{n}\\right)$ ב-$latex n$ משתנים ואת שאלת הספיקות של $latex \\varphi$ לתרגם לשאלה האם $latex \\sum_{b_{1}\\in\\left\\{ 0,1\\right\\} }\\dots\\sum_{b_{n}\\in\\left\\{ 0,1\\right\\} }P_{\\varphi}\\left(b_{1},\\dots,b_{n}\\right)=K$ עבור $latex K$ כלשהו. בפולינום הזה טיפלנו על ידי כך שהצלחנו לצמצם את הבדיקה של המשוואה לעיל לבדיקה של משוואה מהצורה $latex \\sum_{b_{1}\\in\\left\\{ 0,1\\right\\} }\\dots\\sum_{b_{n-1}\\in\\left\\{ 0,1\\right\\} }P^{\\prime}\\left(b_{1},\\dots,b_{n-1}\\right)=K^{\\prime}$ - כלומר, צמצנו את הבעיה באופן רקורסיבי לבעיה קטנה יותר (עם משתנה אחת פחות בפולינום החדש) מאותו הסוג. הרעיונות הללו הם בדיוק הרעיונות שנשתמש בהם גם בהוכחה ש-$latex \\mbox{IP=PSPACE}$, שהיא פשוט הוכחה לכך שהשפה $latex \\mbox{TQBF}$ שייכת ל-$latex \\mbox{IP}$.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

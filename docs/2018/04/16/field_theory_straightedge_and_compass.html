@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"שלוש בעיות הבניה בסרגל ומחוגה של היוונים (או: למה אי אפשר לרבע את המעגל)","dateModified":"2018-04-16T17:48:43+03:00","datePublished":"2018-04-16T17:48:43+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/04/16/field_theory_straightedge_and_compass"},"url":"http://localhost:4000/blog/2018/04/16/field_theory_straightedge_and_compass","description":"אני רוצה לדבר בפוסט הזה על אחד מהסיפורים היפים במתמטיקה - שלוש בעיות בניה שראשיתן בימי יוון העתיקה, שבמשך 2,000 שנים בערך הביסו את כל המתמטיקאים שניסו להתמודד איתן, עד שבמאה ה-19 התברר שכלל אין להן פתרון, מה שגרר את הפיכת אחת מהן למטבע לשון - לא ניתן לרבע את המעגל. בפוסט הזה נסביר מה הבעיות היו (את זה כולם יכולים להבין) ואיך התפתחה המתמטיקה עד לשלב שבו תוכל להתמודד איתן בכבוד (גם את זה כולם יכולים להבין) וגם ניכנס לפרטים הטכניים של למה בדיוק הן לא פתירות (וזה יצריך היכרות כלשהי עם הנושאים שאני מכסה בסדרת הפוסטים הנוכחית בבלוג על אלגברה מופשטת, ובפרט את הפוסט האחרון שעסק בהרחבת שדות). אמנם, כבר יש לי סדרת פוסטים מלפני עשור שעסקה בדיוק בנושא הזה (הנה הפוסט הפותח שלה) אבל אז בגלל המחסור ברקע נתתי סדרת פוסטים מפוזרת למדי; הפעם אני מתכנן לתת פוסט יחיד, שיעמוד בזכות עצמו ככל הניתן (ובתקווה יהיה כתוב טוב יותר מהפוסטים ההם, כי אני מכיר את הנושא טוב יותר כיום). חלק ראשון, ובו יסופר על תלס, אוקלידס, ומה שביניהם אם תשאלו אותי “איפה התחילה המתמטיקה”, התשובה שלי תהיה כפולה: ראשית, היא התחילה מאז הפרהיסטוריה. עוד לפני שהיו לנו שפות, כבר ידענו לספור וכבר היו לנו כלים ששימשו למטרה זו. תרבויות רבות ושונות התעסקו בחישובים שונים ומתוחכמים כבר לפני 4,000 שנים, כשהמפורסמות שבהן הן התרבויות הבבלית והמצרית. עם זאת, למתמטיקה כפי שאנחנו מכירים אותה כיום - התחום הזה עם הוכחות וטענות ומשפטים ואקסיומות - יש נקודת התחלה מאוד ברורה וחד משמעית: יוון העתיקה. ספציפית, נקודת הזמן שבה המתמטיקה כפי שאנחנו מכירים אותה נולדה היא פרק הזמן שבין תאלס - הפילוסוף היווני הידוע הראשון, שחי בסביבות 600 לפני הספירה, ועד אוקלידס שחי בסביבות 300 לפני הספירה. ב-300 השנים הללו התפתחה תורה מתמטית מפוארת למדי שהיו לה תורמים רבים. אז למה לסיים את תקופת הפתיחה עם אוקלידס? בגלל הספר שאוקלידס חיבר, “יסודות”, שהיה סוג של סיכום של הידע המתמטי של התקופה - גאומטריה של המישור, גאומטריה של המרחב ותורת המספרים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"ראשוני מחוץ לחוק","dateModified":"2012-12-07T20:59:46+02:00","datePublished":"2012-12-07T20:59:46+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2012/12/07/illegal_prime"},"url":"http://localhost:4000/blog/2012/12/07/illegal_prime","description":"האם מספר ראשוני (או סתם מספר) יכול להיות לא חוקי? בהחלט, וזה הסיפור שאני רוצה לספר היום, שהוא גם משעשע, גם מערב מתמטיקה לא טריוויאלית וגם מערב קצת להטוטי מדעי המחשב. תחילת הסיפור היא עם דיסקי ה-DVD. דיסקים מסחריים מגיעים בדרך כלל עם הגנה כלשהי עליהם, וזו שרלוונטית לנו והייתה פופולרית בתחילת המאה ה-21 נקראת Content Scramble System, או בקיצור CSS.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         
@@ -126,13 +134,17 @@
 <p>שהוא בבירור קטן יותר, אם כי לא בצורה יותר מדי משמעותית. בתוכנית מחשב, שבה יש הרבה יותר יתירות (שמות של משתנים שחוזרים על עצמם וכדומה) לרוב כיווץ הוא אפקטיבי יותר.</p>
 
 <p>בואו ניגש לאקשן. הנה פונקציה בשפת רובי שמקבלת כקלט מספר, שנתון כמחרוזת של המספר בייצוג עשרוני שאולי מכילה רווחים (כי הרבה פעמים כשכותבים מספרים גדולים משתילים פנימה רווחים וירידות שורה כדי שיהיה קריא), ממירה אותו לקובץ gz, פותחת אותו ומדפיסה את תוכנו:</p>
-<p dir="ltr"><code>def read(n)
-hex_string = n.delete(" \n").to_i.to_s(16)
-hex_string = "0" + hex_string if hex_string.length % 2 != 0
-program_gzip = [hex_string].pack('H*')
-File.open("program.gz", "w"){|f| f.write(program_gzip)}
-puts `gunzip -c program.gz`
-end</code></p>
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">hex_string</span> <span class="o">=</span> <span class="n">n</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="s2">" </span><span class="se">\n</span><span class="s2">"</span><span class="p">).</span><span class="nf">to_i</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+  <span class="n">hex_string</span> <span class="o">=</span> <span class="s2">"0"</span> <span class="o">+</span> <span class="n">hex_string</span> <span class="k">if</span> <span class="n">hex_string</span><span class="p">.</span><span class="nf">length</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span>
+  <span class="n">program_gzip</span> <span class="o">=</span> <span class="p">[</span><span class="n">hex_string</span><span class="p">].</span><span class="nf">pack</span><span class="p">(</span><span class="s1">'H*'</span><span class="p">)</span>
+  <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="s2">"program.gz"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">){</span><span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">program_gzip</span><span class="p">)}</span>
+  <span class="nb">puts</span> <span class="sb">`gunzip -c program.gz`</span>
+<span class="k">end</span></code></pre></figure>
+
+</div>
 <p>מה קורה כאן? בשורה הראשונה מנקים רווחים וירידות שורה מהמספר וממירים אותו לערך מספרי ומייד לאחר מכן ממירים אותו שוב למחרוזת, הפעם כזו שמייצג את המספר בבסיס 16. מכיוון שרובי לא תוסיף 0 מוביל אם אמור להיות כזה, השורה הבאה מוסיפה אותו בעצמה (הסבירו לעצמכם למה צריך לוודא את זה). השורה הבאה היא הקסם השחור הגדול ביותר כאן - הפקודה pack (שמסיבה לא ברורה חייבת לפעול על מערך) ממירה מחרוזת שמייצגת ערך כלשהו לערך האמיתי שלו, בהתאם לסוג המידע שבמחרוזת. כאן H אומר שהערך הוא מספר בבסיס הקסדצימלי והכוכב אומר לקחת את כל הספרות שבמחרוזת. השורה הבאה כותבת את התוכן לתוך קובץ ה-gz, וזו שאחריה פותחת את הקובץ ומוציאה את הפלט. זה הכל. אתם מוזמנים להריץ את הקוד על המספר שנתתי למעלה (לשם כך תצטרכו לעבוד במערכת הפעלה שבה מותקן gunzip בצורה שבה הוא יכול להיות מופעל כך משורת הפקודה, ואני מנחש שאצל רובכם זה לא המצב…) - תקבלו בחזרה את סוס הים והנגר. ואם תעשו את זה על הראשוני של קרמודי, שאפשר לראות <a href="http://primes.utm.edu/curios/page.php?number_id=953">כאן</a>, תקבלו את הקוד של DeCSS.</p>
 
 <p>קידוד תוכניות למספרים הוא רק חלק מהסיפור. אחרי הכל, זה לא רעיון חדש; שימוש מבריק ברעיון הזה נעשה כבר על ידי קורט גדל ב<a href="http://www.gadial.net/2009/05/10/godel_incompleteness_proof_sketch/">הוכחת משפטי אי השלמות שלו</a> - גם שם הרעיון היה לקודד תוכניות מחשב באמצעות מספרים טבעיים, ומכיוון שתוכניות המחשב הללו יודעים לפעול על מספרים טבעיים, הן בעצם אמרו משהו על עצמן. גדל כתב תוכנית מחשב שידעה לקחת מספר כזה, לפענח את הייצוג שלו חזרה לתוכנית מחשב ואז לעשות בה דברים מגניבים. רק שקורט גדל עשה את כל אלו לפני שבכלל היו מחשבים או תוכנות מחשב, ומה שאני קורא לו “תוכנת מחשב” אצלו היה בכלל פסוקים בלוגיקה מסויימת (אבל לדעתי מה שהוא עשה איתם היה בדיוק תכנות מהסוג שתיארתי לעיל). אלן טיורינג לקח את הרעיונות של גדל ופירמל אותם עבור מודל של מחשב שכבר אי אפשר היה לטעות בו; ומטיורינג עד קרמודי עברו חמישים שנים של מדעי מחשב שבהן הקשר הזה היה ברור. מה שהפך את התעלול של קרמודי למוצלח היה העובדה שהוא לא מצא “סתם” מספר שמייצג את DeCSS, אלא מספר ראשוני גדול מאוד שעושה את זה, ולכן כדאי לומר כמה מילים על ראשוניים והחיפוש אחריהם.</p>

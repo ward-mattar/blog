@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"נעים להכיר - סינוס וקוסינוס (גרסת המשוואה הדיפרנציאלית)","dateModified":"2010-03-31T11:00:05+03:00","datePublished":"2010-03-31T11:00:05+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/03/31/sine_and_cosine_via_ode"},"url":"http://localhost:4000/blog/2010/03/31/sine_and_cosine_via_ode","description":"שרשרת הפוסטים הקודמים שלי, שהחלה ביום פאי, יועדה למטרה אחת - הגדרה של סינוס וקוסינוס באופן שהוא לחלוטין בלתי קשור לגאומטריה בשום צורה שהיא - ומכאן גם הכנסה של פאי למשחק המתמטי בדרך שהיא לחלוטין בלתי קשורה לגאומטריה בשום צורה שהיא. מנת הפתיחה שלי הייתה הגדרת פונקצית האקספוננט באופן בלתי גאומטרי שכזה, כשהמוטיבציה מגיעה מפתרון משוואות דיפרנציאליות; ובפוסט האחרון הגעתי למשוואה דיפרנציאלית שבה האקספוננט הממשי אינו מסוגל להועיל לנו עוד - המשוואה $latex f^{\\prime\\prime}=-f$. זוהי נקודת המוצא למה שאעשה בפוסט הזה, שיהיה דומה למדי למה שעשיתי בפוסט על האקספוננט - נתחיל מכך שקיימים פתרונות למשוואה הזו, נחקור את תכונותיהם ובסוף נגיע למסקנה שאלו הם הסינוס והקוסינוס המוכרים לנו זה לא מכבר. חשוב להבהיר שמה שנעשה יהיה לצאת להרפתקאה בג’ונגל - זו לא הדרך הקצרה או הפשוטה ביותר, וגם לא רואים בה את הנוף באופן הטוב ביותר, וגם נשרטים כל הזמן מקוצים וענפים וצריך להיזהר מחיות טרף - אבל אני חושב שזו הרפתקאה טובה שכן היא מעניקה לנו נקודת מבט שונה וזרה על הנושא מזו שניתן לראות כאשר פוסעים בשבילים המוכרים.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

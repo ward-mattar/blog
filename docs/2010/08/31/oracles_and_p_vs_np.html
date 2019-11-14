@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP","dateModified":"2010-08-31T20:49:12+03:00","datePublished":"2010-08-31T20:49:12+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2010/08/31/oracles_and_p_vs_np"},"url":"http://localhost:4000/blog/2010/08/31/oracles_and_p_vs_np","description":"בפוסט הקודם נפנפתי קצת ידיים על אחת מהסיבות הנפוצות לקושי שבהוכחה ש-$latex \\mbox{P}\\ne\\mbox{NP}$; העובדה שאחד מרעיונות ההוכחה החזקים והיפים שבמתמטיקה ומדעי המחשב, הלכסון שגורם להפניה עצמית, מה שמככב במשפט אי השלמות של גדל ובהוכחת אי כריעותה של בעית העצירה - רעיון זה פשוט לא יכול לעבוד כאשר עוסקים ב-$latex \\mbox{P}$ וב-$latex \\mbox{NP}$. בפוסט הזה אני רוצה להיות יותר טכני ולפרט גם את האופן שבו עושים זאת, אף שאני משער שחלק מהקוראים לא יצליחו לעקוב אחרי ההוכחה עד סופה. אני מניח כאן ידע מוקדם כלשהו בתורת הסיבוכיות - ספציפית, למה אנחנו מתכוונים ב”מכונת טיורינג”, ב”מכונת טיורינג אי דטרמיניסטית” וב”שפה” (אוסף של מחרוזת סופיות) - מי שאינו מכיר מושגים אלו כנראה יתקשה לעקוב אחרי ההמשך.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

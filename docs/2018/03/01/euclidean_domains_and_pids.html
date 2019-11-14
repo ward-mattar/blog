@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"תחומים אוקלידיים ותחומים ראשיים","dateModified":"2018-03-01T18:12:37+02:00","datePublished":"2018-03-01T18:12:37+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/03/01/euclidean_domains_and_pids"},"url":"http://localhost:4000/blog/2018/03/01/euclidean_domains_and_pids","description":"הפוסט הקודם שלי דיבר על תחומי פריקות יחידה - תחומי שלמות שבהם מתקיימת גרסה מתאימה של המשפט היסודי של האריתמטיקה. בזמן שניסינו להבין למה $latex \\mathbb{Z}$ הוא תחום פריקות יחידה שכזה, ראינו שצריך להפריד בין שני האתגרים השונים שמציב המשפט: היה צריך להוכיח שלכל איבר בחוג שאיננו אפס או הפיך קיים פירוק לגורמים אי-פריקים. היה צריך להוכיח שהפירוק הזה הוא יחיד. האתגר השני היה, במפתיע, קל; כל מה שנזקקנו לו היה האבחנה ש”איבר אי פריק הוא ראשוני”, שהתבררה כנכונה לא רק עבור $latex \\mathbb{Z}$ אלא עבור כל תחום שלמות שבו כל אידאל הוא ראשי, כלומר נוצר על ידי איבר בודד: חוג כזה נקרא תחום ראשי. דווקא החלק של ה”קיים פירוק” היה קצת קשה; האינטואיציה של “אם המספר אי-פריק, סיימנו, אחרת ניקח פירוק שלו ונפעל באינדוקציה על הגורמים בפירוק” לא הסבירה למה התהליך הזה של לפרק ולפרק ולפרק יסתיים לבסוף. בשביל שזה יעבוד הכנסתי מושג של נורמה שאיפשר לנו לבצע סוג של אינדוקציה. אבל בתחום ראשי כללי אין לנו דבר כזה, אז מה עושים? קיום פירוק לגורמים בתחום ראשי כזכור, איבר לא הפיך $latex a\\in R$ הוא אי-פריק אם לא קיימים $latex b,c$ שהם עצמם לא הפיכים כך ש-$latex a=bc$. זה אומר שאם $latex a$ כן פריק, אז בפרט קיים $latex b$ לא הפיך שמחלק אותו. ואם אותו $latex b$ גם הוא פריק אז קיים $latex c$ שמפרק אותו, וכן הלאה. אינטואיטיבית אנחנו מצפים שהתהליך הזה שבו אנחנו לוקחים איבר, מוצאים גורם פריק שלו, ומוצאים גורם פריק של הגורם ההוא וכן הלאה - התהליך הזה צריך להסתיים מתישהו.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

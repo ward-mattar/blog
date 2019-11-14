@@ -6,12 +6,14 @@ layout: default
 
 בדף הזה ריכזתי פוסטים שאני מקווה שבאמת יהיו מעניינים ונגישים לכולם, גם בלי ידע מוקדם במתמטיקה וגם למי שמתקשים עם החלקים הטכניים יותר.
 
-<ul>
-{% for post in site.data.introductory_posts %}
-<li>
-<h2><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h2>
-<img src="{{site.baseurl}}{{site.post_images}}{{post.image}}" />
-<p>{{post.text}}</p>
-</li>
-{% endfor %}
-</ul>
+<div class="row">
+  {% for post in site.data.introductory_posts %}
+  <figure class="col-md-4">
+    <a class="black-text" href="{{site.baseurl}}{{site.post_images}}/intro/{{post.image}}">
+      <img alt="picture" src="{{site.baseurl}}{{site.post_images}}/intro/{{post.image}}" class="img-fluid">
+      <h3><a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a></h3>
+      <p>{{post.text}}</p>
+    </a>
+  </figure>
+  {% endfor %}
+</div>

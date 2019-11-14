@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"סודרים - מה זה בכלל? (הסבר אינטואיטיבי תוך כדי משחק)","dateModified":"2011-05-25T15:01:54+03:00","datePublished":"2011-05-25T15:01:54+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/05/25/ordinals_overview"},"url":"http://localhost:4000/blog/2011/05/25/ordinals_overview","description":"בפוסט הקודם דיברתי על האופן שבו קנטור “המציא” את הסודרים, אך כפי שיתברר בפוסט הזה, כנראה שהמילה “תגלית” יותר הולמת. קנטור הגיע אל הסודרים על ידי כך שהוא הגדיר סדרת קבוצות $latex P^{\\left(1\\right)},P^{\\left(2\\right)},\\dots$ ושם לב שיש משמעות גם לקבוצה $latex P^{\\left(\\infty\\right)}$ שמתקבלת כמעין “גבול” של הקבוצות עד אליה, ושאחרי שיש לנו אותה, יש משמעות גם ל-$latex P^{\\left(\\infty+1\\right)}$ ושניתן להמשיך את התהליך הזה עוד ועוד; בפוסט הזה אני רוצה להסביר קצת יותר במדויק את המשמעות הפורמלית-מתמטית של הרעיונות הללו. חשוב לציין שמה שאני מציג כרגע הוא את הרעיון שמאחורי סודרים - בשום פנים ואופן לא הגדרה מתמטית מדויקת שלהם. ההגדרה המתמטית-מדויקת היא “סודר הוא קבוצה טרנזיטיבית שסדורה בסדר טוב על פי יחס השייכות” שכרגע לא אומרת לנו כלום; כדי להבין אותה כדאי להבין קודם כל מה אנחנו מנסים להשיג, וזה מה שאעסוק בו בפוסט הזה. מי שרוצה את הפורמליסטיקה המתמטית וכל בלבולי המוח שלי רק יבלבלו אותו צריך לחכות לפוסט הבא (או לפתוח ספר בתורת הקבוצות).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

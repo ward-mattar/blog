@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"הפוסט שיודע להדפיס את עצמו","dateModified":"2009-11-27T19:07:25+02:00","datePublished":"2009-11-27T19:07:25+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2009/11/27/quine_and_recursion_theorem"},"url":"http://localhost:4000/blog/2009/11/27/quine_and_recursion_theorem","description":"הפניה עצמית היא אחד מהרעיונות שטבועים עמוק בלב תורת החישוביות והלוגיקה המתמטית. היא מה שעומד בבסיס משפטי אי השלמות של גדל והוכחת אי כריעות בעיית העצירה. זה מעלה את השאלה עד כמה ניתן להכליל את השיטה הזו. האם מודל חישובי - לצורך העניין מכונת טיורינג, אבל אפשר גם תוכנית מחשב - מסוגל להשתמש בייצוג של עצמו באופן ישיר? האם תוכנית יכולה להשתמש ישירות בקוד שלה? ואם נפשט, האם תוכנית מחשב יכולה לעשות דבר מה פשוט כמו הדפסת הקוד שלה עצמה?כיום השאלה הזו נראית די טיפשית. יש מדפסות תלת ממדיות שיודעות לייצר עותק מושלם של עצמן, אז מהי תוכנית מחשב בהשוואה לכך? אך בזמן שתורת החישוביות הייתה עוד צעירה והתוצאה הזו הוכחה לראשונה, עוד לא היו דברים כאלו. הבה ננסה לשכוח שניה ממה שאנחנו יודעים ולחשוב מה הבעיה העקרונית כאן. איך גורמים לתוכנית מחשב להדפיס את הקוד של עצמה? כמובן, אפשר לבחור בגישה ה”רמאית” ולהגיד “התוכנית תפתח את הקובץ שבו שמור הקוד שלה ותדפיס אותו”, אלא שאנחנו לא רוצים להסתמך על עזרים חיצוניים שכאלו, ולכן אנחנו מתמקדים בשאלה הקונקרטית על מכונת טיורינג, שלא מסוגלת לעשות תעלולים שכאלו. אבל באותה מידה ניתן לשאול האם ניתן לכתוב תוכנית מחשב שאיכשהו מסוגלת להדפיס את הקוד שלה עצמה בלי גישה לקבצים ובלי שום דבר דומה (כשה”קופסה השחורה” היחידה שבה היא פונקצית ההדפסה). תוכניות מחשב שכאלו, שמדפיסות את עצמן, נקראות באופן כללי quine (על שם לוגיקאי אמריקאי שחיבב מאוד הפניות עצמיות).","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

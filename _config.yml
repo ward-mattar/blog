@@ -33,6 +33,7 @@ exclude:
   - docs
   - Notebooks
   - node_modules
+  - raw_posts
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/

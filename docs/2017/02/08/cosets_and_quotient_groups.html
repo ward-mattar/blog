@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"קוסטים, משפט לגראנז’ וחבורות מנה","dateModified":"2017-02-08T12:44:02+02:00","datePublished":"2017-02-08T12:44:02+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2017/02/08/cosets_and_quotient_groups"},"url":"http://localhost:4000/blog/2017/02/08/cosets_and_quotient_groups","description":"בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \\left|H\\right||\\left|G\\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

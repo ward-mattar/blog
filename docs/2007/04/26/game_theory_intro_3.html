@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"נפלאות אי התבונה (חלק ג’)","dateModified":"2007-04-26T01:53:38+03:00","datePublished":"2007-04-26T01:53:38+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/04/26/game_theory_intro_3"},"url":"http://localhost:4000/blog/2007/04/26/game_theory_intro_3","description":"לפני שנעבור לשיווי משקל נאש, השלמה קטנה-גדולה: בתיאור החפיפניקי שלי את משפט המינימקס השמטתי את הנקודה המרכזית והחשובה ביותר בו. כעת אנסה לתקן את המעוות, ולשם כך אגלוש ליותר פורמליזם מתמטי, שגם יסביר מהיכן צצה המילה &quot;מינימקס&quot;. לצורך נוחות, מתארים את התוצאה של כל תרחיש במשחק (כלומר, מה שקורה אחרי שכל אחד משני השחקנים בחר אסטרטגיה) בתור מספר בודד, שהוא הרווח של שחקן מס&#39; 1. מכיוון שאנו במשחק סכום אפס, הרווח של שחקן מס&#39; 1 הוא בדיוק ההפסד של שחקן מס&#39; 2 ולהיפך, לכן די במספר בודד. כעת, הרווח שנותנת לשחקן מס&#39; 1 האסטרטגיה האופטימלית שלו הוא הערך הגדול ביותר שהוא יכול להשיג בלי תלות במה שעושה שחקן מס&#39; 2. כדי לגלות אותו, אנחנו בודקים כל אחת מהאסטרטגיות של שחקן מס&#39; 1 בנפרד: לכל אחת מהן אנחנו בודקים מהו התרחיש הגרוע ביותר - כלומר, המענה של שחקן מס&#39; 2 שיניב את הרווח הנמוך ביותר לשחקן מס&#39; 1. במילים אחרות, אנחנו מוצאים את מינימום הרווח של שחקן מס&#39; 1, בהינתן שהוא שיחק אסטרטגיה מסויימת. כעת, כדי למצוא את האסטרטגיה שהכי משתלם לשחקן מס&#39; 1 לשחק, בוחרים את האסטרטגיה שמבטיחה את מקסימום הרווח מכל ערכי המינימום שחישבנו. בקיצור מכנים ערך זה בתור המקסמין של שחקן מס&#39; 1 (כי לוקחים מקסימום על ערכי מינימום). זה אחד מהמקומות שבהם כתיב מתמטי מפשט מאוד את העניינים: אם x הוא משתנה שמייצג אסטרטגיות של שחקן מס&#39; 1, y משתנה שמייצג אסטרטגיות של שחקן מס&#39; 2, ו-f הפונקציה שמתאימה לכל זוג אסטרטגיות את הרווח של שחקן מס&#39; 1, אז המקסמין של שחקן מס&#39; 1 הוא בדיוק $latex \\max_x\\min_y f(x,y)$","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         

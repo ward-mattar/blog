@@ -17,8 +17,10 @@
 <script type="application/ld+json">
 {"headline":"כמה חלוקות יש, ואיך זה קשור לאוילר ולמספרים מחומשים?","dateModified":"2018-03-11T10:07:32+02:00","datePublished":"2018-03-11T10:07:32+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/03/11/partition_function_and_pentagonal_numbers"},"url":"http://localhost:4000/blog/2018/03/11/partition_function_and_pentagonal_numbers","description":"פרק ראשון, ובו מככבים בעיה קומבינטורית מסתורית, פתרון מסתורי עוד יותר ונוסחאות מסתוריות יותר מדי אני רוצה לדבר הפעם על מה שלטעמי היא הבעיה היפה והמעניינת ביותר בקומבינטוריקה בסיסית - בעיית הספירה של חלוקות של מספרים טבעיים. מה זו חלוקה של מספר $latex n$? זו דרך לכתוב את $latex n$ כסכום של מספרים טבעיים חיוביים, כשאין חשיבות לסדר של המחוברים. למשל, $latex 3=1+2$ היא חלוקה של $latex 3$, והיא זהה ל-$latex 2+1$. עוד חלוקות אפשריות של 3 הן פשוט 3 עצמה, ו-$latex 1+1+1$. אם כן, ל-3 יש $latex 3$ חלוקות. קל לראות של-1 יש חלוקה אחת, ול-2 יש שתי חלוקות. האם ל-4 יהיו, אם כן, 4 חלוקות? ובכן, לא, יש 5: 4 $latex 1+3$ $latex 2+2$ $latex 1+1+2$ $latex 1+1+1+1$ אפשר להגדיר כך פונקציה: $latex p\\left(n\\right)$ היא מספר החלוקות של המספר הטבעי $latex n$ (ל-0 יש חלוקה יחידה, “ריקה”). הסדרה $latex p\\left(0\\right),p\\left(1\\right),p\\left(2\\right),\\dots$ מתחילה כך:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/blog/assets/css/main.css">
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -36,7 +38,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">לא מדויק</a>
+    <a class="navbar-brand" href="/blog/main">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -59,6 +61,12 @@
             <a class="dropdown-item text-right" href="/blog/algebra">אלגברה</a>
             
            </div>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/categories">קטגוריות</a>
             </li>
             
         
