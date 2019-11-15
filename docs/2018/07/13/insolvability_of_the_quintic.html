@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בשעה טובה הגענו אל אחת מנקודות השיא של סדרת הפוסטים שלי באלגברה מופשטת - סיום ההוכחה של גלואה לכך שאין נוסחה לפתרון באמצעות רדיקלים של משוואה פולינומית כללית ממעלה חמישית ומעלה. הפוסט הזה מאוד לא עומד בזכות עצמו; הוא מתבסס על כל מה שדיברנו עליו בפוסטים האחרונים, אז לא אחזור על הכל. כן אזכיר את התוצאות העיקריות שכבר יש לנו: אם $latex p\left(x\right)\in F\left[x\right]$ הוא פולינום כלשהו ו-$latex E$ הוא שדה הפיצול שלו, אז $latex p\left(x\right)$ פתיר באמצעות רדיקלים אם ורק אם $latex \text{Gal}\left(E/F\right)$ היא חבורה פתירה. החבורה הסימטרית $latex S_{n}$ היא פתירה עבור $latex n\le4$ ולא פתירה עבור $latex n\ge5$. מה שנשאר לנו להוכיח הפעם הוא את הקשר בין שני אלו: אני אוכיח שחבורת הגלואה של פולינום “כללי” ממעלה $latex n$ מעל שדה ממציין 0 היא $latex S_{n}$, מה שיסיים את המשפט. האתגר שלי מחולק, אם כן, לשני חלקים: יש את האתגר של ההוכחה שחבורת הגלואה היא $latex S_{n}$, אבל קודם לו אתגר משמעותי הרבה יותר - האתגר של ההגדרה של מה זה פולינום כללי בכלל." />
 <meta property="og:description" content="בשעה טובה הגענו אל אחת מנקודות השיא של סדרת הפוסטים שלי באלגברה מופשטת - סיום ההוכחה של גלואה לכך שאין נוסחה לפתרון באמצעות רדיקלים של משוואה פולינומית כללית ממעלה חמישית ומעלה. הפוסט הזה מאוד לא עומד בזכות עצמו; הוא מתבסס על כל מה שדיברנו עליו בפוסטים האחרונים, אז לא אחזור על הכל. כן אזכיר את התוצאות העיקריות שכבר יש לנו: אם $latex p\left(x\right)\in F\left[x\right]$ הוא פולינום כלשהו ו-$latex E$ הוא שדה הפיצול שלו, אז $latex p\left(x\right)$ פתיר באמצעות רדיקלים אם ורק אם $latex \text{Gal}\left(E/F\right)$ היא חבורה פתירה. החבורה הסימטרית $latex S_{n}$ היא פתירה עבור $latex n\le4$ ולא פתירה עבור $latex n\ge5$. מה שנשאר לנו להוכיח הפעם הוא את הקשר בין שני אלו: אני אוכיח שחבורת הגלואה של פולינום “כללי” ממעלה $latex n$ מעל שדה ממציין 0 היא $latex S_{n}$, מה שיסיים את המשפט. האתגר שלי מחולק, אם כן, לשני חלקים: יש את האתגר של ההוכחה שחבורת הגלואה היא $latex S_{n}$, אבל קודם לו אתגר משמעותי הרבה יותר - האתגר של ההגדרה של מה זה פולינום כללי בכלל." />
-<link rel="canonical" href="http://localhost:4000/blog/2018/07/13/insolvability_of_the_quintic" />
-<meta property="og:url" content="http://localhost:4000/blog/2018/07/13/insolvability_of_the_quintic" />
+<link rel="canonical" href="/blog/2018/07/13/insolvability_of_the_quintic" />
+<meta property="og:url" content="/blog/2018/07/13/insolvability_of_the_quintic" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-13T01:05:00+03:00" />
 <script type="application/ld+json">
-{"headline":"אז מדוע משוואות פולינומיות כלליות ממעלה 5 ומעלה אינן ניתנות לפתרון באמצעות רדיקלים?","dateModified":"2018-07-13T01:05:00+03:00","datePublished":"2018-07-13T01:05:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/07/13/insolvability_of_the_quintic"},"url":"http://localhost:4000/blog/2018/07/13/insolvability_of_the_quintic","description":"בשעה טובה הגענו אל אחת מנקודות השיא של סדרת הפוסטים שלי באלגברה מופשטת - סיום ההוכחה של גלואה לכך שאין נוסחה לפתרון באמצעות רדיקלים של משוואה פולינומית כללית ממעלה חמישית ומעלה. הפוסט הזה מאוד לא עומד בזכות עצמו; הוא מתבסס על כל מה שדיברנו עליו בפוסטים האחרונים, אז לא אחזור על הכל. כן אזכיר את התוצאות העיקריות שכבר יש לנו: אם $latex p\\left(x\\right)\\in F\\left[x\\right]$ הוא פולינום כלשהו ו-$latex E$ הוא שדה הפיצול שלו, אז $latex p\\left(x\\right)$ פתיר באמצעות רדיקלים אם ורק אם $latex \\text{Gal}\\left(E/F\\right)$ היא חבורה פתירה. החבורה הסימטרית $latex S_{n}$ היא פתירה עבור $latex n\\le4$ ולא פתירה עבור $latex n\\ge5$. מה שנשאר לנו להוכיח הפעם הוא את הקשר בין שני אלו: אני אוכיח שחבורת הגלואה של פולינום “כללי” ממעלה $latex n$ מעל שדה ממציין 0 היא $latex S_{n}$, מה שיסיים את המשפט. האתגר שלי מחולק, אם כן, לשני חלקים: יש את האתגר של ההוכחה שחבורת הגלואה היא $latex S_{n}$, אבל קודם לו אתגר משמעותי הרבה יותר - האתגר של ההגדרה של מה זה פולינום כללי בכלל.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2018/07/13/insolvability_of_the_quintic"},"url":"/blog/2018/07/13/insolvability_of_the_quintic","headline":"אז מדוע משוואות פולינומיות כלליות ממעלה 5 ומעלה אינן ניתנות לפתרון באמצעות רדיקלים?","dateModified":"2018-07-13T01:05:00+03:00","description":"בשעה טובה הגענו אל אחת מנקודות השיא של סדרת הפוסטים שלי באלגברה מופשטת - סיום ההוכחה של גלואה לכך שאין נוסחה לפתרון באמצעות רדיקלים של משוואה פולינומית כללית ממעלה חמישית ומעלה. הפוסט הזה מאוד לא עומד בזכות עצמו; הוא מתבסס על כל מה שדיברנו עליו בפוסטים האחרונים, אז לא אחזור על הכל. כן אזכיר את התוצאות העיקריות שכבר יש לנו: אם $latex p\\left(x\\right)\\in F\\left[x\\right]$ הוא פולינום כלשהו ו-$latex E$ הוא שדה הפיצול שלו, אז $latex p\\left(x\\right)$ פתיר באמצעות רדיקלים אם ורק אם $latex \\text{Gal}\\left(E/F\\right)$ היא חבורה פתירה. החבורה הסימטרית $latex S_{n}$ היא פתירה עבור $latex n\\le4$ ולא פתירה עבור $latex n\\ge5$. מה שנשאר לנו להוכיח הפעם הוא את הקשר בין שני אלו: אני אוכיח שחבורת הגלואה של פולינום “כללי” ממעלה $latex n$ מעל שדה ממציין 0 היא $latex S_{n}$, מה שיסיים את המשפט. האתגר שלי מחולק, אם כן, לשני חלקים: יש את האתגר של ההוכחה שחבורת הגלואה היא $latex S_{n}$, אבל קודם לו אתגר משמעותי הרבה יותר - האתגר של ההגדרה של מה זה פולינום כללי בכלל.","datePublished":"2018-07-13T01:05:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->

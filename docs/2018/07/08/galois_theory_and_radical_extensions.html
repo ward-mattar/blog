@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="מבוא בסדרת הפוסטים הנוכחית הצגתי את הבסיס של תורת גלואה: ראינו את המשפט היסודי שמקשר בין המבנה של הרחבת שדות והמבנה של חבורת האוטומורפיזמים של ההרחבה, וראינו כמה שימושים של התורה הזו כדי להבין יותר טוב איך עובדות הרחבות של שדות. מה שלא ראינו עדיין הוא את הפואנטה - הסיבה שבגללה גלואה המציא מלכתחילה את כל זה: מה שנקרא פתרון משוואות פולינומיות באמצעות רדיקלים." />
 <meta property="og:description" content="מבוא בסדרת הפוסטים הנוכחית הצגתי את הבסיס של תורת גלואה: ראינו את המשפט היסודי שמקשר בין המבנה של הרחבת שדות והמבנה של חבורת האוטומורפיזמים של ההרחבה, וראינו כמה שימושים של התורה הזו כדי להבין יותר טוב איך עובדות הרחבות של שדות. מה שלא ראינו עדיין הוא את הפואנטה - הסיבה שבגללה גלואה המציא מלכתחילה את כל זה: מה שנקרא פתרון משוואות פולינומיות באמצעות רדיקלים." />
-<link rel="canonical" href="http://localhost:4000/blog/2018/07/08/galois_theory_and_radical_extensions" />
-<meta property="og:url" content="http://localhost:4000/blog/2018/07/08/galois_theory_and_radical_extensions" />
+<link rel="canonical" href="/blog/2018/07/08/galois_theory_and_radical_extensions" />
+<meta property="og:url" content="/blog/2018/07/08/galois_theory_and_radical_extensions" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-08T00:01:05+03:00" />
 <script type="application/ld+json">
-{"headline":"תורת גלואה ופתרון משוואות באמצעות רדיקלים","dateModified":"2018-07-08T00:01:05+03:00","datePublished":"2018-07-08T00:01:05+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2018/07/08/galois_theory_and_radical_extensions"},"url":"http://localhost:4000/blog/2018/07/08/galois_theory_and_radical_extensions","description":"מבוא בסדרת הפוסטים הנוכחית הצגתי את הבסיס של תורת גלואה: ראינו את המשפט היסודי שמקשר בין המבנה של הרחבת שדות והמבנה של חבורת האוטומורפיזמים של ההרחבה, וראינו כמה שימושים של התורה הזו כדי להבין יותר טוב איך עובדות הרחבות של שדות. מה שלא ראינו עדיין הוא את הפואנטה - הסיבה שבגללה גלואה המציא מלכתחילה את כל זה: מה שנקרא פתרון משוואות פולינומיות באמצעות רדיקלים.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2018/07/08/galois_theory_and_radical_extensions"},"url":"/blog/2018/07/08/galois_theory_and_radical_extensions","headline":"תורת גלואה ופתרון משוואות באמצעות רדיקלים","dateModified":"2018-07-08T00:01:05+03:00","description":"מבוא בסדרת הפוסטים הנוכחית הצגתי את הבסיס של תורת גלואה: ראינו את המשפט היסודי שמקשר בין המבנה של הרחבת שדות והמבנה של חבורת האוטומורפיזמים של ההרחבה, וראינו כמה שימושים של התורה הזו כדי להבין יותר טוב איך עובדות הרחבות של שדות. מה שלא ראינו עדיין הוא את הפואנטה - הסיבה שבגללה גלואה המציא מלכתחילה את כל זה: מה שנקרא פתרון משוואות פולינומיות באמצעות רדיקלים.","datePublished":"2018-07-08T00:01:05+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->

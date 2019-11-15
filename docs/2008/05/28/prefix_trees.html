@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="האובייקט המרכזי שאיתו מתעסקים מחשבים הוא מספרים טבעיים. ברמה הבסיסית ביותר שלו, מחשב יודע לעשות פעולות רק על אפסים ואחדים - ביטים - והפעולות הללו הן פעולות אריתמטיות בסיסיות של חיבור וכפל (ופעולות לוגיות אבל נעזוב את זה). עם זאת, סוג הנתונים הנפוץ ביותר עבור המשתמשים בתוכנה איננו מספרים אלא טקסט כתוב - סדרה של תווים. ליצור הזה קוראים במדעי המחשב “מחרוזת”." />
 <meta property="og:description" content="האובייקט המרכזי שאיתו מתעסקים מחשבים הוא מספרים טבעיים. ברמה הבסיסית ביותר שלו, מחשב יודע לעשות פעולות רק על אפסים ואחדים - ביטים - והפעולות הללו הן פעולות אריתמטיות בסיסיות של חיבור וכפל (ופעולות לוגיות אבל נעזוב את זה). עם זאת, סוג הנתונים הנפוץ ביותר עבור המשתמשים בתוכנה איננו מספרים אלא טקסט כתוב - סדרה של תווים. ליצור הזה קוראים במדעי המחשב “מחרוזת”." />
-<link rel="canonical" href="http://localhost:4000/blog/2008/05/28/prefix_trees" />
-<meta property="og:url" content="http://localhost:4000/blog/2008/05/28/prefix_trees" />
+<link rel="canonical" href="/blog/2008/05/28/prefix_trees" />
+<meta property="og:url" content="/blog/2008/05/28/prefix_trees" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2008-05-28T13:14:29+03:00" />
 <script type="application/ld+json">
-{"headline":"רישא הדיון בעצי הסיומות","dateModified":"2008-05-28T13:14:29+03:00","datePublished":"2008-05-28T13:14:29+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/05/28/prefix_trees"},"url":"http://localhost:4000/blog/2008/05/28/prefix_trees","description":"האובייקט המרכזי שאיתו מתעסקים מחשבים הוא מספרים טבעיים. ברמה הבסיסית ביותר שלו, מחשב יודע לעשות פעולות רק על אפסים ואחדים - ביטים - והפעולות הללו הן פעולות אריתמטיות בסיסיות של חיבור וכפל (ופעולות לוגיות אבל נעזוב את זה). עם זאת, סוג הנתונים הנפוץ ביותר עבור המשתמשים בתוכנה איננו מספרים אלא טקסט כתוב - סדרה של תווים. ליצור הזה קוראים במדעי המחשב “מחרוזת”.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2008/05/28/prefix_trees"},"url":"/blog/2008/05/28/prefix_trees","headline":"רישא הדיון בעצי הסיומות","dateModified":"2008-05-28T13:14:29+03:00","description":"האובייקט המרכזי שאיתו מתעסקים מחשבים הוא מספרים טבעיים. ברמה הבסיסית ביותר שלו, מחשב יודע לעשות פעולות רק על אפסים ואחדים - ביטים - והפעולות הללו הן פעולות אריתמטיות בסיסיות של חיבור וכפל (ופעולות לוגיות אבל נעזוב את זה). עם זאת, סוג הנתונים הנפוץ ביותר עבור המשתמשים בתוכנה איננו מספרים אלא טקסט כתוב - סדרה של תווים. ליצור הזה קוראים במדעי המחשב “מחרוזת”.","datePublished":"2008-05-28T13:14:29+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->

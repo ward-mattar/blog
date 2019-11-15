@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="אחרי פוסט המבוא בנושא, אנחנו רוצים להוכיח את משפט החלפת המשתנים הכללי בחדו”א, עבור אינטגרלים $latex n$-ממדיים. לפני הכל נתחיל בלהזכיר מה המשפט אומר: אם $latex g:A\to B$ היא דיפאומורפיזם של קבוצות פתוחות ב-$latex \mathbb{R}^{n}$ ו-$latex f:B\to\mathbb{R}$ רציפה, אז $latex f$ אינטגרבילית מעל $latex B$ אם ורק אם $latex \left(f\circ g\right)\left|\det Dg\right|$ אינטגרבילית מעל $latex A$ ובמקרה זה מתקיים:" />
 <meta property="og:description" content="אחרי פוסט המבוא בנושא, אנחנו רוצים להוכיח את משפט החלפת המשתנים הכללי בחדו”א, עבור אינטגרלים $latex n$-ממדיים. לפני הכל נתחיל בלהזכיר מה המשפט אומר: אם $latex g:A\to B$ היא דיפאומורפיזם של קבוצות פתוחות ב-$latex \mathbb{R}^{n}$ ו-$latex f:B\to\mathbb{R}$ רציפה, אז $latex f$ אינטגרבילית מעל $latex B$ אם ורק אם $latex \left(f\circ g\right)\left|\det Dg\right|$ אינטגרבילית מעל $latex A$ ובמקרה זה מתקיים:" />
-<link rel="canonical" href="http://localhost:4000/blog/2016/04/12/general_change_of_variables" />
-<meta property="og:url" content="http://localhost:4000/blog/2016/04/12/general_change_of_variables" />
+<link rel="canonical" href="/blog/2016/04/12/general_change_of_variables" />
+<meta property="og:url" content="/blog/2016/04/12/general_change_of_variables" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2016-04-12T19:29:22+03:00" />
 <script type="application/ld+json">
-{"headline":"החלפת משתנים בחשבון דיפרנציאלי ואינטגרלי - המשפט הכללי","dateModified":"2016-04-12T19:29:22+03:00","datePublished":"2016-04-12T19:29:22+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2016/04/12/general_change_of_variables"},"url":"http://localhost:4000/blog/2016/04/12/general_change_of_variables","description":"אחרי פוסט המבוא בנושא, אנחנו רוצים להוכיח את משפט החלפת המשתנים הכללי בחדו”א, עבור אינטגרלים $latex n$-ממדיים. לפני הכל נתחיל בלהזכיר מה המשפט אומר: אם $latex g:A\\to B$ היא דיפאומורפיזם של קבוצות פתוחות ב-$latex \\mathbb{R}^{n}$ ו-$latex f:B\\to\\mathbb{R}$ רציפה, אז $latex f$ אינטגרבילית מעל $latex B$ אם ורק אם $latex \\left(f\\circ g\\right)\\left|\\det Dg\\right|$ אינטגרבילית מעל $latex A$ ובמקרה זה מתקיים:","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2016/04/12/general_change_of_variables"},"url":"/blog/2016/04/12/general_change_of_variables","headline":"החלפת משתנים בחשבון דיפרנציאלי ואינטגרלי - המשפט הכללי","dateModified":"2016-04-12T19:29:22+03:00","description":"אחרי פוסט המבוא בנושא, אנחנו רוצים להוכיח את משפט החלפת המשתנים הכללי בחדו”א, עבור אינטגרלים $latex n$-ממדיים. לפני הכל נתחיל בלהזכיר מה המשפט אומר: אם $latex g:A\\to B$ היא דיפאומורפיזם של קבוצות פתוחות ב-$latex \\mathbb{R}^{n}$ ו-$latex f:B\\to\\mathbb{R}$ רציפה, אז $latex f$ אינטגרבילית מעל $latex B$ אם ורק אם $latex \\left(f\\circ g\\right)\\left|\\det Dg\\right|$ אינטגרבילית מעל $latex A$ ובמקרה זה מתקיים:","datePublished":"2016-04-12T19:29:22+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->

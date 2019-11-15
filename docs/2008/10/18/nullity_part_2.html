@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בפוסט הקודם דיברתי קצת על למה לא נהוג במתמטיקה להגדיר חלוקה באפס, מתי כן מגדירים חלוקה באפס (למשל, מתי נוח לנו לסמן את החלוקה של אחד באפס כ”אינסוף” ומה המשמעות של זה) ולמה 0/0 היה ונותר ביטוי חסר טעם להגדרה ולכן בתוכנות מחשב מתמטיות דוגמת Matlab נהוג שתוצאת הפעולה 0/0 היא קבוע בשם NaN, שמשמעותו “לא מספר” (Not a Number). קבוע בעל התכונה הסבירה שכל פעולה מתמטית שנעשה עליו לא תשנה אותו (1 ועוד “לא מספר” יהיה “לא מספר”, למשל). המוטיבציה לדיון הזה הייתה הסיפור (שכעת הוא כמעט בן שנתיים) על מורה למתמטיקה שלימד את תלמידיו תורה מתמטית חדשה שבה חלוקה באפס היא “אפשרית” ובכך פתר “בעיה בת 1,200 שנים”." />
 <meta property="og:description" content="בפוסט הקודם דיברתי קצת על למה לא נהוג במתמטיקה להגדיר חלוקה באפס, מתי כן מגדירים חלוקה באפס (למשל, מתי נוח לנו לסמן את החלוקה של אחד באפס כ”אינסוף” ומה המשמעות של זה) ולמה 0/0 היה ונותר ביטוי חסר טעם להגדרה ולכן בתוכנות מחשב מתמטיות דוגמת Matlab נהוג שתוצאת הפעולה 0/0 היא קבוע בשם NaN, שמשמעותו “לא מספר” (Not a Number). קבוע בעל התכונה הסבירה שכל פעולה מתמטית שנעשה עליו לא תשנה אותו (1 ועוד “לא מספר” יהיה “לא מספר”, למשל). המוטיבציה לדיון הזה הייתה הסיפור (שכעת הוא כמעט בן שנתיים) על מורה למתמטיקה שלימד את תלמידיו תורה מתמטית חדשה שבה חלוקה באפס היא “אפשרית” ובכך פתר “בעיה בת 1,200 שנים”." />
-<link rel="canonical" href="http://localhost:4000/blog/2008/10/18/nullity_part_2" />
-<meta property="og:url" content="http://localhost:4000/blog/2008/10/18/nullity_part_2" />
+<link rel="canonical" href="/blog/2008/10/18/nullity_part_2" />
+<meta property="og:url" content="/blog/2008/10/18/nullity_part_2" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2008-10-18T22:40:29+03:00" />
 <script type="application/ld+json">
-{"headline":"רוצים לחלק באפס 2 – נקמתו של כלומיתי","dateModified":"2008-10-18T22:40:29+03:00","datePublished":"2008-10-18T22:40:29+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2008/10/18/nullity_part_2"},"url":"http://localhost:4000/blog/2008/10/18/nullity_part_2","description":"בפוסט הקודם דיברתי קצת על למה לא נהוג במתמטיקה להגדיר חלוקה באפס, מתי כן מגדירים חלוקה באפס (למשל, מתי נוח לנו לסמן את החלוקה של אחד באפס כ”אינסוף” ומה המשמעות של זה) ולמה 0/0 היה ונותר ביטוי חסר טעם להגדרה ולכן בתוכנות מחשב מתמטיות דוגמת Matlab נהוג שתוצאת הפעולה 0/0 היא קבוע בשם NaN, שמשמעותו “לא מספר” (Not a Number). קבוע בעל התכונה הסבירה שכל פעולה מתמטית שנעשה עליו לא תשנה אותו (1 ועוד “לא מספר” יהיה “לא מספר”, למשל). המוטיבציה לדיון הזה הייתה הסיפור (שכעת הוא כמעט בן שנתיים) על מורה למתמטיקה שלימד את תלמידיו תורה מתמטית חדשה שבה חלוקה באפס היא “אפשרית” ובכך פתר “בעיה בת 1,200 שנים”.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2008/10/18/nullity_part_2"},"url":"/blog/2008/10/18/nullity_part_2","headline":"רוצים לחלק באפס 2 – נקמתו של כלומיתי","dateModified":"2008-10-18T22:40:29+03:00","description":"בפוסט הקודם דיברתי קצת על למה לא נהוג במתמטיקה להגדיר חלוקה באפס, מתי כן מגדירים חלוקה באפס (למשל, מתי נוח לנו לסמן את החלוקה של אחד באפס כ”אינסוף” ומה המשמעות של זה) ולמה 0/0 היה ונותר ביטוי חסר טעם להגדרה ולכן בתוכנות מחשב מתמטיות דוגמת Matlab נהוג שתוצאת הפעולה 0/0 היא קבוע בשם NaN, שמשמעותו “לא מספר” (Not a Number). קבוע בעל התכונה הסבירה שכל פעולה מתמטית שנעשה עליו לא תשנה אותו (1 ועוד “לא מספר” יהיה “לא מספר”, למשל). המוטיבציה לדיון הזה הייתה הסיפור (שכעת הוא כמעט בן שנתיים) על מורה למתמטיקה שלימד את תלמידיו תורה מתמטית חדשה שבה חלוקה באפס היא “אפשרית” ובכך פתר “בעיה בת 1,200 שנים”.","datePublished":"2008-10-18T22:40:29+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->

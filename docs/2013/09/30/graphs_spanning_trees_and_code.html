@@ -9,24 +9,30 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בפוסט הקודם הצגתי באופן מאוד לא פורמלי ולא מחוייב שני אלגוריתמים לייצור מבוכים - של קרוסקל ושל פרים. המבוכים היו רק תירוץ כדי להציג את האלגוריתמים הללו, שמיועדים לטפל בסיטואציות הרבה יותר כלליות - אלו אלגוריתמים למציאת עץ פורש מינימלי בגרף. בפוסט הזה נבין מה זה גרף, מה זה עץ פורש מינימלי ואיך זה רלוונטי לבניית מבוכים. וכדי שלא נהיה באוויר לגמרי, גם נדבר קצת על איך מתכנתים את זה." />
 <meta property="og:description" content="בפוסט הקודם הצגתי באופן מאוד לא פורמלי ולא מחוייב שני אלגוריתמים לייצור מבוכים - של קרוסקל ושל פרים. המבוכים היו רק תירוץ כדי להציג את האלגוריתמים הללו, שמיועדים לטפל בסיטואציות הרבה יותר כלליות - אלו אלגוריתמים למציאת עץ פורש מינימלי בגרף. בפוסט הזה נבין מה זה גרף, מה זה עץ פורש מינימלי ואיך זה רלוונטי לבניית מבוכים. וכדי שלא נהיה באוויר לגמרי, גם נדבר קצת על איך מתכנתים את זה." />
-<link rel="canonical" href="http://localhost:4000/blog/2013/09/30/graphs_spanning_trees_and_code" />
-<meta property="og:url" content="http://localhost:4000/blog/2013/09/30/graphs_spanning_trees_and_code" />
+<link rel="canonical" href="/blog/2013/09/30/graphs_spanning_trees_and_code" />
+<meta property="og:url" content="/blog/2013/09/30/graphs_spanning_trees_and_code" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2013-09-30T16:48:47+03:00" />
 <script type="application/ld+json">
-{"headline":"על גרפים, עצים פורשים ואיך זה נראה בקוד","dateModified":"2013-09-30T16:48:47+03:00","datePublished":"2013-09-30T16:48:47+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2013/09/30/graphs_spanning_trees_and_code"},"url":"http://localhost:4000/blog/2013/09/30/graphs_spanning_trees_and_code","description":"בפוסט הקודם הצגתי באופן מאוד לא פורמלי ולא מחוייב שני אלגוריתמים לייצור מבוכים - של קרוסקל ושל פרים. המבוכים היו רק תירוץ כדי להציג את האלגוריתמים הללו, שמיועדים לטפל בסיטואציות הרבה יותר כלליות - אלו אלגוריתמים למציאת עץ פורש מינימלי בגרף. בפוסט הזה נבין מה זה גרף, מה זה עץ פורש מינימלי ואיך זה רלוונטי לבניית מבוכים. וכדי שלא נהיה באוויר לגמרי, גם נדבר קצת על איך מתכנתים את זה.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2013/09/30/graphs_spanning_trees_and_code"},"url":"/blog/2013/09/30/graphs_spanning_trees_and_code","headline":"על גרפים, עצים פורשים ואיך זה נראה בקוד","dateModified":"2013-09-30T16:48:47+03:00","description":"בפוסט הקודם הצגתי באופן מאוד לא פורמלי ולא מחוייב שני אלגוריתמים לייצור מבוכים - של קרוסקל ושל פרים. המבוכים היו רק תירוץ כדי להציג את האלגוריתמים הללו, שמיועדים לטפל בסיטואציות הרבה יותר כלליות - אלו אלגוריתמים למציאת עץ פורש מינימלי בגרף. בפוסט הזה נבין מה זה גרף, מה זה עץ פורש מינימלי ואיך זה רלוונטי לבניית מבוכים. וכדי שלא נהיה באוויר לגמרי, גם נדבר קצת על איך מתכנתים את זה.","datePublished":"2013-09-30T16:48:47+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
         processEscapes: true
       },
-       TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]}
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
     });
   </script>
   <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
