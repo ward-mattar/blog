@@ -22,7 +22,9 @@ body {
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column; 
+  text-align:right;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -38,6 +40,7 @@ ul, ol, dl, figure,
  */
 main {
   display: block;
+  overflow-x: auto
   /* Default value of `display` of `main` element is 'inline' in IE 11. */ }
 
 /**
@@ -45,7 +48,10 @@ main {
  */
 img {
   max-width: 100%;
-  vertical-align: middle; }
+  vertical-align: middle; 
+  width: auto;
+  height: auto;
+}
 
 /**
  * Figures
@@ -157,7 +163,7 @@ pre {
   height: 16px;
   display: inline-block;
   fill: #828282;
-  padding-right: 5px;
+  /*padding-right: 5px;*/
   vertical-align: text-top; }
 
 .social-media-list li + li {
@@ -337,7 +343,9 @@ table {
  * Posts
  */
 .post-header {
-  margin-bottom: 30px; }
+  margin-bottom: 30px; 
+  margin-top: 60px;
+}
 
 .post-title {
   font-size: 42px;
@@ -509,4 +517,8 @@ table {
   .code-block {
     direction: ltr;
     text-align: left;
+  }
+
+  .navbar-nav {
+    text-align: right;
   }

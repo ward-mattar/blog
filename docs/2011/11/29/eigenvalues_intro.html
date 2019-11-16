@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="אחת המניפולציות הפשוטות ביותר שאנו יודעים להפעיל על תמונות היא שיקוף. נניח עכשיו שאתם רוצים להבין איך לבצע שיקוף בעצמכם, מה זה בכלל אומר? איך ניגשים לזה פורמלית? מייד ברור שיש כמה סוגי שיקופים - יש שיקוף אופקי, ושיקוף אנכי, ואנחנו מבינים אינטואיטיבית מה הם אומרים; אבל פורמלית? בואו נגדיר את זה פורמלית." />
 <meta property="og:description" content="אחת המניפולציות הפשוטות ביותר שאנו יודעים להפעיל על תמונות היא שיקוף. נניח עכשיו שאתם רוצים להבין איך לבצע שיקוף בעצמכם, מה זה בכלל אומר? איך ניגשים לזה פורמלית? מייד ברור שיש כמה סוגי שיקופים - יש שיקוף אופקי, ושיקוף אנכי, ואנחנו מבינים אינטואיטיבית מה הם אומרים; אבל פורמלית? בואו נגדיר את זה פורמלית." />
-<link rel="canonical" href="/blog/2011/11/29/eigenvalues_intro" />
-<meta property="og:url" content="/blog/2011/11/29/eigenvalues_intro" />
+<link rel="canonical" href="http://localhost:4000/blog/2011/11/29/eigenvalues_intro" />
+<meta property="og:url" content="http://localhost:4000/blog/2011/11/29/eigenvalues_intro" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2011-11-29T22:31:22+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2011/11/29/eigenvalues_intro"},"url":"/blog/2011/11/29/eigenvalues_intro","headline":"ערכים עצמיים - מי, מה, כמה ולמה","dateModified":"2011-11-29T22:31:22+02:00","description":"אחת המניפולציות הפשוטות ביותר שאנו יודעים להפעיל על תמונות היא שיקוף. נניח עכשיו שאתם רוצים להבין איך לבצע שיקוף בעצמכם, מה זה בכלל אומר? איך ניגשים לזה פורמלית? מייד ברור שיש כמה סוגי שיקופים - יש שיקוף אופקי, ושיקוף אנכי, ואנחנו מבינים אינטואיטיבית מה הם אומרים; אבל פורמלית? בואו נגדיר את זה פורמלית.","datePublished":"2011-11-29T22:31:22+02:00","@context":"https://schema.org"}</script>
+{"headline":"ערכים עצמיים - מי, מה, כמה ולמה","dateModified":"2011-11-29T22:31:22+02:00","datePublished":"2011-11-29T22:31:22+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2011/11/29/eigenvalues_intro"},"url":"http://localhost:4000/blog/2011/11/29/eigenvalues_intro","description":"אחת המניפולציות הפשוטות ביותר שאנו יודעים להפעיל על תמונות היא שיקוף. נניח עכשיו שאתם רוצים להבין איך לבצע שיקוף בעצמכם, מה זה בכלל אומר? איך ניגשים לזה פורמלית? מייד ברור שיש כמה סוגי שיקופים - יש שיקוף אופקי, ושיקוף אנכי, ואנחנו מבינים אינטואיטיבית מה הם אומרים; אבל פורמלית? בואו נגדיר את זה פורמלית.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -83,7 +83,7 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/blog/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -119,7 +119,9 @@
 
 <p>השלב האחרון הוא החישוב הלא-כל-כך-נעים של</p>
 
-<p><span>$latex \left[T\right]_{E}=P\left[T\right]_{B}P^{-1}=\frac{-1}{a^{2}+b^{2}}\left[\begin{array}{cc}a &amp; b\\b &amp; -a\end{array}\right]\left[\begin{array}{cc}1 &amp; 0\\0 &amp; -1\end{array}\right]\left[\begin{array}{cc}-a &amp; -b\\-b &amp; a\end{array}\right]=\frac{-1}{a^{2}+b^{2}}\left[\begin{array}{cc}a &amp; b\\b &amp; -a\end{array}\right]\left[\begin{array}{cc}-a &amp; -b\\b &amp; -a\end{array}\right]=\frac{1}{a^{2}+b^{2}}\left[\begin{array}{cc}a^{2}-b^{2} &amp; 2ab\\2ab &amp; b^{2}-a^{2}\end{array}\right]$</span></p>
+<p><span>$latex \left[T\right]_{E}=P\left[T\right]_{B}P^{-1}=\frac{-1}{a^{2}+b^{2}}\left[\begin{array}{cc}a &amp; b\\b &amp; -a\end{array}\right]\left[\begin{array}{cc}1 &amp; 0\\0 &amp; -1\end{array}\right]\left[\begin{array}{cc}-a &amp; -b\\-b &amp; a\end{array}\right]=$</span></p>
+
+<p><span>$latex =\frac{-1}{a^{2}+b^{2}}\left[\begin{array}{cc}a &amp; b\\b &amp; -a\end{array}\right]\left[\begin{array}{cc}-a &amp; -b\\b &amp; -a\end{array}\right]=\frac{1}{a^{2}+b^{2}}\left[\begin{array}{cc}a^{2}-b^{2} &amp; 2ab\\2ab &amp; b^{2}-a^{2}\end{array}\right]$</span></p>
 
 <p>המטריצה האחרונה שקיבלנו היא מה שתראו בספרי לימוד כשמדברים בדרך כלל על שיקוף כללי. אפשר כמובן להמשיך הלאה וממש לכתוב נוסחה ל-<span>$latex T\left(x,y\right)$</span> אבל זו בסך הכל תהיה דרך מלוכלכת יותר לכתוב את המטריצה שהגענו אליה.</p>
 
@@ -129,7 +131,9 @@
 
 <p>בפוסט שעסק ב<a href="http://www.gadial.net/?p=1358">כפל מטריצות</a> אמרתי שאפשר לספור מסלולים בגרף באמצעות מטריצת השכנויות של הגרף. כזכור, זו הייתה מטריצה <span>$latex A$</span> שהכניסה ה-<span>$latex \left(i,j\right)$</span> שלה כללה את מספר הקשתות מ-<span>$latex i$</span> אל <span>$latex j$</span> בגרף, והתברר כי הכניסה <span>$latex A_{ij}^{k}$</span> היא בדיוק מספר המסלולים מאורך <span>$latex k$</span> מ-<span>$latex i$</span> אל <span>$latex j$</span>. כעת, נניח שמבקשים מכם למצוא את כל המסלולים מאורך 1000 מ-<span>$latex i$</span> אל <span>$latex j$</span>, כלומר לחשב את <span>$latex A_{ij}^{1000}$</span> - זה נראה איום ונורא על פניו, כי לכפול מטריצה בעצמה 1000 פעמים זה לא כיף. יש תעלול נחמד שחוסך זמן - להעלות את <span>$latex A$</span> בריבוע, ואת התוצאה שוב להעלות בריבוע, וכך חיש קל לקבל את כל החזקות של <span>$latex A$</span> שהן עצמן חזקות של 2 ואיתן “להרכיב” את 1000 איכשהו, אבל גם בשיטה הזו עדיין צריך לבצע הרבה כפלי מטריצות. ואם מבקשים מכם למצוא נוסחה כללית ל-<span>$latex A_{ij}^{n}$</span> כתלות ב-<span>$latex n$</span> זה כבר בכלל נראה קשה. אבל למרבה המזל לפעמים זה קל; אם אנחנו יודעים על מטריצה אלכסונית <span>$latex D$</span> כך ש-<span>$latex A=P^{-1}DP$</span> עבור <span>$latex P$</span> הפיכה כלשהי, אז שימו לב שלמשל</p>
 
-<p><span>$latex A^{3}=\left(P^{-1}DP\right)\left(P^{-1}DP\right)\left(P^{-1}DP\right)=P^{-1}D\left(PP^{-1}\right)D\left(PP^{-1}\right)DP=P^{-1}D^{3}P$</span></p>
+<p><span>$latex A^{3}=\left(P^{-1}DP\right)\left(P^{-1}DP\right)\left(P^{-1}DP\right)=$</span></p>
+
+<p><span>$latex =P^{-1}D\left(PP^{-1}\right)D\left(PP^{-1}\right)DP=P^{-1}D^{3}P$</span></p>
 
 <p>וכפי שניתן לנחש - באופן כללי, <span>$latex A^{n}=P^{-1}D^{n}P$</span>. כעת, אם <span>$latex D$</span> היא אלכסונית אז <span>$latex D^{n}$</span> קלה ביותר לחישוב - זו פשוט <span>$latex D$</span> כאשר כל איברי האלכסון מועלים בחזקת <span>$latex n$</span> (למשל, אם <span>$latex D=\left[\begin{array}{cc}2 &amp; 0\\0 &amp; 3\end{array}\right]$</span> אז <span>$latex D^{3}=\left[\begin{array}{cc}2^{3} &amp; 0\\0 &amp; 3^{3}\end{array}\right]=\left[\begin{array}{cc}8 &amp; 0\\0 &amp; 27\end{array}\right]$</span>). כלומר, חישוב חזקות של <span>$latex A$</span> הופך לטריוויאלי. איך זה קשור לערכים עצמיים? ובכן, אם אפשר לעבור מ-<span>$latex A$</span> באופן הזה למטריצה אלכסונית (זה נקרא <strong>לכסון</strong> של <span>$latex A$</span>) אז האיברים באלכסון של <span>$latex D$</span> הם בדיוק הערכים העצמיים של <span>$latex A$</span>, והדרך הישירה למציאת <span>$latex D$</span> (ועוד יותר חשוב, <span>$latex P$</span>) היא בדיוק דרך מציאת הערכים העצמיים והוקטורים העצמיים של <span>$latex A$</span>.</p>
 

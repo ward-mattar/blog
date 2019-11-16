@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה." />
 <meta property="og:description" content="בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה." />
-<link rel="canonical" href="/blog/2009/02/04/roots_of_unity" />
-<meta property="og:url" content="/blog/2009/02/04/roots_of_unity" />
+<link rel="canonical" href="http://localhost:4000/blog/2009/02/04/roots_of_unity" />
+<meta property="og:url" content="http://localhost:4000/blog/2009/02/04/roots_of_unity" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2009-02-04T13:12:00+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2009/02/04/roots_of_unity"},"url":"/blog/2009/02/04/roots_of_unity","headline":"שורשנו באחדותנו","dateModified":"2009-02-04T13:12:00+02:00","description":"בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה.","datePublished":"2009-02-04T13:12:00+02:00","@context":"https://schema.org"}</script>
+{"headline":"שורשנו באחדותנו","dateModified":"2009-02-04T13:12:00+02:00","datePublished":"2009-02-04T13:12:00+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2009/02/04/roots_of_unity"},"url":"http://localhost:4000/blog/2009/02/04/roots_of_unity","description":"בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -83,7 +83,7 @@
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/blog/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
