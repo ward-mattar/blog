@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות." />
 <meta property="og:description" content="אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות." />
-<link rel="canonical" href="http://localhost:4000/blog/2014/04/08/limsup_and_liminf" />
-<meta property="og:url" content="http://localhost:4000/blog/2014/04/08/limsup_and_liminf" />
+<link rel="canonical" href="/blog/2014/04/08/limsup_and_liminf" />
+<meta property="og:url" content="/blog/2014/04/08/limsup_and_liminf" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2014-04-08T22:18:53+03:00" />
 <script type="application/ld+json">
-{"headline":"על גבולות עליונים ותחתונים של קבוצות וממשיים","dateModified":"2014-04-08T22:18:53+03:00","datePublished":"2014-04-08T22:18:53+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2014/04/08/limsup_and_liminf"},"url":"http://localhost:4000/blog/2014/04/08/limsup_and_liminf","description":"אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות.","@context":"https://schema.org"}</script>
+{"headline":"על גבולות עליונים ותחתונים של קבוצות וממשיים","dateModified":"2014-04-08T22:18:53+03:00","datePublished":"2014-04-08T22:18:53+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/blog/2014/04/08/limsup_and_liminf"},"url":"/blog/2014/04/08/limsup_and_liminf","description":"אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/blog/assets/css/main.css">
   <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
