@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2010/11/21/derivative","headline":"אז מה זו נגזרת?","dateModified":"2010-11-21T19:20:42+02:00","datePublished":"2010-11-21T19:20:42+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/11/21/derivative"},"description":"בעיית ה”מכונית שנוסעת מתל אביב לחיפה” נשחקה עד לזרא בבתי הספר, ולכן אני מקווה שתסלחו לי על כך שאני משתמש בה - רכב מנצח לא מחלפים. אם כן, המרחק מתל אביב לחיפה הוא 100 קילומטרים. מכונית יוצאת מתל אביב לחיפה ומגיעה לשם תוך שעתיים. מה הייתה מהירותה בדרך?","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -117,7 +117,7 @@
 <p>דבר אחד שמתמטיקאי צריך לעשות אחרי שהוא נתקל במושג חדש הוא לרחרח סביבו בחשדנות - האם המושג בכלל בעל משמעות? האם הוא מתקיים תמיד? למי הוא לא מתקיים? כשהוא כן מתקיים, עבור מי הוא מתקיים? ולכן אני רוצה לפתוח באכזבה - לא לכל פונקציה יש נגזרת, וגם אם יש - לא תמיד היא מוגדרת בכל מקום.הדוגמה הקלאסית ביותר היא פונקציית הערך המוחלט - <span>$latex f\left(x\right)=\left|x\right|$</span>. עבור <span>$latex x&gt;0$</span> הפונקציה מתנהגת בדיוק כמו <span>$latex f\left(x\right)=x$</span>; ועבור <span>$latex x&lt;0$</span> היא מתנהגת בדיוק כמו <span>$latex f\left(x\right)=-x$</span>, ולשתי הפונקציות הללו יש נגזרת (נדבר על כך בעתיד. אולי). אבל בנקודה <span>$latex x=0$</span> הכל מתרסק. בואו נראה את זה פורמלית: <span>$latex f\left(0\right)=0$</span> במקרה הזה, ולכן עבור <span>$latex h&gt;0$</span> נקבל <span>$latex \frac{f\left(x_{0}+h\right)-f\left(x_{0}\right)}{h}=\frac{f\left(h\right)-f\left(0\right)}{h}=\frac{h}{h}=1$</span>, ואילו עבור <span>$latex h&lt;0$</span> נקבל <span>$latex \frac{f\left(h\right)-f\left(0\right)}{h}=\frac{-h}{h}=-1$</span>. במילים אחרות, אם נסתכל רק על תמונות מהצילומים של <span>$latex f\left(x\right)$</span> מהרגע ש<strong>לפני</strong> <span>$latex x=0$</span>, נקבל את הרושם שהמהירות היא <span>$latex -1$</span>; ואם נסתכל רק על הרגע שאחרי, נקבל את הרושם שהמהירות היא <span>$latex 1$</span>; אבל אז, מה המהירות באמצע? יש לנו שני קירובים שונים וסותרים. המסקנה היא שאי אפשר לדבר על המהירות ברגע הזה באופן משביע רצון, ואנחנו מסתפקים באמירה שהנגזרת של <span>$latex f$</span> לא מוגדרת בנקודה הזו; ש-<span>$latex f$</span> <strong>לא גזירה</strong> בנקודה הזו. באופן כללי אנחנו נוהגים לסווג את הפונקציות בעולם לגזירות ולא גזירות (ואם לא גזירות, היכן), ולמזלנו - רוב הפונקציות המעניינות גזירות.</p>
 
 <p>בואו נעזוב את סיפור המכונית ונעבור לדוגמה אחרת לגמרי שבה יש משמעות לנגזרת - משיקים. במילה “משיק” במשמעותה המתמטית-גאומטרית נתקלים לרוב בבית הספר בהקשר של משיק למעגל בנקודה מסויימת. במקרה זה המשיק הוא קו ישר שנוגע במעגל באותה נקודה, ובנקודה זו בלבד (כלומר, הוא לא חותך את המעגל אלא רק “מלטף” אותו). אנחנו רוצים לדבר על משיק ליצורים גאומטריים אחרים - גרפים של פונקציות. אלא שכאן יש לנו בעיה - בהינתן גרף של פונקציה ונקודה כלשהי עליו ייתכן שיש הרבה ישרים שאפשר להעביר ולא חותכים את הגרף בשום נקודה אחרת; וגרוע מכך, ייתכן שהישר ש”מרגיש לנו נכון” בקשר להיותו משיק בנקודה מסויימת דווקא <strong>כן</strong> חותך את גרף הפונקציה בנקודות אחרות. אז מה עושים?</p>
-<div class="mceTemp"><dl id="attachment_857" class="wp-caption alignnone" style="width: 410px;"><dt class="wp-caption-dt"><a href="//assets/img/2010/11/400px-Tangent_to_a_curve.svg_.png"><img class="size-full wp-image-857" title="400px-Tangent_to_a_curve.svg" src="//assets/img/2010/11/400px-Tangent_to_a_curve.svg_.png" alt="תמונה של משיק לעקום" width="400" height="280" /></a></dt></dl></div>
+<div class="mceTemp"><dl id="attachment_857" class="wp-caption alignnone" style="width: 410px;"><dt class="wp-caption-dt"><a href="/assets/img/2010/11/400px-Tangent_to_a_curve.svg_.png"><img class="size-full wp-image-857" title="400px-Tangent_to_a_curve.svg" src="/assets/img/2010/11/400px-Tangent_to_a_curve.svg_.png" alt="תמונה של משיק לעקום" width="400" height="280" /></a></dt></dl></div>
 <p>מה שצריך לעשות הוא לזנוח את ההגדרה המקורית של משיק ולנסות להבין על מה אנחנו <strong>באמת</strong> מדברים כשאנו מדברים על משיק. משיק לנקודה מסויימת בעקום הוא קו ישר שהכיוון שלו זהה ל”כיוון של העקום” בנקודה זו. מי שמכיר טיפה מכניקה יכול לחשוב על זה כך: העקום מתאר תנועה של גוף בהשפעת כוח מטורלל כלשהו. המשיק בנקודה כלשהי מתאר את מסלול התנועה של הגוף מנקודה זו והלאה אם הכוח המטורלל היה עוזב אותו לנפשו שם והוא היה ממשיך בתנועתו ללא הפרעה, על פי החוק הראשון של ניוטון. ההגדרה הזו תופסת היטב את המשיק ה”קלאסי” למעגל, אבל היא טובה בהרבה מההגדרה האחרת - ובפרט, ניתן לתאר אותה באמצעות הנגזרת.</p>
 
 <p>אם כן, נניח שיש לנו עקום שמתואר בתור הגרף של הפונקציה <span>$latex f\left(x\right)$</span> (כלומר, זה אוסף הנקודות במישור מהצורה <span>$latex \left(x,f\left(x\right)\right)$</span>). אמנם, אנחנו לא יכולים לתאר כך את כל העקומים (בפרט לא מעגל…) אבל לעת עתה זה מספיק לנו; אפשר בשיטות קצת יותר כלליות לטפל בכל סוגי העקומים. מה שאנחנו רוצים לדעת היא מה המשוואה של המשיק לגרף הפונקציה בנקודה <span>$latex x_{0}$</span>. המשיק הוא קו ישר; אלו מכם שמכירים גאומטריה אנליטית יודעים שקו ישר ניתן לתאר באמצעות המשוואה <span>$latex y=mx+n$</span>, כאשר המספר <span>$latex m$</span> מכונה <strong>השיפוע</strong> של הישר, ובא לציין כמה הישר נוטה באלכסון ביחס לציר ה-<span>$latex x$</span> (פורמלית, אם הזווית שהישר יוצר עם ציר ה-<span>$latex x$</span> היא <span>$latex \theta$</span>, אז <span>$latex m=\tan\theta$</span>). עוד אתם אולי יודעים שאם נתון לנו השיפוע של ישר, ונקודה אחת שדרכה הישר עובר, הישר נקבע כך באופן יחיד. נקודה אחת שבה המשיק עובר אנחנו יודעים - זוהי בדיוק הנקודה <span>$latex \left(x_{0},f\left(x_{0}\right)\right)$</span>. כל מה שעלינו לגלות כעת הוא את השיפוע שלו.</p>
@@ -180,6 +180,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

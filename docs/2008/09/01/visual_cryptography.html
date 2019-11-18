@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2008/09/01/visual_cryptography","headline":"להמשיך ללכת, אין מה לראות פה","dateModified":"2008-09-01T15:16:48+03:00","datePublished":"2008-09-01T15:16:48+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2008/09/01/visual_cryptography"},"description":"בפוסט שבו תיארתי חלוקות סוד הזכרתי בתור דוגמה ספר שבו הסוד חולק לשלוש “תמונות” שונות, כך שאם שמו אותן אחת על השנייה ואל מול האור, התמונות התחתונות יותר השתקפו דרך הבד ויצרו תמונה אחת גדולה ומשולבת, שבה הסוד היה כתוב במפורש. זו ללא ספק שיטה מגניבה במיוחד לחלוקת סוד, ויתרונה הגדול בכך שאינה דורשת מחשב או מאמץ חישובי לביצוע השחזור, אך הבעיה המהותית שלה היא שאינה שומרת על דרישת הבטיחות הבסיסית שלנו מחלוקת סוד - מי שיש לו רק אחת משלוש התמונות עדיין יהיה מסוגל להפיק ממנה כמות לא מבוטלת של מידע (נאמר, שליש?) על התמונה ה”משולבת”. אנחנו רוצים שהוא יוכל להפיק אפס מידע. האם זה אפשרי בכלל? התשובה היא כן, והפתרון הבסיסי (כמו גם וריאציות נחמדות עליו) הוצג במאמר של מוני נאור ועדי שמיר משנת 1994. השיטה פשוטה להחריד, עד כדי כך שכל ילד יכול להבין אותה (אני מקווה); עם זאת, כדי ליצור את החלוקה עצמה צריך כבר לדעת לתכנת (אבל כל ילד שיודע לתכנת יהיה מסוגל לעשות את זה, גם אם במאמץ מסויים). הרעיון המבריק שמאחורי השיטה הוא שניתן לבצע “סימולציה” של צופן הפנקס החד פעמי באמצעות הפעולה הלא קשורה כביכול של שיקוף תמונות זו דרך זו. ראשית, בואו נבהיר לעצמנו מה אנחנו בכלל מנסים לעשות. נותנים לנו תמונה - בשלב זה, תמונה בשחור לבן בלבד. תמונה מיוצגת במחשב בתור אוסף של “פיקסלים” - כל פיקסל הוא נקודה על המסך שיכולה להכיל צבע אחד בודד - במקרה שלנו, או שחור או לבן. כלומר, כל תמונה מיוצגת בתור מלבן של פיקסלים שכל אחד מהם הוא או שחור או לבן. בפורמטים הפשוטים ביותר של תמונות, למשל BMP, זה בדיוק מה שקורה - הקובץ מכיל הרבה מאוד מספרים, שכל אחד מהם אומר “מה הצבע בפיקסל הכך וכך על המסך” (בפורמטים מחוכמים יותר מופעלות שיטות דחיסה שמאפשרות לזכור רק חלק מהמידע ועדיין להציג על המסך משהו שנראה “בסדר”). המטרה שלנו היא לקחת את התמונה ו”לחלק” אותה לשתי תמונות שונות - שוב, תמונות בשחור לבן - שכאשר שמים אותן זו על זו מקבלים את התמונה המקורית, ועם זאת מכל אחד מהחלקים לבדו לא ניתן להפיק שום מידע.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -103,17 +103,17 @@
 
 <p>לפני שאמשיך, הנה דוגמה לאיך זה עובד. קחו את שתי התמונות הבאות ונסו להדביק אותן זו על זו כשלבן משמש כצבע שקוף:</p>
 
-<p><a href="//assets/img/2008/08/vs_share1.png" target="_blank" title="Visual Crypto share 1"><img src="//assets/img/2008/08/vs_share1.png" alt="Visual Crypto share 1" /></a></p>
+<p><a href="/assets/img/2008/08/vs_share1.png" target="_blank" title="Visual Crypto share 1"><img src="/assets/img/2008/08/vs_share1.png" alt="Visual Crypto share 1" /></a></p>
 
-<p><a href="//assets/img/2008/08/vs_share2.png" target="_blank" title="Visual Crypto share 2"><img src="//assets/img/2008/08/vs_share2.png" alt="Visual Crypto share 2" /></a></p>
+<p><a href="/assets/img/2008/08/vs_share2.png" target="_blank" title="Visual Crypto share 2"><img src="/assets/img/2008/08/vs_share2.png" alt="Visual Crypto share 2" /></a></p>
 
 <p>על פניו זה נראה כאילו אני צוחק עליכם והעליתי שתי תמונות זהות. עם זאת, כששמים אותן זו על זו, זה מה שמקבלים:</p>
 
-<p><a href="//assets/img/2008/08/vs_result.png" target="_blank" title="Visual Crypto result"><img src="//assets/img/2008/08/vs_result.png" alt="Visual Crypto result" /></a></p>
+<p><a href="/assets/img/2008/08/vs_result.png" target="_blank" title="Visual Crypto result"><img src="/assets/img/2008/08/vs_result.png" alt="Visual Crypto result" /></a></p>
 
 <p>מה הולך כאן? זו בפירוש לא תמונה מונוכרומטית “סטנדרטית”. למעשה, המקור של התמונה הזו היה התמונה המונוכרומטית הבאה של <a href="http://he.wikipedia.org/wiki/%D7%94%D7%95%D7%9E%D7%A8_%D7%A1%D7%99%D7%9E%D7%A4%D7%A1%D7%95%D7%9F" target="_blank">הומר סימפסון</a>:</p>
 
-<p><a href="//assets/img/2008/08/visual_crypto_origianl.gif" target="_blank" title="Visual Crypto original"><img src="//assets/img/2008/08/visual_crypto_origianl.gif" alt="Visual Crypto original" /></a></p>
+<p><a href="/assets/img/2008/08/visual_crypto_origianl.gif" target="_blank" title="Visual Crypto original"><img src="/assets/img/2008/08/visual_crypto_origianl.gif" alt="Visual Crypto original" /></a></p>
 
 <p>שהיא אמנם בשחור לבן, אבל הצבעים בה הרבה יותר ברורים - יש קטעים רציפים של לבן, והאיזורים הכהים יותר מנוקדים לסירוגין בשחור ולבן. לעומת זאת בתמונה ה”משולבת” הכל כהה; אבל יש איזורים כהים יותר, ואיזורים כהים פחות. ה”לבן” של התמונה שלעיל מיוצג באיזורים שהם כהים-אבל-פחות; העין מסוגלת לעשות את ההפרדה בצורה אוטומטית (כמובן, גם מחשב יכול לבצע את ההפרדה הזו, ואפילו “לנקות” את התמונה ולחזור לתמונה המקורית; אך כל הרעיון בקריפטוגרפיה ויזואלית הוא שלא צריך מחשב כדי לבצע “שיחזור”).</p>
 
@@ -123,7 +123,7 @@
 
 <p>הנה כמה דוגמאות לפיקסלים שונים שיכולים להיווצר על ידי צביעת חלק מתת-הפיקסלים:</p>
 
-<p><a href="//assets/img/2008/09/subpixel.png" target="_blank" title="Subpixels"><img src="//assets/img/2008/09/subpixel.png" alt="Subpixels" /></a></p>
+<p><a href="/assets/img/2008/09/subpixel.png" target="_blank" title="Subpixels"><img src="/assets/img/2008/09/subpixel.png" alt="Subpixels" /></a></p>
 
 <p>כעת לרעיון המהותי: אם נשים שני פיקסלים כאלו אחד על השני (כשלבן משמש כשקוף, כמובן) אנחנו יכולים לקבל כמעט כל הרכב שנרצה. לדוגמה, תת הפיקסל התחתון משמאל הוא יחסית לבן (כי חצי ממנו לבן). אם נניח אותו על עצמו (כלומר - בשתי התמונות באותו פיקסל החצי הימני יהיה צבוע בשחור והשמאלי יהיה שקוף) נקבל את עצמו - משהו שעדיין נראה לבן יחסית. לעומת זאת, אם נניח אותו על שכנו מימין, הפיקסל שחלקו הימני שקוף והשמאלי שחור - נקבל פיקסל שהוא שחור לחלוטין.</p>
 
@@ -203,6 +203,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

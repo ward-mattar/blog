@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2010/07/29/probability_intro","headline":"הסתברות בסיסית - אחד חלקי קומבינטוריקה","dateModified":"2010-07-29T14:35:34+03:00","datePublished":"2010-07-29T14:35:34+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/07/29/probability_intro"},"description":"בפוסטים קודמים תיארתי כמה מושגי בסיס בקומבינטוריקה, וכעת אני רוצה להציג כמה שימושים שלהם; אלא שהמקום הטוב והמעניין ביותר לטעמי להצגת שימושים של המושגים הבסיסיים שהראיתי היא דווקא תורת ההסתברות - שהיא מה שנלמד כיום בבתי הספר, וגם מתקשרת חזק יותר לחיי היום יום שלנו. תורת ההסתברות היא זו שעונה על שאלות כגון “מה הסיכוי שלי לזכות בלוטו?” או “מה הסיכוי של פול התמנון להצליח ולנחש את תוצאות משחקי המונדיאל?” או “מה כדאי לעשות בבעיה של מונטי הול?” אבל, תשאלו, מה הקשר לקומבינטוריקה? ובכן, תורת ההסתברות המתמטית היא תורה רחבה ועשירה מאוד, שמתקשרת לתחומים רבים של המתמטיקה. הרבה מאוד תלוי בשאלה מה בדיוק ההגרלה שאנחנו מבצעים; הגרלות שונות נחקרות בכלים שונים. לא אכנס כרגע לעובי הקורה אלא רק אסתפק בלהגיד שאני הולך לדבר לעת עתה על הגרלות פשוטות מאוד יחסית, שעבורן הקשר לקומבינטוריקה ברור. הקשר הבסיסי הוא זה: אם יש לי קבוצה של $latex n$ אובייקטים ואני בוחר אחד מהם באקראי (כשלכל איבר יש הסתברות שווה להיבחר), אז ההסתברות שלי להגריל אובייקט אחד ספציפי היא $latex \\frac{1}{n}$. אם יש 100 תוצאות אפשריות בלוטו, אז ההסתברות שלי לזכות בלוטו (בהינתן שמילאתי טופס יחיד) היא $latex \\frac{1}{100}$. באופן כללי כשיש לנו בעיה הסתברותית פשוטה שכזו, אנחנו משתמשים בקומבינטוריקה כדי למצוא כמה אובייקטים קיימים בסך הכל (“כמה תוצאות אפשריות יש בלוטו?”) ואז ההסתברות שלנו לזכות היא אחד חלקי המספר שמצאנו.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -178,6 +178,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

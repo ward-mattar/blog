@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2018/10/23/quantum_advantage_with_shallow_circuits","headline":"”הוכחה ראשונה לעליונות מחשב קוונטי“ - מה לא (וקצת מה כן)","dateModified":"2018-10-23T14:56:25+03:00","datePublished":"2018-10-23T14:56:25+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2018/10/23/quantum_advantage_with_shallow_circuits"},"description":"השבוע קרה דבר שהוא תמיד משמח - עולם המתמטיקה עלה לכותרות בזכות תוצאה שקשורה לחישוב קוונטי - תחום שהופך לפופולרי יותר ויותר לאחרונה בעיתונות. “פריצת דרך: הוכחה ראשונה לעליונות מחשוב קוונטי” נאמר בכותרת בדה-מרקר, ובלועזית ראיתי כותרות אפילו מתלהבות יותר בסגנון “צוות מיבמ הוכיח שמחשבים קוונטיים יכולים לעשות דברים בלתי אפשריים”. ובכן, אני רוצה לעשות קצת סדר. ראשית, להסביר על מה בערך מדובר ומה בערך הוכיחו (התקציר: הוכיחו תוצאה מאוד יפה שהיא אכן פורצת דרך, אבל בואו לא נגזים עם הכותרות שנותנים לה), ושנית (ואת זה אעשה בפוסט נפרד) - להיכנס יותר לפרטים המתמטיים לטובת אלו שמעוניינים בכך (טוקבק זועם אצל דה-מרקר התלונן שלא סיפרו לו “איזו בעיה? גם השם מספיק” - ובכן חבר, להגיד 2D Hidden Linear Function Problem עוזר במשהו?) מה זה חישוב קוונטי בכלל? נתחיל מהשאלה המתבקשת - מה זה חישוב קוונטי בכלל? יש לי על כך סדרת פוסטים שלמה שמתחילה כאן, אבל הנה התקציר: חישוב קוונטי הוא תחום במדעי המחשב שמתבסס על היכולת שלנו לייצג אינפורמציה בצורה יותר מורכבת מאשר מחשבים מייצגים אותה כיום. הייצוג היותר מורכב הזה מתבסס על האופן שבו מתנהל העולם ברמה התת-אטומית כפי שאנחנו מצליחים להבין את זה; התחום בפיזיקה שעוסק ב”כפי שאנחנו מצליחים להבין את זה” הזה נקרא תורת הקוונטים. בנפנוף ידיים הפרוע המתבקש, חישוב “רגיל” מתבסס על כך שיחידת מידע בסיסית היא ביט: משהו שיכול להיות או 0 או 1 (ברמת הפרקטיקה, מה שקורה במחשב בפועל הוא שיש רכיב שמיועד לייצג ביט שכזה, והוא יכול לתחזק שתי רמות שונות של מתח חשמלי שאחת מהן מייצגת 0 ואחת מהן מייצגת 1). בחישוב קוונטי לעומת זאת יחידת המידע הבסיסית היא קיוביט: משהו שיכול להיות לא רק 0 או 1 אלא גם תערובת של השניים עם משקלים שונים ומשונים לכל אחד מהערכים הללו; לתערובת הזו קוראים סופרפוזיציה בפיזיקאית.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -195,6 +195,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

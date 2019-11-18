@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2014/11/11/automata_intro","headline":"אוטומטים ושפות רגולריות - מבוא","dateModified":"2014-11-11T16:48:04+02:00","datePublished":"2014-11-11T16:48:04+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2014/11/11/automata_intro"},"description":"אני רוצה לפתוח כאן בסדרת פוסטים על נושא שיש לי היכרות אישית טובה איתו אבל בבלוג נגעתי בו רק בחטף - תורת השפות הפורמליות, וספציפית אוטומטים. אני אשכח מפוסטים קודמים שאולי נגעו בנושאים הללו (כמו זה) וקרוב לודאי שאחזור על עצמי קצת בהתחלה, אבל אחר כך אציג דברים חדשים ובתקווה מגניבים.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -140,7 +140,7 @@
 
 <p>אם חושבים על זה קצת, רואים שהאלגוריתם יכול להיות באחד משני “מצבים” אפשריים - או ש-count שווה 0, או שהוא שווה 1. מה שקורה בכל צעד של האלגוריתם תלוי בתו הבא מהקלט שקראנו: אם קראנו 0 המצב שלנו לא משתנה; ואם קראנו 1 אנחנו עוברים מהמצב שלנו למצב השני. אנחנו מתחילים במצב של 0, והפלט שלנו אמור להיות “כן” רק אם גם סיימנו במצב של 0. את כל המידע הזה אפשר לקודד באיור באופן הבא:</p>
 
-<p><a href="//assets/img/2014/11/diagram001.png"><img src="//assets/img/2014/11/diagram001.png" alt="תיאור האוטומט" width="307" height="119" class="aligncenter size-full wp-image-3189" /></a></p>
+<p><a href="/assets/img/2014/11/diagram001.png"><img src="/assets/img/2014/11/diagram001.png" alt="תיאור האוטומט" width="307" height="119" class="aligncenter size-full wp-image-3189" /></a></p>
 
 <p>מה שנכלל באיור הזה הוא <strong>מצבים</strong>, שהם עיגולים, ונתתי להם את השמות <span>$latex q_{0},q_{1}$</span>. יש <strong>מעברים</strong> בין מצבים שמתוארים על ידי חצים (“אי שינוי מצב” מתואר על ידי מעבר ממצב לעצמו) כשעל החצים יש את סימון התו מהקלט שקראנו וגרם למעבר הזה. את <span>$latex q_{0}$</span> סימנו בשני עיגולים כדי לומר שזה מצב <strong>מקבל</strong>, כזה שאם האלגוריתם מסיים את ריצתו בו אז התשובה של האלגוריתם היא “כן”, וכמו כן יש חץ משום מקום שנכנס לתוך <span>$latex q_{0}$</span> כדי לתאר שזה המצב <strong>ההתחלתי</strong> שבו האלגוריתם מתחיל את ריצתו.</p>
 
@@ -202,7 +202,7 @@
 
 <p>עכשיו, מכיוון ש-<span>$latex i&lt;j$</span> הרי ש-<span>$latex n-j+i&lt;n$</span> ולכן האוטומט קיבל מילה שאינה בשפה. סוף הסיפור. אם עדיין לא ברור למה זה עבד, הנה איור שממחיש את זה:</p>
 
-<p><a href="//assets/img/2014/11/pumping_lemma.png"><img src="//assets/img/2014/11/pumping_lemma.png" alt="pumping_lemma" width="584" height="168" class="aligncenter size-large wp-image-3192" /></a></p>
+<p><a href="/assets/img/2014/11/pumping_lemma.png"><img src="/assets/img/2014/11/pumping_lemma.png" alt="pumping_lemma" width="584" height="168" class="aligncenter size-large wp-image-3192" /></a></p>
 
 <p>האיור איננו של אוטומט, אלא תיאור סכמטי של מסלול החישוב שהאוטומט מבצע על המילה הספציפית <span>$latex a^nb^n$</span>. חץ “מזגזג” במקום חץ ישר באיור פירושו שמוסתר כאן מסלול שלם, שעובר במצבים שאני לא טורח לצייר. הכיתוב של החץ אומר מה המילה שנקראת במהלך הריצה במסלול הזה. הצומת שבמרכז הוא הצומת שבו מבקרים פעמיים. האיור הזה מסייע לטעמי מאוד להבין מה קורה כאן - בסך הכל ויתרנו על הלולאה האמצעית; החישוב עדיין אמור להסתיים באותו מצב מקבל למרות שהוא קרא פחות <span>$latex a$</span>-ים ממה שהוא היה “אמור” לקרוא.</p>
 
@@ -260,6 +260,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

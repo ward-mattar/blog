@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2015/01/30/regular_expressions","headline":"ביטויים רגולריים","dateModified":"2015-01-30T00:23:31+02:00","datePublished":"2015-01-30T00:23:31+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2015/01/30/regular_expressions"},"description":"בפוסט האחרון שלנו על שפות רגולריות הוכחתי שניתן לבנות שפה רגולרית מתוך שפות פשוטות מאוד (סינגלטונים שמכילים מילה אחת מאורך 1 לכל היותר) ושלוש פעולות יצירה פשוטות - איחוד, שרשור וסגור-קלייני. ביטויים רגולריים הם שיטת ייצוג לשפות רגולריות שמשתמשת בדיוק באותן שפות פשוטות ופעולות יצירה. שיטת הייצוג הזו היא כל כך מוצלחת עד שמשתמשים בה גם בעולם האמיתי - אבל כמובן, בעולם האמיתי זה לא בדיוק אותו הדבר כמו היצור התיאורטי שאציג כרגע - ונראה את זה בהמשך.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -133,7 +133,7 @@
 
 התשובה גם כן פשוטה: בשביל לעשות חיפושים מתוחכמים. קרוב לודאי שכולכם ביצעתם חיפוש כלשהו במסמך. חיפושים "רגילים" תמיד מחפשים מחרוזת ספציפית אחת - רצף של תווים (לאו דווקא כזה שמרכיב מילה שלמה, אולי גם חלק ממילה). אבל לפעמים אנחנו רוצים לחפש משהו שאנחנו לא יודעים איך בדיוק הוא כתוב, אלא רק מה התבנית הכללית שלו; ולפעמים אנחנו רוצים לחפש הרבה דברים בבת אחת, ואנחנו יודעים מה התבנית המשותפת שלהם. בקיצור, אנחנו רוצים לבצע חיפוש אחרי איברים ששייכים לקבוצה כלשהי של מילים - שפה. לפעמים, כפי שרנדל מונרו מ-xkcd מדגים, זה יכול להציל חיים:
 
-<a href="//assets/img/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="//assets/img/2015/01/regular_expressions.png" width="600" height="607" /></a>
+<a href="/assets/img/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="/assets/img/2015/01/regular_expressions.png" width="600" height="607" /></a>
 
 איך זה עובד בפועל? הרעיון הכללי הוא להשתמש בכלים שכבר הצגתי. בהינתן ביטוי רגולרי, אפשר לפענח אותו ולבנות אוטומט אי-דטרמיניסטי שמקבל אותו. את האוטומט הזה אפשר להריץ על טקסט ולראות אם האוטומט מגיע למצב מקבל. אם הוא מקבל, אז מצאנו מילה בשפה שהאוטומט מקבל שמתחילה בתחילת הטקסט ומסתיימת במקום שבו האוטומט הגיע למצב מקבל. אם לא מצאנו (ובפרט אם הגענו אל "בור" או שהחישוב נתקע) אז אנחנו יודעים שאפשר לדלג על האות הראשונה בטקסט ולהתחיל מחדש חיפוש באות הבאה, וכן הלאה. בנוסף, לא חייבים לעצור אחרי שמגיעים למצב מקבל - אפשר לנקוט בגישה "חמדנית" שבה ממשיכים עד המילה הארוכה ביותר שאותה מצליחים לקבל.
 
@@ -237,7 +237,7 @@
 
 ואם הגעתי לנקודה הזו, יש רק דרך אחת לסיים. באתר השאלות והתשובות stackoverflow מישהו שאל פעם בדיוק על זה - פרסור הטמל עם ביטויים רגולריים. הוא קיבל "<a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">תשובה</a>" שאמנם קשה לומר שהיא תשובה מועילה יותר מדי, אבל היא אחד מהדברים המשעשעים ביותר שקשורים לביטויים רגולריים שאני מכיר (הו, יש המון! בדיחות ביטויים רגולריים זה אדיר!). היא כל כך מוצלחת שאני לא רק מקשר אליה אלא שם צילום מסך, שיהיה לתמיד (ולא, שום דבר לא מקולקל בצילום המסך או במחשב שלכם, כל הפונטים שם הם בכוונה):
 
-<a href="//assets/img/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="//assets/img/2015/01/cthulhu.png" width="729" height="684" /></a>
+<a href="/assets/img/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="/assets/img/2015/01/cthulhu.png" width="729" height="684" /></a>
 
 </div>
 
@@ -293,6 +293,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

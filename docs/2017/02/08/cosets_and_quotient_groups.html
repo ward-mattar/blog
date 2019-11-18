@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2017/02/08/cosets_and_quotient_groups","headline":"קוסטים, משפט לגראנז’ וחבורות מנה","dateModified":"2017-02-08T12:44:02+02:00","datePublished":"2017-02-08T12:44:02+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2017/02/08/cosets_and_quotient_groups"},"description":"בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \\left|H\\right||\\left|G\\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -111,7 +111,7 @@
 <p>עכשיו, בואו ניקח את <span>$latex H$</span> ונחבר לכל אבריה את <span>$latex \left(0,1\right)$</span> - וקטור היחידה האנכי. נקבל את מה שאסמן בתור <span>$latex H+\left(0,1\right)=\left\{ \left(a,1\right)\ |\ a\in\mathbb{R}\right\} $</span>. הדבר הזה הוא הקו האופקי בגובה <span>$latex y=1$</span>. זו לא תת-חבורה כי אין סגירות, אבל אפשר לחשוב על זה בתור “עותק” של ציר <span>$latex x$</span> שפשוט הזזנו קצת למעלה. באופן דומה אם נחבר לכל אברי <span>$latex H$</span> את <span>$latex \left(1,1\right)$</span> עדיין נקבל את אותו קוסט בדיוק - תחשבו על מה שקורה כשאתם לוקחים קו ישר אינסופי ומרימים אותו למעלה, ומה קורה כשאתם מרימים אותו באלכסון למעלה ושמאלה - מכיוון שהקו אינסופי, תקבלו בסופו של דבר את אותו הדבר בדיוק. לכן, כל עוד נחבר ל-<span>$latex H$</span> איבר מהצורה <span>$latex \left(x,1\right)$</span>, ולא משנה מהו <span>$latex x$</span>, נקבל את אותו קוסט. בקרוב נדון עוד בשאלה הזו, “מי האיברים שכשמחברים אותם לתת-החבורה מקבלים את אותו קוסט”.</p>
 
 <p>שאר הקוסטים של <span>$latex H$</span> הם שאר הישרים האופקיים, והשאלה עכשיו היא מה קורה עם תת-חבורות דומות אחרות. למשל, <span>$latex H=\left\{ \left(a,a\right)\ |\ \left(a\in\mathbb{R}\right)\right\} $</span>. זה תרגיל נחמד להראות שקוסט כאן הוא תמיד מהצורה <span>$latex H+\left(x,0\right)=\left\{ \left(a+x,a\right)\ |\ a\in\mathbb{R}\right\} $</span> ויוצא שקוסט כזה הוא קו ישר עם שיפוע של 45 מעלות, כמו <span>$latex H$</span> עצמה, אבל שנקודת החיתוך שלו עם ציר <span>$latex x$</span> היא שונה מ-<span>$latex \left(0,0\right)$</span>. זה גם מה שיקרה באופן כללי: כל ישר שעובר דרך הראשית הוא תת-חבורה של <span>$latex \mathbb{R}^{2}$</span>, ולכל ישר כזה, הקוסטים הם כל הישרים המקבילים לו. הנה איור:<strong>
-<a href="//assets/img/2017/02/cosets.png" rel="attachment wp-att-3424"><img class="aligncenter size-large wp-image-3424" src="//assets/img/2017/02/cosets.png" alt="cosets" width="584" height="383" /></a></strong></p>
+<a href="/assets/img/2017/02/cosets.png" rel="attachment wp-att-3424"><img class="aligncenter size-large wp-image-3424" src="/assets/img/2017/02/cosets.png" alt="cosets" width="584" height="383" /></a></strong></p>
 
 <p>כאן תת-החבורה היא בשחור וחלק מהקוסטים האחרים שלה הם בצבעים עליזים. אני אומר <strong>חלק</strong> מהקוסטים כי אי אפשר לצייר את כולם - איחוד כל הקוסטים יתן לנו את כל המישור.</p>
 
@@ -250,6 +250,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2015/03/05/context_free_grammars_intro","headline":"מבוא לדקדוקים חסרי הקשר","dateModified":"2015-03-05T18:54:32+02:00","datePublished":"2015-03-05T18:54:32+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2015/03/05/context_free_grammars_intro"},"description":"הפוסט על משפט נרוד מהווה לטעמי סיום הולם לנושא של שפות רגולריות, אבל מהנושא הזה יש קפיצה טבעית מאוד אל נושא קרוב ברוחו - שפות חסרות הקשר. בזמן שהכלי העיקרי שבו השתמשנו כדי לתאר שפות רגולריות היה אוטומטים, עבור שפות חסרות הקשר הכלי הזה הוא דקדוקים. באופן כללי דקדוקים הם דבר מאוד מועיל ומעניין שכדאי להציג ואפשר לגשת אליו בכמה דרכים שונות; בפוסט הזה אנקוט בדרך קצת מוזרה יחסית (אבל נחמדה, לטעמי, אחרת לא הייתי מציג אותה) שבה נגיע אל המושג של דקדוק מתוך המושג של ביטוי רגולרי.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -138,7 +138,7 @@
 
 <p>ההבדל הוא שבדרך הראשונה התחלנו עם החיבור, ובדרך השניה התחלנו עם הכפל. על פניו זה לא נראה כזה שונה, אבל באופן ציורי קל לראות את ההבדל. אני הולך לצייר את <strong>עץ הגזירה</strong> של שתי הגזירות הללו. עץ גזירה הוא דרך גרפית נאה לצייר גזירות בצורה קומפקטית - בלי להיכנס לפורמליזם, זה עץ שבו כל צומת פנימי מתאים למשתנה שהופיע מתישהו בגזירה, והבנים שלו הם התווים שהוא גזר. כפי שתוכלו לראות, לשתי הגזירות השונות הללו יש עצי גזירה שונים:</p>
 
-<p><strong><a href="//assets/img/2015/03/diagram004.png"><img class="aligncenter size-full wp-image-3228" alt="diagram004" src="//assets/img/2015/03/diagram004.png" width="347" height="251" /></a></strong></p>
+<p><strong><a href="/assets/img/2015/03/diagram004.png"><img class="aligncenter size-full wp-image-3228" alt="diagram004" src="/assets/img/2015/03/diagram004.png" width="347" height="251" /></a></strong></p>
 
 <p>עץ גזירה הוא מה שמתאר את ה”מבנה” של המילה שנגזרה. במקרה של ביטוי חשבוני, אפשר לחשב את הערך של הביטוי עם עץ הגזירה, בצורה מתבקשת: הערך של עלה הוא ערך המספר שלו (אצלי זה טיפה יותר מסובך כי מספר יכול להיות מיוצג על ידי כמה עלים, אבל תתעלמו מזה או תחשבו על המקרה שבו כל המספרים הם בני ספרה אחת). הערך של צומת פנימי מתקבל מהפעלת האופרטור שכתוב באותו צומת פנימי על שני הבנים שלו. קל לראות שבעץ הגזירה הימני הערך שנקבל הוא <span>$latex 29$</span>, אבל בעץ הגזירה השמאלי הערך שנקבל הוא בכלל <span>$latex 64$</span>. מה הלך פה? ובכן, ראינו שאת הביטוי <span>$latex 5+3\times8$</span> יש <strong>שתי דרכים שונות מהותית</strong> לקרוא - זאת על פי <strong>סדר הקדימויות</strong> שאנחנו נותנים לאופרטורים - האם כפל בא קודם (השמאלי) או חיבור (הימני).</p>
 
@@ -210,6 +210,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

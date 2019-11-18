@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2009/11/27/quine_and_recursion_theorem","headline":"הפוסט שיודע להדפיס את עצמו","dateModified":"2009-11-27T19:07:25+02:00","datePublished":"2009-11-27T19:07:25+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2009/11/27/quine_and_recursion_theorem"},"description":"הפניה עצמית היא אחד מהרעיונות שטבועים עמוק בלב תורת החישוביות והלוגיקה המתמטית. היא מה שעומד בבסיס משפטי אי השלמות של גדל והוכחת אי כריעות בעיית העצירה. זה מעלה את השאלה עד כמה ניתן להכליל את השיטה הזו. האם מודל חישובי - לצורך העניין מכונת טיורינג, אבל אפשר גם תוכנית מחשב - מסוגל להשתמש בייצוג של עצמו באופן ישיר? האם תוכנית יכולה להשתמש ישירות בקוד שלה? ואם נפשט, האם תוכנית מחשב יכולה לעשות דבר מה פשוט כמו הדפסת הקוד שלה עצמה?כיום השאלה הזו נראית די טיפשית. יש מדפסות תלת ממדיות שיודעות לייצר עותק מושלם של עצמן, אז מהי תוכנית מחשב בהשוואה לכך? אך בזמן שתורת החישוביות הייתה עוד צעירה והתוצאה הזו הוכחה לראשונה, עוד לא היו דברים כאלו. הבה ננסה לשכוח שניה ממה שאנחנו יודעים ולחשוב מה הבעיה העקרונית כאן. איך גורמים לתוכנית מחשב להדפיס את הקוד של עצמה? כמובן, אפשר לבחור בגישה ה”רמאית” ולהגיד “התוכנית תפתח את הקובץ שבו שמור הקוד שלה ותדפיס אותו”, אלא שאנחנו לא רוצים להסתמך על עזרים חיצוניים שכאלו, ולכן אנחנו מתמקדים בשאלה הקונקרטית על מכונת טיורינג, שלא מסוגלת לעשות תעלולים שכאלו. אבל באותה מידה ניתן לשאול האם ניתן לכתוב תוכנית מחשב שאיכשהו מסוגלת להדפיס את הקוד שלה עצמה בלי גישה לקבצים ובלי שום דבר דומה (כשה”קופסה השחורה” היחידה שבה היא פונקצית ההדפסה). תוכניות מחשב שכאלו, שמדפיסות את עצמן, נקראות באופן כללי quine (על שם לוגיקאי אמריקאי שחיבב מאוד הפניות עצמיות).","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -190,6 +190,6 @@ print q(b) + b
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

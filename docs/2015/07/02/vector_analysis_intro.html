@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2015/07/02/vector_analysis_intro","headline":"אנליזה וקטורית - מבוא","dateModified":"2015-07-02T20:03:32+03:00","datePublished":"2015-07-02T20:03:32+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2015/07/02/vector_analysis_intro"},"description":"בזמנו כתבתי בבלוג סדרת פוסטים על חשבון אינפיניטסימלי. הצגתי בסדרה הזו את שלושת המושגים הבסיסיים שעליהם החשבון האינפיניטסימלי נשען - הגבול, הנגזרת והאינטגרל - אבל לא הלכתי יותר מדי רחוק אחר כך (אפילו לנושא כמו טורים לא הגעתי).","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -102,11 +102,11 @@
 
 <p>בפוסט הזה אני רוצה לתת סקירה כללית של הנושאים שאנחנו מדברים עליהם, בלי להיכנס יותר מדי לפורמליזם. ראשית נתחיל עם הצגת שדה המשחק, שהוא כאמור פונקציות <span>$latex f:\mathbb{R}^{n}\to\mathbb{R}^{m}$</span> מכיוון שזו דרך הצגה מאוד כללית, הרבה פעמים כשאני ארצה לתת דוגמה קונקרטית, אני אלך למקרה הלא טריוויאלי הראשון: פונקציה ממשית בשני משתנים, <span>$latex f:\mathbb{R}^{2}\to\mathbb{R}$</span>. למשל <span>$latex f\left(x,y\right)=x+y$</span> או <span>$latex f\left(x,y\right)=\sin x\cos y$</span> וכדומה. ויזואליזציה נחמדה לפונקציה שכזו היא בתור <strong>גובה פני השטח</strong> במפה: לכל קואורדינטת <span>$latex \left(x,y\right)$</span> מותאם גובה <span>$latex f\left(x,y\right)$</span> שהוא מספר ממשי. זה נראה ככה (תמונה באדיבות ויקיפדיה האנגלית):</p>
 
-<p><strong><a href="//assets/img/2015/07/Three-dimensional_graph.png"><img class="aligncenter size-full wp-image-3274" alt="Three-dimensional_graph" src="//assets/img/2015/07/Three-dimensional_graph.png" width="855" height="706" /></a></strong></p>
+<p><strong><a href="/assets/img/2015/07/Three-dimensional_graph.png"><img class="aligncenter size-full wp-image-3274" alt="Three-dimensional_graph" src="/assets/img/2015/07/Three-dimensional_graph.png" width="855" height="706" /></a></strong></p>
 
 <p>כלומר, מין הר שכזה. עכשיו אפשר לנסח שתי שאלות על היצור הזה: ראשית, נניח שאנחנו נמצאים בנקודה מסויימת; כמה <strong>תלול</strong> ההר באותה נקודה? שנית, בואו ניקח שטח תחום כלשהו מההר - מה ה<strong>נפח</strong> שלו? כלומר, כמה סלעים יש בפנים? על השאלה הראשונה עונים באמצעות נגזרות, ועל השאלה השניה באמצעות אינטגרלים. רק שהסיפור יותר מסובך כאן מאשר במימד אחד. למשל, הביטו על האוכף הזה (שוב, תודה לויקיפדיה האנגלית):</p>
 
-<p><strong><a href="//assets/img/2015/07/Saddle_point.png"><img class="aligncenter size-full wp-image-3275" alt="Saddle_point" src="//assets/img/2015/07/Saddle_point.png" width="978" height="813" /></a></strong></p>
+<p><strong><a href="/assets/img/2015/07/Saddle_point.png"><img class="aligncenter size-full wp-image-3275" alt="Saddle_point" src="/assets/img/2015/07/Saddle_point.png" width="978" height="813" /></a></strong></p>
 
 <p>במרכז האוכף, מה קורה? האם אנחנו עולים או יורדים? ובאיזה קצב? נראה שזה תלוי ב<strong>כיוון</strong> שאנחנו הולכים בו. כבר אי אפשר לדבר על נגזרת רגילה, צריך לדבר על “נגזרת עבור כיוון מסויים” - <strong>נגזרת מכוונת</strong>. אבל מתברר שיש גם דרך לדבר בצורה כלשהי על “הנגזרת לכל הכיוונים בבת אחת”, פשוט לא נקבל מספר כמו קודם אלא <strong>טרנספורמציה לינארית</strong>. מעט בעייתי להסביר את זה בלי להיכנס לפורמליזם (שאכנס אליו בפוסט הבא), אבל זהו הרעיון: בפונקציות ממשיות במשתנה יחיד, הנגזרת של פונקציה <span>$latex f$</span> בנקודה מסויימת הייתה בסך הכל מספר ממשי (“המספר הנגזר”). המספר הזה נתן לנו את “קצב השינוי הרגעי” של הפונקציה באותה נקודה, אבל יש גם דרך התבוננות גאומטרית על זה: הנגזרת בנקודה נתנה לנו את <strong>שיפוע המשיק</strong> לגרף הפונקציה באותה נקודה. אבל מה זה “משיק”? זה קו ישר שעובר דרך הנקודה הזו ו”נראה בערך כמו הפונקציה” באותה נקודה. עכשיו בואו ניקח את הרעיון הזה צעד קדימה. קו ישר הוא <strong>טרנספורמציה לינארית</strong>: הוא פונקציה מהצורה <span>$latex T\left(x\right)=ax+b$</span>, ואנחנו יכולים בלי הגבלת הכלליות להתייחס לנקודה שבה אנו מחשבים את הפונקציה בתור ראשית הצירים כדי לקבל ש-<span>$latex b=0$</span>, כלומר <span>$latex T\left(x\right)=ax$</span> כאשר <span>$latex a$</span> הוא המספר הנגזר של <span>$latex f$</span> בנקודה 0 הזו (<span>$latex a=f^{\prime}\left(0\right)$</span>). אפשר להוכיח שבמובן מסויים, <span>$latex T$</span> הזו מהווה קירוב טוב ל-<span>$latex f$</span> בסביבות הנקודה 0. לקירוב הזה קוראים <strong>דיפרנציאל</strong> של <span>$latex f$</span> בנקודה 0.</p>
 
@@ -192,6 +192,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

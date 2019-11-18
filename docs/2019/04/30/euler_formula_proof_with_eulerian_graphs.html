@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs","headline":"הוכחה לנוסחת אוילר לגרפים בעזרת גרפים אוילריים","dateModified":"2019-04-30T13:34:33+03:00","datePublished":"2019-04-30T13:34:33+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs"},"description":"המטרה שלי בפוסט הזה היא לקשר שני דברים בסיסיים בתורת הגרפים שאני מאוד מחבב אישית: נוסחת אוילר לגרפים מישוריים, והמושג של גרף אוילרי. ספציפית, אני הולך לתת הוכחה לנוסחת אוילר שמתבססת על גרפים אוילריים, תוך הסתייגות הולמת שזו לא באמת הוכחה פורמלית עד הסוף ואם ממש מתעקשים אפשר גם להציג אותה בלי המושג של גרף אוילרי אבל איפה הכיף פה. באנו היום לכייף.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -102,13 +102,13 @@
 
 <p><strong>גרף אוילרי</strong> הוא גרף שאפשר לצייר מבלי להרים את העפרון מהדף - כזה שיש בו מסלול שעובר דרך כל הקשתות בדיוק פעם אחת. הנה דוגמא לגרף שיש בו גם את זה וגם את זה:</p>
 
-<p><img class="alignnone size-full wp-image-3771" src="//assets/img/2019/04/pasted1.png" alt="" width="394" height="580" /></p>
+<p><img class="alignnone size-full wp-image-3771" src="/assets/img/2019/04/pasted1.png" alt="" width="394" height="580" /></p>
 
 <p>הגרף הזה הוא בעצם ציור הבית מחידת ה”האם אפשר לצייר בית עם איקס בתוכו מבלי להרים את העפרון מהדף” למעט זה שבמקום להשלים את האיקס בתוכו, הקשת שמחברת את הפינה הימנית-תחתונה והפינה השמאלית-עליונה עוברת <strong>מחוץ</strong> לבית כדי לא לחתוך את הקשת שעוברת בתוך הבית. זה מראה שהגרף הזה הוא <strong>מישורי</strong>, בנוסף לכך שהוא אוילרי. כפי שאפשר לנחש, הוא הולך לככב בהמשך הפוסט שלנו.</p>
 
 <p>כשיש לנו ציור של גרף מישורי אפשר לדבר לא רק על הצמתים והקשתות שלו אלא גם על <strong>הפאות</strong> שלו - השטחים הסגורים שנתחמים על ידי הקשתות (המילה “פאות” מגיעה מההקשר המקורי של נוסחת אוילר, עבור פאונים; לא אדבר על כך בפוסט הזה):</p>
 
-<p><img class="alignnone size-full wp-image-3772" src="//assets/img/2019/04/pasted2.png" alt="" width="405" height="570" /></p>
+<p><img class="alignnone size-full wp-image-3772" src="/assets/img/2019/04/pasted2.png" alt="" width="405" height="570" /></p>
 
 <p>בתמונה הנוכחית צבעתי את הפאות בצבעים עליזים - ורוד, ירוק, כחול, צהוב ולבן. רגע, איפה הלבן כאן? ובכן, גם השטח ש”מחוץ” לגרף נחשב לאחת מהפאות שלו, “הפאה החיצונית”. כלומר, הצביעה העליזה שלי מראה לנו שלגרף יש חמש פאות. בנוסף לכך יש לו חמישה צמתים (הנקודות הכחולות) ויש לו שמונה קשתות (הקווים השחורים העבים שמחברים צמתים). אם נסמן את מספר הצמתים ב-<span>$latex V$</span>, את מספר הקשתות ב-<span>$latex E$</span> ואת מספר הפאות ב-<span>$latex F$</span> נגלה שמתקיים</p>
 
@@ -124,35 +124,35 @@
 
 <p>בואו נעקוב אחרי תהליך הציור של התמונה לעיל, עם ספירה של מספר הקשתות והפאות בכל רגע נתון. כל חמשת הצמתים יופיעו כל הזמן - כלומר, <span>$latex V=5$</span> הולך להיות קבוע. בהתחלה יש רק את הצמתים, ודמיינו שאנחנו עומדים בצומת הימני-תחתון ומחכים בהתרגשות לתחילת המסע שלנו בגרף:</p>
 
-<p><img class="alignnone size-full wp-image-3764" src="//assets/img/2019/04/pasted3.png" alt="" width="262" height="458" /></p>
+<p><img class="alignnone size-full wp-image-3764" src="/assets/img/2019/04/pasted3.png" alt="" width="262" height="458" /></p>
 
 <p>כאן <span>$latex E=0$</span> ו-<span>$latex F=1$</span> (כי הפאה החיצונית, הלבנה).</p>
 
 <p>עכשיו נבצע את הצעד הראשון:</p>
 
-<p><img class="alignnone size-full wp-image-3765" src="//assets/img/2019/04/pasted4.png" alt="" width="250" height="497" /></p>
+<p><img class="alignnone size-full wp-image-3765" src="/assets/img/2019/04/pasted4.png" alt="" width="250" height="497" /></p>
 
 <p>ועכשיו <span>$latex E=1$</span> ו-<span>$latex F=1$</span> נשאר כמו קודם - מכיוון שהקשת הגיעה לצומת שטרם ביקרנו בו, לא יצרנו פאה חדשה. אנחנו רואים שלבקר בצומת שטרם ביקרנו בו זה משעמם, אז בואו נבצע את כל יתר הצעדים הנדרשים כדי שנבקר <strong>בכל</strong> הצמתים; מרגע זה והלאה, כל צעד נוסף יצור פאה חדשה:</p>
 
-<p><img class="alignnone size-full wp-image-3766" src="//assets/img/2019/04/pasted5.png" alt="" width="236" height="455" /></p>
+<p><img class="alignnone size-full wp-image-3766" src="/assets/img/2019/04/pasted5.png" alt="" width="236" height="455" /></p>
 
 <p>כרגע <span>$latex E=4$</span> (כמספר הצמתים פחות אחד - לא מקרי, כמובן, הקשר <span>$latex E=V-1$</span> מתקיים בכל <strong>עץ</strong>) ו-<span>$latex F=1$</span>. כלומר, כבר כרגע מתקיימת הנוסחה <span>$latex V-E+F=2$</span>, וזה לא מפתיע כי הגרף שקיבלנו כרגע הוא גם מישורי וגם <strong>קשיר</strong> (זוכרות? קשירות הייתה הכרחית בשביל נוסחת אוילר, בדיוק בגלל שצמתים מבודדים כמו בתמונות הקודמות לא משפיעים על <span>$latex E$</span> ועל <span>$latex F$</span> ואפשר להוסיף כמה מהם שרוצים). מה שיקרה מכאן ואילך הוא שכל צעד <strong>ישמר</strong> את הקשר הזה, <span>$latex V-E+F=2$</span>; כי כל צעד גם יוסיף קשת אחת (יגדיל את <span>$latex E$</span> ב-1) וגם יצור פאה חדשה (יגדיל את <span>$latex F$</span> ב-1). בואו נראה את זה קורה בפעם הראשונה:</p>
 
-<p><img class="alignnone size-full wp-image-3767" src="//assets/img/2019/04/pasted6.png" alt="" width="243" height="448" /></p>
+<p><img class="alignnone size-full wp-image-3767" src="/assets/img/2019/04/pasted6.png" alt="" width="243" height="448" /></p>
 
 <p>מה שנחמד פה הוא שהפאה שיצרנו לא מופיעה בתמונה הסופית, פשוט כי הצעד הבא מפרק אותה לשתי פאות:</p>
 
-<p><img class="alignnone size-full wp-image-3768" src="//assets/img/2019/04/pasted7.png" alt="" width="220" height="449" /></p>
+<p><img class="alignnone size-full wp-image-3768" src="/assets/img/2019/04/pasted7.png" alt="" width="220" height="449" /></p>
 
 <p>ונראה לי שהרעיון ברור אז אני אצייר את שתי הקשתות הבאות ביחד:</p>
 
-<p><img class="alignnone size-full wp-image-3769" src="//assets/img/2019/04/pasted8.png" alt="" width="366" height="553" /></p>
+<p><img class="alignnone size-full wp-image-3769" src="/assets/img/2019/04/pasted8.png" alt="" width="366" height="553" /></p>
 
 <p>זה מסיים את ה”הוכחה”, אבל עדיין צריך להתייחס למקרה שבו הגרף המישורי שלנו איננו אוילרי, מה שמחזיר אותנו לשאלה בסיסית קצת יותר - מתי גרף הוא <strong>כן</strong> אוילרי? כאן נדרשים שני דברים. ראשית, שהגרף יהיה קשיר; אבל אנחנו מניחים שהגרף המישורי שלנו קשיר, כך שזה לא רלוונטי. שנית, צריך ש<strong>הדרגה</strong> של כל צומת תהיה זוגית, פרט אולי לשני צמתים בדיוק. דרגה של צומת היא מספר הקשתות שנוגעות בו; מכיוון שבמסלול אוילרי בכל פעם שבה אנחנו נכנסים לצומת ו”שורפים” את הקשת שאיתה נכנסנו אנחנו גם יוצאים ממנו ו”שורפים” את הקשת שאיתה יצאנו, קל לראות שמספר הקשתות שמתאימות לכל צומת חייב להיות זוגי למעט בצמתי ההתחלה והסיום. האתגר הגדול יותר הוא להראות שזה גם <strong>תנאי מספיק</strong> לכך שיהיה מסלול אוילרי בגרף, אבל אני לא אעשה את זה כאן הפעם אלא רק אשתמש בזה.</p>
 
 <p>בגלל שהקריטריון הזה לאוילריות של גרף הוא כל כך פשוט, אנחנו יכולים לנצל אותו ולהפוך גרף לאוילרי בקלי קלות - פשוט נכפיל את מספר הקשתות. הנה דוגמא:</p>
 
-<p><img class="alignnone size-full wp-image-3770" src="//assets/img/2019/04/pasted9.png" alt="" width="876" height="366" /></p>
+<p><img class="alignnone size-full wp-image-3770" src="/assets/img/2019/04/pasted9.png" alt="" width="876" height="366" /></p>
 
 <p>הגרף הימני הוא הגרף המפורסם של “בעיית הגשרים של קניגסברג” שאוילר פתר. כל הצמתים שם מדרגה אי זוגית ולכן הגרף אינו אוילרי, למרות שהוא בבירור מישורי ובבירור מקיים את נוסחת אוילר (<span>$latex V=4$</span> ו-<span>$latex E=7$</span> ו-<span>$latex F=5$</span>). הגרף השמאלי הוא מה שקורה לגרף הימני כשאני לוקח כל קשת ומפצל אותה לשתיים. ההשפעה של הפיצול הזה על הגרף היא זו:</p>
 <ol>
@@ -221,6 +221,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

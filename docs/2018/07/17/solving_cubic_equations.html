@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2018/07/17/solving_cubic_equations","headline":"אז איך פותרים משוואה ממעלה שלישית?","dateModified":"2018-07-17T01:40:28+03:00","datePublished":"2018-07-17T01:40:28+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2018/07/17/solving_cubic_equations"},"description":"סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\\ge5$ וכן פתירה עבור $latex n\\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\\text{Gal}\\left(E/F\\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\\supset G_{1}\\supset\\dots\\supset G_{k}=\\left\\{ e\\right\\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\\subset E_{1}\\subset\\dots\\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש).","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -500,6 +500,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

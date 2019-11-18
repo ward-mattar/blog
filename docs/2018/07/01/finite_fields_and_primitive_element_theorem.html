@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2018/07/01/finite_fields_and_primitive_element_theorem","headline":"שדות סופיים ומשפט האיבר הפרימיטיבי","dateModified":"2018-07-01T01:46:24+03:00","datePublished":"2018-07-01T01:46:24+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2018/07/01/finite_fields_and_primitive_element_theorem"},"description":"עכשיו, כשיש לנו את הבסיס של תורת גלואה, אפשר לחזור לנושאים שהזכרתי בעבר אבל לא התעסקתי בהם עד הסוף. בפוסט הזה אני רוצה לדבר על שני נושאים שקשורים קצת זה לזה: שדות סופיים ומשפט האיבר הפרימיטיבי. משפט האיבר הפרימיטיבי אומר שאם $latex E/F$ היא הרחבת שדות סופית וספרבילית, אז קיים $latex \\theta\\in E$ כך ש-$latex E=F\\left(\\theta\\right)$. במילים אחרות, כל הרחבה ספרבילית וסופית היא פשוטה. המושג של “ספרבילית”, שהזכרתי בפוסט קודם הוא טריוויאלי מעל מה שקראתי לו שדה מושלם: כל הרחבה סופית של שדה מושלם היא ספרבילית, כך שאפשר לשכוח מהמושג הזה. כל שדה סופי הוא מושלם, ו-$latex \\mathbb{Q}$ הוא שדה מושלם, ואלו בכל מקרה יהיו השדות שמעניינים אותנו כאן. עדיין, אני אוכיח את המשפט באופן כללי. משפט האיבר הפרימטיבי, עד כדי כל מני דברים אני רוצה להתחיל ממה שהוא העיקר: אם $latex E/F$ היא הרחבה סופית, איך מוצאים את האיבר $latex \\theta$ המופלא שיוצר את ההרחבה? ראשית, בואו ניזכר שאנחנו לא כל כך רחוקים מכך - בפוסט קודם כבר הראיתי שאם $latex E/F$ הרחבה סופית אז $latex E=F\\left(\\alpha_{1},\\dots,\\alpha_{n}\\right)$ - כלומר, ההרחבה נוצרת על ידי מספר סופי של איברים. זה אומר שמספיק יהיה לנו להוכיח את הטענה הבאה: שאם $latex E=F\\left(\\alpha,\\beta\\right)$ היא הרחבה סופית של $latex F$, אז $latex E=F\\left(\\theta\\right)$ עבור $latex \\theta$ כלשהו. זה יאפשר לנו לטפל במקרה הכללי באמצעות אינדוקציה: אם $latex E=F\\left(\\alpha_{1},\\dots,\\alpha_{n}\\right)$ אז נמצא, על פי הנחת האינדוקציה, איבר פרימיטיבי $latex \\theta$ כך ש-$latex F\\left(\\alpha_{1},\\dots,\\alpha_{n-1}\\right)=F\\left(\\theta\\right)$ ואז נקבל ש-$latex F\\left(\\alpha_{1},\\dots,\\alpha_{n}\\right)=F\\left(\\alpha_{1},\\dots,\\alpha_{n-1}\\right)\\left(\\alpha_{n}\\right)=F\\left(\\theta,\\alpha_{n}\\right)=F\\left(\\theta^{\\prime}\\right)$.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -270,6 +270,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

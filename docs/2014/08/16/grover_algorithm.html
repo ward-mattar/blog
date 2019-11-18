@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2014/08/16/grover_algorithm","headline":"אלגוריתם גרובר","dateModified":"2014-08-16T14:16:03+03:00","datePublished":"2014-08-16T14:16:03+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2014/08/16/grover_algorithm"},"description":"אלגוריתם גרובר הוא הדוגמה הראשונה שכדאי להראות כשמתחילים להראות אלגוריתמים בחישוב קוונטי, מכיוון שהוא פשוט יחסית, עובד בצורה מאוד אינטואיטיבית וציורית, ויש לו יתרון מוכח על אלגוריתמים קלאסיים שפותרים את אותה הבעיה. ומה הבעיה הזו? בעיה של חיפוש במבנה נתונים לא מסודר.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -127,7 +127,7 @@
 
 <p>אפשר להתחיל לנתח אלגברית את <span>$latex G$</span>, אבל הדרך המקובלת לנתח אותי היא בצורה <strong>גאומטרית</strong>. אני איום ונורא בגאומטריה ועדיין הצלחתי להבין את הרעיון הזה, אז בואו ותשתפו איתי פעולה. בואו נניח לצורך פשטות שקיים רק <span>$latex a$</span> יחיד כך ש-<span>$latex f\left(a\right)=1$</span>. נסתכל על הוקטורים <span>$latex  \left|\psi\right\rangle $</span> ו-<span>$latex \left|a\right\rangle $</span> - כנראה יעזור לכם לדמיין אותם במרחב כך ש-<span>$latex \left|a\right\rangle $</span> שוכב על הרצפה, ואילו <span>$latex \left|\psi\right\rangle $</span> נמצא בזווית כלשהי מעליו. בהתחלה <span>$latex R$</span> שלנו זהה ל-<span>$latex \left|\psi\right\rangle $</span>. הרעיון הוא שבכל הפעלה של <span>$latex G$</span>, <span>$latex R$</span> הולך “להימשך” לכיוון <span>$latex \left|a\right\rangle $</span> שעל הרצפה. אני גרוע בציורים תלת ממדיים אז הנה איור דו ממדי של “מבט מהצד” על מה שקורה:</p>
 
-<p><strong><a href="//assets/img/2014/08/grover_operation.png"><img class="aligncenter size-full wp-image-3171" alt="grover_operation" src="//assets/img/2014/08/grover_operation.png" width="450" height="545" /></a></strong></p>
+<p><strong><a href="/assets/img/2014/08/grover_operation.png"><img class="aligncenter size-full wp-image-3171" alt="grover_operation" src="/assets/img/2014/08/grover_operation.png" width="450" height="545" /></a></strong></p>
 
 <p>אם כן, כל הפעלה של <span>$latex G$</span> <strong>מסובבת</strong> את <span>$latex R$</span> קצת בתוך המישור שנפרש על ידי <span>$latex \left|\psi\right\rangle $</span> ו-<span>$latex \left|a\right\rangle $</span>. נסובב מספיק, ו-<span>$latex R$</span> יהיה קרוב ל-<span>$latex \left|a\right\rangle $</span> כך שמדידה של <span>$latex R$</span> תניב את <span>$latex \left|a\right\rangle $</span> בהסתברות טובה. נסובב יותר מדי - ו-<span>$latex R$</span> יחלוף על פני <span>$latex \left|a\right\rangle $</span> ויתחיל להתרחק ממנו, אז לסובב יותר מדי זה גם כן לא רעיון טוב.</p>
 
@@ -143,13 +143,13 @@
 
 <p>עוד אינטואיציה אפשר לקבל על ידי תמונה, באדיבות ויקיפדיה האנגלית:</p>
 
-<p><strong><a href="//assets/img/2014/08/500px-Simx2rotOK.svg_.png"><img class="aligncenter size-full wp-image-3170" alt="500px-Simx2=rotOK.svg" src="//assets/img/2014/08/500px-Simx2rotOK.svg_.png" width="500" height="500" /></a></strong></p>
+<p><strong><a href="/assets/img/2014/08/500px-Simx2rotOK.svg_.png"><img class="aligncenter size-full wp-image-3170" alt="500px-Simx2=rotOK.svg" src="/assets/img/2014/08/500px-Simx2rotOK.svg_.png" width="500" height="500" /></a></strong></p>
 
 <p>בואו ניזכר לרגע איך אפשר לתאר שיקוף, פורמלית, ואז גם יהיה לנו קל לראות למה הכל יוצא כמו שאנחנו רוצים. ראשית, אני ארצה לדבר ספציפית על תיאור של שיקוף ב<strong>מישור</strong>, כלומר במרחב וקטורי ממימד 2. ה”בעיה” היא שהמרחב שלנו הוא ממימד <span>$latex N$</span>, אז מה עושים? מצטמצים לתת-מרחב: זה שנפרש על ידי <span>$latex \left|a\right\rangle $</span> ו-<span>$latex \left|\psi\right\rangle $</span> (הוקטור שאנחנו מחפשים והוקטור שמתאר סופרפוזיציה אחידה). בהמשך כל הוקטורים שאדבר עליהם יהיו שייכים לתת המרחב הזה.</p>
 
 <p>כעת בואו נדבר על שיקוף במישור. שיקוף (כפי שאפשר לראות בתמונה) הוא תמיד <strong>ביחס לציר</strong> כלשהו. לוקחים נקודה. מעבירים אנך ממנה אל הציר, ואז ממשיכים את האנך הזה לצד השני באותו האורך - תוצאת השיקוף היא הנקודה שבקצה האנך הזה. אבל יש עוד דרך לחשוב על הפעולה הזו: ראשית, אל תחשבו על “נקודה” אלא על וקטור (כלומר, קו שמחבר את ראשית הצירים עם הנקודה); שנית, קחו את הוקטור ותחברו אליו את השיקוף שלו (תדביקו את הוקטור של השיקוף הזה על הנקודה) ותחברו אל השיקוף את הוקטור - תקבלו מעוין. אחד האלכסונים של המעוין הוא הישר שדרכו משקפים. מה אורכו? פעמיים ההיטל של הוקטור על הישר. אם כן, ראינו שלחבר את הוקטור עם השיקוף שלו נותן לנו את פעמיים ההיטל שלו. זה נותן לנו את המשוואה הכללית הבאה: אם <span>$latex v$</span> הוא וקטור, ואם <span>$latex a$</span> הוא וקטור יחידה בכיוון הישר שדרכו משקפים, אז <span>$latex \mbox{Ref}\left(v\right)+v=2\left\langle v,a\right\rangle a$</span>, כלומר <span>$latex \mbox{Ref}\left(v\right)=2\left\langle v,a\right\rangle a-v$</span>.</p>
 
-<p><strong><a href="//assets/img/2014/08/reflection.png"><img class="aligncenter size-full wp-image-3172" alt="reflection" src="//assets/img/2014/08/reflection.png" width="429" height="405" /></a></strong></p>
+<p><strong><a href="/assets/img/2014/08/reflection.png"><img class="aligncenter size-full wp-image-3172" alt="reflection" src="/assets/img/2014/08/reflection.png" width="429" height="405" /></a></strong></p>
 
 <p>במילים אחרות, <strong>אופרטור השיקוף ביחס לציר</strong> <span>$latex a$</span><strong> </strong>(כאשר <span>$latex a$</span> הוא וקטור יחידה)<strong> </strong>הוא האופרטור <span>$latex 2\left|a\right\rangle \left\langle a\right|-I$</span>. נראה מוכר? בוודאי! השתמשנו באופרטור <span>$latex 2\left|\psi\right\rangle \left\langle \psi\right|-I$</span>, כשהוא משורשר עם <span>$latex O$</span>, בבנייה של <span>$latex G$</span> שלנו. אם כן, אחת משתי הפעולות שמרכיבות את <span>$latex G$</span> היא שיקוף - במקרה הנוכחי, שיקוף ביחס לציר <span>$latex \left|\psi\right\rangle $</span> שמתאר את הסופרפוזיציה האחידה.</p>
 
@@ -241,6 +241,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

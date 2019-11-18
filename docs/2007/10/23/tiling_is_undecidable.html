@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2007/10/23/tiling_is_undecidable","headline":"האם מכונות טיורינג חולמות על ריצופים של רבע המישור?","dateModified":"2007-10-23T23:40:22+03:00","datePublished":"2007-10-23T23:40:22+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/10/23/tiling_is_undecidable"},"description":"למרות שטרחתי להציג את המודל של מכונת טיורינג בפוסטים קודמים, טרם נתתי דוגמה קונקרטית לנוחות שנובעת מכך שהתיאור שלה הוא פשוט כל כך. אני מקווה לתקן את המעוות כעת, עם הרדוקציה מבעיית העצירה לבעיה של ריצוף רבע המישור באמצעות אריחי וונג, כשהפינה השמאלית-תחתונה נתונה.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -124,7 +124,7 @@
 
 <p>נתחיל מהשורה הראשונה. היא מיוחדת, מכיוון שצריך איכשהו “לאתחל” את המכונה - להכריח את הסרט כולו להיות ריק ואת הראש הקורא להיות בהתחלה. מספיקים שני סוגי אריחים בשביל זה:</p>
 
-<p><img src="//assets/img/2007/10/wt1.png" alt="WT1" />
+<p><img src="/assets/img/2007/10/wt1.png" alt="WT1" />
 ראשית, שימו לב לדרך המשונה שבה אני מתאר אריח. במקום צבעים, אני כותב סימנים על הצדדים של הריבוע (שהפך אצלי למלבן). כמובן שזה לא משנה כלום - כל עוד אני אשתמש רק במספר סופי של סימנים (וזה מה שאעשה), אפשר לקודד כל סימן באמצעות צבע, וכו’. כרגיל בחישוביות, בעיות ייצוג שכאלו הן ממש לא רלוונטיות.</p>
 
 <p>האריח השמאלי הוא  האריח החשוב ביותר כאן; זה האריח שאנו דורשים שיהיה בפינה השמאלית התחתונה, זה שמתחיל את הכל. הצד העליון שלו  אומר שבקונפיגורציה שהוא מייצג, המכונה נמצאת במצב ההתחלתי (<span>$latex q_0$</span>) בתא הראשון, ושהתא הזה ריק (סימנתי “ריק” באמצעות b, מלשון blank). ה-b שנמצא בצד ימין מטרתו לאפשר אך ורק לאריחים מהסוג השני שציירתי כאן להתחבר אליו; לא יהיו עוד אריחים שכתוב b על הצד השמאלי שלהם. האריח השני מטרתו “לאתחל” את שאר הסרט להיות ריק גם כן; החשיבות שלו בכך שעל צידו העליון כתוב רק b, כלומר הוא מייצג תא ריק (וכזה שהראש אינו עליו) בקונפיגורציה.</p>
@@ -135,7 +135,7 @@
 
 <p>טוב, עכשיו לשאר הקונפיגורציות. מקונפיגורציה אחת עוברים לשניה בצורה די פשוטה - כל תו שלא בסביבה המיידית של הראש הקורא פשוט “מפעפע” הלאה לקונגפיגורציה הבאה:</p>
 
-<p><img src="//assets/img/2007/10/wt2.png" alt="WT2" />
+<p><img src="/assets/img/2007/10/wt2.png" alt="WT2" />
 כאן הצגתי “אב-טיפוס” של אריחים - צריך להחליף את ה-x בתווים קונקרטיים - במקרה שלנו 0,1, או b. שימו לב שכעת משתמשים בכוכביות בתור אמצעי החיבור (ולכן הברנש הזה לא מסוגל להתחבר לשורה התחתונה). עוד דבר שמעניין לשים אליו לב הוא שהברנש הזה, אם ניתן לו לפעול לבדו, מסוגל לרצף את כל רבע המישור בעצמו (איך?) ולכן זה <strong>הכרחי</strong> שנדרוש את הפינה השמאלית התחתונה כפי שדרשנו. אם יש את הפינה הזו, האריח הזה לבדו לא מסוגל לעשות שום דבר, כי הוא אינו מתאים לסימני השפה שמציינים “הראש הקורא כאן” (והם, כזכור, מהצורה (x,q) כש-x הוא תו ו-q הוא מצב).</p>
 
 <p>מה נשאר? לתאר מה קורה בסביבתו של הראש הקורא. לצורך פשטות אפשר להניח שהוא חייב תמיד לזוז ימינה או שמאלה, ושבריצה שלו הוא אף פעם לא “נופל” מהסרט (כלומר, מנסה לצעוד שמאלה כשהוא כבר כך בקצה השמאלי של הסרט). אלו הגבלות על המודל שעדיין נותנות מכונה שקולה בכוחה - זה תרגיל לא רע (אם כי די משמים) להוכיח זאת.</p>
@@ -146,7 +146,7 @@
 
 <p>והנה שני האריחים שצריך כדי למדל את הפעולה הזו:</p>
 
-<p><img src="//assets/img/2007/10/blabla.png" alt="blabla" />
+<p><img src="/assets/img/2007/10/blabla.png" alt="blabla" />
 מה קורה כאן? אם בשורה הקודמת הקונפיגורציה הכילה את (x,q), הרי שהאריח במקום המתאים לראש הקורא הכיל (x,q) על הצד העליון שלו. בדיוק אל ה-(x,q) הזה האריח השמאלי מתחבר. שימו לב לשינוי שמתרחש בקונפיגורציה בתוך האריח הזה - הצד העליון שלו מכיל את y לבד. כלומר, הראש הקורא כבר לא עמנו, והתו שהיה קודם x הפך ל-y.</p>
 
 <p>לאן הראש הקורא הולך? ימינה. לכן נכנס הסימן שעל צדו הימני של האריח לפעולה. הוא מכיל שני פרטי מידע: הראשון, שהראש זז ימינה (ולכן כתוב שם R), והשני, שהמכונה עוברת למצב p. כעת, הדברים היחידים שיודעים להתחבר לאריח שמצד ימין שלו יש סימן שכזה הם כאלו שבהם אותו הסימן מופיע על הצד השמאלי - ואלו בדיוק האריחים שמתוארים בצד הימני של האיור. מה שהם עושים הוא ברור למדי - הופכים את מה שהיה z בקונפיגורציה הקודמת ל-(z,p)  - כלומר, אותו הדבר (אין שינוי בתו), בתוספת הראש הקורא וההימצאות של המכונה במצב p.</p>
@@ -209,6 +209,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

@@ -17,10 +17,10 @@
 <script type="application/ld+json">
 {"url":"http://gadial.net/2017/08/22/0x5f3759df_part_1","headline":"המעשה המופלא בקבוע המסתורי 0x5f3759df (חלק א’ - הקל)","dateModified":"2017-08-22T18:42:18+03:00","datePublished":"2017-08-22T18:42:18+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2017/08/22/0x5f3759df_part_1"},"description":"למתמטיקאים יש את סיפורי המסתורין שלהם. המפורסם מביניהם הוא ככל הנראה הערה ששרבט פייר דה פרמה בשולי ספר ה”אריתמטיקה” של דיופנטוס שלו, שבה העיר שהכללה של טענה שהופיעה בספר היא שגויה תמיד וש”בידי הוכחה מופלאה למשפט אך שולי ספר זה צרים מלהכילה”. הערת השוליים הזו לא פורסמה על ידי פרמה בימי חייו והיא התגלתה רק כשנקראו הספרים שבעזבונו, ואז היה קצת מאוחר מדי לשאול את פרמה לאיזו הוכחה הוא התכוון. שום הוכחה דומה לא נמצאה בכתביו או התכתבויותיו, ובמשך למעלה מ-350 שנה המתמטיקאים ניסו להוכיח את המשפט שלו ללא הצלחה. גם כשנמצאה הוכחה, היא הייתה מודרנית ומורכבת ובוודאי לא “ההוכחה הנפלאה” של פרמה. מה הייתה ההוכחה המקורית? איך פרמה הגיע אליה? מתי ואיך הבין שאינה נכונה, אם בכלל? תעלומה.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
-  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="//">לא מדויק</a>
+    <a class="navbar-brand" href="/">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//">דף הבית</a>
+                <a class="nav-link" href="/">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//categories">קטגוריות</a>
+                <a class="nav-link" href="/categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="//about/">אודות</a>
+                <a class="nav-link" href="/about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -98,7 +98,7 @@
 
 <p>במדעי המחשב אין לנו תעלומות בנות מאות שנים - מדעי המחשב הם תחום צעיר יחסית. אבל היום אני רוצה לספר על תעלומה בת למעלה מעשור, שגם היא כנראה שלא תיפתר לעולם אבל היא מעניינת מספיק גם ככה - תעלומת המספר 0x5f3759df וקטע הקוד שבו הוא מופיע. קטע הקוד הזה נמצא, מכל המקומות בעולם, בקוד של משחק היריות מגוף ראשון Quake 3. הוא נתגלה בשנת 2005, כשקוד המשחק שוחרר לציבור הרחב. אפשר למצוא אותו <a href="https://github.com/id-Software/Quake-III-Arena/blob/master/code/game/q_math.c\#L552">כאן</a>, והוא נראה ככה:</p>
 
-<p><a href="//assets/img/2017/08/code.png" rel="attachment wp-att-3477"><img class="aligncenter size-large wp-image-3477" src="//assets/img/2017/08/code.png" alt="code" width="584" height="194" /></a></p>
+<p><a href="/assets/img/2017/08/code.png" rel="attachment wp-att-3477"><img class="aligncenter size-large wp-image-3477" src="/assets/img/2017/08/code.png" alt="code" width="584" height="194" /></a></p>
 
 <p>לא מבינים כלום? נהדר. בסופו של דבר נבין את הכל, וכנראה נחווה את אותה תחושה שגרמה למי שזה לא יהיה שכתב שם what the fuck? לכתוב זאת. אבל להבין את מלוא הפרטים של העניין הזה, זה חתיכת סיפור, ולכן אני אכתוב את הפוסט באופן הדרגתי מהקל אל הכבד, ואתם מוזמנים לנשור מתי שתתייאשו - הפוסט בנוי כך שכל חלק מסביר את הסיפור ברמת פירוט הולכת וגדלה ולא באמת חייבים להישאר עד הסוף כדי להבין מה הלך פה.</p>
 
@@ -106,13 +106,13 @@
 <h2>פרק ראשון, שבו המספר נזכר בערגה בראשית דרכו כגיימר ואנחנו לומדים איך לוחם בנאצים שינה את עולם משחקי המחשב לנצח</h2>
 <p>בואו נעבור לרגע לתחילת שנות התשעים. עולם המחשבים האישיים קיים כבר עשור או שניים, אבל עדיין מגשש את דרכו בזהירות. אז כמו עכשיו, היבט חשוב ביותר של משחקי המחשב הוא <strong>הגרפיקה</strong> שלהם - כמה טוב הם נראים. גרפיקה זה עניין מסובך. לא מספיק לדעת לצייר יפה, צריך גם לוודא שהמחשב יודע להציג את הציורים היפים <strong>מהר</strong>. כשמדובר על משחקי פעולה, זה קריטי לחלוטין שהמשחק ירוץ חלק ורציף תוך כדי שהוא נראה טוב. העבודה האמיתית כרגע נעשית מאחורי הקלעים: המתכנתים שצריכים לכתוב את המנוע של המשחק - הקוד שגורם למשחק לפעול, ובפרט הקוד שמאפשר את הצגת הגרפיקה - משתמשים בכל תעלול תכנות אפשרי כדי לגרד עוד קצת מהירות. הכל יחסית חלוצי. עדיין אין יותר מדי קוד קיים להתבסס עליו; אין נסיון מצטבר של עשרות שנים; אין מנועים קיימים בשוק שאפשר פשוט להשתמש בהם. בשנת 1991 מצטרפת לעולם הזה חברה חדשה - id Software. סדרת המשחקים הראשונה שהם מוציאים נקראת Commander Keen ועוסקת בהרפתקאותיו של ילד בן שמונה עם קסדת פוטבול ומקל פוגו ומלחמתו בחייזרים שמנסים להשמיד את כדור הארץ. ככה בערך זה נראה:</p>
 
-<p><a href="//assets/img/2017/08/keen.jpg" rel="attachment wp-att-3478"><img class="aligncenter size-large wp-image-3478" src="//assets/img/2017/08/keen.jpg" alt="keen" width="584" height="365" /></a></p>
+<p><a href="/assets/img/2017/08/keen.jpg" rel="attachment wp-att-3478"><img class="aligncenter size-large wp-image-3478" src="/assets/img/2017/08/keen.jpg" alt="keen" width="584" height="365" /></a></p>
 
 <p>קין מתרחש בעולם דו-ממדי שבו אפשר לנוע ימינה, שמאלה, למעלה ולמטה, כשאנחנו מסתכלים על העניינים מהצד. למשטחים שעליהם הדמויות במשחק עומדים קוראים <strong>פלטפורמות</strong> ועל שמם משחקים כאלו נקראים <strong>משחקי פלטפורמות</strong>. אל תזלזלו במה שאתם רואים כאן. לזמנו הגרפיקה של המשחקים הללו הייתה טובה למדי (הסגנון הקרטוני הוא מכוון) והם אפילו היו חדשניים בתור משחקי פלטפורמות בכך שהתנועה בהם הייתה “חלקה” - דהיינו, במקום שהדמות תצא מהמסך שבו היא נמצאת ויעלה מסך אחר, המסך זז באופן רציף יחד עם הדמות של קין. לעשות את זה בזמנו על מחשב אישי (להבדיל מקונסולה כמו נינטנדו) לא היה טריוויאלי, והאחראי לתעלולי התכנות שאיפשרו את זה היה המתכנת הראשי של id software, ג’ון קרמק.</p>
 
 <p>אחרי המנוע של קין קרמק עבר להתעסק עם אתגר אחר - מנוע גרפי תלת ממדי. במקום שהעולם יוצג מהצד, הוא מוצג מנקודת המבט של הדמות שאותה משחקים. המשחק המפורסם ביותר שהוציאה החברה עם המנוע הראשון שיצר קרמק נקרא Wolfenstein 3D. ככה זה נראה:</p>
 
-<p><a href="//assets/img/2017/08/Wolf3D.png" rel="attachment wp-att-3480"><img class="aligncenter size-full wp-image-3480" src="//assets/img/2017/08/Wolf3D.png" alt="Wolf3D" width="630" height="472" /></a></p>
+<p><a href="/assets/img/2017/08/Wolf3D.png" rel="attachment wp-att-3480"><img class="aligncenter size-full wp-image-3480" src="/assets/img/2017/08/Wolf3D.png" alt="Wolf3D" width="630" height="472" /></a></p>
 
 <p>הגרפיקה פה שונה מהותית מזו של קומנדר קין. אצל קומנדר קין, הכל מצוייר ביד והמשחק פשוט מציג את הציורים הללו. לעומת זאת בוולפנשטיין התמונה שהשחקן רואה נוצרת בידי המחשב תוך כדי משחק: מישהו צייר את הטקסטורה של קיר ואפשר לראות שחוזרים עליה שוב ושוב, אבל אותה הטקסטורה מצויירת באופן <strong>קצת שונה</strong> בהתאם לקיר שרואים. אם הקיר רחוק יותר, רואים אותו קטן יותר; אם רואים אותו מהצד, הקיר מוצג בצורה אלכסונית. יש תאורה ויש הצללה (לכל הפחות, הקירות לפעמים בהירים ולפעמים כהים), וכדומה. במילים אחרות, המחשב לוקח תמונה של “איך קיר נראה” ומחשב איך בדיוק הקירות אמורים להיות מוצגים בהתבסס על המיקום הנוכחי של השחקן ושאר הפרטים שבזירה.</p>
 
@@ -120,11 +120,11 @@
 
 <p>כמו עם קין, כך גם עם וולף 3D, המנוע שקרמק יצר בשביל המשחק חולל מהפכה זוטא. הגרפיקה שלו נראתה <strong>טוב</strong> מצד אחד, אבל מצד שני היא נוצרה מספיק מהר כדי שהמשחק ירוץ חלק, כפי שנדרש ממשחק יריות מהיר שכזה. השילוב של שני אלו היה מהפכה של ממש. בואו נראה דוגמאות למשחקים ישנים יותר כדי להבין מה השתנה. ראשית, הנה צילום מסך ממשחק מבוכים בשם Dungeon Master מ-1987:</p>
 
-<p><a href="//assets/img/2017/08/5327-dungeon-master-dos-screenshot-combat-s.gif" rel="attachment wp-att-3475"><img class="aligncenter size-full wp-image-3475" src="//assets/img/2017/08/5327-dungeon-master-dos-screenshot-combat-s.gif" alt="5327-dungeon-master-dos-screenshot-combat-s" width="640" height="400" /></a></p>
+<p><a href="/assets/img/2017/08/5327-dungeon-master-dos-screenshot-combat-s.gif" rel="attachment wp-att-3475"><img class="aligncenter size-full wp-image-3475" src="/assets/img/2017/08/5327-dungeon-master-dos-screenshot-combat-s.gif" alt="5327-dungeon-master-dos-screenshot-combat-s" width="640" height="400" /></a></p>
 
 <p>כאן התמונה נראית תלת ממדית, אבל זו “רמאות” - מישהו צייר ביד את הכל - גם ציור של “קיר קרוב” וגם ציור של “קיר רחוק” וגם ציור של “קיר מהצד” וכדומה. המחיר של זה הוא שאי אפשר לנוע באופן חופשי - הדמות שאותה משחקים יכולה לבצע סיבובים של 90 מעלות ולנוע קדימה ואחורה משבצות שלמות בכל פעם וזהו. בוולף 3D התנועה היא חופשית וההרגשה של המשחק היא שונה לגמרי (הרבה יותר מתאימה למשחק יריות). והנה צילום מסך ממשחק הרפתקאות בשם Castle Master מ-1990:</p>
 
-<p><a href="//assets/img/2017/08/castlemaster-1.jpg" rel="attachment wp-att-3476"><img class="aligncenter size-full wp-image-3476" src="//assets/img/2017/08/castlemaster-1.jpg" alt="castlemaster-1" width="640" height="400" /></a></p>
+<p><a href="/assets/img/2017/08/castlemaster-1.jpg" rel="attachment wp-att-3476"><img class="aligncenter size-full wp-image-3476" src="/assets/img/2017/08/castlemaster-1.jpg" alt="castlemaster-1" width="640" height="400" /></a></p>
 
 <p>כאן הגרפיקה היא תלת ממדית לגמרי. יש גם “למעלה” ו”למטה” ואפשר להסתכל אליהם ואפילו סוג של ללכת אליהם (למשל, אפשר ליפול). המחיר הוא שהגרפיקה הזו נראית <strong>ממש לא משהו</strong> והקצב של המשחק איטי (ה”קרבות” כוללים יצורים שעומדים או זזים בצורה לא רציפה ומנסים לפגוע בהם בלי שיש לתזוזה של השחקן שום ערך מוסף). המשחק עצמו די מהנה ומבוסס בעיקרו על פאזלים ועל שיטוט וחיפוש של דברים, אבל <strong>זה לא משחק פעולה</strong>.</p>
 
@@ -137,7 +137,7 @@
 </ul>
 <p>במקרה הספציפי של וולף 3D ההשקעה השתלמה. היה כאן שילוב של המנוע הגרפי, העיצוב הסגנוני של המשחק והאופן החכם שבו הוא הופץ (הפצה חינמית של החלק הראשון שלו, מודל שעבד לא רע גם עם קומנדר קין) והמשחק היה הצלחה גדולה. id software ראתה כי טוב והמשיכה בכיוון של משחקי יריות מגוף ראשון. ג’ון קרמק יצר מנוע תלת ממדי חדש ומתוחכם בהרבה מזה של וולף 3D, ועל בסיסו עוצב אחד ממשחקי המחשב החשובים ביותר בהיסטוריה - Doom. בבסיסו, דום הוא כמו וולף 3D רק עם שדים במקום נאצים והגיהנום במקום טירה. לאחר ההצלחה הגדולה של דום (וההמשך שלו) עברה החברה לסדרה חדשה של משחקי יריות מתלת מימד - Quake. שבהם העלילה היא… אה… טוב, למי אכפת בכלל. ב-1999 יצא Quake 3 שבו כל הקונספט הזה של עלילה די נזנח לטובת קרבות מרובי משתתפים. בשלב הזה הגרפיקה כבר נראתה הרבה, הרבה יותר טוב והייתה תלת מימדית באופן מלא:</p>
 
-<p><a href="//assets/img/2017/08/Quake-3-Torrent-3.jpg" rel="attachment wp-att-3479"><img class="aligncenter size-full wp-image-3479" src="//assets/img/2017/08/Quake-3-Torrent-3.jpg" alt="Quake-3-Torrent-3" width="810" height="407" /></a></p>
+<p><a href="/assets/img/2017/08/Quake-3-Torrent-3.jpg" rel="attachment wp-att-3479"><img class="aligncenter size-full wp-image-3479" src="/assets/img/2017/08/Quake-3-Torrent-3.jpg" alt="Quake-3-Torrent-3" width="810" height="407" /></a></p>
 
 <p>מה השתנה בשנים שחלפו שאיפשר גרפיקה יותר טובה? ראשית, המחשבים היו יותר חזקים. שנית, הם התחילו להשתמש ברכיבי חומרה ייעודיים להצגת גרפיקה (מה שנקרא בשעתו “מאיץ גרפי”). אבל תכנות חכם של המנוע עדיין היה אספקט קריטי, והמנוע שמאחורי Quake 3 היה מוצלח מאוד. לכן כשג’ון קרמק הודיע בשנת 2005 שקוד המקור המלא של המנוע ישוחרר לרשת לטובת כל מי שבא לו לקרוא אותו (בינתיים כבר פותח המנוע הבא בתור) הייתה שמחה גדולה. ואנשים רצו לקרוא את הקוד. ואז התגלה בו קטע הקוד הקצרצר שבו אנחנו עוסקים כאן.</p>
 
@@ -147,7 +147,7 @@
 
 <p>קחו מבט נוסף על הקוד, עכשיו כשאתם יודעים מה הוא אמור לעשות. האם אתם מרגישים קצת מוזר? אני מרגיש <strong>מאוד</strong> מוזר. חישוב שורש… זה משהו שאמור להיות מסובך, לא? איך אפשר שקוד יבצע גם חישוב שורש וגם הופכי שלו ביחד בכל כך מעט שורות קוד, ויעשה את זה מהיר ומדויק? משהו פה מרגיש כאילו הוא לא מסתדר. אבל הכל מסתדר - זה עובד, וזה עובד מאוד יפה.</p>
 
-<p><a href="//assets/img/2017/08/code.png" rel="attachment wp-att-3477"><img class="aligncenter size-large wp-image-3477" src="//assets/img/2017/08/code.png" alt="code" width="584" height="194" /></a></p>
+<p><a href="/assets/img/2017/08/code.png" rel="attachment wp-att-3477"><img class="aligncenter size-large wp-image-3477" src="/assets/img/2017/08/code.png" alt="code" width="584" height="194" /></a></p>
 
 <p>בואו נסביר את הקוד שורה שורה, עבור מי שלא מכיר שפות תכנות. אין כאן שום דבר שמעבר ליכולת ההבנה שלכם - זה קוד מאוד פשוט. רק טיפה טרמינולוגיה קודם: כשאני מדבר על “מספר ממשי” אני מתכוון לכל מספר שאנחנו יודעים לכתוב עם ייצוג עשרוני, למשל 3 או 3.141 או 0.333 וכדומה. ליתר דיוק, אני מתכוון רק לאלו מתוכם שאנחנו יודעים לייצג במחשב, אבל מי אלו בדיוק נראה רק בהמשך. באופן דומה, “מספר שלם” הוא מספר שאין לו כלום אחרי הנקודה העשרונית. 3 הוא שלם ו-3.1 או 0.3 הם לא שלמים. גם על השלמים יש הגבלה, שלא אתאר כרגע, לגבי מי מהם יכול להיות מיוצג במחשב.</p>
 
@@ -309,6 +309,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
 
 </html>
