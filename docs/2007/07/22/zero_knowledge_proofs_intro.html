@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="להוציא שורש של מספר ממשי זה קל. אולי לאדם קצת קשה לחשב במדוייק את שורש 2, אבל מחשב מסוגל לעשות זאת בשניות. יש טכניקות רבות לצורך כך, והחביבה עלי היא שיטת ניוטון-רפסון. כל מחשבון כיס מסוגל להוציא שורשים והפעולה הזו נראית לנו טבעית כמו ארבע פעולות החשבון הבסיסיות." />
 <meta property="og:description" content="להוציא שורש של מספר ממשי זה קל. אולי לאדם קצת קשה לחשב במדוייק את שורש 2, אבל מחשב מסוגל לעשות זאת בשניות. יש טכניקות רבות לצורך כך, והחביבה עלי היא שיטת ניוטון-רפסון. כל מחשבון כיס מסוגל להוציא שורשים והפעולה הזו נראית לנו טבעית כמו ארבע פעולות החשבון הבסיסיות." />
-<link rel="canonical" href="http://gadial.net/blog/2007/07/22/zero_knowledge_proofs_intro" />
-<meta property="og:url" content="http://gadial.net/blog/2007/07/22/zero_knowledge_proofs_intro" />
+<link rel="canonical" href="http://gadial.net/2007/07/22/zero_knowledge_proofs_intro" />
+<meta property="og:url" content="http://gadial.net/2007/07/22/zero_knowledge_proofs_intro" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2007-07-22T01:41:59+03:00" />
 <script type="application/ld+json">
-{"headline":"מוכיחים את הלא נודע","dateModified":"2007-07-22T01:41:59+03:00","datePublished":"2007-07-22T01:41:59+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/blog/2007/07/22/zero_knowledge_proofs_intro"},"url":"http://gadial.net/blog/2007/07/22/zero_knowledge_proofs_intro","description":"להוציא שורש של מספר ממשי זה קל. אולי לאדם קצת קשה לחשב במדוייק את שורש 2, אבל מחשב מסוגל לעשות זאת בשניות. יש טכניקות רבות לצורך כך, והחביבה עלי היא שיטת ניוטון-רפסון. כל מחשבון כיס מסוגל להוציא שורשים והפעולה הזו נראית לנו טבעית כמו ארבע פעולות החשבון הבסיסיות.","@context":"https://schema.org"}</script>
+{"url":"http://gadial.net/2007/07/22/zero_knowledge_proofs_intro","headline":"מוכיחים את הלא נודע","dateModified":"2007-07-22T01:41:59+03:00","datePublished":"2007-07-22T01:41:59+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/07/22/zero_knowledge_proofs_intro"},"description":"להוציא שורש של מספר ממשי זה קל. אולי לאדם קצת קשה לחשב במדוייק את שורש 2, אבל מחשב מסוגל לעשות זאת בשניות. יש טכניקות רבות לצורך כך, והחביבה עלי היא שיטת ניוטון-רפסון. כל מחשבון כיס מסוגל להוציא שורשים והפעולה הזו נראית לנו טבעית כמו ארבע פעולות החשבון הבסיסיות.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
+  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/blog/">לא מדויק</a>
+    <a class="navbar-brand" href="//">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/">דף הבית</a>
+                <a class="nav-link" href="//">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/categories">קטגוריות</a>
+                <a class="nav-link" href="//categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/about/">אודות</a>
+                <a class="nav-link" href="//about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="/blog/post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -114,7 +114,7 @@
 
 <p>“איפה אפי” (“Where’s Waldo” באנגלית) הוא גיבורה של סדרת ספרים שכל אחד מהם מורכב מתמונות רבות עמוסות באנשים, שבכל אחת מהן יש לאתר את אפי בתוך הקהל. אני אישית מעדיף את “ספר עולמי” וספרי “1000 מילים ראשונות” שיצאו בהוצאת מסדה פרס וא. קלין (מה קרה לספרים? מה קרה להוצאות? מתי יוציאו עוד ספרים כאלו?) שגם בהם היה צריך לחפש מישהו - כלב במקרה של ספר עולמי, ברווז וצפרדע במקרה של 1000 מילים ראשונות.</p>
 
-<p><a href="/blog/assets/img/2007/07/0906200977958waldo.jpeg"><img class="alignnone size-full wp-image-2283" title="0906200977958waldo" src="/blog/assets/img/2007/07/0906200977958waldo.jpeg" alt="" width="307" height="541" /></a></p>
+<p><a href="//assets/img/2007/07/0906200977958waldo.jpeg"><img class="alignnone size-full wp-image-2283" title="0906200977958waldo" src="//assets/img/2007/07/0906200977958waldo.jpeg" alt="" width="307" height="541" /></a></p>
 
 <p>ובכן, נניח שיש לי תמונה של “איפה אפי”, גיליתי את אפי ואני רוצה להוכיח לכם שאני יודע איפה הוא - אבל מבלי שאגלה לכם איפה הוא מופיע בתמונה או אפילו אתן לכם רמז. בלתי אפשרי? מתברר שלא רק שאפשרי, גם קל למדי.</p>
 
@@ -143,7 +143,7 @@
 
 <p>מכיוון שאפס-הידע הוא העיקר בפרוטקול הזה (בלעדיו, הוכחה אינטראקטיבית ל-3-צביעה היא קלה; פשוט שולחים את הצביעה) אני רוצה להתעכב שוב על טענת ה”המוודא לא לומד כלום” ולהמחיש אותה. נניח שבסיבוב אחד של הפרוטוקול חשפנו את צומת א’ וצומת ב’, וראינו שא’ צבוע אדום וב’ צהוב. בסיבוב שלאחר מכן חשפנו את צומת א’ וצומת ג’, וראינו שוב - א’ צבוע אדום, ב’ צהוב. האם למדנו מכך משהו? בפרט, האם למדנו שב’ ו-ג’ צבועים באותו הצבע?</p>
 
-<p><a title="3-צביעה - הוכחה באפס ידע" href="/blog/assets/img/2007/07/3colzkp.png"><img src="/blog/assets/img/2007/07/3colzkp.png" alt="3-צביעה - הוכחה באפס ידע" /></a></p>
+<p><a title="3-צביעה - הוכחה באפס ידע" href="//assets/img/2007/07/3colzkp.png"><img src="//assets/img/2007/07/3colzkp.png" alt="3-צביעה - הוכחה באפס ידע" /></a></p>
 
 <p>התשובה היא שממש לא. ייתכן שבסיבוב הראשון הפרמוטציה שהגריל המוכיח הייתה “אדום-&gt;אדום, צהוב-&gt;צהוב, ירוק-&gt;ירוק” ובשני הייתה “אדום-&gt;אדום, צהוב-&gt;ירוק, ירוק-&gt;צהוב” ואז ב’ צבוע במקור בצהוב, וג’ בירוק והם שונים; אבל ייתכן שבסיבוב השני הוגרלה אותה פרמוטציה כמו בראשון, ואז ב’ וג’ שניהם צבועים במקור בצהוב והם זהים. בקיצור - המוודא לא לומד כלום, כי כל האפשרויות לצביעה אפשריות - פרט לאפשרות של “שני צמתים מחוברים בקשת צבועים באותו הצבע” (שאלת אתגר: למה המוודא חייב לבחור רק צמתים מחוברים בקשת? מה יקרה אם הוא יוכל לבקש מהמוכיח לחשוף גם צמתים שאינם מחוברים בקשת?).</p>
 
@@ -173,12 +173,12 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/2007/07/22/zero_knowledge_proofs_intro" hidden></a>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2007/07/22/zero_knowledge_proofs_intro" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/blog/"></data>
+  <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
@@ -190,7 +190,7 @@
           <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
@@ -203,6 +203,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/blogassets/js/jquery-slim.min.js"><\/script>')</script><script src="/blog/assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

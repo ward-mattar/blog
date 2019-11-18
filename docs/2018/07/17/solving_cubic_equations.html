@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\ge5$ וכן פתירה עבור $latex n\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\text{Gal}\left(E/F\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\supset G_{1}\supset\dots\supset G_{k}=\left\{ e\right\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\subset E_{1}\subset\dots\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש)." />
 <meta property="og:description" content="סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\ge5$ וכן פתירה עבור $latex n\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\text{Gal}\left(E/F\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\supset G_{1}\supset\dots\supset G_{k}=\left\{ e\right\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\subset E_{1}\subset\dots\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש)." />
-<link rel="canonical" href="http://gadial.net/blog/2018/07/17/solving_cubic_equations" />
-<meta property="og:url" content="http://gadial.net/blog/2018/07/17/solving_cubic_equations" />
+<link rel="canonical" href="http://gadial.net/2018/07/17/solving_cubic_equations" />
+<meta property="og:url" content="http://gadial.net/2018/07/17/solving_cubic_equations" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-17T01:40:28+03:00" />
 <script type="application/ld+json">
-{"headline":"אז איך פותרים משוואה ממעלה שלישית?","dateModified":"2018-07-17T01:40:28+03:00","datePublished":"2018-07-17T01:40:28+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/blog/2018/07/17/solving_cubic_equations"},"url":"http://gadial.net/blog/2018/07/17/solving_cubic_equations","description":"סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\\ge5$ וכן פתירה עבור $latex n\\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\\text{Gal}\\left(E/F\\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\\supset G_{1}\\supset\\dots\\supset G_{k}=\\left\\{ e\\right\\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\\subset E_{1}\\subset\\dots\\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש).","@context":"https://schema.org"}</script>
+{"url":"http://gadial.net/2018/07/17/solving_cubic_equations","headline":"אז איך פותרים משוואה ממעלה שלישית?","dateModified":"2018-07-17T01:40:28+03:00","datePublished":"2018-07-17T01:40:28+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2018/07/17/solving_cubic_equations"},"description":"סדרת הפוסטים שלי על תורת גלואה הגיעה בפוסט הקודם אל נקודת השיא שלה, שבה הוכחתי שאין נוסחה כללית לפתרון משוואות (פולינומיות, כשהפתרון הוא בעזרת רדיקלים) ממעלה 5 ומעלה. ליתר דיוק, מה שהוכחתי הוא זה: פולינום הוא פתיר באמצעות רדיקלים אם ורק אם חבורת הגלואה שלו היא פתירה. חבורת הגלואה של &quot;פולינום כללי&quot; ממעלה $latex n$ מעל שדה $latex F$ שכולל גם את המקדמים של הפולינום היא $latex S_{n}$. $latex S_{n}$ לא פתירה עבור $latex n\\ge5$ וכן פתירה עבור $latex n\\le4$. מה שעניין אותי עד כה היה ה-“$latex S_{n}$ לא פתירה עבור $latex n\\ge5$”, אבל עכשיו היוצרות מתהפכות ואני מנסה להבין איך המשפט של גלואה “מגלה לנו” את הפתרונות עבור המקרים $latex n=2,3,4$. זו גישה קצת אנכרוניסטית כי היא הופכת את הסדר - הנוסחאות לפתרון משוואות ממעלה רביעית ומטה היו ידועות היטב בימיו של גלואה והתגלו מאות שנים לפני כן. לא “צריך” את תורת גלואה בשבילן, אבל אני חושב שתורת גלואה עוזרת להבין מה בעצם הולך בהן, וזו גם הזדמנות טובה להראות את הצד ה”חיובי” של תורת גלואה בפעולה - זה שאשכרה יודע לפתור משוואות ולא רק להגיד שתשכחו מזה. הדיסקרימיננטה כזכור או לא, שיטת העבודה שגלואה הציע היא זו: אם $latex E/F$ היא ההרחבה שבה $latex E$ הוא שדה הפיצול של הפולינום מעל $latex F$ שאנחנו רוצים לפתור, ואם $latex G=\\text{Gal}\\left(E/F\\right)$ היא פתירה, אז זה נותן לנו סדרה של תת-חבורות $latex G=G_{0}\\supset G_{1}\\supset\\dots\\supset G_{k}=\\left\\{ e\\right\\} $ כך ש-$latex G_{i}/G_{i+1}$ היא ציקלית לכל $latex 0\\le i&lt;k$. תת-החבורות הללו נותנות לנו סדרה של שדות, שהם שדות השבת שלהן: $latex F=E_{0}\\subset E_{1}\\subset\\dots\\subset E_{k}=E$. הטוויסט של גלואה עכשיו הוא שאפשר לקבל כל $latex E_{i+1}$ כזו מתוך $latex E_{i}$ על ידי הוצאת שורש מסדר כלשהו לאיבר ב-$latex E_{i}$ (בתנאי שב-$latex E_{i}$ כבר יש את שורשי היחידה המתאימים, אחרת תוקעים הרחבה נוספת בין $latex E_{i}$ ו-$latex E_{i+1}$ שמוסיפה אותם, גם כן על ידי הוצאת שורש).","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
+  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/blog/">לא מדויק</a>
+    <a class="navbar-brand" href="//">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/">דף הבית</a>
+                <a class="nav-link" href="//">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/categories">קטגוריות</a>
+                <a class="nav-link" href="//categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/about/">אודות</a>
+                <a class="nav-link" href="//about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="/blog/post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -470,12 +470,12 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/2018/07/17/solving_cubic_equations" hidden></a>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2018/07/17/solving_cubic_equations" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/blog/"></data>
+  <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
@@ -487,7 +487,7 @@
           <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
@@ -500,6 +500,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/blogassets/js/jquery-slim.min.js"><\/script>')</script><script src="/blog/assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
 
 </html>

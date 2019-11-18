@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בפוסט האחרון שלנו על שפות רגולריות הוכחתי שניתן לבנות שפה רגולרית מתוך שפות פשוטות מאוד (סינגלטונים שמכילים מילה אחת מאורך 1 לכל היותר) ושלוש פעולות יצירה פשוטות - איחוד, שרשור וסגור-קלייני. ביטויים רגולריים הם שיטת ייצוג לשפות רגולריות שמשתמשת בדיוק באותן שפות פשוטות ופעולות יצירה. שיטת הייצוג הזו היא כל כך מוצלחת עד שמשתמשים בה גם בעולם האמיתי - אבל כמובן, בעולם האמיתי זה לא בדיוק אותו הדבר כמו היצור התיאורטי שאציג כרגע - ונראה את זה בהמשך." />
 <meta property="og:description" content="בפוסט האחרון שלנו על שפות רגולריות הוכחתי שניתן לבנות שפה רגולרית מתוך שפות פשוטות מאוד (סינגלטונים שמכילים מילה אחת מאורך 1 לכל היותר) ושלוש פעולות יצירה פשוטות - איחוד, שרשור וסגור-קלייני. ביטויים רגולריים הם שיטת ייצוג לשפות רגולריות שמשתמשת בדיוק באותן שפות פשוטות ופעולות יצירה. שיטת הייצוג הזו היא כל כך מוצלחת עד שמשתמשים בה גם בעולם האמיתי - אבל כמובן, בעולם האמיתי זה לא בדיוק אותו הדבר כמו היצור התיאורטי שאציג כרגע - ונראה את זה בהמשך." />
-<link rel="canonical" href="http://gadial.net/blog/2015/01/30/regular_expressions" />
-<meta property="og:url" content="http://gadial.net/blog/2015/01/30/regular_expressions" />
+<link rel="canonical" href="http://gadial.net/2015/01/30/regular_expressions" />
+<meta property="og:url" content="http://gadial.net/2015/01/30/regular_expressions" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-01-30T00:23:31+02:00" />
 <script type="application/ld+json">
-{"headline":"ביטויים רגולריים","dateModified":"2015-01-30T00:23:31+02:00","datePublished":"2015-01-30T00:23:31+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/blog/2015/01/30/regular_expressions"},"url":"http://gadial.net/blog/2015/01/30/regular_expressions","description":"בפוסט האחרון שלנו על שפות רגולריות הוכחתי שניתן לבנות שפה רגולרית מתוך שפות פשוטות מאוד (סינגלטונים שמכילים מילה אחת מאורך 1 לכל היותר) ושלוש פעולות יצירה פשוטות - איחוד, שרשור וסגור-קלייני. ביטויים רגולריים הם שיטת ייצוג לשפות רגולריות שמשתמשת בדיוק באותן שפות פשוטות ופעולות יצירה. שיטת הייצוג הזו היא כל כך מוצלחת עד שמשתמשים בה גם בעולם האמיתי - אבל כמובן, בעולם האמיתי זה לא בדיוק אותו הדבר כמו היצור התיאורטי שאציג כרגע - ונראה את זה בהמשך.","@context":"https://schema.org"}</script>
+{"url":"http://gadial.net/2015/01/30/regular_expressions","headline":"ביטויים רגולריים","dateModified":"2015-01-30T00:23:31+02:00","datePublished":"2015-01-30T00:23:31+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2015/01/30/regular_expressions"},"description":"בפוסט האחרון שלנו על שפות רגולריות הוכחתי שניתן לבנות שפה רגולרית מתוך שפות פשוטות מאוד (סינגלטונים שמכילים מילה אחת מאורך 1 לכל היותר) ושלוש פעולות יצירה פשוטות - איחוד, שרשור וסגור-קלייני. ביטויים רגולריים הם שיטת ייצוג לשפות רגולריות שמשתמשת בדיוק באותן שפות פשוטות ופעולות יצירה. שיטת הייצוג הזו היא כל כך מוצלחת עד שמשתמשים בה גם בעולם האמיתי - אבל כמובן, בעולם האמיתי זה לא בדיוק אותו הדבר כמו היצור התיאורטי שאציג כרגע - ונראה את זה בהמשך.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link href="/blog/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="/blog/assets/css/main.css">
-  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/blog/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/blog/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+<link href="//assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="//favicon.ico" type="image/x-icon">
+  <link rel="icon" href="//favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -44,7 +44,7 @@
 </head>
 <body><header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/blog/">לא מדויק</a>
+    <a class="navbar-brand" href="//">לא מדויק</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -53,30 +53,30 @@
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/whats_going_on">מה הולך פה?</a>
+                <a class="nav-link" href="//whats_going_on">מה הולך פה?</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/">דף הבית</a>
+                <a class="nav-link" href="//">דף הבית</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/categories">קטגוריות</a>
+                <a class="nav-link" href="//categories">קטגוריות</a>
             </li>
             
         
             
             <li class="nav-item">
-                <a class="nav-link" href="/blog/about/">אודות</a>
+                <a class="nav-link" href="//about/">אודות</a>
             </li>
             
         
       </ul>
-      <form class="form-inline mt-2 mt-md-0" action="/blog/post_list.html" method="get">
+      <form class="form-inline mt-2 mt-md-0" action="//post_list.html" method="get">
         <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
       </form>
@@ -133,7 +133,7 @@
 
 התשובה גם כן פשוטה: בשביל לעשות חיפושים מתוחכמים. קרוב לודאי שכולכם ביצעתם חיפוש כלשהו במסמך. חיפושים "רגילים" תמיד מחפשים מחרוזת ספציפית אחת - רצף של תווים (לאו דווקא כזה שמרכיב מילה שלמה, אולי גם חלק ממילה). אבל לפעמים אנחנו רוצים לחפש משהו שאנחנו לא יודעים איך בדיוק הוא כתוב, אלא רק מה התבנית הכללית שלו; ולפעמים אנחנו רוצים לחפש הרבה דברים בבת אחת, ואנחנו יודעים מה התבנית המשותפת שלהם. בקיצור, אנחנו רוצים לבצע חיפוש אחרי איברים ששייכים לקבוצה כלשהי של מילים - שפה. לפעמים, כפי שרנדל מונרו מ-xkcd מדגים, זה יכול להציל חיים:
 
-<a href="/blog/assets/img/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="/blog/assets/img/2015/01/regular_expressions.png" width="600" height="607" /></a>
+<a href="//assets/img/2015/01/regular_expressions.png"><img class="aligncenter size-full wp-image-3216" alt="regular_expressions" src="//assets/img/2015/01/regular_expressions.png" width="600" height="607" /></a>
 
 איך זה עובד בפועל? הרעיון הכללי הוא להשתמש בכלים שכבר הצגתי. בהינתן ביטוי רגולרי, אפשר לפענח אותו ולבנות אוטומט אי-דטרמיניסטי שמקבל אותו. את האוטומט הזה אפשר להריץ על טקסט ולראות אם האוטומט מגיע למצב מקבל. אם הוא מקבל, אז מצאנו מילה בשפה שהאוטומט מקבל שמתחילה בתחילת הטקסט ומסתיימת במקום שבו האוטומט הגיע למצב מקבל. אם לא מצאנו (ובפרט אם הגענו אל "בור" או שהחישוב נתקע) אז אנחנו יודעים שאפשר לדלג על האות הראשונה בטקסט ולהתחיל מחדש חיפוש באות הבאה, וכן הלאה. בנוסף, לא חייבים לעצור אחרי שמגיעים למצב מקבל - אפשר לנקוט בגישה "חמדנית" שבה ממשיכים עד המילה הארוכה ביותר שאותה מצליחים לקבל.
 
@@ -237,7 +237,7 @@
 
 ואם הגעתי לנקודה הזו, יש רק דרך אחת לסיים. באתר השאלות והתשובות stackoverflow מישהו שאל פעם בדיוק על זה - פרסור הטמל עם ביטויים רגולריים. הוא קיבל "<a href="http://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">תשובה</a>" שאמנם קשה לומר שהיא תשובה מועילה יותר מדי, אבל היא אחד מהדברים המשעשעים ביותר שקשורים לביטויים רגולריים שאני מכיר (הו, יש המון! בדיחות ביטויים רגולריים זה אדיר!). היא כל כך מוצלחת שאני לא רק מקשר אליה אלא שם צילום מסך, שיהיה לתמיד (ולא, שום דבר לא מקולקל בצילום המסך או במחשב שלכם, כל הפונטים שם הם בכוונה):
 
-<a href="/blog/assets/img/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="/blog/assets/img/2015/01/cthulhu.png" width="729" height="684" /></a>
+<a href="//assets/img/2015/01/cthulhu.png"><img class="aligncenter size-full wp-image-3217" alt="cthulhu" src="//assets/img/2015/01/cthulhu.png" width="729" height="684" /></a>
 
 </div>
 
@@ -263,12 +263,12 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/blog/2015/01/30/regular_expressions" hidden></a>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2015/01/30/regular_expressions" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/blog/"></data>
+  <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
@@ -280,7 +280,7 @@
           <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/blog/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
@@ -293,6 +293,6 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/blogassets/js/jquery-slim.min.js"><\/script>')</script><script src="/blog/assets/js/bootstrap.bundle.js"></script></body>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery-slim.min.js"><\/script>')</script><script src="//assets/js/bootstrap.bundle.js"></script></body>
 
 </html>
