@@ -1,0 +1,2326 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index אינדקס
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+מפגש ראשון עם אקסיומות צרמלו-פרנקל
+\end_layout
+
+\begin_layout Description
+קטגוריות: תורת הקבוצות
+\end_layout
+
+\begin_layout Description
+תגים: תורת הקבוצות, צרמלו-פרנקל
+\end_layout
+
+\begin_layout Description
+מזהה:
+\family roman
+\series bold
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+intro_to_relations
+\end_layout
+
+\begin_layout Standard
+את 
+\begin_inset CommandInset href
+LatexCommand href
+name "הפוסט הקודם שלי"
+target "https://gadial.net/2019/10/19/what_is_set_theory/"
+literal "false"
+
+\end_inset
+
+ על תורת הקבוצות סיימתי בהצגת הפרדוקס של ראסל, שהוא מעין תמרור אזהרה בשבילנו
+ - אי אפשר סתם להגדיר קבוצות איך שבא לנו, זה מוביל בקלות לפרדוקסים במתמטיקה.
+ לשאלה 
+\begin_inset Quotes eld
+\end_inset
+
+איך פותרים את זה
+\begin_inset Quotes erd
+\end_inset
+
+ אין תשובה חד משמעית - צצו כל מני גישות במתמטיקה להתמודדות עם הבעיה הזו,
+ אבל מכיוון שאני לא רוצה להתעסק בפרדוקס של ראסל אלא בתורת הקבוצות כפי שכיום
+ עוסקים בה במתמטיקה אני אתאר רק את הפתרון המקובל ביותר כיום - 
+\series bold
+אקסיומות צרמלו-פרנקל
+\series default
+, או בקיצור
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+ZF
+\lang hebrew
+.
+\end_layout
+
+\begin_layout Standard
+כדי להגדיר במפורש את צרמלו-פרנקל או לדבר בכלל על מה זו המשמעות של אקסיומות
+ כאלו אני צריך לוגיקה מתמטית, וזה מקפיץ את הפוסטים הללו מרמת 
+\begin_inset Quotes eld
+\end_inset
+
+מתמטיקה בסיסית
+\begin_inset Quotes erd
+\end_inset
+
+ לרמת 
+\begin_inset Quotes eld
+\end_inset
+
+מתמטיקה בסיסית פחות
+\begin_inset Quotes erd
+\end_inset
+
+ ואני עדיין לא רוצה ללכת לשם, אז בואו נחכה עם הדיון הפורמלי עד שנגיע לתורת
+ הקבוצות האקסיומטית, אי שם בעתיד.
+ עם זאת, אני לא רוצה לוותר על הצגה לא פורמלית של צרמלו-פרנקל כי זה מעניין
+ וכי כדאי שנתרגל.
+ 
+\series bold
+לא אציג כרגע את כל האקסיומות
+\series default
+, אבל אציג מספיק מהן כדי שיהיה מעניין ואל מה שהושמט נחזור בעתיד.
+\end_layout
+
+\begin_layout Standard
+הפוסט הזה עלול להיות קשה יחסית, כך שאפשר לדלג עליו או על חלקים ממנו אם נתקעים
+ בהם, ואולי כדאי לחזור אליו אחר כך כדי להבין כמה מהנקודות העדינות שאני מתאר.
+ אני לא הולך לבנות בו משהו שלא יתואר במפורש בפוסטים אחרים אבל הוא כן יתן
+ מסגרת של 
+\begin_inset Quotes eld
+\end_inset
+
+למה אפשר לעשות את מה שאנחנו עושים
+\begin_inset Quotes erd
+\end_inset
+
+ שלא ארחיב עליה באותה מידה בהמשך, עד שלא נגיע אל תורת הקבוצות האקסיומטית.
+\end_layout
+
+\begin_layout Standard
+נתחיל עם השאלה 
+\begin_inset Quotes eld
+\end_inset
+
+מתי שתי קבוצות הן שוות?
+\begin_inset Quotes erd
+\end_inset
+
+ שדיברנו עליה בפוסט הקודם.
+ אמרתי ש-
+\begin_inset Formula $A=B$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $a\in A\iff a\in B$
+\end_inset
+
+ - במילים אחרות, אם לשתי קבוצות יש את אותם האיברים, הן שוות )אין 
+\begin_inset Quotes eld
+\end_inset
+
+מידע נוסף
+\begin_inset Quotes erd
+\end_inset
+
+ על קבוצות, כמו למשל השם שלהן או צבע או וואטאבר שמאפשר להבדיל ביניהן(.
+ זו אחת מאקסיומות צרמלו-פרנקל: 
+\series bold
+אקסיומת ההיקפיות
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+בואו נציג הגדרה וסימון שהם שימושיים בכל חלקי המתמטיקה: אני אומר ש-
+\begin_inset Formula $A$
+\end_inset
+
+ היא 
+\series bold
+תת-קבוצה
+\series default
+ של 
+\begin_inset Formula $B$
+\end_inset
+
+ ומסמן את זה בתור 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ אם 
+\begin_inset Formula $a\in A\Rightarrow a\in B$
+\end_inset
+
+, כלומר אם כל איבר של 
+\begin_inset Formula $A$
+\end_inset
+
+ הוא גם איבר של 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ לפעמים אני אגיד ש-
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\series bold
+מכילה
+\series default
+ את 
+\begin_inset Formula $A$
+\end_inset
+
+, וזה כבר פתח לבלבול: האינטואיציה היא לפעמים שאם 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+מכילה
+\begin_inset Quotes erd
+\end_inset
+
+ את 
+\begin_inset Formula $A$
+\end_inset
+
+ זה אומר ש-
+\begin_inset Formula $A$
+\end_inset
+
+ הוא איבר של 
+\begin_inset Formula $B$
+\end_inset
+
+, אבל זה בהחלט לא המצב.
+ למשל, 
+\begin_inset Formula $\left\{ 1,7\right\} \subseteq\left\{ 1,7,17\right\} $
+\end_inset
+
+ אבל 
+\begin_inset Formula $\left\{ 1,7\right\} $
+\end_inset
+
+ אינה איבר של 
+\begin_inset Formula $\left\{ 1,7,17\right\} $
+\end_inset
+
+.
+ כדי להגיד 
+\begin_inset Formula $A\in B$
+\end_inset
+
+ אני אגיד ש-
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\series bold
+שייכת
+\series default
+ ל-
+\begin_inset Formula $B$
+\end_inset
+
+; למיטב ידיעתי זו הטרמינולוגיה הסטנדרטית בעברית.
+\end_layout
+
+\begin_layout Standard
+עכשיו אפשר לנסח את אקסיומת ההיקפיות בעזרת הסימון החדש שלנו: 
+\begin_inset Formula $A=B$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ וגם 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+.
+ זה פשוט ניסוח אחר של אקסיומת ההיקפיות, אבל הוא גם 
+\begin_inset Quotes eld
+\end_inset
+
+שיטת העבודה
+\begin_inset Quotes erd
+\end_inset
+
+ הסטנדרטית במתמטיקה כשרוצים להוכיח שוויון קבוצות - מוכיחים הכלה דו-כיוונית
+ שכזו.
+ המון הוכחות במתמטיקה הן פשוט הוכחות הכלה דו-כיוונית.
+\end_layout
+
+\begin_layout Standard
+אחרי שהסכמנו על מהי קבוצה, בערך, אפשר להתחיל לבנות את היקום של תורת הקבוצות.
+ אז בואו נתחיל כמו בפוסט הקודם, מהקבוצה הריקה: 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+ אני אניח שקבוצה כזו קיימת - זו תהיה 
+\series bold
+אקסיומת הקבוצה הריקה
+\series default
+ של צרמלו-פרנקל )בהמשך נראה שאפשר להסיק אותה מאקסיומות אחרות של צרמלו-פרנקל
+ אבל אני ממש לא רוצה לאפטמז דברים כאן(.
+ שימו לב שאני מדבר על 
+\series bold
+ה
+\series default
+קבוצה 
+\series bold
+ה
+\series default
+ריקה, בה' הידיעה - יש כאן הנחה מתמטית סמויה לפיה קיימת רק קבוצה ריקה 
+\series bold
+אחת
+\series default
+ - אבל זה נובע מיידית מאקסיומת ההיקפיות.
+ עוד נקודה מעניינת שנוגעת לקבוצה הריקה היא שמתקיים 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+ לכל קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ למה? ובכן, זו דוגמא למה שנקרא במתמטיקה 
+\series bold
+נכון באופן ריק
+\series default
+.
+ הטענה 
+\begin_inset Formula $\emptyset\subseteq A$
+\end_inset
+
+, על פי הגדרה, היא בעצם הטענה 
+\begin_inset Formula $a\in\emptyset\Rightarrow a\in A$
+\end_inset
+
+.
+ צד שמאל של הגרירה לא מתקיים אף פעם, לאף 
+\begin_inset Formula $a$
+\end_inset
+
+, ולכן צד ימין של הגרירה אף פעם לא 
+\begin_inset Quotes eld
+\end_inset
+
+עומד למבחן
+\begin_inset Quotes erd
+\end_inset
+
+.
+ באופן כללי כשיש לי טענה של גרירה שבה התנאי אף פעם לא מתקיים אני אומר שהטענה
+ הזו נכונה באופן ריק.
+\end_layout
+
+\begin_layout Standard
+כזכור, אני רוצה לשכנע אתכם שאפשר לבנות את 
+\begin_inset Quotes eld
+\end_inset
+
+כל המתמטיקה
+\begin_inset Quotes erd
+\end_inset
+
+ מתוך מושג הקבוצה.
+ הדבר הראשון שאני רוצה לבנות הוא את המספרים הטבעיים.
+ כבר אמרתי בפוסט הקודם ש-
+\begin_inset Formula $0\triangleq\emptyset$
+\end_inset
+
+, אז לפחות את 
+\begin_inset Formula $0$
+\end_inset
+
+ בניתי.
+ מה עם 
+\begin_inset Formula $1$
+\end_inset
+
+? הגדרתי אותו בתור 
+\begin_inset Formula $1\triangleq\left\{ 0\right\} $
+\end_inset
+
+.
+ מה שמעלה את השאלה - האם הקבוצה 
+\begin_inset Formula $\left\{ 0\right\} $
+\end_inset
+
+ קיימת? אני הרי כרגע נוקט בגישת 
+\begin_inset Quotes eld
+\end_inset
+
+שום דבר לא קיים בלי שאפשר יהיה להוכיח את זה
+\begin_inset Quotes erd
+\end_inset
+
+.
+ כרגע אין לי אקסיומה שנותנת את זה.
+ אז למה לא להוסיף? נאמר, נוסיף אקסיומה שאומרת שאם 
+\begin_inset Formula $x$
+\end_inset
+
+ קיים, גם 
+\begin_inset Formula $\left\{ x\right\} $
+\end_inset
+
+ קיים.
+ זה לא כזה חזק ובוודאי לא יכול ליצור קבוצה הרסנית כמו בפרדוקס של ראסל שיש
+ בה הרבה יותר מאיבר אחד.
+ אם תהיה לי אקסיומה כזו, גם הקיום של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מובטח.
+ האקסיומה הזו היא לא חלק מצרמלו-פרנקל; אוטוטו נבין מה יש במקומה.
+ אבל בינתיים נזרום איתה.
+\end_layout
+
+\begin_layout Standard
+אבל מה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+? הגדרתי 
+\begin_inset Formula $2=\left\{ 0,1\right\} $
+\end_inset
+
+.
+ עכשיו, כבר יש לי את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ואת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז על פי האקסיומה שתיארתי לפני רגע, גם הקבוצות 
+\begin_inset Formula $\left\{ 0\right\} $
+\end_inset
+
+ ו-
+\begin_inset Formula $\left\{ 1\right\} $
+\end_inset
+
+ קיימות.
+ עכשיו אני רוצה לטעון שקיימת קבוצה שכוללת גם את האיבר של 
+\begin_inset Formula $\left\{ 0\right\} $
+\end_inset
+
+ וגם את האיבר של 
+\begin_inset Formula $\left\{ 1\right\} $
+\end_inset
+
+.
+ לדבר כזה יש שם במתמטיקה: 
+\series bold
+איחוד קבוצות
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+בואו נגדיר את זה במפורש: אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ הן קבוצות כלשהן, אז 
+\series bold
+האיחוד
+\series default
+ שלהן הוא קבוצה שאבריה הם בדיוק אברי 
+\begin_inset Formula $A$
+\end_inset
+
+ ו-
+\begin_inset Formula $B$
+\end_inset
+
+.
+ פורמלית ועם סימון:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\cup B\triangleq\left\{ a\ |\ a\in A\vee a\in B\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאשר 
+\begin_inset Formula $\vee$
+\end_inset
+
+ הוא סימון מתמטי ל
+\begin_inset Quotes erd
+\end_inset
+
+או
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אם כבר הצגתי איחוד, בואו נציג גם את בן דודו 
+\series bold
+חיתוך
+\series default
+.
+ חיתוך של שתי קבוצות הוא קבוצת האיברים שמשותפים לשתי הקבוצות הללו:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A\cap B\triangleq\left\{ a\ |\ a\in A\wedge a\in B\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאשר 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ הוא סימון מתמטי ל
+\begin_inset Quotes erd
+\end_inset
+
+וגם
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הנה לנו שתי אקסיומות כיפיות: אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קיימות אז גם 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ וגם 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ קיימות.
+ כמו קודם, אלו לא אקסיומות של צרמלו-פרנקל כי האקסיומה על האיחוד תוחלף במשהו
+ חזק יותר )שבלעדיו אי אפשר לעשות דברים מעניינים( והאקסיומה על החיתוך תתגלה
+ כמיותרת בהינתן אקסיומות שטרם הגעתי אליהן.
+ אבל גם האקסיומות הללו לא יישארו איתנו לאורך זמן, המשמעות שלהן תישאר תמיד
+ - אם הצלחנו להוכיח את הקיום של 
+\begin_inset Formula $A,B$
+\end_inset
+
+ אנחנו מקבלים את הקיום של האיחוד והחיתוך שלהן במתנה.
+\end_layout
+
+\begin_layout Standard
+זה נותן לנו את המספרים הטבעיים: כאמור, 
+\begin_inset Formula $2=\left\{ 0\right\} \cup\left\{ 1\right\} $
+\end_inset
+
+, וכמו כן 
+\begin_inset Formula $3=\left\{ 0,1\right\} \cup\left\{ 2\right\} $
+\end_inset
+
+, כלומר 
+\begin_inset Formula $3=2\cup\left\{ 2\right\} $
+\end_inset
+
+.
+ באופן דומה 
+\begin_inset Formula $4=3\cup\left\{ 3\right\} $
+\end_inset
+
+ ובאופן הכי כללי, 
+\begin_inset Formula $n+1=n\cup\left\{ n\right\} $
+\end_inset
+
+.
+ זה מוכיח לנו שלכל 
+\begin_inset Formula $n$
+\end_inset
+
+ טבעי, הקבוצה שקראתי לה 
+\begin_inset Formula $n$
+\end_inset
+
+ אכן קיימת.
+ וזה מוכיח שהמספרים הטבעיים קיימים...
+ רגע, רגע, רגע.
+ בואו לא נרוץ קדימה מהר מדי.
+ עכשיו הגענו לנקודה מבלבלת שחשוב לשים על השולחן כבר עכשיו.
+\end_layout
+
+\begin_layout Standard
+כזכור, מה שאנחנו קוראים לו במתמטיקה 
+\begin_inset Quotes eld
+\end_inset
+
+המספרים הטבעיים
+\begin_inset Quotes erd
+\end_inset
+
+ הוא הקבוצה 
+\begin_inset Formula $\mathbb{N}\triangleq\left\{ 0,1,2,3,\dots\right\} $
+\end_inset
+
+.
+ אני חד משמעית 
+\series bold
+לא הוכחתי
+\series default
+ שהקבוצה הזו קיימת.
+ הוכחתי שכל איבר שלה קיים; זה 
+\series bold
+לא אומר
+\series default
+ שקיימת קבוצה שמכילה את כל האיברים הללו.
+ התעלול שעשיתי עם האקסיומה שבהינתן 
+\begin_inset Formula $x$
+\end_inset
+
+ מייצרת את 
+\begin_inset Formula $\left\{ x\right\} $
+\end_inset
+
+ ועם האיחוד לא נותן את זה; הוא מאפשר לי לבנות כל קבוצה 
+\series bold
+סופית
+\series default
+, אבל הוא לא מאפשר לי לבנות קבוצות 
+\series bold
+אינסופיות
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+אתם יכולים לטעון - רגע, מה הבעיה? נסתכל על האיחוד האינסופי 
+\begin_inset Formula $\left\{ 0\right\} \cup\left\{ 1\right\} \cup\left\{ 2\right\} \cup\dots$
+\end_inset
+
+.
+ העניין הוא שלא הגדרתי 
+\begin_inset Quotes eld
+\end_inset
+
+איחוד אינסופי
+\begin_inset Quotes erd
+\end_inset
+
+ בשום מקום; המושג לא קיים ואין לי אקסיומה שמדברת עליו.
+ הגדרתי איחוד שפועל על שתי איברים ותו לא.
+ אפשר להרחיב פעולה על שני איברים לפעולה על 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים באופן אינדוקטיבי: למשל, 
+\begin_inset Formula $A\cup B\cup C$
+\end_inset
+
+ זו דרך מקוצרת לכתוב 
+\begin_inset Formula $\left(A\cup B\right)\cup C$
+\end_inset
+
+; אבל עבור איחוד של אינסוף קבוצות זה חסר משמעות.
+\end_layout
+
+\begin_layout Standard
+האם האקסיומות שיש לנו יכולות לבנות את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ בדרך קצת יותר חכמה? לא אוכיח את זה כרגע, אבל 
+\series bold
+לא
+\series default
+.
+ אני חייב אקסיומה נוספת כדי לקבל את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ עצמה.
+ לעת עתה בואו פשוט נניח ש-
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ קיימת וזו תהיה האקסיומה שלנו - היא נקראת 
+\series bold
+אקסיומת האינסוף
+\series default
+, מכיוון שהיא מוכיחה את הקיום של קבוצה אינסופית.
+ יש לה עוד ניסוחים שונים ומשונים בתורת הקבוצות האקסיומטית אבל המשמעות של
+ כולן היא אותה משמעות.
+\end_layout
+
+\begin_layout Standard
+בואו נעשה סיכום ביניים של האקסיומות שיש לנו עד כה:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת ההיקפיות
+\series default
+: שתי קבוצות הן שוות אם הן בעלות אותם איברים: 
+\begin_inset Formula $A=B$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $a\in A\iff a\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת הקבוצה הריקה
+\series default
+: הקבוצה 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+אם האיבר 
+\begin_inset Formula $a$
+\end_inset
+
+ קיים אז הקבוצה 
+\begin_inset Formula $\left\{ a\right\} $
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+אם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קיימות אז 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ קיימת ו-
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת האינסוף: 
+\series default
+
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Standard
+עכשיו שראינו אותן, אני רוצה לשנות את אקסיומות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3-4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כדי שיתאימו למה שיש בצרמלו-פרנקל.
+ העניין הבסיסי שאני בא להתמודד איתו הוא שאני 
+\series bold
+כן
+\series default
+ רוצה לדבר על איחודים אינסופיים.
+ איחוד אינסופי הוא חלק מהותי מהמתמטיקה.
+ אני לא יכול בלעדיו.
+ אז נתחיל מלהגדיר אותו, אבל נגדיר אותו בצורה שבה אני עדיין יכול 
+\begin_inset Quotes eld
+\end_inset
+
+לשלוט
+\begin_inset Quotes erd
+\end_inset
+
+ על מה שקורה בו וזה לא מייצר לי קבוצות משוגעות.
+\end_layout
+
+\begin_layout Standard
+בואו נניח ש-
+\begin_inset Formula $X$
+\end_inset
+
+ היא קבוצה שכל האיברים שלה הן קבוצות בעצמן - דבר כזה נקרא 
+\series bold
+משפחה של קבוצות
+\series default
+.
+ אני אגדיר איחוד על כל האיברים של 
+\begin_inset Formula $X$
+\end_inset
+
+, ואסמן זאת 
+\begin_inset Formula $\bigcup X$
+\end_inset
+
+, באופן הבא: 
+\begin_inset Formula $a$
+\end_inset
+
+ שייך ל-
+\begin_inset Formula $\bigcup X$
+\end_inset
+
+ אם 
+\series bold
+קיימת
+\series default
+ קבוצה 
+\begin_inset Formula $A\in X$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ פורמלית, תוך שימוש בסימן 
+\begin_inset Formula $\exists$
+\end_inset
+
+ שמתאר 
+\begin_inset Quotes eld
+\end_inset
+
+קיים
+\begin_inset Quotes erd
+\end_inset
+
+, אני מגדיר זאת כך:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bigcup X=\left\{ a\ |\ \exists A\in X:a\in A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עכשיו אפשר להציג את 
+\series bold
+אקסיומת האיחוד
+\series default
+ של צרמלו-פרנקל: אם 
+\begin_inset Formula $X$
+\end_inset
+
+ קיימת אז 
+\begin_inset Formula $\bigcup X$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Standard
+כדי להבין למה האקסיומה הזו לא הופכת בניית קבוצות ל
+\begin_inset Quotes erd
+\end_inset
+
+תוכנית כבקשתך
+\begin_inset Quotes erd
+\end_inset
+
+, בואו נראה למה אפילו היא לא מסייעת לי לבנות את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ ואני עדיין צריך אקסיומה נפרדת עבור זה.
+ כזכור, הצלחתי כבר לבנות את האיברים 
+\begin_inset Formula $0,1,2,\dots$
+\end_inset
+
+ בנפרד, וכל האתגר הוא לאחד אותם לקבוצה אחת.
+ אז רציתי לבנות את האיחוד 
+\begin_inset Formula $\left\{ 0\right\} \cup\left\{ 1\right\} \cup\left\{ 2\right\} \cup\dots$
+\end_inset
+
+.
+ אקסיומת האיחוד מאפשרת לי לבנות איחוד אינסופי כזה, 
+\series bold
+בתנאי אחד
+\series default
+: שתהיה לי מלכתחילה קבוצה 
+\begin_inset Formula $X$
+\end_inset
+
+ שמאגדת בתוכה את כל הקבוצות שאני מאחד.
+ כלומר, אם הייתי מסוגל לבנות 
+\begin_inset Formula $X$
+\end_inset
+
+ שמקיימת 
+\begin_inset Formula $X=\left\{ \left\{ 0\right\} ,\left\{ 1\right\} ,\left\{ 2\right\} ,\dots\right\} $
+\end_inset
+
+ אז היה מתקיים 
+\begin_inset Formula $\bigcup X=\mathbb{N}$
+\end_inset
+
+ כפי שרציתי.
+ אבל אני 
+\series bold
+לא יודע
+\series default
+ לבנות 
+\begin_inset Formula $X$
+\end_inset
+
+ כזו בלי להיעזר באקסיומת האינסוף.
+\end_layout
+
+\begin_layout Standard
+האם זו נקודה מבלבלת? בהחלט.
+ הבשורות הטובות הן שלא תהיה נקודה עד כדי כך מבלבלת עד שנגיע לתורת הקבוצות
+ האקסיומטית; הבלבול הזה הוא טעימה שמאפשרת לנו להרגיש 
+\series bold
+עד כמה
+\series default
+ תורת הקבוצות האקסיומטית היא שדה מוקשים שהבנה שלו דורשת הבנה של ניואנסים
+ עדינים מאוד.
+\end_layout
+
+\begin_layout Standard
+עוד נקודה מבלבלת היא שלמעשה, אקסיומת האיחוד 
+\series bold
+לא
+\series default
+ מוכיחה לבדה שאם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קיימות אז 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ קיימת.
+ כדי לעשות את זה, צריך לעבור דרך הקבוצה 
+\begin_inset Formula $X=\left\{ A,B\right\} $
+\end_inset
+
+; אם 
+\begin_inset Formula $X$
+\end_inset
+
+ קיימת אז 
+\begin_inset Formula $\bigcup X=A\cup B$
+\end_inset
+
+ תהיה קיימת.
+ לפני רגע הוכחתי שאם 
+\begin_inset Formula $A,B$
+\end_inset
+
+ קיימות אז 
+\begin_inset Formula $\left\{ A,B\right\} $
+\end_inset
+
+ קיימת בעזרת שילוב של אקסיומה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)שאמרה ש-
+\begin_inset Formula $\left\{ A\right\} $
+\end_inset
+
+ קיימת ו-
+\begin_inset Formula $\left\{ B\right\} $
+\end_inset
+
+ קיימת( ואקסיומה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)שאמרה ש-
+\begin_inset Formula $\left\{ A\right\} \cup\left\{ B\right\} $
+\end_inset
+
+ קיימת(.
+ אם אני 
+\begin_inset Quotes eld
+\end_inset
+
+מחליש
+\begin_inset Quotes erd
+\end_inset
+
+ את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\numeric off
+, אני צריך לחזק טיפה את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולהרשות לה ליצור קבוצה עבור 
+\series bold
+זוג
+\series default
+ איברים.
+ לדבר הזה קוראים בצרמלו-פרנקל 
+\series bold
+אקסיומת הזיווג
+\series default
+: אם 
+\begin_inset Formula $a,b$
+\end_inset
+
+ קיימים אז גם הקבוצה 
+\begin_inset Formula $\left\{ a,b\right\} $
+\end_inset
+
+ קיימת.
+ האקסיומה הקודמת נובעת ממנה בקלות: אם 
+\begin_inset Formula $a=b$
+\end_inset
+
+ אז 
+\begin_inset Formula $\left\{ a,b\right\} =\left\{ a,a\right\} =\left\{ a\right\} $
+\end_inset
+
+, ולכן הטענה 
+\begin_inset Quotes eld
+\end_inset
+
+אם 
+\begin_inset Formula $a$
+\end_inset
+
+ קיים אז 
+\begin_inset Formula $\left\{ a\right\} $
+\end_inset
+
+ קיימת
+\begin_inset Quotes erd
+\end_inset
+
+ נובעת גם מהניסוח הזה של האקסיומה.
+\end_layout
+
+\begin_layout Standard
+עכשיו בואו נעבור לחיתוך.
+ כמו שהגדרתי 
+\begin_inset Quotes eld
+\end_inset
+
+איחוד על קבוצה 
+\begin_inset Formula $X$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ כדרך להגדיר איחוד של אינסוף קבוצות בבת אחת כל עוד יש לנו 
+\begin_inset Quotes eld
+\end_inset
+
+שליטה
+\begin_inset Quotes erd
+\end_inset
+
+ עליהן שמתבטאת בכך שכולן יושבות באותה קבוצה 
+\begin_inset Formula $X$
+\end_inset
+
+, אני אגדיר גם חיתוך כזה בתור אוסף האיברים שנמצאים 
+\series bold
+בכל
+\series default
+ איבר של 
+\begin_inset Formula $X$
+\end_inset
+
+, ואשתמש לצורך כך בסימן 
+\begin_inset Formula $\forall$
+\end_inset
+
+ שמייצג 
+\begin_inset Quotes eld
+\end_inset
+
+לכל
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $X\ne\emptyset$
+\end_inset
+
+ אז אני מגדיר
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bigcap X=\left\{ a\ |\ \forall A\in X:a\in A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ההגדרה היא סבבה וסימטרית להגדרה של 
+\begin_inset Formula $\bigcup X$
+\end_inset
+
+ והכל, אבל עולות ממנה שתי שאלות:
+\end_layout
+
+\begin_layout Enumerate
+מה מבטיח לנו ש-
+\begin_inset Formula $\bigcap X$
+\end_inset
+
+ קיימת?
+\end_layout
+
+\begin_layout Enumerate
+למה דרשתי ש-
+\begin_inset Formula $X\ne\emptyset$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+בואו נענה על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+קודם: שום דבר כרגע לא מבטיח לנו את זה.
+ אנחנו צריכים עוד אקסיומה, שהיא הדבר החשוב ביותר שנדבר עליו בפוסט הזה.
+ אחרי שנסיים איתה גם יהיה ברור יחסית למה 
+\begin_inset Formula $X=\emptyset$
+\end_inset
+
+ הוא מקרה שאנחנו לא יכולים להרשות בשום פנים ואופן.
+\end_layout
+
+\begin_layout Standard
+בואו נדבר לרגע על קבוצת 
+\series bold
+המספרים הטבעיים הזוגיים
+\series default
+, כלומר הקבוצה 
+\begin_inset Formula $\left\{ 0,2,4,\dots\right\} $
+\end_inset
+
+.
+ זו ללא ספק קבוצה פשוטה וטבעית וכרגע אין לי מושג איך לבנות אותה.
+ מכיוון שזו קבוצה אינסופית אני לא יכול ליצור אותה בעזרת אקסיומות הזיווג
+ והאיחוד, בדיוק כפי שלא יכלתי ליצור את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+ מצד שני, אקסיומת האינסוף שנותנת לי את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ לא נותנת לי קבוצות אינסופיות אחרות.
+ חסר לי משהו שיכול לייצר קבוצות אינסופיות 
+\begin_inset Quotes eld
+\end_inset
+
+פשוטות יותר
+\begin_inset Quotes erd
+\end_inset
+
+.
+ עכשיו, האינטואיציה שתנחה אותי היא שאם כבר הצלחתי לבנות קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ ולא נגרמו מכך פרדוקסים, אז גם לקחת תת-קבוצה של 
+\begin_inset Formula $A$
+\end_inset
+
+ לא הולך ליצור לי פרדוקסים - כלומר, שהקושי שלי יהיה ליצור קבוצות 
+\begin_inset Quotes eld
+\end_inset
+
+גדולות מדי
+\begin_inset Quotes erd
+\end_inset
+
+ ולא בגזירה של קבוצות קטנות יותר מתוך הקיימות.
+ זו האינטואיציה שמאחורי האקסיומה עם הניסוח הכי מתירני עד כה, שבאופן לא מדויק
+ אפשר לתאר בתור 
+\begin_inset Quotes eld
+\end_inset
+
+אם 
+\begin_inset Formula $A$
+\end_inset
+
+ קיימת אז כל תת-קבוצה שלה 
+\series bold
+שאני יודע לתאר
+\series default
+ קיימת
+\begin_inset Quotes erd
+\end_inset
+
+.
+ ה
+\begin_inset Quotes erd
+\end_inset
+
+שאני יודע לתאר
+\begin_inset Quotes erd
+\end_inset
+
+ הוא מילת המפתח כאן; אני לא אוכל להסביר פורמלית מה זה אומר עד שנגיע לתורת
+ הקבוצות האקסיומטית, אבל זה בהחלט לא מרשה לי 
+\series bold
+כל דבר
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+בואו נתאר את קבוצת המספרים הזוגיים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ n\in\mathbb{N}\ |\ \exists d\in\mathbb{N}:n=2d\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בהגדרה הזו יש שני מרכיבים: מה שמשמאל לקו המפריד ומה שמימין לו.
+ מה שמשמאל הוא פשוט האמירה 
+\begin_inset Quotes eld
+\end_inset
+
+אני בונה כרגע תת-קבוצה של 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ כלומר, ה
+\begin_inset Quotes erd
+\end_inset
+
+עולם
+\begin_inset Quotes erd
+\end_inset
+
+ שבו אני חי באותו הרגע הוא 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+, שאנחנו כבר יודעים שקיימת.
+ מה שיש מימין לקו המפריד הוא 
+\series bold
+קריטריון קונקרטי
+\series default
+ שמאפשר לי לקבוע מתי 
+\begin_inset Formula $n$
+\end_inset
+
+ יהיה שייך לתת-הקבוצה שאני בונה ומתי לא.
+ במקרה שלנו - אם 
+\begin_inset Formula $n$
+\end_inset
+
+ ניתן לכתיבה בתור 
+\begin_inset Formula $2d$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $d$
+\end_inset
+
+ הוא בעצמו איבר של 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+ האקסיומה שאתאר כרגע אומרת שאם הצלחתי להציג את תת-הקבוצה שלי בצורה הזו,
+ אז היא קיימת.
+ 
+\end_layout
+
+\begin_layout Standard
+הנה ניסוח פורמלי: האקסיומה נקראת 
+\series bold
+אקסיומת ההפרדה
+\series default
+ והיא אומרת שאם הקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ קיימת ואם 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ הוא קריטריון קונקרטי כלשהו שאיברים יכולים לקיים או לא לקיים, אז הקבוצה
+ 
+\begin_inset Formula $\left\{ a\in A\ |\ \varphi\left(a\right)\right\} $
+\end_inset
+
+ קיימת.
+ כאן 
+\begin_inset Formula $\varphi\left(a\right)$
+\end_inset
+
+ זו דרך לומר 
+\begin_inset Quotes eld
+\end_inset
+
+האיבר 
+\begin_inset Formula $a$
+\end_inset
+
+ מקיים את הקריטריון 
+\begin_inset Formula $\varphi$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אל תטרידו את עצמכם יותר מדי כרגע בשאלה מה זה קריטריון חוקי או לא - כלל
+ האצבע הוא שהכל חוקי, ועל המקרים הנדירים שבהם זה לא נדבר הרבה, הרבה בהמשך.
+\end_layout
+
+\begin_layout Standard
+נחזור עכשיו אל 
+\begin_inset Formula $\bigcap X=\left\{ a\ |\ \forall A\in X:a\in A\right\} $
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $X\ne\emptyset$
+\end_inset
+
+ אז בפרט קיימת 
+\begin_inset Formula $B\in X$
+\end_inset
+
+ כלשהי, ואפשר להשתמש ב-
+\begin_inset Formula $B$
+\end_inset
+
+ הזו בתור ה
+\begin_inset Quotes erd
+\end_inset
+
+עולם
+\begin_inset Quotes erd
+\end_inset
+
+ שממנו גוזרים את 
+\begin_inset Formula $\bigcap X$
+\end_inset
+
+, באופן הבא:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bigcap X=\left\{ a\in B\ |\ \forall A\in X:a\in A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עכשיו כתבתי את 
+\begin_inset Formula $\bigcap X$
+\end_inset
+
+ בצורה שאקסיומת ההפרדה מבקשת: בצד שמאל איבר ששייך לקבוצה שכבר ידוע שקיימת,
+ ובאגף ימין קריטריון קונקרטי כלשהו.
+ זה מוכיח את הקיום של 
+\begin_inset Formula $\bigcap X$
+\end_inset
+
+ לכל מקרה למעט 
+\begin_inset Formula $X=\emptyset$
+\end_inset
+
+.
+ ומה קורה במקרה הקצה הזה?
+\end_layout
+
+\begin_layout Standard
+ובכן, יש לנו פה עוד סיטואציה של 
+\series bold
+באופן ריק
+\series default
+.
+ אם 
+\begin_inset Formula $X$
+\end_inset
+
+ ריקה, אז הקריטריון 
+\begin_inset Formula $\forall A\in X:a\in A$
+\end_inset
+
+ מתקיים על ידי 
+\series bold
+כל
+\series default
+ 
+\begin_inset Formula $a$
+\end_inset
+
+, כי הוא אף פעם לא 
+\begin_inset Quotes eld
+\end_inset
+
+עומד למבחן
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אם כן, 
+\begin_inset Formula $\bigcap\emptyset$
+\end_inset
+
+ אמורה לצאת קבוצת 
+\begin_inset Quotes eld
+\end_inset
+
+כל האיברים
+\begin_inset Quotes erd
+\end_inset
+
+, אבל מה זה אומר, בעצם? כל האיברים 
+\series bold
+איפה
+\series default
+? אין לנו דרך לבנות קבוצה כזו; בקושי הצלחנו לבנות את 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+ למעשה, קל להוכיח שקבוצה כזו של 
+\begin_inset Quotes eld
+\end_inset
+
+כל האיברים
+\begin_inset Quotes erd
+\end_inset
+
+ )זה נקרא 
+\series bold
+קבוצה אוניברסלית
+\series default
+( לא קיימת: נניח שקבוצה 
+\begin_inset Formula $U$
+\end_inset
+
+ של כל האיברים כן קיימת, אז בואו נגדיר את הקבוצה האהובה מהפרדוקס של ראסל:
+ 
+\begin_inset Formula $D=\left\{ A\in U\ |\ A\notin A\right\} $
+\end_inset
+
+.
+ הופס, קיבלנו קבוצה פרדוקסלית שאמורה להיות קיימת על פי אקסיומת ההפרדה )אגף
+ ימין, 
+\begin_inset Formula $A\notin A$
+\end_inset
+
+ הוא בהחלט קריטריון קונקרטי(.
+ לכן 
+\begin_inset Formula $U$
+\end_inset
+
+ לא יכולה להתקיים, אם אנחנו רוצים לשמר את אקסיומת ההפרדה.
+ מכאן ש-
+\begin_inset Formula $\bigcap\emptyset$
+\end_inset
+
+ זה פשוט ביטוי לא מוגדר.
+\end_layout
+
+\begin_layout Standard
+נשארה לי אקסיומה אחת כדי שנוכל להתקדם הלאה עם 
+\begin_inset Quotes eld
+\end_inset
+
+בואו נבנה בעזרת תורת הקבוצות את כל המתמטיקה
+\begin_inset Quotes erd
+\end_inset
+
+.
+ הססמא האהובה על באז לייטייר מ
+\begin_inset Quotes erd
+\end_inset
+
+צעצוע של סיפור
+\begin_inset Quotes erd
+\end_inset
+
+ היא 
+\begin_inset Quotes eld
+\end_inset
+
+לאינסוף...
+ ומעבר לו!
+\begin_inset Quotes erd
+\end_inset
+
+ וזה בדיוק מה שאנחנו עושים בתורת הקבוצות, בכמה מובנים שונים.
+ גם כאן, באקסיומות, כבר הגענו אל האינסוף עם 
+\series bold
+אקסיומת האינסוף
+\series default
+, אבל זה לא מספיק - עדיין יש ביקום המתמטי אינספור קבוצות שאנחנו לא יכולים
+ לבנות ובקושי דגדגנו את מה שכן מתעסקים בו.
+ לדוגמא, את קבוצת המספרים הממשיים 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ לא נוכל לבנות עם האקסיומות שיש לנו עד עכשיו ותו לא.
+ 
+\end_layout
+
+\begin_layout Standard
+אפשר לחשוב על זה כך: ללא אקסיומת האינסוף, היינו משולים לחוקרת של היקום שנתקעה
+ על כדור הארץ, בלי חללית ובלי כלום.
+ כל היקום שלה מוגבל לכוכב לכת אחד וכדי להרחיב את אופקיה היא צריכה משהו 
+\series bold
+חזק
+\series default
+ שיאפשר לה להימלט מבאר הכבידה של כדור הארץ.
+ השיגור הזה אל החלל הוא מה שאקסיומת האינסוף נתנה לנו.
+ עכשיו חוקרת היקום שלנו יכולה להסתובב לה בכיף במערכת השמש, לבקר בירח, להגיע
+ אל מאדים, אולי אפילו לחבק את פלוטו ולומר לו שהוא כוכב לכת אמיתי; אבל מרחבי
+ החלל האמיתיים עדיין לא נגישים לה.
+ בשביל להגיע אליהם היא צריכה מנוע על-חלל.
+ כדי להשלים את האנלוגיה, מנוע על-חלל הוא לא משהו שאפשר להשתמש בו אם נמצאים
+ בתוך באר הכבידה של כוכב לכת - רק אחרי ההימלטות מכדור הארץ אפשר להשתמש בו.
+ לכן שני השלבים של חקר היקום - הבריחה מכדור הארץ, והמעבר לכל יתר היקום -
+ היו הכרחיים.
+\end_layout
+
+\begin_layout Standard
+האקסיומה שתיתן לנו את מנוע העל-חלל נקראת 
+\series bold
+אקסיומת קבוצת החזקה
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+קבוצת החזקה
+\series default
+ של 
+\begin_inset Formula $A$
+\end_inset
+
+ היא פשוט קבוצת כל תתי-הקבוצות של 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ פורמלית:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{P}\left(A\right)\triangleq\left\{ B\ |\ B\subseteq A\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לדוגמא, אם 
+\begin_inset Formula $A=\left\{ 1,2\right\} $
+\end_inset
+
+ אז 
+\begin_inset Formula $\mathcal{P}\left(A\right)=\left\{ \emptyset,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 1,2\right\} \right\} $
+\end_inset
+
+.
+ באופן כללי אם ב-
+\begin_inset Formula $A$
+\end_inset
+
+ יש 
+\begin_inset Formula $n$
+\end_inset
+
+ איברים אז ב-
+\begin_inset Formula $\mathcal{P}\left(A\right)$
+\end_inset
+
+ יש 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ איברים )תרגיל בקומבינטוריקה - להסביר למה( ולכן אני לא אכתוב עוד דוגמאות
+ מפורשות כי זו פשוט הרבה כתיבה.
+ אנחנו הולכים להתעסק כל כך הרבה עם קבוצות חזקה בהמשך שאני לא רואה סיבה להרחיב
+ עליהן יותר מדי כרגע, אז אני אקפוץ ישר לאקסיומה: 
+\series bold
+אקסיומת קבוצת החזקה
+\series default
+ פשוט אומרת שאם 
+\begin_inset Formula $A$
+\end_inset
+
+ קיימת את 
+\begin_inset Formula $\mathcal{P}\left(A\right)$
+\end_inset
+
+ קיימת.
+ זה, יחד עם שאר האקסיומות שיש לנו כרגע, מאפשר לנו לבנות יקום מתמטי כביר
+ בגודלו, אבל לפרטים של הבניה הזו אכנס רק בשלב מאוחר בהרבה.
+\end_layout
+
+\begin_layout Standard
+בואו נסכם את האקסיומות שראינו:
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת ההיקפיות
+\series default
+: שתי קבוצות הן שוות אם הן בעלות אותם איברים: 
+\begin_inset Formula $A=B$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $a\in A\iff a\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת הקבוצה הריקה
+\series default
+: הקבוצה 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת הזיווג
+\series default
+: אם 
+\begin_inset Formula $a,b$
+\end_inset
+
+ קיימים אז 
+\begin_inset Formula $\left\{ a,b\right\} $
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת האיחוד
+\series default
+: אם 
+\begin_inset Formula $X$
+\end_inset
+
+ קיימת אז 
+\begin_inset Formula $\bigcup X$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת האינסוף: 
+\series default
+
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת ההפרדה
+\series default
+: אם 
+\begin_inset Formula $A$
+\end_inset
+
+ קיימת ו-
+\begin_inset Formula $\varphi$
+\end_inset
+
+ הוא 
+\begin_inset Quotes eld
+\end_inset
+
+קריטריון קונקרטי
+\begin_inset Quotes erd
+\end_inset
+
+ אז 
+\begin_inset Formula $\left\{ a\in A\ |\ \varphi\left(a\right)\right\} $
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+אקסיומת קבוצת החזקה
+\series default
+: אם 
+\begin_inset Formula $A$
+\end_inset
+
+ קיימת אז 
+\begin_inset Formula $\mathcal{P}\left(A\right)$
+\end_inset
+
+ קיימת.
+\end_layout
+
+\begin_layout Standard
+זהו, זה מסיים את כל מה שרציתי לומר על צרמלו-פרנקל בשלב הזה.
+ החל מהפוסט הבא גם נתחיל לעשות עם זה דברים מעניינים יותר מ
+\begin_inset Quotes erd
+\end_inset
+
+לנסות לבנות את קבוצת המספרים הטבעיים, להיכשל ואז להכריז שפשוט נוסיף אקסיומה
+ מיוחדת בשביל זה
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

@@ -36,6 +36,8 @@ TAGS = {
     'textquotedbl{}': '"'
 }
 
+front_matter_regex = r'\\title{(.*)}\n\\maketitle\n\\begin{description}\n\\item \[{קטגוריות:}\] (.*)\n\\item \[{תגים:}\] (.*)\n\\item \[{מזהה:}\] \\L{(.*)}\n\\end{description}'
+
 def re_search(regex, s, *params):
     """Assumes re has one capture group; returns it or None"""
     result = re.search(regex, s, *params)
@@ -66,7 +68,7 @@ def parentheses_fix(text):  # relies on the fact that parentheses in mathmode ar
     return re.sub(r'(?<!\\left)\(|(?<!\\right)\)', lambda s: replacement.get(s.group(0), s.group(0)), text)
 
 def math_tag_replacements(text):  # relies on the fact that LyX converts math to \L{$...$} in my heb posts
-    return re.sub(r'\\L\{\$([^\$]*)\$\}', r'\(\1\)', text)
+    return re.sub(r'\\L\{\$([^\$]*)\$\}', r'{% equation %}\1{% endequation %}', text)
 
 def remove_comments(text):
     return re.sub(r'%.*', "", text)
@@ -108,35 +110,47 @@ def remove_L_tag(text):
         idx = text.find("\L{")
     return text
 
-def front_matter(text):
-    title = re_search(r'title\{(.*)\}', text)
-    date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    categories = ['cat']
-    tags = ['tagg']
+def get_front_matter_data(text):
+    front_matter_data = {}
+    front_matter_raw_data = re.search(front_matter_regex, text).groups()
+    front_matter_data['title'] = front_matter_raw_data[0]
+    front_matter_data['categories'] = front_matter_raw_data[1].split(", ")
+    front_matter_data['tags'] = front_matter_raw_data[2].split(", ")
+    front_matter_data['identifier'] = re.sub(r'\\','',front_matter_raw_data[3])
+    #front_matter_data['datetime'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    front_matter_data['date'] = datetime.now().strftime("%Y-%m-%d")
+    return front_matter_data
+
+def front_matter(front_matter_data):
     front_matter_elements = []
     front_matter_elements.append('---')
-    front_matter_elements.append('title: {}'.format(title))
-    front_matter_elements.append('date: {}'.format(date))
+    front_matter_elements.append('title: {}'.format(front_matter_data['title']))
+    #front_matter_elements.append('date: {}'.format(front_matter_data['datetime']))
     front_matter_elements.append('layout: post')
     front_matter_elements.append('categories:')
-    for c in categories:
+    for c in front_matter_data['categories']:
         front_matter_elements.append('  - {}'.format(c))
     front_matter_elements.append('tags:')
-    for t in tags:
+    for t in front_matter_data['tags']:
         front_matter_elements.append('  - {}'.format(t))
     front_matter_elements.append('---')
     return "\n".join(front_matter_elements)
 
+def remove_front_matter(text):
+    text = re.sub(front_matter_regex, "", text)
+    return text
+
 def perform_all_changes(text):
+    text = remove_front_matter(text)
     text = get_content(text)
     text = find_problems(text)
     text = parentheses_fix(text)
-    text = math_tag_replacements(text)
     text = remove_comments(text)
+    text = math_tag_replacements(text)
     text = remove_L_tag(text)
     text = replace_tags(text)
     text = remove_linebreaks(text)
-    text = add_paragraph_tags(text)
+#    text = add_paragraph_tags(text)
     return text
 
 if __name__ == '__main__':
@@ -145,8 +159,10 @@ if __name__ == '__main__':
         exit(0)
     filename = os.path.splitext(os.path.basename(sys.argv[1]))[0]
 #    convert_lyx_to_tex(filename)
-    with open(filename + ".tex") as texfile:
+    with open(filename + ".tex", encoding='utf-8') as texfile:
         text = texfile.read()
-    text = front_matter(text) + perform_all_changes(text)
-    with open(filename + ".blog", "w") as output_file:
+    front_matter_data = get_front_matter_data(text)
+    text = front_matter(front_matter_data) + perform_all_changes(text)
+    filename = front_matter_data['date'] + '-' + front_matter_data['identifier'] + ".md"
+    with open(filename, "w", encoding='utf-8') as output_file:
         output_file.write(text)

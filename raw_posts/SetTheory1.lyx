@@ -1,0 +1,2267 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "David"
+\font_sans "default" "David"
+\font_typewriter "default" "David"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index אינדקס
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+אז מה זו תורת הקבוצות?
+\end_layout
+
+\begin_layout Description
+קטגוריות: תורת הקבוצות
+\end_layout
+
+\begin_layout Description
+תגים: תורת הקבוצות, הפרדוקס של ראסל
+\end_layout
+
+\begin_layout Description
+מזהה: 
+\lang english
+what_is_set_theory
+\end_layout
+
+\begin_layout Standard
+אני רוצה להתחיל סדרת פוסטים על תורת הקבוצות, אבל מה זה בעצם אומר, תורת הקבוצות?
+ יש לתחום הזה שלוש פנים שארצה לדבר עליהם: ראשית, זה 
+\begin_inset Quotes eld
+\end_inset
+
+הבסיס למתמטיקה
+\begin_inset Quotes erd
+\end_inset
+
+ במובן הזה שאפשר פחות או יותר את כל מה שאנחנו עושים במתמטיקה לפרמל תוך שימוש
+ במושג הבסיסי )והלא פורמלי( של 
+\series bold
+קבוצה
+\series default
+.
+ מספרים, פונקציות, אי-שוויונות, מרחבים טופולוגיים - הכל ניתן לתיאור בעזרת
+ אובייקטים מתמטיים שאם נפרק אותם מספיק נגיע בסוף לקבוצות.
+ חלק ניכר מהטרמינולוגיה הבסיסית שאיתה עובדים במתמטיקה מגיעה מתורת הקבוצות.
+ במילים אחרות, אי אפשר להתעסק במתמטיקה בלי לדעת 
+\series bold
+קצת
+\series default
+ תורת הקבוצות - וזה הדבר הראשון שאני רוצה לדבר עליו.
+\end_layout
+
+\begin_layout Standard
+הפן השני של תורת הקבוצות הוא זה שהתפתח במהלך המאה ה-
+\numeric on
+19
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כתוצאה מעבודה חלוצית באמת של מתמטיקאי אחד - גאורג קנטור.
+ זה התחום שמתעסק במושג 
+\series bold
+האינסוף
+\series default
+ ורותם את תורת הקבוצות כדי להבין אותו יותר טוב.
+ זה תחום שכולל כמה תוצאות מלהיבות ויפות במיוחד, וכבר דיברתי עליו כמה פעמים.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "הפוסט האהוב עלי בבלוג"
+target "https://gadial.net/2010/11/08/hilberts_hotel/"
+literal "false"
+
+\end_inset
+
+ הוא כנראה זה על המלון של הילברט, שמתאר ישירות את האספקט הזה של תורת הקבוצות.
+ אז אני הולך לדבר עליו גם כחלק מסדרת הפוסטים הזו, אבל אולי קצת פחות.
+\end_layout
+
+\begin_layout Standard
+והאספקט השלישי הוא זה של מה שנקרא 
+\begin_inset Quotes eld
+\end_inset
+
+תורת הקבוצות האקסיומטית
+\begin_inset Quotes erd
+\end_inset
+
+.
+ זו בעצם נקודת הפתיחה של התחום המתמטי שנקרא 
+\begin_inset Quotes eld
+\end_inset
+
+תורת הקבוצות
+\begin_inset Quotes erd
+\end_inset
+
+ ומופיע בספרי הלימוד של התחום וכדומה.
+ זה תחום עמוק ומורכב מאוד, ואני כמעט ולא יודע עליו שום דבר ולכן לא אוכל
+ לעשות צדק להצגה שלו בבלוג.
+ למרות זאת, אני רוצה להציג את הבסיס שלו ככל שאוכל, ושם לי בתור יעד להגיע
+ אל תוצאה מעניינת ולא טריוויאלית - ההוכחה ש
+\series bold
+השערת הרצף
+\series default
+ היא בלתי תלויה באקסיומות של תורת הקבוצות.
+ מה זו השערת הרצף? מה האקסיומות הללו? למה זה מעניין? נדבר על כל אלו בהמשך,
+ כשנגיע לחלקים המתקדמים יותר של סדרת הפוסטים הזו.
+\end_layout
+
+\begin_layout Standard
+נתחיל עם השאלה הפשוטה - מה זו קבוצה? והתשובה היא שזה המושג היחיד במתמטיקה
+ פחות או יותר שאנחנו לא הולכים להגדיר פורמלית אלא נסתמך על האינטואיציה.
+ והאינטואיציה היא שקבוצה היא כמו קופסה - היא 
+\series bold
+משהו
+\series default
+ שדברים יכולים להיות או בתוכו או מחוצה לו.
+ למשל, קבוצת המספרים הטבעיים בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל-
+\numeric on
+10
+\numeric off
+, או קבוצת בעלי החיים שהולכים על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ארבע, או קבוצת כוכבי הלכת במערכת השמש, וכדומה.
+ הדברים שנמצאים בתוך קבוצה נקראים 
+\family default
+\series bold
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+האיברים
+\series default
+ שלה, וגם כאן אנחנו לא מגדירים דברים במפורש - אני לא פוסל שום דבר כרגע מלהיות
+ איבר של קבוצה, ובפרט קבוצות יכולות להיות איברים של קבוצות )תחשבו על קופסה
+ בתוך קופסה(.
+\end_layout
+
+\begin_layout Standard
+אנחנו מסמנים קבוצות במתמטיקה בעזרת אותיות.
+ לרוב אלו האותיות 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ אבל בהקשרים שונים ומשונים אפשר להשתמש באותיות מכל הסוגים והמינים - בלטינית,
+ ביוונית, אפילו בעברית.
+ ועוד נראה את זה.
+ באופן דומה איברים מסומנים ב-
+\begin_inset Formula $a,b,c$
+\end_inset
+
+ ושאר אותיות קטנות דומות - אבל שוב, בהקשרים שונים נשתמש בכל דבר אפשרי בערך.
+ הסימון 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ אומר 
+\begin_inset Quotes eld
+\end_inset
+
+האיבר 
+\begin_inset Formula $a$
+\end_inset
+
+ שייך לקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ והסימון 
+\begin_inset Formula $a\notin A$
+\end_inset
+
+ אומר 
+\begin_inset Quotes eld
+\end_inset
+
+האיבר 
+\begin_inset Formula $a$
+\end_inset
+
+ לא שייך לקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ הדרישה הפורמלית הבסיסית ביותר שלנו מקבוצות היא שלכל קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ ולכל איבר 
+\begin_inset Formula $a$
+\end_inset
+
+ יקרה 
+\series bold
+בדיוק אחד משני הדברים הבאים
+\series default
+: או ש-
+\begin_inset Formula $a\in A$
+\end_inset
+
+ או ש-
+\begin_inset Formula $a\notin A$
+\end_inset
+
+.
+ אנחנו לא מרשים ששניהם יקרו בו זמנית, ואנחנו גם לא מרשים שאף אחד משניהם
+ לא יקרה.
+ זה הדבר הבסיסי שאנחנו מצפים שיתקיים עבור קבוצות ואיברים - אם תרצו, זו אחת
+ מהדרישות ש
+\series bold
+מגדירה
+\series default
+ מה זה אומר 
+\begin_inset Quotes eld
+\end_inset
+
+להיות קבוצה
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+האופן שבו כותבים קבוצות באופן במתמטיקה הוא בדרך כלל בעזרת סוגריים מסולסלים
+ שביניהם כתובים האיברים של הקבוצה כשהם מופרדים על ידי פסיקים.
+ למשל 
+\begin_inset Formula $\left\{ 1,3,7\right\} $
+\end_inset
+
+ היא קבוצה בת שלושה איברים: המספרים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Quotes eld
+\end_inset
+
+אחד
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+שלוש
+\begin_inset Quotes erd
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+שבע
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אני אוהב גם לכתוב התחכמויות כמו הקבוצה {חתול, 
+\begin_inset Formula $\pi$
+\end_inset
+
+, פריז} כדי להראות שאפשר לערבב כל מני דברים לא קשורים בתוך אותה קבוצה -
+ אבל בפועל אנחנו לא באמת עושים את זה במתמטיקה, וקבוצות הן לא סתם איברים
+ אקראיים שנבחרים בצורה חסרת הגיון בשביל הקטע.
+\end_layout
+
+\begin_layout Standard
+עכשיו, נניח שאני רוצה לכתוב את קבוצת כל המספרים הטבעיים בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל-
+\numeric on
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שהבטחתי קודם.
+ איך אני אעשה את זה? אני יכול לכתוב 
+\begin_inset Formula $\left\{ 1,2,3,4,5,6,7,8,9,10\right\} $
+\end_inset
+
+ אבל זו בערך הפעם האחרונה אי פעם שארצה לכתוב משהו כל כך ארוך ומזעזע.
+ זכרו את כלל היסוד של המתמטיקה: 
+\series bold
+מתמטיקאים הם עצלנים
+\series default
+.
+ המטרה של המתמטיקאים היא לחסוך כאב ראש, לא להרבות אותו.
+ אז איך נכתוב את הקבוצה הזו עם פחות כאב ראש? הנה דרך אחת:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ 1,2,\dots,10\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מה הולך פה? את רוב איברי הקבוצה החלפנו בשלוש נקודות.
+ למעשה, החכמולוגים יכולים להגיד שהקבוצה שכתבתי כרגע היא הקבוצה שאיבריה היא
+ 
+\begin_inset Quotes eld
+\end_inset
+
+אחד
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+שניים
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+עשר
+\begin_inset Quotes erd
+\end_inset
+
+ ו
+\begin_inset Quotes erd
+\end_inset
+
+שלוש נקודות
+\begin_inset Quotes erd
+\end_inset
+
+.
+ זה מעביר אותנו לנקודה מהותית נוספת במתמטיקה: 
+\series bold
+מתמטיקאים הם בני אדם ולא מחשבים
+\series default
+.
+ ככאלו, מתמטיקאים מניחים שלבת או בן השיח שלהם יש ראש על הכתפיים ויכולת להשתמש
+ בו ורצון טוב להבין על מה מדברים ולא להתחכם.
+ זה אומר שבמתמטיקה תמיד עושים קיצורים והזנחות ורמאויות סימון אלו ואחרות
+ וסומכים עליכם שתבינו.
+ שלוש נקודות זו דרך אחת להגיד 
+\begin_inset Quotes eld
+\end_inset
+
+אתם כבר מבינים את הקטע
+\begin_inset Quotes erd
+\end_inset
+
+, ובמקרים רבים זו דרך שימושית.
+ מצד שני, מחשב לא יוכל להבין את הקטע בלי שנסביר לו במפורש, וגם מי שאין להם
+ נסיון במתמטיקה לאו דווקא יבינו.
+ לכן סימונים שמתבססים על שלוש נקודות שכאלו הם מסוכנים ועדיף לא להשתמש בהם
+ אם יש אלטרנטיבה טובה יותר.
+\end_layout
+
+\begin_layout Standard
+אלטרנטיבה אחת כזו לכתיבת קבוצות היא בעזרת שימוש ב
+\series bold
+קריטריון
+\series default
+ כלשהו.
+ הנה הדרך שבה אני כותב את הקבוצה של המספרים הטבעיים מ-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ עד 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בעזרת קריטריון שכזה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ n\in\mathbb{N}\ |\ 1\le n\le10\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מה הולך פה? פתאום הוספתי למשחק המון סימנים חדשים ולא מוכרים.
+ בואו נסביר אותם.
+ 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ היא קבוצת המספרים הטבעיים )
+\begin_inset Quotes erd
+\end_inset
+
+אבל לא הגדרת עדיין מספרים טבעיים!
+\begin_inset Quotes erd
+\end_inset
+
+ זועקים החכמולוגים - וזה נכון, עוד נגדיר אותה בהמשך, עכשיו אני מדגים דברים
+ בסיסיים(..
+ הסימן 
+\begin_inset Formula $\le$
+\end_inset
+
+ הוא היחס 
+\begin_inset Quotes eld
+\end_inset
+
+קטן-שווה
+\begin_inset Quotes erd
+\end_inset
+
+ )
+\begin_inset Quotes erd
+\end_inset
+
+אבל לא הגדרת עדיין יחסים וקטן-שווה
+\begin_inset Quotes erd
+\end_inset
+
+ זועקים החכמולוגים - אוקיי, שמעו חברים, הבנתי( והאות 
+\begin_inset Formula $n$
+\end_inset
+
+ היא 
+\begin_inset Quotes eld
+\end_inset
+
+משתנה
+\begin_inset Quotes erd
+\end_inset
+
+ - היא משהו שיכול לקבל כל מני ערכים שונים ומשונים.
+ בנוסף לכל אלו יש גם קו אנכי שתקוע באמצע הקבוצה.
+ הרעיון הוא שמה ש
+\series bold
+משמאל
+\series default
+ לקו מתאר איזו שהיא צורה כללית של איבר של הקבוצה, ומה ש
+\series bold
+מימין
+\series default
+ לקו מתאר 
+\series bold
+קריטריון 
+\series default
+כלשהו שמגביל את האיבר הכללי.
+ בעצם מה שכתבתי כאן הוא 
+\begin_inset Quotes eld
+\end_inset
+
+קבוצת כל המספרים הטבעיים )עד כאן צד שמאל( שבין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל-
+\numeric on
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)זהו צד ימין(
+\begin_inset Quotes eld
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קודם אמרתי שההנחה שלנו היא שלכל קבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ ולכל איבר 
+\begin_inset Formula $a$
+\end_inset
+
+, או שמתקיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ או שמתקיים 
+\begin_inset Formula $a\notin A$
+\end_inset
+
+.
+ מה אם 
+\series bold
+לכל
+\series default
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ ביקום, מתקיים 
+\begin_inset Formula $a\notin A$
+\end_inset
+
+? האם אנחנו מרשים כזו סיטואציה, של קבוצה שאין לה איברים בכלל? התשובה חיובית.
+ אנחנו מניחים שקיימת קבוצה 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ שנקראת 
+\series bold
+הקבוצה הריקה
+\series default
+ ולכל 
+\begin_inset Formula $a$
+\end_inset
+
+ אפשרי, 
+\begin_inset Formula $a\notin\emptyset$
+\end_inset
+
+.
+ אפשר לסמן את הקבוצה הזו גם בתור 
+\begin_inset Formula $\left\{ \right\} $
+\end_inset
+
+, כלומר סוגריים מסולסלים שאין כלום ביניהם, אבל אני מעדיף את 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ )הערה טרחנית - הסימון 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ מקורו באות נורווגית; זו לא האות 
+\begin_inset Quotes eld
+\end_inset
+
+פי
+\begin_inset Quotes erd
+\end_inset
+
+ היוונית, 
+\begin_inset Formula $\phi$
+\end_inset
+
+ - אבל למי אכפת, בעצם(.
+\end_layout
+
+\begin_layout Standard
+תחשבו על 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ פשוט בתור קופסה ריקה; העובדה שאנחנו מחשיבים קבוצה כזו כ
+\begin_inset Quotes erd
+\end_inset
+
+קיימת
+\begin_inset Quotes erd
+\end_inset
+
+ מצביעה על כך שאנחנו רואים קבוצות בתור אובייקטים בפני עצמם, ולא רק בתור
+ איזה שם מפוצץ לאוסף של איברים שיש קריטריון משותף שמגדיר אותו.
+ כלומר - כשאני אומר 
+\begin_inset Quotes eld
+\end_inset
+
+קבוצת המספרים מ-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עד
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+
+\begin_inset Quotes erd
+\end_inset
+
+ אני חושב על 
+\series bold
+קופסה
+\series default
+ שבתוכה יש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מספרים; אני לא רק חושב על המספרים הללו, כלומר על 
+\begin_inset Quotes eld
+\end_inset
+
+המספרים מ-
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ עד 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\numeric off
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+מספיק עם הפילוסופיה, עכשיו כבר אפשר ללכלך קצת ידיים.
+ הבטחתי בתחילת הפוסט שאפשר לבנות את 
+\begin_inset Quotes eld
+\end_inset
+
+כל
+\begin_inset Quotes erd
+\end_inset
+
+ המתמטיקה בעזרת קבוצות - בואו נראה דוגמא ראשונה לכך.
+ מושג שהשתמשתי בו עד כה בחופשיות בפוסט היה מספרים טבעיים - הנחתי שכולנו
+ יודעים מה זה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+, מה זה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וכן הלאה.
+ אבל איך אני מגדיר את זה בתור אובייקט מתמטי פורמלי? ובכן, הנה 
+\series bold
+גישה אפשרית אחת
+\series default
+ לכך: אני 
+\series bold
+אגדיר
+\series default
+ את המספר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בתור הקבוצה הריקה.
+ אני מסמן זאת כך: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0\triangleq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עכשיו אני 
+\series bold
+אגדיר
+\series default
+ את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+להיות הקבוצה שהאיבר היחיד שלה הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1\triangleq\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ואת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אני 
+\series bold
+אגדיר
+\series default
+ להיות הקבוצה שהאיברים שלה הם 
+\begin_inset Formula $0,1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2\triangleq\left\{ 0,1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+וכן הלאה וכן הלאה.
+ כלומר, כל מספר טבעי 
+\begin_inset Formula $n$
+\end_inset
+
+ מוגדר בצורה הזו להיות קבוצת כל המספרים הטבעיים שקטנים ממנו.
+ זו נראית כמו הגדרה מעגלית, אבל היא לא - זו הגדרה 
+\series bold
+אינדוקטיבית
+\series default
+, כלומר כזו שבה יש לנו תהליך רב-שלבי שבו בכל שלב אפשר להתבסס על התוצאות
+ של השלבים הקודמים.
+\end_layout
+
+\begin_layout Standard
+האם 
+\begin_inset Quotes eld
+\end_inset
+
+חוקי
+\begin_inset Quotes erd
+\end_inset
+
+ לבצע את הבניה בצורה הזו? ובכן, נגיע לשאלה הזו בהמשך; כרגע הגישה שלי לתורת
+ הקבוצות היא שהכל חוקי.
+ את הפוסט הזה אסיים בכך שהגישה הזו תתפוצץ לי בפרצוף לצהלות הקהל.
+\end_layout
+
+\begin_layout Standard
+דבר נחמד אחד בבניה הזו של הטבעים היא ש
+\series bold
+לא חייבים לעצור שם
+\series default
+.
+ אם כבר יש לי את הטבעיים, למה לא להגדיר 
+\begin_inset Quotes eld
+\end_inset
+
+מספר
+\begin_inset Quotes erd
+\end_inset
+
+ חדש בתור קבוצת כל הטבעיים? אסמן
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega\triangleq\left\{ 0,1,2,\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ועל פי האינטואיציה של 
+\begin_inset Quotes eld
+\end_inset
+
+מספר טבעי הוא קבוצת הטבעיים שקטנים ממנו
+\begin_inset Quotes erd
+\end_inset
+
+, גם 
+\begin_inset Formula $\omega$
+\end_inset
+
+ הזה הוא 
+\begin_inset Quotes eld
+\end_inset
+
+מספר
+\begin_inset Quotes erd
+\end_inset
+
+ שכל הטבעיים קטנים ממנו.
+ ואפשר להמשיך עם זה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega+1\triangleq\left\{ 0,1,2,\dots,\omega\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ואפשר גם להשתגע עם זה עוד ועוד, למשל:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega+\omega\triangleq\left\{ 0,1,2,\dots,\omega,\omega+1,\omega+2,\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מה שמופלא הוא שהגישה הזו 
+\series bold
+עובדת
+\series default
+ ובאמת מולידה אוסף מספרים 
+\series bold
+מאוד מעניינים
+\series default
+ שנקראים 
+\begin_inset Quotes eld
+\end_inset
+
+הסודרים
+\begin_inset Quotes erd
+\end_inset
+
+ והולכים להיות קריטיים לגמרי כשנגיע לתורת הקבוצות האקסיומטית.
+ לעת עתה נעזוב אותם, אבל לא נשכח שהם קיימים.
+\end_layout
+
+\begin_layout Standard
+אני רוצה עכשיו להציג 
+\begin_inset Quotes eld
+\end_inset
+
+בעיה
+\begin_inset Quotes erd
+\end_inset
+
+ ומיד לאחר מכן את הפתרון שלה.
+ נתחיל משאלה פשוטה - מתי בעצם שתי קבוצות שוות זו לזו? מתי 
+\begin_inset Formula $A=B$
+\end_inset
+
+? הגישה שלנו היא זו: קבוצות הן שוות 
+\series bold
+אם יש להן את אותם האיברים
+\series default
+.
+ כלומר, בניסוח מתמטי, אם לכל איבר 
+\begin_inset Formula $a$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\in A\iff a\in B$
+\end_inset
+
+ )את החץ הדו-כיווני הזה צריך לקרוא בתור 
+\begin_inset Quotes eld
+\end_inset
+
+אם ורק אם
+\begin_inset Quotes erd
+\end_inset
+
+; פירושו הוא שאם אחד מהאגפים מתקיים אז גם השני מתקיים(.
+ זה אומר שאם יש לי שתי קופסאות שבשתיהן יש את האיברים 
+\begin_inset Formula $1,2$
+\end_inset
+
+ ותו לא, אז 
+\series bold
+זו אותה קופסה
+\series default
+.
+ ולא משנה אם אחת צבועה בצבעים עליזים ירוקים והשניה באפור מצער; ולא משנה
+ אם על אחת כתוב 
+\begin_inset Quotes eld
+\end_inset
+
+תיבת הפלאים של אליס
+\begin_inset Quotes erd
+\end_inset
+
+ ועל השני כתוב 
+\begin_inset Quotes eld
+\end_inset
+
+הכספת של בוב
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אותם איברים? אותה קבוצה.
+\end_layout
+
+\begin_layout Standard
+בפרט, מהגישה הזו נובע ש-
+\begin_inset Formula $\left\{ 1,2\right\} =\left\{ 2,1\right\} $
+\end_inset
+
+.
+ למה? כי בשתי הקבוצות הללו יש את אותם איברים.
+ האיברים 
+\series bold
+כתובים
+\series default
+ בסדר שונה, אבל זה לא משפיע על שאלת השייכות/אי השייכות לקבוצה.
+ זה לא שאפשר לומר 
+\begin_inset Quotes eld
+\end_inset
+
+
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שייך לקבוצה אבל 
+\series bold
+לפני
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ זה מושג שלא קיים בעולם המושגים שלי בכלל.
+ באופן דומה, 
+\begin_inset Formula $\left\{ 1,1\right\} =\left\{ 1\right\} $
+\end_inset
+
+.
+ כלומר, איבר לא יכול להיות 
+\begin_inset Quotes eld
+\end_inset
+
+שייך פעמיים
+\begin_inset Quotes erd
+\end_inset
+
+ לקבוצה; הוא או שייך או לא שייך, וזהו.
+ 
+\series bold
+אפשר
+\series default
+ לכתוב את אותו איבר כמה פעמים וזה גם נוח לפעמים, אבל עותקים 
+\begin_inset Quotes eld
+\end_inset
+
+מיותרים
+\begin_inset Quotes erd
+\end_inset
+
+ של אותו איבר לא משפיעים על זהות הקבוצה.
+\end_layout
+
+\begin_layout Standard
+שני הדברים הללו נראים כמו 
+\series bold
+חסרונות מהותיים
+\series default
+ של מושג הקבוצה.
+ איך אפשר לייצר סדר מתוך האי-סדר הזה? המושג שאני רוצה לייצר הוא מה שנקרא
+ 
+\series bold
+זוג סדור
+\series default
+ וכולנו כנראה נתקלנו בו פעם - למשל, בתור קואורדינטות.
+ אני מסמן זוג סדור ב-
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ והרעיון הוא ש-
+\begin_inset Formula $\left(x,y\right)=\left(a,b\right)$
+\end_inset
+
+ אם ורק אם 
+\begin_inset Formula $x=a$
+\end_inset
+
+ וגם 
+\begin_inset Formula $y=b$
+\end_inset
+
+.
+ כלומר, 
+\begin_inset Formula $\left(1,2\right)\ne\left(2,1\right)$
+\end_inset
+
+, למשל.
+ עכשיו, אני יכול פשוט להוסיף את המושג הזה של 
+\begin_inset Quotes eld
+\end_inset
+
+זוג סדור
+\begin_inset Quotes erd
+\end_inset
+
+ למתמטיקה ולעבוד איתו וחסל, וכך עושים בהרבה מקומות; אבל זה תרגיל נחמד להיות
+ טהרן של קבוצות ולחשוב איך אפשר 
+\begin_inset Quotes eld
+\end_inset
+
+לממש
+\begin_inset Quotes erd
+\end_inset
+
+ זוג סדור בעזרת קבוצות בלבד, שאין בהן סדר.
+\end_layout
+
+\begin_layout Standard
+ברור שאני לא יכול להגדיר 
+\begin_inset Formula $\left(x,y\right)\triangleq\left\{ x,y\right\} $
+\end_inset
+
+ כי אז נקבל 
+\begin_inset Formula $\left(1,2\right)=\left\{ 1,2\right\} =\left\{ 2,1\right\} =\text{\left(2,1\right)}$
+\end_inset
+
+ וזה בדיוק מה שרציתי להימנע ממנו.
+ צריך איכשהו 
+\begin_inset Quotes eld
+\end_inset
+
+לשבור סימטריה
+\begin_inset Quotes erd
+\end_inset
+
+.
+ אם כל הכלים שיש לי בעולם הם קבוצות, אז הדרך 
+\begin_inset Quotes eld
+\end_inset
+
+לשבור סימטריה
+\begin_inset Quotes erd
+\end_inset
+
+ היא 
+\begin_inset Quotes eld
+\end_inset
+
+לעטוף
+\begin_inset Quotes erd
+\end_inset
+
+ את אחד האיברים בקבוצה ואת השני לא.
+ כלומר, על פניו נראה שזה רעיון טוב להגדיר 
+\begin_inset Formula $\left(x,y\right)\triangleq\left\{ x,\left\{ y\right\} \right\} $
+\end_inset
+
+.
+ זה 
+\series bold
+כמעט עובד
+\series default
+ אבל גם זה יכול להיכשל, בצורות די מטופשות.
+\end_layout
+
+\begin_layout Standard
+הנה דרך ממש טיפשית שבה העסק יכול להתחרבש: מה אם 
+\begin_inset Formula $x=\left\{ 1\right\} $
+\end_inset
+
+ ואילו 
+\begin_inset Formula $y=2$
+\end_inset
+
+? במקרה הזה, על פי ההגדרה נקבל 
+\begin_inset Formula $\left(x,y\right)=\left(\left\{ 1\right\} ,2\right)=\left\{ \left\{ 1\right\} ,\left\{ 2\right\} \right\} $
+\end_inset
+
+.
+ כלומר, התוצאה שלנו הפכה לסימטרית, וזה בדיוק מה שחששנו מפניו: באותה מידה
+ גם יתקיים 
+\begin_inset Formula $\left(\left\{ 2\right\} ,1\right)=\left\{ \left\{ 1\right\} ,\left\{ 2\right\} \right\} $
+\end_inset
+
+ אבל כמובן ש-
+\begin_inset Formula $\left(\left\{ 1\right\} ,2\right)\ne\left(\left\{ 2\right\} ,1\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+הדרך לפתור את הבעיה הזו היא לוודא ש-
+\begin_inset Formula $x,y$
+\end_inset
+
+ עטופים באותה כמות סוגריים וליצור חוסר סימטריה בצורה טיפה שונה: 
+\begin_inset Formula $\left(x,y\right)\triangleq\left\{ \left\{ x\right\} ,\left\{ x,y\right\} \right\} $
+\end_inset
+
+.
+ הבניה הזו 
+\series bold
+עובדת
+\series default
+: מקבלים באמת ש-
+\begin_inset Formula $\left(x,y\right)=\left(a,b\right)$
+\end_inset
+
+ )כאן זה שוויון קבוצות( אם ורק אם 
+\begin_inset Formula $x=a$
+\end_inset
+
+ וגם 
+\begin_inset Formula $y=b$
+\end_inset
+
+.
+ נסו להוכיח זאת!
+\end_layout
+
+\begin_layout Standard
+אם כן, טיפלנו בבעית ה
+\begin_inset Quotes erd
+\end_inset
+
+אין סדר
+\begin_inset Quotes erd
+\end_inset
+
+.
+ עדיין יש את בעיית ה
+\begin_inset Quotes erd
+\end_inset
+
+אי אפשר את אותו איבר יותר מפעם אחת
+\begin_inset Quotes erd
+\end_inset
+
+; נראה בהמשך איך פותרים אותה; הטיפול בבעיית ה
+\begin_inset Quotes erd
+\end_inset
+
+אין סדר
+\begin_inset Quotes erd
+\end_inset
+
+ הוא המפתח גם לפתרון הזה.
+\end_layout
+
+\begin_layout Standard
+עכשיו, אחרי שקצת התיידדנו עם קבוצות וראינו איך בונים מהן דברים ואנחנו אולי
+ אופטימיים לגבי האפשרות לבנות את כל המתמטיקה בעזרתן, בואו נרסק את זה.
+ אני רוצה להציג פה פרדוקס שנקרא 
+\series bold
+הפרדוקס של ראסל
+\series default
+.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "יש לי עליו כבר פוסט"
+target "https://gadial.net/2010/11/20/russel_paradox_and_cantor_theorem/"
+literal "false"
+
+\end_inset
+
+, למרבה השמחה, אבל אציג אותו שוב.
+ יש לפרדוקס הזה תיאור ציורי נחמד שנקרא 
+\begin_inset Quotes eld
+\end_inset
+
+פרדוקס הספר
+\begin_inset Quotes erd
+\end_inset
+
+ והולך כך: בעיירה מוזרה מאוד גר לו ספר, ובעיירה הזו יש 
+\begin_inset Quotes eld
+\end_inset
+
+חוק
+\begin_inset Quotes erd
+\end_inset
+
+ שאומר כך - כל מי שיכול לספר את עצמו, 
+\series bold
+אסור לו
+\series default
+ להסתפר אצל הספר אלא הוא חייב 
+\series bold
+לספר את עצמו
+\series default
+; כל מי שלא יכול לספר את עצמו 
+\series bold
+חייב
+\series default
+ להסתפר אצל הספר.
+ וכעת השאלה היא - מה הספר יעשה?
+\end_layout
+
+\begin_layout Standard
+יש לנו שתי אפשרויות.
+ הראשונה, הסבירה יותר, היא שהספר מסוגל פיזית לספר את עצמו - אולי עם קצת
+ שימוש יצירתי בראי, אבל הוא מסוגל.
+ במקרה הזה, על פי החוק 
+\series bold
+אסור
+\series default
+ לו להסתפר אצל הספר.
+ אז הוא לא יכול לספר את עצמו.
+ אז מה הוא בעצם יכול לעשות? כלום! האפשרות הזו נשמעת לא הגיונית, אז כנראה
+ שהספר 
+\series bold
+לא יכול
+\series default
+ לספר את עצמו.
+ אבל במקרה הזה, על פי החוק, הוא חייב להסתפר 
+\begin_inset Quotes eld
+\end_inset
+
+אצל הספר
+\begin_inset Quotes erd
+\end_inset
+
+.
+ כלומר אצל עצמו.
+ אבל הוא 
+\series bold
+פשוט לא יכול פיזית
+\series default
+ לעשות את זה.
+ אז מה הוא יכול לעשות? כלום! אבל הוא חייב להסתפר אצל מישהו! אלא אם כן...
+ מה אם הוא קירח?
+\end_layout
+
+\begin_layout Standard
+ובכן, את פרדוקס הספר אפשר לפתור על ידי רמאות שכזו; העניין עם הפרדוקס של
+ ראסל הוא בכך שהוא מנסח את זה בצורה פורמלית לגמרי 
+\series bold
+ולא משאיר לנו פתח מילוט
+\series default
+.
+ הספר לא יכול להיות קירח.
+\end_layout
+
+\begin_layout Standard
+פורמלית, הפרדוקס הולך כך: ראסל מגדיר קבוצה 
+\begin_inset Formula $D$
+\end_inset
+
+ שאיבריה הם כל הקבוצות שאינן איבר של עצמן.
+ כלומר, 
+\begin_inset Formula $D=\left\{ A\ |\ A\notin A\right\} $
+\end_inset
+
+.
+ זה מעלה שאלה די טבעית - רגע אחד, האם קבוצה בכלל 
+\series bold
+יכולה
+\series default
+ להיות איבר של עצמה? איך זה הולך? האם זו תמונה של אשר? ובכן, לא אסרתי בינתיים
+ על קבוצה להיות איבר של עצמה, אבל גם איסור כזה לא יושיע אותנו מהפרדוקס.
+\end_layout
+
+\begin_layout Standard
+ראסל כעת שואל שאלה פשוטה מאוד - הנה הגדרנו את 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ כעת, האם מתקיים 
+\begin_inset Formula $D\in D$
+\end_inset
+
+? כזכור, ההנחה הבסיסית שלנו על קבוצות היא שאחד משני הדברים הבאים 
+\series bold
+חייב
+\series default
+ להתקיים: או ש-
+\begin_inset Formula $D\in D$
+\end_inset
+
+ או ש-
+\begin_inset Formula $D\notin D$
+\end_inset
+
+.
+ אין אפשרות שלישית )
+\begin_inset Quotes erd
+\end_inset
+
+ספר קירח
+\begin_inset Quotes erd
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $D\in D$
+\end_inset
+
+, אז בפרט 
+\begin_inset Formula $D$
+\end_inset
+
+ מקיימת את הקריטריון שקובע מתי איברים שייכים ל-
+\begin_inset Formula $D$
+\end_inset
+
+.
+ הקריטריון הזה היה, כזכור, 
+\begin_inset Formula $A\notin A$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $D$
+\end_inset
+
+ מקיימת אותו, אז אנחנו אמורים להיות מסוגלים להציב אותה במקום האיבר הכללי
+ 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ כלומר, המסקנה מ-
+\begin_inset Formula $D\in D$
+\end_inset
+
+ היא שמתקיים 
+\begin_inset Formula $D\notin D$
+\end_inset
+
+.
+ אבל שני אלו לא יכולים להתקיים בו זמנית, והגענו לסתירה.
+\end_layout
+
+\begin_layout Standard
+עד כאן, הכל טוב.
+ הרי נראה לנו מוזר שקבוצות יהיו איבר של עצמן; מה מפליא בכך שזה מוביל לסתירה?
+\end_layout
+
+\begin_layout Standard
+עכשיו בואו נניח ש-
+\begin_inset Formula $D\notin D$
+\end_inset
+
+.
+ אם 
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\series bold
+אינה
+\series default
+ איבר של 
+\begin_inset Formula $D$
+\end_inset
+
+, אז 
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\series bold
+אינה
+\series default
+ מקיימת את הקריטריון שמגדיר שייכות ל-
+\begin_inset Formula $D$
+\end_inset
+
+; כלומר, היא 
+\series bold
+אינה
+\series default
+ מקיימת את 
+\begin_inset Formula $A\notin A$
+\end_inset
+
+.
+ מכיוון שיכול להתקיים רק 
+\begin_inset Formula $A\notin A$
+\end_inset
+
+ או 
+\begin_inset Formula $A\in A$
+\end_inset
+
+, המסקנה היא ש-
+\begin_inset Formula $D$
+\end_inset
+
+ 
+\series bold
+כן מקיימת
+\series default
+ את 
+\begin_inset Formula $A\in A$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $D\in D$
+\end_inset
+
+, והגענו שוב לסתירה ושום דבר לא יעזור לנו.
+\end_layout
+
+\begin_layout Standard
+מה שמדהים בפרדוקס הוא כמה מעט מתמטיקה הוא דורש: רק את ההגדרה של קבוצה ושייכות
+ לקבוצה וזהו בערך.
+ לפני ראסל התגלו עוד בעיות בתורת הקבוצות, אבל זו הייתה בעיה בבסיס של הבסיס
+ של הבסיס, ומכאן הכוח שלה והסיבה שבגללה אני מתאר אותה כבר עכשיו - זה תמרור
+ אזהרה שצריך להיות מעל הראש שלנו בכל עת שבה אנחנו מתעסקים בתורת הקבוצות.
+\end_layout
+
+\begin_layout Standard
+איך אפשר לפתור את הפרדוקס הזה? ראשית, אי אפשר ממש לפתור אותו )ואכן, הגילוי
+ שלו בתחילת המאה ה-
+\numeric on
+20
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היה סוג של נקודת שבר של המתמטיקה(.
+ אפשר רק לנסח מחדש את תורת הקבוצות בצורה זהירה שתבטיח שלא נוכל לעורר אותו
+ מרבצו.
+ הבעיה הבסיסית הייתה שנקטנו גישה 
+\series bold
+חופשית מדי
+\series default
+ להגדרה של קבוצות - בוודאי שלא כל קריטריון שנזרוק באוויר, הגיוני שיגדיר
+ קבוצה שחפה מסתירות פנימיות.
+ לכן נכנסת לתמונה הגישה של 
+\series bold
+תורת הקבוצות האקסיומטית
+\series default
+, לפיה כל מה שלא הותר במפורש, אסור.
+ הגישה הזו עדיין מותירה לנו מספיק חופש פעולה כדי 
+\begin_inset Quotes eld
+\end_inset
+
+לבנות את כל המתמטיקה
+\begin_inset Quotes erd
+\end_inset
+
+, אבל עד היום לא גילינו סתירות כלשהן שנובעות ממנה.
+ ארחיב על מה בדיוק היא אומרת בפוסטים הבאים.
+\end_layout
+
+\end_body
+\end_document
