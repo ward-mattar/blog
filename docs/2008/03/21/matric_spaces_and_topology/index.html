@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>מה המרחק מדיבורים על מרחק לדיבורים על טופולוגיה? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="מה המרחק מדיבורים על מרחק לדיבורים על טופולוגיה?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="יש שתי גישות פדגוגיות שנתקלתי בהן כאשר מציגים את הטופולוגיה הקבוצתית; הראשונה, שבה נוקט למשל הספר המעולה של Munkres, היא פשוט לזרוק את ההגדרה לטופולוגיה על הקורא הנדהם, ולנסות להרגיע אותו לאט לאט באמצעות דוגמאות והסברים." />
+<meta property="og:description" content="יש שתי גישות פדגוגיות שנתקלתי בהן כאשר מציגים את הטופולוגיה הקבוצתית; הראשונה, שבה נוקט למשל הספר המעולה של Munkres, היא פשוט לזרוק את ההגדרה לטופולוגיה על הקורא הנדהם, ולנסות להרגיע אותו לאט לאט באמצעות דוגמאות והסברים." />
+<link rel="canonical" href="http://gadial.net/2008/03/21/matric_spaces_and_topology/" />
+<meta property="og:url" content="http://gadial.net/2008/03/21/matric_spaces_and_topology/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2008-03-21T00:27:44+02:00" />
+<script type="application/ld+json">
+{"headline":"מה המרחק מדיבורים על מרחק לדיבורים על טופולוגיה?","dateModified":"2008-03-21T00:27:44+02:00","datePublished":"2008-03-21T00:27:44+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2008/03/21/matric_spaces_and_topology/"},"url":"http://gadial.net/2008/03/21/matric_spaces_and_topology/","description":"יש שתי גישות פדגוגיות שנתקלתי בהן כאשר מציגים את הטופולוגיה הקבוצתית; הראשונה, שבה נוקט למשל הספר המעולה של Munkres, היא פשוט לזרוק את ההגדרה לטופולוגיה על הקורא הנדהם, ולנסות להרגיע אותו לאט לאט באמצעות דוגמאות והסברים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">מה המרחק מדיבורים על מרחק לדיבורים על טופולוגיה?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2008-03-21T00:27:44+02:00" itemprop="datePublished">Mar 21, 2008
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>יש שתי גישות פדגוגיות שנתקלתי בהן כאשר מציגים את ה<a href="http://he.wikipedia.org/wiki/%D7%98%D7%95%D7%A4%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%94">טופולוגיה</a> הקבוצתית; הראשונה, שבה נוקט למשל ה<a href="http://www.amazon.com/Topology-2nd-James-Munkres/dp/0131816292">ספר המעולה</a> של Munkres, היא פשוט לזרוק את ההגדרה לטופולוגיה על הקורא הנדהם, ולנסות להרגיע אותו לאט לאט באמצעות דוגמאות והסברים.</p>
+
+<p>אצל מונקרס זה עובד, אבל זה בגלל שהוא כותב כל כך טוב. לטעמי הגישה הזו היא הפחות ברורה ואינטואיטיבית, ואני מעדיף להתחיל מהגישה השניה, שבה נוקט, למשל, הספר של האוניברסיטה הפתוחה - הצגת מרחבים טופולוגיים דרך תת-מחלקה חשובה מאוד שלהם - ה<a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%97%D7%91_%D7%9E%D7%98%D7%A8%D7%99">מרחבים המטריים</a>.</p>
+
+<p>הכל מתחיל, לדעתי, בהגדרת מושג ה<a href="http://he.wikipedia.org/wiki/%D7%92%D7%91%D7%95%D7%9C_%28%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94%29">גבול</a> שב<a href="http://he.wikipedia.org/wiki/%D7%97%D7%A9%D7%91%D7%95%D7%9F_%D7%90%D7%99%D7%A0%D7%A4%D7%99%D7%A0%D7%99%D7%98%D7%99%D7%A1%D7%99%D7%9E%D7%9C%D7%99">חשבון אינפיניטסימלי</a>. לא אצטט כאן את ההגדרה המדוייקת (שעושה חיים קשים מאוד לסטודנטים לחדו”א, ויכולה להפחיד את מי שטרם נתקל בה). רק אבהיר שעל ההגדרה הזו נבנה רוב החשבון האינפיניטסימלי של זמננו, ובפרט מושגים כמו נגזרת, אינטגרל, ו<a href="http://he.wikipedia.org/wiki/%D7%A8%D7%A6%D7%99%D7%A4%D7%95%D7%AA">רציפות</a>. משלושתם, דווקא מושג הרציפות הוא זה שמעניין אותי כאן ביותר.</p>
+
+<p>באופן אינטואיטיבי, לומדים לומר על פונקציה ממשית (כלומר, כזו שמקבלת מספר ממשי ומחזירה מספר ממשי) שהיא רציפה אם הגרף שלה ניתן לציור “בלי להרים את העיפרון מהדף”. ניסוח פורמלי באמצעות גבולות של התכונה הזו אומר בערך כך - “הפונקציה גם מבטיחה וגם מקיימת”, כלומר בכל נקודה קיים לה גבול, וערך הפונקציה באותה נקודה שווה לגבול הזה. במילים פשוטות יותר, אם הפונקציה נראית כאילו היא מתקרבת לאנשהו כשהערכים שלה מתקרבים לנקודה מסויימת, הערך שלה באותה נקודה באמת יהיה ה”לאנשהו” הזה (ולא, נניח, פתאום הפונקציה “תקפוץ” באופן חד). ניסוח אחר, שלא משתמש בסדרות ומזכיר את הגדרת הגבול עבור פונקציות אומר בערך “אם שתי נקודות היו קרובות זו לזו לפני שהפעילו עליהן את הפונקציה, גם אחרי שמפעילים אותה הן לא יתרחקו יותר מדי”. הניסוח הזה לא מדוייק במידה מבעיתה, אבל לעת עתה אסתפק בו.</p>
+
+<p>עם זאת, אני רוצה להציג דרך אחרת לחשוב על פונקציה רציפה שכזו: אם נחשוב על הישר הממשי בתור חוט (אינסופי, ובכל זאת), הרי שפונקציה רציפה לוקחת את החוט הזה ו”מעוותת” אותו - מוסיפה לו שקעים ובליטות, אבל בשום פנים ואופן לא קורעת אותו. מה שיתקבל הוא גרף של פונקציה, ולכן מוגבל מבחינות מסויימות - כל ישר אנכי חותך אותו רק בנקודה אחת - אבל אפשר לדבר על פונקציות רציפות מהישר הממשי למרחב (דברים כאלו נקראים “עקומות”), ואז תיאור ה”מעוות את הישר אבל לא קורע אותו” עוד יותר מתאים.</p>
+
+<p>תיאור הפונקציה הרציפה ככזו ש”מעוותת” דברים בלי לקרוע הוא נפוץ למדי בתיאורים פופולריים של טופולוגיה. במובן מסויים, הטופולוגיה (שאני מכיר) מתמקדת בחקר תכונות של מרחבים (גאומטריים לרוב) שנשמרות תחת פונקציות רציפות שכאלו. עם זאת, כפי שנראה כאן בהמשך, זה בהחלט לא כל הסיפור; זו פשוט המוטיבציה שלנו בשני צעדי האבסטרקציה שניקח כאן.</p>
+
+<p>הצעד הראשון הוא זה שמביא אותנו אל המרחבים המטריים (שהם יצורים שימושיים בתחומים רבים של המתמטיקה, לא רק בטופולוגיה). כאמור, מושגי הרציפות, (וההתכנסות) היו תלויים במושג הגבול. האם ניתן להכליל את מושג הגבול למרחבים שאינם מספרים ממשיים? התשובה מן הסתם חיובית; כל סטודנט לחדו”א רואה איך אפשר לדבר על גבולות במרחב דו ממדי, תלת ממדי וכן הלאה. ההגדרה כמעט זהה; ההבדל היחיד הוא מושג ה<strong>מרחק</strong> שבו משתמשים.</p>
+
+<p>כשעוסקים במספרים ממשיים, מגדירים את המרחק מ-<span>$latex a$</span> ל-<span>$latex b$</span> לרוב בתור <span>$latex |a-b|$</span>. כלומר, באמצעות הערך המוחלט. במרחב דו ממדי, אם יש לנו את <span>$latex (x_1,y_1)$</span> ואת <span>$latex (x_2,y_2)$</span>, המרחק ביניהן מוגדר בתור <span>$latex \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$</span>. הסיבה להגדרה הזו היא משפט פיתגורס - חושבים על שתי הנקודות בתור הקודקודים של היתר במשולש ישר זווית, ואז מה שעושים הוא לחבר את ריבועי שתי השוקיים ולהוציא שורש כדי לקבל את אורך היתר. בצורה דומה מגדירים מרחק במרחב <span>$latex n$</span> ממדי. אחרי שיש לנו את המשפחה הנחמדה הזו של פונקציות “מרחק” אפשר לעצור לרגע ולשאול את עצמנו מה משותף לכולן - מה התכונות ה”מגדירות” של מרחק, שעליהן אנחנו מתבססים כשאנחנו בונים את החדו”א.</p>
+
+<p>החתירה הזו לאבסטרקטיות היא אחת מהתכונות הבולטות ביותר של המתמטיקה. כבר מושג המספר עצמו הוא הפשטה שמתעלמת מהזהות הפרטנית של האובייקט שסופרים - בין אם הוא שני תפוחים או שני ילדים - ומתעניינת רק בתכונות הרלוונטיות שלו, כלומר ששניים ועוד שניים זה ארבע, תמיד, בלי קשר לשאלה מה נספר. דוגמה מפורסמת מאוד נוספת היא <a href="http://he.wikipedia.org/wiki/%D7%97%D7%91%D7%95%D7%A8%D7%94">חבורות</a> - חבורות הן דרך “לזקק” את מה שמשותף למספרים, מטריצות, פרמוטציות, סימטריות ועוד מריעין בישין ולתאר את התכונות הללו באמצעות ארבע אקסיומות בלבד. כוחה של התורה שנבנית על ארבע האקסיומות הללו היא בכך שהיא תהיה תקפה לכל האובייקטים הללו גם יחד; במקום שנצטרך להוכיח משפט עבור כל אחד מהם בנפרד, אנחנו מוכיחים לכולם בו זמנית. מכאן אפשר להבין את הטענה ש”מתמטיקאים הם עצלנים” - הם תמיד מחפשים דרך לטפל בכמה שיותר מקרים גם יחד.</p>
+
+<p>כמובן שמבחינה היסטורית, לרוב מה שקורה הוא שבכמה תחומים שונים מגיעים לאותה תוצאה (כל פעם, כשהיא מנוסחת פרטנית עבור האובייקטים של אותו התחום) באותה הטכניקה, ורק אז מזהים את הדמיון ויוצרים את האבסטרקציה. כך היה גם בכל הנוגע למרחבים המטריים, למיטב הבנתי. האקסיומות המגדירות “מרחק” לא צצו בוקר אחד במוחו הקודח של מתמטיקאי שניסה להמציא תיאוריה חדשה מאפס; הן לוקטו וסוננו מכל התיאוריה הענפה שכבר הייתה קיימת אז, על ידי אנשים שניסו להחליש ככל הניתן את הדרישות שלהם ועדיין לא לאבד את הכוח שנתנו להם המשפטים שהם כבר הוכיחו.</p>
+
+<p>אם כן, מהן התכונות המגדירות של “מרחק”? שלוש בלבד, אבל לפני שנתאר אותן צריך להסביר מה זה בכלל מרחק מבחינה פורמלית. נניח שיש לנו קבוצה <span>$latex X$</span> כלשהי (מספרים ממשיים, איברים במישור, מילים, השמות למשתנים בתחשיב הפסוקים, וכו’), אז פונקציית מרחק בין איברי <span>$latex X$</span>, שנהוג לכנות <strong>מטריקה</strong>, היא פונקציה ממשית בשני משתנים <span>$latex d(x,y)$</span> שמקיימת:</p>
+<ol>
+	<li>המרחק בין כל שני איברים הוא חיובי אלא אם הם זהים, ואז הוא אפס.</li>
+	<li>המרחק הוא סימטרי, כלומר <span>$latex d(x,y)=d(y,x)$</span>.</li>
+	<li>אי שוויון המשולש: <span>$latex d(x,y)\le d(x,z)+d(z,y)$</span>. במילים: המרחק הוא תמיד "הדרך הקצרה ביותר" בין שתי נקודות; אי אפשר ללכת מהאחת לשנייה דרך נקודת ביניים בפחות מאמץ.</li>
+</ol>
+<p>שלוש התכונות הללו מספיקות כדי שנהיה מסוגלים לפתח חלק לא קטן מהטרמינולוגיה של החשבון האינפיניטסימלי (מה שאנחנו בפירוש <strong>לא</strong> עושים הוא להגדיר נגזרות ואינטגרלים; גם למושגים הללו יש הכללות, כמובן, אך לא אכנס אליהן). למשל, הסדרה <span>$latex x_n$</span> מתכנסת לגבול <span>$latex x$</span> אם לכל <span>$latex \varepsilon$</span>, כל אברי הסדרה החל ממקום מסויים קרובים ל-<span>$latex x$</span> עד כדי <span>$latex \varepsilon$</span> כש”קרבה” נמדדת עם הפונקציה <span>$latex d$</span> שהוזכרה לעיל: <span>$latex d(x_n,x)&lt;\varepsilon$</span>. באמצעות שימוש בשלוש האקסיומות שלעיל, קל להוכיח עובדות ידועות; למשל, שאין לסדרה שני גבולות שונים (נסו להוכיח זאת - התכונה המהותית ביותר לצורך ההוכחה היא אי שוויון המשולש).</p>
+
+<p>כעת ניתן להגדיר רציפות, וניתן לעשות זאת הן באמצעות ההגדרה ה”סדרתית” והגבולות שהזכרתי, והן באמצעות ההגדרה השנייה, המופרכת, של “נקודות קרובות מתמפות לנקודות קרובות”. מכיוון שהניסוח הזה כל כך כושל, אנסה לתאר את הצורה הפורמלית שבה מנסחים אותו. מצד אחד, זה לא ניסוח קל להבנה; מצד שני, הבנה שלו היא לטעמי אחד מהצעדים הראשונים שבהבנת הכוח של המתמטיקה - איך אפשר לקחת רעיונות מעורפלים למדי ולתרגם אותם למשהו קונקרטי ומדוייק מאוד.</p>
+
+<p>אם, הבה ונקפוץ למים: פונקציה <span>$latex f$</span> היא רציפה בנקודה <span>$latex x_0$</span> אם לכל מספר ממשי <span>$latex \varepsilon&gt;0$</span> קיים מספר ממשי <span>$latex \delta&gt;0$</span> כך שאם <span>$latex d(x,x_0)&lt;\delta$</span> אז <span>$latex d(f(x),f(x_0))&lt;\varepsilon$</span>.</p>
+
+<p>אמא’לה?</p>
+
+<p>המצב לא כל כך נורא. הרעיון הוא כדלהלן: נסתכל בנקודה <span>$latex x_0$</span> ונחשוב על מה ש-<span>$latex f$</span> מחוללת מנקודת מבטה; ראשית, <span>$latex x_0$</span> עצמה מועפת לאי שם. שנית, כל הנקודות שהיו קרובות ל-<span>$latex x_0$</span> מועפות גם כן. ייתכן שחלקן יסולקו אל מעבר להררי החושך. עם זאת, <span>$latex x_0$</span> רוצה שסביבה כלשהי שלה - כש”סביבה” פירושה, <strong>בערך</strong>, הוא “כל הנקודות שהמרחק שלהן ממני לא עולה על גודל מסויים” - תישאר במרחק סביר ממנה. מה זה “סביר”? קטן ככל ש-<span>$latex x_0$</span> רוצה.</p>
+
+<p>כלומר, האפסילון (<span>$latex \varepsilon$</span>) בא להגיד מהו המרחק הסביר שהנקודה רוצה, והדלתא בא להגדיר את הסביבה שתישאר קרובה לנקודה גם אחרי שהפונקציה תפעל את פעולתה. כדי להבין איך זה יכול להשתבש, כדאי לחשוב על מעין יריעת גומי ונקודה שעליה - כל עוד רק “מותחים” את היריעה אין בעיה, אבל אם גוזרים את היריעה בדיוק על הנקודה שלנו ומעיפים את שני החלקים לשני קצוות תבל, אז חצי מכל סביבה של הנקודה תיקרע ממנה ותועף רחוק רחוק, כך שעבור אפסילונים קטנים הנקודה לא תוכל להיות מרוצה.</p>
+
+<p>אם לא הצלחתם לעקוב - לא נורא. רציפות, וגבולות, הן נושא קשה למדי להבנה. החשוב כאן הוא בכך שההגדרה שלנו הסתמכה על “מרחק” בצורה די חזקה, אבל מצד שני, גם די מיותרת - נזקקתי לו כדי לדבר על סביבות של נקודות, אבל למרבה הפלא, זה כלל לא הכרחי. בפעם הבאה אנסה להסביר כיצד דיבורים על “סביבה” אבסטרקטית מאפשרים לנסח את מושג הרציפות בלי להסתמך על מרחק - וזו תחילת הדיון בטופולוגיה קבוצתית.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2008/03/21/matric_spaces_and_topology/';
+      this.page.identifier = 'http://gadial.net/2008/03/21/matric_spaces_and_topology/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2008/03/21/matric_spaces_and_topology/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

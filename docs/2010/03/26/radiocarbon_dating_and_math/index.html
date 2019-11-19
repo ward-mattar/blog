@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>תיארוך פחמן-14 ואיך זה קשור למתמטיקה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="תיארוך פחמן-14 ואיך זה קשור למתמטיקה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בעקבות הפוסט הקודם על פאי אני רוצה להציג הגדרה “מעניינת” של סינוס וקוסינוס, בתור הפתרונות של משוואה דיפרנציאלית “טבעית” כלשהי, אך לפני כן צריך לומר משהו בכלליות על משוואות דיפרנציאליות, ולפני שמתחילים לדבר על משוואות דיפרנציאליות מאוד כדאי להציג מוטיבציה והקשר כלשהו, וזה מה שאעשה בפוסט הזה. יותר מכל ענף אחר של המתמטיקה, תחום המשוואות הדיפרנציאליות קשור בצורה חזקה מאוד לפיזיקה ולמציאות הפיזיקלית, ולכן הדרך הטובה לתאר אותו ולהסביר למה הוא מעניין היא באמצעות דוגמאות מציאותיות, וזה מוביל אותנו לסיפור של מערת לסקו (Lascaux)." />
+<meta property="og:description" content="בעקבות הפוסט הקודם על פאי אני רוצה להציג הגדרה “מעניינת” של סינוס וקוסינוס, בתור הפתרונות של משוואה דיפרנציאלית “טבעית” כלשהי, אך לפני כן צריך לומר משהו בכלליות על משוואות דיפרנציאליות, ולפני שמתחילים לדבר על משוואות דיפרנציאליות מאוד כדאי להציג מוטיבציה והקשר כלשהו, וזה מה שאעשה בפוסט הזה. יותר מכל ענף אחר של המתמטיקה, תחום המשוואות הדיפרנציאליות קשור בצורה חזקה מאוד לפיזיקה ולמציאות הפיזיקלית, ולכן הדרך הטובה לתאר אותו ולהסביר למה הוא מעניין היא באמצעות דוגמאות מציאותיות, וזה מוביל אותנו לסיפור של מערת לסקו (Lascaux)." />
+<link rel="canonical" href="http://gadial.net/2010/03/26/radiocarbon_dating_and_math/" />
+<meta property="og:url" content="http://gadial.net/2010/03/26/radiocarbon_dating_and_math/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-03-26T11:55:05+03:00" />
+<script type="application/ld+json">
+{"headline":"תיארוך פחמן-14 ואיך זה קשור למתמטיקה","dateModified":"2010-03-26T11:55:05+03:00","datePublished":"2010-03-26T11:55:05+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/03/26/radiocarbon_dating_and_math/"},"url":"http://gadial.net/2010/03/26/radiocarbon_dating_and_math/","description":"בעקבות הפוסט הקודם על פאי אני רוצה להציג הגדרה “מעניינת” של סינוס וקוסינוס, בתור הפתרונות של משוואה דיפרנציאלית “טבעית” כלשהי, אך לפני כן צריך לומר משהו בכלליות על משוואות דיפרנציאליות, ולפני שמתחילים לדבר על משוואות דיפרנציאליות מאוד כדאי להציג מוטיבציה והקשר כלשהו, וזה מה שאעשה בפוסט הזה. יותר מכל ענף אחר של המתמטיקה, תחום המשוואות הדיפרנציאליות קשור בצורה חזקה מאוד לפיזיקה ולמציאות הפיזיקלית, ולכן הדרך הטובה לתאר אותו ולהסביר למה הוא מעניין היא באמצעות דוגמאות מציאותיות, וזה מוביל אותנו לסיפור של מערת לסקו (Lascaux).","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">תיארוך פחמן-14 ואיך זה קשור למתמטיקה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-03-26T11:55:05+03:00" itemprop="datePublished">Mar 26, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בעקבות <a href="http://www.gadial.net/?p=393">הפוסט הקודם על פאי</a> אני רוצה להציג הגדרה “מעניינת” של <a href="http://he.wikipedia.org/wiki/%D7%98%D7%A8%D7%99%D7%92%D7%95%D7%A0%D7%95%D7%9E%D7%98%D7%A8%D7%99%D7%94">סינוס וקוסינוס</a>, בתור הפתרונות של <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%95%D7%95%D7%90%D7%94_%D7%93%D7%99%D7%A4%D7%A8%D7%A0%D7%A6%D7%99%D7%90%D7%9C%D7%99%D7%AA">משוואה דיפרנציאלית</a> “טבעית” כלשהי, אך לפני כן צריך לומר משהו בכלליות על משוואות דיפרנציאליות, ולפני שמתחילים לדבר על משוואות דיפרנציאליות מאוד כדאי להציג מוטיבציה והקשר כלשהו, וזה מה שאעשה בפוסט הזה. יותר מכל ענף אחר של המתמטיקה, תחום המשוואות הדיפרנציאליות קשור בצורה חזקה מאוד לפיזיקה ולמציאות הפיזיקלית, ולכן הדרך הטובה לתאר אותו ולהסביר למה הוא מעניין היא באמצעות דוגמאות מציאותיות, וזה מוביל אותנו לסיפור של <a href="http://en.wikipedia.org/wiki/Lascaux">מערת לסקו</a> (Lascaux).</p>
+
+<p>תחילת הסיפור בארבעה (חמישה?) נערים שיצאו לטייל (לצוד?) באיזור לסקו שבצרפת יחד עם הכלב של אחד מהם, “רובוט”. בשלב מסויים נעלם הכלב והנערים חיפשו אותו עד שאחד מהם שמע את נביחותיו וגילה שהכלב נפל לבור עמוק שממנו לא יכל לצאת בעצמו. הנער ירד לבור וחילץ את הכלב בשלום, ותוך כדי כך גילה שהבור היה חלק ממערה שהכילה ציורי קיר מרשימים של האדם הקדמון. קשה לתאר את גודל העושר שנמצא במערה - כמעט אלפיים ציורים, כולם מתוארכים לסביבות שנת 15,000 לפני הספירה. המערה היא כיום אתר תיירותי כה פופולרי עד שהיה צורך לסגור אותה ולפתוח העתק מדוייק שלה בסמוך כדי לא לפגום בציורים המקוריים.</p>
+
+<p>מה שאני רוצה לדבר עליו בסיפור הזה הוא השאלה הפשוטה - מה זאת אומרת “מתוארכים לסביבות שנת 15,000 לפני הספירה”? איך אפשר לבצע תיארוך שכזה? התשובה היא שילוב מקסים של פיזיקה ומתמטיקה - <a href="http://he.wikipedia.org/wiki/%D7%AA%D7%99%D7%90%D7%A8%D7%95%D7%9A_%D7%A4%D7%97%D7%9E%D7%9F-14">תיארוך פחמן-14</a>.</p>
+
+<p>נתחיל מהפיזיקה, תחום שבו אני לא יודע כלום ולכן קרוב לודאי שכל מה שאכתוב יהיה לא מדויק. החומרים בטבע מורכבים מאטומים, כשכל אטום בתורו מכיל גרעין ואלקטרונים. לכל אטום יש מספר אלקטרונים “יציב”, אך ככלל אין זה נדיר למצוא אטומים שמספר האלקטרונים בהם שונה מהמספר היציב - זה הרעיון שעומד מאחורי הולכה חשמלית. עם זאת, מה שקורה בגרעין הוא עניין שונה לחלוטין. הגרעין מורכב מפרוטונים (שהם בעלי ערך חשמלי “חיובי” שמקזז את האלקטרונים), ומנייטרונים (שהם נייטרלים מבחינת הערך החשמלי שלהם). מספר הפרוטונים הוא שקובע באיזה יסוד מדובר - כך למשל, אטום שבגרעין שלו שישה פרוטונים הוא אטום פחמן. למרבית היסודות בטבע יש מספר סוגי אטומים שונים, שנבדלים אלו מאלו במספר הנייטרונים שבגרעין (המספר בדרך כלל קרוב או זהה למספר הפרוטונים, אך לא בהכרח) - לכל סוג שכזה קוראים “איזוטופ”. לנייטרונים אין השפעה על התכונות הכימיות של היסודות, אבל יכולה להיות להם השפעה על היציבות של הגרעין. גרעין לא יציב הוא גרעין שעשוי, תוך פרק זמן קצר יחסית (“יחסית” היא מילה יחסית כאן), להתפרק למרכיבים שונים, תוך כדי פליטת קרינה - לתהליך הזה קוראים רדיואקטיביות. כך למשל לפחמן יש שני איזוטופים יציבים, אחד בעל 6 נייטרונים ואחד בעל 7 נייטרונים; ולעומת זאת האיזוטופ של הפחמן שמכיל 8 נייטרונים אינו יציב והוא נוטה <a href="http://he.wikipedia.org/wiki/%D7%A8%D7%93%D7%99%D7%95%D7%90%D7%A7%D7%98%D7%99%D7%91%D7%99%D7%95%D7%AA">להתפרק רדיואקטיבית</a> עם הזמן (ולהפוך לאטום יציב של חנקן).</p>
+
+<p>המעניין בתופעת הרדיואקטיביות הוא שמדובר בתופעה אקראית - בהינתן אטום לא ניתן לקבוע בודאות מתי הוא יתפרק. מה שכן אפשר לעשות הוא לתת הערכה סטטיסטית; הניתוח המתמטי של ההערכה הסטטיסטית הזו יהיה מה שמעניין אותנו, אך לפני כן אסיים להסביר איך כל זה קשור לתיארוך.</p>
+
+<p>הגורם הנוסף שנכנס למשוואה כעת הוא החשיבות של פחמן לחיים האורגניים בכדור הארץ, שגורם לכך שבתהליכי יצירה של חומרים אורגניים, כמות הפחמן-14 שתהיה בהם, ביחס לאיזוטופים אחרים של פחמן, תהיה דומה לכמות הפחמן-14 המצוי באטמוספירה באותה עת. עם זאת, מרגע שיצור אורגני מת, האיזון הזה נשבר - כמות האיזוטופים היציבים של פחמן שבשרידיו תיוותר קבועה, בעוד שהפחמן-14 יתחיל “להיעלם” כתוצאה מהתפרקות רדיואקטיבית. מכאן שאם יודעים את היחס המקורי בין הפחמן-14 לאיזוטופים היציבים, ויודעים משהו על קצב ההתפרקות של פחמן-14, ויודעים את היחס <strong>הנוכחי</strong> בין פחמן-14 לשאר האיזוטופים בדגימה שמודדים, אפשר להסיק מזה משהו על גילה של הדגימה. במקרה של לסקו, במערה נמצאו שרידי עצים ששימשו למדורה - זה כל מה שהיה בו צורך.</p>
+
+<p>הבה נסמן ב-<span>$latex N_{0}$</span> את הכמות הראשונית של פחמן-14 בחומר (“מספר האטומים”), בזמן שנסמן כ-<span>$latex t=0$</span>. אנחנו רוצים לדעת מה תהיה הכמות בכל זמן חיובי <span>$latex t&gt;0$</span>, כלומר אנחנו רוצים לגלות פונקציה <span>$latex N\left(t\right)$</span> שכל מה שידוע לנו עליה כרגע הוא שהיא מקיימת <span>$latex N\left(0\right)=N_{0}$</span>. כעת עלינו להבין מה עוד ידוע לנו על הפונקציה הזו.</p>
+
+<p>המידע הנוסף המרכזי שלנו הוא על ה<strong>שינוי</strong> של כמות החומר. הנה תיאור פשטני ולא מדוייק מתמטית שיתן לנו את האינטואיציה. נניח שאנחנו מסתכלים על ערימת החומר בשני פרקי זמן קרובים מאוד זה לזה, <span>$latex t$</span> ו-<span>$latex t+dt$</span> (<span>$latex dt$</span> מסמל כאן “פרק זמן קצר מאוד”) - כה קרובים, עד כדי כך שניתן לחשוב כי בזמן הקצר הזה כל אטום חומר הספיק לבצע בדיוק “הגרלה” אחת האם הוא עומד להתפרק כרגע או לא. אנחנו מניחים לצורך העניין שההגרלות הללו הן בלתי תלויות זו בזו וחסרות זכרון (כלומר, אם אטום “לא הצליח להתפרק” בהגרלה הנוכחית, זה לא משנה את הסיכויים שלו להתפרק בהגרלה הבאה). כמובן, זו הנחה מאוד פשטנית ומאוד גורפת; אבל אם היא מובילה אותנו לבניית מודל שנותן תוצאות טובות, די לנו בכך לבינתיים.</p>
+
+<p>אם ההסתברות להתפרקות של אטום היא <span>$latex \lambda$</span> (כאשר <span>$latex \lambda$</span> הוא מספר בין 0 ל-1) אז בפרק הזמן הקצר שחלף, אפשר לומר כי <a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%97%D7%9C%D7%AA">בתוחלת</a> <span>$latex \lambda\cdot N\left(t\right)$</span> אטומים התפרקו ונעלמו (כשכמות האטומים גדולה זוהי הערכה טובה), ולכן ה<strong>שינוי</strong> בערך של הפונקציה <span>$latex N\left(t\right)$</span> הוא <span>$latex -\lambda N\left(t\right)$</span>. בסימונים אפשר לומר ש-<span>$latex \frac{dN\left(t\right)}{dt}=-\lambda N\left(t\right)$</span> - השינוי ה”רגעי” ב-<span>$latex N$</span> בכל נקודת זמן שווה למינוס קבוע (<span>$latex \lambda$</span>) כפול הגודל של <span>$latex N$</span> באותה נקודת זמן.</p>
+
+<p>במילים אחרות, יש לנו כאן סיטואציה שבה <strong>קצב השינוי</strong> של גודל משתנה מסויים <strong>תלוי בגודל עצמו</strong>. מיש-מש שכזה מופיע באלף ואחת מערכות שונות והקשרים שונים. דוגמה פשוטה אחרת היא התנהגות עצם שמחובר לקפיץ מתוח שמשוחרר - כאן הגודל שמשתנה הוא מיקום העצם, אך המיקום משפיע על צורת הקפיץ, ולכן על הכוח שהקפיץ מפעיל על העצם (אם הוא מושך או דוחף אותו, ובאיזו עוצמה), ולכן על השינוי במיקום של העצם. כאן ההשפעה היא מעט יותר עקיפה - הכוח שהקפיץ מפעיל על העצם גורם לשינוי במהירות שלו; והמהירות היא מה שגורם לשינוי במיקום. כלומר, יש לנו כאן “שינוי מסדר שני”, וגם המשוואה המתאימה תהיה מסדר שני - אך נעזוב את זה לבינתיים ונחזור לבעיה המקורית שעליה דיברנו, התפרקות הפחמן.</p>
+
+<p>הבה ונזנח את הכתיב ה”פיזיקלי” ונשתמש בסימונים מתמטיים ובטרמינולוגיה מתמטית רגילה. יש לנו פונקציה <span>$latex f\left(x\right)$</span> שמקיימת <span>$latex f\left(0\right)=N_{0}$</span>, וכמו כן <span>$latex f^{\prime}\left(x\right)=-\lambda f\left(x\right)$</span> (הנגזרת של <span>$latex f$</span> בנקודה <span>$latex x$</span> שווה ל-<span>$latex -\lambda f\left(x\right)$</span>). השאלה היא - מהי הפונקציה? כמובן ששאלה קדומה יותר היא האם פונקציה כזו קיימת בכלל, אך כרגע אין צורך לדבר על השאלה הזו במפורש.</p>
+
+<p>וכעת אני עשוי לאכזב אתכם מעט - אין דרך “שיטתית”לגלות את הפונקציה <span>$latex f\left(x\right)$</span> בלי שום ידע מוקדם. הדבר הטוב ביותר שאני יכול להגיד הוא ש”ננחש” שזוהי הפונקציה <span>$latex f\left(x\right)=e^{-\lambda x}$</span>, פשוט מתוך הנסיון שיש לנו עם גזירת פונקציות דומות (למעשה, כמו שאני מקווה לתאר בהמשך, אפשר לחשוב על הפונקציה <span>$latex e^{x}$</span> והדומות לה מלכתחילה בתור פתרונות של משוואה דיפרנציאלית). אכן, לא קשה לראות שהפונקציה הזו מקיימת את המשוואה <span>$latex f^{\prime}\left(x\right)=-\lambda f\left(x\right)$</span> כך שמצאנו פתרון, אלא שיש עוד פתרונות - גם אם נכפול את הפונקציה הזו בקבוע נקבל פתרון. אז מה הפתרון ה”נכון”? זכרו שיש לנו תנאי נוסף: <span>$latex f\left(0\right)=N_{0}$</span>. אז אם נאמר ש-<span>$latex f\left(x\right)=Ae^{-\lambda x}$</span> עבור קבוע <span>$latex A$</span> כלשהו שאנו מחפשים, ונציב <span>$latex x=0$</span>, נקבל <span>$latex A=N_{0}$</span>, כלומר <span>$latex f\left(x\right)=N_{0}e^{-\lambda x}$</span>. מצאנו פונקציה שמהווה פתרון למשוואה <span>$latex f^{\prime}\left(x\right)=-\lambda f\left(x\right)$</span> עם “תנאי ההתחלה” <span>$latex f\left(0\right)=N_{0}$</span>. אפשר היה אולי לתהות אם יש פונקציות אחרות שמקיימות זאת, אך מתברר (באמצעות משפט כללי בהרבה) שאין.</p>
+
+<p>למשוואה <span>$latex f^{\prime}\left(x\right)=-\lambda f\left(x\right)$</span> קוראים <strong>משוואה דיפרנציאלית</strong>. זוהי איננה משוואה שבה אנו מחפשים את ערכו של <span>$latex x$</span>; ה”נעלם” שלנו הוא <strong>פונקציה</strong>, <span>$latex f\left(x\right)$</span>, ובמשוואה מופיעה לא רק <span>$latex f$</span> עצמה אלא גם הנגזרת שלה, <span>$latex f^{\prime}$</span>. זה, על קצה המזלג, הרעיון שמאחורי ענף המשוואות הדיפרנציאליות: נתון סט משוואות כלשהו שמקיימת פונקציה ונגזרות שלה; המטרה היא למצוא את הפונקציה במפורש (דבר שבאופן כללי הוא קשה ביותר ולרוב לא אפשרי בכלל, למעט במקרים פשוטים) ואם לא, אז לפחות לומר דברים מעניינים על הפונקציה שאותם ניתן להסיק מתוך המשוואות. בדוגמה שלנו המשוואה הייתה פשוטה ביותר ולכן פתרון היה קל; באופן כללי קל לראות איך הדברים עשויים להסתבך - למשל, אם במשוואה יופיע גם <span>$latex x$</span>, אם יופיעו חזקות של <span>$latex f$</span> ושל <span>$latex f^{\prime}$</span>, אם יופיעו נגזרות מסדרים גבוהים יותר (<span>$latex f^{\prime\prime}$</span> וכדומה), אם תהיה מערכת של כמה משוואות וכמה פונקציות נעלמות, או אם <span>$latex f$</span> תהיה בכלל פונקציה של כמה משתנים ואז יופיעו במשוואה נגזרות <strong>חלקיות</strong> של <span>$latex f$</span>. ההבדל האחרון הוא ההבדל שבין תחום המשוואות הדיפרנציאליות ה<strong>רגילות</strong> (מד”ר), והמשוואות הדיפרנציאליות ה<strong>חלקיות</strong> (מד”ח), המסובך בהרבה.</p>
+
+<p>נחזור כעת לפתרון ש”מצאנו”, <span>$latex N\left(t\right)=N_{0}e^{-\lambda t}$</span>. זוהי פונקציה שדועכת יחסית מהר, אך לעולם אינה מתאפסת, באופן שדי מתאים לתפיסה שלנו את האופן שבו התהליך האקראי יגרום לחומר להיעלם; בהתחלה, כשיש “הרבה” חומר, אז הרבה ממנו ייעלם יחסית בזריזות, אולם קצת חומר יישאר “תמיד” - אותם חלקיקים ברי מזל שמצליחים שוב ושוב בהגרלה הרדיואקטיבית שלא להתפרק. אין טעם, אם כן, לדבר על “הזמן שלוקח לכל החומר להתפרק”, אבל אם רוצים לקבל הערכה לזמן שלוקח לו להתפרק, אפשר למדוד את הזמן שלוקח לחלק יחסי כלשהו מהחומר להתפרק - טבעי לבחור את החלק הזה להיות בדיוק חצי. אם כן, נסמן ב-<span>$latex T$</span> את הזמן שבו בדיוק מחצית מהחומר התפרקה, כלומר <span>$latex N\left(T\right)=\frac{N_{0}}{2}$</span>. נציב במשוואה את הפונקציה המפורשת שמצאנו <span>$latex \frac{N_{0}}{2}=N_{0}e^{-\lambda T}$</span>, ובמילים אחרות <span>$latex e^{-\lambda T}=2^{-1}$</span>. אם נפעיל לוגריתם על שני האגפים נקבל <span>$latex -\lambda T=-\ln2$</span>, כלומר <span>$latex T=\frac{\ln2}{\lambda}$</span>. בשביל מה כל זה היה טוב? כי כעת אנחנו מסוגלים להעריך את <span>$latex \lambda$</span> (שכזכור, היה קבוע שמייצג הסתברות התפרקות כלשהי, ולא היה לנו מושג מהו) בפועל: באופן פשטני אפשר לומר ניקח כמות של פחמן-14 (לא משנה <strong>איזו</strong> כמות, כי <span>$latex T$</span> לא היה תלוי בכמות; אבל צריך לקחת כמות שמאפשרת לנו לבצע מדידות בנוחות) ונמדוד אותה שוב ושוב עד שנוכל לקבל הערכה טובה לגבי הזמן שלוקח למחצית מהכמות להתפרק (בפועל מן הסתם יש שיטות יותר מחוכמות). הזמן הזה נקרא <strong>זמן מחצית החיים</strong> של האטום (ואנו מניחים שהוא קבוע לכל אטומי הפחמן-14 - ניסויים מראים שהוא בערך 5,750 שנים). אפשר כעת לוותר לגמרי על שירותיו הטובים של <span>$latex \lambda$</span> ולתאר את מודל ההתפרקות הרדיואקטיבית באופן הבא: <span>$latex N\left(t\right)=N_{0}e^{-\frac{\ln2}{T}t}$</span>, כאשר <span>$latex T$</span> הוא זמן מחצית החיים של האטום המתפרק, ו-<span>$latex N_{0}$</span> הכמות הראשונית של החומר.</p>
+
+<p>הבה ונשלים כעת את החישובים הרלוונטיים עבור לסקו. פרט לזמן מחצית החיים של פחמן, יש שני פרמטרים נוספים שהכרחיים למדידה - <span>$latex R_{old}$</span>, שהוא היחס בין פחמן-14 לפחמן-12 באטמוספירה (ולכן גם ביצורים חיים) בזמן מותו של העץ (ואותו ניתן לחשב בשיטות אחרות, או סתם להניח שהיחס הוא בערך אותו הדבר כמו היום, בקיזוז כל עודף הפחמן שהאדם פלט לאטמוספירה במאות השנים האחרונות - כאמור, אני לא מתיימר להיכנס כאן לפרטים הקריטיים לחישוב מדוייק אמיתי), ו-<span>$latex R_{new}$</span>, שהוא היחס בין פחמן-14 לפחמן-12 בדגימות שנמצאו (את הערך הזה צריך לגלות על ידי ניתוח כימי של הדגימות). נניח ששני הערכים הללו ידועים לנו, אז מה נקבל? אם נסמן ב-<span>$latex A$</span> את כמות הפחמן-12 שנמצאה בדגימה, אז <span>$latex \frac{N_{0}}{A}=R_{old}$</span> ו-<span>$latex \frac{N\left(t\right)}{A}=R_{new}$</span> ומשתי משוואות אלו אנו רוצים לחלץ את <span>$latex t$</span>; נחלק את שתי המשוואות ונקבל <span>$latex \frac{R_{new}}{R_{old}}=\frac{N_{0}e^{-\frac{\ln2}{T}t}}{N_{0}}=e^{-\frac{\ln2}{T}t}$</span>, כלומר <span>$latex t=-\ln\left(\frac{R_{new}}{R_{old}}\right)\frac{T}{\ln2}$</span>. הצבת כל הפרמטרים המתאימים עבור לסקו נותנת את ההערכה של 15,000 שנים.</p>
+
+<p>בפני עצמו כל זה הוא תרגיל נחמד למדי, אך החלק המעניין באמת כאן לטעמי הוא המעבר ה”קסום” שלנו מהמשוואה <span>$latex f^{\prime}\left(x\right)=-\lambda f\left(x\right)$</span> למשוואה <span>$latex f\left(x\right)=N_{0}e^{-\lambda x}$</span>. בפוסט הבא אעזוב את המוטיבציות הפיזיקליות ואדבר על מה שקורה כשמתחילים לחקור את המשוואות הללו כאובייקטים בפני עצמם, ואיך זה נותן לנו <strong>מוטיבציה</strong> להגדרת פונקציית האקספוננט (ולכן גם פונקציות הסינוס והקוסינוס).</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2010/03/26/radiocarbon_dating_and_math/';
+      this.page.identifier = 'http://gadial.net/2010/03/26/radiocarbon_dating_and_math/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2010/03/26/radiocarbon_dating_and_math/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

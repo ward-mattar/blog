@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>חבורת שורשי היחידה ושדות ציקלוטומיים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="חבורת שורשי היחידה ושדות ציקלוטומיים" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת $latex n$, מקבלים 1 - “שורשי היחידה מסדר $latex n$”. הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה $latex e^{\frac{k\cdot 2i\pi}{n}}$, והסברתי מה המשמעות של חזקה כזו של $latex e$ ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  $latex \zeta_n = e^{\frac{2i\pi}{n}}$ (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר $latex n$ ניתן להצגה בתור $latex \zeta_n^k$." />
+<meta property="og:description" content="בפוסט הקודם עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת $latex n$, מקבלים 1 - “שורשי היחידה מסדר $latex n$”. הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה $latex e^{\frac{k\cdot 2i\pi}{n}}$, והסברתי מה המשמעות של חזקה כזו של $latex e$ ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  $latex \zeta_n = e^{\frac{2i\pi}{n}}$ (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר $latex n$ ניתן להצגה בתור $latex \zeta_n^k$." />
+<link rel="canonical" href="http://gadial.net/2009/02/13/roots_of_unity_group/" />
+<meta property="og:url" content="http://gadial.net/2009/02/13/roots_of_unity_group/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-02-13T01:12:26+02:00" />
+<script type="application/ld+json">
+{"headline":"חבורת שורשי היחידה ושדות ציקלוטומיים","dateModified":"2009-02-13T01:12:26+02:00","datePublished":"2009-02-13T01:12:26+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2009/02/13/roots_of_unity_group/"},"url":"http://gadial.net/2009/02/13/roots_of_unity_group/","description":"בפוסט הקודם עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת $latex n$, מקבלים 1 - “שורשי היחידה מסדר $latex n$”. הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה $latex e^{\\frac{k\\cdot 2i\\pi}{n}}$, והסברתי מה המשמעות של חזקה כזו של $latex e$ ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  $latex \\zeta_n = e^{\\frac{2i\\pi}{n}}$ (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר $latex n$ ניתן להצגה בתור $latex \\zeta_n^k$.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">חבורת שורשי היחידה ושדות ציקלוטומיים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-02-13T01:12:26+02:00" itemprop="datePublished">Feb 13, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ב<a href="http://www.gadial.net/?p=182">פוסט הקודם</a> עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת <span>$latex n$</span>, מקבלים 1 - “שורשי היחידה מסדר <span>$latex n$</span>”. הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה <span>$latex e^{\frac{k\cdot 2i\pi}{n}}$</span>, והסברתי מה המשמעות של חזקה כזו של <span>$latex e$</span> ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  <span>$latex \zeta_n = e^{\frac{2i\pi}{n}}$</span> (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר <span>$latex n$</span> ניתן להצגה בתור <span>$latex \zeta_n^k$</span>.</p>
+
+<p>כעת אני רוצה לעסוק קצת יותר במבנה של קבוצת כל שורשי היחידה, מבנה שמתבטא בכך שניתן לכפול שני שורשי יחידה אלו באלו, והתוצאה תהיה שורש יחידה שלישי. זאת מכיוון שאם <span>$latex \zeta_n^k,\zeta_m^t$</span> הם שני שורשי יחידה (לא בהכרח מאותו סדר) אז <span>$latex (\zeta_n^k\cdot\zeta_m^t)^{nm}=(\zeta_n^k)^{nm}\cdot(\zeta_m^t)^{nm}=1\cdot 1=1$</span>, ולכן אפשר “לבנות” שורשי יחידה מתוך שורשי יחידה קיימים, על ידי כפל.</p>
+
+<p>פרט לכך, תכונת הכפל הזו מקיימת שלוש תכונות שודאי מוכרות לכל מי שלומד מתמטיקה (או קורא באדיקות את הפוסטים בבלוג): ראשית, אם <span>$latex a,b,c$</span> הם שורשי יחידה, אז מתקיים <span>$latex (ab)c=a(bc)$</span> - חוק הקיבוץ, “אסוציאטיביות” (למי שלא מבין למה זה לא נכון באופן טריוויאלי - שימו לב שפעולת החיסור של מספרים אינה מקיימת את התכונה הזו, כלומר אם<span>$latex a,b,c$</span> הם מספרים שלמים, <span>$latex (a-b)-c\ne a-(b-c)$</span> באופן כללי). פרט לכך, המספר 1 (שהוא בוודאי שורש יחידה, מסדר 1 אפילו) הוא “נייטרלי” לכפל - אם כופלים את <span>$latex a$</span> ב-1, מקבלים את <span>$latex a$</span>; ולסיום, אם <span>$latex \zeta_n^k$</span> הוא שורש יחידה כלשהו, הרי ש-<span>$latex \zeta_n^k\cdot \zeta_n^{n-k}=\zeta_n^n=1$</span>, כלומר - לכל <span>$latex a$</span> קיים <span>$latex b$</span> כך ש-<span>$latex ab=1$</span> - “קיים הופכי לפעולת הכפל”.</p>
+
+<p>התכונות שלעיל מראות כי הפעולה של כפל בשורשי היחידה מגדירה <a href="http://he.wikipedia.org/wiki/%D7%97%D7%91%D7%95%D7%A8%D7%94_(%D7%9E%D7%91%D7%A0%D7%94_%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%99)"><strong>חבורה</strong></a>. חדי העין ודאי יודעים לומר שלא הייתי צריך להסתבך כל כך והייתי מסוגל לטעון טענה כדוגמת “המספרים המרוכבים (פרט ל-0) מהווים חבורה כפלית, ומספיק להראות ששורשי היחידה הם תת-חבורה”, אך לדעתי עדיף לראות זאת בצורה “ישירה”.</p>
+
+<p>שורשי היחידה הם דוגמה מעניינת מאוד לחבורה, בגלל כמה תכונות שהם בבירור מקיימים אבל מי שרק התחיל ללמוד על חבורות אולי טרם הספיק לראות. למשל, כל איבר בחבורה הוא מסדר סופי, למרות שהחבורה היא אינסופית; וכל תת חבורה סופית היא ציקלית למרות שהחבורה כולה אינה ציקלית - תכף אסביר זאת בפירוט.</p>
+
+<p>לפני שאעשה זאת, אני רוצה להציג דרך התבוננות נוספת על החבורה הזו, שאולי תפשט עוד יותר את החיים. נניח שאנו כופלים שני שורשי יחידה מאותו הסדר, <span>$latex \zeta_n^k\cdot\zeta_n^t$</span>. מה נקבל? חישוב פשוט מראה שאת <span>$latex \zeta_n^{k+t}$</span>. אבל מה קורה אם כופלים שני שורשים שאינם מאותו הסדר? ובכן, למען הסדר הטוב הבה ונעשה זאת על פי ההגדרה, למרות שזה אומר נוסחה ארוכה ומבהילה:</p>
+
+<p><span>$latex e^{\frac{k}{n}\left(2i\pi\right)}\cdot e^{\frac{t}{m}\left(2i\pi\right)}=e^{\left(\frac{k}{n}+\frac{t}{m}\right)\left(2i\pi\right)}=e^{\frac{km+tn}{mn}\left(2i\pi\right)}$</span></p>
+
+<p>מה הולך כאן? למעשה, האקשן האמיתי הולך רק במעריך של e, ומה שקורה שם הוא פעולת חיבור, לא כפל - ופעולת חיבור של שני מספרים רציונליים, <span>$latex \frac{k}{n}+\frac{t}{m}$</span>. אם כן, אפשר לחשוב על חבורת שורשי היחידה כעל אוסף של מספרים רציונליים, עם פעולת החיבור הרגילה של הרציונליים! אבל ההקבלה נשברת בסיטואציה הבאה, למשל:</p>
+
+<p><span>$latex e^{\frac{1}{2}\left(2i\pi\right)}\cdot e^{\frac{1}{2}\left(2i\pi\right)}=e^{2i\pi}=e^{0}=1$</span></p>
+
+<p>מה שקורה כאן הוא שקיבלנו, לכאורה, את המשוואה <span>$latex \frac{1}{2}+\frac{1}{2}=0$</span>, שודאי אינה נכונה במספרים הרציונליים. אם כן, אמנם אפשר לחשוב על שורשי היחידה בתור אוסף של מספרים רציונליים עם פעולת חיבור שדומה לזו של מספרים רציונליים רגילים, אבל עם ההבדל החשוב הבא: כל המספרים הרציונליים באוסף הם אי שליליים וקטנים ממש מ-1; ובכל פעם שבה מחברים שני מספרים רציונליים מהקבוצה, “מוחקים” את החלק השלם מהתוצאה ונשארים רק עם השבר (או עם 0, אם החיבור הניב עם מספר שלם). בניסוח קצת יותר מתמטי קוראים לפעולה שכזו “חיבור מודולו 1”. בניסוח ממש מתמטי, מה שקורה הוא שחבורת שורשי היחידה איזומורפית לחבורת המנה <span>$latex \mathbb{Q}/\mathbb{Z}$</span> - מי שלא הבין את המשפט האחרון, לא נורא.</p>
+
+<p>מעתה ואילך יהיה יותר פשוט לדבר על שורשי היחידה כעל מספרים רציונליים מהתחום הנ”ל, עם הפעולה הנ”ל. עם זאת, צריך להיות מאוד זהירים ולהבין כל הזמן על מה אנחנו מדברים - אם אני מדבר על שני מספרים רציונליים ועל פעולת החיבור הזו, חשוב להבין שזו בעצם פעולת ה<strong>כפל</strong> של שורשי היחידה, ב”תחפושת”. אפשר להגדיר בנוסף לכך גם <strong>חיבור</strong> על שורשי היחידה, והוא יתנהג באופן שונה לגמרי - לא ניכנס לכך כרגע.</p>
+
+<p>כבר הסכמנו שיש <span>$latex n$</span> שורשי יחידה מסדר <span>$latex n$</span>, וכעת קל מאוד לחשוב עליהם - אלו הם המספרים הרציונליים <span>$latex \frac{0}{n},\frac{1}{n}, \frac{2}{n},\dots,\frac{n-1}{n} $</span>. מה שכן, רואים מייד שאותו מספר מרוכב ממלא בעצם תפקידים בקבוצות רבות של שורשי יחידה - למשל, <span>$latex \frac{1}{2}=\frac{2}{4}=\frac{3}{6}$</span>. כלומר, שורש יחידה מסדר 2 הוא גם שורש יחידה מסדר 4 וגם מסדר 6 וכן הלאה וכן הלאה. ומה עם <span>$latex \frac{1}{4}$</span>? האם גם הוא יכול להיות שורש יחידה מסדר 6? מתברר שלא, כי אין מספר רציונלי <span>$latex \frac{a}{6}$</span> עם <span>$latex a$</span> טבעי (לא שבר) שמקיים <span>$latex \frac{a}{6}=\frac{1}{4}$</span> (בדקו מהו הערך היחיד של <span>$latex a$</span> שמקיים את המשוואה). אם כן, מהם הכללים? איך אפשר לדעת באילו תפקידים משמש כל שורש יחידה?</p>
+
+<p>לשם כך צריך לזכור מושג בסיסי במספרים רציונליים - “שבר מצומצם”. מספר רציונלי מוצג כשבר מצומצם <span>$latex \frac{a}{b}$</span> אם ל-a ול-b אין אף מחלק משותף גדול מ-1 (הם “זרים”). כל מספר רציונלי ניתן להציג כשבר מצומצם - אם a,b אינם זרים אלא מתחלקים שניהם באותו מספר גדול מ-1, אפשר לחלק את שניהם במספר הזה ולקבל את אותו מספר רציונלי (כי כשמחלקים מונה ומכנה באותו מספר, ערך השבר כולו אינו משתנה). מכאן שכל שורש יחידה ניתן להביא למצב של שבר מצומצם - ואם בתור שבר מצומצם, המכנה שלו הוא <span>$latex n$</span>, אז לא קשה לראות שבכל תיאור אחר שלו, המכנה חייב להיות כפולה של <span>$latex n$</span>.</p>
+
+<p>כעת אני רוצה לחזור ל”ציקליות” שהזכרתי קודם. תת-חבורה היא “ציקלית” אם קיים בה איבר אחד כך שכל איבר אחר מתקבל ממנו באמצעות הפעלת פעולת החבורה מספר כלשהו של פעמים. במקרה שלנו הפעולה היא כזכור כפל של מספרים מרוכבים, שניתן לתיאור באמצעות חיבור מודולו 1 של מספרים רציונליים. ברור ששורש היחידה שמיוצג על ידי <span>$latex \frac{1}{n}$</span> מסוגל לייצר כל שורש יחידה אחר מסדר <span>$latex n$</span> - את <span>$latex \frac{k}{n}$</span> אפשר לייצר על ידי חיבור <span>$latex \frac{1}{n}$</span> לעצמו בדיוק <span>$latex k$</span> פעמים (את 0 מקבלים על ידי חיבור <span>$latex n$</span> פעמים). האם <span>$latex \frac{1}{n}$</span> הוא שורש היחידה היחיד מסדר <span>$latex n$</span> שיוצר את שורשי היחידה האחרים? מתברר שלא - לכל <span>$latex k$</span> שזר ל-<span>$latex n$</span>, כלומר שאין לשניהם מחלקים משותפים גדולים מ-1, מתקיים ש-<span>$latex \frac{k}{n}$</span> יוצר את כל שורשי היחידה מסדר <span>$latex n$</span>. לעומת זאת, כל שורש יחידה אחר מסדר <span>$latex n$</span> איננו יוצר. לדוגמה - <span>$latex \frac{1}{4}, \frac{3}{4}$</span> הם יוצרים של כל שורשי היחידה מסדר 4, אבל שאר שורשי היחידה מסדר 4 אינם (נסו בעצמכם לבצע את החיבור). לשורש יחידה מסדר <span>$latex n$</span> שגם יוצר את היתר קוראים “שורש יחידה <strong>פרימיטיבי</strong> מסדר <span>$latex n$</span>”.</p>
+
+<p>לא אכנס כאן להוכחה הפורמלית של הטענה הזו, אם כי היא אינה מסובכת. היא רק מקרה פרטי של ניתוח כללי יותר שאפשר לבצע על חבורות ציקליות באופן כללי ולא אכנס אליו כאן במלואו (אם כי הוא אינו הרבה יותר מורכב - למעשה, כל חבורה ציקלית סופית ניתן לתאר באמצעות אוסף כל שורשי היחידה מסדר מסויים). השורה התחתונה היא החשובה - יש בדיוק <span>$latex \varphi(n)$</span> שורשי יחידה פרימיטיביים מסדר <span>$latex n$</span>, כאשר <span>$latex \varphi(n)$</span> זו פשוט פונקצית אוילר שעליה כבר דיברתי בעבר - הפונקציה שעבור <span>$latex n$</span> מחזירה את כמות המספרים הקטנים ממנו וזרים לו. הפונקציה הזו היא קריטית להמשך הדיון בבניות של מצולעים משוכללים ולכן עירבתי אותה כאן בסיפור.</p>
+
+<p>תובנה מעניינת למדי של הצגת שורשי היחידה כמספרים מרוכבים היא ש<strong>כל</strong> שורש יחידה הוא פרימיטיבי עבור <span>$latex n$</span> כלשהו - המכנה בהצגה המצומצמת שלו. כך למשל <span>$latex \frac{2}{4}$</span> אמנם אינו פרימיטיבי מסדר 4, אך הוא כן פרימיטיבי מסדר 2. נסו להוכיח את הטענה הכללית לעצמכם - ההוכחה טריוויאלית בהינתן מה שכבר דיברנו עליו.</p>
+
+<p>אם כן, זה מסכם פחות או יותר את הדיון במבנה של שורשי היחידה שמוקנה להם על ידי פעולת הכפל. אם מכניסים גם את פעולת החיבור למשחק (שוב, פעולת החיבור הסטנדרטית של מספרים מרוכבים) הסגירות הולכת לעזאזל (סכום של שני שורשי יחידה אינו שורש יחידה) ולכן אין משמעות בדיבור על “חוג שורשי היחידה” (חוג הוא אוסף איברים בעל שתי פעולות, “כפל” ו”חיבור”, עם תכונות “נחמדות” שלא אפרט כאן). עם זאת, הכנסת החיבור למשחק מאפשרת לנו לדבר על שדות שמתקבלים על ידי הרחבת הרציונליים באמצעות הוספת שורשי יחידה. לשדות הללו קוראים <strong>שדות ציקלוטומיים</strong>, ואלו האובייקטים הקריטיים להמשך הדיון שלנו.</p>
+
+<p>ניקח אם כן את המספרים הרציונליים ונוסיף להם שורש יחידה פרימיטיבי מסדר <span>$latex n$</span>. קיבלנו את ההרחבה <span>$latex \mathbb{Q}(\zeta_n)/\mathbb{Q}$</span>. השאלה החשובה ביותר היא מהו מימד ההרחבה הזו, כפי שהגדרתי מימד של הרחבה כבר בעבר. התשובה המיידית, שנובעת מהתיאוריה הבסיסית של הרחבת שדות, היא שזוהי דרגת הפולינום המינימלי מעל הרציונליים שמאפס את שורש היחידה הזה. לכאורה קל לקפוץ ולהגיד שזהו הפולינום <span>$latex x^n-1$</span> ולכן מימד ההרחבה הוא <span>$latex n$</span>, אך זו טעות; הפולינום ההוא פריק ולכן אינו מינימלי. בפרט, פירוק בסיסי שלו הוא <span>$latex x^n-1=(x-1)(1+x+x^2+\dots+x^{n-1})$</span>. קל להיווכח בכך - אם נפתח את הסוגריים נקבל סכום שבו כל הזמן מוסיפים ומחסירים את אותו האיבר, פרט לאיבר הראשון (שאינו מחוסר) והאחרון (שאינו מוסף). לטור שכזה קוראים <strong>טור טלסקופי</strong>. הנוסחה החביבה הזו היא בעצם הבסיס לנוסחת הסכום של טור הנדסי - לדעתי הטור הטלסקופי הוא דרך מצויינת לזכור בה כדי שניתן יהיה לפתח אותה “מהראש” ולא על ידי חיפוש בספרים.</p>
+
+<p>מתברר שלא כל כך קל לכתוב במפורש בעזרת נוסחה את הפולינום המינימלי של שורש היחידה מסדר <span>$latex n$</span>. דרך הכתיבה הברורה ביותר שאני מכיר היא זו: <span>$latex \prod_{(n,k)=1}(x-\zeta_n^k)$</span>, כאשר הסימון <span>$latex (n,k)=1$</span> הוא סימון מקובל ל”המספר <span>$latex n$</span> זר למספר <span>$latex k$</span>” (למעשה, באופן כללי כותבים <span>$latex (n,k)=d$</span> כדי לתאר את “המחלק המשותף הגדול ביותר של <span>$latex n,k$</span> הוא <span>$latex d$</span>”). צורת הכתיבה הזו איננה מפורשת, שכן היא אינה אומרת כיצד נראים המקדמים של הפולינום, אלא מציגה אותו כשהוא “מפורק” למכפלת שורשיו. עם זאת, ניתן להוכיח על הפולינום שמקדמיו יהיו מספרים שלמים, ושהוא יהיה אי-פריק. ההוכחות אינן נוראיות אך הן טכניות ודורשת ידע נוסף בתורת החוגים, ולא אכנס אליהן כעת. השורה התחתונה היא החשובה - מכיוון שהפולינום הזה הוא מכפלת שורשי היחידה הפרימיטיביים, דרגתו הוא כמספרם, כלומר <span>$latex \varphi(n)$</span>. לכן מימד ההרחבה הציקלוטומית שמתקבלת מהוספת שורש יחידה מסדר <span>$latex n$</span> לרציונליים הוא <span>$latex \varphi(n)$</span>. חמושים בידע הזה אנחנו מסוגלים סוף סוף להתמודד עם שאלת המצולע המשוכלל, ולתת תשובה חד משמעית לשאלה מתי <strong>אי אפשר</strong> לבנות אותו; כדי להגיד מתי <strong>אפשר</strong> לבנות אותו אצטרך להתבסס על תחום עמוק יותר של הרחבת שדות בשם “תורת גלואה”, שראוי לזכות לפוסטים משל עצמו.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2009/02/13/roots_of_unity_group/';
+      this.page.identifier = 'http://gadial.net/2009/02/13/roots_of_unity_group/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2009/02/13/roots_of_unity_group/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

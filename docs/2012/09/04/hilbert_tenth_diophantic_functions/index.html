@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הבעיה העשירית של הילברט - פונקציות דיופנטיות וחיות אחרות (רקורסיביות) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הבעיה העשירית של הילברט - פונקציות דיופנטיות וחיות אחרות (רקורסיביות)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אנו ממשיכים בדרך שלנו אל ההוכחה שלא קיים אלגוריתם שפותר את הבעיה העשירית של הילברט. אני מניח שקראתם את פוסט המבוא ולכן קופץ ישר לעניינים הפעם. המושג המרכזי בפוסט הקודם היה קבוצה דיופנטית. זוהי קבוצה $latex S=\left\{ \left(a_{1},\dots,a_{n}\right)\right\} $ של $latex n$-יות של מספרים טבעיים חיוביים, כך שקיים פולינום $latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$ בעל התכונה הבאה: למשוואה הדיופנטית $latex q\left(y_{1},\dots,y_{m}\right)=0$, עבור $latex q\left(y_{1},\dots,y_{m}\right)=p\left(a_{1},\dots,a_{n},y_{1},\dots,y_{m}\right)$ יש פתרון בשלמים חיוביים אם ורק אם $latex \left(a_{1},\dots,a_{n}\right)\in S$. אפשר גם לעשות ההפך - להתחיל מפולינום $latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$ ולסמן קבוצה $latex S_{p}$ שכוללת את כל ה-$latex n$-יות שכאשר מציבים אותם במקום ה-$latex x$-ים, מקבלים משוואה דיופנטית עם פתרון בשלמים חיוביים." />
+<meta property="og:description" content="אנו ממשיכים בדרך שלנו אל ההוכחה שלא קיים אלגוריתם שפותר את הבעיה העשירית של הילברט. אני מניח שקראתם את פוסט המבוא ולכן קופץ ישר לעניינים הפעם. המושג המרכזי בפוסט הקודם היה קבוצה דיופנטית. זוהי קבוצה $latex S=\left\{ \left(a_{1},\dots,a_{n}\right)\right\} $ של $latex n$-יות של מספרים טבעיים חיוביים, כך שקיים פולינום $latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$ בעל התכונה הבאה: למשוואה הדיופנטית $latex q\left(y_{1},\dots,y_{m}\right)=0$, עבור $latex q\left(y_{1},\dots,y_{m}\right)=p\left(a_{1},\dots,a_{n},y_{1},\dots,y_{m}\right)$ יש פתרון בשלמים חיוביים אם ורק אם $latex \left(a_{1},\dots,a_{n}\right)\in S$. אפשר גם לעשות ההפך - להתחיל מפולינום $latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$ ולסמן קבוצה $latex S_{p}$ שכוללת את כל ה-$latex n$-יות שכאשר מציבים אותם במקום ה-$latex x$-ים, מקבלים משוואה דיופנטית עם פתרון בשלמים חיוביים." />
+<link rel="canonical" href="http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/" />
+<meta property="og:url" content="http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-09-04T14:31:10+03:00" />
+<script type="application/ld+json">
+{"headline":"הבעיה העשירית של הילברט - פונקציות דיופנטיות וחיות אחרות (רקורסיביות)","dateModified":"2012-09-04T14:31:10+03:00","datePublished":"2012-09-04T14:31:10+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/"},"url":"http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/","description":"אנו ממשיכים בדרך שלנו אל ההוכחה שלא קיים אלגוריתם שפותר את הבעיה העשירית של הילברט. אני מניח שקראתם את פוסט המבוא ולכן קופץ ישר לעניינים הפעם. המושג המרכזי בפוסט הקודם היה קבוצה דיופנטית. זוהי קבוצה $latex S=\\left\\{ \\left(a_{1},\\dots,a_{n}\\right)\\right\\} $ של $latex n$-יות של מספרים טבעיים חיוביים, כך שקיים פולינום $latex p\\left(x_{1},\\dots,x_{n},y_{1},\\dots,y_{m}\\right)$ בעל התכונה הבאה: למשוואה הדיופנטית $latex q\\left(y_{1},\\dots,y_{m}\\right)=0$, עבור $latex q\\left(y_{1},\\dots,y_{m}\\right)=p\\left(a_{1},\\dots,a_{n},y_{1},\\dots,y_{m}\\right)$ יש פתרון בשלמים חיוביים אם ורק אם $latex \\left(a_{1},\\dots,a_{n}\\right)\\in S$. אפשר גם לעשות ההפך - להתחיל מפולינום $latex p\\left(x_{1},\\dots,x_{n},y_{1},\\dots,y_{m}\\right)$ ולסמן קבוצה $latex S_{p}$ שכוללת את כל ה-$latex n$-יות שכאשר מציבים אותם במקום ה-$latex x$-ים, מקבלים משוואה דיופנטית עם פתרון בשלמים חיוביים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הבעיה העשירית של הילברט - פונקציות דיופנטיות וחיות אחרות (רקורסיביות)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-09-04T14:31:10+03:00" itemprop="datePublished">Sep 4, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אנו ממשיכים בדרך שלנו אל ההוכחה שלא קיים אלגוריתם שפותר את הבעיה העשירית של הילברט. אני מניח שקראתם את <a href="http://www.gadial.net/2012/08/27/hilbert_tenth_intro/">פוסט המבוא</a> ולכן קופץ ישר לעניינים הפעם. המושג המרכזי בפוסט הקודם היה <strong>קבוצה דיופנטית</strong>. זוהי קבוצה <span>$latex S=\left\{ \left(a_{1},\dots,a_{n}\right)\right\} $</span> של <span>$latex n$</span>-יות של מספרים טבעיים חיוביים, כך שקיים פולינום <span>$latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$</span> בעל התכונה הבאה: למשוואה הדיופנטית <span>$latex q\left(y_{1},\dots,y_{m}\right)=0$</span>, עבור <span>$latex q\left(y_{1},\dots,y_{m}\right)=p\left(a_{1},\dots,a_{n},y_{1},\dots,y_{m}\right)$</span> יש פתרון בשלמים חיוביים אם ורק אם <span>$latex \left(a_{1},\dots,a_{n}\right)\in S$</span>. אפשר גם לעשות ההפך - להתחיל מפולינום <span>$latex p\left(x_{1},\dots,x_{n},y_{1},\dots,y_{m}\right)$</span> ולסמן קבוצה <span>$latex S_{p}$</span> שכוללת את כל ה-<span>$latex n$</span>-יות שכאשר מציבים אותם במקום ה-<span>$latex x$</span>-ים, מקבלים משוואה דיופנטית עם פתרון בשלמים חיוביים.</p>
+
+<p>אם לא הבנתם כלום ממה שכתבתי כרגע, נסו לקרוא שוב את המבוא.</p>
+
+<p>בפוסט הקודם ראינו שאפשר להגדיר יחסים מוכרים באופן הזה, למשל את יחס החלוקה (שהוא קבוצת הזוגות <span>$latex \left(a,b\right)$</span> כך ש-<span>$latex a|b$</span>, כלומר <span>$latex a$</span> מחלק את <span>$latex b$</span>, כלומר קיים <span>$latex c$</span> שלם כך ש-<span>$latex b=ac$</span>). בואו נראה לצורך החימום עוד דוגמה - היחס “קטן-שווה”, הידוע גם כ-<span>$latex a\le b$</span>. נגדיר אותו באופן הבא:</p>
+
+<p><span>$latex x\le y\iff\exists z\left(x+z-1=y\right)$</span></p>
+
+<p>רגע, מה? מה הולך כאן? מה אלו הסימונים הללו? אני עובר לשיטה שבה מרטין דיוויס משתמש במאמר שלו כי היא אלגנטית וקצרה יותר. כאן הפולינום שלי הוא <span>$latex p\left(x,y,z\right)=x+z-1-y$</span>, והמשתנים שבהם צריך להציב ערכים הם <span>$latex x,y$</span> ואז לראות אם למשוואה הדיופנטית שנותרה לנו, שיש בה רק את המשתנה <span>$latex z$</span>, יש פתרון. די ברור בסימון של דיוויס מי המשתנים ששייכים לקבוצה הראשונה (אלו שבאגף שמאל של החצים) ומי המשתנים שבקבוצה השניה (אלו שיש סימן <span>$latex \exists$</span> - “קיים” לפניהם) והיכן הפולינום עצמו (מה שבסוגריים, עד כדי העברת אגפים אם יש צורך). אז אני מקווה שאנחנו מיודדים עם הסימון הזה כעת וגם מבינים למה הפולינום שלעיל אכן מגדיר את <span>$latex x\le y$</span>.</p>
+
+<p>עכשיו, תרגיל - מה השתנה כאן?</p>
+
+<p><span>$latex x&lt;y\iff\exists z\left(x+z=y\right)$</span></p>
+
+<p>ולמה?</p>
+
+<p>עכשיו בואו נעבור למשהו קצת יותר מתוחכם. ראינו כבר שיש פולינום <span>$latex p_{1}$</span> שמגדיר את הקבוצה <span>$latex S_{p_{1}}=\left\{ \left(a,b\right)\ |\ a|b\right\} $</span>. ראינו גם שיש פולינום <span>$latex p_{2}$</span> שמגדיר את הקבוצה <span>$latex S_{p_{2}}=\left\{ \left(a,b\right)\ |\ a\le b\right\} $</span>. האם יש פולינום שמגדיר את הקבוצה <span>$latex S=\left\{ \left(a,b\right)\ |\ a\le b\wedge a|b\right\} $</span> (<span>$latex \wedge$</span> הוא הסימן של “וגם”; ו-<span>$latex \vee$</span> הוא הסימן של “או”), כלומר הקבוצה <span>$latex S_{p_{1}}\cap S_{p_{2}}$</span>? התשובה חיובית: הפולינום <span>$latex p_{1}^{2}+p_{2}^{2}$</span>. למה? כי אחרי הצבת ערכים בו, נשאר עם משוואה דיופנטית שהדרך היחידה שלה להתאפס היא שגם <span>$latex p_{1}^{2}$</span> יתאפס וגם <span>$latex p_{2}^{2}$</span> יתאפס (כי אם אחד מהם לא מתאפס, אז אחרי העלאה בריבוע הוא חיובי ולכן הסכום יהיה גדול מאפס). את העניין הזה אפשר כמובן להכליל לחיתוך על מספר סופי כלשהו של נחתכים. המסקנה: מחלקת הקבוצות הדיופנטיות סגורה לחיתוכים סופיים. ומה עם איחודים סופיים? גם אותם אפשר לקבל. הקבוצה <span>$latex S_{p_{1}}\cup S_{p_{2}}$</span> מוגדרת על ידי הפולינום <span>$latex p_{1}p_{2}$</span> - הוכיחו זאת לעצמכם.</p>
+
+<p>אם אנחנו כבר עוסקים במשפטים “כלליים” על קבוצות דיופנטיות, הנה משפט מעניין במיוחד: קבוצה <span>$latex S$</span> של טבעיים חיוביים היא דיופנטית אם ורק אם קיים פולינום <span>$latex p$</span> כך ש-<span>$latex S$</span> היא בדיוק קבוצת הערכים <strong>החיוביים</strong> ש-<span>$latex p$</span> מחזיר (לכל קלט שהוא).</p>
+
+<p>זה משפט מעניין למדי כי הוא מוציא מהתמונה לגמרי את עניין ה”בדוק אם משוואה דיופנטית כלשהי היא פתירה”. כמובן שזה לא עושה את החיים קלים במיוחד - קודם, כדי לברר אם איבר כלשהו שייך לקבוצה, היה צריך להציב אותו בפולינום שהגדיר את הקבוצה ולקוות שאפשר יהיה להבין אם המשוואה הדיופנטית שנקבל היא פתירה או לא; עכשיו בכלל לא ברור מה אפשר לעשות חוץ מלהציב ערכים ב-<span>$latex p$</span> ולהתפלל שהאיבר שלנו יצוץ מתישהו או שנבין למה הוא לא יכול לצוץ אף פעם.</p>
+
+<p>איך מוכיחים את המשפט? זה תרגיל נחמד. קחו רגע לחשוב עליו לפני שאתם קוראים את ההוכחה.</p>
+
+<p>נתחיל מהכיוון הקל. נניח שיש לנו קבוצה <span>$latex S$</span> שמוגדרת על ידי <span>$latex p\left(y_{1},\dots,y_{n}\right)$</span> בדרך ה”חדשה” שתיארתי - <span>$latex S$</span> היא קבוצת הערכים החיוביים ש-<span>$latex p$</span> יכול להחזיר. אנחנו רוצים למצוא פולינום <span>$latex q$</span> כך ש-<span>$latex S=S_{q}$</span>, כאשר <span>$latex S_{q}$</span> מוגדרת בשיטה הישנה (ערכים שאחרי שמציבים אותם ב-<span>$latex q$</span> מקבלים משוואה דיופנטית פתירה). מה נגדיר? פשוט מאוד: <span>$latex q\left(x,y_{1},\dots,y_{n}\right)=x-p\left(y_{1},\dots,y_{n}\right)$</span>. ברור שכאשר <span>$latex a\in S$</span> אז <span>$latex q\left(a,y_{1},\dots,y_{m}\right)$</span>, שמגדיר את המשוואה <span>$latex a=p\left(y_{1},\dots,y_{n}\right)$</span> יהיה פתיר; וכמובן שאם <span>$latex a=p\left(y_{1},\dots,y_{n}\right)$</span> פתירה אז <span>$latex a\in S$</span>, ממש על פי הגדרה.</p>
+
+<p>האתגר הוא הכיוון השני. נניח ש-<span>$latex S_{q}$</span> מוגדרת על ידי <span>$latex q$</span> בצורה ה”ישנה”; איך נמצא פולינום <span>$latex p$</span> שמגדיר אותה בצורה ה”חדשה”? ובכן, נניח ש-<span>$latex a\in S$</span>. אז <span>$latex q\left(a,y_{1},\dots,y_{m}\right)$</span> פתיר - אפשר לקבל ממנו אפס. לכן <span>$latex p\left(y_{1},\dots,y_{m}\right)=a-q\left(a,y_{1},\dots,y_{m}\right)$</span> הולך להחזיר <span>$latex a$</span> כאשר מציבים בו בדיוק את הערכים של ה-<span>$latex y$</span>-ים שמאפסים את <span>$latex q\left(a,y_{1},\dots,y_{m}\right)$</span>. אבל זה לא מספיק טוב, כי עבור ערכים שונים של ה-<span>$latex y$</span>-ים <span>$latex q$</span> לא בהכרח יתאפס ואז <span>$latex a-q\left(a,y_{1},\dots,y_{m}\right)$</span> יהיה מספר לא קשור. רק מה, צריך לזכור שמותר ל-<span>$latex p$</span> להחזיר מספרים לא קשורים, בתנאי שהם <strong>שליליים</strong> (או אפס) אז בואו נוודא שנחזיר מספר שלילי, פשוט על ידי כוח גס: <span>$latex p\left(y_{1},\dots,y_{m}\right)=a\left(1-q^{2}\left(a,y_{1},\dots,y_{m}\right)\right)$</span>. הבהירו לעצמכם למה הפולינום הזה עושה את העבודה.</p>
+
+<p>אבל רגע, עוד לא סיימנו! הפולינום שלנו עושה את העבודה עבור ערך ספציפי של <span>$latex a$</span>, ואנחנו רוצים שהוא יעבוד לכל <span>$latex a$</span>. זו לא בעיה, כמובן: הפולינום ה”נכון” הוא <span>$latex p\left(x,y_{1},\dots,y_{m}\right)=x\left(1-q^{2}\left(x,y_{1},\dots,y_{m}\right)\right)$</span>, ועכשיו באמת סיימנו את הוכחת המשפט.</p>
+
+<p>בואו נקפוץ לרגע לתוצאה שנובעת מהמשפט הזה, ומהטענה הכללית בהרבה (שהיא היעד הסופי שלנו בסדרת הפוסטים הזו) לפיה כל קבוצה הניתנת למניה רקורסיבית היא דיופנטית; בפרט הדבר נכון לקבוצת הראשוניים (כי יש אלגוריתם שבודק אם מספר הוא ראשוני או לא). לכן קיים פולינום <span>$latex p$</span>, כך שכאשר מציבים בו מספרים שלמים, הערכים החיוביים שמתקבלים הם <strong>בדיוק</strong> כל המספרים הראשוניים! התוצאה הזו היא הדבר הכי קרוב שאני מכיר ל”נוסחה עבור הראשוניים”. יש אפילו בניות קונסטרוקטיביות של פולינום <span>$latex p$</span> כזה (שנראות די מפלצתיות ולא אציג כאן). עדיין, קשה להגיד שזו תוצאה שימושית במיוחד בגלל האופן האקראי משהו שבו מקבלים ראשוניים מתוך הנוסחה הזו - מציבים ערכים ב-<span>$latex p$</span> ומתפללים שיצא משהו חיובי. אף אחד לא ערב לכך שזה יקרה רוב הזמן, ושהראשוני שנמצא יהיה מעניין (כלומר, מתאים לאי-אלו קריטריונים שיש לנו). כמובן, “ראשוניים” כאן זה סתם בגלל שהראשוניים הם אחת מהקבוצות הפופולריות ביותר של מספרים טבעיים, אם לא הפופולרית מכולן.</p>
+
+<p>הבנו קבוצות דיופנטיות? יפה. אז בואו נעבור לסוג מיוחד של קבוצה - פונקציה. פונקציה היא יחס - קבוצה של איברים מהצורה <span>$latex \left(x_{1},\dots,x_{n},y\right)$</span> - עם התכונה המיוחדת שלכל <span>$latex x_{1},\dots,x_{n}$</span> <strong>קיים</strong> <span>$latex y$</span> כך ש-<span>$latex \left(x_{1},\dots,x_{n},y\right)$</span> שייך לקבוצה, ואותו <span>$latex y$</span> הוא יחיד. חשבו על <span>$latex \left(x_{1},\dots,x_{n}\right)$</span> בתור “קלט” ועל <span>$latex y$</span> בתור “פלט” של הפונקציה. לרוב מסמנים פונקציה ב-<span>$latex f$</span>, ואז במקום לומר ש-<span>$latex \left(x_{1},\dots,x_{n},y\right)$</span> שייך לפונקציה, כותבים <span>$latex f\left(x_{1},\dots,x_{n}\right)=y$</span>. רובכם בוודאי יודעים את זה (אבל זכרו שלא כל מי שמכיר פונקציות גם מכיר את הגדרתן הפורמלית, התורת-קבוצתית).</p>
+
+<p>ובכן, פונקציה היא דיופנטית אם כשהיא שמה עליה את הכובע של “קבוצה”, היא קבוצה דיופנטית. <strong>שימו לב מה זה לא אומר</strong>! זה לא אומר שפונקציה דיופנטית היא בהכרח פולינום! לא, לא לא! למעשה, הדבר החשוב ביותר שנעשה בכל סדרת הפוסטים הזו יהיה להוכיח שהפונקציה האקספוננציאלית היא דיופנטית.</p>
+
+<p>עכשיו אפשר לעצור לרגע ולראות את היעד הסופי שלנו. המטרה שלנו היא להוכיח שקבוצות דיופנטיות וקבוצות הניתנות למניה רקורסיבית הן אותו דבר. כדי לעשות את זה, אני צריך לתת הגדרה פורמלית ל”קבוצות הניתנות למניה רקורסיבית”. ההגדרה הסטנדרטית היא באמצעות מכונות טיורינג, אבל לצורך שלנו הרבה יותר נוח יהיה להשתמש במודל חישובי אחר, כזה שהוא הרבה יותר דומה באופיו לפונקציות הדיופנטיות מלכתחילה - <strong>פונקציות רקורסיביות</strong>. התוצאה שאני חותר אליה היא שפונקציה היא רקורסיבית אם ורק אם היא דיופנטית; ראשית כל עלינו להבין, אם כן, מהי פונקציה רקורסיבית. נתחיל עם מה שלא: זו <strong>לא</strong> פונקציה ש”קוראת לעצמה”! המילה “רקורסיה” כאן קיימת מסיבות היסטוריות (ובקרוב נבין את המוטיבציה לה), אבל שם הרבה יותר מתאים לפונקציות רקורסיביות הוא פשוט “פונקציות ניתנות לחישוב”.</p>
+
+<p>מאיפה צצו הפונקציות הרקורסיביות? שאלה טובה. הן מופיעות במאמר המפורסם של קורט גדל שבו הוא הוכיח את משפטי אי השלמות שלו, וכבר הזכרתי אותן <a href="http://www.gadial.net/2009/05/10/godel_incompleteness_proof_sketch/">בפוסט שעסק בהוכחה</a> ולמיטב הבנתי גדל הוא זה שהמציא את הניסוח הזה שלהן, אבל אולי אני טועה. עם זאת, מה שהופיע במאמר של גדל לא היה שלם - היה חסר כלל אחד שהופיע רק מאוחר יותר, ואפרט על כך עוד מעט.</p>
+
+<p>הפונקציות הרקורסיביות מוגדרות על ידי אוסף של פונקציות <strong>בסיס</strong> פשוטות ביותר, ש”ברור” לנו שאפשר לחשב אותן, ועוד כמה <strong>פעולות יצירה</strong> שמאפשרות ליצור פונקציות חדשות על בסיס פונקציות קיימות, וגם אותן “ברור” לנו שניתן לחשב. מה פשר ה”ברור” הזה? בימינו, זה אומר שאפשר לכתוב תוכנית מחשב שמבצעת את החישובים הללו. זה מראה שמחשבים מודרניים חזקים <strong>לפחות</strong> כמו פונקציות רקורסיביות - כל פונקציה רקורסיבית היא ניתנת לחישוב בידי מחשב מודרני. מצד שני, וזה הרבה יותר מפתיע, גם כל פונקציה שמחשב מודרני יכול לחשב היא רקורסיבית. כדי להוכיח את זה צריך לעבוד לא מעט ואני לא הולך לעשות זאת כאן (אבל יום אחד אני מקווה לעשות את זה).</p>
+
+<p>כל הפונקציות הרקורסיביות הן פונקציות מהטבעיים החיוביים לטבעיים החיוביים; לכאורה זה קצת מגביל אותנו כי הרי מחשב יכול להתעסק גם במספרים שליליים ובדברים שהם בכלל לא מספרים, אבל מכיוון שהכל ניתן לקידוד בתור מספר טבעי חיובי (כל מידע שמיוצג במחשב, לא <strong>כל </strong>דבר בעולם!) זה לא באמת מפריע לנו.</p>
+
+<p>הפונקציות הרקורסיביות הבסיסיות הן:</p>
+<ol>
+	<li>הפונקציה הקבועה <span>$latex c\left(x\right)=1$</span>.</li>
+	<li>פונקציית העוקב <span>$latex s\left(x\right)=x+1$</span></li>
+	<li>פונקצית ההטלה, <span>$latex U_{i}^{n}\left(x_{1},\dots,x_{n}\right)=x_{i}$</span> (המוגדרת לכל <span>$latex n,i$</span>).</li>
+</ol>
+<p>טוב, עבור פונקציות הבסיס הללו לא קשה לראות שהן דיופנטיות. הפונקציה הראשונה מוגדרת על ידי:</p>
+
+<p><span>$latex y=c\left(x\right)\iff\left(y=1\right)$</span></p>
+
+<p>השניה מוגדרת על ידי:</p>
+
+<p><span>$latex y=s\left(x\right)\iff\left(y=x+1\right)$</span></p>
+
+<p>והשלישית מוגדרת על ידי:</p>
+
+<p><span>$latex y=U_{i}^{n}\left(x_{1},\dots,x_{n}\right)\iff\left(y=x_{i}\right)$</span></p>
+
+<p>טוב, זה היה מטופש למדי. איפה האתגר? בהמשך.</p>
+
+<p>הפעולה הראשונה שממנה בונים פונקציות רקורסיביות חדשות מתוך הקיימות היא <strong>הרכבה</strong>. היא מוגדרת כך: אם <span>$latex g_{1},\dots,g_{m}$</span> הן פונקציות רקורסיביות על המשתנים <span>$latex x_{1},\dots,x_{n}$</span> ואילו <span>$latex f$</span> היא פונקציה רקורסיבית על <span>$latex m$</span> משתנים, אז הפונקציה <span>$latex h\left(x_{1},\dots,x_{n}\right)=f\left(g_{1}\left(x_{1},\dots,x_{n}\right),\dots,g_{m}\left(x_{1},\dots,x_{n}\right)\right)$</span> גם היא רקורסיבית. מה שאנחנו רוצים להראות הוא שאותו הדבר קורה עם פונקציות דיופנטיות, כלומר שאם <span>$latex g_{1},\dots,g_{m},f$</span> כולן דיופנטיות, כך גם <span>$latex h$</span>.</p>
+
+<p>למרבה המזל, את זה קל להראות כבר עם מעט התכונות שראינו של פונקציות דיופנטיות:</p>
+
+<p><span>$latex y=h\left(x_{1},\dots,x_{n}\right)\iff\exists t_{1},\dots,t_{m}\left(y=f\left(t_{1},\dots,t_{m}\right)\wedge t_{1}=g_{1}\left(x_{1},\dots,x_{n}\right)\wedge\dots\wedge t_{m}=g_{m}\left(x_{1},\dots,x_{n}\right)\right)$</span></p>
+
+<p>מה בעצם עשינו כאן? אגף ימין מגדיר פולינום גדול, שמקבל בתור משתנים את <span>$latex x_{1},\dots,x_{n}$</span> וגם את המשתנים <span>$latex t_{1},\dots,t_{m}$</span>. עכשיו הוא לוקח את הפולינום שמגדיר את <span>$latex f$</span> (כשהמשתנים בו מתאימים ל-<span>$latex t_{1},\dots,t_{m}$</span> ו-<span>$latex y$</span>), את הפולינום שמגדיר את <span>$latex g_{1}$</span> (כשהמשתנים בו מתאימים ל-<span>$latex x_{1},\dots,x_{n}$</span> ו-<span>$latex t_{1}$</span>), את הפולינום שמגדיר את <span>$latex g_{2}$</span> (כבר הבנתם…?) וכן הלאה עד <span>$latex g_{m}$</span>, ואז מחבר את הריבועים של כולם (זו מהות ה-<span>$latex \wedge$</span> שעושים על כולם).</p>
+
+<p>כן, זה כבר לא מובן מאליו, וזה יסתבך בהמשך. לכן כדאי לנקוט גישה קצת יותר כללית לעניין הזה. אפשר לגייס כאן את הלוגיקה המתמטית לעזרתנו; הרי מה שעשינו לעיל הוא פשוט לכתוב פסוק מסויים ב<a href="http://www.gadial.net/2012/06/17/first_order_logic/">לוגיקה מסדר ראשון</a> שאיכשהו מובטח לנו שהוא מגדיר פונקציה דיופנטית. הפסוק הזה הכיל סימנים לפונקציות דיופנטיות, את סימן השוויון, את סימן ה”וגם” ואת סימן ה”קיים”. האם אפשר להשתמש בעוד דברים? כן, וחיזוק ה”שפה” שלנו הוא היעד הטכני המרכזי שלנו. ארחיב על כל זה בצורה מסודרת כשהזמן יגיע.</p>
+
+<p>לבינתיים, הבה ונראה את הפעולה השניה שמשמשת לבנית פונקציות רקורסיביות: <strong>רקורסיה פרימיטיבית</strong>. מכאן הגיע השם “רקורסיבי” לפונקציות הללו (כי אצל גדל זו הייתה פעולת הבניה החשובה באמת, שנתנה למחלקת הפונקציות הזו את המורכבות שלה). זו לא פעולה קלה לעיכול מבחינה פורמלית, אבל הרעיון הבסיסי פשוט: אנחנו מגדירים פונקציה באמצעות ערכים קטנים יותר שלה. זה הכל.</p>
+
+<p>רקורסיה פרימיטיבית מוגדרת כך: בהינתן פונקציה רקורסיבית <span>$latex f$</span> על <span>$latex n$</span> משתנים (“תנאי ההתחלה”), ופונקציה רקורסיבית <span>$latex g$</span> על <span>$latex n+2$</span> משתנים (“צעד הרקורסיה”), אנחנו מגדירים פונקציה חדשה, <span>$latex h$</span>, על <span>$latex n+1$</span> משתנים (שעליהם כדאי לחשוב כך: <span>$latex n$</span> המשתנים הראשונים הם “פרמטרים” קבועים ואילו המשתנה האחרון הוא מה שעליו מוגדרת הרקורסיה), באופן הבא:</p>
+
+<p><span>$latex h\left(x_{1},\dots,x_{n},1\right)=f\left(x_{1},\dots,x_{n}\right)$</span></p>
+
+<p><span>$latex h\left(x_{1},\dots,x_{n},t+1\right)=g\left(t,h\left(x_{1},\dots,x_{n},t\right),x_{1},\dots,x_{n}\right)$</span></p>
+
+<p>מה קורה כאן? הערך של <span>$latex h$</span> ב”התחלה”, כשהמשתנה האחרון הוא 1, נקבע על ידי הפרמטרים ופונקצית תנאי ההתחלה. בהמשך, הערך של <span>$latex h$</span> עבור ערך כלשהו של המשתנה האחרון נקבע על ידי <span>$latex g$</span>, כשהיא מביאה בחשבון את הערך הקודם של המשתנה האחרון, הערך ש-<span>$latex h$</span> החזירה על הערך הקודם הזה, והפרמטרים. זה נראה קצת מפחיד אבל זה לא באמת נורא.</p>
+
+<p>איך מראים שהפעולה הזו משמרת דיופנטיות? או, זה כבר קצת מסובך. למרבה המזל, אפשר לשאוב השראה מקורט גדל עצמו; במאמר שלו הוא הוכיח שאפשר להגדיר את הפעולה הזו בשפה מסדר ראשון מסויימת; למרות שהשפה שלנו היא קצת שונה, אפשר יהיה לשאוב השראה ורעיונות מהטכניקות שלו. את זה נעשה בפוסט המשך; לעת עתה בואו נחשוב על נסיון נאיבי ואיך הוא נכשל:</p>
+
+<p><span>$latex y=h\left(x_{1},\dots,x_{n},z\right)\iff\exists t_{1},t_{2},\dots,t_{z}(t_{1}=f\left(x_{1},\dots,x_{n}\right)\wedge$</span></p>
+
+<p><span>$latex \wedge t_{2}=g\left(1,t_{1},x_{1},\dots,x_{n}\right)\wedge t_{3}=g\left(2,t_{2},x_{1},\dots,x_{n}\right)\wedge\dots$</span></p>
+
+<p><span>$latex \wedge t_{z}=g\left(z-1,t_{z-1},x_{1},\dots,x_{n}\right)\wedge y=t_{z})$</span></p>
+
+<p>מה הולך כאן? אנחנו אומרים ש-<span>$latex y=h\left(x_{1},\dots,x_{n},z\right)$</span> רק אם קיימת <strong>סדרה</strong> <span>$latex t_{1},\dots,t_{z}$</span> שהאיבר הראשון בה הוא <span>$latex f\left(x_{1},\dots,x_{n}\right)$</span> - הערך ההתחלתי הנכון, בהינתן הפרמטרים - וכל איבר בה נובע מקודמו על ידי <span>$latex g$</span>, וכמו כן האיבר האחרון הוא <span>$latex y$</span>. מבחינה רעיונית הכל נכון; הבעיה היא סינטקטית - הפסוק שכתבתי כאן לא מתאים ל”שפה” שהצגתי עד כה, מה שאומר שעל פניו לא ברור אם אפשר איכשהו לתרגם אותו חזרה לפולינום שמגדיר פונקציה דיופנטית. בעיה מהותית אחת היא שאורך הפסוק <strong>אינו קבוע</strong>! הוא תלוי ב-<span>$latex z$</span>, כי ככל ש-<span>$latex z$</span> יותר גדול, יש יותר משתנים <span>$latex t_{1},\dots,t_{z}$</span>. אם עבור ערכים שונים של <span>$latex z$</span> יש פסוקים שונים, זה אומר שגם יהיו פולינומים שונים, אבל אנחנו צריכים פולינום יחיד שמטפל <strong>בכל</strong> <span>$latex z$</span>. לכן הבניה הזו לא מוצלחת ונזדקק לפיתוח של כלי טכני חדש - פונקציה דיופנטית שמסוגלת לקודד סדרות שרירותיות - על מנת להציע בניה טובה יותר, וגם זה לא יספיק לנו. אבל על כך נדבר בהמשך.</p>
+
+<p>בואו נסיים את הצגת הפונקציות הרקורסיביות עם פעולת היצירה האחרונה. הפעולה הזו לא הופיעה במאמר של גדל; גדל לא נזקק לה לצורך משפטי אי השלמות. הצורך בה צץ רק כאשר החלו לחשוב על הפונקציות הרקורסיביות כמתארות את “כל מה שניתן לחשב”, שכן קיימות פונקציות שבבירור ניתן לחשב אותן (כלומר, קיים אלגוריתם שעושה זאת) אבל הן אינן ניתנות לייצור באמצעות כללי היצירה שהראיתי עד כה. בעתיד אני מקווה להראות את הדוגמה הקלאסית ביותר - <strong>פונקציית אקרמן</strong>, שגדלה “מהר מדי” מכדי שתהיה ניתנת לתיאור באמצעות כללי היצירה הנוכחיים.</p>
+
+<p>אם כן, פונקציות שניתנות ליצירה באמצעות כללי היצירה הנוכחיים מתוך פונקציות הבסיס נקראות <strong>פונקציות פרימיטיביות רקורסיביות</strong>, וקיימות פונקציות ניתנות לחישוב שאינן פרימיטיביות רקורסיביות. הכלל שפותר את הבעיה הזו הוא כלל שמאפשר לבצע “חיפוש בלתי חסום”: אם נתונות פונקציות רקורסיביות <span>$latex f,g$</span> על <span>$latex n+1$</span> משתנים, אז מוגדרת באמצעותן פונקציה רקורסיבית <span>$latex h$</span> על <span>$latex n$</span> משתנים באופן הבא:</p>
+
+<p><span>$latex h\left(x_{1},\dots,x_{n}\right)=\min_{y}\left(f\left(x_{1},\dots,x_{n},y\right)=g\left(x_{1},\dots,x_{n},y\right)\right)$</span></p>
+
+<p>כמקודם, חשבו על <span>$latex x_{1},\dots,x_{n}$</span> בתור “פרמטרים”. אחרי שקבענו אותם, אנחנו יכולים לחפש את ה-<span>$latex y$</span> המינימלי שעבורו <span>$latex f$</span> תהיה שווה ל-<span>$latex g$</span>, וזה הערך ש-<span>$latex h$</span> תחזיר על אותם פרמטרים. אלא שכאן מייד צצה השאלה הפשוטה - מה קורה אם בכלל לא קיים <span>$latex y$</span> כזה? התשובה היא שבמקרה זה <span>$latex h$</span> תהיה <strong>לא מוגדרת</strong> על הקלט. מרגע שהכנסו את הכלל החדש הזה, שנקרא <strong>כלל המינימיזציה</strong> לתמונה, גרמנו לכך שקבוצת הפונקציות הרקורסיביות תכלול גם פונקציות <strong>חלקיות</strong>, כאלו שלא מוגדרות לכל הקלטים (ולמעשה, אפילו הפונקציה שאינה מוגדרת לאף קלט היא רקורסיבית; פשוט קחו את <span>$latex f$</span> להיות הפונקציה שמחזירה תמיד 1 ואת <span>$latex g$</span> להיות הפונקציה שמחזירה תמיד 2). מה שמעניין כאן הוא שפונקציית אקרמן שהזכרתי לעיל כן מוגדרת לכל קלט, כלומר כלל המינימיזציה הכרחי כדי שנוכל “לתפוס” את כל הפונקציות הניתנות לחישוב שמוגדרות לכל קלט; זה לא שהוספנו אותו רק כדי להיות מסוגלים לטפל בפונקציות חלקיות.</p>
+
+<p>טוב, אז הבנו בערך מה זה הכלל הזה; איך אפשר להראות שאם <span>$latex f,g$</span> דיופנטיות, כך גם <span>$latex h$</span>?</p>
+
+<p>שוב, מבחינה רעיונית הפסוק שמגדיר את התכונה הזו אינו מסובך:</p>
+
+<p><span>$latex y=h\left(x_{1},\dots,x_{n}\right)\iff f\left(x_{1},\dots,x_{n},y\right)=g\left(x_{1},\dots,x_{n},y\right)\wedge$</span></p>
+
+<p><span>$latex \wedge\forall t\left(t&lt;y\to f\left(x_{1},\dots,x_{n},y\right)\ne g\left(x_{1},\dots,x_{n},y\right)\right)$</span></p>
+
+<p>אבל שימו לב לשימוש ב-<span>$latex \forall$</span> (“לכל”) כאן. אני כבר יכול לומר ש<strong>אין שום סיכוי</strong> שבשפה שלנו נוכל להשתמש ב-<span>$latex \forall$</span> בצורה חופשית ועדיין לקוות שאפשר יהיה לתרגם את הסיפור חזרה לפונקציה דיופנטית. מה שכן נוכל לעשות - וזה לב ליבה של המטרה הטכנית שלנו - הוא להשתמש ב-<span>$latex \forall$</span> <strong>חסום</strong>, כלומר במקום לומר “לכל <span>$latex t$</span>”, לומר “לכל <span>$latex t$</span> שקטן מ-<span>$latex y$</span>”, שזה בדיוק מה שאנחנו צריכים כאן, בעצם.</p>
+
+<p>אם כן, עכשיו היעדים הטכניים שלנו קצת יותר ברורים. יש לנו שתי פעולות יצירה שאנחנו רוצים להוכיח שמשמרות דיופנטיות של פונקציות. האופן הטכני שבו נעשה זאת הוא להגדיר שפה מסדר ראשון מסויימת, שבה מותר להשתמש בקבוצה מאוד מוגדרת ומדויקת של סימנים, כך שכל פונקציה שמוגדרת באמצעות השפה הזו היא אוטומטית דיופנטית. כדי שהשפה הזו תהיה חזקה אנחנו מוסיפים לה שני כלי עבודה מרכזיים - האחד הוא פונקציה לקידוד סדרות סופיות, והשני הוא כמת “לכל” חסום. בשביל לטפל בפונקציה לקידוד סדרות סופיות יש להשתמש במשפט מתמטי נפוץ שחביב עלי מאוד - <strong>משפט השאריות הסיני</strong>, ולכן אקדיש לו את הפוסט הבא.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/';
+      this.page.identifier = 'http://gadial.net/2012/09/04/hilbert_tenth_diophantic_functions/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2012/09/04/hilbert_tenth_diophantic_functions/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

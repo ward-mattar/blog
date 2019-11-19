@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Complexity theory | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Complexity theory" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="מדעי המחשב ומדוע הם מגניבים" />
+<meta property="og:description" content="מדעי המחשב ומדוע הם מגניבים" />
+<link rel="canonical" href="http://gadial.net/categories/complexity%20theory/" />
+<meta property="og:url" content="http://gadial.net/categories/complexity%20theory/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-19T10:25:50+02:00" />
+<script type="application/ld+json">
+{"headline":"Complexity theory","dateModified":"2019-11-19T10:25:50+02:00","datePublished":"2019-11-19T10:25:50+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/categories/complexity%20theory/"},"url":"http://gadial.net/categories/complexity%20theory/","description":"מדעי המחשב ומדוע הם מגניבים","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <h1>קטגוריה: תורת הסיבוכיות</h1>
+<p><p>מדעי המחשב ומדוע הם מגניבים</p>
+</p><h2 class="post-list-heading">פוסטים:</h2>
+    <ul class="post-list">
+    
+    
+      <li><span class="post-meta">Feb 11, 2019</span>
+        <h3>
+          <a class="post-link" href="/2019/02/11/what_is_quantum_computer/">
+            אז מה זה מחשב קוונטי?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 7, 2018</span>
+        <h3>
+          <a class="post-link" href="/2018/11/07/quantum_advantage_with_shallow_circuits_math/">
+            ”הוכחה ראשונה לעליונות מחשב קוונטי“ - מה כן (אזהרה - עלול לכלול מתמטיקה)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Oct 23, 2018</span>
+        <h3>
+          <a class="post-link" href="/2018/10/23/quantum_advantage_with_shallow_circuits/">
+            ”הוכחה ראשונה לעליונות מחשב קוונטי“ - מה לא (וקצת מה כן)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Sep 4, 2017</span>
+        <h3>
+          <a class="post-link" href="/2017/09/04/chess_queens_fiasco/">
+            על הבעיה הקשה של מלכות השחמט והבעיה הקשה עוד יותר של מלקות התקשורת
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 12, 2016</span>
+        <h3>
+          <a class="post-link" href="/2016/07/12/boolean_pythagorean_triples/">
+            ההוכחה הארוכה ביותר בהיסטוריה! (או: איך פותרי SAT מתגברים על בעיות קומבינטוריות, אבל היי זה שם פחות מפוצץ)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 23, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/07/23/cook_levin_theorem/">
+            משפט קוק-לוין
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 28, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/05/28/kleene_theorem_alt_proof/">
+            משפט קלייני - הוכחה נוספת
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 14, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/05/14/pumping_lemma_full/">
+            למת הניפוח לשפות רגולריות - גרסה מלאה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 7, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/05/07/automata_minimization/">
+            משפט מייהיל-נרוד - נקודת מבט נוספת, ואלגוריתמי מינימיזציה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Apr 29, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/04/29/formal_languages_decision_problems/">
+            בעיות הכרעה עבור שפות פורמליות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Apr 26, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/04/26/cf_languages_closure_properties/">
+            שפות חסרות הקשר - תכונות סגור
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Apr 15, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/04/15/pumping_lemma_cf/">
+            שפות חסרות הקשר - למת הניפוח, הלמה של אוגדן ושפות רב משמעיות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 31, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/03/31/pushdown_automata_cfg_equiv/">
+            שקילות אוטומט מחסנית ודקדוק חסר הקשר
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 22, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/03/22/pushdown_automata/">
+            אוטומט מחסנית
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 15, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/03/15/context_free_grammars_and_gf/">
+            אז מה הקשר בין דקדוקים חסרי הקשר ופונקציות יוצרות?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 5, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/03/05/context_free_grammars_intro/">
+            מבוא לדקדוקים חסרי הקשר
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Feb 11, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/02/11/myhill_nerode_theorem/">
+            משפט מייהיל-נרוד
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Feb 3, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/02/03/pumping_lemma_regular_languages/">
+            למת הניפוח לשפות רגולריות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 30, 2015</span>
+        <h3>
+          <a class="post-link" href="/2015/01/30/regular_expressions/">
+            ביטויים רגולריים
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 24, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/12/24/regular_languages_kleene_theorem/">
+            שפות רגולריות - משפט קלייני
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 21, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/12/21/regular_languages_closure_2/">
+            שפות רגולריות - תכונות סגור (חלק ב&#39;)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 15, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/12/15/regular_languages_closure_1/">
+            שפות רגולריות - תכונות סגור (חלק א&#39;)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 19, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/11/19/nondeterministic_automata/">
+            אוטומטים אי דטרמיניסטיים ושאר מריעין בישין
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 11, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/11/11/automata_intro/">
+            אוטומטים ושפות רגולריות - מבוא
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Sep 22, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/09/22/quantum_computing_final/">
+            חישוב קוונטי - דברי סיום ופרידה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 25, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/25/shor_algorithm/">
+            חישוב קוונטי - האלגוריתם של שור
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 20, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/20/simon_algorithm/">
+            חישוב קוונטי - האלגוריתם של סימון
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 20, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/20/quantum_circuits_intro/">
+            שערים ומעגלים קוונטיים - מבוא על קצה המזלג
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 16, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/16/grover_algorithm/">
+            אלגוריתם גרובר
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 11, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/11/quantum_computing_bqp/">
+            חישוב קוונטי - מה זה בדיוק
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 9, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/08/09/quantum_gates/">
+            חישוב קוונטי - טלפורטציה, קידוד צפוף ושערים קוונטיים
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 25, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/07/25/quantum_computing_first_example/">
+            חישוב קוונטי - דוגמה ראשונה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 22, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/07/22/quantum_computing_formal_intro/">
+            חישוב קוונטי - ועכשיו פורמלית
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 17, 2014</span>
+        <h3>
+          <a class="post-link" href="/2014/07/17/quantum_computing_intro/">
+            חישוב קוונטי - מה זה אומר ומה זה לא אומר?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 11, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/12/11/dpll_algorithm/">
+            פותרים את SAT - אלגוריתם DPLL
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 24, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/11/24/hornsat_and_2sat/">
+            פותרים את SAT: המקרים של HORNSAT ו-2SAT
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 14, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/11/14/resolution_proof_system/">
+            רזולוציה - איך אפשר להוכיח שאי אפשר?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 11, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/11/11/sat_intro/">
+            מה זו בעיית SAT ולמה חשוב לפתור אותה?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jun 30, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/06/30/p_vs_np_on_abelian_groups_ending/">
+            על P=NP מעל חבורות אבליות - סוף דבר
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jun 15, 2013</span>
+        <h3>
+          <a class="post-link" href="/2013/06/15/p_vs_np_on_abelian_groups_intro/">
+            על P=NP מעל חבורות אבליות - מבוא שלם
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 11, 2012</span>
+        <h3>
+          <a class="post-link" href="/2012/05/11/valiant-vazirani/">
+            משפט Valiant-Vazirani, או: איך להרוג השמות מספקות עם פונקציות תמצות אקראיות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 15, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/05/15/ip_equals_pspace_proof_1-2/">
+            IP=PSPACE - ההוכחה (חלק ב&#39;)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">May 7, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/05/07/ip_equals_pspace_proof_1/">
+            IP=PSPACE - ההוכחה (חלק א&#39;)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Apr 4, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/04/04/what_is_pspace/">
+            אז מהי PSPACE?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 25, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/03/25/interactive_proof_systems_examples/">
+            מערכות הוכחה אינטראקטיביות - דוגמאות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 17, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/03/17/ip_equals_pspace_overview/">
+            אז מה זה IP=PSPACE?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 5, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/03/05/immerman_theorem/">
+            NL=coNL (&quot;משפט אימרמן&quot;) - מי, מה, כמה ולמה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Mar 1, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/03/01/communication_complexity/">
+            מה זו סיבוכיות תקשורת?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 24, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/01/24/barrington_theorem_proof/">
+            משפט ברינגטון - ההוכחה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 23, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/01/23/branching_programs_and_barrington_theorem/">
+            תוכניות מתפצלות ומשפט ברינגטון
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 18, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/01/18/what_are_boolean_circuits/">
+            מעגלים בוליאניים - מה זה בכלל?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 9, 2011</span>
+        <h3>
+          <a class="post-link" href="/2011/01/09/surprising_results_in_complexity_prologue/">
+            פרוייקט &quot;תוצאות מפתיעות בסיבוכיות&quot; יוצא לדרך!
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 11, 2010</span>
+        <h3>
+          <a class="post-link" href="/2010/11/11/ladner_theorem/">
+            משפט לדנר, או - מפרקים לגורמים את NP
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 31, 2010</span>
+        <h3>
+          <a class="post-link" href="/2010/08/31/oracles_and_p_vs_np/">
+            כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 17, 2010</span>
+        <h3>
+          <a class="post-link" href="/2010/08/17/p_vs_np_hard_to_diagonalize/">
+            אז מדוע קשה להוכיח ש-P שונה מ-NP? (בלכסון)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 15, 2010</span>
+        <h3>
+          <a class="post-link" href="/2010/08/15/p_vs_np_overview/">
+            אז מה זה עניין P=NP, בעצם?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 10, 2010</span>
+        <h3>
+          <a class="post-link" href="/2010/08/10/breaking_news_p_vs_np_proof/">
+            הוכחה ש-P שונה מ-NP?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Oct 5, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/10/05/sub_loglog_space_is_constant/">
+            למה זכרון שהוא פחות מלגלג הוא קבוע?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Oct 2, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/10/02/pcp_theorem_exponential_version_proof/">
+            אז מה בין קודים לתיקון שגיאות והוכחת משפט ה-PCP?
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Sep 23, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/09/23/locally_checkable_codes/">
+            קודים לתיקון שגיאות (שניתנים לבדיקה מקומית)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Sep 19, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/09/19/pcp_theorem_intro/">
+            משפט ה-PCP או: איך למדתי להפסיק לדאוג ולאהוב הוכחות הניתנות לבדיקה הסתברותית
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 30, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/08/30/finite_automata_and_regular_languages/">
+            אוטומטים סופיים ושפות רגולריות
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Aug 18, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/08/18/probablistic_algorithms/">
+            דיון מקרי על אלגוריתמים הסתברותיים
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 22, 2009</span>
+        <h3>
+          <a class="post-link" href="/2009/07/22/bad_math_rsa/">
+            למה RSA טרם נפרץ? (בגלל החשיבה המתמטית הלא פרקטית)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jan 7, 2008</span>
+        <h3>
+          <a class="post-link" href="/2008/01/07/np_complete_problems/">
+            על בעיות שהן בכלל תסבוכת שלמה
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 23, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/12/23/nondeterminism/">
+            אז מה זה בעצם אי דטרמיניזם? קשה להחליט
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 16, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/12/16/np_haystack/">
+            על הבעיה המסובכת של מציאת מחט בערימת שחת
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 11, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/12/11/polynomial_turing_machines/">
+            מכונת טיורינג, 2: הנקמה (המסובכת)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Dec 6, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/12/06/complexity_intro/">
+            למה גם מה שפתיר לא פתיר (זה מסובך)
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 10, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/11/10/modular_square_roots_hardness/">
+            אוף, כל הקטע עם השורש הריבועי באמת יוצא מסובך
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Nov 6, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/11/06/modular_square_roots/">
+            ועכשיו למשהו מסובך יותר - הוצאת שורש ריבועי!
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Sep 7, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/09/07/towers_of_hanoi/">
+            המגדל הלוהט
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 25, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/07/25/zero_knowledge_proofs_action/">
+            על משת”פים ונבוטים בראש, והקשר שלהם להוכחות אפס-ידע
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 17, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/07/17/interactive_proof_examples/">
+            עימות המוכיחים
+          </a>
+        </h3></li>
+      <li><span class="post-meta">Jul 10, 2007</span>
+        <h3>
+          <a class="post-link" href="/2007/07/10/interactive_proof_systems/">
+            מוכיח בשער
+          </a>
+        </h3></li></ul>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

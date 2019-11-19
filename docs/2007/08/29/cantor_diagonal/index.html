@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>האלכסון - אסון | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="האלכסון - אסון" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם דיברתי על שיטת האלכסון של קנטור, שבאמצעותה מוכיחים כי המספרים הממשיים אינם בני מניה, וכעת אגש בלי שהיות להוכחה עצמה. כדי לפשט את העניינים לא אוכיח את הטענה על המספרים הממשיים, אלא על תת קבוצה שלהם; בוודאי שאם תת קבוצה של קבוצת הממשיים אינה בת מניה, גם היא עצמה אינה בת מניה (קל להראות התאמה חח”ע מתת הקבוצה לקבוצה שמכילה אותה; נסו למלא את הפרטים). הקבוצה שאבחר היא קבוצת כל המספרים הממשיים שהפיתוח העשרוני שלהם הוא מהצורה $latex 0.a_1a_2a_3\dots$, כאשר $latex a_k$, לכל $latex k$ טבעי, הוא או הספרה 0 או הספרה 1." />
+<meta property="og:description" content="בפוסט הקודם דיברתי על שיטת האלכסון של קנטור, שבאמצעותה מוכיחים כי המספרים הממשיים אינם בני מניה, וכעת אגש בלי שהיות להוכחה עצמה. כדי לפשט את העניינים לא אוכיח את הטענה על המספרים הממשיים, אלא על תת קבוצה שלהם; בוודאי שאם תת קבוצה של קבוצת הממשיים אינה בת מניה, גם היא עצמה אינה בת מניה (קל להראות התאמה חח”ע מתת הקבוצה לקבוצה שמכילה אותה; נסו למלא את הפרטים). הקבוצה שאבחר היא קבוצת כל המספרים הממשיים שהפיתוח העשרוני שלהם הוא מהצורה $latex 0.a_1a_2a_3\dots$, כאשר $latex a_k$, לכל $latex k$ טבעי, הוא או הספרה 0 או הספרה 1." />
+<link rel="canonical" href="http://gadial.net/2007/08/29/cantor_diagonal/" />
+<meta property="og:url" content="http://gadial.net/2007/08/29/cantor_diagonal/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-08-29T03:06:01+03:00" />
+<script type="application/ld+json">
+{"headline":"האלכסון - אסון","dateModified":"2007-08-29T03:06:01+03:00","datePublished":"2007-08-29T03:06:01+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/08/29/cantor_diagonal/"},"url":"http://gadial.net/2007/08/29/cantor_diagonal/","description":"בפוסט הקודם דיברתי על שיטת האלכסון של קנטור, שבאמצעותה מוכיחים כי המספרים הממשיים אינם בני מניה, וכעת אגש בלי שהיות להוכחה עצמה. כדי לפשט את העניינים לא אוכיח את הטענה על המספרים הממשיים, אלא על תת קבוצה שלהם; בוודאי שאם תת קבוצה של קבוצת הממשיים אינה בת מניה, גם היא עצמה אינה בת מניה (קל להראות התאמה חח”ע מתת הקבוצה לקבוצה שמכילה אותה; נסו למלא את הפרטים). הקבוצה שאבחר היא קבוצת כל המספרים הממשיים שהפיתוח העשרוני שלהם הוא מהצורה $latex 0.a_1a_2a_3\\dots$, כאשר $latex a_k$, לכל $latex k$ טבעי, הוא או הספרה 0 או הספרה 1.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">האלכסון - אסון</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-08-29T03:06:01+03:00" itemprop="datePublished">Aug 29, 2007
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הקודם דיברתי על שיטת האלכסון של קנטור, שבאמצעותה מוכיחים כי המספרים הממשיים אינם בני מניה, וכעת אגש בלי שהיות להוכחה עצמה. כדי לפשט את העניינים לא אוכיח את הטענה על המספרים הממשיים, אלא על תת קבוצה שלהם; בוודאי שאם תת קבוצה של קבוצת הממשיים אינה בת מניה, גם היא עצמה אינה בת מניה (קל להראות התאמה חח”ע מתת הקבוצה לקבוצה שמכילה אותה; נסו למלא את הפרטים). הקבוצה שאבחר היא קבוצת כל המספרים הממשיים שהפיתוח העשרוני שלהם הוא מהצורה <span>$latex 0.a_1a_2a_3\dots$</span>, כאשר <span>$latex a_k$</span>, לכל <span>$latex k$</span> טבעי, הוא או הספרה 0 או הספרה 1.</p>
+
+<p>למה להגביל את עצמי לספרות 0 ו-1? כדי להימנע לחלוטין מכל סכנה של גלישה לשאלות של ייצוג. לפיתוח עשרוני (וגם בשאר בסיסי הספירה) התכונה ה”מוזרה” שקיימים מספרים שניתן לכתוב בשתי דרכים שונות - המקרה המפורסם ביותר הוא זה של <span>$latex 1$</span> ו-<span>$latex 0.999\dots$</span>, שראוי לפוסט משל עצמו. הימנעות משימוש בספרה 9 מונעת כל בלבול שכזה.</p>
+
+<p>כדי לעשות חיים עוד יותר קלים, אפסיק לדבר על פיתוח עשרוני ואדבר על סדרות; כל איבר בקבוצה שאני עוסק בה הוא בעצם סדרה אינסופית של ספרות שהן 0 או 1 - הסדרה <span>$latex a_1,a_2,a_3,\dots$</span>. מספיק להראות כי מספר הסדרות הללו אינו בן מניה.</p>
+
+<p>ההוכחה היא כדלהלן. נניח בשלילה שמספר הסדרות הוא דווקא כן בן מניה, אז קיימת התאמה חח”ע ועל בין הסדרות למספרים הטבעיים - כלומר, לכל סדרה אפשר להתאים באופן חח”ע מספר טבעי. אם כן, אפשר לסדר את הסדרות במעין טבלה, שבכל שורה יש סדרה: בשורה מספר 3 תהיה סדרה מספר שלוש, וכן הלאה. כל עמודה בטבלה תייצג איבר בסדרה: בעמודה 2 יהיה האיבר השני בסדרה, וכן הלאה.</p>
+
+<p>כעת מגיע הטוויסט. אנו מסתכלים ב<strong>אלכסון</strong> של הטבלה הזו - כלומר, באיבר הראשון בסדרה הראשונה, באיבר השני בסדרה השניה, וכן הלאה. האלכסון הזה הוא בעצמו סדרה אינסופית. כעת ניקח את הסדרה ה”הפוכה” לאלכסון - כלומר, אם האיבר הראשון באלכסון היה 1, האיבר הראשון בסדרה ההפוכה יהיה 0, וכן הלאה.</p>
+
+<p>מה קיבלנו? עוד סדרה אינסופית של אפסים ואחדים. כלומר, היא איבר בקבוצה שלנו, ולכן הותאם לה מספר טבעי כלשהו, ולכן היא מופיעה בטבלה במקום כלשהו. אבל היכן?</p>
+
+<p>לא ייתכן שהיא תופיע במקום הראשון; הרי הספרה הראשונה בה בבירור שונה מהספרה הראשונה של הסדרה שבמקום הראשון (כי הספרה הזו הופיעה באלכסון, ולקחנו את “ההפך” שלה). ומה באשר למקום השני? הפעם אין בעיה עם הספרה הראשונה בסדרה שלנו, אבל יש בעיה עם הספרה <strong>השניה</strong> - הרי הספרה השניה בסדרה השניה נמצאת באלכסון, ולכן היא שונה מזו שסדרה שלנו. וכן הלאה וכן הלאה. לא משנה באיזו שורה נבחר - תהיה בה עמודה שנכנסה לאלכסון, ולכן הסדרה שלנו שונה מהסדרה שבאותה שורה בעמודה הזו. האלכסון מוודא שהסדרה שלנו תהיה שונה מכל סדרה שמופיעה בטבלה. המסקנה? הסדרה שלנו לא מופיעה בטבלה. סתירה.</p>
+
+<p>(בכיוון האחר, ברור שלכל מספר טבעי אפשר להתאים סדרה כלשהי של 0 ו-1: המספר כשהוא מוצג בבסיס בינארי).</p>
+
+<p>כאמור בפוסט הקודם, קנטור עצמו השתמש בהוכחה הזו כדי לתת דוגמה לשימוש במשפט אחר שלו - משפט שעוסק במספרים טרנסצנדנטיים (מושג שהזכרתי באחד הפוסטים הישנים שלי, על בניית המספרים). כדי להסביר מהו מספר טרנסצנדנטי קל יותר להסביר מהו מספר אלגברי: מספר אלגברי הוא מספר שהוא פתרון של משוואה פולינומית שמקדמיה רציונליים. למשל, שורש 2 הוא הפתרון של המשוואה <span>$latex x^2-2=0$</span>. מספר טרנסצנדנטי הוא מספר ממשי שאינו אלגברי. שני המספרים הטרנסצנדנטיים הידועים ביותר הם הקבועים <span>$latex e$</span> ו-<span>$latex \pi$</span>, אבל ההוכחה לטרנסצנדנטיות שלהם אינה פשוטה (של <span>$latex e$</span> קלה יותר מאשר של <span>$latex \pi$</span>, אך בשני המקרים ההוכחה מסובכת יחסית). יש מספרים אחרים, שקל יותר להוכיח את הטרנסצנדנטיות שלהם, והמתמטיקאי ז’וזף ליוביל הציג כאלו (שנבנו במיוחד בשביל להראות את קיומם של מספרים טרנסצנדטיים) -“<a href="http://en.wikipedia.org/wiki/Liouville_number">מספרי ליוביל</a>”. בכל המקרים הללו נדרשת כמות לא מועטה של עבודה.</p>
+
+<p>והנה, ההוכחה של קנטור מראה כמעט מייד ש<strong>רוב</strong> המספרים הממשיים הם טרנסצנדנטיים! זוהי ה”דוגמה” המובטחת, והיא נובעת מכך שקנטור הוכיח באותו מאמר שבו הופיעה שיטת האלכסון גם שישנו רק מספר בן מניה של מספרים אלגבריים. הסיבה לכך, בנפנוף ידיים מהיר, היא שכל מספר אלגברי מוגדר באמצעות משוואה אחת לפחות, וכל משוואה מוגדרת באופן מוחלט באמצעות מקדמיה - כך שיש התאמה חח”ע ועל בין סדרות סופיות של רציונליים ובין המשוואות שמגדירות מספרים אלגבריים. עוד צריך להראות שיש מספר בן מניה של סדרות סופיות שאבריהן בני מניה, ויש עוד נקודות עדינות להתייחס אליהן, אבל נראה לי שהרעיון ברור.</p>
+
+<p>אם כן, יש רק מספר בן מניה של מספרים אלגבריים, ויש מספר לא בן מניה של מספרים ממשיים - ולכן יש מספר לא בן מניה של מספרים טרנסצנדנטיים. עד כדי כך פשוט.</p>
+
+<p>אבל כעת חוזרת אלינו הטענה המקורית שלי, לפיה את רוב המספרים הממשיים אי אפשר לחשב, וכעת ההוכחה היא טריוויאלית: יש מספר לא בן מניה של ממשיים, אבל רק מספר בן מניה של תוכניות מחשב בשפה ++C. גמרנו.</p>
+
+<p>נשאר רק להבין למה יש רק מספר בן מניה של תוכניות מחשב שכאלו. ובכן, כל תוכנית היא רצף של תווי ASCII. יש מספר סופי של תווים כאלו (מצדי שיהיה אפילו בן מניה). על כל תוכנית מחשב אפשר לחשוב בתור סדרה של תווים. לפני שניה טענתי (בנפנוף ידיים, אני מודה - אבל ההוכחה הטכנית אינה מסובכת) שיש רק מספר בן מניה של סדרות סופיות שאבריהן שייכים לקבוצה בת מניה. זהו. דרך אחרת לחשוב על זה שמתבססת על סופיות קבוצת תווי ה-ASCII היא לחשוב על תוכנית מחשב כעל <strong>מספר</strong> בייצוג בבסיס שגודלו כגודל קבוצת תווי ה-ASCII הקיימים; התו הראשון בתוכנית הוא ספרת ה”אחדות”, התו השני הוא ספרת ה”עשרות”, וכן הלאה. כך מתאימים באופן חח”ע ועל מספר לכל תוכנית.</p>
+
+<p>כך, בצורה אגבית למדי, ראינו שקיימים דברים שלעולם לא נוכל לחשב. הטענה הזו נשמעת נחרצת למדי - בסך הכל דיברתי על תוכניות בשפת ++C, אולי בשפה חזקה יותר (Ruby!) כן אפשר לחשב? אבל כפי שכבר אמרתי קודם, ++C היא מה שמכונה Turing Complete; לא משנה באיזה מחשב (אפילו קוואנטי) ובאיזה שפת תכנות נבחר - ניתן יהיה לכתוב תוכנית ++C שעושה את אותו הדבר בדיוק.</p>
+
+<p>לטעמי ההוכחה הזו היא עלובה ולא מספקת. היא אמנם אומרת שיש המון מספרים קשים לחישוב, אבל לא אומרת כלום על מה הם. זו הוכחה לא קונסטרוקטיבית “מעצבנת”, כי היא מוכיחה אי היתכנות;  מצד אחד היא חורצת לשון ואומרת “אי אפשר ואי אפשר!” ומצד שני לא אומרת מה אי אפשר. אני מעדיף הוכחות שאומרות “אפשר” ולא מראות איך.</p>
+
+<p>זו כנראה הסיבה שבגללה מעדיפים להציג בכל דיון במגבלות יכולתו של המחשב את “<a href="http://he.wikipedia.org/wiki/%D7%91%D7%A2%D7%99%D7%99%D7%AA_%D7%94%D7%A2%D7%A6%D7%99%D7%A8%D7%94">בעיית העצירה</a>” המפורסמת, שמצביעה על חוסר יכולת מאוד קונקרטי ומרכזי של המחשב, ומהווה בסיס להוכחת אי היכולת לפתור המוני בעיות קונקרטיות אחרות. אני מקווה להרחיב בנושא באחד מהפוסטים הבאים.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2007/08/29/cantor_diagonal/';
+      this.page.identifier = 'http://gadial.net/2007/08/29/cantor_diagonal/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2007/08/29/cantor_diagonal/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>פרוייקט “התלמיד והמחשב”, בעיה 11 | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="פרוייקט “התלמיד והמחשב”, בעיה 11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בעיה 11, באופן די דומה לבעיה 10, ניתנת לפתרון אלגנטי ומקסים בעזרת קצת מתמטיקה לא מסובכת מדי (לא להבנה וגם לא לתכנות) אבל בספר לא פותרים אותה כך, וגם אני לא אפתור אותה כך אלא באמצעות גישת כוח גס ברוטלית, וזאת כי עדיין יש כמה דברים בסיסיים בשפות שאני רוצה להציג. אבל זה חבל וזה כואב לי, כי בעיה 11 היא הבעיה הראשונה בספר שמתחילה להזכיר מתמטיקה. ולכן אציג על קצה המזלג גם את הפתרון המתמטי." />
+<meta property="og:description" content="בעיה 11, באופן די דומה לבעיה 10, ניתנת לפתרון אלגנטי ומקסים בעזרת קצת מתמטיקה לא מסובכת מדי (לא להבנה וגם לא לתכנות) אבל בספר לא פותרים אותה כך, וגם אני לא אפתור אותה כך אלא באמצעות גישת כוח גס ברוטלית, וזאת כי עדיין יש כמה דברים בסיסיים בשפות שאני רוצה להציג. אבל זה חבל וזה כואב לי, כי בעיה 11 היא הבעיה הראשונה בספר שמתחילה להזכיר מתמטיקה. ולכן אציג על קצה המזלג גם את הפתרון המתמטי." />
+<link rel="canonical" href="http://gadial.net/2013/07/28/student_and_computer_11/" />
+<meta property="og:url" content="http://gadial.net/2013/07/28/student_and_computer_11/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-07-28T19:55:43+03:00" />
+<script type="application/ld+json">
+{"headline":"פרוייקט “התלמיד והמחשב”, בעיה 11","dateModified":"2013-07-28T19:55:43+03:00","datePublished":"2013-07-28T19:55:43+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/07/28/student_and_computer_11/"},"url":"http://gadial.net/2013/07/28/student_and_computer_11/","description":"בעיה 11, באופן די דומה לבעיה 10, ניתנת לפתרון אלגנטי ומקסים בעזרת קצת מתמטיקה לא מסובכת מדי (לא להבנה וגם לא לתכנות) אבל בספר לא פותרים אותה כך, וגם אני לא אפתור אותה כך אלא באמצעות גישת כוח גס ברוטלית, וזאת כי עדיין יש כמה דברים בסיסיים בשפות שאני רוצה להציג. אבל זה חבל וזה כואב לי, כי בעיה 11 היא הבעיה הראשונה בספר שמתחילה להזכיר מתמטיקה. ולכן אציג על קצה המזלג גם את הפתרון המתמטי.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">פרוייקט &quot;התלמיד והמחשב&quot;, בעיה 11</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-07-28T19:55:43+03:00" itemprop="datePublished">Jul 28, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בעיה 11, באופן די דומה לבעיה 10, ניתנת לפתרון אלגנטי ומקסים בעזרת קצת מתמטיקה לא מסובכת מדי (לא להבנה וגם לא לתכנות) אבל בספר לא פותרים אותה כך, וגם אני לא אפתור אותה כך אלא באמצעות גישת כוח גס ברוטלית, וזאת כי עדיין יש כמה דברים בסיסיים בשפות שאני רוצה להציג. אבל זה חבל וזה כואב לי, כי בעיה 11 היא הבעיה הראשונה בספר שמתחילה להזכיר מתמטיקה. ולכן אציג על קצה המזלג גם את הפתרון המתמטי.</p>
+
+<p>הבעיה הולכת כך: יש גרם מדרגות עם לכל היותר 1,000 מדרגות בו. אנחנו יודעים עליו את הדברים הבאים: אם מחלקים את מספר המדרגות ב-2, מקבלים שארית 1; אם מחלקים ב-3, מקבלים שארית 2; חלוקה ב-4 נותנת 3, חלוקה ב-5 נותנת 4, חלוקה ב-6 נותנת 5 וחלוקה ב-7 נותנת 6. כמה מדרגות יש?</p>
+
+<p>פתרון בכוח גס הוא ברור - עוברים על כל המספרים מ-1 עד 1,000 ובודקים לכל אחד מהם אם הוא מקיים את ששת התנאים. זה לא יעיל במיוחד מבחינת זמן ריצה באופן כללי, אבל במספרים עד 1,000 זמן הריצה לא יהיה מורגש בכלל - התוכניות יעצרו מייד עם התשובה הנכונה - כך שלעת עתה אני עדיין לא נכנס לפרטים הללו. כמה מסובך לתכנת את הפתרון הזה? ובכן, ברובי זה פתרון של שורה אחת:</p>
+
+<p>[code language=”ruby”]
+puts (1..1000).reject{|n| (2..7).find{|k| (n % k) != k-1}}
+[/code]</p>
+
+<p>לא יכלתי להמנע מלתת קוד של שורה אחת, למען ההתלהבות שבדבר, אבל בפועל התוכנית שכתבתי הכילה טיפה יותר שורות:</p>
+
+<p>[code language=”ruby”]
+MAX_STEPS = 1000
+JUMP_SIZES = (2..7)</p>
+
+<p>puts (1..MAX_STEPS).reject{|n| JUMP_SIZES.find{|k| (n % k) != k-1}}
+[/code]</p>
+
+<p>חשוב לי להדגיש שהקטע הזה עם לתת שמות משמעותיים למספרי קסם הוא <strong>קריטי</strong> מבחינתי, אפילו אם המחיר הוא קפיצה מפתרון של שורה אחת לפתרון של כמה שורות.</p>
+
+<p>מה הקוד עושה? הוא מתחיל עם רשימה שכוללת את כל המספרים מ-1 עד 1000 ואז מפעיל עליה את האיטרטור reject שעובר איבר-איבר ברשימה, מעביר את האיבר לבלוק, ובונה רשימה חדשה שאיבריה הם רק אותם איברים ברשימה המקורית שהבלוק החזיר עליהם ערך false. ומה עושה הבלוק במקרה שלנו? עובר על רשימת כל המספרים מ-2 ועד 7 ומפעיל עליה את האיטרטור find שעבור על הרשימה ומחזיר את האיבר הראשון בה שכאשר מפעילים עליו את הבלוק ש-find קיבלה, ערך ההחזרה הוא true. הבדיקה שמתבצעת בתוך הבלוק הזה היא בדיוק האם המספר n, כשמחלקים אותו ב-k ולוקחים את השארית (זה האופרטור %) מחזיר ערך <strong>שונה</strong> מ-k-1, כלומר התנאי <strong>נכשל</strong> עבור n.</p>
+
+<p>אז מה קרה פה? ה-find בקוד שלי בעצם אומר “אם אתה מוצא דוגמה נגדית, החזר אותה”. אבל איך זה קשור ל-true ו-false? ומה אם אין דוגמה נגדית. די בבירור חסרים לי דברים בקוד - העניין הוא שברובי קורים כמה דברים מאחורי הקלעים שטרם דיברתי עליהם.</p>
+
+<p>ראשית, אם find לא מוצאת אף איבר ברשימה שניתן להחזיר, היא מחזירה ערך מיוחד שנקרא nil. הערך הזה משמש ברובי בשלל סיטואציות שונות ומשונות, ומטרתו תמיד לציין “אין ערך” (או “ערך לא מוגדר” וכן הלאה). אין יותר מדי דברים שאפשר לעשות עם nil (לנסות לחבר אותו עם מספרים, למשל, יגרום לתוכנית לקרוס) אבל דבר אחד שאפשר לעשות הוא להשתמש בו בתור ערך אמת - כל בדיקת תנאי שיכולה לקבל true או false יכולה לפעול גם על nil, והיא תתייחס אליו בתור false.</p>
+
+<p>זה לא נגמר כאן, כמובן - בעצם, כל בדיקה של תנאי בוליאני ברובי יכולה לקבל כקלט <strong>כל דבר</strong>. הגישה של רובי היא להתייחס לכל קלט לבדיקה שכזו בתור true אלא אם הוא או הערך הקבוע false, או nil. כלומר, ברובי יש לנו בדיוק שני ערכים שיכולים להיחשב false. יש כאן מלכוד <strong>אדיר</strong> למתרגלים שמגיעים מהעולם של C: בעולם הזה, 0 נחשב false. ברובי בחרו לא לעשות את זה, ולטעמי בחוכמה רבה. למשל, פעולה נפוצה ברובי היא לבדוק אם תת-מחרוזת מופיעה בתוך מחרוזת נתונה (למעשה, אם <strong>ביטוי רגולרי</strong> מופיע בתוך מחרוזת נתונה) - ערך ההחזרה של בדיקה כזו הוא האינדקס שממנו תת-המחרוזת מתחילה להופיע, או nil אם היא לא מופיעה בכלל. האינדקס עשוי כמובן להיות 0 בעצמו… וזו לא הדוגמה היחידה.</p>
+
+<p>אז בקוד שלי, אם נמצאה דוגמה נגדית כלשהי, הבלוק מתפרש בתור true, ואם לא נמצאה דוגמה נגדית והוחזר nil, הבלוק מתפרש בתור false (בקוד הספציפי הזה 0 לא יכל להיות דוגמה נגדית, אבל אולי עבור שאלה בניסוח שונה הוא כן יכול? הנה שוב סיבה מדוע אין סיבה אמיתית לפיה 0 ייחשב false וזו סתם גחמה חצי-שרירותית שנובעת מסיבות היסטוריות - מוצדקות לכשעצמן, אולי).</p>
+
+<p>הקוד בהסקל עושה בערך את אותו הדבר, רק עם קצת יותר שורות; ועדיין, יש בו נקודה חשובה שאני שמח שסוף סוף יצא לי להציג:
+[code]
+gives_correct_remainder :: [Int] -&gt; Int -&gt; Bool
+gives_correct_remainder ms a = length bad_ms == 0
+  where
+    bad_ms = [m | m &lt;- ms, (a <code class="highlighter-rouge">mod</code> m) /= m-1]</p>
+
+<p>max_steps = 1000
+jump_sizes = [2..7]</p>
+
+<p>result = filter (gives_correct_remainder jump_sizes) [1..max_steps]
+main = do
+   putStrLn (show(result))
+[/code]</p>
+
+<p>הסקל, מה לעשות, היא שפה קצת יותר קשיחה מאשר רובי ולכן אני צריך להתאמץ יותר ולכתוב פונקציה ייעודית שבודקת האם מספר נתון מקיים את תנאי המדרגות. הפונקציה מקבלת שני קלטים: הקלט הראשון הוא טווח המספרים שבהם צריך לחלק (אצלנו הוא מ-2 עד 7) והקלט השני הוא המספר שבודקים. הבדיקה עצמה היא סטנדרטית: אני בונה את רשימת המספרים שמהווים דוגמה נגדית (=/ הוא הסימון בהסקל לאי-שוויון) ובודק אם אורכה גדולה מאפס או לא. מה שמעניין הוא מה שקורה אחר כך - אני משתמש בפונקציה filter שמזכירה מאוד את reject של רובי אבל עם סדר הפוך - קודם כל היא מקבלת פונקציה להפעיל על איברי מערך, ואז היא מקבלת את המערך, ומפלטרת ממנו החוצה את כל מי שהפונקציה החזירה עליו False. החלק המעניין ביותר בכל הקוד הוא הפונקציה ש-filter מקבלת.</p>
+
+<p>מה ש-filter אמורה לקבל הוא פונקציה שמקבלת פרמטר יחיד ומחזירה ערך בוליאני. אם תשימו לב, אין הגדרה מפורשת של פונקציה כזו בקוד שלי. מה שיש הוא את gives_correct_remainder שמקבלת <strong>שני</strong> פרמטרים: הפרמטר הראשון הוא מערך, והפרמטר השני הוא המספר שבודקים <strong>ביחס לאותו מערך</strong>. ומה filter מקבלת? היא מקבלת את gives_correct_remainder jump_sizes, כלומר את מה שמקבלים כאשר לוקחים את gives_correct_remainder ומפעילים אותו לא על זוג קלטים, אלא על קלט אחד - כלומר, הפעלנו את הפונקציה <strong>חלקית</strong>.</p>
+
+<p>התוצאה של הפעלה חלקית שכזו היא לא ערך ההחזרה הצפוי של gives_correct_remainder, אלא פונקציה חדשה, שמקבלת רק קלט אחד. מכיוון שזה אחד הרעיונות המבלבלים ביותר בהסקל עבור מי שלא נתקל בו אף פעם, בואו נראה איך זה קורה כל הזמן בעולם המתמטי. נניח שיש לנו את הפונקציה הממשית הבאה בשני משתנים: <span>$latex f(a,x)=a^x$</span>. הפונקציה הזו נקראת “פונקציה אקספוננציאלית”, עם בסיס <span>$latex a$</span> ומעריך <span>$latex x$</span>. למשל, <span>$latex f(5,3)=5^3=125$</span>.</p>
+
+<p>עכשיו, אם נציב <span>$latex a=2$</span> בפונקציה הזו, נקבל פונקציה במשתנה יחיד: <span>$latex g(x)=f(2,x)=2^x$</span>. אפשר גם לכתוב את הפונקציה הזו כך: <span>$latex f_2(x)=2^x$</span>, ואפשר גם באופן כללי להגדיר <span>$latex f_a(x)=f(a,x)=a^x$</span>. דהיינו, לכל ערך אפשרי של הפרמטר <span>$latex a$</span> אנחנו מקבלים פונקציה אחרת, <span>$latex f_a$</span>.</p>
+
+<p>כעת אפשר לשנות קצת את נקודת ההתבוננות שלנו: נגדיר פונקציה, שבכוונה אתן לה סימון מוזר, שמקבלת כקלט מספר ממשי ומחזירה כפלט פונקציה: <span>$latex \Phi(a)=f_a$</span>. דהיינו, עבור <span>$latex 2$</span> נקבל ש-<span>$latex \Phi(2)=f_2$</span>, כלומר הפלט של <span>$latex \Phi(2)$</span> הוא הפונקציה <span>$latex 2^x$</span>. זה בדיוק מה שקורה בהסקל, וזה גם מסביר סוף סוף את שיטת הסימון ה”מוזרה” של פונקציות על כמה משתנים: הפונקציה gives_correct_remainder הוגדרה להיות פונקציה מטיפוס שמקבל כקלט מערך של מספרים ומוציא כפלט <strong>פונקציה</strong> שמקבלת כקלט מספר ומוציאה כפלט ערך בוליאני. זו צורת התבוננות מוזרה במבט ראשון, אבל היא רק מוסיפה לנו כוח: היכולת לקחת פונקציה קיימת ולקבל ממנה פונקציה חדשה על ידי הצבה חלקית בה היא מאוד מועילה לפעמים.</p>
+
+<p>היכולת הזו נראית מוגבלת במובן מסויים - לכאורה אפשר להציב רק את הערך הראשון שהפונקציה מצפה לקבל; מה אם אנחנו רוצים לקבע דווקא את הערך השני? אפשר לעשות את זה, בערך, אבל נעזוב את זה לבינתיים עד לשלב שבו אני ארצה לעשות משהו כזה בעצמי.</p>
+
+<p>נעבור כעת לג’אווהסקריפט. כאן אין חוכמות - הקוד הוא לולאה פשוטה וסטנדרטית, אבל גם איך עושים דברים כאלו צריך לראות. אלא שבגלל שהקוד הוא כל כך סטנדרטי, החלטתי להתחכם ולהוסיף משהו מיותר לחלוטין ושגם נראה איום ונורא, סתם כדי שנכיר משהו חדש. מה הוספתי? קוד ש<strong>יצייר</strong> את המדרגות. בואו נראה את הקוד ואז נדבר עליו:</p>
+
+<p>[code langauge=”javascript”]
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Targil 11&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script type="text/javascript"&gt;
+    var MAX_STEPS = 1000;
+    var JUMP_SIZES = [2,3,4,5,6,7];</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var main = function(){
+  var results = [];
+  for (var i=1; i &amp;lt;= MAX_STEPS; i++){
+  var to_add = true;
+for (var j=0; j &amp;lt; JUMP_SIZES.length; j++){
+  var jump = JUMP_SIZES[j];
+  if (i % jump != jump - 1){
+    to_add = false;
+  }
+}
+if (to_add){
+  results.push(i);
+}
+  }
+  document.getElementById(&amp;quot;result&amp;quot;).innerHTML = results;
+
+  drawStairs(results[0])
+}
+
+var drawStairs = function(n){
+  var canvas = document.getElementById('stairs_canvas');
+  var context = canvas.getContext('2d');
+  var stair_size = parseInt(document.getElementById(&amp;quot;stair_size&amp;quot;).value);
+  canvas.width = stair_size * n;
+  canvas.height = stair_size * n;
+  for (var i = 0; i &amp;lt; n; i++){
+context.moveTo(stair_size*i,stair_size*i);
+context.lineTo(stair_size*i,stair_size*(i+1));
+context.stroke();
+
+context.moveTo(stair_size*i,stair_size*(i+1));
+context.lineTo(stair_size*(i+1),stair_size*(i+1));
+context.stroke();
+  }
+}
+
+window.onload = main;   &amp;lt;/script&amp;gt;   &amp;lt;div id=&amp;quot;result&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;   &amp;lt;div style=&amp;quot;overflow: scroll; width: 500px; height: 500px;&amp;quot;&amp;gt;
+&amp;lt;canvas id=&amp;quot;stairs_canvas&amp;quot;&amp;gt;
+  No Canvas for you!
+&amp;lt;/canvas&amp;gt;   &amp;lt;/div&amp;gt;   Stair size = &amp;lt;input type=&amp;quot;textbox&amp;quot; id=&amp;quot;stair_size&amp;quot; value = &amp;quot;5&amp;quot; onkeyup = &amp;quot;main()&amp;quot;/&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; [/code]
+</code></pre></div></div>
+
+<p>הנה <a href="http://www.gadial.net/stuff/StudentAndComp/targil11.html">לינק</a> עבור מי שרוצה לראות איך הזוועה הזו נראית. הציור מתבצע על ידי שימוש ביישות html שנקראת Canvas ואינה נתמכת בדפדפנים ישנים, כך שאתם עשויים לא לראות אותה. Canvas הוא אחת מהתוספות הברוכות של HTML5 - אולי השימושית ביותר ששמעתי עליה עד כה. הרעיון באובייקט הזה פשוט למדי לכל מי שהתעסק עם כתיבת אפליקציות בעלות GUI (ממשק משתמש גרפי): זה איזור מוגדר במסך שאפשר לצייר בו ויש למשתמש מספר פונקציות פרימיטיביות שמאפשרות זאת - ציור של קו, עיגול וכדומה, אבל גם העתקה של תמונות שלמות. זה מספק למשתמש את הבסיס שנדרש - בעזרת הפונקציות הללו אפשר לצייר פחות או יותר כל מה שרוצים (כמובן, לאו דווקא באופן יעיל במיוחד). אני עצמי השתמשתי ב-canvas בבלוג, <a href="http://www.gadial.net/2013/03/28/tupper-formula/">בפוסט על נוסחת טאפר</a> (“הנוסחה שמציירת את עצמה”) כשנתתי לקוראים אפשרות לצייר דברים בעצמם (לרוע המזל, מאז שהתחלתי את סדרת הפוסטים הנוכחית הקוד בפוסט ההוא לא עובד - במקום להריץ אותו, הבלוג מציג אותו למשתמש….)</p>
+
+<p>כדי לצייר על ה-canvas בפועל אני צריך קודם כל לקבל ממנו משהו שנקרא context (דו-ממדי, במקרה שלנו) ודרך ה-context הזה אני מצייר בפועל. לא אתעמק בפרטים עכשיו כי זו לא מטרת הפוסט (עוד נגיע לזה…) אלא רק הזדמנות להציג את השחקן הזה לראשונה.</p>
+
+<p>אבל רגע, מה עם הפתרון המתמטי לחידה שהבטחתי בתחילת הפוסט? ובכן, הבעיה נפתרת מייד בעזרת משפט השאריות הסיני, שכבר היה לי עליו <a href="http://www.gadial.net/2012/09/12/chinese_remainder_theorem/">פוסט רציני</a> ולכן לא אחזור על כל פרטיו כאן. בואו נבין איך אפשר להשתמש פה במשפט: אנחנו בעצם רוצים לפתור מערכת של משוואות מודולריות עבור המודולוסים 2,3,4,5,6,7. הבעיה היא שלא כולם זרים ולכן אי אפשר להשתמש במשפט השאריות הסיני כמות שהוא - תחת זאת, אני לוקח מודולוסים שהם החזקות הגדולות ביותר של הראשוניים שמעורבים במשוואות ומתפלל לעצמי שהכל יעבוד כמו שצריך (כי ייתכן מאוד שלא יהיה בכלל פתרון). במקרה הזה, פירוש הדבר הוא שאני לוקח את המודולוסים 3,4,5,7. השמטתי את 2 ואת 6.</p>
+
+<p>כעת, כאשר <span>$latex x$</span> הוא 3 מודולו 4, הוא בפרט 1 מודולו 2, כך שאני רגוע - התנאי על 4 מכליל את התנאי על 2. כמו כן, כאשר <span>$latex x$</span> הוא 2 מודולו 3, אז מודולו 6 הוא יכול להיות רק 2 או 5. אבל אם הוא 2 מודולו 6 הוא זוגי ולכן לא יכול להיות 1 מודולו 2, כך שגם התנאי על 6 מסתדר לי. במילים אחרות - כל פתרון למערכת המשוואות עבור המודולוסים 3,4,5,7 הוא גם פתרון לבעיה המקורית.</p>
+
+<p>כמובן, כדי להשתמש במשפט השאריות הסיני צריך שיהיה לנו מימוש של אלגוריתם עבורו. ובכן, כחלק מפתרון חידות בפרוייקט אוילר כתבתי לעצמי ברובי לפני זמן רב ספריה מתמטית קטנה (ומאוד, מאוד, מאוד לא יעילה - אבל לצרכים שלי היא הספיקה). אני מעתיק את הקוד ממנה (לאחר כמה פישוטים) - ואני מזהיר מראש שאני משתמש בו במשהו שטרם הצגתי בסדרת הפוסטים הזו: פונקציות. במקרה הגרוע ביותר אני מזמין את הקוראים לחזור ולקרוא את הקוד בהמשך. עוד אזהרה אחת היא שמי שלא מבין איך משפט השאריות הסיני עובד לא כנראה יבין מה למען השם אני עושה בקוד הזה (אני לא הייתי מבין):</p>
+
+<p>[code language=”ruby”]
+class Array
+  def sum
+    self.inject(0){|sum, x| sum+x}
+  end
+  def prod
+    self.inject(1){|prod, x| prod*x}
+  end
+end</p>
+
+<p>class Integer
+  def extended_gcd(b)
+    return [self,1,0] if b == 0
+    q = self / b
+    r = self % b
+    gcd, x, y = b.extended_gcd(r)
+    return [gcd, y, x-q*y]
+  end</p>
+
+<p>def inverse_modulo(n)
+    return nil unless self.gcd(n) == 1
+    (n.extended_gcd(self).last) % n
+  end
+end</p>
+
+<p>def chinese_remainder_theorem(a_vector, m_vector)
+  b_m = m_vector.prod
+  y_vector = m_vector.collect{|m_i| t=(b_m / m_i); t<em>t.inverse_modulo(m_i)}
+  return (0…a_vector.length).collect{|i| a_vector[i]</em>y_vector[i]}.sum % b_m
+end</p>
+
+<p>puts chinese_remainder_theorem([2,3,4,6],[3,4,5,7])
+[/code]</p>
+
+<p>הקוד הזה מחזיר רק 419. כדי לקבל את הפתרון השני צריך להוסיף לו 420, שהוא המכפלה של ארבעת המודולוסים (למה זה עובד? שוב, זה נובע ממשפט השאריות הסיני). העובדה שהפתרון הוא 419 ומכפלת המודולוסים היא 420 הגדולה ממנו ב-1 עשויה להקפיץ אצלכם נורת אזהרה - ואכן, בעצם יש פתרון פשוט <strong>עוד יותר</strong> לחידת המדרגות (שהוצג בספר המקורי) ולא מצריך כלום מלבד עט, נייר וטיפה מחשבה.</p>
+
+<p>הרעיון הוא כזה: עכשיו, בואו נניח שיש לנו מספר <span>$latex x$</span> שמחזיר שארית 1 בחלוקה ב-2 - זה אומר שאם נוסיף לו 1, נקבל מספר שמתחלק ב-2. הוא מחזיר 2 בחלוקה ב-3, כלומר אם נוסיף לו 1 נקבל מספר שמתחלק ב-3, וכן הלאה. המסקנה היא שהמספר שאנחנו מחפשים הוא כזה שאם נוסיף לו 1, נקבל מספר שמתחלק בו זמנית ב-2,3,4,5,6,7. כעת, 420 הוא ה<strong>כפולה המשותפת המינימלית</strong> של 2,3,4,5,6,7…</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/07/28/student_and_computer_11/';
+      this.page.identifier = 'http://gadial.net/2013/07/28/student_and_computer_11/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/07/28/student_and_computer_11/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

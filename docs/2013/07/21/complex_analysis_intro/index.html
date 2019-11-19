@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אז מה זו אנליזה מרוכבת? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אז מה זו אנליזה מרוכבת?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בזמן הלא מועט שחלף מאז שהתחלתי את כתיבת הבלוג אני מקווה שהצלחתי לגעת במשהו מכמעט כל נושאי הבסיס שבהם סטודנטים לתואר ראשון במתמטיקה יתקלו בודאות במהלך התואר שלהם. אלא שעדיין, רק כמעט, ועוד נותרו מספר חורים מטרידים. אני רוצה להתחיל עכשיו לסגור את החור המטריד ביותר, של נושא חשוב ויפה מאין כמותו שטרם כתבתי עליו שום דבר בבלוג - אנליזה מרוכבת. קשה לי לחשוב על נושא בסיסי יותר, או יפה יותר, או חשוב יותר, שלא הוקדש לו שום דבר בבלוג עד עכשיו." />
+<meta property="og:description" content="בזמן הלא מועט שחלף מאז שהתחלתי את כתיבת הבלוג אני מקווה שהצלחתי לגעת במשהו מכמעט כל נושאי הבסיס שבהם סטודנטים לתואר ראשון במתמטיקה יתקלו בודאות במהלך התואר שלהם. אלא שעדיין, רק כמעט, ועוד נותרו מספר חורים מטרידים. אני רוצה להתחיל עכשיו לסגור את החור המטריד ביותר, של נושא חשוב ויפה מאין כמותו שטרם כתבתי עליו שום דבר בבלוג - אנליזה מרוכבת. קשה לי לחשוב על נושא בסיסי יותר, או יפה יותר, או חשוב יותר, שלא הוקדש לו שום דבר בבלוג עד עכשיו." />
+<link rel="canonical" href="http://gadial.net/2013/07/21/complex_analysis_intro/" />
+<meta property="og:url" content="http://gadial.net/2013/07/21/complex_analysis_intro/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-07-21T20:05:57+03:00" />
+<script type="application/ld+json">
+{"headline":"אז מה זו אנליזה מרוכבת?","dateModified":"2013-07-21T20:05:57+03:00","datePublished":"2013-07-21T20:05:57+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/07/21/complex_analysis_intro/"},"url":"http://gadial.net/2013/07/21/complex_analysis_intro/","description":"בזמן הלא מועט שחלף מאז שהתחלתי את כתיבת הבלוג אני מקווה שהצלחתי לגעת במשהו מכמעט כל נושאי הבסיס שבהם סטודנטים לתואר ראשון במתמטיקה יתקלו בודאות במהלך התואר שלהם. אלא שעדיין, רק כמעט, ועוד נותרו מספר חורים מטרידים. אני רוצה להתחיל עכשיו לסגור את החור המטריד ביותר, של נושא חשוב ויפה מאין כמותו שטרם כתבתי עליו שום דבר בבלוג - אנליזה מרוכבת. קשה לי לחשוב על נושא בסיסי יותר, או יפה יותר, או חשוב יותר, שלא הוקדש לו שום דבר בבלוג עד עכשיו.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אז מה זו אנליזה מרוכבת?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-07-21T20:05:57+03:00" itemprop="datePublished">Jul 21, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בזמן הלא מועט שחלף מאז שהתחלתי את כתיבת הבלוג אני מקווה שהצלחתי לגעת במשהו מכמעט כל נושאי הבסיס שבהם סטודנטים לתואר ראשון במתמטיקה יתקלו בודאות במהלך התואר שלהם. אלא שעדיין, רק כמעט, ועוד נותרו מספר חורים מטרידים. אני רוצה להתחיל עכשיו לסגור את החור המטריד ביותר, של נושא חשוב ויפה מאין כמותו שטרם כתבתי עליו שום דבר בבלוג - אנליזה מרוכבת. קשה לי לחשוב על נושא בסיסי יותר, או יפה יותר, או חשוב יותר, שלא הוקדש לו שום דבר בבלוג עד עכשיו.</p>
+
+<p>אז מה זו אנליזה מרוכבת? במשפט מחץ אחד, זה מה שקורה כשלוקחים את החשבון האינפיניטסימלי (החשבון הדיפרנציאלי והאינטגרלי) ועושים אותו לא על המספרים הממשיים אלא על המספרים המרוכבים. ובתיאור הזה אני כבר רומז שרצוי מאוד, ואפילו הכרחי, להכיר את החשבון האינפיניטסימלי של המספרים הממשיים לפני שמתחילים לדבר על אנליזה מרוכבת. יש לי <a href="http://www.gadial.net/2010/09/05/calculus_intro/">פוסטים בנושא</a> ואני אניח מכאן והלאה שהקוראים מכירים אינפי, למרות שאני מקווה שהפוסט הספציפי הזה יהיה נגיש עדיין גם למי שלא מכירים אותו. אני אמנם מתכוון להגדיר את המושגים המרכזיים בכל מקרה, אבל להכיר אנליזה מרוכבת בלי להכיר אינפי רגיל זה בערך כמו<strong> </strong>לשמוע שוסטקוביץ' בלי להכיר מוזיקה קלאסית - אפשר ליהנות, אולי, אבל הרבה מזה יישמע מוזר ובלי ההקשר הרלוונטי לא יהיה ברור מה הקטע. כך גם עם אנליזה מרוכבת ואינפי: בלי נקודת הייחוס של האינפי קשה יותר להבין את התעלולים שעושים באנליזה מרוכבת, וגם קשה יותר להבין למה התוצאות שלה כל כך יפות.</p>
+
+<p>ולמה שאנליזה מרוכבת תעניין אותנו בכלל? למה שנרצה לעשות אינפי על מספרים מרוכבים? ובכן, יש לכך שלוש תשובות, שהן לרוב התשובות לכל שאלה של "למה עושים משהו במתמטיקה: <ol><li> כי אנחנו יכולים. </li><li> כי זה יפה. </li><li> כי זה שימושי. </li></ol> "כי אנחנו יכולים" זו תשובה טיפה מוגזמת, כי במתמטיקה אפשר לעשות שלל דברים שאף אחד לא מעלה על דעתו לעשות כי אין בהם טעם; נימוק יותר מדויק יהיה "כי אנחנו יכולים, כי זה מתבקש וכי יוצאים מזה דברים". אינפי על מספרים ממשיים זה מגניב; המרכיבים הדרושים לביצוע אינפי נמצאים גם במספרים המרוכבים, והמספרים המרוכבים הם ההרחבה הטבעית ביותר של הממשיים; לעשות אינפי על המרוכבים ממש מתבקש.</p>
+
+<p>למה זה יפה? ובכן, חכו ותראו, זה כל מה שאני יכול להבטיח בינתיים. ומה באשר לשימושים? גם כאלו נראה בהמשך, אבל כבר עכשיו חשוב להבהיר שמדובר על שימושים שחורגים מהתחום של המספרים המרוכבים לבדם: יש לאנליזה מרוכבת שימושים שמתקשרים לנושאים שלא מזכירים אפילו ברמז את המספרים המרוכבים. הדוגמא המפורסמת ביותר, ש<a href="http://www.gadial.net/2010/02/08/riemann_hypothesis_overview/">כן הזכרתי בעבר</a> בבלוג, היא <strong>משפט המספרים הראשוניים</strong>, שהוא תוצאה חשובה מאין כמותה שמתארת את ההתפלגות של המספרים הראשוניים - שהם מספרים טבעיים שמתחלקים רק ב-1 ובעצמם, ועל פניו אין בינם ובין מספרים מרוכבים שום קשר; ועם זאת, הוכחת משפט המספרים הראשוניים היא הוכחה באנליזה מרוכבת, באמצעות כלים של אנליזה מרוכבת.</p>
+
+<p>מבחינה היסטורית, למרות שמספרים מרוכבים היו מוכרים עוד במאה ה-16 בתור כלי לפתרון משוואות אלגבריות, ולמרות שאוילר התעסק איתם במאה ה-18, "תור הזהב" של האנליזה המרוכבת, שבו נוסח ונתגלה הבסיס שאותו מלמדים באוניברסיטאות עד היום, היה במאה ה-19 (ולדעתי האנליזה המרוכבת היא אחד מההישגים המתמטיים הכבירים ביותר של המאה ה-19). שני השמות המפורסמים ביותר בהקשר הזה הם של אוגוסטין לואי קושי ושל ברנהרד רימן, אבל מן הסתם היה מדובר על פרי עבודה משמעותית של מתמטיקאים נוספים רבים. אני לא בקיא יותר מדי בפרטים ההיסטוריים של התפתחות התחום ואולי אקדיש להם פוסטים בעתיד, אבל לעת עתה אסתפק בכך.</p>
+
+<p>נעבור לדבר עכשיו על הכוכבים של האנליזה המרוכבת - המספרים המרוכבים. מיהם ומהם? ובכן, נניח שאנחנו יודעים מהם המספרים הממשיים, <span>$latex \mathbb{R}$</span> (וזו בעיה בפני עצמה, הרי הם אובייקט מורכב מאוד, אבל נעזוב את זה). המספרים המרוכבים הם מה שמקבלים כאשר מכניסים למשחק מספר חדש, <span>$latex i$</span>, שמקיים את התכונה המלבבת ש-<span>$latex i^{2}=-1$</span> (וזאת בזמן שכל מספר ממשי בריבוע הוא בהכרח אי שלילי), ואז מסתכלים על כל המספרים מהצורה <span>$latex a+bi$</span> כאשר <span>$latex a,b$</span> ממשיים. לאוסף הזה קוראים <strong>המספרים המרוכבים</strong>, מסמנים אותו ב-<span>$latex \mathbb{C}$</span>, ומגדירים עליו פעולות חשבון באופן "טבעי": <span>$latex \left(a+bi\right)+\left(c+di\right)=\left(a+c\right)+\left(b+d\right)i$</span> לחיבור, ו-</p>
+
+<p><span>$latex \left(a+bi\right)\left(c+di\right)=ac+adi+bci+bdi^{2}=\left(ac-bd\right)+\left(ad+bc\right)i$</span></p>
+
+<p>עבור כפל.</p>
+
+<p>הגישה הזו היא מה שאני מכנה "גישת בית הספר", כי בבית הספר שבו הייתי פשוט זרקו על התלמידים את <span>$latex i$</span> הזה ונתנו להם להתמודד איתו. זו כמובן גישה מטרידה מאוד - אין לנו מושג מאיפה בא ה-<span>$latex i$</span> הזה או למה שמשהו מוזר כל כך יהיה קיים בכלל. כתוצאה מהגישה הזו נוצר אנטגוניזם די גדול כלפי המספרים המרוכבים, עד כדי תפיסה שהם "לא מציאותיים" (גם העובדה שקוראים ל-<span>$latex i$</span> "מספר מדומה" - כפי שדקארט קרא לו בלעג הרבה לפני שהמספרים המרוכבים הפכו לאובייקט מרכזי במתמטיקה כמו שהם היום - לא עוזרת). לכן בדרך כלל בספרי לימוד נוקטים בגישה אחרת. כולם מסכימים שמספרים ממשיים קיימים, ולכן במקום לדבר על מספרים מרוכבים, מדברים על <strong>זוגות של ממשיים</strong>, כלומר על יצורים מהצורה <span>$latex \left(a,b\right)$</span> כאשר <span>$latex a,b$</span> ממשיים. על היצורים הללו מגדירים חיבור "איבר איבר", כלומר <span>$latex \left(a,b\right)+\left(c,d\right)=\left(a+c,b+d\right)$</span>, ומגדירים גם כפל בצורה שנראית מוזרה בהתחלה: <span>$latex \left(a,b\right)\left(c,d\right)=\left(ac-bd,ad+bc\right)$</span>. כמובן שכשאנחנו יודעים מה המטרה של ההגדרה הזו היא נראית קצת פחות מוזרה. כעת אפשר לשים לב לכך ש-<span>$latex \left(0,1\right)\left(0,1\right)=\left(-1,0\right)$</span> על פי הגדרת הכפל הזו, ואז אפשר <strong>לסמן</strong> את <span>$latex \left(0,1\right)$</span> בסימון <span>$latex i$</span> ואת הזוג <span>$latex \left(a,b\right)$</span> בסימון <span>$latex a+bi$</span>, והופס! קיבלנו את המספרים המרוכבים שתיארנו קודם, רק שעכשיו קשה לחלוק על כך שהם קיימים, כי בסך הכל מדובר על קבוצה של זוגות של ממשיים עם פעולות חיבור וכפל מסויימות. בניה דומה היא זו שמגדירה את המספרים הרציונליים: אפשר לחשוב עליהם כעל (בערך) אוסף של זוגות של מספרים שלמים עם פעולות חיבור וכפל מסויימות.</p>
+
+<p>למרות שהגישה לעיל נפוצה ברוב ספרי המתמטיקה שמציגים מספרים מרוכבים, די בבירור היא עדיין מרגישה מלאכותית משהו. הדרך הנכונה לטעמי להציג את המספרים המרוכבים היא כחלק ממושג כללי הרבה יותר, של <strong>הרחבה אלגברית</strong> של שדות; אלא שזה מושג שמצריך ידע כלשהו באלגברה מופשטת שבדרך כלל לא מניחים שיש אצל הקורא ולכן לא מתארים את הגישה הזו, וגם אני לא אעשה זאת כאן (פורמלית, למי שמכיר את המושגים, המרוכבים מתקבלים כחוג המנה של חוג הפולינומים במשתנה אחד מעל <span>$latex \mathbb{R}$</span> כשמחלקים אותו באידאל שנוצר על ידי הפולינום האי-פריק <span>$latex x^{2}+1$</span> - אבל מי שמבין את מה שאמרתי כרגע כנראה כבר מכיר את הבניה הזו).</p>
+
+<p>עדיין, גם אם לא מערערים על קיומם של המספרים המרוכבים, פעולת הכפל שלהם נראית מוזרה למדי. הרבה יותר טבעי היה לכפול "איבר איבר", כמו שמחברים: <span>$latex \left(a,b\right)\left(c,d\right)=\left(ac,bd\right)$</span>. למה לא עושים זאת? ובכן, כי המטרה שלנו היא להרחיב את <span>$latex \mathbb{R}$</span> כדי שנקבל <strong>שדה</strong>. שדה היא קבוצה של איברים שמוגדרות עליה פעולות חיבור וכפל שמתנהגות, ובכן, כמו שחיבור וכפל ב-<span>$latex \mathbb{R}$</span> מתנהגים: חוקי החילוף, הקיבוץ והפילוג, וכמו כן שיהיה איבר נייטרלי לחיבור (0), איבר נייטרלי לכפל (1), איברים נגדיים לחיבור (לכל <span>$latex x$</span> יש מספר <span>$latex y$</span> כך ש-<span>$latex x+y=0$</span>) ואיברים הופכיים לכפל (לכל <span>$latex x\ne0$</span> יש מספר <span>$latex y$</span> כך ש-<span>$latex xy=1$</span>). אם נבחר בהגדרת הכפל הנאיבית, לא נקבל שדה, כי למשל ל-<span>$latex \left(1,0\right)$</span> לא יהיה איבר הופכי לכפל (למה? מי האיבר הנייטרלי לכפל בקבוצה הזו?)</p>
+
+<p>לעומת זאת, המספרים המרוכבים עם פעולת הכפל ה"מוזרה" אכן מהווים שדה. לשם כך צריך להראות כיצד, בהינתן מספר <span>$latex a+bi$</span> כך ש-<span>$latex a\ne0$</span> או ש-<span>$latex b\ne0$</span>, אפשר למצוא לו הופכי כפלי. במילים אחרות, מהו <span>$latex \frac{1}{a+bi}$</span>? האם אפשר לכתוב אותו בתור מספר מהצורה <span>$latex x+yi$</span>? ובכן, בואו ננסה, עם תעלול סטנדרטי: נכפול מונה ומכנה באותו מספר, שבמקרה שלנו יהיה <span>$latex a-bi$</span>. למה? כי <span>$latex \left(a+bi\right)\left(a-bi\right)=a^{2}-b^{2}i^{2}=a^{2}+b^{2}$</span>, ולכן נקבל ש-<span>$latex \frac{1}{a+bi}=\frac{a-bi}{a^{2}+b^{2}}$</span>, וזה כבר מספר מהצורה <span>$latex x+yi$</span> (עם <span>$latex x=\frac{a}{a^{2}+b^{2}}$</span> ו-<span>$latex y=-\frac{b}{a^{2}+b^{2}}$</span>).</p>
+
+<p>כמובן שלא מספיק להראות את זה כדי להראות שהמרוכבים הם שדה, אבל אני עצלן ולא אכנס לבדיקת שאר התכונות. תחת זאת, אני רוצה לתת מעמד מיוחד לשני המספרים שהופיעו בביטוי <span>$latex \frac{a-bi}{a^{2}+b^{2}}$</span>. הראשון, <span>$latex a-bi$</span>, בעצם זהה ל-<span>$latex a+bi$</span> שממנו התחלנו פרט לכך שהמקדם של <span>$latex i$</span> הפך את הסימן שלו. באופן כללי אם <span>$latex z=a+bi$</span> (בדרך כלל מסמנים מספרים מרוכבים ב-<span>$latex z,w$</span> ואותיות דומות) אז <strong>הצמוד</strong> של <span>$latex z$</span>, שמסומן <span>$latex \overline{z}$</span>, מוגדר להיות <span>$latex \overline{z}=a-bi$</span>. בתור תרגיל מומלץ להוכיח ש-<span>$latex \overline{z+w}=\overline{z}+\overline{w}$</span> ו-<span>$latex \overline{zw}=\overline{z}\cdot\overline{w}$</span>.</p>
+
+<p>עכשיו, המספר השני שאפשר "להפיק" מתוך <span>$latex z=a+bi$</span> הוא <span>$latex a^{2}+b^{2}$</span>. שימו לב שזה תמיד מספר ממשי, ותמיד מספר אי שלילי. עוד רגע נדבר על המשמעות הגיאומטרית שלו ואז יתברר למה זה מעניין, וגם יתברר למה אני מגדיר את ההגדרה הבאה: ה<strong>מודולוס</strong>, או <strong>הערך המוחלט</strong> של <span>$latex z=a+bi$</span> מוגדר להיות <span>$latex \left|z\right|=\sqrt{a^{2}+b^{2}}$</span>. מה שאומר ש-<span>$latex a^{2}+b^{2}=\left|z\right|^{2}$</span>.</p>
+
+<p>כעת יש לנו דרך קומפקטית לרשום את מה שגילינו: <span>$latex \frac{1}{z}=\frac{\overline{z}}{\left|z\right|^{2}}$</span>, ובאופן כללי שמנו לב לכך ש-<span>$latex z\cdot\overline{z}=\left|z\right|^{2}$</span>. לסיום סקירת התכונות של צמוד ומודולוס, בואו נכניס עוד סימון לתמונה: אם <span>$latex z=a+bi$</span> אז מסמנים <span>$latex \mbox{Re}z=a$</span> ו-<span>$latex \mbox{Im}z=b$</span> ("החלק הממשי" ו"החלק המדומה" של <span>$latex z$</span>, בהתאמה). עכשיו קל לראות ש-<span>$latex \mbox{Re}z=\frac{z+\overline{z}}{2}$</span> ו-<span>$latex \mbox{Im}z=\frac{z-\overline{z}}{2i}$</span>.</p>
+
+<p>בואו נעבור לדבר על גיאומטריה. באופן כללי באנליזה מורכבת אין מנוס מדיבור על גאומטריה - זו כנראה הדרך הטבעית ביותר לדבר על הנושא הזה, והרבה יותר קל להבין אותו בעזרתה. האבחנה הבסיסית היא שקל לחשוב על המספרים המרוכבים בתור <strong>נקודות במישור</strong>, וכך גם מציירים אותם. כדי שיהיה ברור שמדובר על מספרים מרוכבים קוראים למישור הזה "המישור המרוכב", אבל הוא נראה בדיוק כמו מישור רגיל. המספר <span>$latex a+bi$</span> מיוצג בו על ידי הנקודה <span>$latex \left(a,b\right)$</span>.</p>
+
+<p>עכשיו, כל נקודה שהיא מספר מרוכב אפשר לחבר בקו ישר לראשית. לקו הזה יש אורך, ושימוש זריז במשפט פיתגורס מראה שהאורך הזה הוא <span>$latex \sqrt{a^{2}+b^{2}}$</span> עבור המספר המרוכב <span>$latex a+bi$</span>. במילים אחרות - המשמעות הגאומטרית של <span>$latex \left|z\right|$</span> היא המרחק של <span>$latex \left|z\right|$</span> מראשית הצירים. ומה המשמעות הגאומטרית של <span>$latex \overline{z}$</span>? שלפו נייר ועט וציירו בעצמכם; לא קשה לראות ש-<span>$latex \overline{z}$</span> הוא הנקודה שמתקבלת כאשר <strong>משקפים</strong> את <span>$latex z$</span> ביחס לציר <span>$latex x$</span>. (מה זה חוסר הסימטריה הזה בין ציר <span>$latex x$</span> וציר <span>$latex y$</span>, שעוד יחזור בהמשך? זה בגלל שציר <span>$latex x$</span> מייצג את המספרים הממשיים וציר <span>$latex y$</span> את המדומים).</p>
+
+<p>כאשר מייצגים מספר מרוכב בתור <span>$latex a+bi$</span>, בעצם נותנים את הקואורדינטות <strong>הקרטזיות </strong>שלו במישור המרוכב. זו דרך אחת לייצג מספרים מרוכבים, אבל דרך אחרת היא לתת שני פרמטרים שונים - המרחק של הנקודה מראשית הצירים, והזווית שהקטע שמחבר את הנקודה עם ראשית הצירים יוצר עם אחד הצירים. מכיוון שרוצים שעבור מספרים ממשיים חיוביים הזווית הזו תהיה אפס, בוחרים לדבר על הזווית של הקטע הזה ביחס לכיוון החיובי של ציר <span>$latex x$</span> - כמה צריך לסובב את הקטע <strong>עם כיוון השעון</strong> כדי שהוא יתלכד עם ציר <span>$latex x$</span>. לזווית הזו קוראים <strong>הארגומנט</strong> של המספר המרוכב. למשל, לא קשה לראות שהמספר <span>$latex 1+i$</span> הוא בעל ארגומנט של 45 מעלות - ומכיוון שאנחנו עוסקים בחדו"א, לא נדבר על מעלות אלא על <strong><a href="http://www.gadial.net/2008/01/11/radians/">רדיאנים</a></strong>, כלומר הארגומנט הוא בעל <span>$latex \frac{\pi}{4}$</span> רדיאנים. מסמנים זאת <span>$latex \mbox{Arg}\left(1+i\right)=\frac{\pi}{4}$</span>.</p>
+
+<p>אלא שיש עם המושג של הארגומנט בעיה - אם נסובב את הקטע שמחבר את <span>$latex 1+i$</span> עם ראשית הצירים בזווית של <span>$latex \frac{\pi}{4}$</span> הוא יתלכד עם ציר <span>$latex x$</span>, אבל גם אם נסובב אותו בזווית של <span>$latex \frac{9\pi}{4}$</span>, וגם אם נסובב אותו בזווית של <span>$latex -\frac{7\pi}{4}$</span>, ובאופן כללי - כל סיבוב בזווית <span>$latex \frac{\pi}{4}+2k\pi$</span> כאשר <span>$latex k\in\mathbb{Z}$</span> ייתן את אותו אפקט. בעצם, יש לנו קבוצה אינסופית של זוויות, שמסומנת בתור <span>$latex \mbox{arg}\left(1+i\right)=\left\{ \frac{\pi}{4}+2k\pi\ |\ k\in\mathbb{Z}\right\} $</span>. מכיוון שלפעמים אנחנו רוצים לדבר על נציג <strong>קנוני</strong> של הקבוצה הזו, אנחנו מגדירים את <span>$latex \mbox{Arg}$</span> (עם אות גדולה בהתחלה, להבדיל מ-<span>$latex \mbox{arg}$</span> שמייצג את הקבוצה כולה) בתור האיבר היחיד של <span>$latex \mbox{arg}$</span> שהוא בין <span>$latex -\pi$</span> ו-<span>$latex \pi$</span>.</p>
+
+<p>הדיון התמים הזה מסתיר בתוכו את אחת המהומות הגדולות ביותר שנתקלים בהן כשמתחילים לדבר על פונקציות מרוכבות. <span>$latex \mbox{arg}$</span> היא דוגמה לפונקציה שכזו, שסובלת מ"בעיה" קטנה - היא מחזירה לא ערך אחד, אלא קבוצה שלמה של ערכים. לפונקציה כזו קוראים <strong>פונקציה מרובת ערכים</strong>. פורמלית, פונקציה <span>$latex f:A\to B$</span> מוגדרת בתור משהו שלכל איבר ב-<span>$latex A$</span> מתאים איבר <strong>יחיד</strong> ב-<span>$latex B$</span>, כך שאם מדברים על "פונקציה מרובת ערכים" <span>$latex f:A\to B$</span> ברור שזו לא פונקציה במובן הפורמלי של ההגדרה, אבל זו כן פונקציה אם משנים את הטווח: <span>$latex f:A\to2^{B}$</span> (לכל איבר ב-<span>$latex A$</span> מתאימים תת-קבוצה של <span>$latex B$</span>). כשמתעסקים בפונקציות מרוכבות הפורמליזם הזה לא מעניין אף אחד ולכן ממשיכים לדבר על הפונקציות מרובות הערכים כפונקציות מ-<span>$latex A$</span> ל-<span>$latex B$</span>, פשוט כאלו שמקבלות יותר מערך אחד. אם יש לנו פונקציה כזו, אפשר להגדיר מתוכה פונקציה חד ערכית על ידי בחירה של נציג מכל קבוצה - פונקציה חד ערכית כזו נקראת <strong>ענף</strong> של הפונקציה המקורית. </p>
+
+<p>בואו נראה דוגמה פשוטה: פונקציית השורש, <span>$latex f\left(z\right)=\sqrt{z}$</span>. עזבו אתכם ממספרים מרוכבים לבינתיים ותחשבו על מספרים ממשיים כי הדיון הזה עובד גם שם: אנחנו יודעים שלכל מספר חיובי <span>$latex a$</span> קיימים <strong>שני </strong>שורשים ממשיים, שבדרך כלל אנחנו מסמנים בתור <span>$latex \sqrt{a}$</span> ובתור <span>$latex -\sqrt{a}$</span>, כאשר המוסכמה היא ש-<span>$latex \sqrt{a}$</span> מסמן את השורש החיובי. למשל, אם <span>$latex a=9$</span> אז השורשים של <span>$latex a$</span> הם 3 ו-<span>$latex -3$</span>.</p>
+
+<p>אם כן, אם חושבים על שורש בתור פונקציה מרובת ערכים, מקבלים את הפונקציה <span>$latex g\left(a\right)=\left\{ \sqrt{a},-\sqrt{a}\right\} $</span>. עכשיו אפשר להגדיר את הענף <span>$latex g_{+}\left(a\right)=\sqrt{a}$</span> ואת הענף <span>$latex g_{-}\left(a\right)=-\sqrt{a}$</span> - קיבלנו מהפונקציה מרובת הערכים <span>$latex g$</span> שתי פונקציות "רגילות". איך הן משחקות זו עם זו? איך "מחברים" אותן ביחד? האם לקיחת ענף כזו לא יוצרת בעיות? למה לא לקחת ענף יותר מסובך, שבו לפעמים מחזירים <span>$latex \sqrt{a}$</span> ולפעמים מחזירים <span>$latex -\sqrt{a}$</span> לפי מצב הרוח? אלו שאלות טובות ונדון בהן בהמשך.</p>
+
+<p>בואו נחזור לגאומטריה. אמרנו שאפשר לתאר כל מספר מרוכב לפי אורך הקטע שמחבר אותו עם הראשית והזווית של הקטע הזה עם הכיוון החיובי של ציר <span>$latex x$</span>: אם האורך הוא <span>$latex r$</span> והזווית היא <span>$latex \theta$</span>, אז טריגונומטריה בסיסית מראה שהקואורדינטות הקרטזיות הרגילות של המספר המרוכב הן <span>$latex r\cos\theta$</span> ו-<span>$latex r\sin\theta$</span>, כלומר אפשר לכתוב את המספר המרוכב בתור <span>$latex r\cos\theta+ri\sin\theta$</span>, או להוציא את <span>$latex r$</span> כגורם משותף החוצה ולכתוב <span>$latex r\left(\cos\theta+i\sin\theta\right)$</span>. מכיוון שמסורבל לכתוב את הקוסינוס והסינוס בכל פעם כשהם תמיד עם אותה זווית, משתמשים לפעמים בקיצור <span>$latex \mbox{cis}$</span> (קיצור של <span>$latex \cos$</span> ואז המספר המדומה <span>$latex i$</span> ואז <span>$latex \sin$</span>) וכותבים את המספר בתור <span>$latex r\mbox{cis}\theta$</span>. זו שיטת כתיב נפוצה מאוד בבית הספר התיכון, אבל כמעט ולא נתקלתי בה במקומות אחרים. לרוב במקום לכתוב <span>$latex \mbox{cis}\theta$</span> כותבים <span>$latex e^{i\theta}$</span> כאשר <span>$latex e$</span> הוא הקבוע המתמטי המפורסם ("בסיס הלוגריתם הטבעי"). הסיבה לכך שאפשר להשתמש בקיצור המוזר הזה היא שמתקיים <span>$latex e^{i\theta}=\cos\theta+i\sin\theta$</span> - תוצאה זו נקראת <strong>נוסחת אוילר</strong> והיא רק דוגמה אחת לדברים המגניבים שמקבלים כשמתחילים להתעסק עם אנליזה מרוכבת. לעת עתה אני ארשה לעצמי להשתמש בחופשיות בסימון הזה ובתכונות שנגזרות ממנו; בהמשך אני אוכיח שהוא נכון ואסביר מאיפה הוא מגיע (כדאי להעיר ש"נכונות" כאן היא עניין סובייקטיבי; כל עוד לא הגדרנו מהי חזקה מרוכבת של מספר מותר לנו להגדיר אותה להיות מה שמתחשק לנו, ואפשר לקחת את נוסחת אוילר בתור <strong>הגדרה</strong>; עם זאת, אני חושב שה"הוכחה" שאציג תהיה משכנעת למדי בהסבר מדוע זו ההגדרה הנכונה).</p>
+
+<p>אילו תכונות נובעות מנוסחת אוילר? למשל, מה אנחנו יודעים קורה לחזקה של סכום? היא מתפרקת למכפלה של חזקות. כלומר, <span>$latex e^{x+y}=e^{x}e^{y}$</span>. לכן:</p>
+
+<p><span>$latex \cos\left(\alpha+\beta\right)+i\sin\left(\alpha+\beta\right)=e^{i\left(\alpha+\beta\right)}=e^{i\alpha}e^{i\beta}=\left(\cos\alpha+i\sin\alpha\right)\left(\cos\beta+i\sin\beta\right)$</span></p>
+
+<p><span>$latex =\left(\cos\alpha\cos\beta-\sin\alpha\sin\beta\right)+i\left(\sin\alpha\cos\beta+\cos\alpha\sin\beta\right)$</span></p>
+
+<p>וקיבלנו בן רגע שתי זהויות טריגונומטריות שסטודנטים מסכנים בבית הספר צריכים פשוט לשנן או לקרוא בדף הנוסחאות ומשום מה אף פעם לא נותנים להם שיטה אינטואיטיבית כמו זו כדי לזכור אותן:</p>
+
+<p><span>$latex \cos\left(\alpha+\beta\right)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$</span></p>
+
+<p><span>$latex \sin\left(\alpha+\beta\right)=\sin\alpha\cos\beta+\cos\alpha\sin\beta$</span></p>
+
+<p>שימו לב למה שנחמד פה - הזהויות הללו מתארות את סינוס וקוסינוס על זוויות ממשיות, כלומר אלו הן זהויות של פונקציות ממשיות, שמספרים מרוכבים לא מופיעים בהן ולו ברמז; עם זאת, להוכיח אותן באמצעות התבססות על תוצאות שמתקבלות ממספרים מרוכבים זה פשוט בצורה קיצונית (מרגע שיש לנו את התוצאות הללו, כמובן) ודרך ההוכחה הזו מספקת לנו תובנה נאה שמאפשרת לנו לראות <strong>למה</strong> הנוסחאות הללו נכונות - המספרים המרוכבים הרחיבו את אופק ההתבוננות שלנו גם על העולמות שאינם מרוכבים. זו אחת הסיבות שבגללן התחום הזה יפה כל כך - אבל כמובן, לא היחידה. כמו כל תחום מתמטי שמכבד את עצמו, גם לתחום הזה יש תוצאות יפהפיות שלא מחפשות הצדקה לקיומן בתוך תחומים אחרים. </p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/07/21/complex_analysis_intro/';
+      this.page.identifier = 'http://gadial.net/2013/07/21/complex_analysis_intro/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/07/21/complex_analysis_intro/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

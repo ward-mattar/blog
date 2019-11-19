@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הפרדוקס של ראסל ומשפט קנטור | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הפרדוקס של ראסל ומשפט קנטור" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בעירייה אחת גר לו ספר. והמלך של אותה עיירה היה מטורלל והעביר את החוק הבא: על כל תושבי העירייה להסתפר אצל הספר, מלבד אותם תושבים שמסוגלים לספר את עצמם; אלו אכן חייבים לספר את עצמם ואסור להם להסתפר אצל הספר. על פניו אין בעיה עם החוק הזה, מלבד אחת - איפה הספר עצמו יסתפר?" />
+<meta property="og:description" content="בעירייה אחת גר לו ספר. והמלך של אותה עיירה היה מטורלל והעביר את החוק הבא: על כל תושבי העירייה להסתפר אצל הספר, מלבד אותם תושבים שמסוגלים לספר את עצמם; אלו אכן חייבים לספר את עצמם ואסור להם להסתפר אצל הספר. על פניו אין בעיה עם החוק הזה, מלבד אחת - איפה הספר עצמו יסתפר?" />
+<link rel="canonical" href="http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/" />
+<meta property="og:url" content="http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-11-21T01:20:48+02:00" />
+<script type="application/ld+json">
+{"headline":"הפרדוקס של ראסל ומשפט קנטור","dateModified":"2010-11-21T01:20:48+02:00","datePublished":"2010-11-21T01:20:48+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/"},"url":"http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/","description":"בעירייה אחת גר לו ספר. והמלך של אותה עיירה היה מטורלל והעביר את החוק הבא: על כל תושבי העירייה להסתפר אצל הספר, מלבד אותם תושבים שמסוגלים לספר את עצמם; אלו אכן חייבים לספר את עצמם ואסור להם להסתפר אצל הספר. על פניו אין בעיה עם החוק הזה, מלבד אחת - איפה הספר עצמו יסתפר?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הפרדוקס של ראסל ומשפט קנטור</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-11-21T01:20:48+02:00" itemprop="datePublished">Nov 21, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בעירייה אחת גר לו ספר. והמלך של אותה עיירה היה מטורלל והעביר את החוק הבא: על כל תושבי העירייה להסתפר אצל הספר, מלבד אותם תושבים שמסוגלים לספר את עצמם; אלו אכן חייבים לספר את עצמם ואסור להם להסתפר אצל הספר. על פניו אין בעיה עם החוק הזה, מלבד אחת - איפה הספר עצמו יסתפר?</p>
+
+<p>כי מצד אחד, אם הוא אינו מסוגל לספר את עצמו (אפילו לספרים מקצועיים זה לא קל, אני משער) אז על פי החוק הוא <strong>צריך</strong> להסתפר אצל עצמו; מצד שני, אם הוא כן מסוגל לספר את עצמו, אז על פי החוק <strong>אסור</strong> לו להסתפר אצל הספר; עליו לספר את עצמו. אבל הוא עצמו זה הספר! וכן הלאה וכן הלאה. הסיטואציה המטופשת הזו היא הניסוח הלא פורמלי הנפוץ של מה שנקרא במתמטיקה “הפרדוקס של ראסל”, על שם ברטרנד ראסל - לוגיקאי ופילוסוף מפורסם - שגילה אותו.</p>
+
+<p>דרך נחמדה אחרת לספר את אותו הסיפור היא באופן הבא - שוב יש לנו מלך מטורלל (אנחנו מזהים פה דפוס מסויים, מה?) וכעת הוא השתלט על איזה ברנש מסכן ואומר לו “אם הדבר הבא שתגיד יהיה שקר, אמית אותך בתליה; ואם הדבר הבא שתגיד יהיה אמת, אמית אותך בכיתת יורים”. מה יגיד הברנש המסכן כדי להינצל ממוות? ובכן, עצרו וחשבו לרגע בעצמכם אם אתם רוצים לפתור את החידה.</p>
+
+<p>הפתרון הוא שהברנש יגיד “אתה תמית אותי בתליה”. שכן אז, אם המלך באמת ימית אותו בתליה, יתברר שהברנש בכלל אמר את האמת, ולכן על פי חוק המלך היה צריך להרוג אותו בכיתת יורים בכלל; ואילו אם המלך ימית את הברנש בכיתת יורים יעלה מכך שהברנש שיקר ולכן היה צריך לתלותו. אם כן, אין למלך דרך לקיים את הבטחתו, וההנחה הסמויה היא שכעת הוא ישחרר את האדם לחופשי (במקום, נניח, שיצווה על השלכתו לתנינים כי ההתחכמויות הלוגיות הללו רק מעצבנות אותו יותר).</p>
+
+<p>בשני המקרים הללו הבעיה זהה - אנחנו מגדירים “חוק כללי”מסויים, ואז משתרבבת לנו פנימה איזו דלת אחורית שהחוק פשוט לא יכול לחול עליה. זה גם מה שראסל הבחין בו. באופן אירוני משהו, ראסל שם לב לפרדוקס בזמן שניסה למצוא שגיאה בהוכחה של משפט אחר, שעושה שימוש ברעיון פרדוקסלי דומה. המשפט היה של גאורג קנטור, ועסק בתורת הקבוצות; הוא ההכללה של שיטת האלכסון של קנטור שהוזכרה כאן לא מזמן למקרים כלליים יותר; בניסוח פשוט, המשפט הזה מוכיח שיש אינסוף גדלים שונים של אינסוף (בעוד שהאלכסון שהראיתי כבר הראה לנו רק שיש שניים לפחות).</p>
+
+<p>אפשר לתאר מתמטית את פרדוקס ראסל פשוט באמצעות האמירה “קבוצת כל הקבוצות שאינן איבר של עצמן”. אם יש כזו קבוצה, האם היא איבר של עצמה? אם כן, אז על פי ההגדרה שלה, בתור הקבוצה של כל הקבוצות <strong>שאינן</strong> איבר של עצמן, היא אינה איבר של עצמה; מצד שני, אם היא אינה איבר של עצמה היא עונה לקריטריון “קבוצה שאינה איבר של עצמה” ולכן כן צריכה להיות איבר של עצמה - סתירה בשני המקרים, בדיוק כפי שקרה לספר המסכן. בסיפור הספר פשוט החלפנו את הקבוצות באנשים ואת “להיות איבר של” ב”להסתפר אצל”. אבל אני רוצה לעשות יותר מלתת תיאור מילולי ולתת תיאור מתמטי של ממש, ולו כדי לנצל את התירוץ הזה להציג סימונים ומושגים בסיסיים בתורת הקבוצות.</p>
+
+<p>המושג של <strong>קבוצה</strong> אינו מוגדר באופן חד משמעי במתמטיקה; למעשה, הפרדוקס של ראסל היה אחת מהסיבות שבגללן התברר שההגדרות המעורפלות הן בעייתיות. לעת עתה חשבו על קבוצה כמעין “קופסה” שיכולה להכיל איברים מסויימים - בין אם אלו מספרים, אותיות, שמות של אנשים, אנשים, וכו’. בפרט, קבוצות יכולות להכיל גם קבוצות אחרות. מסמנים קבוצות באותיות - נניח, <span>$latex A,B,C$</span>; ואיברים באותיות קטנות - נניח <span>$latex x,y,z$</span> או <span>$latex a,b,c$</span> - ומשתמשים בסימון <span>$latex a\in A$</span> כדי לציין “האיבר <span>$latex a$</span> שייך לקבוצה <span>$latex A$</span>”, ובסימון <span>$latex a\notin A$</span> כדי לציין “האיבר <span>$latex a$</span> אינו שייך לקבוצה <span>$latex A$</span>”. זה בערך כל מה שצריך בשביל לעסוק בתורת הקבוצות - היכרות עם מושג ה”קיים”הזה. הבסיס להכל הוא ההנחה שלכל איבר <span>$latex a$</span>, או ש-<span>$latex a\in A$</span> או ש-<span>$latex a\notin A$</span>; אין אפשרות אחרת.</p>
+
+<p>נוהגים לסמן קבוצות עם סוגריים מסולסלים. למשל, <span>$latex A=\left\{ 1,2,5,1,4\right\} $</span> היא הקבוצה שהאיברים שלה הם 1,2,5,4 - אין חשיבות לסדר ההופעה של איברים ואם איבר מופיע פעמיים סופרים אותו רק פעם אחת (קיים מושג שנקרא Multiset שבו גם לכמות המופעים יש חשיבות, אבל אין לנו צורך בו). יש דרכי סימון יותר מחוכמות - כך למשל הסימון<span>$latex \mathbb{N}=\left\{ 1,2,3,\dots\right\} $</span> מייצג את קבוצת כל המספרים הטבעיים. אבל האופן הכי נפוץ שבו מסומנות קבוצות במתמטיקה הוא באמצעות <strong>קריטריון</strong> כלשהו. בצורת סימון זו עדיין כותבים סוגריים מסולסלים, אבל משתמשים בקו הפרדה באמצע שלהם, כשבצד ימין כתוב קריטריון כלשהו, ובצד שמאל כתוב “האיבר הכללי”של הקבוצה, באופן שנובע איכשהו מהקריטריון. זה מבלבל עד שרואים דוגמאות. למשל, <span>$latex \left\{ n^{2}|n\in\mathbb{N}\right\} $</span> היא קבוצת כל הריבועים; צריך לקרוא את זה בתור “כל האיברים מהצורה <span>$latex n^{2}$</span> כאשר <span>$latex n$</span> הוא מספר טבעי”.</p>
+
+<p>כעת אפשר להציג את פרדוקס ראסל מתמטית - נתבונן בקבוצה <span>$latex A=\left\{ x|x\notin x\right\} $</span>; זוהי הקבוצה של כל ה-<span>$latex x$</span>-ים שאינם איברים של עצמם; מן הסתם זה מעלה כמה שאלות מעניינות - ראשית, מה אם <span>$latex x$</span> בכלל אינו קבוצה? ובכן, אפשר להגדיר מראש את <span>$latex A$</span> להכיל רק קבוצות ולא איברים שאינם קבוצות, אבל תחת זאת אפשר להניח שמלכתחילה כל האובייקטים שעליהם אי פעם נרצה לדבר במסגרת תורת הקבוצות הן קבוצות אחרות. זו הנחה הרבה פחות מגבילה מכפי שנראה, כי ניתן לבנות באמצעות קבוצות את מרבית האובייקטים המתמטיים המוכרים - מספרים, פונקציות, חבורות וכו’ וכו’. בנוסף, אם זה לא מפיס את דעתכם, אין בעיה: <span>$latex x\notin x$</span> פירושו ש-<span>$latex x$</span> אינו איבר של <span>$latex x$</span> בין אם בגלל ש-<span>$latex x$</span> כלל אינו קבוצה בעצמו ובין אם הוא קבוצה שאינה מכילה את עצמה.</p>
+
+<p>שנית, האם אין בעיה בלדבר על כך שקבוצה תהיה איבר של עצמה? זה בוודאי נשמע מוזר מאוד במבט ראשון ולא ברור אם זה יכול לקרות. אלא שגם זה לא חשוב לפרדוקס - אם אף קבוצה לא הייתה איבר של עצמה, אז <span>$latex A$</span> הייתה “קבוצת כל הקבוצות” ובפרט הייתה מכילה את <span>$latex A$</span> עצמה ושוב היינו מגיעים לסתירה. המסקנה היא שהקבוצה <span>$latex A$</span> בכלל לא יכולה להתקיים; המסקנה מרחיקת הלכת יותר היא שאם הגדרנו קריטריון כלשהו, זה עדיין לא מבטיח שקיימת קבוצה שעונה לקריטריון! בתורת הקבוצות האקסיומטית הפתרון לבעיה הזו - שכן עדיין רוצים להגדיר קבוצות באמצעות קריטריון - הוא להגביל מראש את “מגרש המשחקים” שלנו בהגדרה של קבוצה. הגדרה באמצעות קריטריון כלשהו תמיד תופעל רק על כל האיברים שכבר קיימים באיזו שהיא קבוצה אחרת נתונה. למשל, את <span>$latex A$</span> הפרדוקסלית שלנו נסמן בתור <span>$latex A=\left\{ x\in B|x\notin x\right\} $</span>; במקרה זה אין בעיה - ייתכן מאוד ש-<span>$latex A\notin A$</span> מבלי שתהיה בכך סתירה, אם מלכתחילה <span>$latex A$</span> לא היה ב-<span>$latex B$</span>. מכיוון שבתורת הקבוצות האקסיומטית הקבוצות נבנות באופן איטי, זהיר ומחושב, קבוצה כמו <span>$latex A$</span> לא יכולה להשתרבב פנימה מלכתחילה ולכן הפרדוקס נעלם.</p>
+
+<p>אם כן, הפרדוקס מצביע על בעיה במה שמכונה “תורת הקבוצות הנאיבית”; הוא פשוט אומר שלא כל הגדרה שנזרוק באוויר לקבוצה אכן “תעבוד”ויהיה מובטח לנו שאין בה סתירות פנימיות. למתמטיקאים של תחילת המאה זה היה גילוי מרעיש למדי שעורר הד רב; תורת הקבוצות הייתה גם כך תחום שנוי במחלוקת למדי (מדוע? זה עיסוק לפוסט אחר) והפרדוקס של ראסל היה העדות החדה ביותר לכך שביסוס המתמטיקה על תורת הקבוצות הוא דבר מסוכן מאוד. עד כדי כך שגוטלוב פרגה, מי שפחות או יותר המציא את הלוגיקה המתמטית, זנח את כתיבת הספר שלו על יסודות המתמטיקה שהתבסס על תורת הקבוצות של קנטור.</p>
+
+<p>אולי כדאי להעיר שהפרדוקס של ראסל לא היה הפרדוקס הראשון שהתגלה בתורת הקבוצות, ושהפרדוקסים הראשונים התגלו בידי קנטור עצמו. פרדוקס שקל מאוד לתאר הוא זה - כפי שכבר הזכרתי בפוסט, קנטור הוכיח משפט שאומר, פחות או יותר, שלכל קבוצה קיימת קבוצה הגדולה ממנה בעוצמתה (בגודלה האינסופי). אם כן, מהו גודלה של “קבוצת כל הקבוצות”? הרי יש קבוצה שגדולה ממנה, אבל מעצם הגדרתה היא מכילה את <strong>הכל</strong>, ולכן גם מכילה כל דבר שיש באותה קבוצה שגדולה ממנה, ולכן היא צריכה להיות גדולה לפחות כמוה - סתירה. לקנטור הפרדוקס הזה לא כל כך הפריע - אפשר היה לפטור אותו ב”לא לכל הקבוצות יש עוצמה” או “העוצמה של קבוצות כל הקבוצות היא “מוחלטת”” וכדומה. לפרדוקס של ראסל היו שיניים חדות יותר; ועדיין, אני חושב שהאגדה הנפוצה לפיה קנטור השתגע <strong>בגלל</strong> הפרדוקס של ראסל לא קשורה במאום למציאות. נכון שקנטור הגיע לבתי משוגעים, ואפילו סביר להניח שהעיסוק שלו במתמטיקה - ובפרט, היחס העוין עד מאוד לו הוא זכה מחלקים של הקהילה המתמטית - תרם לכך, אבל לפרדוקס של ראסל, ספציפית, כנראה לא הייתה השפעה כזו (וכדאי לזכור שקנטור כבר סבל מהתמוטטויות עצבים והגיע לבתי משוגעים לפני פרסום הפרדוקס).</p>
+
+<p>למרות זאת, הפרדוקס של ראסל היה מה שהמריץ את הקהילה המתמטית לפעולה - לבנות למתמטיקה בסיס שעדיין יישען על תורת הקבוצות והלוגיקה, אבל יהיה חף מפרדוקסים. צרמלו הציע גישה אקסיומטית לתורת הקבוצות שהצליחה להימנע מפרדוקסים (ומערכת האקסיומות שלו ושל פרנקל - ZF - היא כיום מערכת האקסיומות הסטנדרטית במתמטיקה; אם כי לעבודתו היומיומית של המתמטיקאי שאינו עוסק בלוגיקה או תורת הקבוצות היא לא רלוונטית במיוחד). ראסל עצמו, יחד עם וויטהד, כתב ספר מונומנטלי שבו הוא הציע גישה חפה מפרדוקסים לתורת הקבוצות ובנה פורמלית חלקים מהמתמטיקה באמצעותה; זה כנראה היה הפרוייקט השאפתני ביותר לפורמליזציה של המתמטיקה אי פעם. התוצאה הייתה ספר ענקי שקרוב לודאי שלא רבים קראו, וגם לא היה גמור - ראסל המסכן נשבר מתישהו והספר לא הצליח להקיף את כל המתמטיקה. אחר כך צצו גם בעיות נוספות (משפטי אי השלמות של גדל…) אך גם זה לדיון בפוסט אחר.</p>
+
+<p>בואו נחזור עכשיו לקנטור ולמשפט שלו. לצורך כך אני צריך לדבר על עוד מושג אחד, ולהציג עוד סימון אחד: תת-קבוצה. <span>$latex A$</span> היא תת-קבוצה של <span>$latex B$</span> אם כל איבר של <span>$latex A$</span> הוא גם איבר של <span>$latex B$</span>, ובמילים - אם מתקיים שכאשר <span>$latex a\in A$</span> אז גם <span>$latex a\in B$</span>. במקרה כזה מסמנים <span>$latex A\subseteq B$</span>. למשל, עבור <span>$latex A=\left\{ 2,4,6,\dots\right\} $</span> מתקיים <span>$latex A\subseteq\mathbb{N}$</span> - הזוגיים הם תת-קבוצה של הטבעיים. אם <span>$latex A$</span> היא קבוצה, אז ב-<span>$latex P\left(A\right)$</span> מסמנים את קבוצת כל תתי הקבוצות של <span>$latex A$</span>. למשל, אם <span>$latex A=\left\{ 1,2\right\} $</span> אז <span>$latex P\left(A\right)=\left\{ \emptyset,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 1,2\right\} \right\} $</span> כאשר <span>$latex \emptyset$</span> הוא הסימון המקובל עבור “הקבוצה שאין בה איברים” (כמו בקבוק שתיה ריק). ל-<span>$latex P\left(A\right)$</span> קוראים “קבוצת החזקה” של <span>$latex A$</span>, אולי בגלל שאם ב-<span>$latex A$</span> יש <span>$latex n$</span> איברים, אז ב-<span>$latex P\left(A\right)$</span> יש <span>$latex 2^{n}$</span> איברים (זה נובע מקומבינטוריקה בסיסית - כל איבר יכול להיות שייך או לא שייך לתת-קבוצה של <span>$latex A$</span> בלי תלות ב-<span>$latex n$</span> האיברים האחרים, ולכן כל תת-קבוצה של <span>$latex A$</span> נקבעת על ידי סדרה באורך <span>$latex n$</span> של “כן”ו”לא”-ים). המושג של קבוצת החזקה אינו קל להבנה במיוחד, כך שאם איבדתם אותי נסו לשחק איתו טיפה בעצמכם.</p>
+
+<p>המשפט של קנטור הוא שאם <span>$latex A$</span> קבוצה, אז גודלה של <span>$latex P\left(A\right)$</span> הוא גדול יותר משל <span>$latex A$</span>. הדרך הפורמלית להשוות גדלים היא באמצעות <strong>פונקציה</strong>; פורמלית, מה שקנטור מוכיח הוא שאם ננסה להתאים לכל איבר של <span>$latex A$</span> איבר של <span>$latex P\left(A\right)$</span> כך ש<strong>כל</strong> האיברים של <span>$latex P\left(A\right)$</span> “נלכדים” בידי איבר של <span>$latex A$</span>, ניכשל.</p>
+
+<p>ההוכחה פשוטה ויפה. נניח ש-<span>$latex f$</span> היא התאמה שכזו: כלומר, לכל <span>$latex a\in A$</span>, נסמן ב-<span>$latex f\left(a\right)$</span> את האיבר של <span>$latex P\left(A\right)$</span> שאליו נעביר את <span>$latex a$</span>. אם כן, <span>$latex f\left(a\right)$</span> היא קבוצה; תת קבוצה של <span>$latex A$</span> עצמה. כעת נגדיר את הקבוצה הבאה: <span>$latex X=\left\{ a\in A|a\notin f\left(a\right)\right\} $</span>. במילים: כל האיברים של <span>$latex A$</span> שאינם איברים בקבוצה שהפונקציה “ציוותה”אותם איתה. מכיוון ש-<span>$latex X\subseteq A$</span> אז על פי ההנחה שלנו לגבי זה ש-<span>$latex A$</span> באותו גודל כמו <span>$latex P\left(A\right)$</span>, קיים <span>$latex x\in A$</span> כך ש-<span>$latex f\left(x\right)=X$</span>. אבל עכשיו אנחנו בבעיה - האם <span>$latex x\in X$</span> או לא?</p>
+
+<p><span>$latex x$</span> הוא בדיוק הספר שאינו מספר את עצמו. אם <span>$latex x\in X$</span> אז על פי הגדרת הקבוצה <span>$latex X$</span>, מתקיים <span>$latex x\notin f\left(x\right)=X$</span> וזו סתירה. אבל אם <span>$latex x\notin X$</span> אז על פי הגדרת <span>$latex X$</span> מתקיים <span>$latex x\in f\left(x\right)=X$</span> וזו שוב סתירה. בקיצור, ההנחה שקיימת <span>$latex f$</span> כזו הייתה שגויה, ולכן הגודל של <span>$latex P\left(A\right)$</span> (אם בכלל ניתן לייחס לה גודל - זו לא הנחה טריוויאלית!) הוא גדול מזה של <span>$latex A$</span>.</p>
+
+<p>אפשר לחשוב על הפרדוקס של ראסל בתור מה שקורה כשמפעילים את ההוכחה הזו על קבוצת כל הקבוצות, כשהפונקציה שתוקפים היא זו שמעבירה כל קבוצה לעצמה. גם בלי זה, לטעמי זו אחת ההוכחות היפות במתמטיקה - אני מקווה שלא הצלחתי להרוס אותה לחלוטין עבור הקוראים.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/';
+      this.page.identifier = 'http://gadial.net/2010/11/21/russel_paradox_and_cantor_theorem/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2010/11/21/russel_paradox_and_cantor_theorem/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אז מה זה חשבון מודולרי? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אז מה זה חשבון מודולרי?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אני רוצה להקדיש פוסט לנושא שלא כתבתי לו מעולם פוסט ייעודי בבלוג, למרות שהוא הופיע בשלל פוסטים מכאן ועד להודעה חדשה - חשבון מודולרי. מכיוון שהמתמטיקה הבסיסית שמאחורי חשבון מודולרי איננה מסובכת, אני מתכוון לפתח את הכל בתוך הפוסט - מה שאומר שהוא יהפוך די מהר לטכני; עם זאת, אני מקווה שכמעט כל אדם שמתעניין במתמטיקה יוכל להבין את הטכניקה גם אם אין לו השכלה מתמטית מיוחדת, ואני חושב שהרווח מהבנה של המתמטיקה הזו הוא אדיר." />
+<meta property="og:description" content="אני רוצה להקדיש פוסט לנושא שלא כתבתי לו מעולם פוסט ייעודי בבלוג, למרות שהוא הופיע בשלל פוסטים מכאן ועד להודעה חדשה - חשבון מודולרי. מכיוון שהמתמטיקה הבסיסית שמאחורי חשבון מודולרי איננה מסובכת, אני מתכוון לפתח את הכל בתוך הפוסט - מה שאומר שהוא יהפוך די מהר לטכני; עם זאת, אני מקווה שכמעט כל אדם שמתעניין במתמטיקה יוכל להבין את הטכניקה גם אם אין לו השכלה מתמטית מיוחדת, ואני חושב שהרווח מהבנה של המתמטיקה הזו הוא אדיר." />
+<link rel="canonical" href="http://gadial.net/2013/05/14/modular_arithmetic/" />
+<meta property="og:url" content="http://gadial.net/2013/05/14/modular_arithmetic/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-05-14T02:44:38+03:00" />
+<script type="application/ld+json">
+{"headline":"אז מה זה חשבון מודולרי?","dateModified":"2013-05-14T02:44:38+03:00","datePublished":"2013-05-14T02:44:38+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/05/14/modular_arithmetic/"},"url":"http://gadial.net/2013/05/14/modular_arithmetic/","description":"אני רוצה להקדיש פוסט לנושא שלא כתבתי לו מעולם פוסט ייעודי בבלוג, למרות שהוא הופיע בשלל פוסטים מכאן ועד להודעה חדשה - חשבון מודולרי. מכיוון שהמתמטיקה הבסיסית שמאחורי חשבון מודולרי איננה מסובכת, אני מתכוון לפתח את הכל בתוך הפוסט - מה שאומר שהוא יהפוך די מהר לטכני; עם זאת, אני מקווה שכמעט כל אדם שמתעניין במתמטיקה יוכל להבין את הטכניקה גם אם אין לו השכלה מתמטית מיוחדת, ואני חושב שהרווח מהבנה של המתמטיקה הזו הוא אדיר.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אז מה זה חשבון מודולרי?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-05-14T02:44:38+03:00" itemprop="datePublished">May 14, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אני רוצה להקדיש פוסט לנושא שלא כתבתי לו מעולם פוסט ייעודי בבלוג, למרות שהוא הופיע בשלל פוסטים מכאן ועד להודעה חדשה - חשבון מודולרי. מכיוון שהמתמטיקה הבסיסית שמאחורי חשבון מודולרי איננה מסובכת, אני מתכוון לפתח את הכל בתוך הפוסט - מה שאומר שהוא יהפוך די מהר לטכני; עם זאת, אני מקווה שכמעט כל אדם שמתעניין במתמטיקה יוכל להבין את הטכניקה גם אם אין לו השכלה מתמטית מיוחדת, ואני חושב שהרווח מהבנה של המתמטיקה הזו הוא אדיר.</p>
+
+<p>לפני שנתחיל להיכנס לפרטים, הנה האינטואיציה הקלאסית: חשבון מודולורי הוא מה שכולנו עושים כשאנחנו מנסים לדעת מה תהיה השעה עוד כך וכך שעות. אם עכשיו השעה היא 19:00 ואנחנו שואלים “מה תהיה השעה עוד 10 שעות?” אנחנו מוסיפים 10 ל-19, מקבלים 29, ואז מחלקים ב-24 (מספר השעות ביממה), לוקחים את השארית - 5, וזו התשובה. חלקנו עושים את זה אחרת, כמובן; ראשית שואלים “עוד כמה שעות יש עד 24?”, רואים שזה 5, ואומרים “אוקיי, אז אחרי חצות יש עוד 5 שעות להוסיף, ומגיעים ל-5” אבל האפקט בשני המקרים הוא אותו אפקט, ואנחנו מקבלים את המספר שמתקבל מפעולת החשבון ה”רגילה” כשאחריה מחלקים ב-24 ולוקחים את השארית. חשבון מודולרי זה בדיוק זה, רק לאו דווקא עם 24 בתור מה שמחלקים בו.</p>
+
+<p>ועכשיו בואו נעבור לפרטים.</p>
+
+<p>מה זה חשבון “רגיל”, כולנו יודעים - יש לנו מספרים, יש לנו פעולות של חיבור, כפל, חיסור וחילוק, ואנחנו עושים איתן… דברים. בדרך כלל אנחנו מתחילים את המשחק מהמספרים הטבעיים - <span>$latex 0,1,2,3,\dots$</span> (שאני כולל בהם גם את 0). עכשיו, אני רוצה שתשימו לב לכך שבמובן מסויים אפשר להסתפק רק בפעולות של חיבור וכפל, ולהגדיר חיסור וחילוק באמצעותן. למשל, הפתרון למשוואה <span>$latex x=5-2$</span> הוא מספר <span>$latex x$</span> אשר מקיים <span>$latex 2+x=5$</span> (כלומר 3), והפתרון למשוואה <span>$latex x=6:3$</span> הוא מספר אשר מקיים <span>$latex 3\cdot x=6$</span> (כלומר 2). לא תמיד קיימים פתרונות למשוואות הללו במספרים הטבעיים, למשל למשוואה <span>$latex x=2-5$</span> אין פתרון במספרים הטבעיים, ולכן אנחנו מכניסים לתמונה <strong>מספרים שליליים</strong> ו<strong>שברים</strong>; אבל בפוסט הזה לא אדבר עליהם בכלל כי לא יהיה בכך צורך.</p>
+
+<p>אם כן, נדבר על המספרים הטבעיים ועל פעולות החיבור והכפל. יש להודות שאפילו על הכפל אפשר לוותר ולתאר אותו עם חיבור בלבד, אבל אני מעדיף לדבר על שתי הפעולות הללו גם כי זה יהיה פשוט יותר, וגם כי במתמטיקה כללית יותר (שלא תופיע בפוסט) יש לחיבור ולכפל משמעויות נוספות ולא תמיד ניתן להגדיר את הכפל בעזרת החיבור.</p>
+
+<p>עכשיו, אם יש לנו מספר טבעי <span>$latex a$</span> ומספר טבעי <span>$latex n$</span> שהוא גדול מאפס, אז אפשר <strong>לחלק עם שארית</strong> את <span>$latex a$</span> ב-<span>$latex n$</span>, כפי שרובנו למדנו בבית הספר היסודי. המשמעות של זה היא שאפשר למצוא מספרים שלמים <span>$latex q$</span> (“מנה”) ו-<span>$latex r$</span> (“שארית”) כך שמתקיים השוויון <span>$latex a=nq+r$</span>, ובנוסף לכך <span>$latex 0\le r&lt;n$</span>. דרך נוחה להוכיח שאפשר לעשות זאת היא באינדוקציה על הגודל של <span>$latex a$</span>: אם <span>$latex 0\le a&lt;n$</span> אז <span>$latex a=n\cdot0+a$</span> הוא השוויון שלנו (כלומר, <span>$latex q=0,r=a$</span> עובד במקרה הזה). אם <span>$latex a\ge n$</span> אז נתבונן על <span>$latex a-n$</span>: מהנחת האינדוקציה אנחנו יודעים שקיימים <span>$latex q,r$</span> כך ש-<span>$latex a-n=nq+r$</span> כך ש-<span>$latex 0\le r&lt;n$</span>, ולכן (על ידי העברת אגפים) נקבל ש-<span>$latex a=n\left(q+1\right)+r$</span> וזה שוב שוויון כפי שרצינו לקבל.</p>
+
+<p>אם <span>$latex a=nq$</span>, כלומר השארית של חלוקת <span>$latex a$</span> ב-<span>$latex n$</span> היא 0, אומרים (באופן מתבקש למדי) ש-<span>$latex n$</span> <strong>מחלק</strong> את <span>$latex a$</span> והסימון המקובל לכך הוא <span>$latex n|a$</span>.</p>
+
+<p>כעת נציג הגדרה חשובה במיוחד: שני מספרים <span>$latex a,b$</span> (טבעים או אפילו שלמים - כלומר, כולל שליליים, שלא תיארתי בפוסט הזה) הם <strong>שקולים מודולו <span>$latex n$</span></strong>, ואני כותב זאת <span>$latex a\equiv_{n}b$</span>, אם השארית שלהם בחלוקה ב-<span>$latex n$</span> היא זהה. כלומר, אם קיים <span>$latex 0\le r&lt;n$</span> וקיימים <span>$latex q_{1},q_{2}$</span> כך ש-<span>$latex a=nq_{1}+r$</span> ו-<span>$latex b=nq_{2}+r$</span> אז <span>$latex a\equiv_{n}b$</span>. שימו לב שאם השוויונות הללו מתקיימים אז <span>$latex a-b=n\left(q_{1}-q_{2}\right)+\left(r-r\right)=n\left(q_{1}-q_{2}\right)$</span>, כלומר <span>$latex n|a-b$</span>, וגם ההפך נכון: אם <span>$latex n|a-b$</span> אז <span>$latex a-b=nq$</span> עבור איזה שהוא <span>$latex q$</span>, כלומר <span>$latex a=nq+b$</span>. נכתוב <span>$latex b=nt+r$</span> כך ש-<span>$latex 0\le r&lt;n$</span> ונקבל ש-<span>$latex a=n\left(q+t\right)+r$</span>, כלומר השארית של חלוקת <span>$latex a$</span> ב-<span>$latex n$</span> שווה לשארית של חלוקת <span>$latex b$</span> ב-<span>$latex n$</span> והיא <span>$latex r$</span>. מסקנה: <span>$latex a\equiv_{n}b$</span> אם ורק אם <span>$latex n|a-b$</span>. זה תנאי נוח יותר לבדיקה לעתים קרובות ולכן הצגתי אותו. עוד הערה קטנה היא שלרוב בספרות המתמטית כותבים <span>$latex a\equiv b\left(\mbox{mod }n\right)$</span> כדי לציין שקילות מודולו <span>$latex n$</span>; אני אישית פחות אוהב את הסימון הזה והוא פחות נוח לי ולכן אני משתמש ב-<span>$latex a\equiv_{n}b$</span> (שגם הוא סימון סטנדרטי אבל הרבה פחות מקובל).</p>
+
+<p>עכשיו, שקילות מודולו <span>$latex n$</span> היא מה שנקרא במתמטיקה <strong>יחס שקילות</strong>. זה אומר שהיא מקיימת שלוש תכונות: ראשית, <span>$latex a\equiv_{n}a$</span> לכל <span>$latex a,n$</span> טבעיים (כש-<span>$latex n&gt;0$</span>; לא אטרח לציין זאת במפורש כל פעם). זאת מכיוון ש-<span>$latex a-a=0$</span> וכמובן ש-<span>$latex n|0$</span>. התכונה לפיה כל <span>$latex a$</span> שקול מודולו <span>$latex n$</span> לעצמו נקראת <strong>רפלקסיביות</strong>.</p>
+
+<p>כמו כן, שקילות מודולו <span>$latex n$</span> היא <strong>סימטרית</strong>, כלומר אם <span>$latex a\equiv_{n}b$</span> אז זה אומר ש-<span>$latex n|a-b$</span> ולכן <span>$latex n=q\left(a-b\right)$</span> עבור <span>$latex q$</span> כלשהו, ולכן <span>$latex n=-q\left(b-a\right)$</span> ולכן <span>$latex b\equiv_{n}a$</span>, כלומר השאלה מי בצד ימין ומי בצד שמאל אינה ממש חשובה כשמדברים על שקילות מודולו <span>$latex n$</span>.</p>
+
+<p>לבסוף, שקילות מודולו <span>$latex n$</span> היא <strong>טרנזיטיבית</strong>, ומשמעות הדבר היא זו: אם <span>$latex a\equiv_{n}b$</span> וגם <span>$latex b\equiv_{n}c$</span> אז זה אומר שקיימים <span>$latex q_{1},q_{2}$</span> כך ש-<span>$latex q_{1}n=a-b$</span> ו-<span>$latex q_{2}n=b-c$</span>. נחבר את שתי המשוואות ונקבל ש-<span>$latex \left(q_{1}+q_{2}\right)n=\left(a-b\right)+\left(b-c\right)=a-c$</span> ולכן <span>$latex a\equiv_{n}c$</span>.</p>
+
+<p>באופן כללי במתמטיקה, כל יחס שקילות שמוגדר על קבוצה כלשהי - במקרה שלנו, קבוצת המספרים הטבעיים <span>$latex \mathbb{N}$</span>, אבל באותה מידה זה יעבוד עבור השלמים <span>$latex \mathbb{Z}$</span> - משרה על הקבוצה <strong>חלוקה למחלקות שקילות</strong>. מחלקת שקילות של מספר <span>$latex a$</span> כלשהי, שמסומנת בתור <span>$latex \left[a\right]$</span>, היא קבוצת כל המספרים ששקולים לו על פי יחס השקילות הזה. זה מושג לא קל להבנה, אז בואו נראה מה הוא עבור המקרים שלנו. נתחיל בקטן - שקילות מודולו <span>$latex 2$</span>. מהי מחלקת השקילות של 0 מודולו 2? היא כוללת את כל המספרים <span>$latex a$</span> כך ש-<span>$latex 2|a-0$</span>, כלומר ש-<span>$latex 2|a$</span>, כלומר את כל הזוגיים. מסמנים זאת <span>$latex \left[0\right]=\left\{ 0,2,4,6,8,\dots\right\} $</span>. באופן דומה, <span>$latex \left[1\right]=\left\{ 1,3,5,7,9,\dots\right\} $</span>, כלומר מחלקת השקילות של 1 כוללת את כל האי זוגיים (כי אי זוגי הוא תמיד מהצורה <span>$latex 2k+1$</span>, ולכן כשנחסר ממנו 1 נקבל משהו שמתחלק ב-2), ואלו כל מחלקות השקילות של היחס “שקילות מודולו 2”.</p>
+
+<p>אפשר לעשות את אותו דבר עבור 3, ונגלה שיש שלוש מחלקות שקילות מודולו 3: <span>$latex \left[0\right]=\left\{ 0,3,6,9,12,\dots\right\} $</span> של כל המספרים שמתחלקים ב-3; <span>$latex \left[1\right]=\left\{ 1,4,7,10,13,\dots\right\} $</span> של כל המספרים שמתחלקים ב-3 עם שארית 1, ו-<span>$latex \left[2\right]=\left\{ 2,5,8,11,14,\dots\right\} $</span> של כל המספרים שמתחלקים ב-3 עם שארית 2. ומה קורה באופן כללי? עבור שקילות מודולו <span>$latex n$</span> יהיו לנו <span>$latex n$</span> מחלקות שקילות, שנוח לתאר בתור <span>$latex \left[0\right],\left[1\right],\dots,\left[n-1\right]$</span> - כאן המספרים <span>$latex 0,1,2,\dots,n-1$</span> משמשים בתור <strong>נציגים</strong> של מחלקות השקילות.</p>
+
+<p>ועכשיו נכנסת לתמונה ההגדרה המתמטית המרכזית בפוסט: לכל <span>$latex n$</span> טבעי, אנו מגדירים את הקבוצה <span>$latex \mathbb{Z}_{n}=\left\{ \left[0\right],\left[1\right],\dots,\left[n-1\right]\right\} $</span> של כל מחלקות השקילות מודולו <span>$latex n$</span> של מספרים טבעיים (אם לחדד, לרוב מדברים על מחלקות שקילות של מספרים שלמים, כלומר כולל השליליים, אבל לא היה לי צורך בזה כאן). הקבוצה הזו לכשעצמה היא לא מעניינת; מה שמעניין הוא שאפשר להגדיר עליה פעולות חדשות של חיבור וכפל ש”מושרות” באופן טבעי מהפעולות עבור מספרים רגילים. איך? ובכן, בהינתן <span>$latex \left[a\right],\left[b\right]$</span>, איך אפשר להגדיר בצורה הטבעית ביותר את <span>$latex \left[a\right]+\left[b\right]$</span>? בבירור מתבקש להגדיר זאת על ידי <span>$latex \left[a\right]+\left[b\right]=\left[a+b\right]$</span>. כלומר, מחלקת השקילות שתוחזר מהחיבור של מחלקות השקילות <span>$latex \left[a\right]$</span> ו-<span>$latex \left[b\right]$</span> תהיה מחלקת השקילות של האיבר <span>$latex a+b$</span>. אלא שיש כאן בעיה שצצה באופן כללי כשמגדירים דברים על מחלקות שקילות בעזרת נציגים שלהן: לא מובטח שההגדרה עובדת, כי ייתכן שהיא <strong>תלויה בנציג</strong>, וצריך להוכיח במפורש שהיא לא.</p>
+
+<p>למה אני מתכוון? ובכן, אני צריך להוכיח שהסיטואציה הבאה אינה אפשרית: שיש לנו <span>$latex a,a^{\prime}$</span> שמייצגים אותה מחלקת שקילות, כלומר <span>$latex \left[a\right]=\left[a^{\prime}\right]$</span>, ושיש <span>$latex b,b^{\prime}$</span> כך ש-<span>$latex \left[b\right]=\left[b^{\prime}\right]$</span>, אבל שמתקיים <span>$latex \left[a+b\right]\ne\left[a^{\prime}+b^{\prime}\right]$</span>. כי אם שתי אלו הן מחלקות שונות, אני אקבל ש-<span>$latex \left[a\right]+\left[b\right]=\left[a+b\right]\ne\left[a^{\prime}+b^{\prime}\right]=\left[a^{\prime}\right]+\left[b^{\prime}\right]=\left[a\right]+\left[b\right]$</span> וקיבלתי סתירה במתמטיקה, שמצביעה על כך שפעולת החיבור של מחלקות שקילות שהגדרתי היא לא חוקית. למרבה המזל, זה לא מה שקורה בפועל; בואו נוכיח את זה.</p>
+
+<p>אני רוצה להראות ש-<span>$latex \left[a+b\right]=\left[a^{\prime}+b^{\prime}\right]$</span>, כלומר ש-<span>$latex a+b\equiv_{n}a^{\prime}+b^{\prime}$</span>, כלומר ש-<span>$latex n|\left(a-a^{\prime}\right)+\left(b-b^{\prime}\right)$</span>. כעת, אני יודע ש-<span>$latex a\equiv_{n}a^{\prime}$</span> ולכן יש <span>$latex q_{1}$</span> כך ש-<span>$latex a-a^{\prime}=nq_{1}$</span>. בדומה, <span>$latex b\equiv_{n}b^{\prime}$</span> ולכן <span>$latex b-b^{\prime}=nq_{2}$</span> עבור איזה שהוא <span>$latex q_{2}$</span>. מסקנה: <span>$latex \left(a-a^{\prime}\right)+\left(b-b^{\prime}\right)=n\left(q_{1}+q_{2}\right)$</span> ולכן באמת מתקיים <span>$latex a+b\equiv_{n}a^{\prime}+b^{\prime}$</span> ופעולת החיבור מוגדרת היטב. מעולה. ומה עם כפל?</p>
+
+<p>כפל יעבוד באותו האופן: <span>$latex \left[a\right]\left[b\right]=\left[ab\right]$</span>, אבל ההוכחה טיפה יותר טריקית. כמקודם, אנחנו יודעים ש-<span>$latex a-a^{\prime}=nq_{1}$</span> ו-<span>$latex b-b^{\prime}=nq_{2}$</span>, אבל איך מגיעים מכאן לכך ש-<span>$latex ab-a^{\prime}b^{\prime}=nq$</span> עבור <span>$latex q$</span> כלשהו? נסו לעשות זאת בעצמכם לרגע כדי להרגיש את ה”בעיה”.</p>
+
+<p>הפתרון, למרבה המזל, אינו מסובך, ומשתמש בתעלול אלגברי נפוץ שחלקכם ודאי זוכרים מבית הספר: להוסיף ולהחסיר איבר “ביניים” כלשהו שמקל עלינו לפשט את הביטוי:</p>
+
+<p><span>$latex ab-a^{\prime}b^{\prime}=ab-ab^{\prime}+ab^{\prime}-a^{\prime}b^{\prime}=a\left(b-b^{\prime}\right)+b^{\prime}\left(a-a^{\prime}\right)=n\left(aq_{2}+b^{\prime}q_{1}\right)$</span></p>
+
+<p>זה מוכיח שפעולת הכפל של מחלקות שקילות מוגדרת היטב. אם כל זה קצת אבסטרקטי מדי עבורכם, הנה ניסוח “ברמת המשוואה” של מה שראינו: אם <span>$latex a\equiv_{n}a^{\prime}$</span> ו-<span>$latex b\equiv_{n}b^{\prime}$</span>, אז</p>
+
+<p><span>$latex a+b\equiv_{n}a^{\prime}+b^{\prime}$</span></p>
+
+<p><span>$latex ab\equiv_{n}a^{\prime}b^{\prime}$</span></p>
+
+<p>מה שאומר שבכל פעם שיש לנו משוואה פולינומית מודולרית, אפשר לקחת כל מספר שמופיע בה ולהחליף אותו במספר ששקול לו, מה שלעתים קרובות עוזר לפשט את התוצאה. הנה דוגמא: נניח שאנו רוצים לדעת מהו <span>$latex 10^{100}$</span> מודולו 9. אז אנחנו כותבים את המשוואה <span>$latex x\equiv_{9}10^{100}$</span>. מה עכשיו? מכיוון ש-<span>$latex 10\equiv_{9}1$</span>, אפשר להמשיך את המשוואה ולכתוב:</p>
+
+<p><span>$latex x\equiv_{9}10^{100}\equiv_{9}1^{100}\equiv_{9}1$</span></p>
+
+<p>קלי קלות, כי אנחנו יודעים ש-1 בחזקת כל דבר הוא 1. גם בחשבון מודולרי.</p>
+
+<p>אם כן, חשבון מודולרי מודולו <span>$latex n$</span> הוא חשבון שמתבצע עם האיברים של <span>$latex \mathbb{Z}_{n}$</span> במקום עם מספרים טבעיים רגילים, או מנקודת מבט קצת אחרת - זה חשבון שמתבצע עם מספרים טבעיים רגילים, אבל כזה שבו אנחנו מחליטים על קבוצת נציגים (שהם מספרים טבעיים) למחלקות השקילות שמהוות את <span>$latex \mathbb{Z}_{n}$</span>, עובדים רק עם הנציגים הללו, ובכל פעם שבה אנחנו “חורגים” מהם, אנחנו חוזרים אליהם (על ידי חלוקה ולקיחת שארית). מכיוון שלכתוב <span>$latex \left[0\right]$</span> ו-<span>$latex \left[a\right]$</span> וכדומה כל הזמן זה מסורבל, אנחנו לרוב נוקטים בפועל בשיטה השניה.</p>
+
+<p>עכשיו בואו נדבר על שתי הפעולות שעליהן טרם דיברתי - חיסור וחילוק. מה זה חיסור, באופן כללי? ובכן, נתחיל מחיבור דווקא: יש לנו איבר שהוא “אדיש” לחיבור, במובן זה שאם מחברים אותו עם <span>$latex x$</span> כלשהו, מקבלים <span>$latex x$</span>. האיבר הזה הוא 0. עכשיו, לכל מספר טבעי <span>$latex a$</span> קיים מספר <strong>נגדי</strong>, שאם מחברים אותו עם <span>$latex a$</span> מקבלים את האיבר האדיש לחיבור, כלומר <span>$latex 0$</span>. אנחנו מסמנים את המספר הנגדי הזה ב-<span>$latex -a$</span>, ואנחנו יודעים שהוא לא מספר טבעי (אלא <strong>מספר שלילי</strong>). אלא שבחשבון מודולרי מתרחש “קסם” - אנחנו לא צריכים להרחיב את מערכת המספרים שלנו כדי לקבל איברים נגדיים: הנגדי של <span>$latex a$</span> הוא פשוט <span>$latex n-a$</span>. מה שאומר שלפעמים איבר יכול להיות אפילו הנגדי של עצמו. למשל, בחשבון מודולו <span>$latex 6$</span>, הנגדי של 2 הוא 4, והנגדי של 3 הוא 3. זה אומר שאפשר לכתוב משוואות כמו <span>$latex 3\equiv_{6}-3$</span> והן יהיו תקינות לחלוטין.</p>
+
+<p>איך זה קשור לחיסור? ובכן, כי חיסור אפשר תמיד לראות כפעולה של “חיבור עם נגדי”. בואו ננסה להיזכר מאיפה נוצר הצורך בפעולת חיסור בכלל: נניח שיש לנו משוואה מהצורה <span>$latex x+a=b$</span>; הדרך לפתור אותה היא לחסר <span>$latex a$</span> משני האגפים ולקבל <span>$latex x=b-a$</span>. הסיבה שאנחנו מחסרים היא שאנחנו רוצים להיפטר מ-<span>$latex a$</span> באגף שמאל; אבל מה שאנחנו בעצם עושים כאן הוא <strong>לחבר</strong> לאגף שמאל את ה<strong>נגדי</strong> של <span>$latex a$</span>, ש”מאפס” אותו. לכן בחשבון מודולרי אפשר לחסר בלי בעיות - פשוט מחברים עם הנגדי. למשל, אם יש לנו את המשוואה <span>$latex x+2\equiv_{6}5$</span> פשוט מחברים 4 לשני האגפים ומקבלים <span>$latex x\equiv_{6}5+4\equiv_{6}9\equiv_{6}3$</span>. לרוב אנחנו מרשים לעצמנו לכתוב דברים כמו <span>$latex -2$</span> גם בחשבון מודולרי, מתוך הבנה שזה ייצוג של הנגדי של <span>$latex 2$</span> (שמודולו 6, למשל, הוא 4). אגב, דרך פשוטה אחרת לחשוב על זה היא ש-<span>$latex -2$</span> הוא פשוט מחלקת השקילות של <span>$latex -2$</span> על פי יחס השקילות מודולו (כאשר מגדירים אותו על כל <span>$latex \mathbb{Z}$</span>; אבל חלק מהפואנטה שלי בפוסט הזה היא שאפשר לחשוב על חשבון מודולרי גם בלי לדבר על שלילייים).</p>
+
+<p>חילוק הוא כבר סיפור מעניין יותר. ראשית, התיאוריה הכללית, שמאוד דומה לזו של חיבור. יש לנו איבר אדיש לכפל - 1. לכל מספר <span>$latex a$</span> אפשר להגדיר את <strong>ההופכי</strong> שלו בתור מספר <span>$latex a^{\prime}$</span>כך ש-<span>$latex aa^{\prime}=1$</span>. מסמנים את ההופכי לרוב בתור <span>$latex a^{-1}$</span>. עכשיו אפשר להגדיר חילוק בתור כפל בהופכי: אם <span>$latex ax=b$</span> אז <span>$latex x=a^{-1}b$</span> (למה?). לרוע המזל, כאן יש לנו בעיה: ל-0 אין הופכי. אפשר להוכיח בקלות ש-<span>$latex 0$</span> כפול כל מספר יהיה 0, ולכן לא נוכל לקבל אף פעם 1 באופן הזה. הנה הוכחה קצרה:</p>
+
+<p><span>$latex 0\cdot a=\left(0+0\right)\cdot a=0\cdot a+0\cdot a$</span></p>
+
+<p>ועל ידי העברת אגפים מקבלים <span>$latex 0\cdot a=0$</span>.</p>
+
+<p>הדרך היחידה לפתור את הבעיה הזו בצורה שעדיין מותירה תקווה שיהיה הופכי ל-0 היא לטעון ש-<span>$latex 0=1$</span>, אבל אז לכל <span>$latex a$</span> נקבל <span>$latex 0=0\cdot a=1\cdot a=a$</span>, כלומר <strong>הכל</strong> שווה לאפס ואנחנו בוודאי לא רוצים את זה. אז אין ברירה: אנחנו מצהירים ש-0 אינו הפיך, ולכן גם לא ניתן לחלק ב-0.</p>
+
+<p>הבעיה בחשבון מודולרי היא שזה יכול לקרות לעוד איברים חוץ מ-0.</p>
+
+<p>נתחיל ממקרה פשוט שבו זה דווקא לא קורה, חשבון מודולו 7: מי הוא, למשל, ההופכי של 3 מודולו 7? קל לראות שזה 5, כי <span>$latex 3\cdot5\equiv_{7}15\equiv_{7}1$</span>. אבל האם יש דרך שיטתית ומסודרת למצוא הופכי של מספרים מודולו משהו? התשובה חיובית ואסביר זאת בקרוב.</p>
+
+<p>כעת, אם אני רוצה לחלק ב-3 מודולו 7, אני פשוט כופל ב-5. למשל, כדי לחלק את 6 ב-3 אני כופל ב-5 ומקבל 30, ששקול מודולו 7 ל-2. קסם! בדרך דומה אפשר לחלק בכל מספר מ-1 עד 6, אבל לא ב-0. אם כן, איפה כן יש בעיות עם מספרים ששונים מאפס?</p>
+
+<p>בואו נעבור לדבר על חשבון מודולו 6. בחשבון מודולו 6 לא קשה לראות ש-5 הוא הפיך - תכפלו אותו <strong>בעצמו</strong> ותקבלו 1. אז כפל ב-5 וחלוקה ב-5 זה בעצם אותו דבר. כנ”ל עבור 1. אבל מה עם שאר המספרים? בואו נתחיל מ-2 ו-3. שימו לב שהמכפלה של שניהם נותנת 6, ששקול מודולו 6 לאפס, כלומר <span>$latex 2\cdot3\equiv_{6}0$</span>. זו תופעה שפשוט לא קיימת בחשבון “רגיל” - כופלים שני מספרים שונים מאפס, ומקבלים אפס. למספרים כאלו קוראים <strong>מחלקי אפס</strong>, ואני טוען שאם מספר הוא מחלק אפס מודולו <span>$latex n$</span> הוא לא יכול להיות הפיך מודולו <span>$latex n$</span>. הסיבה פשוטה: אם <span>$latex ab\equiv_{n}0$</span> ו-<span>$latex b\not\equiv_{n}0$</span>, ואם <span>$latex a$</span> הפיך, אז אפשר לחלק ב-<span>$latex a$</span> ולקבל <span>$latex b\equiv_{n}0$</span>, בסתירה למה שהנחנו.</p>
+
+<p>במי עוד לא טיפלנו מודולו 6? ב-4. קל לראות שגם הוא מחלק 0, כי <span>$latex 4\cdot3=12\equiv_{6}0$</span>. זה מסיים את הסיפור: האיברים שהם הפיכים מודולו <span>$latex 6$</span> הם רק <span>$latex 1,5$</span>. באופן כללי, את האיברים ב-<span>$latex \mathbb{Z}_{n}$</span> שהם הפיכים מודולו <span>$latex n$</span> נהוג לסמן בתור <span>$latex \mathbb{Z}_{n}^{*}$</span>. כלומר, ראינו ש-<span>$latex \mathbb{Z}{}_{7}^{*}=\left\{ 1,2,3,4,5,6\right\} $</span> ואילו <span>$latex \mathbb{Z}_{6}^{*}=\left\{ 1,5\right\} $</span>. אבל האם יש הגיון כללי שמאפשר לדעת מתי איבר הוא הפיך או מחלק אפס מודולו <span>$latex n$</span>? והאם איבר הוא בהכרח או זה או זה? (שימו לב לכך שבמספרים השלמים הטענה “איבר הוא או מחלק אפס או הפיך” אינה נכונה - למשל, 2 אינו הפיך ואינו מחלק אפס). כאן צריך להכניס לתמונה עוד קצת מתמטיקה; בפרט את מה שנקרא <strong>האלגוריתם האוקלידי</strong>.</p>
+
+<p>בואו נתחיל מלדבר על שאלה שבמבט ראשון אולי נראית לא קשורה. נניח שיש לנו שני מספרים שלמים <span>$latex a,b$</span>, ואנחנו מסתכלים על כל המספרים שניתן לקבל מחיבורים וחיסורים שלהם, כלומר על כל <strong>הצירופים הלינאריים</strong> <span>$latex ax+by$</span> כאשר <span>$latex x,y$</span> הם מספרים שלמים. האם יש דרך פשוטה לתאר את כל המספרים שיכולים להתקבל בצורה הזו?</p>
+
+<p>יש שלל סיבות שבגללן השאלה הזו מעניינת, אבל בהקשר שלנו היא מעניינת כי תשובה לה נותנת לנו תשובה לשאלה “אילו ערכים מודולו <span>$latex n$</span> יש לכפולות של <span>$latex a$</span>?”. מה שנעשה הוא להתבונן על כל המספרים מהצורה <span>$latex t=ax+ny$</span>, וכשניקח את המשוואה מודולו <span>$latex n$</span> נקבל <span>$latex t\equiv_{n}ax$</span> (כי <span>$latex ny\equiv_{n}0$</span>). בפרט, <span>$latex a$</span> הפיך מודולו <span>$latex n$</span> אם ורק אם קיימים <span>$latex x,y$</span> כך ש-<span>$latex ax+ny=1$</span>. אם כן, שווה לחקור בצורה קצת יותר כללית את אוסף כל הצירופים הלינאריים <span>$latex ax+by$</span> ולהבין איך הוא מתנהג עבור <span>$latex a,b$</span> כלשהם.</p>
+
+<p>נתחיל מאבחנה פשוטה: אם <span>$latex d$</span> הוא מספר טבעי כלשהו כך ש-<span>$latex d|a$</span> וגם <span>$latex d|b$</span> אז <span>$latex d|ax+by$</span> (זה תרגיל קל שדומה לחישובים שכבר עשינו בפוסט). לכן אפשר להציג את כל המספרים מהצורה <span>$latex ax+ny$</span> בתור כפולה של כל <span>$latex d$</span> אשר מחלק את <span>$latex a,b$</span>. האם זה אומר גם ההפך - שכל כפולה של <span>$latex d$</span> ניתן לייצג כצירוף לינארי שכזה? הבה ונראה דוגמה. ניקח את המספרים <span>$latex a=12,b=8$</span>. שניהם מתחלקים על ידי 2 ולכן ברור שכל צירוף לינארי שלהם יהיה זוגי, אבל האם אפשר לכתוב את 2 כצירוף לינארי שלהם? על פניו לא ברור איך. את 4 קל לכתוב: <span>$latex 4=12-8$</span>. אבל את 2? אפשר לנסות לפעול שיטתית כך: ראשית “נקפיא” את <span>$latex 12$</span> ונראה אילו מספרים אפשר לקבל כשמחברים ומחסרים את 8 ממנו: נגלה את הסדרה <span>$latex \dots,-20,-12,-4,4,12,20,\dots$</span>. נראה ש”פספסנו” את 2. עכשיו, בואו נחבר את 12 לעצמו ונקבל 24. איזו סדרה אפשר לקבל כשמחברים או מחסרים כפולות של 8 מ-24? הסדרה <span>$latex \dots,-16,-8,0,8,16,24,32,\dots$</span>. שוב “פספסנו” את 2. אבל אולי אם נתחיל מ-36? הבנתם את הרעיון.</p>
+
+<p>בואו נעצור לרגע ונתבונן בכל המספרים שמצאנו עד כה כצירופים לינאריים של 8 ו-12. כולם מתחלקים ב-2 וזה לא מפתיע, אבל כולם גם מתחלקים ב-4. גם זה לא מפתיע, שכן 4 מחלק גם הוא את 8 ו-12; מה שמעניין הוא שנראה שאכן הצלחנו לתפוס את <strong>כל</strong> הכפולות של 4, למרות שלא תפסנו את כל הכפולות של 2. מה הופך את 4 למיוחד מבין המחלקים המשותפים של 8 ו-12 כדי שהתכונה הזו תתקיים עבורו? התשובה פשוטה: 4 הוא <strong>המחלק המשותף המקסימלי</strong> של 12 ו-8. אין להם מחלק משותף גדול יותר.</p>
+
+<p>הסיבה שבגללה כל כפולה של 4 יכולה להתקבל היא שאפשר לקבל את 4 עצמו בתור צירוף לינארי של 12 ו-8. באופן כללי, אם עבור <span>$latex d$</span> כלשהו מתקיים <span>$latex d=ax+by$</span> אז כדי לקבל כפולה כלשהי של <span>$latex d$</span> פשוט נכפיל את המשוואה במה שאנו זקוקים לו, ונקבל <span>$latex td=axt+aty$</span>. מה שהופך את 4 למיוחד הוא שמצד אחד, אפשר לקבל את כל הכפולות שלו כצירוף לינארי של 8 ו-12, ומצד שני הוא מחלק כל צירוף לינארי של 8 ו-12, ולכן קבוצת “הצירופים הלינאריים של 8 ו-12” וקבוצת “הכפולות של 4” הן בדיוק אותה קבוצה. זה גם מבהיר מדוע אנחנו לא מסוגלים לקבל את 2 כצירוף לינארי של 8 ו-12: פשוט מאוד, 4 אינו מחלק את 2.</p>
+
+<p>הטענה הזו עובדת באופן כללי. בהינתן <span>$latex a,b$</span> אנו מסמנים ב-<span>$latex d=\mbox{gcd}\left(a,b\right)$</span> את המחלק המשותף המקסימלי של <span>$latex a,b$</span>. כדי להוכיח שכל כפולה של <span>$latex d$</span> מתקבלת כצירוף לינארי של <span>$latex a,b$</span> צריך להוכיח שקיים צירוף לינארי שלהם שנותן את <span>$latex d$</span> עצמו, כלומר שקיימים <span>$latex x,y$</span> כך ש-<span>$latex ax+by=d$</span>. אציג כעת אלגוריתם, <strong>האלגוריתם האוקלידי</strong> שבהינתן <span>$latex a,b$</span> גם מוצא את <span>$latex d$</span> וגם כותב אותו כצירוף לינארי של <span>$latex a,b$</span>, ובנוסף לכך הוא גם עושה זאת ביעילות, מה שקריטי לחלוטין עבור תורת המספרים החישובית.</p>
+
+<p>האלגוריתם הוא רקורסיבי באופיו, כלומר מתבסס על קריאה לעצמו על מקרה פשוט יותר. בואו נניח שאנחנו מקבלים כקלט <span>$latex a,b$</span> שהם טבעיים ומקיימים <span>$latex a&gt;b$</span>. אז אפשר לחלק את <span>$latex a$</span> ב-<span>$latex b$</span> עם שארית ולקבל <span>$latex a=qb+r$</span>. כעת, אם <span>$latex r=0$</span> זה אומר ש-<span>$latex b$</span> מחלק את <span>$latex a$</span> ולכן המחלק המשותף הגדול ביותר של שניהם הוא <span>$latex b$</span> עצמו, שאפשר להציג בתור צירוף לינארי טריוויאלי: <span>$latex a\cdot0+b\cdot1=b$</span>.</p>
+
+<p>כעת, אם <span>$latex r$</span> גדול מ-0, מגיעה האבחנה המרכזית הבאה: <span>$latex \mbox{gcd}\left(a,b\right)=\mbox{gcd}\left(b,r\right)$</span>. כדי לראות זאת, מספיק לשים לב לכך ש-<span>$latex a=qb+r$</span> ולכן אם מישהו מחלק את <span>$latex b,r$</span> הוא בוודאי מחלק את <span>$latex a$</span>, וש-<span>$latex r=a-qb$</span> ולכן אם מישהו מחלק את <span>$latex a,b$</span> הוא בוודאי מחלק את <span>$latex r$</span>. לכן הקבוצה “המחלקים המשותפים של <span>$latex a,b$</span>” והקבוצה “המחלקים המשותפים של <span>$latex b,r$</span>” שוות. הוכחנו את האבחנה, וממנה נובעת שארית האלגוריתם: באופן רקורסיבי, אנו מוצאים <span>$latex x^{\prime},y^{\prime}$</span> כך ש-<span>$latex \mbox{gcd}\left(a,b\right)=bx^{\prime}+ry^{\prime}$</span>, וכעת אנו מציבים <span>$latex a-qb$</span> במקום <span>$latex r$</span>, ומקבלים <span>$latex \mbox{gcd}\left(a,b\right)=ay^{\prime}+b\left(x^{\prime}-qy^{\prime}\right)$</span>, כלומר <span>$latex \mbox{gcd}\left(a,b\right)=ax+by$</span> כאשר <span>$latex x=y^{\prime}$</span> ו-<span>$latex y=x^{\prime}-qy^{\prime}$</span>. קל מאוד לתכנת את זה בפועל.</p>
+
+<p>חזרה לענייננו: יהא <span>$latex n$</span> טבעי כלשהו ונרצה לדעת מתי <span>$latex a$</span> הפיך מודולו <span>$latex n$</span>. כפי שהראיתי כבר, אם <span>$latex \mbox{gcd}\left(a,n\right)=1$</span> אז קיימים <span>$latex x,y$</span> כך ש-<span>$latex ax+ny=1$</span> ולכן <span>$latex ax\equiv_{n}1$</span> ומכאן ש-<span>$latex a$</span> הפיך ו-<span>$latex x$</span> הוא ההופכי שלו ויש לנו אלגוריתם יעיל למצוא אותו (ולכן אלגוריתם יעיל לביצוע פעולות חילוק מודולו <span>$latex n$</span>). ומה אם <span>$latex \mbox{gcd}\left(a,n\right)=d&gt;1$</span>? במקרה הזה <span>$latex a$</span> הוא מחלק אפס, כי בואו נסתכל על <span>$latex a\cdot\frac{n}{d}$</span>: מכיוון ש-<span>$latex d$</span> מחלק את <span>$latex n$</span>, הרי ש-<span>$latex \frac{n}{d}$</span> הוא מספר שלם, וקטן מ-<span>$latex n$</span> (כי <span>$latex d&gt;1$</span>). מצד שני, הביטוי הזה שווה ל-<span>$latex \frac{a}{d}\cdot n\equiv_{n}0$</span> כי <span>$latex d$</span> מחלק גם את <span>$latex a$</span>. אז מצאנו ש-<span>$latex a$</span> כפול משהו שאיננו 0 מודולו <span>$latex n$</span> שווה ל-0 מודולו <span>$latex n$</span>, והמסקנה היא ש-<span>$latex a$</span> אינו הפיך.</p>
+
+<p>אם כן, מצאנו ש-<span>$latex a$</span> הפיך מודולו <span>$latex n$</span> אם ורק אם המחלק המשותף הגדול ביותר שלהם הוא 1; זו תכונה כל כך חשובה שנותנים לה שם: <span>$latex a$</span> ו-<span>$latex n$</span> הם <strong>זרים</strong> אם המחלק המשותף המקסימלי שלהם הוא 1. לכן <span>$latex \mathbb{Z}_{n}^{*}$</span> היא קבוצת כל המספרים שזרים ל-<span>$latex n$</span> וקטנים ממנו. זה מסביר למה <span>$latex \mathbb{Z}{}_{7}^{*}=\left\{ 1,2,3,4,5,6\right\} $</span>: עבור מספר ראשוני, כל מספר חיובי קטן ממנו זר לו. זה גם מסביר למה <span>$latex \mathbb{Z}_{6}^{*}=\left\{ 1,5\right\} $</span>: 2 מחלק את 6 וכך גם 3, ואילו ל-4 יש מחלק משותף גדול מ-1 עם 6: 2.</p>
+
+<p>אם כן, זהו חשבון מודולרי על קצה המזלג; ראינו מה ה”עולם” שבו הוא מתרחש ואיך לבצע במסגרתו את ארבע פעולות החשבון - חיבור, כפל, חיסור וחילוק. כמובן שזו רק ההתחלה (אפשר למשל לשאול מה קורה עבור הוצאת שורשים, וזה סיפור מרתק בפני עצמו) וכמובן שהשאלה המעניינת באמת היא איך משתמשים בכל זה. התשובה היא שיש שלל שימושים, שאת חלקם כבר הראיתי בבלוג; בזכות הפוסט הזה יהיה לי נוח יותר להראות שימושים נוספים בעתיד.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/05/14/modular_arithmetic/';
+      this.page.identifier = 'http://gadial.net/2013/05/14/modular_arithmetic/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/05/14/modular_arithmetic/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

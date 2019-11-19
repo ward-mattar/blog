@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>פותרים את SAT - אלגוריתם CDCL | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="פותרים את SAT - אלגוריתם CDCL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם על פתרונות לבעיית SAT ראינו את אלגוריתם DPLL - זה היה פחות או יותר האלגוריתם הבסיסי שרוב פותרי ה-SAT המדוייקים (להבדיל מהסתברותיים) מבוססים עליו, אבל מן הסתם פותרים מודרניים הולכים רחוק יותר ממנו, ובפוסט הזה אני רוצה להציג אלגוריתם קצת יותר מודרני שמתבסס על DPLL אבל עושה עוד דברים מתוחכמים - אלגוריתם CDCL, קיצור של Conflict-Driven Clause Learning. כמובן, כמו DPLL גם זה לא “אלגוריתם” במלוא מובן המילה אלא בעיקר “מסגרת” שלתוכה אפשר לצקת שלל שיפורים ושפצורים, אבל הרעיונות הכלליים שלו עדיין מעניינים." />
+<meta property="og:description" content="בפוסט הקודם על פתרונות לבעיית SAT ראינו את אלגוריתם DPLL - זה היה פחות או יותר האלגוריתם הבסיסי שרוב פותרי ה-SAT המדוייקים (להבדיל מהסתברותיים) מבוססים עליו, אבל מן הסתם פותרים מודרניים הולכים רחוק יותר ממנו, ובפוסט הזה אני רוצה להציג אלגוריתם קצת יותר מודרני שמתבסס על DPLL אבל עושה עוד דברים מתוחכמים - אלגוריתם CDCL, קיצור של Conflict-Driven Clause Learning. כמובן, כמו DPLL גם זה לא “אלגוריתם” במלוא מובן המילה אלא בעיקר “מסגרת” שלתוכה אפשר לצקת שלל שיפורים ושפצורים, אבל הרעיונות הכלליים שלו עדיין מעניינים." />
+<link rel="canonical" href="http://gadial.net/2014/02/03/cdcl_sat_solving/" />
+<meta property="og:url" content="http://gadial.net/2014/02/03/cdcl_sat_solving/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-02-03T19:20:48+02:00" />
+<script type="application/ld+json">
+{"headline":"פותרים את SAT - אלגוריתם CDCL","dateModified":"2014-02-03T19:20:48+02:00","datePublished":"2014-02-03T19:20:48+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2014/02/03/cdcl_sat_solving/"},"url":"http://gadial.net/2014/02/03/cdcl_sat_solving/","description":"בפוסט הקודם על פתרונות לבעיית SAT ראינו את אלגוריתם DPLL - זה היה פחות או יותר האלגוריתם הבסיסי שרוב פותרי ה-SAT המדוייקים (להבדיל מהסתברותיים) מבוססים עליו, אבל מן הסתם פותרים מודרניים הולכים רחוק יותר ממנו, ובפוסט הזה אני רוצה להציג אלגוריתם קצת יותר מודרני שמתבסס על DPLL אבל עושה עוד דברים מתוחכמים - אלגוריתם CDCL, קיצור של Conflict-Driven Clause Learning. כמובן, כמו DPLL גם זה לא “אלגוריתם” במלוא מובן המילה אלא בעיקר “מסגרת” שלתוכה אפשר לצקת שלל שיפורים ושפצורים, אבל הרעיונות הכלליים שלו עדיין מעניינים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">פותרים את SAT - אלגוריתם CDCL</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-02-03T19:20:48+02:00" itemprop="datePublished">Feb 3, 2014
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://www.gadial.net/2013/12/11/dpll_algorithm/">בפוסט הקודם</a> על פתרונות לבעיית SAT ראינו את אלגוריתם DPLL - זה היה פחות או יותר האלגוריתם הבסיסי שרוב פותרי ה-SAT המדוייקים (להבדיל מהסתברותיים) מבוססים עליו, אבל מן הסתם פותרים מודרניים הולכים רחוק יותר ממנו, ובפוסט הזה אני רוצה להציג אלגוריתם קצת יותר מודרני שמתבסס על DPLL אבל עושה עוד דברים מתוחכמים - אלגוריתם CDCL, קיצור של Conflict-Driven Clause Learning. כמובן, כמו DPLL גם זה לא “אלגוריתם” במלוא מובן המילה אלא בעיקר “מסגרת” שלתוכה אפשר לצקת שלל שיפורים ושפצורים, אבל הרעיונות הכלליים שלו עדיין מעניינים.</p>
+
+<p>בואו ניזכר מה DPLL עושה, ברמה הבסיסית: הוא מבצע לסירוגין שתי פעולות שונות - הראשונה היא בחינה של הפסוק שיש לו כרגע וזיהוי השמות למשתנים ספציפיים ש<strong>חייבות</strong> להתרחש, ופישוט של הפסוק לאחר ביצוע ההשמות הללו; והשניה היא בחירה של משתנה כלשהו וערך להציב בו. אם כן, יש לנו שני סוגים של השמות למשתנים: אלו שבהן <strong>בחרנו</strong> לתת למשתנה ערך מסויים - במקרה הזה, המשתנה ייקרא “משתנה בחירה” (Decision Variable), ואלו שבהן “לא הייתה לנו ברירה” והערך ששמנו במשתנה נבע מהבחירות שעשינו. כאשר האלגוריתם מזהה שהוא “נתקע” - כלומר, הוא מגלה שיש פסוקית שכבר אין לו סיכוי לספק - הוא פשוט חוזר אחורה אל משתנה הבחירה האחרון שטרם ניסינו בו את האפשרות השניה, ומנסה אותה.</p>
+
+<p>המבנה של CDCL דומה אבל קצת יותר חכם. בראש ובראשונה, כאשר מתגלה ש”נתקענו” - מה שנקרא בטרמינולוגיה של האלגוריתם הזה Conflict, האלגוריתם לא סתם מתייאש ואומר “בואו נחזור אחורה” - הוא מנסה <strong>ללמוד</strong> מזה מידע כלשהו על מה שגרם לקונפליקט. את המידע שהוא לומד הוא ממדל בצורת <strong>אילוץ חדש</strong> שמוסיפים לפסוק ה-CNF שמנסים לפתור. אחר כך האלגוריתם חוזר אחורה ומבטל חלק ממשתני הבחירה האחרונים (לאו דווקא רק אחד אחורה). אספקט נחמד של האלגוריתם הוא שאין צורך לבצע “ניהול חשבונות” כדי לזכור עבור משתנה בחירה אם כבר ניסינו בו את האפשרות השניה - האילוצים שאנחנו לומדים כבר יבטיחו שלא ננסה לתת למשתנה בחירה כלשהו את אותה האפשרות פעמיים.</p>
+
+<p>כל זה מאוד אבסטרקטי ולכן בואו נראה דוגמה קונקרטית, שאני גונב מה-Handbook of Satisfiability (יש דבר כזה!). פסוק <span>$latex \varphi=C_{1}\wedge C_{2}\wedge C_{3}\wedge C_{4}\wedge C_{5}\wedge C_{6}$</span> שמורכב מהפסוקיות הבאות:</p>
+
+<p><span>$latex C_{1}=\left(x_{1}\vee x_{31}\vee\neg x_{2}\right)$</span></p>
+
+<p><span>$latex C_{2}=\left(x_{1}\wedge\neg x_{3}\right)$</span></p>
+
+<p><span>$latex C_{3}=\left(x_{2}\vee x_{3}\vee x_{4}\right)$</span></p>
+
+<p><span>$latex C_{4}=\left(\neg x_{4}\vee\neg x_{5}\right)$</span></p>
+
+<p><span>$latex C_{5}=\left(x_{21}\vee\neg x_{4}\vee\neg x_{6}\right)$</span></p>
+
+<p><span>$latex C_{6}=\left(x_{5}\vee x_{6}\right)$</span></p>
+
+<p>בואו נניח שבמהלך הריצה האלגוריתם שלנו הציב -<span>$latex x_{1}$</span> את הערך 0, ואחר כך ב-<span>$latex x_{31}$</span> הציב את הערך 0, ולבסוף הציב ב-<span>$latex x_{21}$</span> את הערך 0. מה קורה?</p>
+
+<p>ובכן, ההצבה ב-<span>$latex x_{1}$</span> תגרום ל-<span>$latex C_{2}$</span> להפוך לפסוק <span>$latex \left(\neg x_{3}\right)$</span> כך ש-<span>$latex x_{3}$</span> חייב להיות 0. בדומה, <span>$latex C_{1}$</span> יאבד גם את <span>$latex x_{1}$</span> וגם את <span>$latex x_{31}$</span> ולכן גם <span>$latex x_{2}$</span> חייב להיות 0. עכשיו משני אלו נקבל ב-<span>$latex C_{3}$</span> ש-<span>$latex x_{4}$</span> חייב להיות 1, וזה יגרור ש-<span>$latex x_{5}$</span> הוא 0 בגלל <span>$latex C_{4}$</span>, וש-<span>$latex x_{6}$</span> חייב להיות 0 על פי <span>$latex C_{5}$</span>. אבל עכשיו “הפסדנו” את <span>$latex C_{6}$</span> כי שני הליטרלים שלו (החיובי והשלילי) קיבלו 0. השאלה היא מה אפשר ללמוד מזה.</p>
+
+<p>ובכן, כל המלל שלעיל הוא קצת מסורבל. קל יותר להבין מה הלך כאן אם מציירים את זה בתור גרף:</p>
+
+<p><strong><a href="/assets/img/2014/02/sat_implication_grap.png"><img class="alignnone size-full wp-image-3037" alt="sat_implication_grap" src="/assets/img/2014/02/sat_implication_grap.png" width="976" height="293" /></a></strong></p>
+
+<p>מה שיש לנו כאן מכונה Implication graph - “גרף הגרירות”. הצמתים שלו הן כל ההשמות למשתנים - הן משתני הבחירה והן המשתנים הנגררים. יש קשת מהשמה אחת להשמה אחרת אם ההשמה האחת הייתה מעורבת בגרירה של האחרת - והכיתוב של הקשת הוא הפסוקית שבה התבצעה הגרירה הזו. <span>$latex X$</span> מייצג את ההרס והחורבן של הסתירה שהגענו אליה - אם תרצו, אפשר לחשוב עליו כאילו הוא נגרר מפסוקית ש”התרוקנה”, או ממשתנה אחד שהושמו בו שני ערכים שונים (זו בעצם אינדיקציה לכך שיש שתי פסוקיות שמתרוקנות - אחת כשמציבים במשתנה הזה 0 והשניה שמתרוקנת כשמציבים בו 1).</p>
+
+<p>פורמלית, אם <span>$latex x$</span> הוא משתנה אז כדי שהצומת <span>$latex x=1$</span> יופיע בגרף צריכה להיות ב-<span>$latex \varphi$</span> פסוקית מהצורה <span>$latex \left(l_{1}\vee\dots\vee l_{k}\vee x\right)$</span> כך ש-<span>$latex l_{1},\dots,l_{k}$</span> קיבלו כולם את הערך 0 בהשמה למשתנים שלהם, ואז מהצמתים של ההשמות הללו תהיה קשת אל הצומת <span>$latex x=1$</span>. הסיפור עבור <span>$latex x=0$</span> דומה רק שהפסוקית צריכה להיות מהצורה <span>$latex \left(l_{1}\vee\dots\vee l_{k}\vee\neg x\right)$</span>.</p>
+
+<p>הצמתים היחידים בגרף שאין להם אב הם הצמתים שמייצגים השמות למשתני החלטה (כי ההשמות הללו לא נגררו משום דבר). כמובן, בפסוק ענקי עשוי להיות גרף גרירות ענקי, ורובו לאו דווקא יהיה רלוונטי בכלל לקונפליקט שאליו הגענו בסוף. לכן נהוג להצטמצם לתת-גרף (“גרף הקונפליקט”) שבו “מגלחים” את החלק המיותר - אם ל-<span>$latex X$</span> יש יותר ממשתנה אחד שגורר אותו (יש קונפליקט בכמה משתנים) מתמקדים רק בצמתים של משתנה אחד, והולכים ממנו אחורה תוך שלוקחים רק את מה שחייבים: לכל צומת בוחרים פסוקית אחת ולוקחים את כל הצמתים שנכנסים אליו והקשתות שלהם מסומנות בפסוקית הזו, עד שמגיעים בכל מקום לצמתים של השמות למשתני בחירה.</p>
+
+<p>כמובן, האופן שבו בוחרים איך בדיוק לצמצם גרף גרירה כללי לתת-גרף הקונפליקט הזה הוא עניין לאינסוף היוריסטיקות שיכולות להשפיע באופן דרסטי על איכות הפותר. אבל אני לא מבין בזה יותר מדי ולא אכנס לזה עכשיו.</p>
+
+<p>נניח שיש לנו גרף קונפליקט ואנחנו רוצים ללמוד ממנו משהו. מה נעשה עכשיו? אם נחשוב על זה לרגע, ברור שכל קשת בגרף הזו קריטית - אם נעיף אחת מהקשתות, הגרירות של הגרף כבר לא יתקיימו והקונפליקט לא יתרחש. איך מעיפים קשת? “לומדים” פסוקית חדשה שמחסלת את ההשמה שהקשת יצאה ממנה. למשל, נניח שאנחנו רוצים לחסל את הקשת שיוצאת מ-<span>$latex x_{5}=0$</span>. אנחנו יכולים להוסיף לפסוק שלנו את הפסוקית <span>$latex \left(x_{5}\right)$</span> שמכריחה את <span>$latex x_{5}$</span> להיות 1, ובכך נמנע את הקונפליקט. הבעיה היא שזו גישה חזקה <strong>מדי</strong> - אנחנו נסגרים על הערך שניתן ל-<span>$latex x_{5}$</span> מכאן ואילך, ולא חושבים שאולי פספסנו אפשרויות שבהן <span>$latex x_{5}$</span> עדיין יקבל 0 והפסוק יסתפק (וזה בעייתי מאוד כי באופן כללי ייתכן שיש השמה כזו, אבל אין השמה שבה <span>$latex x_{5}$</span> מקבל 1 והפסוק מסתפק).</p>
+
+<p>אז אפשר ללכת לקיצוניות השניה: אפשר לומר שצריך להיפטר מקשת <strong>כלשהי</strong> בגרף, ולהוסיף פסוקית שאומרת שלפחות אחת מההשמות שמופיעות בגרף, חוץ מ-<span>$latex x_{6}=1$</span>, היא פסולה: <span>$latex \left(x_{31}\vee x_{1}\vee x_{2}\vee x_{3}\vee\neg x_{4}\vee x_{21}\vee x_{5}\vee x_{6}\right)$</span>. למה חוץ מ-<span>$latex x_{6}=1$</span>? כי כבר אמרנו ש-<span>$latex x_{6}=0$</span> פסול, ואם נאמר שגם <span>$latex x_{6}=1$</span> פסול נכסה בכך את כל האפשרויות מבלי לומר משהו מעניין חדש, כי כל השמה פוסלת את <span>$latex x_{6}=0$</span> או את <span>$latex x_{6}=1$</span>.</p>
+
+<p>הבעיה היא שהפסוקית הזו בבירור גדולה מדי - אנחנו יכולים להיות יותר ממוקדים מזה. אז מה הסוד? לוקחים חתך בגרף.</p>
+
+<p>אינטואיטיבית, חתך הוא קטיעה של קשתות בגרף כך שהגרף יתפרק לשני חלקים. פורמלית, חתך הוא פשוט חלוקה של צמתי הגרף לשתי קבוצות, ונהוג לדבר על הקשתות שחוצות את החתך - כל הקשתות שקצה אחד שלהן הוא בקבוצה אחת של החתך והקצה השני בקבוצה השניה. הנה דוגמה לחתך בגרף שלנו:</p>
+
+<p><strong><a href="/assets/img/2014/02/sat_implication_graph_cut_1.png"><img class="alignnone size-full wp-image-3038" alt="sat_implication_graph_cut_1" src="/assets/img/2014/02/sat_implication_graph_cut_1.png" width="2105" height="790" /></a></strong></p>
+
+<p>אז אנחנו לוקחים חתך שמקיים את התכונה הבאה: בקבוצה האחת שלו יש את כל משתני ההחלטה, ובקבוצה השניה יש לפחות אחד מהמשתנים שגרם לקונפליקט, ואת הצומת <span>$latex X$</span>. נסתכל על הקשתות שחוצות את החתך, ובאופן יותר ספציפי - בצמתים שמהם הקשתות יצאו. לא קשה במיוחד להשתכנע שאם יש לנו השמה <strong>כלשהי</strong> שמתאימה להשמות שכתובות בצמתים הללו, אז בהכרח נגיע לקונפליקט (בלי קשר לשאלה מה ההשמה עושה לשאר הצמתים). אז בכל השמה שמספקת את הפסוק, לפחות אחת מההשמות הללו חייבת להשתנות. המשמעות של זה עבור החתך הספציפי שבחרנו הוא הוספת הפסוקית הבאה לפסוק:</p>
+
+<p><span>$latex \left(\neg x_{4}\vee x_{21}\right)$</span></p>
+
+<p>זה כמובן הרבה יותר פשוט (ומצמצם יותר את מרחב החיפוש של אלגוריתם ה-CDCL) מאשר הפסוקית המפלצתית שתיארתי קודם. אבל זו לא האפשרות היחידה, כמובן; הנה חתך שנותן לנו את הפסוקית <span>$latex \left(x_{21}\vee x_{2}\vee x_{3}\right)$</span>:</p>
+
+<p><strong><a href="/assets/img/2014/02/sat_implication_graph_cut_2.png"><img class="alignnone size-full wp-image-3039" alt="sat_implication_graph_cut_2" src="/assets/img/2014/02/sat_implication_graph_cut_2.png" width="2105" height="953" /></a></strong></p>
+
+<p>ושוב, איך מחליטים איזה חתך לקחת? אין לי תשובה נחמדה - היוריסטיקות, היוריסטיקות, היוריסטיקות. ודברים קצת יותר חכמים שאני לא הולך להיכנס אליהם עכשיו.</p>
+
+<p>חזרה לאלגוריתם ה-CDCL שלנו. אחרי שהאלגוריתם נתקל בקונפליקט, הוא מביט בגרף קונפליקט עבורו, בוחר חתך, מוסיף פסוקית לפסוק שלו, ואז קופץ חזרה אחורה - כלומר, מבטל חלק ממשתני הבחירה (לא מחליף את ערכם; פשוט שוכח שאי פעם הושם בהם ערך).</p>
+
+<p>לצורך כך, גרף הגרירות צריך להכיל עוד פריט מידע שלא כתבתי בו כי זה כבר היה מסרבל: לכל השמה צריך להוסיף את <strong>דרגת ההחלטה</strong> שלה. דרגת החלטה של צומת החלטה היא קלה: היא שווה לדרגת ההחלטה של צומת ההחלטה הקודם, ועוד 1. עבור צמתים אחרים, דרגת ההחלטה שלהם היא המקסימלית מבין דרגות ההחלטה של הצמתים שנכנסים אליהם (מכיוון שרק אחרי שכל ההשמות הללו בוצעו ערכו של הצומת נקבע). כעת, אחרי שהחלטנו איזו פסוקית להוסיף, אנחנו מסתכלים על דרגות ההחלטה של הליטרלים שבפסוקיות - אם נלך אחורה ונבטל את כל ההחלטות עד וכולל דרגת ההחלטה הגבוהה ביותר של ליטרל בפסוקית, הפסוקית “תיכנס לפעולה”.</p>
+
+<p>בואו נסתכל על הדוגמה שלנו לשם כך. אצלנו דרגת ההחלטה של <span>$latex x_{1}$</span> היא 0, של <span>$latex x_{31}$</span> היא 1 ושל <span>$latex x_{21}$</span> היא 2. מה זה אומר על ההשמות הנגזרות? <span>$latex x_{3}=0$</span> היא מדרגה 0 (נובעת רק מ-<span>$latex x_{1}=0$</span>) ו-<span>$latex x_{2}=0$</span> היא מדרגה 1, ולכן <span>$latex x_{4}=1$</span> היא מדרגה 1, ולכן <span>$latex x_{5}=0$</span> היא מדרגה 1 וכך גם <span>$latex x_{6}=1$</span>, ואילו <span>$latex x_{6}=0$</span> היא מדרגה 2. נניח עכשיו שאנחנו לוקחים חתך שיוסיף לנו את הפסוקית <span>$latex \left(x_{2}\vee x_{3}\right)$</span>. אם עכשיו נחזור רק צעד אחד אחורה בזמן ונבטל את ההשמה של דרגה 2, כלומר את <span>$latex x_{21}=0$</span>, זה לא יבטל את ההצבה של 0 ב-<span>$latex x_{2},x_{3}$</span> ונישאר תקועים עם פסוקית שלא הסתפקה. אז יש לנו שתי אפשרויות: או לבטל גם את ההשמה בדרגה 1, כלומר את <span>$latex x_{31}=0$</span>, מה שיבטל את ההשמה <span>$latex x_{2}=0$</span>; או לבטל אפילו את ההשמה בדרגה 0.</p>
+
+<p>במקרה הראשון, נקבל ש-<span>$latex x_{3}=0$</span> עדיין מתקיים, ולכן הפסוקית <span>$latex \left(x_{2}\vee x_{3}\right)$</span> תהפוך ל-<span>$latex x_{2}$</span>; במילים אחרות, ההצבה של דרגה 0, זו של <span>$latex x_{1}=0$</span>, תגרור ש-<span>$latex x_{2}=1$</span>. ואז יקרה משהו מעניין - אם תסתכלו על הפסוקית <span>$latex C_{1}$</span>, תראו שאחרי ההשמה הזו, נהיה חייבים להציב <span>$latex x_{31}=1$</span>. במילים אחרות, הוספת הפסוקית <span>$latex \left(x_{2}\vee x_{3}\right)$</span> וחזרה אחורה עד לביטול לדרגה 1 גרמה לכך ש-<span>$latex x_{31}$</span> כבר לא יהיה משתנה בחירה אלא משתנה נגזר, והערך שאנחנו מציבים בו יהיה הפוך מהערך שהצבנו בו כשהוא היה משתנה בחירה והגענו לסתירה. בקיצור, זה עובד!</p>
+
+<p>במקרה השני, יש לנו משחק חדש - הפסוקית <span>$latex \left(x_{2}\vee x_{3}\right)$</span> לא תגרום לשום דבר להתרחש מייד. אבל היא תהיה חלק מהפסוק שלנו, ופעפועים עתידיים הולכים להתחשב בה.</p>
+
+<p>אם כן, זהו הרעיון הכללי שמאחורי “למידת פסוקיות”. לי הרעיון הזה נשמע פשוט יחסית, וזה מאוד מפתיע ששיטות כאלו הן כל כך יעילות (יחסית). אבל בזכות היעילות הגבוהה שלהן, פותרי SAT הם שימושיים מאוד בפתרון בעיות אמיתיות; בפוסט הבא אתחיל להציג דוגמה לתחום שכזה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2014/02/03/cdcl_sat_solving/';
+      this.page.identifier = 'http://gadial.net/2014/02/03/cdcl_sat_solving/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2014/02/03/cdcl_sat_solving/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

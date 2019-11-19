@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>כפל מטריצות - מה, לעזאזל? | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="כפל מטריצות - מה, לעזאזל?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי מטריצות בתור כלי שעוזר לי לפתור מערכת משוואות - במקום לכתוב כל פעם את כל מערכת המשוואות, אני כותב מטריצה ו”מדרג” אותה והתהליך חוסך לי כתיבה מיותרת וקצת יותר קל לקריאה. זו מן הסתם לא הסיבה למה מטריצות הן כל כך מעניינות ו”אחד המושגים הבסיסיים ביותר במתמטיקה” כפי שאני שוב ושוב מפמפם. הסיבה האמיתית היא שמטריצות הן יצורים אלגבריים - אפשר להגדיר עליהן פעולות של חיבור וכפל שבמובן מסויים מזכירות מאוד את החיבור והכפל הרגילים, וזה מעניק למטריצות מבנה מעניין." />
+<meta property="og:description" content="בפוסט הקודם הצגתי מטריצות בתור כלי שעוזר לי לפתור מערכת משוואות - במקום לכתוב כל פעם את כל מערכת המשוואות, אני כותב מטריצה ו”מדרג” אותה והתהליך חוסך לי כתיבה מיותרת וקצת יותר קל לקריאה. זו מן הסתם לא הסיבה למה מטריצות הן כל כך מעניינות ו”אחד המושגים הבסיסיים ביותר במתמטיקה” כפי שאני שוב ושוב מפמפם. הסיבה האמיתית היא שמטריצות הן יצורים אלגבריים - אפשר להגדיר עליהן פעולות של חיבור וכפל שבמובן מסויים מזכירות מאוד את החיבור והכפל הרגילים, וזה מעניק למטריצות מבנה מעניין." />
+<link rel="canonical" href="http://gadial.net/2011/10/06/matrix_product/" />
+<meta property="og:url" content="http://gadial.net/2011/10/06/matrix_product/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-10-06T09:57:37+03:00" />
+<script type="application/ld+json">
+{"headline":"כפל מטריצות - מה, לעזאזל?","dateModified":"2011-10-06T09:57:37+03:00","datePublished":"2011-10-06T09:57:37+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2011/10/06/matrix_product/"},"url":"http://gadial.net/2011/10/06/matrix_product/","description":"בפוסט הקודם הצגתי מטריצות בתור כלי שעוזר לי לפתור מערכת משוואות - במקום לכתוב כל פעם את כל מערכת המשוואות, אני כותב מטריצה ו”מדרג” אותה והתהליך חוסך לי כתיבה מיותרת וקצת יותר קל לקריאה. זו מן הסתם לא הסיבה למה מטריצות הן כל כך מעניינות ו”אחד המושגים הבסיסיים ביותר במתמטיקה” כפי שאני שוב ושוב מפמפם. הסיבה האמיתית היא שמטריצות הן יצורים אלגבריים - אפשר להגדיר עליהן פעולות של חיבור וכפל שבמובן מסויים מזכירות מאוד את החיבור והכפל הרגילים, וזה מעניק למטריצות מבנה מעניין.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">כפל מטריצות - מה, לעזאזל?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-10-06T09:57:37+03:00" itemprop="datePublished">Oct 6, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסט הקודם הצגתי מטריצות בתור כלי שעוזר לי לפתור מערכת משוואות - במקום לכתוב כל פעם את כל מערכת המשוואות, אני כותב מטריצה ו”מדרג” אותה והתהליך חוסך לי כתיבה מיותרת וקצת יותר קל לקריאה. זו מן הסתם לא הסיבה למה מטריצות הן כל כך מעניינות ו”אחד המושגים הבסיסיים ביותר במתמטיקה” כפי שאני שוב ושוב מפמפם. הסיבה האמיתית היא שמטריצות הן יצורים <strong>אלגבריים</strong> - אפשר להגדיר עליהן פעולות של חיבור וכפל שבמובן מסויים מזכירות מאוד את החיבור והכפל הרגילים, וזה מעניק למטריצות <strong>מבנה</strong> מעניין.</p>
+
+<p>כשאני אומר “מזכיר”, אני מתכוון שמתקיים למשל <span>$latex A+B=B+A$</span> (כלל החילוף), ושמתקיים <span>$latex A\left(B+C\right)=AB+AC$</span> (כלל הפילוג) ומתקיים <span>$latex \left(AB\right)C=A\left(BC\right)$</span> (כלל הקיבוץ, שמתקיים גם לחיבור). בנוסף, עוד לפני שהפוסט הזה יסתיים נראה איך פעולת הכפל של מטריצות מתקשרת הן לפתרון משוואות והן לבעיה שונה לחלוטין - ספירת מסלולים בגרפים.</p>
+
+<p>בנוסף אגלה כבר עכשיו שאחד מה”גביעים הקדושים” שאני חותר אליהם בדיבורים על אלגברה לינארית הוא ייצוג של פונקציות חשובות מסויימות (טרנספורמציות לינאריות) בתור מטריצות, ואז כפל מטריצות יתאים בדיוק לפעולה של הרכבת פונקציות. אם להיות יותר קונקרטיים, דוגמה לכך באה לידי ביטוי בציור אובייקטים תלת ממדיים: אפשר לבצע עליהם מניפולציות גאומטריות שונות ומשונות דוגמת סיבוב סביב ציור מסויים, שיקוף, וכיווץ או מתיחה - כל הפעולות הללו הן טרנספורמציות לינאריות וקיימות מטריצות שמתארות אותן, ואפשר “לאגור” ביצוע של פעולות שונות על ידי כפל של המטריצות הללו עד לקבלה של מטריצה אחת סופית שמייצגת את כל השינויים שביצענו (מי שיפתח ספריה של גרפיקה תלת ממדית, נאמר OpenGL, קרוב לודאי שיתקל שם במטריצות).</p>
+
+<p>ולמה כל ההקדמה הזו? כי כפי שנראה, פעולת הכפל שאציג לא ממש תהיה מה שאנשים מצפים לה ממבט ראשון.</p>
+
+<p>בואו ניזכר טיפה מהן מטריצות. מטריצה <span>$latex A$</span> שהיא מסדר <span>$latex n\times m$</span> כוללת <span>$latex nm$</span> “כניסות”, כך שכל כניסה היא בעלת שני אינדקסים - הראשון בין 1 ו-<span>$latex n$</span> (“שורה”) והשני בין 1 ו-<span>$latex m$</span> (“עמודה”). כל כניסה כוללת מספר כלשהו (לצורך הדיון בינתיים אני מניח שזה מספר ממשי). את הכניסה בשורה <span>$latex i$</span> ועמודה <span>$latex j$</span> מסמנים ב-<span>$latex A_{ij}$</span>.</p>
+
+<p>כעת, אם יש לנו שתי מטריצות <span>$latex A,B$</span>, כיצד נגדיר מטריצה <span>$latex C=A+B$</span>? בתור התחלה, אף אחד לא אומר שאנחנו בכלל יודעים איך להגדיר כזה דבר; אם <span>$latex A,B$</span> לא שתיהן בדיוק מאותם מימדים - כלומר, עם <span>$latex n$</span> שורות ועם <span>$latex m$</span> עמודות, החיבור כלל לא מוגדר פשוט כי לא ברור איך נכון להגדיר אותו. אבל, אם <span>$latex A,B$</span> שתיהן מאותן מימדים יש הגדרה מאוד טבעית שצצה לראש - נחבר אותן “כניסה כניסה”. בדוגמה:</p>
+
+<p><span>$latex \left[\begin{array}{cc}a_{11} &amp; a_{12}\\a_{21} &amp; a_{22}\end{array}\right]+\left[\begin{array}{cc}b_{11} &amp; b_{12}\\b_{21} &amp; b_{22}\end{array}\right]=\left[\begin{array}{cc}a_{11}+b_{11} &amp; a_{12}+b_{12}\\a_{21}+b_{21} &amp; a_{22}+b_{22}\end{array}\right]$</span></p>
+
+<p>ובהגדרה פורמלית: אם <span>$latex C=A+B$</span> אז <span>$latex C_{ij}=A_{ij}+B_{ij}$</span>.</p>
+
+<p>זה מוביל אותנו גם להגדרה מאוד טבעית ופשוטה של כפל: אם <span>$latex C=AB$</span> אז <span>$latex C_{ij}=A_{ij}B_{ij}$</span>. כלומר, כופלים את המטריצות “כניסה כניסה”. זו <strong>לא</strong> ההגדרה שאני רוצה להציג. לא שזו לא הגדרה קיימת; למכפלה “כניסה כניסה” קוראים “מכפלת הדמר”, מסמנים אותה ב-<span>$latex A\circ B$</span> ומתעסקים איתה קצת. אלא שהשם “כפל מטריצות” שמור לפעולה שונה, שהיא פי עשרות מונים יותר נפוצה ושימושית.</p>
+
+<p>זו נקודה שכדאי לעצור ולהתעכב עליה: אף אחד לא <strong>מחייב</strong> אותנו, כשאנחנו קוראים לפעולה כלשהי “כפל”, לוודא שהיא אכן הכללה “טבעית” של פעולת כפל קיימת או כל דבר דומה; זה פשוט עניין של מתן שם שאנחנו אוהבים לפעולה שאנחנו אוהבים. ייתכן שנדמה שהיה צריך מבחינה מוסרית לקרוא לפעולת הכפל שאציג בשם “הרכבת מטריצות” או משהו דומה לכך, אבל אין לכך שום סיבה אמיתית. למעשה, ככל שמתקדמים בלימודי האלגברה כך נתקלים ביותר ויותר אובייקטים שיש בהם פעולה שמכונה “כפל” אבל איננה דומה לכפל “רגיל”. המשמעות של המילה הזו אצל מתמטיקאים היא פשוט רחבה הרבה יותר מאשר נדמה במבט ראשון. אני מקווה שמספיק בשכנוע הזה כדי להסביר מדוע הטרמינולוגיה הזו היא מוזרה במבט ראשון, אבל לגיטימית לגמרי.</p>
+
+<p>נעבור להגדרה. ראשית כל, בואו נדבר על מטריצות פשוט במיוחד - כאלו שיש להן רק שורה אחת, או רק עמודה אחת. מטריצה כזו נקראת <strong>וקטור</strong>. יותר במדויק - מטריצה בת שורה אחת היא <strong>וקטור שורה</strong> ומטריצה בעלת עמודה אחת היא <strong>וקטור עמודה</strong>. אפשר לחשוב על וקטורים כאלו פשוט בתור סדרות של מספרים: <span>$latex \left(a_{1},a_{2},\dots,a_{n}\right)$</span> ו-<span>$latex \left(b_{1},b_{2},\dots,b_{n}\right)$</span> הם וקטורים בעלי <span>$latex n$</span> איברים כל אחד. למי שמכיר וקטורים במשמעות גאומטרית - זה אותו הדבר, וארחיב על כך בעתיד.</p>
+
+<p>כעת, וקטורים אפשר לכפול באמצעות מה שנקרא <strong>מכפלה סקלרית</strong>. מכפלה סקלרית פירושו שכופלים את הוקטורים איבר-איבר, אבל לא עוצרים כאן - אחר כך גם <strong>מחברים</strong> את התוצאה של כל פעולות הכפל הללו. יש לפעולה הזו משמעות גאומטרית כאשר חושבים על הוקטורים כעל אובייקטים גאומטריים אבל לא אכנס לכך כרגע; חשוב לי להדגיש שאפילו הפעולה הזו לא באה לגמרי משום מקום.</p>
+
+<p>פורמלית, <span>$latex \left(a_{1},a_{2},\dots,a_{n}\right)\cdot\left(b_{1},b_{2},\dots,b_{n}\right)=a_{1}b_{1}+a_{2}b_{2}+\dots+a_{n}b_{n}$</span>, וזו ההזדמנות שלי להציג סימן מקוצר לחיבור שהוא קריטי כשמדברים על כפל מטריצות: <span>$latex \Sigma$</span>. בסימון המקוצר הזה המכפלה הסקלרית של הוקטורים שלמעלה מתוארת כך: <span>$latex \sum_{i=1}^{n}a_{i}b_{i}$</span>. מה שקורה כאן הוא שבתחתית של ה-<span>$latex \Sigma$</span> מגדירים “משתנה אינדקס” בשם <span>$latex i$</span> ו”מאתחלים” אותו ל-1; ה-<span>$latex n$</span> למעלה פירושו “לכל ערך טבעי של <span>$latex i$</span> החל מערך האתחול שלו ועד ל-<span>$latex n$</span>”, וה-<span>$latex a_{i}b_{i}$</span> אומר שלכל <span>$latex i$</span> שרצים עליו, מוסיפים לסכום של <span>$latex a_{i}b_{i}$</span>. אין כאן שום דבר יותר מאשר כתיב מקוצר של <span>$latex a_{1}b_{1}+a_{2}b_{2}+\dots+a_{n}b_{n}$</span> שדורש הרבה, הרבה פחות מקום; ולשם שינוי אני לא אתחיל להגדיר פעולות כפל מוזרות גם על ה-<span>$latex \Sigma$</span> הזה עצמו.</p>
+
+<p>עכשיו אפשר לתת הגדרה בנפנוף ידיים מהיר של כפל מטריצות: <span>$latex C=AB$</span> היא מטריצה שהכניסה ה-<span>$latex ij$</span> שלה היא התוצאה של המכפלה הסקלרית של השורה ה-<span>$latex i$</span> של <span>$latex A$</span> עם העמודה ה-<span>$latex j$</span> של <span>$latex B$</span>. הרי על שורה של מטריצה אפשר לחשוב גם כוקטור שורה העומד בפני עצמו; ועל עמודה של <span>$latex j$</span> אפשר לחשוב גם כוקטור עמודה העומד בפני עצמו; ואפשר להכפיל אותם; והתוצאה תהיה מספר, אז ההגדרה שנתתי היא בעלת משמעות.</p>
+
+<p>יש בכל זאת בעיה אחת שמייד קופצת: כדי לכפול סקלרית שני וקטורים הם צריכים להיות מאותו האורך. אם אני כופל <strong>שורות</strong> של <span>$latex A$</span> ב<strong>עמודות</strong> של <span>$latex B$</span>, זה אומר שאני צריך שהאורך של כל שורה של <span>$latex A$</span> יהיה זהה לאורך של כל עמודה של <span>$latex B$</span>. זה אומר, למשל, שאי אפשר לכפול יחד שתי מטריצות מסדר <span>$latex 2\times3$</span>! במטריצה <span>$latex \left[\begin{array}{ccc}1 &amp; 2 &amp; 3\\1 &amp; 2 &amp; 3\end{array}\right]$</span> האורך של כל שורה הוא 3 (כמספר העמודות במטריצה) והאורך של כל עמודה הוא 2 (כמספר השורות במטריצה) וזה אומר שעל פי ההגדרה שנתתי אי אפשר לכפול אותה אפילו עם עצמה! זה מוזר למדי אבל זו אכן תוצאה הכרחית של ההגדרה שלי.</p>
+
+<p>לכן הנה הכלל: אם <span>$latex A$</span> היא מטריצה מסדר <span>$latex n\times m$</span> (<span>$latex n$</span> שורות, <span>$latex m$</span> עמודות) ו-<span>$latex B$</span> היא מטריצה מסדר <span>$latex k\times l$</span> (<span>$latex k$</span> שורות, <span>$latex l$</span> עמודות) אז כדי שתהיה משמעות למכפלה <span>$latex AB$</span> חייב להתקיים <span>$latex m=k$</span> (מספר העמודות של <span>$latex A$</span> שווה למספר השורות של <span>$latex B$</span>). אם אכן <span>$latex m=k$</span>, אז המכפלה <span>$latex AB$</span> תהיה מטריצה מסדר <span>$latex n\times l$</span> (<span>$latex n$</span> שורות, <span>$latex l$</span> עמודות), כי יש כניסה ב-<span>$latex AB$</span> לכל זוג של שורה ב-<span>$latex A$</span> ועמודה ב-<span>$latex B$</span> שמוכפלות סקלרית.</p>
+
+<p>בואו נראה דוגמה: <span>$latex \left[\begin{array}{ccc}1 &amp; 2 &amp; \pi\\0 &amp; 3 &amp; 6\end{array}\right]\left[\begin{array}{cc}5 &amp; 0\\1 &amp; 0\\0 &amp; 1\end{array}\right]=\left[\begin{array}{cc}7 &amp; \pi\\3 &amp; 6\end{array}\right]$</span>. למה הכניסה <span>$latex 1,1$</span> של המכפלה היא 7? כי זו התוצאה של המכפלה הסקלרית <span>$latex \left(1,2,\pi\right)\cdot\left(5,1,0\right)=5+2+\pi\cdot0=7$</span>. נסו להבהיר לעצמכם למה שאר הכניסות קיבלו את הערכים שהן קיבלו, ולמה הממדים של התוצאה הם <span>$latex 2\times2$</span>. אם הצלחתם, כבר הבנתם את ההגדרה גם אם טרם הבנתם “למה”.</p>
+
+<p>בואו נגדיר כפל באופן פורמלי כדי שלא יהיו ספקות. אם <span>$latex A$</span> היא מטריצה מסדר <span>$latex n\times m$</span> ו-<span>$latex B$</span> היא מטריצה מסדר <span>$latex m\times k$</span> אז <span>$latex C=AB$</span> היא מטריצה מסדר <span>$latex n\times k$</span> כך ש-</p>
+
+<p><span>$latex C_{ij}=\sum_{r=1}^{m}A_{ir}B_{rj}$</span></p>
+
+<p>זה הכל.</p>
+
+<p>לכפל מטריצות יש תכונה מוזרה אחת (מוזרה עבור מי שרגיל לכפל “רגיל”) שצריך לשים על השולחן כמה שיותר מהר: לא בהכרח מתקיים <span>$latex AB=BA$</span>. ראשית, בכלל לא ברור שתהיה משמעות גם ל-<span>$latex AB$</span> וגם ל-<span>$latex BA$</span>; בשביל זה שתי המטריצות חייבות להיות עם אותו מספר שורות ועמודות - מטריצות כאלו מכונות <strong>מטריצות ריבועיות</strong>. אבל גם אם <span>$latex A,B$</span> שתיהן ריבועיות מסדר <span>$latex n\times n$</span> זה ממש לא נכון שבהכרח יתקיים <span>$latex AB=BA$</span> (אם כי לפעמים זה כן קורה). למשל, <span>$latex \left[\begin{array}{cc}1 &amp; 1\\0 &amp; 0\end{array}\right]\left[\begin{array}{cc}1 &amp; 0\\1 &amp; 0\end{array}\right]=\left[\begin{array}{cc}1 &amp; 0\\0 &amp; 0\end{array}\right]$</span> אבל <span>$latex \left[\begin{array}{cc}1 &amp; 0\\1 &amp; 0\end{array}\right]\left[\begin{array}{cc}1 &amp; 1\\0 &amp; 0\end{array}\right]=\left[\begin{array}{cc}1 &amp; 1\\1 &amp; 1\end{array}\right]$</span>. אתם צריכים לחשוב על זה שהתכונה הזו לא מתקיימת בתור דבר <strong>טוב</strong>: זה אומר שאפשר לתאר עם כפל מטריצות עולם יותר עשיר משנדמה לנו, כי במציאות יש גם פעולות שהן לא חילופיות באופן הזה (למשל, הטרנספורמציות של צורות תלת ממדיות שהזכרתי בתחילת הפוסט אינן כאלו - לסובב ואז לשקף לא תמיד נותן אותו דבר כמו לשקף ואז לסובב).</p>
+
+<p>עכשיו אני רוצה חיש קל להראות שני שימושים שונים לגמרי של הפעולה הזו. הראשון יהיה קשור למערכות של משוואות לינאריות. הטענה שלי היא פשוטה: מערכת משוואות לינארית ניתנת לתיאור פשוט באמצעות כפל מטריצות. בואו נתחיל עם דוגמה - המערכת</p>
+
+<p><span>$latex 2x+3y=17$</span></p>
+
+<p><span>$latex 8x-4y=6$</span></p>
+
+<p>ממש לא מעניין אותי הפתרון של המערכת. מה שכן מעניין אותי היא לתרגם את הבעיה “פתור את המערכת” לבעיה “פתור את המשוואה הבאה שמערבת מטריצות”. לשם כך ראשית כל אסתכל על המטריצה של מקדמי המשוואה: <span>$latex \left[\begin{array}{cc}2 &amp; 3\\8 &amp; -4\end{array}\right]$</span>. שימו לב שבניגוד לקודם, כעת אני לא לא מכניס פנימה גם את המספרים שמעבר לסימן השווה; אותם אני מכניס לוקטור נפרד - וקטור העמודה <span>$latex \left[\begin{array}{c}17\\6\end{array}\right]$</span>. בנוסף, אני אכניס לתמונה וקטור חדש לגמרי - וקטור של <strong>משתנים</strong>: <span>$latex \left[\begin{array}{c}x\\y\end{array}\right]$</span>. כעת מערכת המשוואות שלמעלה זהה לחלוטין למשוואה הבודדת הבאה על מטריצות:</p>
+
+<p><span>$latex \left[\begin{array}{cc}2 &amp; 3\\8 &amp; -4\end{array}\right]\left[\begin{array}{c}x\\y\end{array}\right]=\left[\begin{array}{c}17\\6\end{array}\right]$</span></p>
+
+<p>לא מאמינים? ובכן, קל לחשב על פי ההגדרה שנתתי שמתקיים <span>$latex \left[\begin{array}{cc}2 &amp; 3\\8 &amp; -4\end{array}\right]\left[\begin{array}{c}x\\y\end{array}\right]=\left[\begin{array}{c}2x+3y\\8x-4y\end{array}\right]$</span> (זכרו שוקטור עמודה הוא<strong> מטריצה</strong>, פשוט עם עמודה בודדת) ולכן השוויון שלמעלה הוא השוויון <span>$latex \left[\begin{array}{c}2x+3y\\8x-4y\end{array}\right]=\left[\begin{array}{c}17\\6\end{array}\right]$</span> ומכיוון שמשווים וקטורים “כניסה כניסה” זו בדיוק מערכת המשוואות המקורית.</p>
+
+<p>בינתיים זה נראה עדיין כמו הבדל בשיטת הסימון, אבל מתישהו ההבדל הזה הופך להיות כל כך אפקטיבי עד שאי אפשר להתעלם ממנו יותר. עבורי זה קורה כשמבינים שאת פעולות הדירוג שהצגתי בפוסט הקודם אפשר להציג גם כן בתור פעולות של כפל מטריצות. בואו ננסה להבין איך זה קורה.</p>
+
+<p>ראשית, בואו נסתכל על מטריצה מיוחדת - <strong>מטריצת היחידה</strong>, <span>$latex I=\left[\begin{array}{ccc}1 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\end{array}\right]$</span>. זו מטריצה מסדר <span>$latex 3\times3$</span> אבל על פי אותו עיקרון ניתן להגדיר מטריצת יחידה לכל סדר (אבל היא חייבת להיות ריבועית) במילים, לכל כניסה <span>$latex ii$</span> יש במטריצת היחידה 1, ולכל כניסה <span>$latex ij$</span> כך ש-<span>$latex i\ne j$</span> יש בה 0. המקומות שבהם נמצאים ה-1-ים של המטריצה נקראים <strong>האלכסון הראשי</strong> של המטריצה.</p>
+
+<p>המטריצה הזו מעניינת כי אם <span>$latex A$</span> היא מטריצה מסדר <span>$latex n\times m$</span> ו-<span>$latex I$</span> היא מטריצת יחידה מסדר <span>$latex n\times n$</span> אז <span>$latex IA=A$</span>. כדי להבין למה, בואו ננסה להבין מהי הכניסה ה-<span>$latex ij$</span> של <span>$latex IA$</span>: זו המכפלה הסקלרית של השורה ה-<span>$latex i$</span> של <span>$latex I$</span> בעמודה ה-<span>$latex j$</span> של <span>$latex A$</span>. השורה ה-<span>$latex i$</span> של <span>$latex I$</span> כוללת רק אפסים חוץ ממקום אחד שכולל 1 - בדיוק המקום ה-<span>$latex i$</span>. אז כשכופלים את השורה הזו בעמודה ה-<span>$latex j$</span> של <span>$latex A$</span> אנחנו מתעלמים מכל הכניסות בעמודה הזו חוץ מאחת - הכניסה ה-<span>$latex i$</span>-ית, שהיא בדיוק מה שנמצא בשורה ה-<span>$latex i$</span>-ית של <span>$latex A$</span>. לכן בכניסה ה-<span>$latex ij$</span> של <span>$latex IA$</span> יהיה בדיוק את האיבר בכניסה ה-<span>$latex ij$</span> של <span>$latex A$</span>.</p>
+
+<p>כעת בואו נחזור על אותה פעולת כפל אבל עם מטריצה שהיא “כמעט <span>$latex I$</span>” פרט לכך שהחלפנו את השורה הראשונה עם השניה. מהי הכניסה ה-<span>$latex 1j$</span> של המכפלה הפעם? היא תכיל את האיבר ה<strong>שני</strong> בעמודה ה-<span>$latex j$</span> של <span>$latex A$</span>. כלומר, השורה הראשונה במכפלה תכיל את השורה ה<strong>שניה</strong> של <span>$latex A$</span>, ובאופן לא מפתיע השורה השניה במכפלה תכיל את השורה הראשונה של <span>$latex A$</span>. גם כאן מומלץ לבדוק אותי עצמאית.</p>
+
+<p>מה שראינו פה הוא עקרון כללי: אם נבצע פעולה אלמנטרית כלשהי על מטריצת היחידה <span>$latex I$</span> - בין אם החלפת שורות, או כפל שורה במספר, או חיבור כפולה של שורה אחת לשורה אחרת - נקבל מטריצה (שמכונה, באופן לא מפתיע, “מטריצה אלמנטרית”) שהכפל שלה ב-<span>$latex A$</span> זהה להפעלת הפעולה האלמנטרית הזו על <span>$latex A$</span>.</p>
+
+<p>אם כן, נניח ש-<span>$latex \overline{x}$</span> מסמן לנו וקטור של משתנים, ו-<span>$latex \overline{c}$</span> וקטור של מספרים, מערכת כללית של משוואות לינאריות מתוארת על ידי <span>$latex A\overline{x}=\overline{c}$</span> (שימו לב ש-<span>$latex \overline{x}$</span> ו-<span>$latex \overline{c}$</span> בכלל לא חייבים להיות מאותו האורך; אורכו של הראשון הוא מספר המשתנים ואורכו של השני הוא מספר המשוואות). כעת, אם <span>$latex E$</span> היא מטריצה אלמנטרית כלשהי, אפשר לכפול בה את שני אגפי המשוואה ולקבל <span>$latex \left(EA\right)\overline{x}=E\overline{c}$</span> (כמובן, צריך להוכיח שדברים כאלו באמת עובדים; אלו הוכחות לא מעניינות ולא אציג אותן כאן). אם אנחנו רוצים להפעיל שתי פעולות אלמנטריות, <span>$latex E_{1}$</span> ו-<span>$latex E_{2}$</span>, אפשר לכפול את המשוואה בהן בזו אחר זו ולקבל <span>$latex \left(E_{2}\left(E_{1}A\right)\right)\overline{x}=E_{2}\left(E_{1}\overline{c}\right)$</span>. כעת העובדה שכפל מטריצות מקיים את חוץ הקיבוץ הופכת לקריטית: זה אומר ש-<span>$latex E_{2}\left(E_{1}A\right)=\left(E_{2}E_{1}\right)A$</span>, ולכן במקום לכפול את <span>$latex A$</span> קודם ב-<span>$latex E_{1}$</span> ואז ב-<span>$latex E_{2}$</span> אפשר לכפול את <span>$latex A$</span> רק פעם אחת במטריצה <span>$latex E_{2}E_{1}$</span> ש”מקודדת בתוכה” הפעלה של שתי פעולות אלמנטריות ולא רק אחת. באותו אופן, אם אנחנו רוצים להפעיל על <span>$latex A$</span> כמות סופית כלשהי של פעולות אלמנטריות, אפשר קודם כל לכפול את המטריצות האלמנטריות אלו באלו ובסוף לקבל מטריצה <span>$latex E$</span> שכבר מאחסנת בתוכה את כל הפעולות שרוצים לבצע על <span>$latex A$</span> כשהן מסודרות לפי הסדר הנכון. אחרי הכפל נקבל <span>$latex \left(EA\right)\overline{x}=E\overline{c}$</span>; מכיוון ש-<span>$latex E\overline{c}$</span> הוא בעצמו וקטור אחר של מספרים, מה שקיבלנו בסופו של דבר הוא משוואה אחרת מהצורה <span>$latex B\overline{x}=\overline{d}$</span>, שבה אנחנו יכולים להניח ש-<span>$latex B$</span> היא מטריצה מצומצמת. בקיצור, כשבפוסט הבא אחזור לעסוק בפתרון משוואות אוכל לצמצם את כל הבעיה שלנו למשוואות מהצורה <span>$latex B\overline{x}=\overline{d}$</span> עם מטריצות מצומצמות.</p>
+
+<p>את הרעיון הזה לפיו מטריצה אחת יכולה “לאגור” הרבה פעולות שונות שכל אחד מקודדת על ידי מטריצה אחרת הזכרתי גם בהקשר של פעולות על אובייקטים תלת ממדיים קודם, וזה בדיוק אותו הסיפור שם. אני חושב שזו המחשה טובה מאין כמוה לכוח שיש בחוק הקיבוץ, שאנחנו לא תמיד שמים לב אליו. אנסה לתת המחשה פשטנית: נגיד שיש לנו אלף אובייקטים, ועל כל אחד אנחנו רוצים לבצע את אותה סדרה של אלף טרנספורמציות. בלי חוק הקיבוץ, היינו צריכים להפעיל את אותן אלף טרנספורמציות על כל אחד מאלף האובייקטים - מיליון פעולות; אבל עם חוק הקיבוץ אנחנו כופלים את המטריצות של אלף הטרנספורמציות יחד, ואת התוצאה אנחנו כופלים בכל אחד מאלף האובייקטים. סך הכל אלפיים פעולות - הבדל של סדרי גודל (כמובן, העניין הזה של “אגירה” ניתן להמחשה גם עבור פעולות פשוטות כמו חיבור מספרים - זה בדיוק מה שקורה בחשבון בנק, למשל. איכשהו, אני חושב שהדוגמה עובדת הרבה יותר טוב עבור פעולה כמו כפל מטריצות שאליה אנחנו הרבה פחות מורגלים ומסוגלת לתאר טרנספורמציות יותר מורכבות מסתם חיבור או חיסור).</p>
+
+<p>למשוואות נחזור בפוסט הבא, וכעת אני רוצה לדבר בחטף על דוגמה שונה לשימוש בכפל מטריצות, בהקשר של גרפים. כשאני אומר “גרף”, אני מתכוון לקבוצה <span>$latex V$</span> של צמתים ו-<span>$latex E$</span> של קשתות שמחברות זוגות של צמתים; מי שלא מכיר את המושג מוזמן לקרוא <a href="http://www.gadial.net/?p=125">את הפוסט</a> שבו תיארתי אותו לראשונה.</p>
+
+<p>אנחנו רוצים לספור מסלולים בגרף. מסלול הוא פשוט סדרה של צמתים כל שכל שני צמתים בסדרה מחוברים בקשת, ואורכו הוא כמספר הקשתות שבו. לכל מסלול גם יש צומת התחלתי וצומת סופי - הצמתים הראשונים והאחרונים בסדרה. כך למשל <span>$latex v\to u$</span> הוא מסלול באורך 1 מ-<span>$latex v$</span> אל <span>$latex u$</span>, ו-<span>$latex v\to u\to w$</span> הוא מסלול באורך 2 מ-<span>$latex v$</span> אל <span>$latex w$</span> (שעובר ב-<span>$latex u$</span>). גם <span>$latex v$</span> לבדו הוא מסלול: מסלול באורך 0 עם צומת התחלה <span>$latex v$</span> וצומת סיום <span>$latex v$</span>. זה נשמע מטופש אבל תכף נראה שזו הגדרה מועילה.</p>
+
+<p>בגרף שלנו נרשה שצומת יכיל קשת אל עצמו (מה שנקרא “חוג עצמי”) ולכן <span>$latex v\to v$</span> הוא מסלול חוקי וגם נרשה כמה קשתות בין שני צמתים (מה שנקרא “קשתות מקבילות”); שני מסלולים שכוללים בדיוק את אותה סדרת צמתים אבל מתישהו משתמשים בקשתות שונות ייחשבו שונים. אפשר לאסור על כל השכלולים הללו ועדיין מה שאציג יעבוד, אבל אני רוצה להראות תוצאה כללית ככל האפשר ולכן מרשה את זה (ובפועל לעתים קרובות אכן יש צורך בחוגים עצמיים וקשתות מקבילות; למשל, כשהגרף שלנו מגיע מאוטומט סופי דטרמיניסטי). בנוסף, הגרף יכול להיות מכוון - קשת היא תמיד מצומת א’ אל צומת ב’ ומסלול חייב להיות עם כיוון הקשתות כדי להיות חוקי.</p>
+
+<p>כעת, נניח שיש לנו גרף עם <span>$latex n$</span> צמתים, <span>$latex v_{1},\dots,v_{n}$</span>. מגדירים עבורו מטריצה <span>$latex A$</span> מסדר <span>$latex n\times n$</span> - “מטריצת השכנויות/סמיכויות” שלו - באופן הבא: <span>$latex A_{ij}$</span> שווה למספר הקשתות מ-<span>$latex i$</span> אל <span>$latex j$</span>. כלומר זה מספר שלם אי שלילי (בגלל שאנחנו מרשים קשתות מקבילות, <span>$latex A_{ij}$</span> יכול להיות גדול מ-1; ובגלל שהגרף מכוון <span>$latex A_{ij}$</span> לא בהכרח שווה ל-<span>$latex A_{ji}$</span>).</p>
+
+<p>מכיוון ש-<span>$latex A$</span> היא מטריצה ריבועית, אפשר לכפול אותה בעצמה. <span>$latex A^{k}$</span> היא מה שמקבלים כשכופלים את <span>$latex A$</span> בעצמה <span>$latex k$</span> פעמים. כמו ש-<span>$latex a^{0}=1$</span> עבור מספרים, כך מגדירים גם ש-<span>$latex A^{0}=I$</span> כאשר <span>$latex I$</span> היא מטריצת היחידה מסדר <span>$latex n\times n$</span>.</p>
+
+<p>כעת אפשר לעבור לתוצאה המקסימה: <span>$latex A^{t}$</span> היא מטריצה שמקודדת בדיוק את מספרי המסלולים מאורך <span>$latex t$</span> בין כל שני צמתים בגרף; יותר בפירוט, <span>$latex A_{ij}^{t}$</span> הוא בדיוק מספר המסלולים מאורך <span>$latex t$</span> מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span>.</p>
+
+<p>למה זה עובד? ובכן, עבור <span>$latex A^{0}$</span> זה ברור מההגדרה שנתתי: מסלול באורך 0 חייב להתחיל ולהסתיים באותו צומת, ויש בדיוק 1 כזה. זה מתאים בדיוק לכך שעל האלכסון הראשי של <span>$latex A^{0}$</span> יש 1 ובשאר הכניסות יש 0.</p>
+
+<p>עבור <span>$latex A^{1}$</span> זה גם ברור: כל קשת <span>$latex v\to u$</span> מגדירה מסלול באורך 1 מ-<span>$latex v$</span> אל <span>$latex u$</span>, ולכן מספר המסלולים הכולל מ-<span>$latex v$</span> אל <span>$latex u$</span> באורך 1 הוא כמספר הקשתות מ-<span>$latex v$</span> אל <span>$latex u$</span>.</p>
+
+<p>הכיף מתחיל עבור <span>$latex A^{2}$</span>, וכאן ההגדרה של כפל מטריצות מתגלה במלוא כוחה. מהו מסלול באורך 2? מסלול מהצורה <span>$latex v\to u\to w$</span> (הצמתים לא חייבים להיות שונים אלו מאלו בהכרח). אם אנחנו מתעניינים במספר המסלולים מ-<span>$latex v$</span> אל <span>$latex w$</span>, אז כל מסלול כזה נבנה באופן הבא: בחר צומת <span>$latex u$</span> שישמש בתור צומת האמצע; בחר קשת מ-<span>$latex v$</span> אל <span>$latex u$</span> (אם קיימת כזו), ואז בחר קשת מ-<span>$latex u$</span> אל <span>$latex w$</span> (אם קיימת כזו).</p>
+
+<p>כמה מסלולים כאלו יש? אם קבענו את <span>$latex u$</span>, אז נותר לבחור קשת מ-<span>$latex v$</span> אל <span>$latex u$</span>, ולבחור קשת מ-<span>$latex u$</span> אל <span>$latex w$</span>, ושתי הבחירות הללו בלתי תלויות זו בזו, ולכן מספר האפשרויות הוא מכפלה של מספר האפשרויות לבחור קשת מ-<span>$latex v$</span> אל <span>$latex u$</span> במספר האפשרויות לבחור קשת מ-<span>$latex u$</span> אל <span>$latex w$</span> (זהו “עקרון הכפל” הקומבינטורי). כעת, לכל <span>$latex u$</span> שיכול לשמש כצומת ביניים אנחנו מקבלים מספר אפשרויות כלשהו, ולכן מספר האפשרויות הכולל הוא סכום כל האפשרויות על כל ה-<span>$latex u$</span>-ים האפשריים (זהו “עקרון החיבור” הקומבינטורי).</p>
+
+<p>בואו נסמן את הצמתים במספרים כדי שיהיה לנו קצת יותר קל. נניח שאנחנו רוצים לדעת כמה מסלולים יש מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span>, וש-<span>$latex v_{r}$</span> הוא צומת הביניים שלנו. אז יש <span>$latex A_{ir}$</span> קשתות מ-<span>$latex v_{i}$</span> אל <span>$latex v_{r}$</span>; <span>$latex A_{rj}$</span> קשתות מ-<span>$latex v_{r}$</span> אל <span>$latex v_{j}$</span>; ולכן <span>$latex A_{ir}A_{rj}$</span> מסלולים מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span> שעוברים דרך <span>$latex v_{r}$</span>; ולכן <span>$latex \sum_{r=1}^{n}A_{ir}A_{rj}$</span> מסלולים בסך הכל מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span>. אבל <span>$latex \sum_{r=1}^{n}A_{ir}A_{rj}$</span> ידידינו הוא <strong>בדיוק</strong> ההגדרה שלנו לכניסה ה-<span>$latex ij$</span> בכפל המטריצה <span>$latex A$</span> בעצמה, ולכן <span>$latex A^{2}$</span> אכן מקודד בדיוק את המסלולים מאורך 2 בין צמתים בגרף.</p>
+
+<p>ההוכחה הכללית עבור <span>$latex A^{t}$</span> פשוטה באותה מידה, אם שמים לב לכך ש-<span>$latex A^{t}=A^{t-1}A$</span> ומשתמשים באינדוקציה כדי להניח ש-<span>$latex A^{t-1}$</span> כבר מקודד את מספר המסלולים מאורך <span>$latex t-1$</span> בין צמתים בגרף. במקרה זה, אפשר לחשוב על מסלול מאורך <span>$latex t$</span> בגרף מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span> כאילו הוא מהצורה <span>$latex v_{i}\rightarrow v_{r}\to v_{j}$</span>, כאשר <span>$latex v_{i}\rightarrow v_{r}$</span> מייצג לא קשת אחת אלא מסלול שלם מאורך <span>$latex t-1$</span> מ-<span>$latex v_{i}$</span> אל <span>$latex v_{r}$</span>. שאר הניתוח זהה: מספר המסלולים מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span> מאורך <span>$latex t$</span> שהצומת הלפני-אחרון בהם הוא <span>$latex v_{r}$</span> הוא כמספר המסלולים מאורך <span>$latex t-1$</span> מ-<span>$latex v_{i}$</span> אל <span>$latex v_{r}$</span> כפול מספר הקשתות מ-<span>$latex v_{r}$</span> אל <span>$latex v_{j}$</span>. סוף הסיפור.</p>
+
+<p>אני לא יכול להתאפק כאן ולהזכיר מאוד בחטף נושא מתקדם טיפה יותר. נניח שהמטריצה <span>$latex A$</span> שלנו, במקום לקודד את <strong>מספר</strong> הקשתות, הייתה מקודדת <strong>הסתברות</strong> למעבר מ-<span>$latex v_{i}$</span> אל <span>$latex v_{j}$</span>? כלומר, הגרף שלנו היה כזה שבו אם אתם נמצאים בצומת מסוייים, אז בסיבוב הבא עליכם לזוז לצומת אחר (או להישאר במקום - זה נחשב כאילו זזתם מהצומת אל עצמו) והייתם בוחרים לאן לעבור בהסתברות קבועה מסויימת על בסיס המיקום הנוכחי שלכם. אם <span>$latex A$</span> הייתה המטריצה שמקודדת את ההסתברויות הללו, מה הייתה המשמעות של <span>$latex A^{t}$</span>? כמעט אותו דבר - <span>$latex A_{ij}^{t}$</span> הייתה ההסתברות שבה אם התחלתם מ-<span>$latex v_{i}$</span> וביצעתם <span>$latex t$</span> סיבובים, תגיעו אל <span>$latex v_{j}$</span>. לכן אם אנחנו יודעים איך מתנהגת <span>$latex A^{t}$</span> עבור ערכים גדולים מאוד של <span>$latex t$</span>, אנחנו יודעים מה ההתנהגות לאורך זמן של ההילוך האקראי הזה - לאיזה מקומות בגרף יותר סביר להגיע ולבלות בהם יותר זמן, וכדומה. הרעיון הזה עמד בבסיס אלגוריתם הדירוג של גוגל (מה שידוע על אלגוריתם הדירוג של גוגל, לפחות) כאשר הגרף הוא “האינטרנט” (ואתרים חשובים בו הם כאלו שאליהם ההילוך המקרי מגיע לעתים קרובות יותר) והניתוח של התנהגות <span>$latex A^{t}$</span> עבור ערכים גדולים של <span>$latex t$</span> אכן מערב לו עוד אלגברה לינארית שטרם הגעתי אליה (בפרט, את המושגים של ערכים עצמיים ווקטורים עצמיים).</p>
+
+<p>אם כן, אנו רואים כאן שכפל מטריצות מקודד בתוכו סוג מסויים של פעולה יסודית למדי במתמטיקה, כזו שצצה לה בהקשרים שונים ומשונים (ותאמינו לי, עוד לא ראיתם כלום). אני מקווה שגם אלו מכם שעדיין לא התרגלו להגדרה המוזרה ילמדו לחבב אותה לאורך זמן; לטעמי, להתרגל לפעולה הזו ולטבעיות הרבה שלה היא צעד חשוב בדרך להבנה מהי מתמטיקה “אמיתית”.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2011/10/06/matrix_product/';
+      this.page.identifier = 'http://gadial.net/2011/10/06/matrix_product/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2011/10/06/matrix_product/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

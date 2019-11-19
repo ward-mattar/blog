@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>על גבולות עליונים ותחתונים של קבוצות וממשיים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="על גבולות עליונים ותחתונים של קבוצות וממשיים" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות." />
+<meta property="og:description" content="אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות." />
+<link rel="canonical" href="http://gadial.net/2014/04/08/limsup_and_liminf/" />
+<meta property="og:url" content="http://gadial.net/2014/04/08/limsup_and_liminf/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-04-08T22:18:53+03:00" />
+<script type="application/ld+json">
+{"headline":"על גבולות עליונים ותחתונים של קבוצות וממשיים","dateModified":"2014-04-08T22:18:53+03:00","datePublished":"2014-04-08T22:18:53+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2014/04/08/limsup_and_liminf/"},"url":"http://gadial.net/2014/04/08/limsup_and_liminf/","description":"אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">על גבולות עליונים ותחתונים של קבוצות וממשיים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2014-04-08T22:18:53+03:00" itemprop="datePublished">Apr 8, 2014
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אחד הדברים הנחמדים במתמטיקה הוא שאם אנחנו נתקלים באותו מושג בשני הקשרים שונים, יש סיכוי טוב שיש מושג כללי יותר שעומד מאחורי שניהם ומסביר אותם. זו חוויה שבוודאי מוכרת מאוד לסטודנטים במתמטיקה; אני עצמי זוכר סמסטר אחד שלי שבו בכל קורס הופיעו טורי פורייה בצורה זו או אחרת. הפעם אני רוצה לדבר על מושג כזה שבו נתקלתי כבר בסמסטר הראשון שלי - גבולות עליונים ותחתונים של סדרות. ואני אדבר פה על סדרות משני סוגים - סדרות של מספרים ממשיים, וסדרות של קבוצות.</p>
+
+<p>המושג עבור סדרות של מספרים ממשיים בא באופן טבעי למדי יחד עם הגדרת הגבול של סדרות של מספרים ממשיים. אזכיר כאן את ההגדרה הכללית, שהיא לא קלה לעיכול במבט ראשון וכבר <a href="http://www.gadial.net/2010/10/03/limit_of_sequence/">הקדשתי לה פוסטים בעבר</a>. לסדרה <span>$latex \left\{ a_{n}\right\} _{n=1}^{\infty}$</span> קיים הגבול <span>$latex L$</span> אם לכל <span>$latex \varepsilon&gt;0$</span> קיים <span>$latex N$</span> טבעי כך שלכל <span>$latex n&gt;N$</span> מתקיים ש-<span>$latex \left|a_{n}-L\right|&lt;\varepsilon$</span>. מסמנים את זה <span>$latex \lim_{n\to\infty}a_{n}=L$</span>, או בקיצור <span>$latex a_{n}\to L$</span>. לא קשה להוכיח שאם קיים גבול, הוא יחיד; אבל מה קורה אם אין גבול?</p>
+
+<p>דוגמה קלאסית לסדרה נטולת גבול היא <span>$latex 0,1,0,1,0,\dots$</span>. כלומר, סדרה ש”מזפזפת” בין 0 ו-1. למרות שבבירור אין גבול לסדרה הזו (אפשר לראות “בעין” שהיא לא הולכת ומתקרבת לשום מקום), אם נסתכל רק על חלקים ממנה, יש להם גבול בבירור: הגבול של תת-סדרת “כל מי שבמקומות האי זוגיים” הוא 0, והגבול של תת-סדרת “כל מי שמקומות הזוגיים” הוא 1. אז משתלם לנו להגדיר <strong>גבול חלקי</strong> בצורה הבאה: <span>$latex L$</span> הוא גבול חלקי של <span>$latex \left\{ a_{n}\right\} $</span> אם קיימת ל-<span>$latex \left\{ a_{n}\right\} $</span> תת-סדרה <span>$latex \left\{ b_{n}\right\} $</span> כך ש-<span>$latex b_{n}\to L$</span>. ואיך אני מגדיר פורמלית תת-סדרה? <span>$latex b_{n}=a_{j_{n}}$</span> כאשר <span>$latex j_{1},j_{2},\dots$</span> היא סדרה עולה ממש כלשהי של טבעיים.</p>
+
+<p>כעת אפשר להגדיר את <span>$latex \limsup a_{n}$</span> בתור הגדול מכל הגבולות החלקיים של <span>$latex \left\{ a_{n}\right\} $</span>, ואת <span>$latex \liminf a_{n}$</span> בתור הקטן מבין כל הגבולות החלקיים של <span>$latex \left\{ a_{n}\right\} $</span>. יש הגדרה טובה יותר, שאציג עוד מעט, אבל לפני שאגיע אליה בואו נעבור לדבר על סדרות של קבוצות.</p>
+
+<p>אם כן, תהא <span>$latex \left\{ A_{n}\right\} =A_{1},A_{2},A_{3},\dots$</span> סדרה של קבוצות. לא כל כך משנה מה האיברים של הקבוצות, אבל נניח שכולם מגיעים מאותו “עולם” <span>$latex X$</span>, כלומר <span>$latex A_{n}\subseteq X$</span> לכל <span>$latex A_{n}$</span>. אין לנו מושג טבעי של “גבול” על סדרות כאלו. מה יקרה אם ננסה לקחת את ההגדרה הרגילה עבור ממשיים ולהשתמש בה כאן? ובכן, נאמר ש-<span>$latex A_{n}\to B$</span> אם לכל <span>$latex \varepsilon&gt;0$</span> קיים <span>$latex N$</span> כך שלכל <span>$latex n&gt;N$</span> מתקיים <span>$latex \left|A_{n}-B\right|&lt;\varepsilon$</span>? זה בבירור לא עובד, בגלל שהביטוי <span>$latex \left|A_{n}-B\right|$</span> הוא חסר משמעות. הוא חסר משמעות כי אין לנו מושג של חיסור בין שתי קבוצות כלליות, ואין לנו מושג של ערך מוחלט.</p>
+
+<p>או שיש לנו?</p>
+
+<p>אפשר לומר, ובצדק, שיש מושג של חיסור של קבוצות: <span>$latex A\backslash B\triangleq\left\{ a\in A\ |\ a\notin B\right\} $</span>. כמו כן יש מושג של ערך מוחלט של קבוצה - הגודל שלה. אבל שני אלו הם פשוט שימוש באותם סימונים או שמות עבור דברים בעלי משמעות שונה מאשר עבור מספרים ממשיים, וה”הגדרה” שהם מניבים לנו היא די חסרת טעם. מכיוון ש-<span>$latex \varepsilon$</span> הוא מספר ממשי, הוא יכול להיות, נאמר, <span>$latex \frac{1}{2}$</span>. כדי שיתקיים <span>$latex \left|A_{n}\backslash B\right|&lt;\frac{1}{2}$</span>, בהכרח חייב להתקיים <span>$latex B=A_{n}$</span>, ולכן נקבל שלסדרת קבוצות יש גבול רק אם החל ממקום מסויים כל הקבוצות בסדרה הן שוות, ואז הגבול הוא הקבוצה שאליה כולן שוות. זו הגדרה חלשה למדי, כי אין קושי לתת סדרות של קבוצות שאינן מקיימות אותה ועדיין אנחנו מרגישים שאמור להיות להן גבול מסויים. למשל, אם ניקח את <span>$latex X=\mathbb{N}$</span> ונגדיר את הסדרה הבאה: <span>$latex A_{n}=\left\{ n,n+1,n+2,\dots\right\} $</span>. כלומר, כל <span>$latex A_{n}$</span> מכילה את כל הטבעיים מ-<span>$latex n$</span> והלאה. די בבירור אנחנו מצפים שיתקיים <span>$latex A_{n}\to\emptyset$</span> למרות שההגדרה הטיפשית שלמעלה לא נותנת את זה.</p>
+
+<p>אז מה זה אומר, ש-<span>$latex A_{n}\to B$</span>? ההגדרה שנראית לי סבירה היא שכל איבר ב-<span>$latex X$</span> “מחליט” בשלב מסויים אם הוא בפנים או בחוץ מכאן ואילך ודבק בזה. כלומר, פורמלית <span>$latex A_{n}\to B$</span> אם לכל <span>$latex a\in B$</span> קיים <span>$latex N$</span> כך שלכל <span>$latex n&gt;N$</span> מתקיים <span>$latex a\in A_{n}$</span>, ולכל <span>$latex a\notin B$</span> קיים <span>$latex N$</span> כך שלכל <span>$latex n&gt;N$</span> מתקיים <span>$latex a\notin A_{n}$</span>. בניסוח יותר מקוצר, לכל <span>$latex a\in X$</span> קיים <span>$latex N$</span> כך שלכל <span>$latex n&gt;N$</span> מתקיים <span>$latex a\in B\iff a\in A_{n}$</span>. זו הגדרה סבירה ואינטואיטיבית, לדעתי, אבל היא נראית די שונה מהגדרת הגבול עבור סדרות של ממשיים. לאן נעלם ההפרש והערך המוחלט? ובכן, צריך להבין מה היה התפקיד שלהם מלכתחילה: הרעיון בלכתוב <span>$latex \left|a_{n}-L\right|&lt;\varepsilon$</span> הוא לדבר על <strong>המרחק</strong> בין <span>$latex a_{n}$</span> ו-<span>$latex L$</span> ולהגיד שניתן “להקטין אותו כרצוננו”. עבור קבוצות קצת יותר קשה לי לנסח הגדרה שמבוססת על “מרחק בין קבוצות” כי זה יצריך ממני להגדיר מדד כלשהו של “גודל” על קבוצות, וזה תמיד עניין מסובך כשהקבוצות הן אינסופיות.</p>
+
+<p>עכשיו אני רוצה לעבור ולדבר על גבולות חלקיים של סדרות של קבוצות. אני רוצה להגדיר <span>$latex \limsup$</span> ו-<span>$latex \liminf$</span> כמו קודם, אבל בשביל זה אני צריך להגיד מה זה “גדול יותר” ו”קטן יותר” אצל קבוצות. למרבה המזל, יש הגדרה טבעית - הכלה. במקום לומר <span>$latex a\le b$</span> אומרים <span>$latex A\subseteq B$</span>. יש הבדל קטן בין השוואה של מספרים ממשיים והכלה של קבוצות: כל שני מספרים ממשיים ניתנים להשוואה, בזמן שלא כל שתי קבוצות ניתנות להשוואה. למשל, <span>$latex \left\{ 1,2\right\} $</span> ו-<span>$latex \left\{ 1,3\right\} $</span> לא ניתנות להשוואה, אבל לא נורא (בהמשך עוד אתייחס לזה).</p>
+
+<p>אם כן, אני רוצה ש-<span>$latex \limsup A_{n}$</span> יהיה גבול של תת-סדרה של <span>$latex A_{n}$</span> שמכיל כל גבול של תת-סדרה אחרת. אז בואו נסתכל על <span>$latex a\in X$</span> <strong>כלשהו</strong> ונשאל את עצמנו - האם <span>$latex a\in\limsup A_{n}$</span> או לא? אם הוא בפנים, זה אומר שקיימת תת-סדרה <strong>כלשהי</strong> של <span>$latex A_{n}$</span> ש-<span>$latex a$</span> שייך לגבול שלה. כלומר, שייך לכל האיברים בתת-הסדרה הזו החל ממקום מסויים. כלומר, <span>$latex a$</span> שייך לאינסוף קבוצות מבין ה-<span>$latex A_{n}$</span>-ים. על כן: <span>$latex \limsup A_{n}$</span> חייב להכיל לפחות את כל ה-<span>$latex a$</span>-ים שמופיעים באינסוף קבוצות מבין ה-<span>$latex A_{n}$</span>-ים. כאן אנחנו רואים מייד שמשהו “לא עובד”: נסתכל על סדרת הקבוצות <span>$latex \left\{ 0\right\} ,\left\{ 1\right\} ,\left\{ 0\right\} ,\left\{ 1\right\} ,\dots$</span>: מכיוון ש-0 מופיע באינסוף קבוצות, ו-<span>$latex 1$</span> מופיע באינסוף קבוצות, אז ה-<span>$latex \limsup$</span> יצטרך להכיל את <span>$latex \left\{ 0,1\right\} $</span>. אבל בבירור הקבוצה הזו אינה גבול של אף תת-סדרה של הסדרה שנתתי (הגבולות הסבירים היחידים הם <span>$latex \left\{ 0\right\} $</span> ו-<span>$latex \left\{ 1\right\} $</span>). אז ההגדרה הזו של “הגבול הכי גדול של תת-סדרה” ששאבנו מהמקרה של ממשיים לא עובדת טוב; האם יש הגדרה חלופית שבה אפשר להשתמש?</p>
+
+<p>התשובה, למרבה השמחה, חיובית. בשביל לראות אותה, נחזור קודם לממשיים ונזכיר את מושגי ה<strong>סופרמום</strong> ו<strong>אינפימום</strong> עבור מספרים ממשיים. <strong>סופרמום</strong> של סדרת מספרים <span>$latex a_{n}$</span> הוא חסם מלעיל של הסדרה, כלומר <span>$latex b$</span> כך ש-<span>$latex a_{n}\le b$</span> לכל <span>$latex n$</span>, אבל יותר מכך - הוא החסם <strong>הקטן ביותר</strong>, כלומר אם <span>$latex c$</span> הוא חסם מלעיל של <span>$latex a_{n}$</span> אז <span>$latex b\le c$</span>. אינפימום זה אותו דבר רק עבור חסם מלרע, כלומר זה <span>$latex b$</span> כך ש-<span>$latex b\le a_{n}$</span> לכל אברי הסדרה ואם <span>$latex c\le a_{n}$</span> לכל אברי הסדרה, אז <span>$latex c\le b$</span>. אולי ההיבט החשוב ביותר של המספרים הממשיים בכל הנוגע לחשבון אינפיניטסימלי הוא התכונה שלכל קבוצת מספרים ממשיים חסומה מלעיל יש סופרמום (ולכל קבוצה חסומה מלרע יש אינפימום).</p>
+
+<p>בעזרת מושגי הסופרמום והאינפימום, הנה הגדרה אלטרנטיבית ל-<span>$latex \limsup$</span> עבור סדרה <span>$latex a_{n}$</span> של ממשיים: <span>$latex \limsup a_{n}=\inf_{m\ge1}\sup_{n\ge m}a_{n}$</span>. זה כתיב מקוצר שיכול להיות די מבלבל, אז הנה הסבר מילולי: ניקח את הסדרה <span>$latex a_{n}$</span>, כלומר <span>$latex a_{1},a_{2},a_{3},\dots$</span>. כעת, לכל מספר טבעי <span>$latex m$</span> נתבונן על הסדרה שמקבלים מ-<span>$latex a_{n}$</span> אם מתחילים לספור רק מהאיבר ה-<span>$latex m$</span>-י, כלומר <span>$latex a_{m},a_{m+1},a_{m+2},\dots$</span>. לסדרה הזו, כלומר לכל סדרה אחרת של מספרים, יש סופרמום. אם נסמן את הסופרמום של הסדרה הזו ב-<span>$latex b_{m}$</span>, יוצא שקיבלנו סדרה <span>$latex b_{1},b_{2},b_{3},\dots$</span> של סופרמומים. ניקח את האינפימום שלהם. עדיין רוצים כתיב פורמלי לגמרי? נו טוב, שיהיה: <span>$latex \limsup\left\{ a_{1},a_{2},\dots\right\} =\inf\left\{ \sup\left\{ a_{1},a_{2},a_{3},\dots\right\} ,\sup\left\{ a_{2},a_{3},a_{4},\dots\right\} ,\dots\right\} $</span>.</p>
+
+<p>לדעתי יש שני דברים שקופצים לעין מייד כשרואים את ההגדרה הזו: ראשית, שבכלל לא ברור למה היא נותנת את מה שקראנו לו קודם <span>$latex \limsup$</span>, כלומר הגבול הגדול ביותר מבין הגבולות החלקיים של הסדרה; ושנית, שאם היא עובדת, אז היא אלגנטית כמו אני לא יודע מה. לא משנה כמה שנים אני כבר מכיר את ההגדרה הזו וכמה טריוויאלית היא אמורה להיראות לי, אני עדיין מתלהב ממנה. אבל יופי, מספיק להתלהב, למה היא עובדת?</p>
+
+<p>קודם כל אינטואיציה: שימו לב ש-<span>$latex b_{1},b_{2},b_{3},\dots$</span> היא סדרה <strong>יורדת</strong> (ליתר דיוק, לא עולה) - כי עבור <span>$latex m$</span>-ים גדולים יותר ויותר אנחנו לוקחים סופרמום על פחות איברים. זה אומר שלאט לאט אנחנו הופכים ל<strong>מדוייקים</strong> יותר כי אנחנו נותנים לפחות איברים ליצור “רעש” שמרחיק אותנו מההתנהגות לטווח ארוך של הסדרה (וגבול מתאר את ההתנהגות לטווח ארוך של הסדרה).</p>
+
+<p>פורמלית, נניח ש-<span>$latex a_{j_{1}},a_{j_{2}},\dots$</span> היא תת-סדרה מתכנסת כלשהי של <span>$latex a_{n}$</span> עם גבול <span>$latex L$</span>, ונניח בשלילה ש-<span>$latex L&gt;b_{k}$</span> עבור <span>$latex k$</span> כלשהו. התעלול כעת פשוט: מתישהו אברי תת-הסדרה יהיו קרובים כל כך אל <span>$latex L$</span> שאינסוף מהם בהכרח יעברו את <span>$latex b_{k}$</span>. זה כמובן בלתי אפשרי, כי <span>$latex b_{k}$</span> מוגדר כסופרמום של קבוצה שמכילה בפרט את אותם אינסוף איברים. פורמלית, נבחר <span>$latex \varepsilon=\frac{L-b_{k}}{2}$</span> ונקבל שקיים <span>$latex N$</span> כך שלכל <span>$latex n&gt;N$</span> מתקיים <span>$latex a_{j_{n}}&gt;L-\varepsilon=\frac{L+b_{k}}{2}&gt;b_{k}$</span> - סתירה לכך ש-<span>$latex b_{k}=\sup_{n\ge k}a_{n}$</span>.</p>
+
+<p>אז ראינו שאכן, <span>$latex \limsup a_{n}$</span> גדול מכל גבול חלקי של הסדרה, אבל למה הוא שווה לגבול החלקי הגדול ביותר? בשביל זה צריך לתת תת-סדרה שמתכנסת אל <span>$latex \limsup a_{n}$</span>. זה תרגיל סטנדרטי בעבודה עם אינפימומים וסופרמומים, אבל בואו נראה אותו למי שלא מכיר: ראשית, באופן כללי, אם <span>$latex A$</span> היא קבוצה של ממשיים ו-<span>$latex t=\sup A$</span>, אז לכל <span>$latex \varepsilon&gt;0$</span> קיים <span>$latex a\in A$</span> כך ש-<span>$latex t-a&lt;\varepsilon$</span> - כלומר, אפשר “להתקרב כרצוננו” אל הסופרמום עם אברים של <span>$latex A$</span>, כי אם זה לא היה נכון, אפשר היה למצוא חסם עליון קטן יותר עבור <span>$latex A$</span>.</p>
+
+<p>אז במקרה שלנו, בואו נסמן <span>$latex t=\limsup a_{n}$</span>. כעת, בואו ניקח מספר טבעי <span>$latex m$</span> כלשהו. נסמן <span>$latex \varepsilon=\frac{1}{m}$</span>. מהגדרתו של <span>$latex t$</span> בתור אינפימום נקבל שקיים <span>$latex k$</span> כך ש-<span>$latex b_{k}-t&lt;\frac{\varepsilon}{2}$</span>. עכשיו, מהגדרתו של <span>$latex b_{k}$</span> בתור סופרמום נקבל שקיים <span>$latex a_{j_{m}}$</span> כך ש-<span>$latex b_{k}-a_{j_{m}}&lt;\frac{\varepsilon}{2}$</span>. מכאן נסיק ש-</p>
+
+<p><span>$latex \left|t-a_{j_{m}}\right|=\left|\left(b_{k}-a_{j_{m}}\right)-\left(b_{k}-t\right)\right|\le\left|b_{k}-a_{j_{m}}\right|+\left|b_{k}-t\right|&lt;\varepsilon$</span></p>
+
+<p>וקיבלנו שלכל <span>$latex m$</span> אנחנו מסוגלים למצוא איבר <span>$latex a_{j_{m}}$</span> שקרוב ל-<span>$latex t$</span> עד כדי <span>$latex \frac{1}{m}$</span>; באופן הזה אנחנו יכולים לבנות תת-סדרה אינסופית שמתכנסת ל-<span>$latex t$</span> (שמתם לב לבאג? צריך לדרוש במפורש ש-<span>$latex j_{m+1}&gt;j_{m}$</span> ולא עשיתי זאת; למה אפשר?)</p>
+
+<p>אם כן, עבור מי שאיבדו אותי בסבך הפרטים הטכניים, השורה התחתונה כרגע: אנחנו יכולים להגדיר גבול עליון ותחתון של סדרות ממשיים באופן הבא:</p>
+
+<p><span>$latex \limsup a_{n}=\inf_{m\ge1}\sup_{n\ge m}a_{n}$</span></p>
+
+<p><span>$latex \liminf a_{n}=\sup_{m\ge1}\inf_{n\ge m}a_{n}$</span></p>
+
+<p>אם כן, למה שלא ניקח את ההגדרה הזו גם עבור קבוצות? רק צריך להבין מה יהיו <span>$latex \inf$</span> ו-<span>$latex \sup$</span> במקרה הזה. אלא שזה קל: אם <span>$latex A_{1},A_{2},A_{3},\dots$</span> היא סדרה של קבוצות, אז <span>$latex \sup A_{n}=\bigcup_{n=1}^{\infty}A_{n}$</span>. למה? כי האיחוד הזה הוא הקבוצה הקטנה ביותר שמכילה את כל ה-<span>$latex A_{n}$</span>-ים, פחות או יותר על פי הגדרה (האיחוד מוגדר בתור אוסף כל האיברים שנמצאים לפחות באחד מה-<span>$latex A_{n}$</span>-ים ולא שום איבר נוסף). באופן דומה, <span>$latex \inf A_{n}=\bigcap_{n=1}^{\infty}A_{n}$</span>. לכן מתבקש ונכון להגדיר:</p>
+
+<p><span>$latex \limsup A_{n}=\bigcap_{m=1}^{\infty}\bigcup_{n=m}^{\infty}A_{n}$</span></p>
+
+<p><span>$latex \liminf A_{n}=\bigcup_{m=1}^{\infty}\bigcap_{n=m}^{\infty}A_{n}$</span></p>
+
+<p>בואו ננסה להבין מה בעצם נכלל ב-<span>$latex \limsup A_{n}$</span>. נניח ש-<span>$latex a$</span> הוא איבר בו, אז לכל <span>$latex m$</span>, הוא שייך לקבוצה מהצורה <span>$latex \bigcup_{n=m}^{\infty}A_{n}$</span>. במילים אחרות, לכל <span>$latex m$</span> קיים <span>$latex n\ge m$</span> כך ש-<span>$latex a\in A_{n}$</span>. זה נכון אם ורק אם <span>$latex a$</span> שייך ל<strong>אינסוף</strong> קבוצות מתוך הסדרה <span>$latex A_{n}$</span>. מכיוון שכל הטענות שלי כאן הן טענות של “אם ורק אם”, אז גם ההפך נכון, ולכן <span>$latex \limsup A_{n}$</span> הוא קבוצת כל האיברים שמופיעים באינסוף איברים מהסדרה.</p>
+
+<p>ומהו <span>$latex \liminf A_{n}$</span>? אם <span>$latex a$</span> שם, אז קיים <span>$latex m$</span> כך שלכל <span>$latex n\ge m$</span> מתקיים <span>$latex a\in A_{n}$</span>. זה אומר ש-<span>$latex a$</span> מופיע <strong>בכל אברי <span>$latex A_{n}$</span> פרט למספר סופי</strong>.</p>
+
+<p>מכאן אנחנו רואים בבירור למה מתקיים <span>$latex \liminf A_{n}\subseteq\limsup A_{n}$</span> - להופיע בכל הקבוצות בסדרה אינסופית פרט למספר סופי פירושו הוא בפרט להופיע באינסוף קבוצות (אבל ההפך לא נכון). גם די ברור שאם <span>$latex \lim A_{n}$</span> קיים במובן שהגדרתי הוא יהיה שווה ל-<span>$latex \liminf A_{n}$</span>, כי כל איבר ב-<span>$latex \lim A_{n}$</span> הוא איבר שהסדרה “החליטה” בשלב כלשהו שמכאן והלאה הוא מופיע. העניין הוא שלפעמים <span>$latex \lim A_{n}$</span> לא יהיה מוגדר כי (כמו בדוגמת <span>$latex \left\{ 0\right\} ,\left\{ 1\right\} ,\left\{ 0\right\} ,\left\{ 1\right\} ,\dots$</span> שלי) יהיה איבר ש”אף פעם לא מחליט אם הוא בפנים או בחוץ”; אבל אם אין כזה, זה אומר שכל מי שאינו ב-<span>$latex \lim A_{n}$</span> הוא איבר שהחל ממקום מסויים כלל לא מופיע, ולכן הוא מופיע רק במספר סופי של קבוצות ולכן הוא לא יהיה שייך ל-<span>$latex \limsup A_{n}$</span>. במילים אחרות - קל לראות שאם <span>$latex \lim A_{n}$</span> קיים, אז <span>$latex \liminf A_{n}=\limsup A_{n}=\lim A_{n}$</span>.</p>
+
+<p>לסיום, אני רוצה להבהיר שהדמיון בין שני המקרים הוא כמובן כלל לא מקרי. גם קבוצות וגם מספרים ממשיים הם שתי דוגמאות לאיברים ב<strong>סריג</strong>. יש כמה משמעויות במתמטיקה למילה “סריג”, וכאן המשמעות היא זו: סריג היא קבוצה עם יחס סדר עליה (לאו דווקא סדר מלא, כלומר לאו דווקא ניתן להשוות כל שני איברים) כך שלכל זוג איברים בה קיים סופרמום ואינפימום. פורמלית מגדירים את ה-Join של <span>$latex a,b$</span> להיות <span>$latex a\vee b=\sup\left\{ a,b\right\} $</span> ואת ה-Meet של <span>$latex a,b$</span> להיות <span>$latex a\wedge b=\inf\left\{ a,b\right\} $</span>. כאן <span>$latex \sup,\inf$</span> הם פשוט הכללות של הסופרמום והאינפימום שהגדרתי קודם; אם תשימו לב, בהגדרה כל מה שהסתמכתי עליו הוא יחס הסדר ולא שום דבר מעבר לכך.</p>
+
+<p>כעת, סריגים מעניינים במיוחד הם אלו שבהם אפשר להכליל את ה-Join וה-Meet הללו ל<strong>כל</strong> קבוצה של איברים ולא רק לזוג של איברים. סריג עם התכונה הזו נקרא <strong>שלם</strong>. את ההגדרות של <span>$latex \limsup$</span> ו-<span>$latex \liminf$</span> אפשר ליישם בכל סריג שלם שרק נרצה. הממשיים הם סריג שלם ביחס לסופרמום והאינפימום המוכרים לנו; וקבוצות (שהן כולן תת-קבוצה של איזה שהוא <span>$latex X$</span>) הן סריג שלם ביחס לאיחודים וחיתוכים של מספר כלשהו של קבוצות. וכדי שלא נצא מפה בתחושה שההכללה לא נתנה לנו שום דבר, בואו נסתכל על דוגמה לא טריוויאלית לסריג שלם שקצת שונה ממה שאנחנו מכירים.</p>
+
+<p>העולם שלנו יהיה המספרים הטבעיים, <span>$latex \mathbb{N}$</span>, כאשר כאן אני מחשיב את 0 כמספר טבעי. יחס הסדר שלנו יהיה <strong>חלוקה</strong>: אומרים ש-<span>$latex a|b$</span> אם קיים <span>$latex c$</span> כך ש-<span>$latex ac=b$</span>. החלוקה הזו משרה יחס סדר <span>$latex a\le b$</span> שהוא פשוט דרך אחרת לומר <span>$latex a|b$</span>. שימו לב שהאיבר ה”קטן ביותר” ביחס הסדר הזה הוא 1, שמחלק את כולם; והאיבר ה”גדול ביותר” ביחס הסדר הזה הוא 0 (קצת מוזר, מה?) כי הוא מתחלק על ידי כולם.</p>
+
+<p>כעת, ה-Join של שני איברים <span>$latex a,b$</span> הוא פשוט <strong>הכפולה המשותפת המינימלית</strong> שלהם, <span>$latex a\vee b=\mbox{lcm}\left(a,b\right)$</span>. ה-Meet של שני איברים הוא פשוט <strong>המחלק המשותף המקסימלי</strong> שלהם, <span>$latex a\wedge b=\mbox{gcd}\left(a,b\right)$</span>. ההגדרות הללו עובדות לכל קבוצה סופית של טבעיים ולא רק עבור זוג, אבל בשביל סריג שלם צריך להגדיר Join ו-Meet גם לקבוצות אינסופיות. לא קשה לראות שלכל קבוצה אינסופית, ה-Join שלה הוא בהכרח 0 (ומה יהיה ה-Meet? ובכן, זה קצת יותר טריקי ולכן תרגיל נחמד להשאיר לכם). עכשיו, כמובן, נשאלת השאלה האם ניתן למצוא תיאור “נחמד” של <span>$latex \limsup$</span> ו-<span>$latex \liminf$</span> עבור סדרות של מספרים מתוך הסריג הזה - מה דעתכם?</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2014/04/08/limsup_and_liminf/';
+      this.page.identifier = 'http://gadial.net/2014/04/08/limsup_and_liminf/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2014/04/08/limsup_and_liminf/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

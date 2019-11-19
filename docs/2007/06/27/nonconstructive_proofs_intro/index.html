@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הקיים הנעלם - מבוא | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הקיים הנעלם - מבוא" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="לפני זמן מה נתבקשתי באחת התגובות לתת דוגמה לסיטואציה במתמטיקה שבה מוכיחים בדרך השלילה שדבר מה קיים, אך לא מראים דרך למצוא אותו. אני משער שקיימות דוגמאות פשוטות שבהן ההוכחה בדרך השלילה היא הכרחית, אך טרם מצאתי אחת פשוטה, והפשוטה ביותר שחשבתי עליה עד כה היא ההוכחה שלכל מרחב וקטורי קיים בסיס - הוכחה שבפני עצמה היא פשוטה למדי, אבל דורשת היכרות עם המושגים הבסיסיים של האלגברה הלינארית - מרחב וקטורי, בסיס, קבוצה בלתי תלויה, פרישה לינארית וכו’. כמו כן, ההוכחה מתבססת על מה שמכונה “אקסיומת הבחירה”, שהיא נושא לדיון ארוך בפני עצמו. על כן, קרוב לודאי שאביא את ההוכחה הזו בהמשך, ובינתיים אסתפק בשתי דוגמאות לבניה לא קונסטרוקטיבית שמגיעות מתחום מדעי המחשב. הבניה הראשונה, שאציג בפוסט הבא, נראית על פניו בתור רמאות גמורה, ובמובן מסויים היא אכן כזו. הסיבה שבגללה אביא אותה היא שלטעמי, מדובר בהמחשה הפשוטה והחזקה ביותר לכך שקיימים דברים מסויימים שאיננו יודעים לבנות, אפילו כשהם “מונחים לנו מול העיניים” במובן מסויים." />
+<meta property="og:description" content="לפני זמן מה נתבקשתי באחת התגובות לתת דוגמה לסיטואציה במתמטיקה שבה מוכיחים בדרך השלילה שדבר מה קיים, אך לא מראים דרך למצוא אותו. אני משער שקיימות דוגמאות פשוטות שבהן ההוכחה בדרך השלילה היא הכרחית, אך טרם מצאתי אחת פשוטה, והפשוטה ביותר שחשבתי עליה עד כה היא ההוכחה שלכל מרחב וקטורי קיים בסיס - הוכחה שבפני עצמה היא פשוטה למדי, אבל דורשת היכרות עם המושגים הבסיסיים של האלגברה הלינארית - מרחב וקטורי, בסיס, קבוצה בלתי תלויה, פרישה לינארית וכו’. כמו כן, ההוכחה מתבססת על מה שמכונה “אקסיומת הבחירה”, שהיא נושא לדיון ארוך בפני עצמו. על כן, קרוב לודאי שאביא את ההוכחה הזו בהמשך, ובינתיים אסתפק בשתי דוגמאות לבניה לא קונסטרוקטיבית שמגיעות מתחום מדעי המחשב. הבניה הראשונה, שאציג בפוסט הבא, נראית על פניו בתור רמאות גמורה, ובמובן מסויים היא אכן כזו. הסיבה שבגללה אביא אותה היא שלטעמי, מדובר בהמחשה הפשוטה והחזקה ביותר לכך שקיימים דברים מסויימים שאיננו יודעים לבנות, אפילו כשהם “מונחים לנו מול העיניים” במובן מסויים." />
+<link rel="canonical" href="http://gadial.net/2007/06/27/nonconstructive_proofs_intro/" />
+<meta property="og:url" content="http://gadial.net/2007/06/27/nonconstructive_proofs_intro/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-06-27T21:31:18+03:00" />
+<script type="application/ld+json">
+{"headline":"הקיים הנעלם - מבוא","dateModified":"2007-06-27T21:31:18+03:00","datePublished":"2007-06-27T21:31:18+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/06/27/nonconstructive_proofs_intro/"},"url":"http://gadial.net/2007/06/27/nonconstructive_proofs_intro/","description":"לפני זמן מה נתבקשתי באחת התגובות לתת דוגמה לסיטואציה במתמטיקה שבה מוכיחים בדרך השלילה שדבר מה קיים, אך לא מראים דרך למצוא אותו. אני משער שקיימות דוגמאות פשוטות שבהן ההוכחה בדרך השלילה היא הכרחית, אך טרם מצאתי אחת פשוטה, והפשוטה ביותר שחשבתי עליה עד כה היא ההוכחה שלכל מרחב וקטורי קיים בסיס - הוכחה שבפני עצמה היא פשוטה למדי, אבל דורשת היכרות עם המושגים הבסיסיים של האלגברה הלינארית - מרחב וקטורי, בסיס, קבוצה בלתי תלויה, פרישה לינארית וכו’. כמו כן, ההוכחה מתבססת על מה שמכונה “אקסיומת הבחירה”, שהיא נושא לדיון ארוך בפני עצמו. על כן, קרוב לודאי שאביא את ההוכחה הזו בהמשך, ובינתיים אסתפק בשתי דוגמאות לבניה לא קונסטרוקטיבית שמגיעות מתחום מדעי המחשב. הבניה הראשונה, שאציג בפוסט הבא, נראית על פניו בתור רמאות גמורה, ובמובן מסויים היא אכן כזו. הסיבה שבגללה אביא אותה היא שלטעמי, מדובר בהמחשה הפשוטה והחזקה ביותר לכך שקיימים דברים מסויימים שאיננו יודעים לבנות, אפילו כשהם “מונחים לנו מול העיניים” במובן מסויים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הקיים הנעלם - מבוא</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-06-27T21:31:18+03:00" itemprop="datePublished">Jun 27, 2007
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>לפני זמן מה נתבקשתי באחת התגובות לתת דוגמה לסיטואציה במתמטיקה שבה מוכיחים בדרך השלילה שדבר מה קיים, אך לא מראים דרך למצוא אותו. אני משער שקיימות דוגמאות פשוטות שבהן ההוכחה בדרך השלילה היא הכרחית, אך טרם מצאתי אחת פשוטה, והפשוטה ביותר שחשבתי עליה עד כה היא ההוכחה שלכל <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A8%D7%97%D7%91_%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%99">מרחב וקטורי</a> קיים <a href="http://he.wikipedia.org/wiki/%D7%91%D7%A1%D7%99%D7%A1_%28%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%94%29">בסיס</a> - הוכחה שבפני עצמה היא פשוטה למדי, אבל דורשת היכרות עם המושגים הבסיסיים של האלגברה הלינארית - מרחב וקטורי, בסיס, קבוצה בלתי תלויה, פרישה לינארית וכו’. כמו כן, ההוכחה מתבססת על מה שמכונה “<a href="http://he.wikipedia.org/wiki/%D7%90%D7%A7%D7%A1%D7%99%D7%95%D7%9E%D7%AA_%D7%94%D7%91%D7%97%D7%99%D7%A8%D7%94">אקסיומת הבחירה</a>”, שהיא נושא לדיון ארוך בפני עצמו.
+על כן, קרוב לודאי שאביא את ההוכחה הזו בהמשך, ובינתיים אסתפק בשתי דוגמאות לבניה לא קונסטרוקטיבית שמגיעות מתחום <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%93%D7%A2%D7%99_%D7%94%D7%9E%D7%97%D7%A9%D7%91">מדעי המחשב</a>. הבניה הראשונה, שאציג בפוסט הבא, נראית על פניו בתור רמאות גמורה, ובמובן מסויים היא אכן כזו. הסיבה שבגללה אביא אותה היא שלטעמי, מדובר בהמחשה הפשוטה והחזקה ביותר לכך שקיימים דברים מסויימים שאיננו יודעים לבנות, אפילו כשהם “מונחים לנו מול העיניים” במובן מסויים.</p>
+
+<p>ההוכחה השניה שאביא תתבסס על שיטת הוכחה הסתברותית, ולכן בתיאוריה היא בכל זאת תכלול בתוכה שיטה כלשהי לבנית הדבר שקיומו מוכח. עם זאת, מכיוון שזו שיטת בניה הסתברותית, אפשר לומר שגם במקרה הזה, אין זו בדיוק הוכחה קונסטרוקטיבית.</p>
+
+<p>אבל מה זו בעצם “הוכחה קונסטרוקטיבית”? הרעיון (עד כמה שאני מבין אותו) הוא פשוט: אני רוצה להראות שקיים אובייקט שמקיים תכונה כלשהי - אני אומר במפורש מהו האובייקט, או לפחות מצביע על דרך שיטתית שמצליחה תמיד כדי לבנות אותו. הנה דוגמה קלאסית: המשוואה <span>$latex ax^2+bx+c$</span>. נניח שאני רוצה לשכנע אתכם שיש פתרון למשוואה תוך שאני מצביע לכם על דרך למצוא אותו - אני אשתמש במה שמכונה “<a href="http://he.wikipedia.org/wiki/%D7%A0%D7%95%D7%A1%D7%97%D7%AA_%D7%94%D7%A9%D7%95%D7%A8%D7%A9%D7%99%D7%9D">נוסחת השורשים</a>”, ומשמשת להתעללות בתלמידי תיכון:</p>
+
+<p><span>$latex x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$</span></p>
+
+<p>הנוסחה הזו מחזירה לנו את שני הפתרונות של המשוואה (לפעמים הביטוי שמתחת לשורש הוא 0 ואז יש רק פתרון אחד מ”ריבוי” 2, ולפעמים הוא מספר שלילי ואז יש שורשים <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%9E%D7%A8%D7%95%D7%9B%D7%91">מרוכבים</a> - הזכרתי את הנושאים הללו בפוסטים קודמים), וחשוב מכך - היא מצביעה על שיטה לבנות אותם במפורש. הנוסחה היא בסך הכל דרך מקוצרת לומר את הדבר הבא:</p>
+
+<p>כדי להשיג פתרון, בצע את הפעולות הבאות:</p>
+<ol>
+	<li>חשב את <span>$latex b^2-4ac$</span></li>
+	<li>הוצא שורש לתוצאה.</li>
+	<li>הפחת את <span>$latex b$</span> מהתוצאה.</li>
+	<li>חלק את הכל ב-<span>$latex 2a$</span></li>
+	<li>קיבלת פתרון!</li>
+</ol>
+<p>כל שלב בדרך למציאת הפתרון מהווה פעולה חשבונית שצריך לבצע בפני עצמה: העלאה בריבוע, חיבור וחיסור, והוצאת שורש (שהיא לב המשוואה והחלק הקשה ביותר בה). לתיאור שכזה של סדרת הפעולות שיש לבצע כדי להשיג מטרה מוגדרת קוראים <a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D"><strong>אלגוריתם</strong></a>. זהו המושג הבסיסי ביותר שבו עוסקים במדעי המחשב, ולכן אזכיר אותו רבות בהמשך. לעת עתה, חשוב בעיקר להדגיש שלרוב כשמדברים על “הוכחה קונסטרוקטיבית”, מדברים על הוכחה שמצוי בה, במובלע או שלא במובלע, אלגוריתם לחישוב האובייקט שאת קיומו מוכיחים.</p>
+
+<p>(אגב, איך בדיוק נוסחת השורשים מוכיחה שקיים פתרון למשוואה? ובכן, אתם יכולים להציב את הפתרון שקיבלתם במשוואה ולראות שהוא אכן פותר אותה… אני לא ממליץ על החוויה הכואבת הזו לאיש).</p>
+
+<p>נעבור לדוגמה להוכחה שנמצאת קרוב הרבה יותר לקו הגבול - הוכחה שמשתמשת במה שמכונה “<a href="http://he.wikipedia.org/wiki/%D7%A2%D7%A7%D7%A8%D7%95%D7%9F_%D7%A9%D7%95%D7%91%D7%9A_%D7%94%D7%99%D7%95%D7%A0%D7%99%D7%9D">עקרון שובך היונים</a>” (Pigeonhole principle). העקרון הוא פשוט עד כדי טריוויאלי: נניח שיש לנו 100 שובכי יונים, ו-101 יונים, ואנחנו מכניסים את היונים לשובכים בצורה זו או אחרת - אז מובטח לנו שיהיה שובך שבו נמצאות לפחות שתי יונים. למה? כי אם בכל שובך הייתה לכל היותר יונה אחת, אז מכיוון שיש רק 100 שובכים, היו בכולם גם יחד לכל היותר 100 יונים, ואנחנו יודעים שיש 101 - סתירה. שימו לב לשימוש הסמוי שלי בהוכחה בדרך השלילה כאן.</p>
+
+<p>נו, אז מה הבעיה? שאמרתי שיהיה שובך אחד לפחות עם שתי יונים, אבל לא הצבעתי על שום דרך מעשית למצוא אותו. אלא שכאן זו לא בעיה אמיתית, בשל העובדה שיש רק מספר סופי של שובכים. נניח שחילקתי את היונים לשובכים בדרך כלשהי ועכשיו אני רוצה למצוא שובך שמכיל לפחות שתי יונים - אני פשוט אעבור על כולם עד שאמצא כזה. הוכחת עקרון שובך היונים לא מתבססת על חיפוש שכזה; מצד שני, הוא כל כך טריוויאלי שברור שהוא נמצא ברקע שלה, גם אם היא אינה מדברת עליו במפורש. לכן קשה לומר שמדובר בהוכחה לא קונסטרוקטיבית.</p>
+
+<p>אם כבר הזכרתי את העיקרון, הנה הדגמה נאה (ונפוצה מאוד) של השימוש בו, כדי להוכיח שבחיפה יש שני אנשים עם <strong>בדיוק</strong> אותו מספר שערות על הראש: ידוע שלאדם יש בממוצע 100,000 שערות על הראש (ויקיפדיה טוענת שלבלונדינים זה מגיע עד לסביבות ה-150,000), אפשר להניח די בביטחון שאין בחיפה אנשים עם יותר מ-250,000 שערות על הראש (ואם יש, מספרם זניח ביותר ואפשר להתעלם מהם). אלא שבחיפה יש יותר מ-250,00 אנשים; כעת, היונים שלנו יהיו האנשים, וה”שובכים” יהיו מספר השערות שעל הראש (למשל, יש שובך עבור “בדיוק 14,363 שערות על הראש”). נחלק את היונים לשובכים בצורה המתבקשת - כל אדם ייכנס לשובך של מספר השיערות שיש לו על הראש (וכך למשל כל הקירחים יכנסו לשובך מס’ 0). מכיוון שיש לכל היותר 250,000 שובכים ויש יותר מ-250,000 יונים, קיבלנו שיש שני אנשים עם אותו מספר שערות על הראש. מיהם? מה מספר השיערות? לא יודע, בשביל זה צריך בדיקה ישירה (אמנם, הקירחים מקלקלים את החגיגה, אבל גם אותם אפשר לגרש ולהישאר רק עם בעלי רעמה, והתוצאה עדיין תהיה נכונה).</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2007/06/27/nonconstructive_proofs_intro/';
+      this.page.identifier = 'http://gadial.net/2007/06/27/nonconstructive_proofs_intro/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2007/06/27/nonconstructive_proofs_intro/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

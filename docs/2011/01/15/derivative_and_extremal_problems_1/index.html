@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>נגזרת - בשביל מה זה טוב? (בעיות קיצון, חלק א’) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="נגזרת - בשביל מה זה טוב? (בעיות קיצון, חלק א’)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="כשהייתי קטן תהיתי (יש מישהו שלא תהה על זה?) מה הדרך האופטימלית לזרוק כדור כך שהוא יפול במרחק הגדול ביותר האפשרי ממני. ברור שצריך לזרוק בשיא הכוח שלך, אבל באיזו זווית ביחס לאדמה? אם זורקים יותר מדי לגובה, הכדור אמנם יתעופף לגובה אבל לא יתרחק ממני כמעט; ואם זורקים יותר מדי לאורך הכדור אמנם יבלה את חלק הארי של התנועה שלו בהתרחקות ממני אבל ייפול לאדמה חיש קל. הניחוש היה שהפשרה הטבעית בין קדימה ולמעלה, כלומר זווית של 45 מעלות, היא האופטימלית - אבל איך אפשר להשתכנע בכך שזה נכון? כאן נכנסת המתמטיקה לעזרתנו, ובפרט החשבון הדיפרנציאלי." />
+<meta property="og:description" content="כשהייתי קטן תהיתי (יש מישהו שלא תהה על זה?) מה הדרך האופטימלית לזרוק כדור כך שהוא יפול במרחק הגדול ביותר האפשרי ממני. ברור שצריך לזרוק בשיא הכוח שלך, אבל באיזו זווית ביחס לאדמה? אם זורקים יותר מדי לגובה, הכדור אמנם יתעופף לגובה אבל לא יתרחק ממני כמעט; ואם זורקים יותר מדי לאורך הכדור אמנם יבלה את חלק הארי של התנועה שלו בהתרחקות ממני אבל ייפול לאדמה חיש קל. הניחוש היה שהפשרה הטבעית בין קדימה ולמעלה, כלומר זווית של 45 מעלות, היא האופטימלית - אבל איך אפשר להשתכנע בכך שזה נכון? כאן נכנסת המתמטיקה לעזרתנו, ובפרט החשבון הדיפרנציאלי." />
+<link rel="canonical" href="http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/" />
+<meta property="og:url" content="http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-01-15T14:16:19+02:00" />
+<script type="application/ld+json">
+{"headline":"נגזרת - בשביל מה זה טוב? (בעיות קיצון, חלק א’)","dateModified":"2011-01-15T14:16:19+02:00","datePublished":"2011-01-15T14:16:19+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/"},"url":"http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/","description":"כשהייתי קטן תהיתי (יש מישהו שלא תהה על זה?) מה הדרך האופטימלית לזרוק כדור כך שהוא יפול במרחק הגדול ביותר האפשרי ממני. ברור שצריך לזרוק בשיא הכוח שלך, אבל באיזו זווית ביחס לאדמה? אם זורקים יותר מדי לגובה, הכדור אמנם יתעופף לגובה אבל לא יתרחק ממני כמעט; ואם זורקים יותר מדי לאורך הכדור אמנם יבלה את חלק הארי של התנועה שלו בהתרחקות ממני אבל ייפול לאדמה חיש קל. הניחוש היה שהפשרה הטבעית בין קדימה ולמעלה, כלומר זווית של 45 מעלות, היא האופטימלית - אבל איך אפשר להשתכנע בכך שזה נכון? כאן נכנסת המתמטיקה לעזרתנו, ובפרט החשבון הדיפרנציאלי.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">נגזרת - בשביל מה זה טוב? (בעיות קיצון, חלק א&#39;)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-01-15T14:16:19+02:00" itemprop="datePublished">Jan 15, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>כשהייתי קטן תהיתי (יש מישהו שלא תהה על זה?) מה הדרך האופטימלית לזרוק כדור כך שהוא יפול במרחק הגדול ביותר האפשרי ממני. ברור שצריך לזרוק בשיא הכוח שלך, אבל באיזו זווית ביחס לאדמה? אם זורקים יותר מדי לגובה, הכדור אמנם יתעופף לגובה אבל לא יתרחק ממני כמעט; ואם זורקים יותר מדי לאורך הכדור אמנם יבלה את חלק הארי של התנועה שלו בהתרחקות ממני אבל ייפול לאדמה חיש קל. הניחוש היה שהפשרה הטבעית בין קדימה ולמעלה, כלומר זווית של 45 מעלות, היא האופטימלית - אבל איך אפשר להשתכנע בכך שזה נכון? כאן נכנסת המתמטיקה לעזרתנו, ובפרט החשבון הדיפרנציאלי.</p>
+
+<p>השלב הראשון הוא לבנות מודל מתמטי שמתאר את התנועה. כלומר, פונקציה שאומרת לי איפה נמצא הכדור בכל שניה החל מרגע הזריקה. פונקציה כזו תהיה תלויה ב<strong>פרמטרים</strong>: גודל הכוח שהשקעתי בזריקה, והזווית שבה זרקתי. בנוסף לכך, הפונקציה קצת מחוכמת - גם הגובה וגם המרחק של הכדור משתנים בכל עת, כך שבפועל אני צריך <strong>שתי</strong> פונקציות שונות; ואני צריך “לעצור” את המודל ברגע שבו הפונקציה שמתארת את הגובה מקבלת את הערך 0, ולמדוד כמה מרחק הכדור עבר עד אז. בנייה של מודלים כאלו, לטעמי, היא ממש כיף. אין חוקים - אף אחד לא אומר לך מה לעשות, או באיזה אלגוריתם להשתמש; אתה פשוט מגשש ומנסה להמציא דברים בעצמך כדי לתאר את הסיטואציה באופן הטוב ביותר האפשרי. לכן אני ממליץ לכם לנסות ולפתור את הבעיה בעצמכם ואז לחזור ושנשווה תשובות.</p>
+
+<p>טוב, אז מה אני עושה? ראשית, צריך להבין אילו כוחות משפיעים על הכדור במהלך התנועה שלו. יש את הכוח שלי שבא לידי ביטוי בזריקה עצמה, אבל זה לא כוח שפועל לאורך זמן - בשנייה 0, שבה המודל יתחיל, הזריקה כבר בוצעה ואין צורך להכניס אותה באופן ישיר למודל. היא תיכנס באופן עקיף באמצעות המהירות ההתחלתית של הכדור. הכוח היחיד שפועל על הכדור במהלך התנועה שלו, והוא מה שגורם לו ליפול בסופו של דבר, הוא כוח המשיכה. גם לכוח המשיכה אין צורך להתייחס באופן ישיר במודל - כל שצריך להניח הוא שכוח המשיכה גורם לכדור לתאוצה (שינוי במהירות) קבועה כלפי מטה. פיזיקלית, ההנחה הזו אינה נכונה - ככל שהכדור גבוה יותר, כך תאוצת הכובד שלו קטנה יותר - אבל בפועל היא מתארת את הסיטואציה מספיק טוב לצרכים שלי כי הכדור לא צפוי להגיע לגובה כזה שבו ההבדלים יהיו מורגשים (אבל, ישאלו המתמטיקאים שבחבורה, האין זה אומר ש-45 מעלות הן <strong>לא</strong> הדבר הנכון בהינתן התכונה הזו של כוח הכובד? ובכן, כן, אתם צודקים, הנה לכם תרגיל בונוס לבית).</p>
+
+<p>הבה ונסמן ב-<span>$latex v_{0}$</span> את המהירות ההתחלתית של הכדור. מכיוון שהכדור נזרק בזווית כלשהי, שנסמן אותה ב-<span>$latex \theta$</span>, המהירות הזו מתפרקת לשני רכיבים - אחד בציר <span>$latex x$</span> (אופקי) ואחד בציר <span>$latex y$</span> (אנכי). אופן הפירוק הזה ניתן לתיאור כמשולש ישר זווית שהיתר שלו הוא וקטור המהירות <span>$latex v_{0}$</span>, והניצבים הם הרכיבים של <span>$latex v_{0}$</span> בצירי <span>$latex x,y$</span>: נסמן אותם <span>$latex v_{0}^{x},v_{0}^{y}$</span> בהתאמה. הגודל שלהם נקבע על פי הגודל של <span>$latex v_{0}$</span> ו-<span>$latex \theta$</span> - זהו אחד מהשימושים הבסיסיים של הפונקציות הטריגונומטריות. מקבלים ש-<span>$latex v_{0}^{x}=v_{0}\cos\theta$</span> ו-<span>$latex v_{0}^{y}=v_{0}\sin\theta$</span>.</p>
+
+<p>בציר <span>$latex x$</span> אין תאוצה כלל במשך כל תנועת הכדור, ולכן המהירות של הכדור בציר <span>$latex x$</span> היא פונקציה קבועה שאינה תלויה בזמן <span>$latex t$</span>: <span>$latex v^{x}\left(t\right)=v_{0}^{x}$</span>. מהפונקציה הזו ניתן לקבל חיש קל את פונקצית ה<strong>מיקום</strong> בציר <span>$latex x$</span> ביחס לזמן: אנחנו יודעים שהמהירות היא נגזרת המיקום (זוכרים? מהירות הייתה הדוגמה ה”קלאסית” שלנו לנגזרת), ולכן אם נמצא פונקציה קדומה של <span>$latex v^{x}\left(t\right)$</span>, מצאנו את פונקצית המיקום. פונקציה קדומה של קבוע קל למצוא: <span>$latex x\left(t\right)=t\cdot v_{0}^{x}$</span> היא דוגמה לפונקציה שכזו. אל תתנו לסימונים שלי לבלבל אתכם - המשתנה של הפונקציה הוא <span>$latex t$</span>, ולפונקציה עצמה קוראים <span>$latex x$</span>, כי היא מתארת את המיקום בציר <span>$latex x$</span>. אלו סימונים שמאוד מבלבלים למי שרגיל כל היום לגזור פונקציות שנראות כמו <span>$latex f\left(x\right)$</span> אבל בדיוק בגלל זה חשוב לראות דרכי סימון אחרות - כך אפשר לראות שבאמת מבינים מה הולך בתרגיל ואת מה גוזרים ואיך ומה, ולא רק שפועלים אלגוריתמית ובכל פעם שרואים <span>$latex x$</span> איפה שהוא רצים לגזור אותו.</p>
+
+<p>זוכרים שאמרנו שלכל פונקציה יש אינסוף פונקציות קדומות, שנבדלות זו מזו בקבוע? אז איך אנחנו יודעים ש-<span>$latex x\left(t\right)$</span> שהצעתי היא ה”נכונה” למודל שלי? התשובה היא שלא יודעים מייד, אלא צריכים להשתמש ב<strong>תנאי התחלה</strong>. אני יודע שבזמן <span>$latex t=0$</span> אני עומד בראשית הצירים - למה? כי ככה נוח לי לסמן את ראשית הצירים, בתור המקום שבו אני עומד. לכן צריך להתקיים <span>$latex x\left(0\right)=0$</span>, וזה אכן מה שקורה עבור הפונקציה שלי (אבל עבור כל פונקציה מהצורה <span>$latex t\cdot v_{0}^{x}+C$</span> עם <span>$latex C\ne0$</span> זה לא היה קורה, ולכן הבחירה ב-<span>$latex C=0$</span> הייתה בחירת הקבוע הנכונה). אם כן, <span>$latex x\left(t\right)=t\cdot v_{0}^{x}$</span> היא פונקציה שמתארת נכונה את מסלול הכדור שלי בציר <span>$latex x$</span> <strong>כל עוד</strong> הכדור לא פגע באדמה. עכשיו כבר מותר לגלות שמה שעשינו כשחיפשנו את <span>$latex x\left(t\right)$</span> היה לפתור <strong>משוואה דיפרנציאלית</strong>: הייתה נתונה לנו משוואה שמערבת נגזרת של פונקציה כלשהי, וממנה מצאנו את הפונקציה עצמה. כמובן שהמשוואה שלנו הייתה פשוטה מאוד, אבל זו התחלה.</p>
+
+<p>השלב הבא הוא למצוא את <span>$latex y\left(t\right)$</span> - הפונקציה שמתארת את הגובה כפונקציה של הזמן. כאן הסיטואציה יותר מורכבת בגלל שהמהירות של הכדור <strong>משתנה עם הזמן</strong>, בגלל שפועל עליה כוח הכובד. גם כאן אנו עומדים לפתור משוואה דיפרנציאלית אבל מעט יותר מסובכת, ובהתאם נציג בצורה קצת יותר מדויקת את מה שאנחנו עושים. מה כבר ידוע לנו על הפונקציה <span>$latex y\left(t\right)$</span>? ידוע לנו תנאי ההתחלה <span>$latex y\left(0\right)=0$</span> (בחרתי לסמן את הגובה שלי בזמן 0 בתור 0; אם אני אשאל את אותה שאלה על זריקת כדור מבניין, למשל, אצטרך לבחור כאן תנאי התחלה שונה שיוביל לפתרון שונה). ידוע לנו גם כי <span>$latex y^{\prime}\left(0\right)=v_{0}^{y}$</span> - המהירות בזמן 0 היא בדיוק זו שנתתי לכדור בעצמי. בנוסף, ידוע לנו ש-<span>$latex y^{\prime\prime}\left(t\right)=-g$</span> כאשר <span>$latex g$</span> הוא קבוע תאוצת הכובד, והוא שלילי בגלל שהתאוצה מגדילה את מהירות הכדור בכיוון השלילי - “למטה”. מכל פיסות המידע הללו צריך להרכיב את <span>$latex y\left(t\right)$</span> איכשהו.</p>
+
+<p>השלב הראשון הוא זה: אם <span>$latex y^{\prime\prime}\left(t\right)=-g$</span> אז אחרי אינטגרציה מקבלים ש-<span>$latex y^{\prime}\left(t\right)=-gt+C$</span> עבור <span>$latex C$</span> כלשהו. כדי למצוא את <span>$latex C$</span>, יש להשוות לאפס: <span>$latex v_{0}^{y}=y^{\prime}\left(0\right)=-g\cdot0+C=C$</span>. כלומר, קיבלנו ש-<span>$latex C=v_{0}^{y}$</span> ולכן <span>$latex y^{\prime}\left(t\right)=-gt+v_{0}^{y}$</span>. כעת צריך לבצע עוד אינטגרציה; איך עושים אינטגרציה לפונקציה שאינה קבוע? מכיוון שהפונקציה היא פולינום גם זה לא קשה במיוחד לביצוע ומקבלים <span>$latex y\left(t\right)=-g\frac{t^{2}}{2}+v_{0}^{y}t+C$</span> וכל שנותר הוא למצוא את ה-<span>$latex C$</span>. השוואה ל-<span>$latex y\left(0\right)=0$</span> מראה לנו ש-<span>$latex C=0$</span> ולכן <span>$latex y\left(t\right)=-\frac{g}{2}t^{2}+v_{0}^{y}t$</span>.</p>
+
+<p>הגורם הריבועי בפונקציה <span>$latex y\left(t\right)$</span> הוא שגורם לכך שאם נצייר את מסלול התנועה של הכדור, הוא לא יהיה קו ישר אלא צורה שנקראת <strong>פרבולה</strong>. מכיוון שהסימן של המקדם של <span>$latex t^{2}$</span> הוא שלילי, זוהי פרבולה “בוכה”, מה שמתאים לאופן האינטואיטיבי שבו אנו חושבים על מסלול תנועתו של כדור שנזרק. אני משער שלרובכם הרעיון הזה כבר טבעי עד שאתם לא שמים אליו לב בכלל, אבל לדעתי זה פשוט נפלא מה שהלך פה - על ידי חישוב מתמטי בלבד, במודל מופשט למדי, קיבלנו תיאור <strong>גרפי</strong> של האופן שבו הכדור צריך להתעופף. לא לקחנו את צורת התעופפות הכדור כאקסיומה או כגורם הבסיסי במודל; בתור גורמים בסיסיים לקחנו הנחות בסיסיות יותר (המרכזית - פעולת כוח הכובד) ומהן הסקנו את צורתו של מסלול הכדור. הכוח הנבואי הזה שנותנת לנו המתמטיקה הוא לדעתי דבר מרשים ביותר.</p>
+
+<p>טוב, הבה ונמשיך. כעת אנו יודעים בדיוק איך מסלול תנועתו של הכדור נראה, והדבר הבא שאנו רוצים לדעת הוא מתי הכדור יפגע באדמה - עבור איזה <span>$latex t$</span> זה מתקיים. במילים אחרות, לפתור את המשוואה <span>$latex -\frac{g}{2}t^{2}+v_{0}^{y}t=0$</span>. פתרון אחד הוא <span>$latex t=0$</span> אבל הוא מנוון ולא מעניין - אנחנו רוצים לדעת מתי הכדור נופל <strong>שוב</strong> לאדמה, לא מתי הוא היה <strong>בהתחלה</strong> בגובה אפס. אז אם אנחנו מניחים ש-<span>$latex t\ne0$</span> אפשר לחלק בו, להעביר אגפים ולקבל <span>$latex \frac{g}{2}t=v_{0}^{y}$</span>, כלומר <span>$latex t=\frac{2v_{0}^{y}}{g}$</span>. באופן לחלוטין בלתי מפתיע אנו רואים שככל שהמהירות ההתחלתית גבוהה יותר, כך הזמן גדול יותר, וככל שתאוצת הכובד גדולה יותר, כך הזמן קטן יותר. זה אולי נראה אידיוטי לציין זאת, אבל בחינה “איכותית” כזו של המשואוות שמקבלים היא דרך טובה לוודא שלא עשינו טעויות חישוב בדרך (כמובן, לפעמים צצות תוצאות מפתיעות ואז אנחנו שוברים את הראש בחיפוש אחר טעות שלא קיימת).</p>
+
+<p>כעת, המרחק שהכדור עבר בציר <span>$latex x$</span> עד פגיעתו באדמה הוא בדיוק <span>$latex x\left(\frac{2v_{0}^{y}}{g}\right)=\frac{2v_{0}^{y}v_{0}^{x}}{g}$</span>. משוואה סימטרית ויפה, ועכשיו סיימנו ואפשר… אה, רגע. מה בכלל רצינו לעשות, שוב?</p>
+
+<p>המטרה שלנו, כזכור, הייתה למצוא את <span>$latex \theta$</span> האופטימלי עבור הזריקה, כלומר זה שעבורו המרחק בציר <span>$latex x$</span> שנעבור יהיה הגדול ביותר. עשינו המון חישובים וקיבלנו ביטוי שבו <span>$latex \theta$</span> בכלל לא מופיעה - איך כל זה עזר לנו בכלל?</p>
+
+<p>טוב, אני משקר פה - ברור ש-<span>$latex \theta$</span> מופיע בתוצאה שלנו, פשוט באופן סמוי - הרי <span>$latex v_{0}^{y}=v_{0}\sin\theta$</span> ו-<span>$latex v_{0}^{x}=v_{0}\cos\theta$</span>. אם נציב את זה לתוצאה, נקבל <span>$latex \frac{2v_{0}^{2}\sin\theta\cos\theta}{g}$</span>. ייתכן שלחלקכם קופצת כרגע לעיניים זהות טריגונומטרית - <span>$latex \sin2\theta=2\sin\theta\cos\theta$</span>. זו אחת מהזהויות הללו שכדאי לזכור בעל פה, עד כמה שזה מבאס לגלות שבכלל יש במתמטיקה משהו שצריך לזכור בעל פה (וטענה כמו “זה בדף נוסחאות אז לא צריך” היא קצת בעייתית בהתחשב בכך שצריך לזהות את הדברים הללו כשהם קופצים לנו לעיניים מהדף, ואת זה אפשר לעשות רק אם זוכרים את הנוסחה). אם כן, את מה שקיבלנו אפשר לתאר בתור <span>$latex \frac{v_{0}^{2}}{g}\sin2\theta$</span>. וכעת נשאלת השאלה - עבור איזה ערך של <span>$latex \theta$</span> התוצאה שנקבל תהיה מקסימלית?</p>
+
+<p>בואו נתאר עוד בעיה שבה אנחנו מחפשים ערך קיצוני כלשהו, הפעם מינימום - בעיית החתונה. חתונות הן עסק יקר, אך יש כאלו שסבורים שניהול נכון של כמות האורחים יכול לצמצם את הנזקים, עד כדי <a href="http://www.lee-kal.co.il/article.php?rid=55">מאמרים שלמים</a> העוסקים בכך. השורה התחתונה: לכל חתונה יש שורה של הוצאות קבועות שלא תלויות בכלל באורחים (החל בדי-ג’יי ותמיכה כספית ברב, וכלה בדגיגי פיראנה כמו “עיצוב השולחנות” ו”סידורי הפרחים”). בואו נסמן את המחיר הזה ב-<span>$latex A$</span>. כמו כן, כל אורח עולה סכום כסף מסויים (מחיר המנה שלו וכדומה) - הבה ונסמן סכום זה ב-<span>$latex b$</span>. לסיום, כל אורח גם מביא איתו צ’ק נחמד - הבה ונסמן ב-<span>$latex c$</span> את הסכום הממוצע שכל אורח מביא, וב-<span>$latex x$</span> נסמן את מספר האורחים. אז יש לנו את הנוסחה הבאה שמתארת את מחיר החתונה עבורנו: <span>$latex f\left(x\right)=A+\left(b-c\right)x$</span>. אם <span>$latex c$</span> גדול מ-<span>$latex b$</span> (וזו הנחת יסוד של המאמר) אז די בבירור ככל שיהיו יותר אורחים כך הנזק יקטן, ובשלב מסויים ההפסד שלנו יהפוך להיות שלילי - נרוויח! זה יקרה כאשר <span>$latex A+\left(b-c\right)x&lt;0$</span>, כלומר כאשר <span>$latex x&gt;\frac{A}{c-b}$</span> - אתם מוזמנים לחשב בעצמכם כמה זה יוצא.</p>
+
+<p>בעולם האמיתי זה לא עובד משתי סיבות. ראשית, יש גבול לכמות האורחים שאולמות מוכנים לסבול, וקרוב לודאי שאולמות גדולים יותר ידרשו יותר כסף. אבל בואו נעזוב את זה ונתמקד במשהו מעניין שנאמר במאמר עצמו - יותר אורחים פירושו הזמנה של אנשים פחות קרובים, ולכן כאלו שמשלמים פחות. כלומר, אפשר לחשוב על <span>$latex c$</span> לא כעל קבוע, אלא כעל משהו שהוא בעצמו פונקציה של <span>$latex x$</span>, ופונקציה שיורדת עם הזמן (ה”רווח” הממוצע שלנו מהאורחים יורד ככל שאנו מזמינים אורחים יותר מרוחקים. כלומר, <span>$latex f\left(x\right)=A+\left(b-c\left(x\right)\right)x$</span>. מה שאנחנו רוצים לעשות הוא למצוא את <span>$latex x$</span> האופטימלי עבורנו - כזה שמבטיח שההפסד שלנו הוא הקטן ביותר האפשרי (כפי שראינו, לא תמיד קיים כזה - אם <span>$latex c\left(x\right)$</span> קבוע הגדול מ-<span>$latex b$</span> זה לא קורה). איך עושים את זה?</p>
+
+<p>בפוסט הבא נתאר איך מטפלים בשתי הבעיות הללו, ואיך באופן כללי מוצאים נקודות מינימום ומקסימום של פונקציה (ועוד דברים). הפתרון, כמובן, עובר דרך הנגזרת.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/';
+      this.page.identifier = 'http://gadial.net/2011/01/15/derivative_and_extremal_problems_1/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2011/01/15/derivative_and_extremal_problems_1/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

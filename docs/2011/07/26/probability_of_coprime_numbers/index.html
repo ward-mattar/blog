@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ההסתברות של מספרים זרים ואיך פאי נכנס לתמונה | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="ההסתברות של מספרים זרים ואיך פאי נכנס לתמונה" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="באחת מהתגובות בבלוג שאלו אותי שאלה פשוטה - נניח שאנחנו מגרילים באקראי שני מספרים טבעיים, מה ההסתברות שהם יהיו זרים, כלומר שלא יהיה מספר טבעי גדול מ-1 שמחלק את שניהם גם יחד? התשובה היא $latex \frac{6}{\pi^{2}}$, מה שנראה מוזר מאוד במבט ראשון - מה פאי עושה כאן, הרחק מכל מעגל אפשרי?" />
+<meta property="og:description" content="באחת מהתגובות בבלוג שאלו אותי שאלה פשוטה - נניח שאנחנו מגרילים באקראי שני מספרים טבעיים, מה ההסתברות שהם יהיו זרים, כלומר שלא יהיה מספר טבעי גדול מ-1 שמחלק את שניהם גם יחד? התשובה היא $latex \frac{6}{\pi^{2}}$, מה שנראה מוזר מאוד במבט ראשון - מה פאי עושה כאן, הרחק מכל מעגל אפשרי?" />
+<link rel="canonical" href="http://gadial.net/2011/07/26/probability_of_coprime_numbers/" />
+<meta property="og:url" content="http://gadial.net/2011/07/26/probability_of_coprime_numbers/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-07-26T19:07:07+03:00" />
+<script type="application/ld+json">
+{"headline":"ההסתברות של מספרים זרים ואיך פאי נכנס לתמונה","dateModified":"2011-07-26T19:07:07+03:00","datePublished":"2011-07-26T19:07:07+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2011/07/26/probability_of_coprime_numbers/"},"url":"http://gadial.net/2011/07/26/probability_of_coprime_numbers/","description":"באחת מהתגובות בבלוג שאלו אותי שאלה פשוטה - נניח שאנחנו מגרילים באקראי שני מספרים טבעיים, מה ההסתברות שהם יהיו זרים, כלומר שלא יהיה מספר טבעי גדול מ-1 שמחלק את שניהם גם יחד? התשובה היא $latex \\frac{6}{\\pi^{2}}$, מה שנראה מוזר מאוד במבט ראשון - מה פאי עושה כאן, הרחק מכל מעגל אפשרי?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ההסתברות של מספרים זרים ואיך פאי נכנס לתמונה</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-07-26T19:07:07+03:00" itemprop="datePublished">Jul 26, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>באחת מהתגובות בבלוג שאלו אותי שאלה פשוטה - נניח שאנחנו מגרילים באקראי שני מספרים טבעיים, מה ההסתברות שהם יהיו זרים, כלומר שלא יהיה מספר טבעי גדול מ-1 שמחלק את שניהם גם יחד? התשובה היא <span>$latex \frac{6}{\pi^{2}}$</span>, מה שנראה מוזר מאוד במבט ראשון - מה פאי עושה כאן, הרחק מכל מעגל אפשרי?</p>
+
+<p>ותיקי הבלוג אולי מזהים את ה-<span>$latex \frac{6}{\pi^{2}}$</span> הזה. ב<a href="http://www.gadial.net/?p=393">אחד הפוסטים הקודמים</a> הראיתי שמתקיים <span>$latex \sum_{n=1}^{\infty}\frac{1}{n^{2}}=\frac{\pi^{2}}{6}$</span>, וגם שלטור הזה יש סימון קצת יותר קומפקטי - <span>$latex \zeta\left(2\right)$</span>, פונקצית הזטא של רימן ב-2. הקשר אינו מקרי, כמובן, ובהוכחה נתבסס על הטענה הישנה ההיא ועל רעיונות שהצגתי כבר אז. קודם כל אציג את ההוכחה, ולאחר מכן, עבור אלו שעדיין יש להם כוח, נעבור לדבר על <strong>השאלה</strong>; מסתבר ש”מגרילים באקראי שני מספרים טבעיים” זו טענה שהיא די חסרת משמעות - לפחות המשמעות האינטואיטיבית שלה שגויה - וצריך לחדד קצת את השאלה כדי שתהיה משמעות לתשובת ה-<span>$latex \frac{6}{\pi^{2}}$</span>. אבל תשכחו מזה לעת עתה - ההוכחה שאציג כעת היא הרעיון המרכזי כאן. זו תהיה “הוכחה בסגנון אוילר” עם כמה הנחות לא מבוססות ואי דיוקים, אבל מרגע שהרעיון יהיה ברור באמצעותה, מי שירצה יוכל להבין גם איך מפרמלים אותה כמו שצריך.</p>
+
+<p>ראשית, מתי שני מספרים הם זרים? כשאין להם גורם משותף; אבל למעשה, מספיק לומר שאין להם גורם <strong>ראשוני</strong> משותף, מכיוון שכל גורם שהוא של אותם שני מספרים מתחלק לפחות בראשוני אחד. אז השאלה שלנו היא למעשה - אם אנחנו בוחרים שני מספרים באקראי, מה ההסתברות שיהיה ראשוני <span>$latex p$</span> שמחלק את שניהם?</p>
+
+<p>מכיוון שהבחירה של שני המספרים נעשית באופן בלתי תלוי (הבחירה במספר אחד לא משפיעה על הבחירה במספר השני), ההסתברות ששניהם יתחלקו ב-<span>$latex p$</span> היא מכפלת ההסתברויות עבור כל אחד מהם להתחלק ב-<span>$latex p$</span>. כעת, <span>$latex p$</span> מחלק אחד מכל <span>$latex p$</span> מספרים (2 מחלק כל מספר זוגי; 3 מחלק, ובכן, כל מספר שמתחלק ב-3, וכן הלאה) ולכן ההסתברות לכך שמספר אקראי יתחלק ב-<span>$latex p$</span> היא <span>$latex \frac{1}{p}$</span>, ולכן ההסתברות ששני מספרים אקראיים יתחלקו שניהם ב-<span>$latex p$</span> היא <span>$latex \frac{1}{p^{2}}$</span>.</p>
+
+<p>כעת, אנחנו רוצים שלמספרים שלנו לא יהיה אף גורם משותף, כלומר ש<strong>לכל</strong> ראשוני <span>$latex p$</span>, <strong>לא</strong> יתקיים ש-<span>$latex p$</span> מחלק את שניהם. אם <span>$latex \frac{1}{p^{2}}$</span> היא ההסתברות ש-<span>$latex p$</span> <strong>כן</strong> יחלק את שני המספרים האקראיים, אז ההסתברות ה”משלימה”, לכך שהוא לא יחלק את שניהם (כלומר, יחלק רק אחד מהם או לא יחלק אף אחד מהם) היא <span>$latex 1-\frac{1}{p^{2}}$</span>. ההסתברות שזה יקרה לכל הראשוניים הקיימים (בהנחה שאיני מוכיח כאן - כפי שתגובות רבות מעירות - שההסתברויות לראשוניים שונים הן בלתי תלויות) היא מכפלת ההסתברויות לכל הראשוניים; מה שמסומן במתמטית בתור <span>$latex \prod_{p}\left(1-\frac{1}{p^{2}}\right)$</span> (<span>$latex \Pi$</span> הוא סימן קיצור מוסכם לכפל, כמו ש-<span>$latex \Sigma$</span> הוא סימן קיצור מוסכם לחיבור; ויש הסכמה על כך שה-<span>$latex p$</span> למטה עובר רק על הראשוניים). המכפלה הזו נראית מוזרה במבט ראשון כי משתתפים בה אינסוף איברים, וצריך להגדיר לה מושג של התכנסות כפי שמוגדר כזה עבור סכום אינסופי, אבל כאמור - אנחנו עכשיו עושים הוכחה בסגנון אוילר.</p>
+
+<p>בשלב הזה אני שולף מהבוידם את התעלול של אוילר ש<a href="http://www.gadial.net/?p=194">הצגתי כבר בבלוג בעבר</a>: אוילר מראה כי <span>$latex \zeta\left(s\right)$</span>, הערך של פונקצית הזטא של רימן בנקודה <span>$latex s$</span> עבור <span>$latex s&gt;1$</span> ממשי, שמוגדר כ-<span>$latex \sum_{n=1}^{\infty}\frac{1}{n^{s}}$</span>, מקיים <span>$latex \zeta\left(s\right)=\prod_{p}\left(\frac{1}{1-p^{-s}}\right)$</span>. הרעיון הכללי כאן הוא ש-<span>$latex \frac{1}{1-p^{-s}}$</span> זו בעצם דרך אחרת לכתוב <span>$latex 1+p^{-s}+p^{-2s}+p^{-3s}+\dots$</span>, ומכיוון שהכפל רץ על כל הראשוניים ובשל הפירוק היחיד לראשוניים של המספרים הטבעיים, כשמבצעים פתיחת סוגריים מקבלים את כל האיברים מהצורה <span>$latex n^{-s}$</span>, לכל <span>$latex n$</span> אפשרי. זהו מעין אפיון אנליטי של המשפט היסודי של האריתמטיקה, ותוצאה יפהפה בכל קנה מידה אפשרי לטעמי.</p>
+
+<p>הביטוי שלנו די דומה: השוו את <span>$latex \prod_{p}\left(1-\frac{1}{p^{2}}\right)$</span> עם <span>$latex \prod_{p}\left(\frac{1}{1-p^{-2}}\right)$</span>. איך עוברים מאחד לשני? ובכן:</p>
+
+<p><span>$latex \prod_{p}\left(1-\frac{1}{p^{2}}\right)=\prod_{p}\left(1-p^{-2}\right)=\prod_{p}\left(\frac{1}{1-p^{-2}}\right)^{-1}=\left[\prod_{p}\left(\frac{1}{1-p^{-2}}\right)\right]^{-1}=\zeta\left(2\right)^{-1}=\frac{6}{\pi^{2}}$</span></p>
+
+<p>וזה סוף הסיפור.</p>
+
+<p>למה הסיפור בכל זאת לא נגמר כאן? כי כאמור, קצת רימיתי בהתחלה. כשאני אומר ש”מספר טבעי נבחר באקראי”, מה זה אומר? אם רוצים לדבר פורמלית צריך להסביר מהי ההסתברות שיש לכל מספר טבעי להיבחר, וההנחה הסמויה כאן היא שההסתברות של כל מספר טבעי היא שווה. נאמר, <span>$latex a$</span>, כש-<span>$latex a$</span> הוא מספר גדול מ-0 וקטן מ-1. מייד אנחנו רואים שיש כאן בעיה כי אחרי <span>$latex \frac{1}{a}$</span> מספרים, ההסתברות שאחד מהם יצא תהיה גדולה כבר מ-1…</p>
+
+<p>לדוגמה, אם אני אומר שכל מספר טבעי נבחר באותה הסתברות - <span>$latex \frac{1}{5}$</span> - אז אני אומר שגם 1, וגם 2, וכדומה עד 6 - כולם נבחרים בהסתברות <span>$latex \frac{1}{5}$</span>. אז ההסתברות שאחד מהם ייבחר היא <span>$latex \frac{1}{5}+\dots+\frac{1}{5}=\frac{6}{5}$</span>, ומספר זה כבר גדול מ-1. זה פשוט לא עובד. <strong>אין התפלגות אחידה על כל הטבעיים</strong>.</p>
+
+<p>אפשר כמובן להגדיר התפלגויות לא אחידות (למשל, המספר <span>$latex n$</span> נבחר בהסתברות <span>$latex \frac{1}{2^{n}}$</span>) אבל אז כל הניתוח ההסתברותי שעשינו למעלה והניח שלכל מספר טבעי אותה הסתברות להיבחר יורד לטמיון. אז מה עושים?</p>
+
+<p>הפתרון הוא כזה: קובעים <span>$latex N$</span> גדול כלשהו, ומגרילים רק מספרים בין 1 ל-<span>$latex N$</span>, כשכל אחד מהם נבחר בהסתברות <span>$latex \frac{1}{N}$</span>. כעת חוזרים על ההוכחה שלמעלה; לצורך נוחות טכנית אפשר לבחור את <span>$latex N$</span> תמיד להיות כפולה של כל הראשוניים עד לראשוני מסויים, ואז רק הם משתתפים במשחק ואף ראשוני אחר לא. מה שנקבל בסוף הוא את המכפלה <span>$latex \prod_{p}\left(1-\frac{1}{p^{2}}\right)$</span> כשהיא אינה נלקחת על כל הראשוניים אלא רק עד גבול מסויים; אבל ככל שנגדיל את <span>$latex N$</span> כך המכפלה הזו תשאף לערך של המכפלה האינסופית, שהוא <span>$latex \frac{6}{\pi^{2}}$</span> המבוקש. לכן הניסוח המדויק של השאלה מתחילת הפוסט הוא זה “כאשר בוחרים מספרים טבעיים באקראי מתחום גדול מאוד, מה בערך ההסתברות שהם יהיו זרים?” ולמי שזה לא מספיק פורמלי עבורו, “לאן שואפת ההסתברות ששני מספרים טבעיים שנבחרו בהתפלגות אחידה מתוך <span>$latex \left[1,\dots,N\right]$</span> יהיו זרים כאשר <span>$latex N$</span> שואף לאינסוף”?</p>
+
+<p>באופן כללי שאלות מתמטיות נוטות להיות מנוסחות בצורה הזו, וכך לפעמים מפספסים את הפואנטה הבסיסית שלהן - שאנחנו רוצים להבין מה קורה עבור המושג-הלא-קיים-אך-ברור-אינטואטיבית של “מגרילים שני מספרים טבעיים”. איזו משתי הגישות עדיפה? אתם תחליטו. אני אישית מעדיף את השניה, אבל אני מקווה שזה לא בלט יותר מדי בפוסט הזה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2011/07/26/probability_of_coprime_numbers/';
+      this.page.identifier = 'http://gadial.net/2011/07/26/probability_of_coprime_numbers/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2011/07/26/probability_of_coprime_numbers/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

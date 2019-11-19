@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>על P=NP מעל חבורות אבליות - סוף דבר | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="על P=NP מעל חבורות אבליות - סוף דבר" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בשני הפוסטים האחרונים אני מכין את הקרקע לקראת הוכחה ש-$latex \mbox{P}\ne\mbox{NP}$ במודלים חישוביים שהם מעל חבורות אבליות אינסופיות. בפוסט הראשון הצגתי את הרעיון שמאחורי מודל חישובי שכזה והצגתי הוכחה לכך שעבור המקרה הקונקרטי של $latex G=\mathbb{Z}$ אנחנו אכן מקבלים ש-$latex \mbox{P}_{G}\ne\mbox{NP}_{G}$, ובפוסט שלאחריו הצגתי את המושג של על-מכפלה שבו נשתמש הפעם. ברשותכם ניגש הישר לעניינים." />
+<meta property="og:description" content="בשני הפוסטים האחרונים אני מכין את הקרקע לקראת הוכחה ש-$latex \mbox{P}\ne\mbox{NP}$ במודלים חישוביים שהם מעל חבורות אבליות אינסופיות. בפוסט הראשון הצגתי את הרעיון שמאחורי מודל חישובי שכזה והצגתי הוכחה לכך שעבור המקרה הקונקרטי של $latex G=\mathbb{Z}$ אנחנו אכן מקבלים ש-$latex \mbox{P}_{G}\ne\mbox{NP}_{G}$, ובפוסט שלאחריו הצגתי את המושג של על-מכפלה שבו נשתמש הפעם. ברשותכם ניגש הישר לעניינים." />
+<link rel="canonical" href="http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/" />
+<meta property="og:url" content="http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-06-30T19:20:22+03:00" />
+<script type="application/ld+json">
+{"headline":"על P=NP מעל חבורות אבליות - סוף דבר","dateModified":"2013-06-30T19:20:22+03:00","datePublished":"2013-06-30T19:20:22+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/"},"url":"http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/","description":"בשני הפוסטים האחרונים אני מכין את הקרקע לקראת הוכחה ש-$latex \\mbox{P}\\ne\\mbox{NP}$ במודלים חישוביים שהם מעל חבורות אבליות אינסופיות. בפוסט הראשון הצגתי את הרעיון שמאחורי מודל חישובי שכזה והצגתי הוכחה לכך שעבור המקרה הקונקרטי של $latex G=\\mathbb{Z}$ אנחנו אכן מקבלים ש-$latex \\mbox{P}_{G}\\ne\\mbox{NP}_{G}$, ובפוסט שלאחריו הצגתי את המושג של על-מכפלה שבו נשתמש הפעם. ברשותכם ניגש הישר לעניינים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">על P=NP מעל חבורות אבליות - סוף דבר</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-06-30T19:20:22+03:00" itemprop="datePublished">Jun 30, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בשני <a href="http://www.gadial.net/2013/06/15/p_vs_np_on_abelian_groups_intro/">הפוסטים</a> <a href="http://www.gadial.net/2013/06/21/ultrafilters_and_ultraproducts/">האחרונים</a> אני מכין את הקרקע לקראת הוכחה ש-<span>$latex \mbox{P}\ne\mbox{NP}$</span> במודלים חישוביים שהם מעל חבורות אבליות אינסופיות. בפוסט הראשון הצגתי את הרעיון שמאחורי מודל חישובי שכזה והצגתי הוכחה לכך שעבור המקרה הקונקרטי של <span>$latex G=\mathbb{Z}$</span> אנחנו אכן מקבלים ש-<span>$latex \mbox{P}_{G}\ne\mbox{NP}_{G}$</span>, ובפוסט שלאחריו הצגתי את המושג של על-מכפלה שבו נשתמש הפעם. ברשותכם ניגש הישר לעניינים.</p>
+
+<p>ראשית, אפשר לקחת את ההוכחה ש-<span>$latex \mbox{P}_{\mathbb{Z}}\ne\mbox{NP}_{\mathbb{Z}}$</span> ולהשתמש בה כמעט כמות שהיא כדי לתקוף מחלקה של עוד מספר חבורות שגם להן נזדקק. אני אדלג על הפרטים הטכניים בהוכחה הזו כי ההבדל בינה ובין ההוכחה המקורית (שגם בה דילגתי על פרטים) הוא לא מהותי. מיהן החבורות הנוספות הללו? ובכן, לכל ראשוני <span>$latex p$</span> אפשר להסתכל על החבורה החיבורית <span>$latex \mathbb{Z}_{p}$</span>. זו חבורה סופית ולכן לא רלוונטית אלינו, אבל אנחנו יכולים להסתכל על <strong>הסכום הישר</strong> <span>$latex \bigoplus\mathbb{Z}_{p}$</span> של אינסוף (בן מניה) של חבורות כאלו. מה זה אומר? סכום ישר הוא מושג די דומה למכפלה ישרה, והם זהים עבור מספר סופי של מחוברים/מוכפלים, אבל סכום ישר אינסופי הוא טיפה שונה. בזמן שמכפלה ישרה של אינסוף בן מניה של עותקים של <span>$latex \mathbb{Z}_{p}$</span> הייתה פשוטה סדרות (“וקטורים אינסופיים”) של איברים מ-<span>$latex \mathbb{Z}_{p}$</span>, הרי שהסכום הישר כולל רק סדרות <strong>שהן אפס החל ממקום מסויים</strong>, או בניסוח קצת שונה - הסכום הישר כולל את כל האיברים של המכפלה הישרה שמספר הכניסות ששונות מאפס בהן הוא סופי (“בעלות תומך סופי”). דוגמה פשוטה להבהרת העניינים היא המושג של <strong>פולינום</strong>: אפשר לחשוב על כל פולינום כעל סדרה <strong>סופית</strong> של מקדמים, ואפשר גם לחשוב עליו בתור סדרה <strong>אינסופית</strong> של מקדמים שכולם 0 החל ממקום מסויים (וסדרות אינסופיות כלליות? עליהן אפשר לחשוב בתור <strong>טור חזקות</strong>).</p>
+
+<p>ובכן, נסמן ב-<span>$latex \mathbb{H}_{p}$</span> את הסכום הישר של <span>$latex \mathbb{Z}_{p}$</span>, אז אני טוען ללא הוכחה ש-<span>$latex \mbox{P}_{\mathbb{H}_{p}}\ne\mbox{NP}_{\mathbb{H}_{p}}$</span>, ושההוכחה דומה למקרה של <span>$latex \mathbb{Z}$</span>. יפה. מה עכשיו?</p>
+
+<p>עכשיו ניקח חבורה אבלית אינסופית כללית <span>$latex G$</span>, ונבנה את העל-חזקה שלה ביחס לעל-מסנן שמתקבל ממסנן פרשה. כבר ראינו את הבניה הזו בדיוק בפוסט הקודם כשהיא מופעלת על המספרים הממשיים <span>$latex \mathbb{R}$</span>, ואז היא יצרה לנו את המספרים ההיפר-ממשיים שבבסיס האנליזה הלא סטנדרטית. מה יקרה אם נעשה את זה עבור חבורה? ובכן, נקרא לעל-מכפלה שנקבל <span>$latex G^{*}$</span>. לעל-מכפלה כזו יש את התכונה הקריטית לפיה כל פסוק בלוגיקה מסדר ראשון שהוא נכון עבור <span>$latex G$</span> נכון גם עבור <span>$latex G^{*}$</span> וההפך - זה נקרא <strong>שקילות אלמנטרית</strong> של שני המודלים הללו. עכשיו, מה שאנחנו רוצים להראות הוא שבעיית ה-Nullsack פתירה בזמן פולינומי מעל <span>$latex G$</span> אם ורק אם היא פתירה מעל <span>$latex G^{*}$</span>, אבל איך אפשר להשתמש בשקילות האלמנטרית כדי להראות זאת? מה יהיה הפסוק שלנו? ובכן, כאן יש התחכמות קטנה - לכל <span>$latex n$</span> טבעי נבנה פסוק <span>$latex \psi_{n}$</span> שאומר, עבור אלגוריתם נתון, “האלגוריתם פותר נכון את Nullsack לכל הקלטים מאורך <span>$latex n$</span>”.</p>
+
+<p>איך כותבים דבר כזה? ובכן, מנצלים את העובדה שזמן הריצה של האלגוריתם הזה חסום (בפרט חסום על ידי פולינום) ולכן עבור <span>$latex n$</span> נתון, מספר השאלות שהאלגוריתם עשוי לשאול הוא מוגבל וחסום על ידי קבוע. עכשיו כותבים פסוק מהצורה <span>$latex \psi_{n}=\forall x_{1},\dots x_{n}\left(\bigvee C_{k}\left(x_{1},\dots,x_{n}\right)\iff\exists a_{1}\dots a_{n}\in\left\{ 0,1\right\} \left(\sum a_{i}x_{i}=0\right)\right)$</span> כאשר כל <span>$latex C_{k}$</span> הוא תת-פסוק שמייצג מסלול חישוב מקבל אפשרי אחד של האלגוריתם. ממה מורכב מסלול חישוב כזה? ובכן, יש הרבה חישובים שהאלגוריתם עשוי לעשות “בצד”, אבל החישובים היחידים שמתייחסים לקלטים הם בדיקות מהצורה <span>$latex \vec{b}\cdot\vec{x}=0$</span> שעליהן דיברנו בפוסט הקודם. סדרה נתונה של תשובות לשאלות הללו מגדירה מסלול חישוב, ולכן אפשר לכתוב <span>$latex C_{k}=l_{1}^{k}\wedge l_{2}^{k}\wedge\dots\wedge l_{t_{k}}^{k}$</span> כאשר כל <span>$latex l_{i}^{k}$</span> כזה מתאר את השאלה ה-<span>$latex i$</span> בחישוב, והוא יכול להיות עם סימן שלילה לפני כן (אם מסלול החישוב הספציפי מתאר את מה שקורה כשעל השאלה הזו עונים בשלילה).</p>
+
+<p>כעת, אם קיים אלגוריתם שפותר את בעיית ה-Nullsack עבור <span>$latex G$</span>, אז קיימים פסוקים <span>$latex \psi_{1},\psi_{2},\dots$</span> שמתארים את הריצה שלו על קלטים מכל גודל אפשרי, כך ש-<span>$latex G\models\psi_{n}$</span> לכל <span>$latex n$</span>, ולכן <span>$latex G^{*}\models\psi_{n}$</span> לכל <span>$latex n$</span> ולכן אותו אלגוריתם בדיוק עובד גם על <span>$latex G^{*}$</span>, למרות שב-<span>$latex G^{*}$</span> יכולים להיות קלטים מסובכים הרבה יותר. הנה לכם טעימה מהכוח של תורת המודלים. כל מה שנשאר לנו לעשות הוא להוכיח שלא יכול להיות קיים אלגוריתם פולינומי שפותר את Nullsack עבור <span>$latex G^{*}$</span>, וכדי להראות את זה, מספיק להראות שיש ב-<span>$latex G^{*}$</span> תת-קבוצה <span>$latex H$</span> שעבורה בעיית ה-Nullsack לא פתירה, כי אם יש כזו, ויש אלגוריתם שפותר Nullsack על כל <span>$latex G^{*}$</span>, פשוט נפעיל אותו על קלטים שמגיעים מ-<span>$latex H$</span> (ומה על קלטים שלא שייכים ל-<span>$latex H$</span>? ובכן, כשאנחנו מדברים על בעיית ה-Nullsack מעל <span>$latex H$</span>, אנחנו מראש פוסלים קלטים כאלו - הקלטים היחידים שיכולים להגיע הם קלטים מתוך <span>$latex H$</span>).</p>
+
+<p>לכן על מנת לסיים את ההוכחה, מספיק יהיה להראות שיש ב-<span>$latex G^{*}$</span> עותק של <span>$latex \mathbb{Z}$</span> או עותק של <span>$latex \mathbb{H}_{p}$</span> עבור <span>$latex p$</span> מסויים. ולמה זה נכון?</p>
+
+<p>עבור מחלקה לא קטנה של חבורות ברור מייד שזה נכון. אם <span>$latex G$</span> היא חבורה אבלית <strong>נוצרת סופית</strong>, אז משפט מרכזי בתורת החבורות שממיין את כל החבורות הללו מראה אוטומטית שאם <span>$latex G$</span> אינסופית אז היא מכילה את <span>$latex \mathbb{Z}$</span> כתת-חבורה. כל הקושי הטכני אצלנו מגיע מכך שאנחנו רוצים להוכיח תוצאה חזקה יותר שתקפה לכל החבורות האבליות האינסופיות, נוצרות סופית או לא.</p>
+
+<p>אם ב-<span>$latex G$</span> יש איבר מסדר אינסופי, אז החזקות שלו לבדן יוצרות עותק איזומורפי של <span>$latex \mathbb{Z}$</span> ולכן סיימנו. אחרת, כל האיברים ב-<span>$latex G$</span> הם מסדר סופי, אבל עדיין יש שני מקרים אפשריים: או שקבוצת הסדרים היא לא חסומה (כלומר, לכל <span>$latex n$</span> טבעי יהיה איבר שהסדר שלו הוא לפחות <span>$latex n$</span>) או שהיא חסומה. אם היא לא חסומה, בואו נסתכל על האיבר הבא של <span>$latex G^{*}$</span>: <span>$latex g=\left(g_{1},g_{2},g_{3},\dots\right)$</span> כך שהסדר של <span>$latex g_{1}$</span> קטן ממש מהסדר של <span>$latex g_{2}$</span> שקטן ממש מהסדר של <span>$latex g_{3}$</span> וכן הלאה. כעת, הנוסחה “הסדר של <span>$latex g$</span> הוא לכל הפחות <span>$latex n$</span>” יכולה להיות שגויה רק עבור מספר <strong>סופי</strong> של קואורדינטות ב-<span>$latex g$</span>, ולכן קבוצת הקואורדינטות ב-<span>$latex G$</span> שעבורן הנוסחה נכונה היא קו-סופית, ולכן שייכת לעל-מסנן שהגדיר את <span>$latex G^{*}$</span>, כך ש-<span>$latex g$</span> מקיים את הנוסחה הזו, וזאת לכל <span>$latex n$</span>. מסקנה: הסדר של <span>$latex g$</span> גדול מכל <span>$latex n$</span> טבעי, ולכן הוא אינסופי, והנה שוב מצאנו איבר מסדר אינסופי שיוצר תת-חבורה איזומורפית ל-<span>$latex \mathbb{Z}$</span> וסיימנו.</p>
+
+<p>נשאר רק לטפל במקרה שבו יש רק מספר סופי של סדרים אפשריים לאיברים ב-<span>$latex G$</span>. כעת אני רוצה להכניס לתמונה מושג סטנדרטי מתורת החבורות - <strong>אקספוננט</strong> של חבורה. האקספוננט של חבורה <span>$latex G$</span> הוא המספר הטבעי המינימלי <span>$latex n$</span> כך שכל איבר ב-<span>$latex G$</span> מחזיר את היחידה כאשר מעלים אותו בחזקה <span>$latex n$</span>, דהיינו <span>$latex \mbox{exp}G=\min_{n}\left\{ \forall g\in G:g^{n}=e\right\} $</span>. בחבורה סופית, <span>$latex \left|G\right|$</span> הוא תמיד מועמד טוב להיות אקספוננט כי הוא מקיים את התכונה הזו ולכן לכל היותר האקספוננט יהיה מספר קטן יותר שמחלק אותו; אבל בחבורה אינסופית ייתכן שהאקספוננט בכלל לא יהיה קיים. למשל, ב-<span>$latex \mathbb{Z}$</span> אין אקספוננט. במקרה הזה נוח להגיד שהאקספוננט הוא “אינסוף”.</p>
+
+<p>אם ב-<span>$latex G$</span> יש רק מספר סופי של סדרים לאיברים, ודאי שיש לה אקספוננט סופי, כי למשל המכפלה של כל הסדרים האפשריים של איברים היא מספר שמועמד להיות האקספוננט, כמו <span>$latex \left|G\right|$</span> בחבורה סופית. כעת אני יכול לשלוף את הג’וקר שלי מהשרוול - <a href="http://en.wikipedia.org/wiki/Pr%C3%BCfer_theorems">משפט</a> (לא טריוויאלי) בתורת החבורות של Prüfer שאומר שחבורה אבלית סופית מאקספוננט סופי היא בהכרח סכום ישר של חבורות מהצורה <span>$latex \mathbb{Z}_{p}$</span>, כאשר <span>$latex p$</span> הוא ראשוני (אבל יכולות להיות בסכום חבורות שונות עם ראשוניים שונים). די ברור שמספר הראשוניים השונים הרלוונטיים חייב להיות סופי, אחרת היינו מסוגלים למצוא איברים מסדרים גדולים כרצוננו (כי ב-<span>$latex \mathbb{Z}_{p}$</span> יש איבר מסדר <span>$latex p$</span>). כמו כן, סכום של מספר <strong>סופי</strong> של חבורות מהצורה <span>$latex \mathbb{Z}_{p}$</span> הוא חבורה סופית, ולכן מכיוון ש-<span>$latex G$</span> אינסופית, הסכום חייב להיות של מספר אינסופי של מחוברים. המסקנה היא שיש <span>$latex p$</span> כך ש-<span>$latex G$</span> ניתנת לתיאור כסכום ישר של <strong>משהו</strong> ועוד אינסוף עותקים של <span>$latex \mathbb{Z}_{p}$</span>, או במילים אחרות - <span>$latex G$</span> מכילה את <span>$latex \mathbb{H}_{p}$</span> כתת-חבורה, וזה מסיים את ההוכחה. הבטחתי שילוב של סיבוכיות, תורת המודלים ותורת החבורות? הנה תורת החבורות צצה לה ברגע האחרון (ואני מקווה שגם מי שיש לו היכרות בסיסית עם תורת החבורות למד עכשיו על קיומו של משפט חדש).</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/';
+      this.page.identifier = 'http://gadial.net/2013/06/30/p_vs_np_on_abelian_groups_ending/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/06/30/p_vs_np_on_abelian_groups_ending/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>שורשנו באחדותנו | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="שורשנו באחדותנו" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה." />
+<meta property="og:description" content="בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה." />
+<link rel="canonical" href="http://gadial.net/2009/02/04/roots_of_unity/" />
+<meta property="og:url" content="http://gadial.net/2009/02/04/roots_of_unity/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-02-04T13:12:00+02:00" />
+<script type="application/ld+json">
+{"headline":"שורשנו באחדותנו","dateModified":"2009-02-04T13:12:00+02:00","datePublished":"2009-02-04T13:12:00+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2009/02/04/roots_of_unity/"},"url":"http://gadial.net/2009/02/04/roots_of_unity/","description":"בפוסטים האחרונים הראיתי כיצד ניתן להשתמש במושג של הרחבת שדות כדי לחסל שלוש מהבעיות ה”קלאסיות” של בניה בסרגל ומחוגה ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - מספרי פרמה - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - שורשי יחידה מסדר $latex n$, שעליהם אדבר בפוסט הזה.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">שורשנו באחדותנו</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-02-04T13:12:00+02:00" itemprop="datePublished">Feb 4, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ב<a href="http://www.gadial.net/?p=180">פוסטים</a> <a href="http://www.gadial.net/?p=181">האחרונים</a> הראיתי כיצד ניתן להשתמש במושג של <a href="http://www.gadial.net/?p=177">הרחבת שדות</a> כדי לחסל שלוש מהבעיות ה”קלאסיות” של <a href="http://www.gadial.net/?p=176">בניה בסרגל ומחוגה</a> ולהראות שהן פשוט בלתי אפשריות. נתבקשתי לדבר גם על בעיה רביעית - הבעיה של בניית מצולע משוכלל (מצולע שכל צלעותיו וכל זוויותיו שוות) בסרגל ומחוגה. כאן הסיטואציה מעט שונה - ניתן לבנות חלק מהמצולעים בעזרת סרגל ומחוגה, ומצולעים אחרים לא ניתן. למרבה השמחה, פחות או יותר אותם כלים שבהם השתמשתי עד כה ניתנים לשימוש גם במתן קריטריון פשוט וחד משמעי שמראה מתי ניתן ומתי לא ניתן לבנות את המצולע. הקריטריון מקסים במיוחד משתי סיבות - ראשית, הוא מערב מספרים מעניינים בפני עצמם - <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8_%D7%A4%D7%A8%D7%9E%D7%94">מספרי פרמה</a> - שעליהם ארחיב בהמשך; ושנית, הדרך אליו עוברת בנושא שבמבט ראשון נראה בלתי קשור (ובמבט שני, ברור לגמרי שהוא קשור באופן הדוק) - <a href="http://he.wikipedia.org/wiki/%D7%A9%D7%95%D7%A8%D7%A9_%D7%99%D7%97%D7%99%D7%93%D7%94">שורשי יחידה</a> מסדר <span>$latex n$</span>, שעליהם אדבר בפוסט הזה.</p>
+
+<p>השם “שורש יחידה” נשמע מוזר. ה”יחידה” היא המספר 1, ושורש יחידה מסדר <span>$latex n$</span> הוא פשוט מספר שכאשר מעלים אותו בחזקת <span>$latex n$</span> מקבלים 1. מי אלו יכולים להיות בכלל? על פניו נראה שרק 1 עצמו, ואולי גם מינוס 1 (כי מינוס 1 בריבוע הוא 1, למשל). אז מה הרעיון במושג הזה? לשם כך צריך להכניס לתמונה את <a href="http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%A4%D7%A8%D7%99%D7%9D_%D7%9E%D7%A8%D7%95%D7%9B%D7%91%D7%99%D7%9D">המספרים המרוכבים</a>. מי שאינו “חש בנוח” עם המספרים המרוכבים מוזמן לקרוא <a href="http://www.gadial.net/?p=31">פוסטים קודמים שלי</a> בנושא - כאן אקבל את קיומם כעובדה מוגמרת, ואתמקד בצורה שבה הכנסתם למשחק רק עוזרת לנו ללמוד דברים חדשים ומעניינים, שבניסוחם המקורי אין זכר למרוכבים (בפרט, בעיית בניית המצולע שהזכרתי).</p>
+
+<p>אפשר לחשוב על שורשי יחידה מסדר <span>$latex n$</span> בתור שורשים של הפולינום <span>$latex x^n-1$</span>. האם ניתן למצוא אותם באופן מפורש? ובכן, ברור ש-1 הוא תמיד שורש, אבל חוץ ממנו? כדי להראות כיצד מוצאים אותם, אני רוצה לומר מילה או שתיים על הצורה שבה אנו מתארים מספרים מרוכבים. דרך תיאור אפשרית אחת היא <span>$latex a+bi$</span>, שאותה הכל מכירים; אבל הדרך הזו נוחה בעיקר כאשר רוצים לבצע פעולות של חיבור וחיסור, בעוד שאם רוצים לדבר על כפל, חילוק, חזקה או הוצאת שורש (וזה מה שאנחנו רוצים לדבר עליו) יותר נוח להשתמש בדרך הצגה אלטרנטיבית. בתיכון ההצגה היא זו: <span>$latex r(\cos(\theta)+i\sin(\theta))$</span> כאשר <span>$latex r$</span> הוא מספר ממשי חיובי, ו-<span>$latex \theta$</span> היא זווית. בקיצור מסמנים את דרך ההצגה הזו ב-<span>$latex r(\mbox{cis}(\theta))$</span>. מה בעצם משמעותה?</p>
+
+<p>אפשר לחשוב על מספרים מרוכבים גם כעל נקודות במישור דו ממדי, שמכונה “המישור המרוכב” אבל למעשה לא שונה מהמישור שעליו מדברים בגאומטריה (ובפרט בגאומטריה אנליטית). המספר <span>$latex a+bi$</span> מיוצג על ידי הנקודה <span>$latex (a,b)$</span>. זוהי דרך ייצוג אחת לנקודות, אבל יש גם דרך ייצוג אחרת, שלפעמים (למשל, עכשיו) היא נוחה בהרבה - נמתח קו הישר מראשית הצירים אל עבר הנקודה. במה הוא יתאפיין? בשני פרמטרים. ראשית, באורך של הישר (שהוא תמיד מספר ממשי חיובי או אפס), ובזווית של הישר. כשמדברים על זווית צריך לשאול “ביחס למה”, ולכן המוסכמה היא להגדיר את הזווית ביחס לכיוון החיובי של ציר ה-x. כלומר, כמה צריך לסובב את הישר <strong>עם כיוון השעון</strong> כדי שהוא “ינוח” על הצד החיובי של ציר ה-x. כשהנקודה שאותה מנסים לתאר היא 0 אין משמעות לזווית, אבל כל נקודה אחרת מיוצגת באופן חד ערכי על ידי אורך וזווית שהיא בין 0 ו-360 מעלות.</p>
+
+<p>הייצוג באמצעות  <span>$latex r(\mbox{cis}(\theta))$</span> בעצם מקודד את המידע הזה - <span>$latex r$</span> הוא המרחק מהראשית, ואילו <span>$latex \theta$</span> היא הזווית. לא קשה לראות שהייצוג הזה אכן “נכון” אם זוכרים את ההגדרות של סינוס וקוסינוס באמצעות משולשים ישרי זווית - קל לראות ש-<span>$latex r\cos\theta$</span> הוא באמת המיקום על ציר x של הנקודה, וכנ”ל עבור ציר y.</p>
+
+<p>אלא ש-<span>$latex \mbox{cis}$</span> זה לא משהו שרואים בדרך כלל במקום כלשהו שאינו תיכון. למעשה, זוהי דרך כתיבה מסורבלת ומאוד לא מאירת עיניים. דרך הכתיבה ה”נכונה” מתבססת על נוסחה של אוילר, שקושרת בצורה מעניינת ביותר את המספרים המרוכבים עם הקבוע e. הנוסחה היא <span>$latex e^{i\theta}=\cos\theta+i\sin\theta$</span> - כלומר, חלק ה-<span>$latex \mbox{cis}$</span> שהוזכר קודם. כאן (ובכלל, מכאן ואילך) הזווית <span>$latex \theta$</span> תמיד נתונה ברדיאנים; אין ממש משמעות להעלאה בחזקת זווית שאינה רדיאן (כלומר, אינה מספר “טבעי”). <a href="http://www.gadial.net/?p=102">ניסיתי בעבר להסביר</a> מדוע רדיאנים הם אכן בחירה “טבעית” שכזו לייצוג של זווית, אבל גם למי שלא משוכנע, די אם אומר שלזווית שאינה מיוצגת ברדיאנים הנוסחה איננה נכונה.</p>
+
+<p>את הצורה שבה אני הגבתי לנוסחה הזו כששמעתי עליה לראשונה מסכם יפה הקומיקס <a href="http://xkcd.com/">xkcd</a>:</p>
+
+<p><img src="http://imgs.xkcd.com/comics/e_to_the_pi_times_i.png" alt="" width="400" height="481" /></p>
+
+<p>ואכן, יש כאלו שבוחרים <strong>להגדיר</strong> את e בחזקת מספר מרוכב באמצעות הנוסחה הזו ולהותיר אותה ללא הוכחה כלל. לטעמי הגישה הזו היא “התחמקות”, ולמרבה המזל יש לנוסחה הוכחה (שמתבססת, כמובן, על כמה הגדרות אחרות שיש מאחורי הקלעים) שיש בה אפילו משהו אינטואיטיבי - פירוק של טור הטיילור של <span>$latex e^x$</span> לשני טורים, אחד של סינוס והשני של קוסינוס. אני מקווה להרחיב על כך מתישהו. בפרט, אם מציבים בנוסחת אוילר את הזווית פאי, מקבלים (לאחר העברת אגפים) את הזהות <span>$latex e^{i\pi}+1=0$</span>, שאהובה מאוד על מתמטיקאים והיא זו שמופיעה כמעט במפורש בקומיקס (וכבר גרמה לי <a href="http://www.gadial.net/?p=22">להקים מהומה</a> בעבר בבלוג).</p>
+
+<p>מה יוצא לנו מכל זה? שניתן לכתוב מספר מרוכב “כללי” גם בצורה <span>$latex re^{i\theta}$</span>, כלומר בלי הציס המעצבן. פרט לכך שדרך כתיבה זו קומפקטית יותר, אחרי שמוכיחים שכל חוקי החזקות ה”רגילים” תקפים גם לחזקות מרוכבות, היא מאפשרת לבצע בקלות חישובים כמו הוצאת שורש וכדומה, שהיה יותר מסובך לעשות אם היינו עובדים עם ציס (פשוט היינו זוכרים יותר דברים בעל פה). כך למשל אם נעלה את המספר המרוכב <span>$latex re^{i\theta}$</span> בחזקת <span>$latex n$</span>, נקבל את <span>$latex r^ne^{in\theta}$</span>. אנחנו, לעומת זאת, רוצים דווקא להוציא שורש, ועוד למספר 1. כלומר, אנו רוצים למצוא מספר ממשי <span>$latex r$</span> וזווית <span>$latex \theta$</span> כך שמתקיים <span>$latex r^ne^{in\theta}=1\cdot e^{i\cdot 0}$</span>. מכיוון ש-<span>$latex r$</span> ממשי חיובי, קל לראות שהדרך היחידה שבה יתקיים <span>$latex r^n=1$</span> היא שיתקיים <span>$latex r=1$</span>. הזווית זה כבר עניין שונה - אנחנו רוצים למצוא כפולה של הזווית ששווה לאפס. איך עושים את זה? איך בכלל כפולה של זווית יכולה להיות שווה לאפס?</p>
+
+<p>התשובה היא שהכפולה של הזווית לא חייבת להיות שווה ממש לאפס; היא יכולה להיות שווה גם לשני פאי, ארבע פאי, וכדומה. כל הזוויות הללו מייצגות סיבוב מלא (360 מעלות), ולכן חוזרות בדיוק לאותה נקודה. בדיחה ידועה (שגם מתרחשת לפעמים בפועל) היא על אנשים שאומרים על עצמם שהם עשו בחייהם “סיבוב של 360 מעלות” (או רס”רים שתובעים זאת מחייליהם). אצלנו זה מתבטא בשאלה הבאה: עבור אילו ערכים של <span>$latex n$</span>, נקבל כי <span>$latex n\theta=k\cdot 2\pi$</span> עבור <span>$latex k$</span> טבעי כלשהו?</p>
+
+<p>ובכן, התשובה פשוטה: <span>$latex \theta = k\cdot\frac{2\pi}{n}$</span>. כלומר, לכל ערך של <span>$latex k$</span> נקבל ערך מתאים של <span>$latex \theta$</span>. האם זה אומר שיש אינסוף פתרונות, כלומר אינסוף שורשי יחידה מסדר <span>$latex n$</span>? התשובה שלילית, כי מתישהו הזוויות שהמשוואה נותנת לנו יתחילו לחזור על עצמן. שוב - הן לא יהיו זהות, כמובן, אך ההפרש ביניהן יהיה של שני פאי, כלומר של 360 מעלות. למעשה, לא קשה לראות שכל פתרון ניתן לייצג עם זווית בין 0 ל-360 מעלות. נסכם, אם כן: כל שורשי היחידה מסדר <span>$latex n$</span> הם המספרים המרוכבים מהצורה <span>$latex e^{\frac{k}{n}2\pi i}$</span> כך ש-<span>$latex k=0,1,\dots,n-1$</span>.</p>
+
+<p>נשים לב שהמספרים היחידים שמשתנים בין שורשי יחידה שונים הם <span>$latex n$</span> ו-<span>$latex k$</span>. לכן כדי לפשט את הסימון, נהוג לסמן <span>$latex \zeta_n=e^{\frac{2\pi i}{n}}$</span>, ואז כל שורש יחידה מסדר <span>$latex n$</span> ניתן לכתיבה בתור <span>$latex \zeta_n^k$</span> (שכן מחוקי החזקות של מספרים מרוכבים נובע מייד ש-<span>$latex \zeta_n^k=e^{\frac{k}{n}2\pi i}$</span>).</p>
+
+<p>נעבור כעת לקצת אינטואיציה גאומטרית. במהלך החישוב, ראינו שלכל שורש יחידה מתקיים <span>$latex r=1$</span>, כלומר המרחק של כל שורש יחידה (ולא משנה מאיזה סדר) מראשית הצירים הוא בדיוק 1. במילים אחרות, כל שורש יחידה הוא נקודה על “מעגל היחידה” סביב ראשית הצירים. שנית, הזווית בין כל שני שורשי יחידה סמוכים מאותו הסדר שווה (ל-<span>$latex \frac{2\pi}{n}$</span>) וסכום כל הזוויות הללו הוא בדיוק <span>$latex 2\pi$</span>, כלומר שורשי היחידה מסדר <span>$latex n$</span> הם נקודות במרווחים שווים על מעגל היחידה סביב הראשית. קצת גאומטריה אוקלידית מובילה למסקנה הבאה - שורשי היחידה מסדר <span>$latex n$</span> הם בדיוק הקודקודים של מצולע משוכלל שמרכזו בראשית הצירים. טראח! פתאום, משום מקום, שני נושאים שנראו בלתי קשורים התחברו זה לזה בקשר הדוק ביותר. התנגשות שכזו היא לב-ליבה של המתמטיקה וככל הנראה הדבר היפה ביותר בה.</p>
+
+<p>עכשיו, משקיבלנו אינטואיציה כלשהי למה בכלל יש טעם לעסוק בשורשי יחידה כשבאים לדבר על מצולעים משוכללים, זה נראה לי זמן טוב לסיים את הפוסט הנוכחי. בפוסט הבא נעסוק הרבה יותר בתכונות של הקבוצה המעניינת של שורשי היחידה - וחשוב לא פחות, בתכונות של הפולינמים שהם שורשיהם, ושחקירה כלשהי שלהם היא שתוביל אותנו לפתרון של בעיית הבניה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2009/02/04/roots_of_unity/';
+      this.page.identifier = 'http://gadial.net/2009/02/04/roots_of_unity/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2009/02/04/roots_of_unity/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

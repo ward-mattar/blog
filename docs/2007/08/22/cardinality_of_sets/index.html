@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>איזה גודל (?) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="איזה גודל (?)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסטים קודמים דיברתי על כך שאת “רוב” המספרים הממשיים “אי אפשר לחשב”, ואולי גם הבטחתי הוכחה “פשוטה” לכך. בפוסטים הבאים אני אנסה להגשים את ההבטחה הזו, ולצורך כך אני צריך לחסל את המרכאות - להסביר מהו “רוב”, להגדיר מה זה “לחשב” (ולכן, גם מה זה “אי אפשר לחשב”), ולהראות הוכחה שהיא באמת פשוטה." />
+<meta property="og:description" content="בפוסטים קודמים דיברתי על כך שאת “רוב” המספרים הממשיים “אי אפשר לחשב”, ואולי גם הבטחתי הוכחה “פשוטה” לכך. בפוסטים הבאים אני אנסה להגשים את ההבטחה הזו, ולצורך כך אני צריך לחסל את המרכאות - להסביר מהו “רוב”, להגדיר מה זה “לחשב” (ולכן, גם מה זה “אי אפשר לחשב”), ולהראות הוכחה שהיא באמת פשוטה." />
+<link rel="canonical" href="http://gadial.net/2007/08/22/cardinality_of_sets/" />
+<meta property="og:url" content="http://gadial.net/2007/08/22/cardinality_of_sets/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2007-08-22T13:37:26+03:00" />
+<script type="application/ld+json">
+{"headline":"איזה גודל (?)","dateModified":"2007-08-22T13:37:26+03:00","datePublished":"2007-08-22T13:37:26+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/08/22/cardinality_of_sets/"},"url":"http://gadial.net/2007/08/22/cardinality_of_sets/","description":"בפוסטים קודמים דיברתי על כך שאת “רוב” המספרים הממשיים “אי אפשר לחשב”, ואולי גם הבטחתי הוכחה “פשוטה” לכך. בפוסטים הבאים אני אנסה להגשים את ההבטחה הזו, ולצורך כך אני צריך לחסל את המרכאות - להסביר מהו “רוב”, להגדיר מה זה “לחשב” (ולכן, גם מה זה “אי אפשר לחשב”), ולהראות הוכחה שהיא באמת פשוטה.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">איזה גודל (?)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2007-08-22T13:37:26+03:00" itemprop="datePublished">Aug 22, 2007
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>בפוסטים קודמים דיברתי על כך שאת “רוב” המספרים הממשיים “אי אפשר לחשב”, ואולי גם הבטחתי הוכחה “פשוטה” לכך. בפוסטים הבאים אני אנסה להגשים את ההבטחה הזו, ולצורך כך אני צריך לחסל את המרכאות - להסביר מהו “רוב”, להגדיר מה זה “לחשב” (ולכן, גם מה זה “אי אפשר לחשב”), ולהראות הוכחה שהיא באמת פשוטה.</p>
+
+<p>בכל הנוגע לחישוב ארמה קצת ואציג הגדרה לא פורמלית - משהו שניתן לחשב הוא משהו שניתן לכתוב תוכנית מחשב בשפת <a href="http://he.wikipedia.org/wiki/C%2B%2B">++C</a> שמחשבת אותו (כלומר - רצה בלי לקבל קלט ובסוף מוציאה אותו כפלט). מכיוון שכל מה שתוכניות מחשב עושות מוציאות כפלט הם רצפים של אפסים ואחדים (לרוב כשהם מוצגים בדרך נוחה יותר לקריאה) אני מראש מגביל את “מה אפשר לחשב” לכל מה שאפשר לקודד אותו בצורה הזו.</p>
+
+<p>למרות שההגבלות הללו נראות שרירותיות, למעשה הן שקולות להגדרות הפורמליות ביותר של “חישוב”. הסיבה שבחרתי ב-++C ולא, נניח ב-<a href="http://he.wikipedia.org/wiki/Ruby">Ruby</a> שאותה אני אוהב הרבה יותר, היא בגלל האנקדוטה שמנגנון ה-Templates של ++C לבדו מאפשר ביצוע חישובים כבר בזמן קומפילציה שהם מה שמכונה <a href="http://en.wikipedia.org/wiki/Turing_completeness">Turing Complete</a> - כלומר, מסוגלים לבצע סימולציה לכל מודל חישובי אחר (ובפרט, להיכנס ללולאה אינסופית ולתקוע את הקומפיילר). כפי שנראה בהמשך, בחירת השפה לא משנה כלום, וכדי להבין את מה שאעשה בהמשך בכלל לא צריך להכיר שפות תכנות; אבל צריך לבחור שפה כלשהי ולדבוק בה.</p>
+
+<p>אם כן, נעבור למושג הקשה הרבה יותר להגדרה, מושג ה”גודל”. לפני כן חשוב להחליט את הגודל של מה אנחנו רוצים למדוד - ובמקרה שלנו, אלו יהיו קבוצות.</p>
+
+<p>“<a href="http://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%94_(%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94)">קבוצה</a>” היא ככל הנראה המושג הבסיסי ביותר במתמטיקה המודרנית. <a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA">תורת הקבוצות</a> היא הבסיס שבאמצעותו מתוארת רוב (כל?) המתמטיקה - אפילו ה<a href="http://he.wikipedia.org/wiki/%D7%9C%D7%95%D7%92%D7%99%D7%A7%D7%94_%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%AA">לוגיקה המתמטית</a> (שיותר משהיא מהווה בעצמה בסיס למתמטיקה, היא משמשת ככלי לביצוע חקירה מתמטית של המתמטיקה עצמה) משתמשת בקבוצות. לכן, לפחות לכאורה, אין לצפות להגדרה מתמטית מדוייקת של המושג, שמבוססת על מושגים קיימים, אלא להגדרה אינטואיטיבית שמבוססת על שפה טבעית.</p>
+
+<p>אם כן, הגדרה נאיבית לקבוצה היא כדלהלן: קבוצה היא חלוקה של כל העצמים שניתן לחשוב עליהם ל”עצמים ששייכים לקבוצה”, ו”עצמים שלא שייכים לקבוצה”, כך שלכל עצם מתקיימת אחת (ורק אחת) מבין האפשרויות. “עצמים” יכול להיות כל דבר: המספר 7, החתול שמיל, קבוצות אחרות, וכדומה. בפרט, חלוקה אפשרית אחת היא “כל העצמים לא שייכים לקבוצה”, ואז הקבוצה שמתקבלת מכונה “הקבוצה הריקה”.</p>
+
+<p>למרות שמבחינת המתמטיקאי המושגים הללו פשוטים מאוד, השימוש בשפה הטבעית יכול להטעות ולגרום לבלבולים. ניהלתי פעם דיון עם ברנש חכם (לא בסרקזם) שטען שאין כזה דבר, קבוצה ריקה, שכן קבוצה היא אוסף של איברים ולכן אין משמעות לאוסף שלא מכיל אף איבר. באותה הרוח, הוא טען שקבוצה של איבר אחד היא אותו דבר כמו האיבר עצמו (כלומר, אין “קבוצה שמכילה את החתול שמיל”, אלא רק “החתול שמיל”). הבעיה כאן היא שבן שיחי הורגל למושג היומיומי של “קבוצה” וסירב לקבל מתן משמעות אחרת, רחבה קצת יותר, למילה הזו. לכן חשוב להבין שזה מה שהמתמטיקה עושה לפעמים - נותנת שמות אינטואיטיביים (שלרוב מסייעים במשהו להבנה, אך לא תמיד) למושגים שמשמעותם האמיתית מעט שונה ומורכבת יותר. כך, למשל, ניתן למצוא במתמטיקה “<a href="http://he.wikipedia.org/wiki/%D7%90%D7%99%D7%93%D7%90%D7%9C_(%D7%90%D7%9C%D7%92%D7%91%D7%A8%D7%94)">אידאלים</a>”, במובן הרבה יותר קונקרטי.</p>
+
+<p>ההגדרה הנאיבית שנתתי מובילה בסופו של דבר לבעיות ופרדוקסים (הידוע שבהם הוא “<a href="http://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%A8%D7%93%D7%95%D7%A7%D7%A1_%D7%A9%D7%9C_%D7%A8%D7%90%D7%A1%D7%9C">הפרדוקס של ראסל</a>”, אבל יש עוד), ולכן מבחינה מעשית לא משתמשים בה. במקום זה מפתחים את מה שמכונה “<a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%A7%D7%91%D7%95%D7%A6%D7%95%D7%AA_%D7%94%D7%90%D7%A7%D7%A1%D7%99%D7%95%D7%9E%D7%98%D7%99%D7%AA">תורת הקבוצות האקסיומטית</a>”, שמגבילה במשהו את מושג הקבוצה. עם זאת, לרוב הקבוצות שמתמטיקאים משתמשים בהן (וגם אלו שעליהן אדבר) מתאימות בכל מקרה למושגים של תורת הקבוצות האקסיומטית, ולכן ההגדרה שנתתי קודם היא טובה מספיק לצרכינו (כשם שה<a href="http://he.wikipedia.org/wiki/%D7%9E%D7%9B%D7%A0%D7%99%D7%A7%D7%94_%D7%A0%D7%99%D7%95%D7%98%D7%95%D7%A0%D7%99%D7%AA">מכניקה הניוטונית</a> מספיקה לרבים מצרכי היום-יום למרות שהיא אינה ממש נכונה, ויש להשתמש במקומה <a href="http://he.wikipedia.org/wiki/%D7%AA%D7%95%D7%A8%D7%AA_%D7%94%D7%99%D7%97%D7%A1%D7%95%D7%AA_%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%AA">בתורת היחסות הפרטית</a>).</p>
+
+<p>אם כן, הגענו להגדרת גודל הקבוצה. כמקודם, גם למילה “גודל” ניתן לייחס משמעויות רבות. אני אדבר מכאן ואילך על משמעות ספציפית אחת, שמכונה “<a href="http://he.wikipedia.org/wiki/%D7%A2%D7%95%D7%A6%D7%9E%D7%94">עוצמה</a>” (Cardinality), ואנסה לשכנע אתכם שזו משמעות מעניינת. בבסיסה, המשמעות הזו מנסה לתפוס את המושג האינטואיטיבי של “כמות איברים”.</p>
+
+<p>כיצד נמדוד את כמות האיברים של קבוצה? כשיש לנו קבוצה בחיי היום יום, אנחנו מודדים את כמות האיברים בה על ידי התאמת מספר טבעי כלשהו אליה: “יש בחנות החרסינה שלושה פילים”, “יש בכיתה הזו אפס אנשים חכמים” וכדומה. זה אולי השימוש הקדום ביותר של המספרים הטבעיים - מדידת כמות.</p>
+
+<p>כיצד נבצע את ההתאמה הזו בפועל? אפשר “לספור” כמו שעושים בחיי היום יום: להתחיל מכך שגודל הקבוצה הוא 0, לסלק ממנה איבר אחד, להגדיל את גודל הקבוצה ל-1, לסלק עוד איבר ולהגדיל ל-2 וכן הלאה, עד שהקבוצה מתרוקנת. לא קשה לראות שבעצם מסתתרת כאן הגדרה אינדוקטיבית:</p>
+<ol>
+	<li>עוצמת הקבוצה הריקה היא 0.</li>
+	<li>אם X היא קבוצה לא ריקה, עוצמתה היא כעוצמת X לאחר שהוסר ממנה איבר כלשהו באופן שרירותי, ועוד 1.</li>
+</ol>
+<p>כך קבוצות בעלות איבר בודד יהיו מעוצמה 1 (כי אחרי שמוסר האיבר הזה קיבלנו את הקבוצה הריקה) וכן הלאה.</p>
+
+<p>הבעיה מתחילה כשאנו נתקלים בקבוצות שמסרבות להיכנע להגדרה הזו. ניקח כדוגמה את קבוצת כל המספרים הטבעיים: לא משנה כמה פעמים נחזור על תהליך ההסרה של איבר, אף פעם לא נגיע לבסיס האינדוקציה (לקבוצה ריקה), שכן כדי לסלק את כל המספרים הטבעים נצטרך להסיר… זהו, אי אפשר לחמוק יותר מהמילה הזו - אינסוף איברים.</p>
+
+<p>במילים אחרות, ההגדרה שסיפקתי היא בעלת ערך רק עבור קבוצות בעלות מספר סופי של איברים - כלומר, קבוצות שבאמת ניתן להתאים להן מספר טבעי שמייצג את עוצמתן. שאר הקבוצות הן יצורים משונים ומפחידים, שלא ברור מה המשמעות של “העוצמה” שלהן, ולכן אנחנו ממלמלים משהו על כך שהן “אינסופיות”, לא מנסים להבין את פשר הגודל שלהן, ובכלל מעדיפים להתעסק איתן כמה שפחות. זה לפחות היה המצב במתמטיקה של המאה ה-19; המתמטיקאים עמלו קשות כדי לסלק את מושג האינסוף מהמתמטיקה, ובפרט מהחשבון האינפיניטסימלי. לאחר עבודה כבירה עלה הדבר בידם - הם החליפו את האינסוף במושג של “שאיפה לאינסוף” שהשתמש רק בגדלים סופיים, והעדיפו להתעלם כמה שניתן מהמקומות האחרים שבהם האינסוף יכול לצוץ.</p>
+
+<p>ואז בא מתמטיקאי אחד ולא רק שהחזיר את האינסוף למרכז הזירה, הוא גם גילה מהן התכונות המאפיינות אותו, ובפרט את התגלית הכבירה, הבלתי נתפסת כמעט - שיש גדלים רבים (אינסוף, למעשה) של אינסוף.</p>
+
+<p>למתמטיקאי הזה קראו <a href="http://he.wikipedia.org/wiki/%D7%92%D7%90%D7%95%D7%A8%D7%92_%D7%A7%D7%A0%D7%98%D7%95%D7%A8">גאורג קנטור</a>, ועל הגישה שלו למושג האינסוף אנסה להרחיב בפוסט הבא.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2007/08/22/cardinality_of_sets/';
+      this.page.identifier = 'http://gadial.net/2007/08/22/cardinality_of_sets/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2007/08/22/cardinality_of_sets/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

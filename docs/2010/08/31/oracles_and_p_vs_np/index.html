@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם נפנפתי קצת ידיים על אחת מהסיבות הנפוצות לקושי שבהוכחה ש-$latex \mbox{P}\ne\mbox{NP}$; העובדה שאחד מרעיונות ההוכחה החזקים והיפים שבמתמטיקה ומדעי המחשב, הלכסון שגורם להפניה עצמית, מה שמככב במשפט אי השלמות של גדל ובהוכחת אי כריעותה של בעית העצירה - רעיון זה פשוט לא יכול לעבוד כאשר עוסקים ב-$latex \mbox{P}$ וב-$latex \mbox{NP}$. בפוסט הזה אני רוצה להיות יותר טכני ולפרט גם את האופן שבו עושים זאת, אף שאני משער שחלק מהקוראים לא יצליחו לעקוב אחרי ההוכחה עד סופה. אני מניח כאן ידע מוקדם כלשהו בתורת הסיבוכיות - ספציפית, למה אנחנו מתכוונים ב”מכונת טיורינג”, ב”מכונת טיורינג אי דטרמיניסטית” וב”שפה” (אוסף של מחרוזת סופיות) - מי שאינו מכיר מושגים אלו כנראה יתקשה לעקוב אחרי ההמשך." />
+<meta property="og:description" content="בפוסט הקודם נפנפתי קצת ידיים על אחת מהסיבות הנפוצות לקושי שבהוכחה ש-$latex \mbox{P}\ne\mbox{NP}$; העובדה שאחד מרעיונות ההוכחה החזקים והיפים שבמתמטיקה ומדעי המחשב, הלכסון שגורם להפניה עצמית, מה שמככב במשפט אי השלמות של גדל ובהוכחת אי כריעותה של בעית העצירה - רעיון זה פשוט לא יכול לעבוד כאשר עוסקים ב-$latex \mbox{P}$ וב-$latex \mbox{NP}$. בפוסט הזה אני רוצה להיות יותר טכני ולפרט גם את האופן שבו עושים זאת, אף שאני משער שחלק מהקוראים לא יצליחו לעקוב אחרי ההוכחה עד סופה. אני מניח כאן ידע מוקדם כלשהו בתורת הסיבוכיות - ספציפית, למה אנחנו מתכוונים ב”מכונת טיורינג”, ב”מכונת טיורינג אי דטרמיניסטית” וב”שפה” (אוסף של מחרוזת סופיות) - מי שאינו מכיר מושגים אלו כנראה יתקשה לעקוב אחרי ההמשך." />
+<link rel="canonical" href="http://gadial.net/2010/08/31/oracles_and_p_vs_np/" />
+<meta property="og:url" content="http://gadial.net/2010/08/31/oracles_and_p_vs_np/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-08-31T20:49:12+03:00" />
+<script type="application/ld+json">
+{"headline":"כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP","dateModified":"2010-08-31T20:49:12+03:00","datePublished":"2010-08-31T20:49:12+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/08/31/oracles_and_p_vs_np/"},"url":"http://gadial.net/2010/08/31/oracles_and_p_vs_np/","description":"בפוסט הקודם נפנפתי קצת ידיים על אחת מהסיבות הנפוצות לקושי שבהוכחה ש-$latex \\mbox{P}\\ne\\mbox{NP}$; העובדה שאחד מרעיונות ההוכחה החזקים והיפים שבמתמטיקה ומדעי המחשב, הלכסון שגורם להפניה עצמית, מה שמככב במשפט אי השלמות של גדל ובהוכחת אי כריעותה של בעית העצירה - רעיון זה פשוט לא יכול לעבוד כאשר עוסקים ב-$latex \\mbox{P}$ וב-$latex \\mbox{NP}$. בפוסט הזה אני רוצה להיות יותר טכני ולפרט גם את האופן שבו עושים זאת, אף שאני משער שחלק מהקוראים לא יצליחו לעקוב אחרי ההוכחה עד סופה. אני מניח כאן ידע מוקדם כלשהו בתורת הסיבוכיות - ספציפית, למה אנחנו מתכוונים ב”מכונת טיורינג”, ב”מכונת טיורינג אי דטרמיניסטית” וב”שפה” (אוסף של מחרוזת סופיות) - מי שאינו מכיר מושגים אלו כנראה יתקשה לעקוב אחרי ההמשך.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-08-31T20:49:12+03:00" itemprop="datePublished">Aug 31, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><a href="http://www.gadial.net/?p=716">בפוסט הקודם</a> נפנפתי קצת ידיים על אחת מהסיבות הנפוצות לקושי שבהוכחה ש-<span>$latex \mbox{P}\ne\mbox{NP}$</span>; העובדה שאחד מרעיונות ההוכחה החזקים והיפים שבמתמטיקה ומדעי המחשב, הלכסון שגורם להפניה עצמית, מה שמככב במשפט אי השלמות של גדל ובהוכחת אי כריעותה של בעית העצירה - רעיון זה פשוט לא יכול לעבוד כאשר עוסקים ב-<span>$latex \mbox{P}$</span> וב-<span>$latex \mbox{NP}$</span>. בפוסט הזה אני רוצה להיות יותר טכני ולפרט גם את האופן שבו עושים זאת, אף שאני משער שחלק מהקוראים לא יצליחו לעקוב אחרי ההוכחה עד סופה. אני מניח כאן ידע מוקדם כלשהו בתורת הסיבוכיות - ספציפית, למה אנחנו מתכוונים ב”<a href="http://www.gadial.net/?p=62">מכונת טיורינג</a>”, ב”<a href="http://www.gadial.net/?p=97">מכונת טיורינג אי דטרמיניסטית</a>” וב”שפה” (אוסף של מחרוזת סופיות) - מי שאינו מכיר מושגים אלו כנראה יתקשה לעקוב אחרי ההמשך.</p>
+
+<p>ראשית, תזכורת לגבי שיטת הפעולה שלנו: אנחנו משתמשים במודל החישובי של מכונת טיורינג עם אורקל, שאולי יותר פשוט לחשוב עליה במונחים מעשיים כ”תוכנית מחשב עם פונקצית ספריה חזקה במיוחד”. אותה פונקצית ספריה מקבלת כקלט מחרוזת ואומרת עליה “כן”או “לא” בהתאם לשאלה מסויימת וקבועה מראש. למשל, “האם למשוואה הזו יש פתרון בשלמים” על קלט שהוא בעצמו משוואה פולינומית עם מקדמים שלמים. זו נשמעת כמו פונקצית ספריה נחמדה ופשוטה יחסית במבט ראשון; אך למעשה, אפשר להוכיח ש<strong>לא קיימת</strong> פונקציה שכזו בעולם האמיתי. עם זאת, אין מניעה מלשחק ב”נדמה לי” - נניח שפונקציה שכזו עומדת לרשותנו; אילו תוכניות מחשב נוכל לכתוב באמצעותה?</p>
+
+<p>מכיוון שאנחנו עוסקים בענייני יעילות, עוד הנחה שלנו לגבי האורקל היא שהוא פועל באופן מיידי. כך אפשר לקצר את פרק הזמן שדורשים חישובים, על ידי כך ששואלים את האורקל שאלות שחישוב התשובה להן באופן ידני הוא תובעני, והאורקל עונה עליהן תכף ומייד. למשל, אם נתון לנו גרף ואנו מתבקשים למצוא כיסוי בצמתים שלו מגודל מסויים (כיסוי בצמתים הוא אוסף צמתים שכל קשת בגרף נוגעת באחד מהם לפחות) ויש לנו פונקצית ספריה שאומרת תכף ומייד, בהינתן גרף ומספר, האם קיים בגרף כיסוי קודקודים בגודל הדרוש, אז קל מאוד למצוא את הכיסוי: בוחרים צומת, מסלקים אותה ואת כל הקשתות המחוברות אליה מהגרף, ושואלים את הפונקציה האם קיים כעת כיסוי מהגודל שאנו רוצים פחות 1. אם כן, אז משאירים את הצומת שבחרנו בכיסוי, ואחרת “מתקנים” את הגרף ובודקים את הצומת הבא. הסיבה לכך שהאלגוריתם הוא כעת יעיל היא שהחלק ה”כבד” בו הוא הבדיקה האם בגרפים שמתקבלים במהלך ההרצה יש כיסוי קודקודים.</p>
+
+<p>לא הבנתם כלום? מצויין, ההמשך עוד יותר מבלבל.</p>
+
+<p>הטענה <span>$latex \mbox{P}\ne\mbox{NP}$</span> היא בעצם הטענה “מכונות אי-דטרמיניסטיות פולינומיות יכולות לעשות משהו שמכונות דטרמיניסטיות פולינומיות לא יכולות לעשות”. מה שאנו רוצים להראות הוא שאם מחזקים את שני המודלים הללו עם אורקל, אז עבור אורקל אחד המכונות כן ישתוו בכוחן, אבל עבור אורקל אחר אפשר יהיה להראות שהן לא שוות בכוחן (כלומר, להוכיח טענה דמויית <span>$latex \mbox{P}\ne\mbox{NP}$</span> אבל על מחלקה אחרת של מכונות). החלק הקל יותר הוא להרחיב את שני המודלים כך שהם כן יהיו שווים בכוחם - פשוט צריך לתת להם אורקל למשהו שהוא <strong>כל כך חזק</strong> עד שההבדלים בכוח של שתי המכונות (אם קיימים כאלו) מתפוגגים ונעלמים. דוגמה לאורקל כזה היא אורקל שבהינתן שלשה <span>$latex \left(M,x,1^{n}\right)$</span> של מכונה <span>$latex M$</span>, קלט <span>$latex x$</span> ומספר <span>$latex n$</span> שנתון בבסיס אונרי (למה? מסיבת טכניות - יעילות של אלגוריתמים נמדדת ביחס ל<strong>גודל הייצוג</strong> של קלט, ואם מייצגים מספר שלא בבסיס אונרי אז גודל הייצוג שלו הוא לוגריתמי בגודל של המספר עצמו), אומר האם <span>$latex M$</span> עונה “כן”על <span>$latex x$</span> תוך <span>$latex 2^{n}$</span> צעדים.</p>
+
+<p>אורקל לשפה הזו מאפשר למכונה דטרמיניסטית לקבל כל שפה שמכונה אי דטרמיניסטית פולינומית יכולה לקבל: אם <span>$latex M$</span> היא מכונה אי דטרמיניסטית פולינומית ואנו רוצים לדעת אם היא מקבלת את <span>$latex x$</span>, אז נבקש מהאורקל תשובה עבור <span>$latex \left(M^{\prime},x,1^{n}\right)$</span> כאשר <span>$latex M^{\prime}$</span> היא מכונה דטרמיניסטית שמבצעת חיפוש ממצה על כל אפשרויות הריצה של <span>$latex M$</span> על <span>$latex x$</span>; חיפוש ממצה שכזה לוקח זמן שהוא אקספוננציאלי באורך של <span>$latex x$</span>, ולכן בהתאם בוחרים את <span>$latex n$</span> להיות בערך הגודל של <span>$latex x$</span> (מסיבות טכניות אולי יהיה צורך בקצת יותר).</p>
+
+<p>אלא מה? כל מה שזה מראה הוא ש-<span>$latex \mbox{NP}\subseteq\mbox{P}^{L}$</span> (כש-<span>$latex L$</span> היא השפה של האורקל שלנו). אנחנו רוצים להראות ש-<span>$latex \mbox{NP}^{L}\subseteq\mbox{P}^{L}$</span> - כלומר, שגם אחרי שמחזקים את המכונות האי-דטרמיניסטיות עם האורקל של <span>$latex L$</span>, עדיין מכונות דטרמיניסטיות מצליחות לעשות את אותם הדברים. אלא שזו לא בעיה אמיתית, כי אותה מכונה <span>$latex M^{\prime}$</span> שמסמלצת את המכונה האי דטרמיניסטית <span>$latex M$</span> יכולה לסמלץ גם קריאות לאורקל - כלומר, לבצע בעצמה את החישוב שהאורקל מבצע, על איזה קלט שלא יהיה ש-<span>$latex M$</span> תזרוק עליו, ולענות במקום האורקל. זה לא יגדיל את זמן הריצה של <span>$latex M^{\prime}$</span> בצורה משמעותית (כאן צריך לבוא נימוק טכני מפורט יותר, אך אמנע ממנו - זה תרגיל טוב לחשוב מה בדיוק צריך לומר ואיזה עוד סיבוכים עשויים לצוץ; למשל, האם <span>$latex M$</span> יכולה לקרוא לאורקל עם קלטים שבהם <span>$latex 1^{n}$</span> הוא “גדול מדי”?).</p>
+
+<p>יפה. אם כן, עבור האורקל החזק הזה, מכונת דטרמיניסטיות ואי דטרמיניסטיות משתוות. החלק הקשה יותר הוא לחשוב על אורקל שעבורו לא רק שהן לא משתוות, אלא שאפילו ניתן להוכיח זאת. במילים אחרות, אנחנו רוצים להוכיח משפט ש<strong>דומה</strong> למשפט <span>$latex \mbox{P}\ne\mbox{NP}$</span>, וצריכים לחפש את ההקלה המתאימה שתאפשר לנו להוכיח משפט שכזה.</p>
+
+<p>בואו ניקח שפה <span>$latex L$</span> כלשהי. לשפה הזו ניתן להתאים שפה אחרת, <span>$latex U_{L}$</span>, של אורכי המילים ב-<span>$latex L$</span> (שוב, בייצוג אונרי). במילים אחרות, בהינתן מספר <span>$latex 1^{n}$</span> השאלה היא האם קיימת מילה מאורך <span>$latex n$</span> בשפה <span>$latex L$</span>. זו שאלה שקל מאוד להכריע אם אנחנו מכונה אי דטרמיניסטית עם אורקל לשפה <span>$latex L$</span>: בהינתן <span>$latex n$</span> פשוט מנחשים מילה מאורך <span>$latex n$</span>, שואלים את האורקל האם היא שייכת ל-<span>$latex L$</span> ואם כן - מקבלים. אם כן, לכל שפה <span>$latex L$</span> מתקיים ש-<span>$latex U_{L}\in\mbox{NP}^{L}$</span>. מצד שני, מכונה דטרמיניסטית פולינומית לא יכולה לנקוט בגישה הזו - אם נותנים לה <span>$latex n$</span>, לבדוק את כל המילים מאורך <span>$latex n$</span> ייקח לה יותר מדי זמן כי יש <span>$latex 2^{n}$</span> כאלו. זה נותן פתח לתקווה לכך שיתקיים <span>$latex U_{L}\notin\mbox{P}^{L}$</span> עבור שפה <span>$latex L$</span> שתהונדס בצורה מתאימה. כמו שכל מי שמכיר קצת את תורת הסיבוכיות יודע, להוכיח שמשהו הוא קשה זה עניין קשה, והבניה של <span>$latex L$</span> היא יצירתית למדי ומסתמכת - איך לא - על לכסון.</p>
+
+<p>הבה ונמספר את כל מכונות הטיורינג הדטרמיניסטיות עם אורקל הקיימות - <span>$latex M_{1},M_{2},M_{3},\dots$</span>. מה שנעשה יהיה לבנות את <span>$latex L$</span> בשלבים, כשבשלב ה-<span>$latex i$</span> ננסה לגרום למכונה <span>$latex M_{i}$</span> לטעות בתשובה שהיא אמורה לתת על מילה כלשהי מ-<span>$latex L$</span>.</p>
+
+<p>נתחיל מכך ש-<span>$latex L$</span> ריקה. כפי שניתן יהיה לראות מהבניה, בכל שלב תישמר התכונה שב-<span>$latex L$</span> רק מספר סופי של מילים. בסיבוב ה-<span>$latex i$</span> בבניה, ניקח מספר <span>$latex n$</span> שגדול ממספר הסיבוב הנוכחי <span>$latex i$</span> ומאורך כל המילים שעד כה הוכנסו ל-<span>$latex n$</span>. המטרה שלנו - לגרום ל-<span>$latex M_{i}$</span> “לטעות”בתשובה שהיא מחזירה על <span>$latex 1^{n}$</span>. בדרך כלל מה שהיינו עושים הוא לומר “נריץ את <span>$latex M_{i}$</span> על <span>$latex 1^{n}$</span>; אם <span>$latex M_{i}$</span> דחתה, נוסיף את <span>$latex 1^{n}$</span> ל-<span>$latex L$</span>; ואם היא קיבלה לא נוסיף אותו”. זה גם הרעיון כאן אבל יש לנו סיבוך - <span>$latex M_{i}$</span> היא מכונה עם גישה לאורקל. ולא סתם אורקל - אורקל לשפה <span>$latex L$</span> שאותה אנו בונים. כלומר, <span>$latex M_{i}$</span>, במהלך ריצתה על <span>$latex 1^{n}$</span>, עשויה לשאול את האורקל על מילים שבכלל עוד לא החלטנו אם הן כן או לא ב-<span>$latex L$</span>. עם זאת, זו לא בעיה של ממש - מה שנעשה הוא להריץ את <span>$latex M_{i}$</span> על <span>$latex 1^{n}$</span>, בכל פעם שבה <span>$latex M_{i}$</span> תשאל את האורקל על מילה שכבר החלטנו אם היא שייכת ל-<span>$latex L$</span> או לא נענה בהתאם לבחירה שביצענו; ואם <span>$latex M_{i}$</span> שואלת על מילה שאיננה מהמילים שכבר החלטנו עליהן, נענה (בתור האורקל) שהמילה איננה ב-<span>$latex L$</span> ונסמן לנו את זה בצד, למקרה שגם בעתיד ישאלו על המילה הזו.</p>
+
+<p>ה”סכנה” שבדרך הפעולה שלנו היא ש-<span>$latex M_{i}$</span> עלולה לשאול את האורקל שאלה על <strong>כל</strong> המילים מאורך <span>$latex n$</span>. זה אולי נשמע מוזר קצת בהתחלה - לא אמרנו שנדרש זמן אקספוננציאלי כדי לעשות זאת? אבל זו הנקודה העדינה המרכזית בהוכחות מהסוג הזה - אנחנו תוקפים את <span>$latex M_{i}$</span> עבור <span>$latex n$</span> <strong>ספציפי</strong>, בעוד שדיבורים על זמן ריצה אקספוננציאלי הם רלוונטיים רק כשמדברים על ההתנהגות <strong>האסימפטוטית</strong> של <span>$latex M_{i}$</span>, כלומר על האופן שבו <span>$latex M_{i}$</span> מתנהגת על אינסוף קלטים. ייתכן שעל כל הקלטים עד גודל זיליארד <span>$latex M_{i}$</span> דורשת פרק זמן גדול עד להדהים, ורק לאחר מכן היא “נרגעת” ורצה זמן פולינומי - גם אז היא עדיין תיחשב פולינומית. מכאן שהסכנה ש-<span>$latex M_{i}$</span> תבדוק את כל המילים מאורך <span>$latex n$</span> היא מוחשית מאוד, ונדרשים פיתולים טכניים כדי להתגבר עליה. במקרה שלנו, פשוט נגביל את זמן הריצה של <span>$latex M_{i}$</span> - אם היא רצה יותר מ-<span>$latex \frac{2^{n}}{10}$</span> צעדים, פשוט נשכח ממנה ונעבור למכונה הבאה. עוד מעט אסביר איך אפשר להבטיח שזה לא יגרום נזק להוכחה שלנו.</p>
+
+<p>אם <span>$latex M_{i}$</span> עצרה על <span>$latex 1^{n}$</span> תוך לכל היותר <span>$latex \frac{2^{n}}{10}$</span> צעדים, אז <strong>בהכרח</strong> היא לא הספיקה לשאול את האורקל על כל הקלטים מאורך <span>$latex n$</span>. אם <span>$latex M_{i}$</span> קיבלה, הרי שהיא טוענת שב-<span>$latex L$</span> יש מילה מאורך <span>$latex n$</span>, אולם כרגע בבניה שלנו אין מילה כזו. זכרו - <span>$latex n$</span> היה מספר שגדול מאורך כל המילים שהחלטנו אם הן ב-<span>$latex L$</span> או לא בתחילת הסיבוב <span>$latex i$</span>, ובמהלך הסיבוב עצמו לא הוספנו אף מילה ל-<span>$latex L$</span> - בכל פעם ש-<span>$latex M_{i}$</span> שאלה את האורקל על מילה חדשה, אמרנו לה שאותה מילה אינה ב-<span>$latex L$</span>. מכאן ש-<span>$latex M$</span> טועה. אם לעומת זאת <span>$latex M$</span> דחתה את <span>$latex 1^{n}$</span>, כלומר טענה שאין ב-<span>$latex L$</span> מילה מאורך <span>$latex n$</span>, פשוט נוסיף ל-<span>$latex L$</span> מילה כלשהי ש-<span>$latex M_{i}$</span> לא הספיקה לשאול את האורקל עליה (כאמור, יש כזו). ושוב, <span>$latex M$</span> טועה, והגדלנו את <span>$latex L$</span> במילה אחת בסך הכל, כך ש-<span>$latex L$</span> עדיין סופית.</p>
+
+<p><span>$latex L$</span> “האמיתית” היא התוצר הסופי של כל שלבי הבניה הללו. פורמלית, אם <span>$latex L_{i}$</span> מסמנת את השפה שהתקבלה אחרי השלב ה-<span>$latex i$</span>, אז <span>$latex L=\bigcup L_{i}$</span>. מבחינה מתמטית זו בניה חוקית לחלוטין והשפה מוגדרת היטב, אבל היא עשויה להיות מבלבלת למדי למי שלא רגיל לדברים כאלו. עכשיו צריך להשתכנע ש-<span>$latex U_{L}$</span> אכן אינה מתקבלת על ידי אף מכונה דטרמיניסטית פולינומית.</p>
+
+<p>ובכן, נניח ש-<span>$latex M$</span> היא מכונה דטרמיניסטית פולינומית שכזו, ושזמן הריצה שלה חסום על ידי הפולינום <span>$latex p\left(n\right)$</span>. אז קיים <span>$latex n$</span> גדול מספיק כך ש-<span>$latex \frac{2^{n}}{10}&gt;p\left(n\right)$</span>. במילים אחרות, אם ננסה “לתקוף” את <span>$latex M$</span> עבור המילה <span>$latex 1^{n}$</span> או מילים ארוכות יותר, ננצח. איך אפשר להבטיח שאכן נתקוף את <span>$latex M$</span> מתישהו עם מילה ארוכה שכזו? תעלול פשוט - במקום לתקוף את <span>$latex M$</span> פעם אחת, נתקוף אותה <strong>אינסוף</strong> פעמים. כלומר, המניה <span>$latex M_{1},M_{2},M_{3},\dots$</span> לא תכיל כל מכונה רק פעם אחת, אלא מספר אינסופי של פעמים. קל להנדס מניה שכזו - למשל, הביטו בסדרה <span>$latex 1,1,2,1,2,3,1,2,3,4,\dots$</span> שבה מובטח שכל מספר טבעי יופיע מספר אינסופי של פעמים. מכאן שאנו נתקלים ב-<span>$latex M$</span> בתור <span>$latex M_{i}$</span> עבור אינסוף ערכים שונים של <span>$latex i$</span>, ומכיוון שדרשנו שה-<span>$latex n$</span> שאותו בוחרים בסיבוב ה-<span>$latex i$</span> יהיה בפרט גדול מ-<span>$latex i$</span>, מובטח לנו שהחל מסיבוב מסויים ה-<span>$latex n$</span> שאיתו נתקוף את <span>$latex M$</span> אכן יביס אותה.</p>
+
+<p>אחרי שמבינים את כל הפרטים הללו, ההוכחה הזו אינה כה מסובכת - ואכן, רוב הרעיונות בה הם סטנדרטיים לגמרי בתורת הסיבוכיות. עיקר היופי בה הוא בבניה ההדרגתית, הכמו-אלגוריתמית של <span>$latex L$</span> ובאופן המחוכם שבו היא מצליחה להתגבר על סכנת ההפניה העצמית שנוצרת משאלות האורקל של <span>$latex M_{i}$</span>. אבל הדבר היפה באמת בהוכחה הזו הוא בכך שההוכחה לכך שלכסון <strong>לא</strong> מסוגל לעשות דבר מה היא עצמה הוכחה בלכסון!</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2010/08/31/oracles_and_p_vs_np/';
+      this.page.identifier = 'http://gadial.net/2010/08/31/oracles_and_p_vs_np/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2010/08/31/oracles_and_p_vs_np/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

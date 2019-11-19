@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט השלמות של גדל, ההוכחה (חלק ב’) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט השלמות של גדל, ההוכחה (חלק ב’)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אנו ממשיכים בהוכחת משפט השלמות של גדל. כזכור, בפוסט הקודם הוכחנו שאם $latex \Phi$ היא תורה עקבית מקסימלית מעל מילון $latex \tau$ שבנוסף לכך קיימת עבורה קבוצת עדים $latex C$, אז קיים ל-$latex \Phi$ מודל. זה מספיק כדי לסיים את ההוכחה, בתנאי שנוכיח שכל תורה עקבית $latex \Phi$מעל מילון $latex \tau$ ניתן להרחיב לתורה עקבית מקסימלית שקיימת עבורה קבוצת עדים." />
+<meta property="og:description" content="אנו ממשיכים בהוכחת משפט השלמות של גדל. כזכור, בפוסט הקודם הוכחנו שאם $latex \Phi$ היא תורה עקבית מקסימלית מעל מילון $latex \tau$ שבנוסף לכך קיימת עבורה קבוצת עדים $latex C$, אז קיים ל-$latex \Phi$ מודל. זה מספיק כדי לסיים את ההוכחה, בתנאי שנוכיח שכל תורה עקבית $latex \Phi$מעל מילון $latex \tau$ ניתן להרחיב לתורה עקבית מקסימלית שקיימת עבורה קבוצת עדים." />
+<link rel="canonical" href="http://gadial.net/2013/02/27/godel_completeness_proof_2/" />
+<meta property="og:url" content="http://gadial.net/2013/02/27/godel_completeness_proof_2/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-02-27T00:25:29+02:00" />
+<script type="application/ld+json">
+{"headline":"משפט השלמות של גדל, ההוכחה (חלק ב’)","dateModified":"2013-02-27T00:25:29+02:00","datePublished":"2013-02-27T00:25:29+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/02/27/godel_completeness_proof_2/"},"url":"http://gadial.net/2013/02/27/godel_completeness_proof_2/","description":"אנו ממשיכים בהוכחת משפט השלמות של גדל. כזכור, בפוסט הקודם הוכחנו שאם $latex \\Phi$ היא תורה עקבית מקסימלית מעל מילון $latex \\tau$ שבנוסף לכך קיימת עבורה קבוצת עדים $latex C$, אז קיים ל-$latex \\Phi$ מודל. זה מספיק כדי לסיים את ההוכחה, בתנאי שנוכיח שכל תורה עקבית $latex \\Phi$מעל מילון $latex \\tau$ ניתן להרחיב לתורה עקבית מקסימלית שקיימת עבורה קבוצת עדים.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט השלמות של גדל, ההוכחה (חלק ב&#39;)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-02-27T00:25:29+02:00" itemprop="datePublished">Feb 27, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אנו ממשיכים בהוכחת משפט השלמות של גדל. כזכור, <a href="http://www.gadial.net/2013/02/25/godel_completeness_proof_1/">בפוסט הקודם</a> הוכחנו שאם <span>$latex \Phi$</span> היא תורה עקבית מקסימלית מעל מילון <span>$latex \tau$</span> שבנוסף לכך קיימת עבורה קבוצת עדים <span>$latex C$</span>, אז קיים ל-<span>$latex \Phi$</span> מודל. זה מספיק כדי לסיים את ההוכחה, <strong>בתנאי</strong> שנוכיח שכל תורה עקבית <span>$latex \Phi$</span>מעל מילון <span>$latex \tau$</span> ניתן <strong>להרחיב</strong> לתורה עקבית מקסימלית שקיימת עבורה קבוצת עדים.</p>
+
+<p>לפני שנזכיר מה זה בכלל עדים וניגש לחלק הזה בהוכחה, בואו נסיים עם ה”עקבית מקסימלית” שהוא פשוט יותר מכיוון שכבר עשינו את זה בדיוק בהוכחת <a href="http://www.gadial.net/2012/04/08/propositional_calculus_completeness/">משפט השלמות לתחשיב הפסוקים</a><strong></strong>. נניח שיש לנו תורה עקבית <span>$latex \Phi$</span> ואנחנו רוצים להרחיב אותה לתורה עקבית מקסימלית <span>$latex \Phi^{\prime}$</span>; פשוט נמספר את כל הפסוקים הקיימים, <span>$latex \varphi_{1},\varphi_{2},\varphi_{3},\dots$</span> ואז נגדיר אינדוקטיבית סדרה של תורות <span>$latex \Phi_{0},\Phi_{1},\Phi_{2},\dots$</span> באופן הבא: <span>$latex \Phi_{0}=\Phi$</span> ולכל <span>$latex n$</span>, אם <span>$latex \Phi_{n}\cup\left\{ \varphi_{n}\right\} $</span> עקבית אז <span>$latex \Phi_{n+1}=\Phi_{n}\cup\left\{ \varphi_{n}\right\} $</span> ואחרת <span>$latex \Phi_{n+1}=\Phi_{n}$</span>. לבסוף נגדיר <span>$latex \Phi^{\prime}=\bigcup_{n=0}^{\infty}\Phi_{n}$</span>. ברור ש-<span>$latex \Phi^{\prime}$</span> עקבית בזכות תעלול סטנדרטי שמסתמך על סופיות של הוכחות: אם <span>$latex \Phi^{\prime}$</span> אינה עקבית אז היא מוכיחה דבר והיפוכו, ושתי ההוכחות הללו סופיות ולכן משתמשות במספר סופי של הנחות מתוך <span>$latex \Phi^{\prime}$</span> ולכן, אם <span>$latex n$</span> הוא האינדקס המקסימלי של הנחה שבה משתמשים בהוכחות הללו, כבר <span>$latex \Phi_{n}$</span> אינה עקבית, בסתירה לתהליך הבניה שלנו.</p>
+
+<p>כדי לראות ש-<span>$latex \Phi^{\prime}$</span> עקבית מקסימלית בואו ניקח תורה עקבית כלשהי שמכילה אותה, <span>$latex \Phi^{\prime}\subseteq\Psi$</span> ונראה שהן שוות. אם <span>$latex \varphi\in\Psi$</span> אז בפרט <span>$latex \Phi^{\prime}\cup\left\{ \varphi\right\} $</span> עקבית; נסתכל על המספור של <span>$latex \varphi$</span> בסידור של הפסוקים שלנו, אז <span>$latex \varphi=\varphi_{n}$</span> עבור <span>$latex n$</span> כלשהו. מכיוון ש-<span>$latex \Phi^{\prime}\cup\left\{ \varphi_{n}\right\} $</span> עקבית כך גם <span>$latex \Phi_{n}\cup\left\{ \varphi_{n}\right\} $</span> ולכן הוספנו את <span>$latex \varphi_{n}$</span> ל-<span>$latex \Phi_{n+1}$</span> ומכאן ש-<span>$latex \varphi\in\Phi^{\prime}$</span> כנדרש. בקיצור, ההוכחה הזו פשוטה מאוד.</p>
+
+<p>פרט, כמובן, לכך שאני עובד עליכם. האם אתם רואים היכן?</p>
+
+<p>נקודה שלא היה צריך להתייחס אליה בתחשיב הפסוקים ולכן קל מאוד לא לשים לב אליה עכשיו היא ההנחה המובלעת שלי שיש רק מספר בן מניה של פסוקים ולכן אפשר למספר אותם ואפשר לבנות סדרה של תורות ואז לאחד את כולן. אלא שמספר הפסוקים תלוי במספר הסימנים שיכולים להופיע בפסוק. כל עוד היה לנו רק מספר בן מניה של סימנים הכל היה טוב ויפה, אבל בלוגיקה מסדר ראשון המילון <span>$latex \tau$</span> <strong>לא חייב להיות בן מניה</strong>.</p>
+
+<p>אז מה הפתרון? אם להשתמש בקללה, אינדוקציה טרנספיניטית; ואם לא להשתמש בקללה - חכו לסוף הפוסט ואתייחס לזה. לעת עתה ועד לסוף הפוסט נניח שהמילון שלנו כן בן מניה. ההוכחה שנציג תהיה זהה באופיה להוכחה במקרה הכללי, אבל היא תהיה טיפה ממוקדת יותר בעניינים החשובים ולא בדרך שבה מתמודדים עם כך שקבוצת הפסוקים לא בת מניה.</p>
+
+<p>בואו נעבור כעת לאתגר האמיתי: נתונה לנו תורה עקבית <span>$latex \Phi$</span> ואנחנו רוצים להרחיב אותה לתורה עקבית <span>$latex \Phi^{\prime}$</span> ואת המילון למילון מורחב <span>$latex \tau^{\prime}$</span> כך שקיימת קבוצת עדים <span>$latex C$</span>. נזכיר מה זה אומר: זה אומר שלכל נוסחה <span>$latex \varphi\left(x\right)$</span> עם משתנה חופשי יחיד <span>$latex x$</span> קיים קבוע <span>$latex c\in C$</span> כך ש-<span>$latex \Phi^{\prime}\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)$</span>.</p>
+
+<p>הרעיון הוא כזה: את <span>$latex \tau$</span> נרחיב על ידי כך שניקח קבוצה בת מניה <span>$latex C$</span> של סימנים שלא מופיעים ב-<span>$latex \tau$</span> ונוסיף אותה לאוסף הקבועים של <span>$latex \tau$</span>. כעת נמספר את כל הנוסחאות עם משתנה חופשי יחיד, <span>$latex \varphi_{1}\left(z_{1}\right),\varphi_{2}\left(z_{2}\right),\varphi_{3}\left(z_{3}\right),\dots$</span>. אני בכוונה משתמש כאן במשתנה <span>$latex z$</span> כדי להבהיר שהאינדקס שלו הוא אינדקס שמתאים ל-<span>$latex \varphi$</span> שלו, לא לערך ה”אמיתי” שלו. מבלבל? הכוונה שלי היא לכך שייתכן ש-<span>$latex \varphi_{1}$</span> היא הנוסחה <span>$latex \forall x_{17}\left(x_{17}=f\left(x_{17}\right)\right)$</span>, כלומר כאן <span>$latex z_{1}=x_{17}$</span>. למי שעדיין לא עוקב - לא לדאוג, זה חסר כל חשיבות להמשך.</p>
+
+<p>עכשיו נעשה את הדבר הצפוי ביותר בעולם. נגדיר סדרה <span>$latex \Phi_{0},\Phi_{1},\Phi_{2},$</span> של תורות באופן הבא: <span>$latex \Phi_{0}=\Phi$</span> ולכל <span>$latex n\ge1$</span> , <span>$latex \Phi_{n+1}=\Phi_{n}\cup\left\{ \exists z_{n}\varphi_{n}\left(z_{n}\right)\to\varphi_{n}\left(c_{n}\right)\right\} $</span>, כאשר <span>$latex c_{n}$</span> הוא איבר כלשהו מתוך <span>$latex C$</span> שטרם נבחר (כלומר, אינו שייך לקבוצה <span>$latex \left\{ c_{1},c_{2},\dots,c_{n-1}\right\} $</span> - קיים כזה כי זו קבוצה סופית ואילו <span>$latex C$</span> אינסופית). לבסוף נגדיר <span>$latex \Phi^{\prime}=\bigcup_{n=0}^{\infty}\Phi_{n}$</span>. ברור לגמרי שקיבלנו תורה ש-<span>$latex C$</span> היא קבוצת עדים עבורה. השאלה היחידה היא האם <span>$latex \Phi^{\prime}$</span> עקבית. כמו קודם, מספיק להוכיח שאם <span>$latex \Phi_{n}$</span> עקבית אז <span>$latex \Phi_{n+1}$</span> עקבית, כלומר ש-<span>$latex \Phi_{n}\cup\left\{ \exists z_{n}\varphi_{n}\left(z_{n}\right)\to\varphi_{n}\left(c_{n}\right)\right\} $</span> עקבית. כאן סוף סוף נצטרך טיפונת להפשיל שרוולים.</p>
+
+<p>אם כן, הבה ונניח ש-<span>$latex \Phi_{n}\cup\left\{ \exists z_{n}\varphi_{n}\left(z_{n}\right)\to\varphi_{n}\left(c_{n}\right)\right\} $</span> אינה עקבית. באופן כללי, אם <span>$latex \Phi\cup\left\{ \psi\right\} $</span> אינה עקבית אז <span>$latex \Phi\vdash\neg\psi$</span> - זה נובע מהאקסיומות של תחשיב הפסוקים. וכבר ראינו את זה אז (ליתר דיוק אז זה היה שאם <span>$latex \Phi\cup\left\{ \neg\psi\right\} $</span> אינה עקבית את <span>$latex \Phi\vdash\psi$</span> אבל זה אותו הדבר). מכאן ש-<span>$latex \Phi_{n}\vdash\neg\left[\exists z_{n}\varphi_{n}\left(z_{n}\right)\to\varphi_{n}\left(c_{n}\right)\right]$</span>. אני טוען שנובעים מכך שני דברים: <span>$latex \Phi_{n}\vdash\exists z_{n}\varphi_{n}\left(z_{n}\right)$</span> וגם <span>$latex \Phi_{n}\vdash\neg\varphi_{n}\left(c_{n}\right)$</span>. ראינו את זה בפוסט הקודם אבל זה כל כך קריטי שאסביר שוב למה זה קורה. הטענה, באופן כללי, היא שאם <span>$latex \Phi\vdash\neg\left(\alpha\to\beta\right)$</span> אז <span>$latex \Phi\vdash\alpha$</span> וגם <span>$latex \Phi\vdash\neg\beta$</span>. על מנת להוכיח זאת אנו נעזרים בכך שתבנית הפסוק הבא היא טאוטולוגיה של תחשיב הפסוקים ולכן יכיחה מ-<span>$latex \Phi$</span>: <span>$latex \neg\left(\alpha\to\beta\right)\to\alpha$</span>, וכך גם עבור <span>$latex \neg\left(\alpha\to\beta\right)\to\neg\beta$</span>.</p>
+
+<p>כעת מגיע החלק הכי עדין בכל הוכחת משפט השלמות של גדל, לטעמי: אנו יודעים ש-<span>$latex \Phi_{n}\vdash\neg\varphi_{n}\left(c_{n}\right)$</span>. עוד אנחנו יודעים ש-<span>$latex c_{n}$</span> הוא סימן קבוע <strong>חדש</strong>, כזה שלא הופיע כלל ב-<span>$latex \Phi_{n}$</span>. פירוש הדבר הוא שאפשר לקחת את סדרת ההוכחה של <span>$latex \neg\varphi_{n}\left(c_{n}\right)$</span> ובכל מקום שבו מופיע בה <span>$latex c_{n}$</span> לכתוב במקומו <span>$latex y$</span> כאשר <span>$latex y$</span> הוא שלא מופיע בהוכחה של <span>$latex \neg\varphi_{n}\left(c_{n}\right)$</span> מ-<span>$latex \Phi_{n}$</span>. ההוכחה תמשיך להיות תקפה גם עבורו - צריך להוכיח זאת באינדוקציה, אבל אחמוק מלעשות זאת. המסקנה היא ש-<span>$latex \Phi_{n}\vdash\neg\varphi_{n}\left(y\right)$</span> ומכיוון שניתן להפעיל את Gen (כי <span>$latex y$</span> לא מופיע בהנחות שנדרשו לצורך ההוכחה), נקבל <span>$latex \Phi_{n}\vdash\forall y\neg\varphi_{n}\left(y\right)$</span>, או בסימון שונה, <span>$latex \Phi_{n}\vdash\neg\exists y\varphi_{n}\left(y\right)$</span>, והרי ראינו ש-<span>$latex \Phi_{n}\vdash\exists z_{n}\varphi_{n}\left(z_{n}\right)$</span>, כלומר קיבלנו ש-<span>$latex \Phi_{n}$</span> מוכיחה פסוק ושלילתו (עד כדי הביצוע הפורמלי של החלפת <span>$latex z_{n}$</span> ב-<span>$latex y$</span>), כלומר <span>$latex \Phi_{n}$</span> אינה עקבית. זה מסיים את ההוכחה ש-<span>$latex \Phi^{\prime}$</span> היא עקבית, ולכן מסיים את ההוכחה של משפט השלמות כולו. אבל רק כאשר <span>$latex \tau$</span> היה מילון בן מניה.</p>
+
+<p>מה קורה כאשר <span>$latex \tau$</span> לא בן מניה? כאן אין מנוס - אנחנו זקוקים לכלי מתמטי חזק יחסית - <a href="http://www.gadial.net/2012/06/04/choice_order_zorn/">אקסיומת הבחירה</a><strong></strong>. אקסיומת הבחירה, כזכור, שקולה לעקרון הסדר הטוב; הוא מאפשר לנו לסדר בסדר טוב את קבוצת כל הנוסחאות, ולהפעיל עליה אינדוקציה שדומה מאוד לאינדוקציה רגילה - <a href="http://www.gadial.net/2011/05/25/ordinals_overview/">אינדוקציה טרנספיניטית</a>. בפועל זה מתבצע כך: אם <span>$latex \alpha$</span> הוא העוצמה של המילון, ולכן של קבוצת הנוסחאות מעליו, אז מוסיפים קבוצה <span>$latex C=\left\{ c_{\beta}\ |\ \beta&lt;\alpha\right\} $</span> של קבועים, מסדרים את כל הנוסחאות <span>$latex \varphi$</span> בסידור טוב עם אותו סודר, כלומר <span>$latex \varphi_{\beta}$</span> לכל <span>$latex \beta&lt;\alpha$</span>, וכעת לכל סודר <span>$latex \beta$</span> מגדירים את <span>$latex \Phi_{\beta}$</span> באופן הבא: <span>$latex \Phi_{0}=\Phi$</span>, ו-<span>$latex \Phi_{\beta+1}=\Phi_{\beta}\cup\left\{ \exists z_{\beta}\varphi_{\beta}\left(z_{\beta}\right)\to\varphi_{\beta}\left(c_{\beta}\right)\right\} $</span> - עד כאן בדיוק כמו אינדוקציה רגילה. צריך רק לטפל גם במקרה של סודר גבולי ולהגדיר את <span>$latex \Phi_{\beta}$</span> עבורו באופן הטבעי: <span>$latex \Phi_{\beta}=\bigcup_{\gamma&lt;\beta}\Phi_{\gamma}$</span>. יש להראות שגם <span>$latex \Phi_{\beta}$</span> עקבית אם <span>$latex \Phi_{\gamma}$</span> עקבית לכל <span>$latex \gamma&lt;\beta$</span>, ופה הסופיות של הוכחה נחלצת לעזרתנו בדיוק כמו קודם - מניחים בשלילה ש-<span>$latex \Phi_{\beta}$</span> לא עקבית, מסתכלים על קבוצת כל הסודרים שמתאימים לקבוצות <span>$latex \Phi_{\gamma}$</span> שבהנחות מתוכן משתמשים בהוכחה של דבר והיפוכו מתוך <span>$latex \Phi_{\beta}$</span>, לוקחים את הסודר המקסימלי (יש כזה כי זו קבוצה סופית) ומקבלים <span>$latex \Phi_{\gamma}$</span> שאינה עקבית, בסתירה להנחת האינדוקציה. אם כן, כפי שאנו רואים, עניין המילון הלא בן מניה לא מציב קושי טכני או רעיוני חריג; אבל הוא דורש קצת יותר רקע מתמטי שחבל לדרוש אותו מקוראים שרק רוצים להכיר את משפט השלמות.</p>
+
+<p>השלמנו את הוכחת משפט השלמות, ובפני עצמו זה נראה לי כמו הישג לא רע בכלל - הנה מצאנו מערכת הוכחה שלמה ונאותה למשהו מורכב כמו לוגיקה מסדר ראשון! עם זאת, למשפט השלמות יש כמה השלכות לא טריוויאליות בכלל שאציג בפוסט הבא, ואני מקווה שלפחות עבור חלקכם (שלא מכיר את התוצאות הללו כבר) מה שאציג יתן לכם נקודת מבט חדשה על הלוגיקה המתמטית ואולי על המתמטיקה בכלל; אני יודע שזה מה שקרה לי.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/02/27/godel_completeness_proof_2/';
+      this.page.identifier = 'http://gadial.net/2013/02/27/godel_completeness_proof_2/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/02/27/godel_completeness_proof_2/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

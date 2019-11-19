@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>מודולים וחוגים נתריים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="מודולים וחוגים נתריים" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="כפי שאני אומר שוב ושוב, היעד שלי בסדרת הפוסטים על מודולים הוא משפט המבנה למודולים נוצרים סופית מעל תחום ראשי. אז בואו נדבר על התכונה הזו של “מודול נוצר סופית”. כזכור, אם $latex A\subseteq M$ היא קבוצה של איברים של $latex R$-מודול $latex M$, אני מסמן ב-$latex RA$ את קבוצת כל הצירופים הלינאריים הסופיים מהצורה $latex \sum r_{i}a_{i}$ כאשר $latex r_{i}\in R$ ו-$latex a_{i}\in A$, ואני אומר ש-$latex A$ יוצרת את $latex M$ אם $latex RA=M$. אם $latex A$ סופית אני אומר - כמה מפתיע - ש-$latex M$ נוצר סופית. במקרה הזה גם נחמד לפעמים לסמן $latex A=\left\{ a_{1},\dots,a_{n}\right\} $ ולכתוב $latex M=Ra_{1}+\dots+Ra_{n}$." />
+<meta property="og:description" content="כפי שאני אומר שוב ושוב, היעד שלי בסדרת הפוסטים על מודולים הוא משפט המבנה למודולים נוצרים סופית מעל תחום ראשי. אז בואו נדבר על התכונה הזו של “מודול נוצר סופית”. כזכור, אם $latex A\subseteq M$ היא קבוצה של איברים של $latex R$-מודול $latex M$, אני מסמן ב-$latex RA$ את קבוצת כל הצירופים הלינאריים הסופיים מהצורה $latex \sum r_{i}a_{i}$ כאשר $latex r_{i}\in R$ ו-$latex a_{i}\in A$, ואני אומר ש-$latex A$ יוצרת את $latex M$ אם $latex RA=M$. אם $latex A$ סופית אני אומר - כמה מפתיע - ש-$latex M$ נוצר סופית. במקרה הזה גם נחמד לפעמים לסמן $latex A=\left\{ a_{1},\dots,a_{n}\right\} $ ולכתוב $latex M=Ra_{1}+\dots+Ra_{n}$." />
+<link rel="canonical" href="http://gadial.net/2018/08/11/noetherian_modules_and_rings/" />
+<meta property="og:url" content="http://gadial.net/2018/08/11/noetherian_modules_and_rings/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-11T21:15:25+03:00" />
+<script type="application/ld+json">
+{"headline":"מודולים וחוגים נתריים","dateModified":"2018-08-11T21:15:25+03:00","datePublished":"2018-08-11T21:15:25+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2018/08/11/noetherian_modules_and_rings/"},"url":"http://gadial.net/2018/08/11/noetherian_modules_and_rings/","description":"כפי שאני אומר שוב ושוב, היעד שלי בסדרת הפוסטים על מודולים הוא משפט המבנה למודולים נוצרים סופית מעל תחום ראשי. אז בואו נדבר על התכונה הזו של “מודול נוצר סופית”. כזכור, אם $latex A\\subseteq M$ היא קבוצה של איברים של $latex R$-מודול $latex M$, אני מסמן ב-$latex RA$ את קבוצת כל הצירופים הלינאריים הסופיים מהצורה $latex \\sum r_{i}a_{i}$ כאשר $latex r_{i}\\in R$ ו-$latex a_{i}\\in A$, ואני אומר ש-$latex A$ יוצרת את $latex M$ אם $latex RA=M$. אם $latex A$ סופית אני אומר - כמה מפתיע - ש-$latex M$ נוצר סופית. במקרה הזה גם נחמד לפעמים לסמן $latex A=\\left\\{ a_{1},\\dots,a_{n}\\right\\} $ ולכתוב $latex M=Ra_{1}+\\dots+Ra_{n}$.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">מודולים וחוגים נתריים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-08-11T21:15:25+03:00" itemprop="datePublished">Aug 11, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>כפי שאני אומר שוב ושוב, היעד שלי בסדרת הפוסטים על מודולים הוא <strong>משפט המבנה למודולים נוצרים סופית מעל תחום ראשי</strong>. אז בואו נדבר על התכונה הזו של “מודול נוצר סופית”. כזכור, אם <span>$latex A\subseteq M$</span> היא קבוצה של איברים של <span>$latex R$</span>-מודול <span>$latex M$</span>, אני מסמן ב-<span>$latex RA$</span> את קבוצת כל הצירופים הלינאריים הסופיים מהצורה <span>$latex \sum r_{i}a_{i}$</span> כאשר <span>$latex r_{i}\in R$</span> ו-<span>$latex a_{i}\in A$</span>, ואני אומר ש-<span>$latex A$</span> <strong>יוצרת</strong> את <span>$latex M$</span> אם <span>$latex RA=M$</span>. אם <span>$latex A$</span> סופית אני אומר - כמה מפתיע - ש-<span>$latex M$</span> <strong>נוצר סופית</strong>. במקרה הזה גם נחמד לפעמים לסמן <span>$latex A=\left\{ a_{1},\dots,a_{n}\right\} $</span> ולכתוב <span>$latex M=Ra_{1}+\dots+Ra_{n}$</span>.</p>
+
+<p>כשהצגתי מודולים הראיתי על הדרך גם אנומליה - ייתכן ש-<span>$latex M$</span> הוא נוצר סופית אבל יש ל-<span>$latex M$</span> תת-מודולים שאינם נוצרים סופית. מכיוון שזו סיטואציה לא רצויה, אני רוצה שננסה להבין אילו מודולים מתחמקים ממנה. זה מוביל אותנו להגדרה של <strong>מודול נתרי</strong>, על שם אמי נתר. בנוסף לכך שנתר המציאה את המושג האבסטרקטי של מודול, היא גם הבחינה בתכונה הקריטית שמאפשרת לזהות ש-<span>$latex M$</span> יהיה בעל התכונה הרצויה הנ”ל; אפשר לנסח את התכונה שהיא מצאה בתור <strong>אין ב-<span>$latex M$</span> שרשרת עולה אינסופית</strong>, או “<span>$latex M$</span> מקיים את תנאי השרשרת העולה”. בואו נדבר פורמלית.</p>
+
+<p><strong>שרשרת</strong> של תת-מודולים של <span>$latex M$</span> היא סדרה <span>$latex M_{1},M_{2},M_{3},\dots$</span> של תת-מודולים כך ש-<span>$latex M_{1}\subseteq M_{2}\subseteq M_{3}\subseteq\dots$</span> (כל מי שמכיר קצת את הטרמינולוגיות של קבוצות סדורות כבר נתקל ב”שרשרת” בהקשר הזה). השרשרת הזו היא אינסופית - יש אינסוף תת-מודולים בסדרה <span>$latex M_{1},M_{2},M_{3},\dots$</span> - אבל ייתכן שהאינסופיות הזו היא “מדומה” - החל ממקום מסויים בשרשרת כל האיברים זהים, כלומר קיים <span>$latex N$</span> כך שלכל <span>$latex k\ge N$</span> מתקיים <span>$latex M_{k}=M_{N}$</span>. אם <strong>כל</strong> שרשרת של תת-מודולים של <span>$latex M$</span> מקיימת זאת, אז <span>$latex M$</span> נקרא נתרי.</p>
+
+<p>בשביל לקבל אינטואיציה, בואו נעבור לרגע לחוגים. כזכור, <strong>כל חוג הוא גם מודול</strong> ולכן כל ההגדרות פה עובדות גם עבור חוגים. בחוג, במקום “תת-מודול” יש לנו אידאלים, כך ש<strong>חוג נתרי</strong> הוא חוג שבו אין שרשרת עולה אינסופית של <strong>אידאלים</strong>. עכשיו, בואו נזכור שהאינטואיציה שלנו להכלה של אידאלים היא “חלוקה” - אם <span>$latex I\subseteq J$</span> אז אינטואיטיבית, <span>$latex J$</span> מחלק את <span>$latex I$</span>. כאשר <span>$latex R=\mathbb{Z}$</span> זה בדיוק מה שקורה: <span>$latex \left\langle a\right\rangle \subseteq\left\langle b\right\rangle $</span> פירושו ש-<span>$latex b|a$</span>. לכן, אפשר לחשוב על “שרשרת עולה של תת-מודולים” בתור סדרה <strong>יורדת</strong> אינסופית של מחלקים של איבר כלשהו. מה שנתר אומרת לנו הוא שאנחנו צריכים שהתהליך שבו לוקחים איבר, ואז לוקחים גורם שלו, ואז לוקחים גורם שלו, ושוב ושוב - זה חייב להסתיים. למשל, עבור השלמים, קחו את 60, ואז קחו את הגורם שלו 12, ואז את הגורם שלו 4, ואז את 2, ואז את 1 - וסיימנו; אני לא יכול לקחת מחלק של 1 ששונה ממנו. קיבלתי את השרשרת ה”אינסופית” <span>$latex \left\langle 60\right\rangle \subseteq\left\langle 12\right\rangle \subseteq\left\langle 4\right\rangle \subseteq\left\langle 2\right\rangle \subseteq\left\langle 1\right\rangle \subseteq\left\langle 1\right\rangle \subseteq\dots$</span>.</p>
+
+<p>האם כבר ראינו משהו דומה בעבר בסדרת הפוסטים הזו? ובכן, כן. <a href="https://gadial.net/2018/03/01/euclidean_domains_and_pids/">בשלב כלשהו</a> הוכחתי שכל תחום ראשי הוא תחום פריקות יחידה; האתגר המרכזי היה דווקא להראות שלכל איבר בתחום ראשי קיים פירוק לגורמים, ושם השתמשתי ברעיון דומה וב<strong>אקסיומת הבחירה</strong> שהולכת לככב גם בפוסט הזה.</p>
+
+<p>אני רוצה להוכיח עכשיו את השקילות בין <strong>שלוש</strong> תכונות שונות של מודולים, שכולן סובבות סביב אותו הדבר:</p>
+<ol>
+ 	<li><span>$latex M$</span> הוא מודול נתרי.</li>
+ 	<li>לכל קבוצה לא ריקה של תת-מודולים של <span>$latex M$</span> יש איבר מקסימלי.</li>
+ 	<li>כל תת-מודול של <span>$latex M$</span> הוא נוצר סופית.</li>
+</ol>
+<p>הגרירה מהתכונה הראשונה לשניה מזכירה בצורה חשודה את <strong>הלמה של צורן</strong>, שבתורה שקולה לאקסיומת הבחירה; הלמה של צורן אומרת שאם יש לנו קבוצה סדורה חלקית שבה לכל שרשרת יש חסם מלעיל, אז קיים בקבוצה איבר מקסימלי. ההגדרה של נתריות קצת יותר מחמירה - היא בעצם דורשת שאותו חסם מלעיל יהיה <strong>חלק מהשרשרת</strong>. זה מקטין משמעותית את הקושי של ההוכחה; בהוכחה של הלמה של צורן יש סיבוך מזעזע שנובע מכך שהשרשרת יכולה להיות אינסופית וענקית בגודלה וצריך להכניס סודרים לתמונה. כאן כל שרשרת היא <strong>סופית</strong> (אין טעם להמשיך אותה מעבר למופע הראשון של האיבר שחוזר על עצמו).</p>
+
+<p>אז איך הולכת ההוכחה ש-1 גורר את 2? נניח ש-<span>$latex A$</span> היא קבוצה לא ריקה של תת-מודולים של <span>$latex M$</span>. ניקח איזה שהוא <span>$latex M_{1}\in A$</span>. אם הוא מקסימלי, סיימנו; אחרת, קיים <span>$latex M_{2}\in A$</span> כך ש-<span>$latex M_{1}\subseteq M_{2}$</span>. אם <span>$latex M_{2}$</span> מקסימלי, סיימנו; אחרת קיים <span>$latex M_{3}\in A$</span> כך ש-<span>$latex M_{2}\subseteq M_{3}$</span> וכן הלאה. נקבל שרשרת <span>$latex M_{1}\subseteq M_{2}\subseteq\dots$</span> עם איבר אחרון <span>$latex M_{n}$</span> שהוא בהכרח איבר מקסימלי ב-<span>$latex A$</span> אחרת היה אפשר להמשיך את השרשרת גם אחריו.</p>
+
+<p>אקסיומת הבחירה נכנסת לפעולה כאן עבור הבניה של השרשרת <span>$latex M_{1}\subseteq M_{2}\subseteq\dots$</span>. בלעדיה אי אפשר להוכיח שהשרשרת הזו (שהיא בעצם פונקציה מהטבעיים החיוביים ל-<span>$latex A$</span>) קיימת. אלא שזה לא מדויק; אפשר להסתפק בגרסה חלשה יותר של אקסיומת הבחירה, שנקראת <strong>אקסיומת הבחירה התלויה</strong> (Dependent choice). זו אקסיומה שמבטיחה הרבה פחות - היא מאפשרת לנו רק לבנות סדרות בנות מניה (להבדיל מאקסיומת הבחירה הכללית שמאפשרת לבנות פונקציות שתחומן כל דבר) עבור הסיטואציה שבה האפשרויות שלנו לבחור איבר עבור מקום בסדרה <strong>תלויות</strong> בבחירה של האיבר הקודם, כמו כאן.</p>
+
+<p>כדי להראות ש-2 גורר את 3, ניקח תת-מודול <span>$latex N$</span> של <span>$latex M$</span>, ונגדיר קבוצה של כל תת-המודולים של <span>$latex M$</span> שנוצרים על ידי מספר <strong>סופי</strong> של איברים מ-<span>$latex N$</span>. על פי ההנחה של 2, בקבוצה הזו יש איבר מקסימלי, <span>$latex N^{\prime}$</span>; נסמן את הקבוצה היוצרת שלו ב-<span>$latex A=\left\{ a_{1},\dots,a_{n}\right\} $</span>. אם <span>$latex N=RA$</span> אז סיימנו, כי זה מראה ש-<span>$latex N$</span> נוצר סופית; אחרת קיים <span>$latex b\in N$</span> כך ש-<span>$latex b\notin RA$</span>. אבל אז <span>$latex RA+Rb$</span> הוא תת-מודול של <span>$latex M$</span> שהוא נוצר סופית (על ידי <span>$latex n+1$</span> איברים) ומכיל ממש את האיבר ה”מקסימלי” <span>$latex N^{\prime}$</span> וזה בלתי אפשרי, מה שמסיים את הההוכחה. שימו לב שבגרירה הזו לא נזקקנו לאקסיומת הבחירה כלל.</p>
+
+<p>בשביל להראות ש-3 גורר את 1, בואו ניקח שרשרת <span>$latex M_{1}\subseteq M_{2}\subseteq\dots$</span> ונראה שהיא מגיעה לנקודת שבת. אני אשתמש בתעלול שמאוד מזכיר את האופן שבו “מטפלים” בשרשראות כשמוכיחים דברים עם הלמה של צורן: אני אגדיר <span>$latex N=\bigcup_{n=1}^{\infty}M_{n}$</span> ואקבל תת-מודול של <span>$latex M$</span>. באופן כללי איחוד של תת-מודולים לא חייב לצאת תת-מודול, אבל בגלל תכונת ההכלה זה כן קורה כאן: אם <span>$latex a,b\in N$</span> אז <span>$latex a\in M_{k}$</span> ו-<span>$latex b\in M_{t}$</span> עבור <span>$latex k,t$</span> כלשהם; נניח בלי הגבלת הכלליות ש-<span>$latex k\le t$</span> אז <span>$latex a,b\in M_{t}$</span> ואז מכיוון ש-<span>$latex M_{t}$</span> הוא תת-מודול גם <span>$latex r_{1}a+r_{2}b\in M_{t}\subseteq M$</span> לכל צירוף לינארי של שני אלו; זה מוכיח את תכונת הסגירות הנדרשת.</p>
+
+<p>עכשיו ניתן להשתמש בתכונה 3 ולקבל קבוצת יוצרים <span>$latex A=\left\{ a_{1},\dots,a_{n}\right\} $</span> של <span>$latex N$</span>, כלומר <span>$latex N=RA$</span>. מכיוון ש-<span>$latex N$</span> הוא איחוד, לכל <span>$latex a_{i}$</span> קיים <span>$latex M_{k_{i}}$</span> כך ש-<span>$latex a_{i}\in M_{k_{i}}$</span>. מכיוון שיש רק מספר סופי של <span>$latex k_{i}$</span>-ים כאלו, יש <span>$latex k$</span> שגדול או שווה לכולם, ועבורו נקבל <span>$latex A\subseteq M_{k}$</span>. מכאן שב-<span>$latex M_{k}$</span> יש את <strong>כל</strong> האיברים של <span>$latex N$</span>, ולכן <span>$latex M_{k}$</span> הוא נקודת השבת המבוקשת. גם בכיוון הזה לא נזקקנו לאקסיומת הבחירה.</p>
+
+<p>שאלה מעניינת אחת שנשארה לנו היא האם צריך את אקסיומת הבחירה אם רוצים לעבור ישירות מ-1 אל 3. זוכרים איך הוכחתי שחוג אוקלידי גורר תחום ראשי גורר תחום פריקות יחידה? בשביל ה”תחום ראשי גורר תחום פריקות יחידה” נזקקתי לאקסיומת הבחירה, אבל יכלתי “לדלג” על הצורך הזה עבור חוגים אוקלידיים ולהשתמש בהוכחה אחרת, ישירה, שמראה שכל חוג אוקלידי הוא תחום פריקות יחידה ולא דורשת את אקסיומת הבחירה. אולי זה המצב פה?</p>
+
+<p>ובכן, לא. אני לא יכול להוכיח לכם ש<strong>חייבים</strong> את אקסיומת הבחירה התלויה פה, אבל אני לא מכיר דרך להוכיח את הגרירה הזו בלעדיה. אם אני מנסה לחשוב איך להוכיח מ-1 את 3 באופן “טבעי”, ההוכחה שאני מקבל היא זו: יהא <span>$latex N$</span> תת-מודול של <span>$latex M$</span> שאנחנו רוצים להוכיח שהוא נוצר סופית. <strong>נבחר</strong> איבר <span>$latex a_{1}\in N$</span>. אם <span>$latex Ra_{1}=N$</span> סיימנו, הידד. אחרת, <strong>נבחר</strong> <span>$latex a_{2}\notin Ra_{1}$</span> (הרי לכם בחירה <strong>תלויה</strong>) ונבדוק האם <span>$latex N=Ra_{1}+Ra_{2}$</span>, וכן הלאה. בצורה הזו נבנה שרשרת עולה של תתי-מודולים <span>$latex M_{n}=Ra_{1}+\dots+Ra_{n}$</span> שאם היא נעצרת, חייבת להיעצר כי קיבלנו שוויון ל-<span>$latex N$</span>.</p>
+
+<p>יש לי עוד דבר קטן אחד לומר על מודולים נתריים - או ליתר דיוק, על חוגים נתריים. אנחנו הולכים לדבר מעכשיו על חוגים שהם תחומים ראשיים - ואני אזכיר שזה אומר שכל אידאל נוצר בידי איבר בודד. מכיוון שכאשר חושבים על <span>$latex R$</span> בתור מודול מעל עצמו, תתי-המודולים הם אידאלים, הרי שתחום ראשי הוא דוגמא למודול שבו כל תת-מודול הוא נוצר סופית, ואפילו על ידי איבר בודד. מכאן בפרט (ללא אקסיומת הבחירה) שכל חוג שהוא תחום ראשי הוא בפרט חוג נתרי (אבל הכיוון ההפוך לא נכון; חוגים נתריים הם כלליים יותר מתחומים ראשיים).</p>
+
+<p>זה מסיים את כל הרקע שרציתי להציג; בפוסט הבא אוכל להציג את משפט המיון של מודולים נוצרים סופית מעל תחומים ראשיים. אני לא אכנס לכל פרטי ההוכחה אלא אשאיר אותם לפוסטים בהמשך, אבל את הרעיון הכללי אני מקווה להציג במלואו.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2018/08/11/noetherian_modules_and_rings/';
+      this.page.identifier = 'http://gadial.net/2018/08/11/noetherian_modules_and_rings/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2018/08/11/noetherian_modules_and_rings/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

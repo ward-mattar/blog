@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>הוכחה לנוסחת אוילר לגרפים בעזרת גרפים אוילריים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="הוכחה לנוסחת אוילר לגרפים בעזרת גרפים אוילריים" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="המטרה שלי בפוסט הזה היא לקשר שני דברים בסיסיים בתורת הגרפים שאני מאוד מחבב אישית: נוסחת אוילר לגרפים מישוריים, והמושג של גרף אוילרי. ספציפית, אני הולך לתת הוכחה לנוסחת אוילר שמתבססת על גרפים אוילריים, תוך הסתייגות הולמת שזו לא באמת הוכחה פורמלית עד הסוף ואם ממש מתעקשים אפשר גם להציג אותה בלי המושג של גרף אוילרי אבל איפה הכיף פה. באנו היום לכייף." />
+<meta property="og:description" content="המטרה שלי בפוסט הזה היא לקשר שני דברים בסיסיים בתורת הגרפים שאני מאוד מחבב אישית: נוסחת אוילר לגרפים מישוריים, והמושג של גרף אוילרי. ספציפית, אני הולך לתת הוכחה לנוסחת אוילר שמתבססת על גרפים אוילריים, תוך הסתייגות הולמת שזו לא באמת הוכחה פורמלית עד הסוף ואם ממש מתעקשים אפשר גם להציג אותה בלי המושג של גרף אוילרי אבל איפה הכיף פה. באנו היום לכייף." />
+<link rel="canonical" href="http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/" />
+<meta property="og:url" content="http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-30T13:34:33+03:00" />
+<script type="application/ld+json">
+{"headline":"הוכחה לנוסחת אוילר לגרפים בעזרת גרפים אוילריים","dateModified":"2019-04-30T13:34:33+03:00","datePublished":"2019-04-30T13:34:33+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/"},"url":"http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/","description":"המטרה שלי בפוסט הזה היא לקשר שני דברים בסיסיים בתורת הגרפים שאני מאוד מחבב אישית: נוסחת אוילר לגרפים מישוריים, והמושג של גרף אוילרי. ספציפית, אני הולך לתת הוכחה לנוסחת אוילר שמתבססת על גרפים אוילריים, תוך הסתייגות הולמת שזו לא באמת הוכחה פורמלית עד הסוף ואם ממש מתעקשים אפשר גם להציג אותה בלי המושג של גרף אוילרי אבל איפה הכיף פה. באנו היום לכייף.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">הוכחה לנוסחת אוילר לגרפים בעזרת גרפים אוילריים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-04-30T13:34:33+03:00" itemprop="datePublished">Apr 30, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>המטרה שלי בפוסט הזה היא לקשר שני דברים בסיסיים בתורת הגרפים שאני מאוד מחבב אישית: <strong>נוסחת אוילר</strong> לגרפים מישוריים, והמושג של <strong>גרף אוילרי</strong>. ספציפית, אני הולך לתת הוכחה לנוסחת אוילר שמתבססת על גרפים אוילריים, תוך הסתייגות הולמת שזו לא באמת הוכחה פורמלית עד הסוף ואם ממש מתעקשים אפשר גם להציג אותה בלי המושג של גרף אוילרי אבל איפה הכיף פה. באנו היום לכייף.</p>
+
+<p>כפי שאפשר לנחש, הפוסט הזה לא נועד לעמוד בפני עצמו והוא מניח שאתם מכירים את נוסחת אוילר לגרפים מישוריים וגרפים אוילריים. יש לי <a href="https://gadial.net/2010/01/31/euler_formula_and_platonic_solids/">כאן</a> פוסט על נוסחת אוילר <a href="https://gadial.net/2008/05/06/eulerian_graphs/">וכאן</a> פוסט על גרפים אוילריים, אבל אני כן אזכיר את מה שצריך לדעת. חוץ מגרפים. גרפים אני באמת הולך להניח שאתם יודעים וזהו.</p>
+
+<p>נוסחת אוילר מדברת על גרפים <strong>מישוריים</strong>: גרפים שאפשר לצייר במישור בלי ששתי קשתות יחתכו זו את זו (הצמתים הם נקודות והקשתות הן קווים שמחברים את הנקודות; לאו דווקא קווים ישרים למרות שאפשר להראות שכל גרף מישורי אפשר לצייר עם קווים ישרים שכאלה). בשביל לדבר על נוסחת אוילר צריך גם לדרוש שהגרף המישורי יהיה <strong>קשיר</strong> - שיש מסלול שמחבר כל שני צמתים בו.</p>
+
+<p><strong>גרף אוילרי</strong> הוא גרף שאפשר לצייר מבלי להרים את העפרון מהדף - כזה שיש בו מסלול שעובר דרך כל הקשתות בדיוק פעם אחת. הנה דוגמא לגרף שיש בו גם את זה וגם את זה:</p>
+
+<p><img class="alignnone size-full wp-image-3771" src="/assets/img/2019/04/pasted1.png" alt="" width="394" height="580" /></p>
+
+<p>הגרף הזה הוא בעצם ציור הבית מחידת ה”האם אפשר לצייר בית עם איקס בתוכו מבלי להרים את העפרון מהדף” למעט זה שבמקום להשלים את האיקס בתוכו, הקשת שמחברת את הפינה הימנית-תחתונה והפינה השמאלית-עליונה עוברת <strong>מחוץ</strong> לבית כדי לא לחתוך את הקשת שעוברת בתוך הבית. זה מראה שהגרף הזה הוא <strong>מישורי</strong>, בנוסף לכך שהוא אוילרי. כפי שאפשר לנחש, הוא הולך לככב בהמשך הפוסט שלנו.</p>
+
+<p>כשיש לנו ציור של גרף מישורי אפשר לדבר לא רק על הצמתים והקשתות שלו אלא גם על <strong>הפאות</strong> שלו - השטחים הסגורים שנתחמים על ידי הקשתות (המילה “פאות” מגיעה מההקשר המקורי של נוסחת אוילר, עבור פאונים; לא אדבר על כך בפוסט הזה):</p>
+
+<p><img class="alignnone size-full wp-image-3772" src="/assets/img/2019/04/pasted2.png" alt="" width="405" height="570" /></p>
+
+<p>בתמונה הנוכחית צבעתי את הפאות בצבעים עליזים - ורוד, ירוק, כחול, צהוב ולבן. רגע, איפה הלבן כאן? ובכן, גם השטח ש”מחוץ” לגרף נחשב לאחת מהפאות שלו, “הפאה החיצונית”. כלומר, הצביעה העליזה שלי מראה לנו שלגרף יש חמש פאות. בנוסף לכך יש לו חמישה צמתים (הנקודות הכחולות) ויש לו שמונה קשתות (הקווים השחורים העבים שמחברים צמתים). אם נסמן את מספר הצמתים ב-<span>$latex V$</span>, את מספר הקשתות ב-<span>$latex E$</span> ואת מספר הפאות ב-<span>$latex F$</span> נגלה שמתקיים</p>
+
+<p><span>$latex V-E+F=2$</span></p>
+
+<p>והקשר הזה בין מספר הצמתים, הקשתות והפאות מתקיים <strong>תמיד</strong>, בכל גרף מישורי קשיר; זו נוסחת אוילר, שהיא ללא ספק אחת מהנוסחאות החביבות עלי במתמטיקה. המטרה שלי בפוסט הזה היא להוכיח שהיא אכן מתקיימת תמיד, בכל גרף מישורי קשיר (חייבים קשירות כי אחרת אפשר להגדיל את מספר הצמתים <span>$latex V$</span> בלי להשפיע על מספר הקשתות או הפאות, סתם על ידי הוספת צמתים מבודדים), אבל <strong>הוכחה</strong> היא מילה די גדולה בהקשר הזה - שנתפשר על “המחשה יפה”?</p>
+
+<p>רגע, למה בעצם אני לא יכול לתת הוכחה של ממש? ובכן, כל המושג של “גרף מישורי” הוא די קשה מבחינה פורמלית. מה זה אומר “לצייר את הגרף במישור כך שאין חיתוכים”? צריך לערב כאן עולם מושגי חדש לגמרי - המישור <span>$latex \mathbb{R}^{2}$</span> ומה זה אומר “לצייר” בו משהו - זה אומר ליצור עקומות; עקומה היא פונקציה רציפה <span>$latex f:\left[0,1\right]\to\mathbb{R}^{2}$</span>, ועכשיו צריך לדבר על חיתוך של עקומות, ועל מה זו בעצם פאה - רכיב קשירות נפרד של המישור כשמסירים ממנו את האיזורים שמכוסים על ידי עקומות? כל הדברים הללו מובילים אותנו אל משפט מפלצתי שנקרא <strong>משפט ז'ורדן </strong>ואומר (בנפנוף ידיים) שאם מציירים עיגול במישור אז הוא מפרק את המישור ל”בפנים” וה”בחוץ” של העיגול. זה משפט קשה עם הוכחה קשה. אז לא, אני לא אכנס לפורמליזם הזה פה ואפילו לא אנסה - בדיוק בשביל זה הבלוג נקרא “לא מדויק”.</p>
+
+<p>הרעיון ב”הוכחה” שלי הוא פשוט ויפה וניתן לתיאור בפסקה אחת לפני שנדגים אותו בצורה מפורטת. אנחנו נצייר את הגרף המישורי שלנו מבלי להרים את העט מהדף, ונעקוב כל הזמן אחרי מספר הפאות הנוכחי. כל “צעד” שלנו כולל ציור של קשת אחת, ולכן אחרי <span>$latex E$</span> צעדים הציור יושלם. כשאנחנו רק מתחילים והציור ריק, יש לנו רק פאה אחת - הפאה החיצונית. מתי נוצרות פאות חדשות? בדיוק בצעדים שמחזירים אותנו לצומת שבה כבר היינו. כמה צעדים כאלו יש? אם יש <span>$latex E$</span> צעדים בסך הכל ולכן אנחנו מבקרים בסך הכל ב-<span>$latex E+1$</span> צמתים במהלך הציור - הפלוס אחד מגיע מכך שאנחנו נמצאים בצומת כלשהי כבר בהתחלה, עוד לפני שציירנו קשת אחת. יש בסך הכל <span>$latex V$</span> צמתים ולכן אנחנו מבקרים ב-<span>$latex E+1-V$</span> צמתים יותר מפעם אחת. לכן מספר הפאות <strong>שמתווספות</strong> אל האחת הראשונית יהיה <span>$latex E+1-V$</span>, כלומר <span>$latex F-1=E+1-V$</span>, ואחרי העברת אגפים נקבל <span>$latex V-E+F=2$</span>.</p>
+
+<p>איבדתן אותי? לא לדאוג, מייד תבוא דוגמא. לא איבדתן אותי אבל מעצבן אתכן שה”הוכחה” שלי עובדת רק אם הגרף המישורי שלי הוא גם במקרה על הדרך באופן ממוזל גרף אוילרי אבל בבירור רוב הגרפים המישוריים אינם כאלו? אז אני אגלה כבר עכשיו שזה פתיר בקלות רבה - קחו גרף מישורי כלשהו ופשוט שכפלו כל קשת פעמיים. גם לזה נחזור עם תמונות בהמשך.</p>
+
+<p>בואו נעקוב אחרי תהליך הציור של התמונה לעיל, עם ספירה של מספר הקשתות והפאות בכל רגע נתון. כל חמשת הצמתים יופיעו כל הזמן - כלומר, <span>$latex V=5$</span> הולך להיות קבוע. בהתחלה יש רק את הצמתים, ודמיינו שאנחנו עומדים בצומת הימני-תחתון ומחכים בהתרגשות לתחילת המסע שלנו בגרף:</p>
+
+<p><img class="alignnone size-full wp-image-3764" src="/assets/img/2019/04/pasted3.png" alt="" width="262" height="458" /></p>
+
+<p>כאן <span>$latex E=0$</span> ו-<span>$latex F=1$</span> (כי הפאה החיצונית, הלבנה).</p>
+
+<p>עכשיו נבצע את הצעד הראשון:</p>
+
+<p><img class="alignnone size-full wp-image-3765" src="/assets/img/2019/04/pasted4.png" alt="" width="250" height="497" /></p>
+
+<p>ועכשיו <span>$latex E=1$</span> ו-<span>$latex F=1$</span> נשאר כמו קודם - מכיוון שהקשת הגיעה לצומת שטרם ביקרנו בו, לא יצרנו פאה חדשה. אנחנו רואים שלבקר בצומת שטרם ביקרנו בו זה משעמם, אז בואו נבצע את כל יתר הצעדים הנדרשים כדי שנבקר <strong>בכל</strong> הצמתים; מרגע זה והלאה, כל צעד נוסף יצור פאה חדשה:</p>
+
+<p><img class="alignnone size-full wp-image-3766" src="/assets/img/2019/04/pasted5.png" alt="" width="236" height="455" /></p>
+
+<p>כרגע <span>$latex E=4$</span> (כמספר הצמתים פחות אחד - לא מקרי, כמובן, הקשר <span>$latex E=V-1$</span> מתקיים בכל <strong>עץ</strong>) ו-<span>$latex F=1$</span>. כלומר, כבר כרגע מתקיימת הנוסחה <span>$latex V-E+F=2$</span>, וזה לא מפתיע כי הגרף שקיבלנו כרגע הוא גם מישורי וגם <strong>קשיר</strong> (זוכרות? קשירות הייתה הכרחית בשביל נוסחת אוילר, בדיוק בגלל שצמתים מבודדים כמו בתמונות הקודמות לא משפיעים על <span>$latex E$</span> ועל <span>$latex F$</span> ואפשר להוסיף כמה מהם שרוצים). מה שיקרה מכאן ואילך הוא שכל צעד <strong>ישמר</strong> את הקשר הזה, <span>$latex V-E+F=2$</span>; כי כל צעד גם יוסיף קשת אחת (יגדיל את <span>$latex E$</span> ב-1) וגם יצור פאה חדשה (יגדיל את <span>$latex F$</span> ב-1). בואו נראה את זה קורה בפעם הראשונה:</p>
+
+<p><img class="alignnone size-full wp-image-3767" src="/assets/img/2019/04/pasted6.png" alt="" width="243" height="448" /></p>
+
+<p>מה שנחמד פה הוא שהפאה שיצרנו לא מופיעה בתמונה הסופית, פשוט כי הצעד הבא מפרק אותה לשתי פאות:</p>
+
+<p><img class="alignnone size-full wp-image-3768" src="/assets/img/2019/04/pasted7.png" alt="" width="220" height="449" /></p>
+
+<p>ונראה לי שהרעיון ברור אז אני אצייר את שתי הקשתות הבאות ביחד:</p>
+
+<p><img class="alignnone size-full wp-image-3769" src="/assets/img/2019/04/pasted8.png" alt="" width="366" height="553" /></p>
+
+<p>זה מסיים את ה”הוכחה”, אבל עדיין צריך להתייחס למקרה שבו הגרף המישורי שלנו איננו אוילרי, מה שמחזיר אותנו לשאלה בסיסית קצת יותר - מתי גרף הוא <strong>כן</strong> אוילרי? כאן נדרשים שני דברים. ראשית, שהגרף יהיה קשיר; אבל אנחנו מניחים שהגרף המישורי שלנו קשיר, כך שזה לא רלוונטי. שנית, צריך ש<strong>הדרגה</strong> של כל צומת תהיה זוגית, פרט אולי לשני צמתים בדיוק. דרגה של צומת היא מספר הקשתות שנוגעות בו; מכיוון שבמסלול אוילרי בכל פעם שבה אנחנו נכנסים לצומת ו”שורפים” את הקשת שאיתה נכנסנו אנחנו גם יוצאים ממנו ו”שורפים” את הקשת שאיתה יצאנו, קל לראות שמספר הקשתות שמתאימות לכל צומת חייב להיות זוגי למעט בצמתי ההתחלה והסיום. האתגר הגדול יותר הוא להראות שזה גם <strong>תנאי מספיק</strong> לכך שיהיה מסלול אוילרי בגרף, אבל אני לא אעשה את זה כאן הפעם אלא רק אשתמש בזה.</p>
+
+<p>בגלל שהקריטריון הזה לאוילריות של גרף הוא כל כך פשוט, אנחנו יכולים לנצל אותו ולהפוך גרף לאוילרי בקלי קלות - פשוט נכפיל את מספר הקשתות. הנה דוגמא:</p>
+
+<p><img class="alignnone size-full wp-image-3770" src="/assets/img/2019/04/pasted9.png" alt="" width="876" height="366" /></p>
+
+<p>הגרף הימני הוא הגרף המפורסם של “בעיית הגשרים של קניגסברג” שאוילר פתר. כל הצמתים שם מדרגה אי זוגית ולכן הגרף אינו אוילרי, למרות שהוא בבירור מישורי ובבירור מקיים את נוסחת אוילר (<span>$latex V=4$</span> ו-<span>$latex E=7$</span> ו-<span>$latex F=5$</span>). הגרף השמאלי הוא מה שקורה לגרף הימני כשאני לוקח כל קשת ומפצל אותה לשתיים. ההשפעה של הפיצול הזה על הגרף היא זו:</p>
+<ol>
+ 	<li>מספר הקשתות החדש בגרף הוא פי 2 מאשר בגרף הישן. אסמן זאת <span>$latex E^{\prime}=2E$</span>.</li>
+ 	<li>מספר הצמתים בגרף החדש זהה למספר הצמתים בגרף הישן. אסמן זאת <span>$latex V^{\prime}=V$</span>.</li>
+ 	<li>עבור כל קשת בגרף המקורי יצרנו פאה חדשה, של השטח ש"כלוא" בין שתי הקשתות החדשות שהחליפו את הקשת הזו - אני מסמן את הפאות החדשות בירוק. כלומר, <span>$latex F^{\prime}=F+E$</span>.</li>
+ 	<li>הגרף החדש עכשיו אוילרי ולכן מקיים את נוסחת אוילר: <span>$latex V^{\prime}-E^{\prime}+F^{\prime}=2$</span>.</li>
+</ol>
+<p>כל מה שנשאר לעשות הוא להציב במשוואה של 4 את המשוואות של 1-3. נקבל:</p>
+
+<p><span>$latex V-2E+\left(F+E\right)=2$</span></p>
+
+<p>כלומר <span>$latex V-E+F=2$</span>, שזה מה שרצינו להוכיח, וסיימנו.</p>
+
+<p>כפי שאמרתי קודם, ההוכחה הזו לא באמת נותנת נקודת מבט שונה מהותית על הנושא ביחס להוכחות הסטנדרטיות יותר שמשתמשות באינדוקציה וכדומה. סוג הטיעונים כמעט זהה. ההבדל העיקרי הוא שההוכחה הזו, לתחושתי, פשוט כיפית יותר.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/';
+      this.page.identifier = 'http://gadial.net/2019/04/30/euler_formula_proof_with_eulerian_graphs/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2019/04/30/euler_formula_proof_with_eulerian_graphs/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

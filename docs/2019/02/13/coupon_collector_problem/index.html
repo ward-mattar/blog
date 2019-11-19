@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>בעיית איסוף הקופונים | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="בעיית איסוף הקופונים" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="הנה לכם סיפור על איך בעיות מתמטיות צצות מעצמן. זה לא מכבר יצא לאוויר העולם משחק הוידאו Super Smash Bros. Ultimate שהוא נצר לשושלת ארוכה ומפוארת של משחקי מכות שמאחדים דמויות משלל משחקים בלתי קשורים בעליל על מנת שירביצו אחד לשני באווירה של כאוס מוחלט בשלל זירות שונות ומשונות שנלקחות גם כן משלל משחקים בלתי קשורים בעליל. המשחק הנוכחי החליט לקחת את המופרכות הזו לשיאים חדשים על ידי כך שיאגד את כל הדמויות והזירות מכל המשחקים שיצאו עד כה בסדרה, ויוסיף עוד. כתוצאה מכך יש לא פחות מ-103 זירות במשחק. מסך בחירת הזירות נראה כך:" />
+<meta property="og:description" content="הנה לכם סיפור על איך בעיות מתמטיות צצות מעצמן. זה לא מכבר יצא לאוויר העולם משחק הוידאו Super Smash Bros. Ultimate שהוא נצר לשושלת ארוכה ומפוארת של משחקי מכות שמאחדים דמויות משלל משחקים בלתי קשורים בעליל על מנת שירביצו אחד לשני באווירה של כאוס מוחלט בשלל זירות שונות ומשונות שנלקחות גם כן משלל משחקים בלתי קשורים בעליל. המשחק הנוכחי החליט לקחת את המופרכות הזו לשיאים חדשים על ידי כך שיאגד את כל הדמויות והזירות מכל המשחקים שיצאו עד כה בסדרה, ויוסיף עוד. כתוצאה מכך יש לא פחות מ-103 זירות במשחק. מסך בחירת הזירות נראה כך:" />
+<link rel="canonical" href="http://gadial.net/2019/02/13/coupon_collector_problem/" />
+<meta property="og:url" content="http://gadial.net/2019/02/13/coupon_collector_problem/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-13T16:34:18+02:00" />
+<script type="application/ld+json">
+{"headline":"בעיית איסוף הקופונים","dateModified":"2019-02-13T16:34:18+02:00","datePublished":"2019-02-13T16:34:18+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2019/02/13/coupon_collector_problem/"},"url":"http://gadial.net/2019/02/13/coupon_collector_problem/","description":"הנה לכם סיפור על איך בעיות מתמטיות צצות מעצמן. זה לא מכבר יצא לאוויר העולם משחק הוידאו Super Smash Bros. Ultimate שהוא נצר לשושלת ארוכה ומפוארת של משחקי מכות שמאחדים דמויות משלל משחקים בלתי קשורים בעליל על מנת שירביצו אחד לשני באווירה של כאוס מוחלט בשלל זירות שונות ומשונות שנלקחות גם כן משלל משחקים בלתי קשורים בעליל. המשחק הנוכחי החליט לקחת את המופרכות הזו לשיאים חדשים על ידי כך שיאגד את כל הדמויות והזירות מכל המשחקים שיצאו עד כה בסדרה, ויוסיף עוד. כתוצאה מכך יש לא פחות מ-103 זירות במשחק. מסך בחירת הזירות נראה כך:","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list.html" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">בעיית איסוף הקופונים</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-02-13T16:34:18+02:00" itemprop="datePublished">Feb 13, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>הנה לכם סיפור על איך בעיות מתמטיות צצות מעצמן. זה לא מכבר יצא לאוויר העולם משחק הוידאו Super Smash Bros. Ultimate שהוא נצר לשושלת ארוכה ומפוארת של משחקי מכות שמאחדים דמויות משלל משחקים בלתי קשורים בעליל על מנת שירביצו אחד לשני באווירה של כאוס מוחלט בשלל זירות שונות ומשונות שנלקחות גם כן משלל משחקים בלתי קשורים בעליל. המשחק הנוכחי החליט לקחת את המופרכות הזו לשיאים חדשים על ידי כך שיאגד את כל הדמויות והזירות מכל המשחקים שיצאו עד כה בסדרה, ויוסיף עוד. כתוצאה מכך יש לא פחות מ-103 זירות במשחק. מסך בחירת הזירות נראה כך:</p>
+
+<p><img class="alignnone size-full wp-image-3748" src="/assets/img/2019/02/gw44pdhlx3i11.png" alt="" width="1600" height="900" /></p>
+
+<p>עם כל כך הרבה זירות, למי יש זמן לבחור בכלל? אני תמיד בוחר בסימן השאלה למעלה שבוחר אחת מ-103 הזירות באקראי, כך שיש הסתברות שווה לכל אחת מהזירות. והנה שמתי לב שגם עכשיו, אחרי חודשיים של משחק, עדיין קורה שאני משחק בזירה שאני לא זוכר שראיתי קודם. זה העלה אצלי את השאלה הבאה: תוך כמה סיבובים של המשחק אפשר לראות את כל הזירות?</p>
+
+<p>ובכן, זו שאלה מוכרת בתורת ההסתברות שנקראת “בעיית איסוף הקופונים” (שם שלא הכרתי עד עכשיו). הרעיון אצל איסוף הקופונים דומה: נניח שחברת דגני בוקר יוצאת במבצע שבו בכל אריזה שלה יש קופון שנבחר באקראי מבין כמה אפשריים, ומי שאוסף את כל הקופונים זוכה בפרס - כמה אריזות דגנים צריך לקנות? כמובן, בניסוח הזה של הבעיה צריך לחדד את העובדה שלכל קופון יש הסתברות שווה להופיע; אם זה לא המצב, אז הניתוח המתמטי מסובך בהרבה, מעבר למה שאני רוצה לכסות בפוסט הזה.</p>
+
+<p>בואו נתמודד עם בעיית הזירות האקראיות שלי; בשלב הראשון האתגר יהיה בכלל לנסח את השאלה בצורה נכונה. מה שברור מייד הוא שצריך <strong>לפחות</strong> 103 סיבובים של המשחק כדי לראות את כל הזירות. אם הייתי עובר על הזירות באופן שיטתי, זה גם כל מה שהייתי צריך; אבל אני מפקיד את השליטה בידי הגורל העיוור שמגריל לי זירה בכל פעם, ולכן בהחלט ייתכן שלא משנה כמה משחקים אשחק, <strong>תהיה זירה שלא אראה אף פעם</strong>. היא פשוט אף פעם לא תעלה בגורל. ההסתברות לכך היא אפסית ובהמשך נראה שהיא לא באמת משפיעה על החישוב, אבל לא חייבים ללכת לקיצוניות: נניח שב-102 הסיבובים הראשונים באמת ראיתי זירה חדשה בכל פעם, ואז במשחק ה-103 פתאום הוגרלה זירה שכבר ראיתי. זה כבר אומר שבמקרה הזה, אזדקק לפחות ל-104 סיבובים. אז מספר <strong>מדויק</strong> לא הולך לענות לשאלה שלי, כי מספר הסיבובים תלוי במזל שלנו. השאלה המדויקת יותר היא מה יהיה <strong>מספר הסיבובים הממוצע</strong>.</p>
+
+<p>למה אני מתכוון בממוצע? נניח שניתן ל-10,000 שחקנים לשחק במשחק ולספר לנו כמה סיבובים חלפו עד שהם ראו את כל הזירות, ואז ניקח את הממוצע החשבוני של התוצאות הללו - כלומר, נחבר את כולן ונחלק במספר השחקנים, שהוא 10,000: מה המספר שנקבל אז? על פי רוב נקבל מספרים שהם כמעט זהים; <strong>חוק המספרים הגדולים</strong> בהסתברות מבטיח לנו את זה.</p>
+
+<p>כמובן, אין טעם באמת לתת לשחקנים לשחק; אפשר לעשות משהו מהיר יותר - סימולציה במחשב. אז הנה קוד בשפת פייתון שעושה בדיוק את זה:</p>
+
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">experiment</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+    <span class="n">visited_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">rounds</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">visited_count</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">rounds</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="n">visited_count</span> <span class="o">+=</span> <span class="mi">1</span>           
+    <span class="k">return</span> <span class="n">rounds</span>
+
+<span class="n">tries</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">103</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tries</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">experiment</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">total</span> <span class="o">/</span> <span class="n">tries</span><span class="p">)</span></code></pre></figure>
+
+</div>
+
+<p>כשהרצתי את הקוד לקח לו רגע לסיים ובסוף קיבלתי את התוצאה <span>$latex 535.3524$</span>. בהרצה נוספת קיבלתי <span>$latex 540.0647$</span>. זה כבר מעורר את החשד ש-10,000 זה לא מספיק ואולי עדיף 100,000 הרצות בשביל תוצאה מדויקת יותר. אז הרצתי גם 100,000 פעמים, זה לקח יותר זמן וקיבלתי <span>$latex 537.58746$</span>. האם אפשר יותר מדויק, יותר מהר? ובכן, כן! אם נכניס לתמונה את תורת ההסתברות. כמו כן, כדי לפשט לעצמנו קצת את החיים נפסיק לדבר על המספר 103 דווקא ונדבר על מספר <span>$latex N$</span> כללי.</p>
+
+<p>יש לי <a href="https://gadial.net/2010/07/29/probability_intro/">פוסטים מפורטים יותר</a> בבלוג על תורת ההסתברות כך שלא אחזור על כל הפרטים כעת, אבל הנה הרעיון. כשאנחנו באים למדל משהו באמצעות תורת ההסתברות אנחנו קודם כל מגדירים <strong>מרחב מדגם</strong> שכולל את כל התוצאות האפשריות של ההגרלה שאנחנו מבצעים. במקרה הנוכחי אפשר לחשוב על הסיטואציה כאילו אנחנו מגרילים סדרה של זירות (שיכולה להיות סופית או אינסופית), כך שכל סדרה מסתיימת אחרי שכל זירה הופיעה לפחות פעם אחת. סדרה אינסופית מצביעה על כישלון - שיש זירה אחת לפחות שלא נראתה אף פעם. אפשר להראות שההסתברות של סדרה אינסופית שכזו היא אפס; זה לא אומר שאין סיכוי שהיא תופיע, רק שהסיכוי הזה <strong>זניח</strong> (הסבר מלא יותר יצטרך להיכנס לעובי הקורה הטכני של מרחבי הסתברות רציפים).</p>
+
+<p>עכשיו אפשר להגדיר על מרחב ההסתברות שלנו <strong>משתנה מקרי</strong>. משתנה מקרי זו פונקציה שלוקחת תוצאה ממרחב המדגם ומחזירה ערך מספרי כלשהו שהיא מסמלת - במקרה הזה, אפשר להתאים לכל סדרה פשוט את האורך שלה. נסמן את המשתנה המקרי הזה ב-<span>$latex X$</span>. עכשיו אפשר לשאול שאלה כמו “מה ההסתברות שאם נגריל סדרה כלשהי, הערך של <span>$latex X$</span> יהיה לפחות 17?”. ואפשר גם לשאול מה יהיה הערך <strong>הממוצע</strong> של <span>$latex X$</span>. בתורת ההסתברות קוראים לערך ממוצע כזה <strong>התוחלת</strong> של <span>$latex X$</span>, מסמנים אותו ב-<span>$latex E\left[X\right]$</span> והוא מוגדר ככה: <span>$latex E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right)$</span>, כלומר - זה סכום משוקלל של כל הערכים <span>$latex a$</span> שהמשתנה המקרי עשוי להחזיר, כשהמשקל של כל <span>$latex a$</span> כזה הוא ההסתברות ש-<span>$latex X$</span> יחזיר אותו.</p>
+
+<p>מה שאני רוצה לעשות מכאן והלאה הוא לחשב את <span>$latex E\left[X\right]$</span> עבור בעיית הקופונים שלנו. לצורך כך אני אעזר בתכונה מועילה במיוחד: <strong>לינאריות התוחלת</strong>. מה שלינאריות התוחלת אומרת הוא פשוט מאוד: <span>$latex E\left[X+Y\right]=E\left[X\right]+E\left[Y\right]$</span>. כלומר: אם יש לנו שני משתנים מקריים, <span>$latex X,Y$</span>, ואנחנו בונים משתנה מקרי חדש שהוא סכום של שניהם (כלומר: לכל איבר במרחב המדגם הוא מפעיל את <span>$latex X,Y$</span> על האיבר הזה, מקבל תוצאות ומחבר אותן) אז התוחלת של המשתנה החדש תהיה הסכום של התוחלות של המשתנים. ההוכחה של לינאריות התוחלת לא קשה, אבל לא אציג אותה כאן.</p>
+
+<p>איך זה עוזר לנו? ראשית, אם זה עובד לשני משתנים, זה עובד לכל מספר סופי של משתנים: אם <span>$latex X=X_{1}+X_{2}+\dots+X_{N}$</span> אז <span>$latex E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]$</span>. שנית, אני טוען שאת ה-<span>$latex X$</span> שלנו של בעיית הקופונים אכן אפשר להציג בתור סכום שכזה. הרעיון? המשתנה <span>$latex X_{i}$</span> סופר את מספר הסיבובים שנדרשו כדי להעלות את מספר הזירות שראינו עד כה מ-<span>$latex i-1$</span> אל <span>$latex i$</span>.</p>
+
+<p>בצורה הזו ברור ש-<span>$latex X$</span> הוא אכן הסכום המבוקש: <span>$latex X$</span> הוא מספר הסיבובים הכולל שנדרש כדי להעלות את מספר הזירות שראינו מ-0 אל <span>$latex N$</span>; זה שווה לזמן שנדרש כדי לעלות מ-0 אל 1, ועוד הזמן שנדרש לעלות מ-1 אל 2 וכן הלאה עד אשר הגענו מ-<span>$latex N-1$</span> אל <span>$latex N$</span>.</p>
+
+<p>כל מה שנותר לעשות הוא לחשב את <span>$latex E\left[X_{i}\right]$</span> - תוחלת הזמן שנדרשת כדי להעלות את מספר הזירות שראינו כבר מ-<span>$latex i-1$</span> אל <span>$latex i$</span>. אלא שאת זה קל לעשות כי <span>$latex X_{i}$</span> הוא <strong>משתנה גאומטרי</strong>, וזה מושג מוכר ואהוב מתורת ההסתברות. משתנה גאומטרי מתעסק בשאלה “אם מטילים שוב ושוב את אותה הקוביה, כמה זמן יעבור עד שנקבל 1”? באופן כללי יותר, משתנה גאומטרי מדבר על הסיטואציה שבה יש ניסוי עם הסתברות <span>$latex p$</span> להצליח, ואנחנו חוזרים עליו שוב ושוב עד אשר הוא מצליח וסופרים כמה נסיונות נדרשו לנו.</p>
+
+<p>את התוחלת של הדבר הזה אפשר לחשב בעזרת הנוסחה <span>$latex E\left[X\right]=\sum_{a}a\cdot\text{P}\left(X=a\right)$</span> והיכרות כלשהי עם סכומים אינסופיים. ההוכחה תהיה קצת טכנית ואפשר לדלג עליה מבלי לפגוע בהמשך הפוסט.</p>
+
+<p><span>$latex \text{P}\left(X=1\right)$</span> הוא <span>$latex p$</span> (ההסתברות שנצליח בניסוי הראשון).</p>
+
+<p><span>$latex \text{P}\left(X=2\right)$</span> הוא <span>$latex \left(1-p\right)p$</span> (ההסתברות <strong>שניכשל</strong> בניסוי הראשון - זה ה-<span>$latex \left(1-p\right)$</span> - כפול ההסתברות שנצליח בניסוי השני).</p>
+
+<p><span>$latex \text{P}\left(X=3\right)$</span> הוא <span>$latex \left(1-p\right)^{2}p$</span> ומכאן כבר אפשר לראות את הכיוון הכללי:</p>
+
+<p><span>$latex E\left[X\right]=\sum_{n=1}^{\infty}n\text{P}\left[X=n\right]=\sum_{n=1}^{\infty}n\cdot p\cdot\left(1-p\right)^{n-1}=p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}$</span></p>
+
+<p>וכעת מגיע להטוט לא טריוויאלי. בואו נכתוב שוב את הטור שיש לנו, אבל עם סימונים קצת שונים:</p>
+
+<p><span>$latex \sum_{n=1}^{\infty}nx^{n-1}$</span></p>
+
+<p>אלו מכם שמכירים חדו”א אולי מזהים שהאיבר שנמצא בתוך הטור נראה כמו <strong>נגזרת</strong> לפי <span>$latex x$</span> של פונקציה. כלומר, אפשר לכתוב</p>
+
+<p><span>$latex \sum_{n=1}^{\infty}nx^{n-1}=\sum_{n=1}^{\infty}\left(x^{n}\right)^{\prime}=\left(\sum_{n=1}^{\infty}x^{n}\right)^{\prime}$</span></p>
+
+<p>המעבר האחרון, שבו “הוצאתי את הנגזרת החוצה מהסכום” הוא לא טריוויאלי ודורש הצדקות בחדו”א - אבל במקרה הזה, זה עובד. עכשיו מה שקיבלנו בתוך הסכום הוא <strong>טור גאומטרי</strong> בסיסי שאנחנו יודעים את הנוסחה שלו:</p>
+
+<p><span>$latex \sum_{n=1}^{\infty}x^{n}=\frac{x}{1-x}$</span></p>
+
+<p>הנוסחה הזו עובדת רק עבור <span>$latex \left|x\right|&lt;1$</span>, אבל מכיוון שנציב <span>$latex x=1-p$</span> ואנחנו מניחים ש-<span>$latex p&gt;0$</span> זו לא בעיה.</p>
+
+<p>לבסוף, צריך עדיין <strong>לגזור</strong> את <span>$latex \frac{x}{1-x}$</span>. הנגזרת יוצאת <span>$latex \frac{\left(1-x\right)+x}{\left(1-x\right)^{2}}=\frac{1}{\left(1-x\right)^{2}}$</span>, וכשנציב <span>$latex x=1-p$</span> חזרה נקבל</p>
+
+<p><span>$latex p\sum_{n=1}^{\infty}n\left(1-p\right)^{n-1}=\frac{p}{\left(1-\left(1-p\right)\right)^{2}}=\frac{p}{p^{2}}=\frac{1}{p}$</span></p>
+
+<p>וכעת אפשר לחזור אל בעיית הקופונים שלנו. ראינו כבר ש-<span>$latex E\left[X\right]=E\left[X_{1}\right]+E\left[X_{2}\right]+\dots+E\left[X_{N}\right]$</span>. נשאר רק להבין - לכל <span>$latex X_{i}$</span>, מהו <span>$latex p$</span> שלו? מה ההסתברות להצליח?</p>
+
+<p>הניסוי של <span>$latex X_{i}$</span> מצליח אם אנחנו מעלים בגורל זירה חדשה שטרם עלתה בגורל. עד כה עלו בגורל <span>$latex i-1$</span> זירות, מה שאומר שנותרו עוד <span>$latex N-\left(i-1\right)$</span> זירות. מספר הזירות הכולל הוא <span>$latex N$</span>, ולכן ההסתברות להעלות בגורל את אחת מהזירות החדשות היא <span>$latex \frac{N-\left(i-1\right)}{N}$</span>. כלומר:</p>
+
+<p><span>$latex E\left[X_{i}\right]=\frac{1}{p_{i}}=\frac{N}{N-\left(i-1\right)}$</span></p>
+
+<p>כלומר:</p>
+
+<p><span>$latex E\left[X_{1}\right]=\frac{N}{N}=1$</span></p>
+
+<p><span>$latex E\left[X_{2}\right]=\frac{N}{N-1}$</span></p>
+
+<p>וכן הלאה עד <span>$latex E\left[X_{N}\right]=\frac{N}{N-\left(N-1\right)}=\frac{N}{1}$</span>.</p>
+
+<p>וקיבלנו:</p>
+
+<p><span>$latex E\left[X\right]=\sum_{i=0}^{N-1}\frac{N}{N-i}=N\sum_{i=0}^{N-1}\frac{1}{N-i}=N\sum_{i=1}^{N}\frac{1}{i}$</span></p>
+
+<p>וכאן אנחנו פוגשים חברים ותיקים (של חלקנו…). הסכום <span>$latex \sum_{i=1}^{N}\frac{1}{i}$</span> (ובסימון אחר: <span>$latex 1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{N}$</span>) הוא כל כך חשוב שהוא זוכה לאות מיוחדת משלו: <span>$latex H_{N}=\sum_{i=1}^{N}\frac{1}{i}$</span>, והמספר הזה נקרא <strong>המספר ההרמוני</strong> ה-<span>$latex N$</span>-י. אלו מספרים מוכרים ואהובים שצצים במתמטיקה בשלל הזדמנויות, כך שלומר שפתרון בעיית הקופונים הוא שתוחלת הזמן עבור <span>$latex N$</span> קופונים היא <span>$latex N\cdot H_{N}$</span> היא פתרון קביל בהחלט.</p>
+
+<p>אבל בואו ננסה לשכנע אתכם עוד קצת שזה אחלה פתרון.</p>
+
+<p>כזכור, התחלתי את הדיון עם סוגייה קונקרטית - כמה סיבובים של Super Smash Bros. Ultimate צריך בתוחלת כדי לראות את כל הזירות? ועוד לפני שהכנסתי את תורת ההסתברות לתמונה ניסיתי לתת תשובה “אמפירית” לשאלה הזו על ידי קוד שמבצע סימולציות ומחשב ממוצעים. הקוד הזה <strong>עובד</strong>, אבל יש לו שני חסרונות ברורים:</p>
+<ol>
+ 	<li>לוקח לו הרבה זמן לרוץ, יחסית.</li>
+ 	<li>התוצאה שהוא מחזיר היא <strong>קירוב</strong> של התוחלת, לא הערך המדויק שלה.</li>
+</ol>
+<p>הנוסחה שמצאתי עכשיו, <span>$latex N\cdot H_{N}$</span>, לא נותנת קירוב של התוחלת אלא את התוחלת עצמה, במדויק; אבל עוד יותר חשוב מכך, אפשר לחשב אותה <strong>מהר</strong>, בשורה אחת של פייתון:</p>
+
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span></code></pre></figure>
+
+</div>
+
+<p>השורה הזו מחזירה את המספר <span>$latex 537.3294902186476$</span> שהוא התוחלת ה”נכונה”; אפשר לראות שתוצאת הניסוי שעשיתי קודם יצאה קרובה מאוד (537 ומשהו) אבל בשביל זה הייתי צריך להקפיץ את מספר החזרות על הניסוי מ-10,000 (שלא נתן משהו עד כדי כך מדויק) אל 100,000 וזה לקח הרבה יותר זמן. הפתרון המדויק שמצאתי הוא <strong>יעיל יותר לחישוב</strong> ולכן טוב יותר. אני מדגיש את הנקודה הזו כי הפתרון הזה הוא לא “נוסחה סגורה” - יש בו סכום שתלוי ב-<span>$latex N$</span>, ועשויה להיות רתיעה מסכומים כאלו למי שרגילים לתרגילים מקומבינטוריקה בסיסית שבהם לתת נוסחה שכזו לפעמים גורם להורדת נקודות כי זה לא פתרון פשוט “מספיק”. ובכן, אם אתם סובלים (כמו שאני סבלתי) מטראומה כזו מסכומים - אל! סכומים יכולים להיות מאוד מועילים לפעמים (ודוגמא טובה מאוד היא <strong>עקרון ההכלה וההפרדה</strong> <a href="https://gadial.net/2011/12/31/inclusion_exclusion_principle/">שכתבתי עליו כבר פוסט</a>, ומאפשר להמיר בעיות חישוביות קשות למדי במשימות חישוביות הרבה יותר קלות למרות שהוא מתבסס על סכום).</p>
+
+<p>אבל יש לנוסחה שהגענו אליה עוד יתרון - קיים לה <strong>קירוב</strong> טוב מאוד, שנובע מכמה טוב אנחנו מבינים מספרים הרמוניים. אפשר להראות (אין לי מושג איך - צריך יהיה לכתוב על זה פעם פוסט!) שמספרים הרמוניים מתנהגים “בערך” כמו הלוגריתם הטבעי. קצת יותר בפירוט:</p>
+
+<p><span>$latex H_{N}\approx\ln N+\gamma+\frac{1}{2N}$</span></p>
+
+<p>כאשר <span>$latex \gamma=0.5772156649\dots$</span> נקרא <strong>קבוע אוילר-מסקרוני</strong> והוא מספר מעניין בפני עצמו (למשל: עד היום אנחנו לא יודעים אם הוא רציונלי או לא).</p>
+
+<p>אם נכפיל את הנוסחה הזו ב-<span>$latex N$</span>, נקבל את הקירוב הבא לבעיית הקופונים:</p>
+
+<p><span>$latex N\ln N+\gamma N+\frac{1}{2}$</span></p>
+
+<p>וזו נוסחה ש<strong>מאוד קל</strong> לחשב ביעילות, גם אם הערך של <span>$latex N$</span> הוא אדיר (בן מאות ספרות - מה שמונע לגמרי חישוב של הסכום <span>$latex 1+\frac{1}{2}+\dots+\frac{1}{N}$</span>). ככל ש-<span>$latex N$</span> גדול יותר כך הקירוב יהיה טוב יותר; עד כמה הוא טוב עבור <span>$latex N=103$</span>? ובכן, הבה וננסה:</p>
+
+<div class="code-block">
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mf">0.5772156649</span>
+<span class="k">print</span><span class="p">(</span><span class="n">N</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
+
+</div>
+
+<p>הקוד הזה, עבור <span>$latex N=103$</span>, מניב את התוצאה <span>$latex 537.3302992723525$</span> שהיא קרובה להפליא אל התוצאה המדויקת, והחישוב שלה כמובן מהיר יותר. אם אני אנסה להריץ את החישובים הקודמים עבור <span>$latex N=1000000000000000$</span> אני אכשל בצורה מזעזעת (הקוד ירוץ וירוץ ולעולם לא יסיים) אבל עם הקירוב הזה אני עדיין אקבל תוצאה תוך חלקיק שניה - ואני יודע שזו תהיה תוצאה שלא אוכל להבדיל בינה ובין התוצאה ה”אמיתית”.</p>
+
+<p>זה סוגר את בעיית הקופונים הבסיסית, אבל כמובן שמכאן והלאה המתמטיקאים משתוללים עם שלל וריאציות: מה אם לא כל קופון הוא בעל אותה הסתברות להיבחר? מה אם אנחנו לא קונים קופונים אלא מנסים להשלים את כל המדבקות באלבום של “חבורת הזבל” (כן! היה משהו כזה!) ובכל חבילת מדבקות שאנחנו קונים יש שש מדבקות ולא רק אחת? וכן הלאה וכן הלאה. אבל אני לא אתעסק בזה עכשיו ומקווה שתסלחו לי; יש לי 537 סיבובים של Super Smash Bros. Ultimate לשחק בהם.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2019/02/13/coupon_collector_problem/';
+      this.page.identifier = 'http://gadial.net/2019/02/13/coupon_collector_problem/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2019/02/13/coupon_collector_problem/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>
