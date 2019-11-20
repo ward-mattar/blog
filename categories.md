@@ -1,7 +1,6 @@
 ---
 layout: page
 title: קטגוריות
-permalink: /categories/
 ---
 
 קטגוריות הן נסיון לערוך קצת סדר בבלוג.
