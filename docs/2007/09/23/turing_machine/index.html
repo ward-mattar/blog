@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות." />
 <meta property="og:description" content="בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות." />
-<link rel="canonical" href="http://gadial.net/2007/09/23/turing_machine/" />
-<meta property="og:url" content="http://gadial.net/2007/09/23/turing_machine/" />
+<link rel="canonical" href="http://localhost:4000/2007/09/23/turing_machine/" />
+<meta property="og:url" content="http://localhost:4000/2007/09/23/turing_machine/" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2007-09-23T03:14:15+03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"המכונה המופלאה","dateModified":"2007-09-23T03:14:15+03:00","datePublished":"2007-09-23T03:14:15+03:00","url":"http://gadial.net/2007/09/23/turing_machine/","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2007/09/23/turing_machine/"},"description":"בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות.","@context":"https://schema.org"}</script>
+{"headline":"המכונה המופלאה","dateModified":"2007-09-23T03:14:15+03:00","datePublished":"2007-09-23T03:14:15+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2007/09/23/turing_machine/"},"url":"http://localhost:4000/2007/09/23/turing_machine/","description":"בשעה טובה הגענו לתיאור הרעיון של טיורינג. טיורינג חיפש מודל מתמטי תיאורטי של “אלגוריתם”, והמודל שהמציא הוא כה פשוט לתיאור וכה מזכיר מחשבים “אמיתיים”, שבמהרה הוא הפך לסטנדרט שבו משתמשים בתורות החישוביות והסיבוכיות.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -102,7 +102,7 @@
 
 <p>המכונה מתחילה את פעולתה כשכתוב כבר משהו על הסרט - הקלט - ושאר הסרט ריק (זכרו - הקלטים שלנו הם סופיים) והראש הקורא נמצא בקצה הסרט. היא מסיימת את פעולתה על ידי מעבר לאחד משני מצבים פנימיים מיוחדים: האחד מכונה “מצב מקבל” והשני “מצב דוחה”.</p>
 
-<p>זכרו שב<a href="http://www.gadial.net/?p=60">פוסט קודם</a> ניסיתי לשכנע אתכם שאפשר לצמצם את כל הבעיות החישוביות לבעיות של זיהוי שייכות לקבוצה. מעבר של המכונה למצב “מקבל” פירושו שהיא סיימה את ריצתה ומחזירה תשובה חיובית - האיבר שיוצג על ידי הקלט אכן שייך לקבוצה שמכונת הטיורינג עוצבה כדי לבדוק שייכות אליה. מצב דוחה פירושו שהמכונה טוענת שהאיבר אינו שייך לקבוצה.</p>
+<p>זכרו שב<a href="http://www.gadial.net/2007/09/18/r_and_re/">פוסט קודם</a> ניסיתי לשכנע אתכם שאפשר לצמצם את כל הבעיות החישוביות לבעיות של זיהוי שייכות לקבוצה. מעבר של המכונה למצב “מקבל” פירושו שהיא סיימה את ריצתה ומחזירה תשובה חיובית - האיבר שיוצג על ידי הקלט אכן שייך לקבוצה שמכונת הטיורינג עוצבה כדי לבדוק שייכות אליה. מצב דוחה פירושו שהמכונה טוענת שהאיבר אינו שייך לקבוצה.</p>
 
 <p>זה הכל.</p>
 
@@ -152,8 +152,8 @@
   <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://gadial.net/2007/09/23/turing_machine/';
-      this.page.identifier = 'http://gadial.net/2007/09/23/turing_machine/';
+      this.page.url = 'http://localhost:4000/2007/09/23/turing_machine/';
+      this.page.identifier = 'http://localhost:4000/2007/09/23/turing_machine/';
     };
 
     (function() {

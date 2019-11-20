@@ -9,18 +9,18 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="שעשוע ידוע שנהוג לתת לילדים הוא זה:" />
 <meta property="og:description" content="שעשוע ידוע שנהוג לתת לילדים הוא זה:" />
-<link rel="canonical" href="http://gadial.net/2008/05/06/eulerian_graphs/" />
-<meta property="og:url" content="http://gadial.net/2008/05/06/eulerian_graphs/" />
+<link rel="canonical" href="http://localhost:4000/2008/05/06/eulerian_graphs/" />
+<meta property="og:url" content="http://localhost:4000/2008/05/06/eulerian_graphs/" />
 <meta property="og:site_name" content="לא מדויק" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2008-05-06T14:36:19+03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"איך אוילר עוזר לנו לבנות בתים ולטייל על גשרים","dateModified":"2008-05-06T14:36:19+03:00","datePublished":"2008-05-06T14:36:19+03:00","url":"http://gadial.net/2008/05/06/eulerian_graphs/","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2008/05/06/eulerian_graphs/"},"description":"שעשוע ידוע שנהוג לתת לילדים הוא זה:","@context":"https://schema.org"}</script>
+{"headline":"איך אוילר עוזר לנו לבנות בתים ולטייל על גשרים","dateModified":"2008-05-06T14:36:19+03:00","datePublished":"2008-05-06T14:36:19+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2008/05/06/eulerian_graphs/"},"url":"http://localhost:4000/2008/05/06/eulerian_graphs/","description":"שעשוע ידוע שנהוג לתת לילדים הוא זה:","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$latex','$'] ],
@@ -144,7 +144,7 @@
 
 <p>כמובן, טיול בעיר שכזו לא שווה גרוש אם הוא לא כולל מעבר על הגשרים. השאלה היא האם ניתן לטייל בעיר בצורה כזו שבה עוברים על <strong>כל</strong> הגשרים, אבל לא עוברים על אף גשר יותר מפעם אחת (ולא חוצים את הנהר בשיטות אחרות, כמו קפיצה במוט).</p>
 
-<p>קל לנחש שהתשובה שלילית. קל לנחש, כי אם התשובה הייתה חיובית, כנראה שלא הייתה כאן שאלה והפתרון היה מתגלה יחסית מהר (בדומה ל<a href="http://www.gadial.net/?p=14">בעיה של משחק ה-15</a>). לרוע המזל, הוכחות של “אי אפשר לעשות את זה” או “קשה לעשות את זה”, שבהן צריך איכשהו לכסות מגוון רחב של דרכי פעולה, הן מסובכות יותר לעתים קרובות מהוכחות היתכנות, שבסך הכל צריכות להראות דרך אחת לא רעה לעשות את זה.</p>
+<p>קל לנחש שהתשובה שלילית. קל לנחש, כי אם התשובה הייתה חיובית, כנראה שלא הייתה כאן שאלה והפתרון היה מתגלה יחסית מהר (בדומה ל<a href="http://www.gadial.net/">בעיה של משחק ה-15</a>). לרוע המזל, הוכחות של “אי אפשר לעשות את זה” או “קשה לעשות את זה”, שבהן צריך איכשהו לכסות מגוון רחב של דרכי פעולה, הן מסובכות יותר לעתים קרובות מהוכחות היתכנות, שבסך הכל צריכות להראות דרך אחת לא רעה לעשות את זה.</p>
 
 <p>ואז הגיע אוילר. לאונרד אוילר היה אולי המתמטיקאי החשוב ביותר של המאה ה-18, ואחד מהמתמטיקאים הפורים ביותר בכל הזמנים. לצערי, איני יודע מה היה הפתרון המדוייק שלו; אני יודע רק את דרך ההצגה ה”מודרנית” שלו, שמשתמשת במושג הגרף האבסטרקטי שלא היה קיים אז. מה שנאה במיוחד בפתרון של אוילר הוא שהוא לא רק פותר את בעיית הגשרים של קניגסברג, אלא את כל הבעיות מסוגה, ובפרט את שתי בעיות הציור שהצגתי לעיל.</p>
 
@@ -166,7 +166,7 @@
 
 <p>כעת, מתי הטיול שלנו ייתקע? הטענה היא שאם נתקענו (כלומר, הגענו לצומת שאין לנו יציאה ממנה - דרגתה 0) בהכרח שבנו לצומת שממנו התחלנו. זאת מכיוון שאם אחרי כניסה לצומת דרגתו היא 0, פירוש הדבר הוא שרגע לפני שנכנסו אליו דרגתו הייתה 1 - כלומר בפרט אי זוגית, וזה יכול להיות רק לצומת שממנו התחלנו.</p>
 
-<p>הטיעון שלעיל עשוי בהחלט להישמע כמו “רמאות” אבל הוא תקף לחלוטין. היופי כאן הוא שאיננו צריכים כלל לנסות ולתאר את המסלול שלנו על גבי הגרף או לדרוש ממנו כלום, ועם זאת עדיין מובטח לנו שהוא יכול להיתקע אך ורק בצומת שממנה התחלנו. זו הדגמה <a href="http://www.gadial.net/?p=14">נוספת</a> לכוחן של שמורות - במקרה הזה, השמורה של “כל הצמתים בגרף פרט לזה שהתחלנו ממנו הם בעלי דרגה זוגית”.</p>
+<p>הטיעון שלעיל עשוי בהחלט להישמע כמו “רמאות” אבל הוא תקף לחלוטין. היופי כאן הוא שאיננו צריכים כלל לנסות ולתאר את המסלול שלנו על גבי הגרף או לדרוש ממנו כלום, ועם זאת עדיין מובטח לנו שהוא יכול להיתקע אך ורק בצומת שממנה התחלנו. זו הדגמה <a href="http://www.gadial.net/">נוספת</a> לכוחן של שמורות - במקרה הזה, השמורה של “כל הצמתים בגרף פרט לזה שהתחלנו ממנו הם בעלי דרגה זוגית”.</p>
 
 <p>אם כן, הטיול שלנו בגרף הסתיים במעגל שכיסה לפחות חלק מהקשתות, אבל לא בטוח שאת כולן. אם נמחק מהגרף את הקשתות שכבר עברנו עליהן, נקבל גרף חדש, עם פחות קשתות (אולי אפילו כמה גרפים קטנים יותר כי הגרף יפסיק להיות קשיר) אבל עם אותה תכונה בדיוק - הדרגה של כל צומת היא זוגית. לכן אפשר להפעיל גם על הגרף החדש את השיטה שלנו, למצוא גם בו מעגל, וכן הלאה. בסופו של דבר נמצה את כל הקשתות בגרף ונקבל אוסף של מעגלים בו.</p>
 
@@ -187,8 +187,8 @@
   <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://gadial.net/2008/05/06/eulerian_graphs/';
-      this.page.identifier = 'http://gadial.net/2008/05/06/eulerian_graphs/';
+      this.page.url = 'http://localhost:4000/2008/05/06/eulerian_graphs/';
+      this.page.identifier = 'http://localhost:4000/2008/05/06/eulerian_graphs/';
     };
 
     (function() {

@@ -6,7 +6,7 @@ layout: post
 categories: 
   - משחקים וחידות מתמטיות
 ---
-משחקי הריצוף של <a href="http://www.gadial.net/?p=73">הפוסט הקודם</a> הזכירו לי משחק מחשב מצוין, בשם Heaven &amp; Earth, שהיה מלא וגדוש בפאזלים שכאלו ודומים להם.
+משחקי הריצוף של <a href="http://www.gadial.net/2007/10/17/tilings/">הפוסט הקודם</a> הזכירו לי משחק מחשב מצוין, בשם Heaven &amp; Earth, שהיה מלא וגדוש בפאזלים שכאלו ודומים להם.
 
 <a href="{{site.baseurl}}{{site.post_images}}/2007/10/illusion_001.png" title="Heaven &amp; Earth 1"><img src="{{site.baseurl}}{{site.post_images}}/2007/10/illusion_001.png" alt="Heaven &amp; Earth 1" /></a>
 

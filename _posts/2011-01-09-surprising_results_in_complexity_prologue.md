@@ -15,7 +15,7 @@ tags:
   - פרוייקט "תוצאות מפתיעות בסיבוכיות"
   - תורת הסיבוכיות
 ---
-בשלהי <a href="http://www.gadial.net/?p=696">מהומת</a> ה"הוכחה" ש-{% equation %}\mbox{P}\ne\mbox{NP}{% endequation %} בקיץ האחרון נתקלתי <a href="http://www.scottaaronson.com/talks/pvsnp.ppt">במצגת</a> של סקוט אהרונסון שניסתה לדבר על בעיית {% equation %}\mbox{P}\ne\mbox{NP}{% endequation %} ומדוע היא כה קשה. אחד מהשקפים ניסה להמחיש עד כמה הוכחה שמתקיים דווקא {% equation %}\mbox{P}=\mbox{NP}{% endequation %} תהיה מפתיעה - הבאתי אותו בבלוג גם בעבר, והנה הוא שוב:
+בשלהי <a href="http://www.gadial.net/2010/08/10/breaking_news_p_vs_np_proof/">מהומת</a> ה"הוכחה" ש-{% equation %}\mbox{P}\ne\mbox{NP}{% endequation %} בקיץ האחרון נתקלתי <a href="http://www.scottaaronson.com/talks/pvsnp.ppt">במצגת</a> של סקוט אהרונסון שניסתה לדבר על בעיית {% equation %}\mbox{P}\ne\mbox{NP}{% endequation %} ומדוע היא כה קשה. אחד מהשקפים ניסה להמחיש עד כמה הוכחה שמתקיים דווקא {% equation %}\mbox{P}=\mbox{NP}{% endequation %} תהיה מפתיעה - הבאתי אותו בבלוג גם בעבר, והנה הוא שוב:
 
 <strong><a href="{{site.baseurl}}{{site.post_images}}/2010/08/pnp_graph.png"><img class="alignnone size-large wp-image-707" title="pnp_graph" src="{{site.baseurl}}{{site.post_images}}/2010/08/pnp_graph.png" alt="גרף המציג דירוג &quot;הפתעה&quot; של משפטים במדעי המחשב; ה&quot;משפט&quot; P=NP מדורג בצורה קיצונית מעבר למספר משפטים ידועים ומפתיעים במדעי המחשב" width="450" height="220" /></a>
 </strong>

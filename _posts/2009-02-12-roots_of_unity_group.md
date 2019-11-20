@@ -6,7 +6,7 @@ layout: post
 categories: 
   - אלגברה מופשטת
 ---
-ב<a href="http://www.gadial.net/?p=182">פוסט הקודם</a> עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת {% equation %}n{% endequation %}, מקבלים 1 - "שורשי היחידה מסדר {% equation %}n{% endequation %}". הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה {% equation %}e^{\frac{k\cdot 2i\pi}{n}}{% endequation %}, והסברתי מה המשמעות של חזקה כזו של {% equation %}e{% endequation %} ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  {% equation %}\zeta_n = e^{\frac{2i\pi}{n}}{% endequation %} (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר {% equation %}n{% endequation %} ניתן להצגה בתור {% equation %}\zeta_n^k{% endequation %}.
+ב<a href="http://www.gadial.net/2009/02/04/roots_of_unity/">פוסט הקודם</a> עסקתי בשאלה מהם המספרים שכשמעלים אותם בחזקת {% equation %}n{% endequation %}, מקבלים 1 - "שורשי היחידה מסדר {% equation %}n{% endequation %}". הגעתי למסקנה שאלו הם כל המספרים המרוכבים מהצורה {% equation %}e^{\frac{k\cdot 2i\pi}{n}}{% endequation %}, והסברתי מה המשמעות של חזקה כזו של {% equation %}e{% endequation %} ולמה היא מספר מרוכב. לסיום, הכנסתי לתמונה סימון פשוט יותר:  {% equation %}\zeta_n = e^{\frac{2i\pi}{n}}{% endequation %} (זוהי האות היוונית זטה) ומכאן שכל שורש יחידה מסדר {% equation %}n{% endequation %} ניתן להצגה בתור {% equation %}\zeta_n^k{% endequation %}.
 
 כעת אני רוצה לעסוק קצת יותר במבנה של קבוצת כל שורשי היחידה, מבנה שמתבטא בכך שניתן לכפול שני שורשי יחידה אלו באלו, והתוצאה תהיה שורש יחידה שלישי. זאת מכיוון שאם {% equation %}\zeta_n^k,\zeta_m^t{% endequation %} הם שני שורשי יחידה (לא בהכרח מאותו סדר) אז {% equation %}(\zeta_n^k\cdot\zeta_m^t)^{nm}=(\zeta_n^k)^{nm}\cdot(\zeta_m^t)^{nm}=1\cdot 1=1{% endequation %}, ולכן אפשר "לבנות" שורשי יחידה מתוך שורשי יחידה קיימים, על ידי כפל.
 

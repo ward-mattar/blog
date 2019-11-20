@@ -6,7 +6,7 @@ layout: post
 categories: 
   - אנליזה מתמטית
 ---
-<a href="http://www.gadial.net/?p=134">הבטחתי</a> שאתאר את מושג ה<a href="http://he.wikipedia.org/wiki/%D7%92%D7%91%D7%95%D7%9C_(%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94)">גבול</a> בצורה פורמלית. הגיע הזמן לקיים. לטעמי, יש ערך כלשהו בכך שכל מי שמתעניין במתמטיקה, לא רק מי שלומד אותה, ידע את המושג הזה, ולו כדי לראות איך מפרמלת המתמטיקה מושג שנשמע על פניו מעורפל למדי. מכיוון שכבר הצגתי את האינטואיציה קודם, אקפוץ ישר לפורמליזם.
+<a href="http://www.gadial.net/2008/06/17/infinite_series/">הבטחתי</a> שאתאר את מושג ה<a href="http://he.wikipedia.org/wiki/%D7%92%D7%91%D7%95%D7%9C_(%D7%9E%D7%AA%D7%9E%D7%98%D7%99%D7%A7%D7%94)">גבול</a> בצורה פורמלית. הגיע הזמן לקיים. לטעמי, יש ערך כלשהו בכך שכל מי שמתעניין במתמטיקה, לא רק מי שלומד אותה, ידע את המושג הזה, ולו כדי לראות איך מפרמלת המתמטיקה מושג שנשמע על פניו מעורפל למדי. מכיוון שכבר הצגתי את האינטואיציה קודם, אקפוץ ישר לפורמליזם.
 
 אז יש לנו סדרה, {% equation %}a_1, a_2, a_3,\dots{% endequation %}. אנחנו אומרים על מספר {% equation %}A{% endequation %} שהוא הגבול שלה אם לכל מספר ממשי חיובי {% equation %}\varepsilon&gt;0{% endequation %} קיים מקום בסדרה, {% equation %}N{% endequation %}, כך שהחל ממנו, דהיינו לכל {% equation %}n&gt;N{% endequation %} מתקיים {% equation %}|a_n-A|&lt;\varepsilon{% endequation %}, ובמילים - ה<strong>מרחק</strong> בין האיבר {% equation %}a_n{% endequation %} ובין {% equation %}A{% endequation %} קטן מ-{% equation %}\varepsilon{% endequation %}. הסימון המקובל לכך הוא {% equation %}\lim_{n\to\infty}a_n=A{% endequation %}.
 
