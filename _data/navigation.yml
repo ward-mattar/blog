@@ -33,6 +33,8 @@ navbar:
 #        url: "/algebra"
   - title: "קטגוריות"
     url: "/categories"
+  - title: "דף אקראי"
+    url: "/random"
   - title: "אודות"
     url: "/about/"
 features:
