@@ -522,3 +522,21 @@ table {
   .navbar-nav {
     text-align: right;
   }
+
+  .PageNavigation {
+    font-size: 14px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+  }
+  
+  .PageNavigation a {
+    display: block;
+    width: 50%;
+    float: right;
+    margin: 1em 0;
+  }
+  
+  .PageNavigation .next {
+    text-align: right;
+  }
