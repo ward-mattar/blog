@@ -1,0 +1,22 @@
+RTL table -
+<table style="direction:rtl; border:1px solid black;">
+  <tr>
+    <td>Right</td>
+    <td>Right</td>
+    <td>Right</td>
+  </tr>
+</table>
+RTL list, with display:inline appers RTL as it should
+<ul style="direction:rtl;">
+  <li style="display:inline; direction:rtl">Should be right</li>
+  <li style="display:inline; direction:rtl">Center</li>
+  <li style="display:inline; direction:rtl">Should be left</li>
+</ul>
+RTL list, with display:table appers LTR
+<div style="display:table; direction:rtl;">
+  <ul style="display:table-row; direction:rtl;">
+    <li style="display:table-cell; direction:rtl">Should be right</li>
+    <li style="display:table-cell; direction:rtl">Center</li>
+    <li style="display:table-cell; direction:rtl">Should be left</li>
+  </ul>
+</div>

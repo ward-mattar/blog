@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="he">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="content-language" content="he" />
+		<title>הזזות ציקליות</title>
+		<meta name="author" content="gadial" />
+		<!-- Date: 2012-03-30 -->
+	</head>
+	<body>
+		<script type="text/javascript">
+			var hebrew_letters = "אבגדהוזחטיכלמנסעפצקרשת".split("");
+			cleanHebrewTerminatingLetters = function(str){
+				return str.replace(/ץ/g,"צ").replace(/ן/g,"נ").replace(/ם/g,"מ").replace(/ך/g,"כ").replace(/ף/g,"פ")
+			}
+
+			showCyclicShifts = function(){
+				var word_array = cleanHebrewTerminatingLetters(document.getElementById("word").value).split("");
+				var shift_div = document.getElementById("cyclic_shifts");
+				shift_div.removeChild(shift_div.children[0]);
+				new_list = document.createElement('ul');
+				shift_div.appendChild(new_list);
+				
+				var n = hebrew_letters.length
+				for (i=1; i<n ; i++){
+					for (j=0; j<word_array.length; j++){
+						word_array[j] = hebrew_letters[(hebrew_letters.indexOf(word_array[j]) + 1) % n]
+					}
+					var new_item = document.createElement('li');
+					new_item.innerHTML = word_array.join("");
+					new_list.appendChild(new_item);				
+				}
+			}
+		</script>
+		<label for="primary_word">הכנס מילה: </label>
+		<input type="text" id="word" onkeyup="showCyclicShifts();" />
+		<br />
+		<label for="cyclic_shifts">הזזות ציקליות:</label>
+		<div id = "cyclic_shifts">
+			<ul>
+			
+			</ul>
+		</div>
+	</body>
+</html>

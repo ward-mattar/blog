@@ -1,0 +1,27 @@
+#words {
+	width: 300px;
+	height: 600px;
+	overflow-y:auto;
+	margin-bottom: 1em;
+}
+
+/*
+  #words ul
+  {
+    width: 500px;
+  }
+
+  
+  #words ul li
+  {
+    float: left;
+    width: 10em;
+  }
+
+  
+  br
+  {
+    clear: left;
+  }
+  */
+  

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>test</title>
+		<meta name="author" content="gadial" />
+		<script language="JavaScript" src="./jsunit/app/jsUnitCore.js"></script>
+		<script language="JavaScript" src="funcs.js"></script>
+		<!-- Date: 2012-03-31 -->
+	</head>
+	<body>
+		<script type="text/javascript">
+			function testCleanString(){
+				assertEquals("Do no harm for lowercase","abc",cleanString("abc"));
+				assertEquals("Lower the case for uppercase","abc", cleanString("ABC"));
+				assertEquals("Kill spaces", "abc",cleanString("A B C"));
+				assertEquals("Kill whitespaces","abcd",cleanString("A\tB\nC\rD"));
+				assertEquals("Kill more symbols", "abcdefghijk",cleanString('A!B@C#D$E%F^G&H*I(J)K'));
+				assertEquals("abcd", cleanString("a_b_c_d"));
+				assertEquals("אבגד", cleanString("אבגד"));
+				assertEquals("כמנפצ", cleanString("ךםןףץ"));
+			}
+			
+			function testFindEls(){
+				text = "axbxcxd" + "a*tb*tc*fd" + "aa**b*r*c*mtd";
+				els = findEls(text, "abcd");
+				assertEquals(3, els.length);
+				assertEquals("abcd", els[0]['word']);
+				assertEquals(els[0]['index'], 0);
+				assertEquals(els[0]['jump'], 2);
+				
+				assertEquals(els[1]['index'], 7);
+				assertEquals(els[1]['jump'], 3);
+				
+				assertEquals(els[2]['index'], 17);
+				assertEquals(els[2]['jump'], 4);
+			}
+			
+			function testInsertLineBreaks(){
+				text = "123456789";
+				
+				newtext = insertLineBreaks(text,0);
+				assertEquals(text, newtext);
+				
+				newtext = insertLineBreaks(text,1);
+				assertEquals("1\n2\n3\n4\n5\n6\n7\n8\n9", newtext);
+				
+				newtext = insertLineBreaks(text,2);
+				assertEquals("12\n34\n56\n78\n9", newtext);
+				
+				newtext = insertLineBreaks(text,3);
+				assertEquals("123\n456\n789", newtext);
+				
+				newtext = insertLineBreaks(text,4);
+				assertEquals("1234\n5678\n9", newtext);
+				
+				newtext = insertLineBreaks(text,5);
+				assertEquals("12345\n6789", newtext);
+			}
+			
+			function testColorString(){
+				colors = ["red"];
+				text = "abc";
+				
+				assertEquals('<span style="background-color:red">a</span>bc',colorString(text, colors));
+				colors = ["red", "green", "blue"];
+				assertEquals('<span style="background-color:red">a</span><span style="background-color:green">b</span><span style="background-color:blue">c</span>',colorString(text, colors));
+			}
+			
+			function testFormatText(){
+				var text = "a + b&c";
+				var formatted_text = ['a', 'c', '<span style="background-color:red">c</span>']
+				assertEquals('a + c&<span style="background-color:red">c</span>', formatText(text, formatted_text));
+			}
+		</script>
+
+	<script type="text/javascript">
+	cleanString("אבגד");
+		//testCleanString();
+		// testFindEls();
+		//testColorString();
+	</script>
+		
+	</body>
+
+</html>

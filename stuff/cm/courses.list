@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="UTF8"?>
+<courses>
+<course><name>הקיטסיטטס </name><num>014003</num><points>3.0</points></course>
+<course><name>תוכרעמ חותנ </name><num>014004</num><points>3.0</points></course>
+<course><name>תיסדנה הדבעמ </name><num>014005</num><points>1.5</points></course>
+<course><name>תוירמונ תוטישל אובמ </name><num>014006</num><points>3.0</points></course>
+<course><name>יסדנה יפרג עדימ </name><num>014008</num><points>3.0</points></course>
+<course><name>תויצקורטסנוקב טקיורפ </name><num>014101</num><points>2.5</points></course>
+<course><name>תיסדנה הקינכמל אובמ </name><num>014103</num><points>4.0</points></course>
+<course><name>1 קזוחה תרות </name><num>014104</num><points>4.0</points></course>
+<course><name>2 קזוחה תרות </name><num>014105</num><points>4.0</points></course>
+<course><name>תויטסלאה תרותל אובמ </name><num>014107</num><points>2.5</points></course>
+<course><name>םינבמ תקיטטס </name><num>014108</num><points>3.0</points></course>
+<course><name>1 סדנהמה תינב </name><num>014110</num><points>3.0</points></course>
+<course><name>ךורד ןוטב </name><num>014111</num><points>2.5</points></course>
+<course><name>תודוסי </name><num>014113</num><points>2.5</points></course>
+<course><name>םינבמ ןכת ירקע </name><num>014114</num><points>2.5</points></course>
+<course><name>1 ןוטב ינבמ </name><num>014123</num><points>3.5</points></course>
+<course><name>'א קלח-בחרומ טקיורפ </name><num>014131</num><points>2.5</points></course>
+<course><name>'ב קלח-בחרומ טקיורפ </name><num>014132</num><points>2.5</points></course>
+<course><name>ןיוזמ ןוטב ינבמ תדבעמ </name><num>014138</num><points>1.0</points></course>
+<course><name>1 הדלפ ינבמ </name><num>014140</num><points>4.0</points></course>
+<course><name>2 ןוטב ינבמ </name><num>014141</num><points>4.0</points></course>
+<course><name>המדא תודיער תסדנהל אובמ </name><num>014142</num><points>3.0</points></course>
+<course><name>םינבמ תקיטטסב בשחמ תוטיש </name><num>014143</num><points>3.0</points></course>
+<course><name>1 םימ תסדנהב טקיורפ </name><num>014201</num><points>2.5</points></course>
+<course><name>הקילורדיה </name><num>014205</num><points>3.0</points></course>
+<course><name>(םימ תקפסה)ןכת ירקיע </name><num>014208</num><points>2.5</points></course>
+<course><name>םימרוז תקינכמ </name><num>014211</num><points>3.0</points></course>
+<course><name>תיסדנה היגולורדיהל אובמ </name><num>014212</num><points>2.5</points></course>
+<course><name>היגולורדיהו הקילורדיהל אובמ </name><num>014213</num><points>3.5</points></course>
+<course><name>םימ יבאשמו תיתביבס .נהב ןוירנימס </name><num>014300</num><points>1.5</points></course>
+<course><name>תיתביבס הסדנהב טקיורפ </name><num>014301</num><points>2.5</points></course>
+<course><name>תיתביבס הסדנה תדבעמ </name><num>014305</num><points>2.5</points></course>
+<course><name>גולוימדיפאו תיתביבס היגולויבורקימ </name><num>014313</num><points>3.0</points></course>
+<course><name>הביבסה תסדנה תודוסי </name><num>014315</num><points>4.0</points></course>
+<course><name>הביבסה תסדנהל אובמ </name><num>014316</num><points>2.5</points></course>
+<course><name>יגולונכטה ןדיעב הביבסה </name><num>014318</num><points>2.0</points></course>
+<course><name>הקינכטואיגב טקיורפ </name><num>014401</num><points>2.5</points></course>
+<course><name>תיסדנה היגולואיג </name><num>014405</num><points>2.0</points></course>
+<course><name>הקינכמואיג </name><num>014409</num><points>4.0</points></course>
+<course><name>עקרק תסדנה </name><num>014411</num><points>3.5</points></course>
+<course><name>דוקפתו םירמוחב טקיורפ </name><num>014501</num><points>2.5</points></course>
+<course><name>(1) הינב ירמוחב יתדבעמ טקיורפ </name><num>014503</num><points>0.0</points></course>
+<course><name>היינב ירמוח </name><num>014505</num><points>3.5</points></course>
+<course><name>ןוטב לש תמדקתמ היגולונכט </name><num>014506</num><points>2.0</points></course>
+<course><name>םינינב לש יסיפ דוקפת </name><num>014508</num><points>2.5</points></course>
+<course><name>2 םיכילהתו םירמוח </name><num>014510</num><points>2.0</points></course>
+<course><name>תיחרזא הסדנהב הקיטסוקא </name><num>014512</num><points>2.5</points></course>
+<course><name>םיבכורמ םירמוחו םייטסלפ םירמוח </name><num>014515</num><points>2.5</points></course>
+<course><name>הינבה תיגולוטמילק תודוסי </name><num>014516</num><points>2.5</points></course>
+<course><name>תיסדנה הלכלכ </name><num>014603</num><points>2.5</points></course>
+<course><name>היינבה לוהינל אובמ </name><num>014606</num><points>3.0</points></course>
+<course><name>היינבב עוציב תוטיש </name><num>014610</num><points>2.5</points></course>
+<course><name>היינבב שונא יבאשמ לוהינ </name><num>014613</num><points>2.5</points></course>
+<course><name>הינב יטקיורפ לש הרקבו ןונכת </name><num>014614</num><points>2.5</points></course>
+<course><name>תוגיהנמו לוהינ ,םיטקיורפ עוציב </name><num>014616</num><points>2.5</points></course>
+<course><name>הרובחתב טקיורפ </name><num>014701</num><points>2.5</points></course>
+<course><name>הרובחת ןונכתל אובמ </name><num>014703</num><points>2.5</points></course>
+<course><name>הרובעתב הדבעמ </name><num>014706</num><points>1.5</points></course>
+<course><name>העונת תסדנה </name><num>014707</num><points>2.5</points></course>
+<course><name>םיכרד לועפתו ןכת </name><num>014708</num><points>3.0</points></course>
+<course><name>םיכרד תדבעמ </name><num>014709</num><points>2.0</points></course>
+<course><name>תוחישק תועסימ </name><num>014712</num><points>2.5</points></course>
+<course><name>תירוביצ הרובחת לועפתו ןונכת </name><num>014716</num><points>2.5</points></course>
+<course><name>תיריוא הרובחת </name><num>014717</num><points>2.5</points></course>
+<course><name>הרובחת תועסמו ןכתל אובמ </name><num>014718</num><points>2.5</points></course>
+<course><name>הרובעת תסדנהב טקיורפ </name><num>014722</num><points>2.5</points></course>
+<course><name>הרובחת תויתשת ןונכת </name><num>014728</num><points>2.5</points></course>
+<course><name>הרובחת תסדנהל אובמ </name><num>014730</num><points>2.5</points></course>
+<course><name>תועסמ ןכתל אובמ </name><num>014731</num><points>1.5</points></course>
+<course><name>הדידמה תקיחת </name><num>014829</num><points>2.0</points></course>
+<course><name>1 הדידמהו יופימה תודוסי </name><num>014841</num><points>3.5</points></course>
+<course><name>2 הדידמהו יופימה תודוסי </name><num>014842</num><points>4.0</points></course>
+<course><name>הירטמרגוטופל אובמ </name><num>014843</num><points>4.0</points></course>
+<course><name>היזדואיגב בשחמ ימושייל אובמ </name><num>014845</num><points>3.0</points></course>
+<course><name>םייבחרמ-ואיג םינותנ ידסמ </name><num>014846</num><points>3.0</points></course>
+<course><name>היזדואיגל אובמ </name><num>014848</num><points>4.0</points></course>
+<course><name>תיטמתמ היזדואיג </name><num>014849</num><points>4.0</points></course>
+<course><name>תויטדואיג הרקב תותשר </name><num>014851</num><points>4.0</points></course>
+<course><name>יופימ יכרוצל הנומת דובע </name><num>014855</num><points>3.0</points></course>
+<course><name>1 יפרגואיג עדימ תוכרעמ </name><num>014857</num><points>3.0</points></course>
+<course><name>תיאשונ היפרגוטרכ </name><num>014860</num><points>2.5</points></course>
+<course><name>תודידמו היזדואיגב רנימס </name><num>014865</num><points>1.5</points></course>
+<course><name>יתרפס יופימב רנימס </name><num>014866</num><points>1.5</points></course>
+<course><name>1 תודידמו היזדואיגב טקיורפ </name><num>014867</num><points>2.5</points></course>
+<course><name>2 תודידמו היזדואיגב טקיורפ </name><num>014868</num><points>2.5</points></course>
+<course><name>1 יתרפס יופימב טקיורפ </name><num>014869</num><points>2.5</points></course>
+<course><name>יופימו תופמ </name><num>014873</num><points>3.0</points></course>
+<course><name>קוחרמ השיחל אובמ </name><num>014874</num><points>3.0</points></course>
+<course><name>תודידמו היזדואיגב הישעתב טקיורפ </name><num>014875</num><points>5.0</points></course>
+<course><name>יתרפס יופימב הישעתב טקיורפ </name><num>014876</num><points>5.0</points></course>
+<course><name>רוציב תוכיא תרקב תסדנה </name><num>014919</num><points>2.5</points></course>
+<course><name>תונימאו תוכיא תחטבאב טקיורפ </name><num>014924</num><points>2.0</points></course>
+<course><name>תויעבט תוכרעמב רבעמ תועפות </name><num>014925</num><points>2.5</points></course>
+<course><name>םיטקיורפ לוהינ </name><num>014931</num><points>2.5</points></course>
+<course><name>1 תוינכמ תוכרעמ טקיורפ </name><num>014936</num><points>2.5</points></course>
+<course><name>2 תוינכמ תוכרעמ טקיורפ </name><num>014937</num><points>2.5</points></course>
+<course><name>עדימ תוכרעמ - תועקרק רקס </name><num>014952</num><points>2.5</points></course>
+<course><name>עקרקב םוהיזו המירז יכילהתל אובמ </name><num>014957</num><points>2.5</points></course>
+<course><name>1 היקשה תסדנה </name><num>014958</num><points>3.5</points></course>
+<course><name>ףונ יננכתמל עקרקה תרותב תודוסי </name><num>014960</num><points>2.5</points></course>
+<course><name>2 תיתביבס הסדנהב טקיורפ </name><num>014966</num><points>2.5</points></course>
+<course><name>םיסדנהמל היגולוקא </name><num>014968</num><points>2.5</points></course>
+<course><name>1 הביבסו עקרק ,םימ תסדנהב טקיורפ </name><num>014969</num><points>2.5</points></course>
+<course><name>2 הביבסו עקרק ,םימ תסדנהב טקיורפ </name><num>014970</num><points>2.5</points></course>
+<course><name>1 תימושיי הקינכמ </name><num>015007</num><points>4.0</points></course>
+<course><name>הקימניד </name><num>015011</num><points>4.0</points></course>
+<course><name>רפע תודובעב תוטישו תוכרעמ דויצ </name><num>015017</num><points>2.5</points></course>
+<course><name>תונוכמ יקלחב טקיורפ </name><num>015018</num><points>2.0</points></course>
+<course><name>הרקבל אובמ </name><num>015019</num><points>4.0</points></course>
+<course><name>םייפוס םיטנמלא ישומיש </name><num>015902</num><points>3.0</points></course>
+<course><name>היגולויבורגאל אובמ </name><num>015904</num><points>3.0</points></course>
+<course><name>היגולויבורגאב הדבעמ </name><num>015905</num><points>1.0</points></course>
+<course><name>1 םימ יבאשמ תוכרעמ תסדנה </name><num>016203</num><points>2.5</points></course>
+<course><name>םוהת ימ לש תמדקתמ היגולורדיה </name><num>016205</num><points>2.5</points></course>
+<course><name>תיתביבס םימרוז תקינכמ </name><num>016206</num><points>3.0</points></course>
+<course><name>םימ ילג </name><num>016210</num><points>2.5</points></course>
+<course><name>זוקינ תסדנה </name><num>016212</num><points>2.5</points></course>
+<course><name>ריוא םוהיז </name><num>016302</num><points>2.5</points></course>
+<course><name>םיינגרוא םימהזמ לש יגולויב קוריפ </name><num>016327</num><points>2.0</points></course>
+<course><name>םיכפשב לופיטב תילנרבממ הדרפה </name><num>016328</num><points>3.0</points></course>
+<course><name>היגולויבורדיה </name><num>016329</num><points>2.0</points></course>
+<course><name>ריוא םוהיז תרקב </name><num>016336</num><points>2.0</points></course>
+<course><name>היינבב תוכיא תרקבו תוכיא תחטבא </name><num>016504</num><points>2.0</points></course>
+<course><name>ןוטבל תוספט ןכת </name><num>016619</num><points>2.0</points></course>
+<course><name>2 םואת ןובשח </name><num>016801</num><points>2.5</points></course>
+<course><name>תיתרפס הירטמרגוטופ </name><num>016815</num><points>2.5</points></course>
+<course><name>1 תילקיסיפ היזדואיג </name><num>016816</num><points>3.0</points></course>
+<course><name>ינרדומ רטסדקב םיטביה </name><num>016818</num><points>3.0</points></course>
+<course><name>םדקתמ ימי יופימ </name><num>016819</num><points>3.0</points></course>
+<course><name>םייעבט םירצומ לש תוילקיסיפ תונוכת </name><num>017002</num><points>2.5</points></course>
+<course><name>תויעבט תוכרעמב השיח תונורקע </name><num>017006</num><points>2.5</points></course>
+<course><name>ןיחלוקו םיחילמ םימב שומיש </name><num>017009</num><points>2.5</points></course>
+<course><name>הסדהב בשחמ תועצמאב הזילנאו ןונכת </name><num>017019</num><points>2.5</points></course>
+<course><name>תיתביבס תסדנהב םייגולויב םיכילהת </name><num>017022</num><points>2.5</points></course>
+<course><name>הירטמומכל אובמ </name><num>017033</num><points>2.5</points></course>
+<course><name>םינבמ לש תוביציה תונורקע </name><num>018121</num><points>2.0</points></course>
+<course><name>ןוטב ירשג </name><num>018138</num><points>2.0</points></course>
+<course><name>תמדקתמ עקרקה תקינכמ </name><num>018420</num><points>3.0</points></course>
+<course><name>הינבב ךרעו תוכיא לוהינ </name><num>018604</num><points>2.0</points></course>
+<course><name>הרובעת תיצלומיסב םילדומ </name><num>018709</num><points>2.0</points></course>
+<course><name>תויטדואיג תותשר לש הזילנא </name><num>018814</num><points>2.0</points></course>
+<course><name>תיפרגופוט הזילנא </name><num>018816</num><points>3.0</points></course>
+<course><name>םיסדנהמל םייטמתמ תודוסי </name><num>019001</num><points>3.0</points></course>
+<course><name>הקיטסיטטסב םירחבנ םיקרפ </name><num>019007</num><points>3.0</points></course>
+<course><name>בכר ילכ תוריבעו םירוטקרט </name><num>019052</num><points>3.0</points></course>
+<course><name>יאלקח ןוכימב רנימס </name><num>019053</num><points>1.0</points></course>
+<course><name>תיאלקח.נהב תומדקתמ תויעבב רנימס </name><num>019054</num><points>1.0</points></course>
+<course><name>הביבסו עקרק םימב םימדקתמ םיאשונ </name><num>019058</num><points>2.0</points></course>
+<course><name>יאלקח ןוכימב םימדקתמ םיאשונ </name><num>019061</num><points>2.0</points></course>
+<course><name>תמדקתמ םינבמ תקינכמ </name><num>019128</num><points>2.0</points></course>
+<course><name>םינבמ לש הזילנאב םייפוס םיטנמלא </name><num>019140</num><points>2.0</points></course>
+<course><name>ןייוזמ ןוטבב םירחבנ םיאשונ </name><num>019145</num><points>2.0</points></course>
+<course><name>םיכר םירמוח לש הקינכמ </name><num>019149</num><points>2.0</points></course>
+<course><name>1 םיכפשו םימב לופיט </name><num>019309</num><points>3.0</points></course>
+<course><name>הביבסה תוכיאב רנימס </name><num>019315</num><points>1.0</points></course>
+<course><name>הביבסה לש הימיכ </name><num>019318</num><points>3.0</points></course>
+<course><name>םייתביבס םיכילהת לש הימיכה </name><num>019330</num><points>2.0</points></course>
+<course><name>הישעתב םיכפשו םימב לופט </name><num>019337</num><points>2.0</points></course>
+<course><name>המדא תודיער לש םיינכטואיג םיטקפסא </name><num>019424</num><points>2.0</points></course>
+<course><name>הקינכמואיגב םייביטוטיטסנוק םיקוח </name><num>019427</num><points>2.0</points></course>
+<course><name>היינבה יעדמב םימדקתמ םיאשונ </name><num>019520</num><points>2.0</points></course>
+<course><name>תשעותמ הינב תוכרעמ </name><num>019615</num><points>2.0</points></course>
+<course><name>םיטקיורפה םלועב םילהנמו עדי חותיפ </name><num>019623</num><points>2.0</points></course>
+<course><name>םוזיה בלשב הינב יטקייורפ לוהינ </name><num>019624</num><points>2.0</points></course>
+<course><name>1 םיכרד הנבמ ירמחל הדבעמ </name><num>019704</num><points>2.0</points></course>
+<course><name>הרובחת תותשר חותינ </name><num>019709</num><points>2.0</points></course>
+<course><name>הרובחת שוקבל חותנ </name><num>019710</num><points>2.0</points></course>
+<course><name>תמדקתמ הרובעת תסדנה </name><num>019714</num><points>2.0</points></course>
+<course><name>הרובחת תלכלכ </name><num>019721</num><points>2.0</points></course>
+<course><name>הקימניד </name><num>034010</num><points>5.0</points></course>
+<course><name>טטרה תרות </name><num>034011</num><points>2.5</points></course>
+<course><name>1 המירזה תרות </name><num>034013</num><points>4.0</points></course>
+<course><name>םוח רבעמ </name><num>034014</num><points>2.5</points></course>
+<course><name>1 ינכמ ןכת </name><num>034015</num><points>3.0</points></course>
+<course><name>2 ינכמ ןכת </name><num>034016</num><points>3.0</points></course>
+<course><name>הקינורטכמל אובמ </name><num>034022</num><points>2.5</points></course>
+<course><name>1 םיקצומ תקינכמ </name><num>034028</num><points>4.0</points></course>
+<course><name>2 םיקצומ תקינכמ </name><num>034029</num><points>4.0</points></course>
+<course><name>רוצי יכילהת </name><num>034030</num><points>3.5</points></course>
+<course><name>'מ תויראיניל תוכרעמ </name><num>034032</num><points>4.0</points></course>
+<course><name>'מ תירמונ הזילנא </name><num>034033</num><points>3.0</points></course>
+<course><name>ילמשח ענה </name><num>034034</num><points>2.5</points></course>
+<course><name>1 הקימנידומרת </name><num>034035</num><points>4.0</points></course>
+<course><name>יסדנה טוטרשל אובמ </name><num>034036</num><points>2.0</points></course>
+<course><name>בשחוממ יסדנה טוטרש </name><num>034037</num><points>2.0</points></course>
+<course><name>יוסינ תוטישל אובמ </name><num>034038</num><points>2.0</points></course>
+<course><name>יוסינ תוטישב הדבעמ </name><num>034039</num><points>1.5</points></course>
+<course><name>הרקבל אובמ </name><num>034040</num><points>3.0</points></course>
+<course><name>2 תויטמואנפו תוילוארדה תוכרעמ ןכת </name><num>034206</num><points>3.0</points></course>
+<course><name>2 תונוכמ וברוטב טקיורפ </name><num>034310</num><points>2.0</points></course>
+<course><name>1 םחו חכ ינקתמ טקיורפ </name><num>034315</num><points>2.0</points></course>
+<course><name>2 רורקו ריוא גוזימ ןכת טקיורפ </name><num>034318</num><points>2.0</points></course>
+<course><name>1 תונוכמ תסדנהב דחוימ טקיורפ </name><num>034325</num><points>2.0</points></course>
+<course><name>2 תונוכמ תסדנהב דחוימ טקיורפ </name><num>034326</num><points>2.0</points></course>
+<course><name>1 רוציי תוכרעמב טקיורפ </name><num>034335</num><points>2.0</points></course>
+<course><name>1 ם"בית טקיורפ </name><num>034337</num><points>2.0</points></course>
+<course><name>2 ם"בית טקיורפ </name><num>034338</num><points>2.0</points></course>
+<course><name>1 הקיטובורב טקיורפ </name><num>034339</num><points>2.0</points></course>
+<course><name>2 הקיטובורב טקיורפ </name><num>034340</num><points>2.0</points></course>
+<course><name>1 הקינורטכמב טקיורפ </name><num>034349</num><points>2.0</points></course>
+<course><name>2 הקינורטכמב טקיורפ </name><num>034350</num><points>2.0</points></course>
+<course><name>1 הרקבב טקיורפ </name><num>034361</num><points>2.0</points></course>
+<course><name>2 הרקבב טקיורפ </name><num>034362</num><points>2.0</points></course>
+<course><name>1 הקינכמב טקיורפ </name><num>034363</num><points>2.0</points></course>
+<course><name>רוצייל ןכת טקיורפ </name><num>034371</num><points>2.5</points></course>
+<course><name>םיטובורל תמדקתמ הדבעמ </name><num>034401</num><points>2.5</points></course>
+<course><name>ם"ביתב תמדקתמ הדבעמ </name><num>034404</num><points>2.0</points></course>
+<course><name>היצמוטואו הרקבל תמדקתמ הדבעמ </name><num>034406</num><points>2.5</points></course>
+<course><name>היגרנאל תמדקתמ הדבעמ </name><num>034410</num><points>2.5</points></course>
+<course><name>תשדחתמ היגרנאב תמדקתמ הדבעמ </name><num>034420</num><points>2.5</points></course>
+<course><name>הקיטובורל אובמ </name><num>035001</num><points>2.5</points></course>
+<course><name>1 מ"בית תוכרעמ </name><num>035003</num><points>3.0</points></course>
+<course><name>תיתיישעת היצמוטוא </name><num>035008</num><points>2.5</points></course>
+<course><name>םיינכמ-ורקימ םינקתה לש רוציו ןכת </name><num>035021</num><points>3.0</points></course>
+<course><name>.ורטקלא םיביכר לש ימרת לוהנו רורק </name><num>035023</num><points>2.5</points></course>
+<course><name>תישומיש היגולובירט </name><num>035024</num><points>2.5</points></course>
+<course><name>תונוכמ תסדנהל יתריצי אובמ </name><num>035026</num><points>2.5</points></course>
+<course><name>'מ דבעמ ורקימ יססובמ םירצומ ןכת </name><num>035032</num><points>3.0</points></course>
+<course><name>2 המירזה תרות </name><num>035035</num><points>2.5</points></course>
+<course><name>תודונתו הקיטסונגאידל תותוא דובע </name><num>035039</num><points>3.0</points></course>
+<course><name>תוכרעמורקימ תקינכמ </name><num>035041</num><points>3.5</points></course>
+<course><name>תוינוא לש הקיטטסורדיה </name><num>035060</num><points>2.5</points></course>
+<course><name>1 רוציי תוכרעמל אובמ </name><num>035123</num><points>2.5</points></course>
+<course><name>דובע יכילהת תזילנא </name><num>035124</num><points>2.5</points></course>
+<course><name>םחו חכ ינקתמ </name><num>035141</num><points>2.5</points></course>
+<course><name>2 רוריקו ריוא גוזימ תוכרעמ ןכת </name><num>035144</num><points>2.5</points></course>
+<course><name>תימינפ הפירש יעונמ </name><num>035146</num><points>2.5</points></course>
+<course><name>1 רוציי תונוכמ ןכת </name><num>035148</num><points>2.5</points></course>
+<course><name>1 תויטפוא תוכרעמ </name><num>035187</num><points>2.5</points></course>
+<course><name>הרקבה תרות </name><num>035188</num><points>3.5</points></course>
+<course><name>.נורטקלא תוכרעמ לש ינכמ ןכתל אובמ </name><num>035197</num><points>2.5</points></course>
+<course><name>1 םימושייו תיראניל הקיטפוא </name><num>035198</num><points>2.5</points></course>
+<course><name>1 תונוכמ תסדנהב תויטילנא תוטיש </name><num>036001</num><points>3.0</points></course>
+<course><name>1 תיטילנא הקימניד </name><num>036005</num><points>3.0</points></course>
+<course><name>הסיחד המירז </name><num>036008</num><points>2.5</points></course>
+<course><name>םיכילהת לש היצזימיטפוא </name><num>036013</num><points>3.0</points></course>
+<course><name>1 הסדנהב םייפוס םיטנמלא תוטיש </name><num>036015</num><points>3.0</points></course>
+<course><name>1 ם"ביתל םילדומו תיבושיח הירטמואג </name><num>036020</num><points>2.5</points></course>
+<course><name>םיימי םינבמ לש הקימניד </name><num>036027</num><points>2.5</points></course>
+<course><name>1 םדקתמ יסדנה ןכת </name><num>036041</num><points>3.0</points></course>
+<course><name>תוכרעמ תונימא חותנו םינוכיס תכרעה </name><num>036057</num><points>3.0</points></course>
+<course><name>1 םיקצומ לש הקינכמורקימ </name><num>036058</num><points>3.0</points></course>
+<course><name>עגמ תקינכמ </name><num>036062</num><points>3.0</points></course>
+<course><name>השיחו לועפשל הקינכמ וטנגמו ורטקלא </name><num>036065</num><points>3.0</points></course>
+<course><name>הגימצ המירז </name><num>038504</num><points>2.0</points></course>
+<course><name>םייוסינ לש הזילנאו ןכת </name><num>038703</num><points>2.0</points></course>
+<course><name>1 תמדקתמ הקימנידומרת </name><num>038715</num><points>2.5</points></course>
+<course><name>העסה - םוח רבעמ </name><num>038717</num><points>2.0</points></course>
+<course><name>תויטסלפ </name><num>038742</num><points>2.0</points></course>
+<course><name>הקיטובורב םימדקתמ םיאשונ </name><num>038785</num><points>2.0</points></course>
+<course><name>תונוכמ .נהב םדקתמ טקיורפ/ןוירנימס </name><num>038789</num><points>5.0</points></course>
+<course><name>2 תונוכמ תסדנהב םימדקתמ םיאשונ </name><num>038797</num><points>3.0</points></course>
+<course><name>3  תונוכמ תסדנהב םימדקתמ םיאשונ </name><num>038798</num><points>3.0</points></course>
+<course><name>םינייטצמ םיטנדוטסל ירקחמ טקיורפ </name><num>044000</num><points>4.0</points></course>
+<course><name>למשח תסדנהב הדבעמ </name><num>044099</num><points>1.5</points></course>
+<course><name>הנכת תוכרעמל אובמ </name><num>044101</num><points>3.0</points></course>
+<course><name>למשח תודבעמב תוחיטב </name><num>044102</num><points>0.0</points></course>
+<course><name>םיילמשחה םילגעמה תרות </name><num>044105</num><points>4.0</points></course>
+<course><name>למשח תסדנהל אובמ </name><num>044109</num><points>3.5</points></course>
+<course><name>הצחמל םיכילומ ינקתה תודוסי </name><num>044127</num><points>3.5</points></course>
+<course><name>קצומ בצמ לש הקיסיפל אובמ </name><num>044129</num><points>3.0</points></course>
+<course><name>תוכרעמו תותוא </name><num>044130</num><points>4.0</points></course>
+<course><name>םייטנגמורטקלא תודש </name><num>044140</num><points>3.5</points></course>
+<course><name>םייראניל םיינורטקלא םילגעמ </name><num>044142</num><points>4.0</points></course>
+<course><name>תויתרפס תוכרעמ </name><num>044145</num><points>3.0</points></course>
+<course><name>םיינורטקלא גותימ ילגעמ </name><num>044147</num><points>4.0</points></course>
+<course><name>תוגלופמ תוכרעמו םילג </name><num>044148</num><points>3.0</points></course>
+<course><name>'ח1 למשח תסדנהל הדבעמ </name><num>044151</num><points>3.0</points></course>
+<course><name>1 למשח תסדנהב הדבעמ </name><num>044160</num><points>3.0</points></course>
+<course><name>2 למשח תסדנהב הדבעמ </name><num>044162</num><points>2.5</points></course>
+<course><name>3 למשח תסדנהב הדבעמ </name><num>044164</num><points>3.0</points></course>
+<course><name>'א טקייורפ </name><num>044167</num><points>4.0</points></course>
+<course><name>ב  טקיורפ </name><num>044169</num><points>4.0</points></course>
+<course><name>דחוימ  טקיורפ </name><num>044170</num><points>4.0</points></course>
+<course><name>הישעתב טקיורפ </name><num>044173</num><points>8.0</points></course>
+<course><name>םינייטצמל ישיא אשונ </name><num>044180</num><points>4.0</points></course>
+<course><name>םינייטצמל םימדקתמ םיאשונ </name><num>044184</num><points>2.0</points></course>
+<course><name>םינייטצמל דחוימ אשונ </name><num>044185</num><points>1.0</points></course>
+<course><name>1 הרקב תוכרעמ </name><num>044191</num><points>4.0</points></course>
+<course><name>2 הרקב תוכרעמ </name><num>044192</num><points>3.0</points></course>
+<course><name>תיראניל הרקבל הדבעמ </name><num>044193</num><points>2.0</points></course>
+<course><name>תותוא לש יתרפס דובעל אובמ </name><num>044198</num><points>3.0</points></course>
+<course><name>םייארקא תותוא </name><num>044202</num><points>3.0</points></course>
+<course><name>רודישו הטילק תוקינכט </name><num>044214</num><points>3.0</points></course>
+<course><name>1 םיינורטקלא םינקתה </name><num>044231</num><points>4.0</points></course>
+<course><name>הקינורטקלאורקימב םיכילהת </name><num>044239</num><points>3.5</points></course>
+<course><name>םיבשחמל אובמו יגול ןכת </name><num>044262</num><points>3.0</points></course>
+<course><name>הנכת תוכרעמב טקיורפ </name><num>044265</num><points>3.0</points></course>
+<course><name>םימתירוגלאו םינותנ ינבמל אובמ </name><num>044268</num><points>3.0</points></course>
+<course><name>םיבשחמ תותשרל אובמ </name><num>044334</num><points>3.0</points></course>
+<course><name>1 הקיטפואורטקלא </name><num>044339</num><points>3.0</points></course>
+<course><name>םיבלושמ קפסה ינקתה </name><num>045232</num><points>3.0</points></course>
+<course><name>םיינגרוא םירמוחו םיביכרל אובמ </name><num>046012</num><points>3.0</points></course>
+<course><name>םייביטקא םיננסמ ןכת </name><num>046189</num><points>3.0</points></course>
+<course><name>תודמול תוכרעמ </name><num>046195</num><points>3.0</points></course>
+<course><name>היצזימיטפואב תויבושיח תוטיש </name><num>046197</num><points>3.0</points></course>
+<course><name>תונומת חותנו דובע </name><num>046200</num><points>3.0</points></course>
+<course><name>תיתרפס תרושקתל אובמ </name><num>046206</num><points>3.0</points></course>
+<course><name>תוינרדומ תרושקת תוקינכט </name><num>046208</num><points>3.0</points></course>
+<course><name>הלעפה תוכרעמ הנבמ </name><num>046209</num><points>3.5</points></course>
+<course><name>הלעפה תוכרעמב הדבעמ </name><num>046210</num><points>1.0</points></course>
+<course><name>םילגורקימ </name><num>046216</num><points>3.0</points></course>
+<course><name>מ"למ ינקתה לש םיילקיזיפ תונורקע </name><num>046225</num><points>3.0</points></course>
+<course><name>.י.ס.ל.יו-ל אובמ - םיבלושמ םילגעמ </name><num>046237</num><points>3.0</points></course>
+<course><name>תיטנווק הקינכמ </name><num>046241</num><points>3.0</points></course>
+<course><name>2 הקיטפואורטקלא </name><num>046250</num><points>3.0</points></course>
+<course><name>הנירקו תונטנא </name><num>046256</num><points>3.0</points></course>
+<course><name>(היצליפמוק) רודיה תוטיש </name><num>046266</num><points>3.0</points></course>
+<course><name>םיבשחמ הנבמ </name><num>046267</num><points>3.0</points></course>
+<course><name>םימצע החנומ ןכתו תונכת </name><num>046271</num><points>3.0</points></course>
+<course><name>םייגולויב תוכרעמו תותואל אובמ </name><num>046326</num><points>3.0</points></course>
+<course><name>העימשו היאר תוכרעמ </name><num>046332</num><points>3.0</points></course>
+<course><name>םיבשחמ תותשר ןכת </name><num>046335</num><points>3.0</points></course>
+<course><name>תותוא לש יתרפס דובע </name><num>046745</num><points>3.0</points></course>
+<course><name>תוריהמ תויתרפס תוכרעמ ןכת </name><num>046864</num><points>3.0</points></course>
+<course><name>יא.סא.לא.יו לש בשחמ תרזעב ןכת </name><num>046880</num><points>3.0</points></course>
+<course><name>וידר רדתב םיבלושמ םילגעמ </name><num>046903</num><points>3.0</points></course>
+<course><name>1 הקיטפואורטקלאב הדבעמ </name><num>048711</num><points>2.0</points></course>
+<course><name>2 הקיטפואורטקלאב הדבעמ </name><num>048712</num><points>2.0</points></course>
+<course><name>1 הרקבו הדימל ,תוכרעמב .קתמ .שונ </name><num>048715</num><points>2.0</points></course>
+<course><name>2 הרקבו הדימל תוכרעמב .קתמ .שונ </name><num>048716</num><points>2.0</points></course>
+<course><name>היצמרופניאה תרות </name><num>048733</num><points>2.0</points></course>
+<course><name>םייגולויב תוכרעמו תותואב הדבעמ </name><num>048747</num><points>2.0</points></course>
+<course><name>תותוא דובעל הדבעמ </name><num>048816</num><points>2.0</points></course>
+<course><name>תיראנילה הרקבה תודוסי </name><num>048833</num><points>2.0</points></course>
+<course><name>י.ס.ל.ו ידבעמל .דקתמ תורוטקטיכרא </name><num>048853</num><points>2.0</points></course>
+<course><name>1 למשח תסדנהב םיאשונ חותיפ </name><num>048870</num><points>1.0</points></course>
+<course><name>2 למשח תסדנהב םיאשונ חותיפ </name><num>048871</num><points>1.0</points></course>
+<course><name>הרמוחו הנכתל הדבעמ </name><num>048877</num><points>2.0</points></course>
+<course><name>.י.ס.ל.יו תורוטקטיכרא </name><num>048878</num><points>2.0</points></course>
+<course><name>שחוממ היארו תונומת הנבמ הייארב עמ </name><num>048922</num><points>2.0</points></course>
+<course><name>הקינורטקלאורקימב רנימס </name><num>048923</num><points>2.0</points></course>
+<course><name>(יביטפדא) לגתסמ תותוא דוביע </name><num>048929</num><points>2.0</points></course>
+<course><name>תרושקתל הדבעמ </name><num>048933</num><points>2.0</points></course>
+<course><name>1 בושחמב םימדקתמ םיאשונ </name><num>048961</num><points>2.0</points></course>
+<course><name>ןהימושייו תובלושמ תוגצה </name><num>048964</num><points>2.0</points></course>
+<course><name>הקינורטקלאורקימב הדבעמ </name><num>048966</num><points>2.0</points></course>
+<course><name>םיבשחמ תותשרל הדבעמ </name><num>048967</num><points>2.0</points></course>
+<course><name>תויליבקמ תוכרעמב הדבעמ </name><num>048976</num><points>2.0</points></course>
+<course><name>תוריהמ תותשרב הריפסו יוליג </name><num>048982</num><points>2.0</points></course>
+<course><name>1 ןוירנימס </name><num>048990</num><points>3.0</points></course>
+<course><name>2 ןוירנימס </name><num>048991</num><points>3.0</points></course>
+<course><name>םיירוזחמ םינבמב םילג </name><num>048996</num><points>2.0</points></course>
+<course><name>היצמינאו היצזילאוזיו </name><num>049003</num><points>2.0</points></course>
+<course><name>תובכרומ תוכרעמב דומיל </name><num>049004</num><points>2.0</points></course>
+<course><name>הרקב יאשונב הדבעמ </name><num>049005</num><points>2.0</points></course>
+<course><name>םייטנגמורטקלא םילגל הדבעמ </name><num>049006</num><points>2.0</points></course>
+<course><name>תבשחוממ הייארל תומיד תוכרעמ </name><num>049034</num><points>2.0</points></course>
+<course><name>חונעפ ימתירוגלאו ףרג ידוק </name><num>049040</num><points>2.0</points></course>
+<course><name>תויבושיח תוטישו לודימ תושיג </name><num>049049</num><points>2.0</points></course>
+<course><name>תימיכויבו תימיכ הסדנהל אובמ </name><num>054131</num><points>4.0</points></course>
+<course><name>'מ 2 תימיכ הסדנה תונורקע </name><num>054306</num><points>4.0</points></course>
+<course><name>תימיכויבו תימיכ.הב 1 הדרפה יכילהת </name><num>054307</num><points>3.5</points></course>
+<course><name>'ב הקימנידומרת </name><num>054315</num><points>3.0</points></course>
+<course><name>2 םירמילופ </name><num>054351</num><points>2.5</points></course>
+<course><name>1 רקחמ טקיורפ </name><num>054367</num><points>2.5</points></course>
+<course><name>םיסדנהמל קצומ בצמ לש הימיכל אובמ </name><num>054373</num><points>2.5</points></course>
+<course><name>2 תימיכ הסדנהל   הדבעמ </name><num>054400</num><points>2.5</points></course>
+<course><name>תימיכ הסדנהב םיילכלכ םילוקיש </name><num>054401</num><points>2.5</points></course>
+<course><name>'מ םיכילהת חותינו ןוכת </name><num>054402</num><points>2.5</points></course>
+<course><name>1 רמג רקחמ </name><num>054406</num><points>3.0</points></course>
+<course><name>.מיכויבו םיימיכ םירוטקאיר ןכתל.במ </name><num>054408</num><points>3.5</points></course>
+<course><name>תימיכויב הסדנה </name><num>054412</num><points>3.5</points></course>
+<course><name>'כב 2 תימיכ הסדנהל הדבעמ </name><num>054420</num><points>1.5</points></course>
+<course><name>תימיכ הסדנהב םייטמיתמ םילדומ </name><num>054451</num><points>2.5</points></course>
+<course><name>תונרבממ י"ע רוהיטו הדרפה יכילהת </name><num>056142</num><points>2.5</points></course>
+<course><name>םירחבנ םייסדנה םיאשונ </name><num>056146</num><points>2.0</points></course>
+<course><name>םדקתמ םירוטקאר ןונכת </name><num>058145</num><points>2.5</points></course>
+<course><name>תימיכ הסדנהב תויטמתמ תוטיש </name><num>058177</num><points>3.5</points></course>
+<course><name>1  רמג תדובע </name><num>064001</num><points>4.0</points></course>
+<course><name>2 רמג תדובע </name><num>064002</num><points>4.0</points></course>
+<course><name>ןוזמ תישעתב תישעמ הדובע </name><num>064003</num><points>1.0</points></course>
+<course><name>דחוימ טקיורפ </name><num>064005</num><points>1.0</points></course>
+<course><name>ינכט חוויד </name><num>064071</num><points>1.0</points></course>
+<course><name>ןוזמו.גולונכטויב.נהב הקימנידומרת </name><num>064106</num><points>4.0</points></course>
+<course><name>2 היגולונכטויבו ןוזמ .נה תונורקע </name><num>064117</num><points>3.0</points></course>
+<course><name>טויבו ןוזמ.נהב תומדקתמ תויגולונכט </name><num>064209</num><points>5.0</points></course>
+<course><name>3 ןוזמ לש היגולונכט </name><num>064210</num><points>2.0</points></course>
+<course><name>ןוזמ לש הזילנא </name><num>064324</num><points>3.0</points></course>
+<course><name>םייגולויב םירמוחו ןוזמ#הזילנאב.עמ </name><num>064326</num><points>2.0</points></course>
+<course><name>ןוזמ לש היגולויבורקימ </name><num>064405</num><points>4.0</points></course>
+<course><name>תירלוקלומ היגולונכטויב </name><num>064507</num><points>3.5</points></course>
+<course><name>היגולונכטויבב הדבעמ </name><num>064508</num><points>3.5</points></course>
+<course><name>תירלוקלומ היגולונכטויבל אובמ </name><num>064523</num><points>2.5</points></course>
+<course><name>הנוזת </name><num>064603</num><points>3.0</points></course>
+<course><name>תיתביבס היגולוקיסקוט </name><num>064611</num><points>2.0</points></course>
+<course><name>גולויב םירצומו תופורת ,ןוזמ תזירא </name><num>066217</num><points>3.0</points></course>
+<course><name>ןוזמ לש תיטפלונגרוא הכרעה תונורקע </name><num>066230</num><points>2.5</points></course>
+<course><name>היגולונכטו עדמ - תוקבא </name><num>066243</num><points>2.5</points></course>
+<course><name>ןוזמב היצלוספקנאוננו ורקימ </name><num>066328</num><points>3.0</points></course>
+<course><name>םינגותפ לש היגולויבורקמ </name><num>066418</num><points>2.0</points></course>
+<course><name>היגולונכטויבב הבשהו הדרפה יכילהת </name><num>066505</num><points>2.5</points></course>
+<course><name>היגולונכטויבב תומזי </name><num>066525</num><points>2.0</points></course>
+<course><name>םילקיטואיסרטונו ילנויצקנופ ןוזמ </name><num>066613</num><points>2.0</points></course>
+<course><name>תיטונוריוא הסדנהב יוסינ תוטיש </name><num>084153</num><points>1.5</points></course>
+<course><name>בשחוממ יסדנה טוטרש </name><num>084155</num><points>3.0</points></course>
+<course><name>הקימנידומרת </name><num>084213</num><points>4.0</points></course>
+<course><name>1 סיטה תקינכמ </name><num>084220</num><points>2.5</points></course>
+<course><name>2 סיטה תקינכמ </name><num>084221</num><points>2.5</points></course>
+<course><name>הקימניד </name><num>084225</num><points>4.0</points></course>
+<course><name>הסיחד יתלב הקימנידוריוא </name><num>084311</num><points>3.5</points></course>
+<course><name>הסיחד הקימנידוריוא </name><num>084312</num><points>2.5</points></course>
+<course><name>םוח רבעמו הגימצ המירז </name><num>084314</num><points>3.5</points></course>
+<course><name>ןוליס יעונמ - הענה יעצמא </name><num>084401</num><points>3.0</points></course>
+<course><name>תיטקר הענה </name><num>084402</num><points>3.5</points></course>
+<course><name>םיקצומה תקינכמ </name><num>084505</num><points>3.5</points></course>
+<course><name>.וריוא םינבמב בשחמ ימושייו הזילנא </name><num>084512</num><points>3.0</points></course>
+<course><name>יטונוריואה הנבמה תודוסי </name><num>084513</num><points>3.5</points></course>
+<course><name>םיביכר לש ינכמ ןכתב טקיורפ </name><num>084636</num><points>1.0</points></course>
+<course><name>תויתפועת תוכרעמ לש רוצייו .נה ןכת </name><num>084640</num><points>4.0</points></course>
+<course><name>61 ןכת טקיורפ </name><num>084661</num><points>3.0</points></course>
+<course><name>62 ןכת טקיורפ </name><num>084662</num><points>3.0</points></course>
+<course><name>63 ןכת טקיורפ </name><num>084663</num><points>3.0</points></course>
+<course><name>64 ןכת טקיורפ </name><num>084664</num><points>3.0</points></course>
+<course><name>65 ןכת טקיורפ </name><num>084665</num><points>3.0</points></course>
+<course><name>66 ןכת טקיורפ </name><num>084666</num><points>3.0</points></course>
+<course><name>67 ןכת טקיורפ </name><num>084667</num><points>3.0</points></course>
+<course><name>68 ןכת טקיורפ </name><num>084668</num><points>3.0</points></course>
+<course><name>תוימניד תוכרעמ </name><num>084730</num><points>2.5</points></course>
+<course><name>הרקבה תרות </name><num>084735</num><points>3.5</points></course>
+<course><name>סיט ילכ לש תיטמוטוא הרקב </name><num>084736</num><points>2.5</points></course>
+<course><name>ללח תסדנה תודוסי </name><num>084913</num><points>2.5</points></course>
+<course><name>1 תיביטרופס הפועת </name><num>085101</num><points>1.5</points></course>
+<course><name>2 תיביטרופס הפועת </name><num>085102</num><points>1.5</points></course>
+<course><name>3 תיביטרופס הפועת </name><num>085103</num><points>1.5</points></course>
+<course><name>מ תיטונוריוא הסדנהל תירמונ הזילנא </name><num>085135</num><points>3.0</points></course>
+<course><name>יוסינ טקיורפ </name><num>085156</num><points>2.5</points></course>
+<course><name>תוכרעמ תסדנהב חותינ ילכ </name><num>085180</num><points>2.5</points></course>
+<course><name>ללחו הקיטונוריוא תסדנהל אובמ </name><num>085201</num><points>2.0</points></course>
+<course><name>הפירשו הענהב הדבעמ </name><num>085405</num><points>2.5</points></course>
+<course><name>ןיוול לש ינכמ ןכתל אובמ </name><num>085691</num><points>3.0</points></course>
+<course><name>םיסוטמ לש ינושאר ןכת </name><num>085695</num><points>3.0</points></course>
+<course><name>הרקבב הדבעמ </name><num>085705</num><points>2.5</points></course>
+<course><name>ללח-ריווא ימושייב םידידמ תוכרעמ </name><num>085735</num><points>3.0</points></course>
+<course><name>1 רקחמ טקיורפ </name><num>085851</num><points>3.0</points></course>
+<course><name>2 רקחמ טקיורפ </name><num>085852</num><points>3.0</points></course>
+<course><name>תיטונוריוא הסדנהב תוירמונ תוטיש </name><num>086172</num><points>3.0</points></course>
+<course><name>םיקוסמ לש  הקימנידוריואו הקימניד </name><num>086219</num><points>3.0</points></course>
+<course><name>תיתרפס הרקב תוכרעמ </name><num>086220</num><points>3.0</points></course>
+<course><name>היגרנא תקפהו חור תוניברוט </name><num>086284</num><points>3.0</points></course>
+<course><name>ללחב םיפוג תקינכמ </name><num>086287</num><points>3.0</points></course>
+<course><name>ןוליס חגמ יעונמ </name><num>086414</num><points>3.0</points></course>
+<course><name>הפירש יכילהת </name><num>086478</num><points>3.0</points></course>
+<course><name>הענהו המירזב תומדקתמ הדידמ תוטיש </name><num>086484</num><points>3.0</points></course>
+<course><name>םיסוטמ הנבמ ןכת </name><num>086583</num><points>3.0</points></course>
+<course><name>סיט ילכ לש תיטמוטוא הרקב </name><num>086755</num><points>3.0</points></course>
+<course><name>תויבו היחנה תונורקע </name><num>086760</num><points>3.0</points></course>
+<course><name>תילוק-איגשה המירזה תודוסי </name><num>086800</num><points>3.0</points></course>
+<course><name>םינבמ לש תוביציה תרות </name><num>087532</num><points>3.0</points></course>
+<course><name>1_ללח-ריוא תסדנהב םירחבנ םיאשונ </name><num>087541</num><points>3.0</points></course>
+<course><name>1 הקימנידוריוא </name><num>088311</num><points>3.0</points></course>
+<course><name>עבטב הענה לש הקימאניד-ורדהו-וריוא </name><num>088320</num><points>3.0</points></course>
+<course><name>2 תינוליסו תיטקר הענה </name><num>088422</num><points>3.0</points></course>
+<course><name>םירטמרפ ךורעשו תוכרעמ יוהזל תוטיש </name><num>088757</num><points>3.0</points></course>
+<course><name>ומטאל הרידח תויעבו םייטסילב םיליט </name><num>088777</num><points>3.0</points></course>
+<course><name>בשחמ ישומישב הדבעמ </name><num>094120</num><points>0.0</points></course>
+<course><name>תויטסיגול 'עמו הקפסא תוארשרש לוהנ </name><num>094139</num><points>3.5</points></course>
+<course><name>הנוכמ - םדא תוכרעמל אובמ </name><num>094140</num><points>2.5</points></course>
+<course><name>תורישו רוציי תוכרעמו רצומה ןכת </name><num>094141</num><points>3.5</points></course>
+<course><name>תורשו רוציי 'רעמ לועפת </name><num>094142</num><points>3.5</points></course>
+<course><name>לוהינו הישעת תסדנהב טקיורפ-ינימ </name><num>094187</num><points>1.0</points></course>
+<course><name>לוהינו הישעת תסדנהל אובמ </name><num>094188</num><points>1.5</points></course>
+<course><name>ןכת טקיורפ םדק </name><num>094189</num><points>1.5</points></course>
+<course><name>1 ןכת טקיורפ </name><num>094195</num><points>3.5</points></course>
+<course><name>ילאירטסמס רקחמ טקיורפ </name><num>094197</num><points>3.5</points></course>
+<course><name>הישעת תסדנהב םיעוריא </name><num>094198</num><points>3.5</points></course>
+<course><name>הנכות תסדנה </name><num>094219</num><points>3.5</points></course>
+<course><name>עדימ תוכרעמ חותינו ןויפא </name><num>094222</num><points>3.5</points></course>
+<course><name>םימתירוגלאו םינותנ ינבמ </name><num>094223</num><points>3.5</points></course>
+<course><name>םינותנ ידסמ לוהינ </name><num>094240</num><points>3.5</points></course>
+<course><name>םיעוציב רקחב םיטסינימרטד םילדומ </name><num>094313</num><points>3.5</points></course>
+<course><name>םיעוצב רקחב םייטסכוטס םילדומ </name><num>094314</num><points>3.5</points></course>
+<course><name>תויראניל תוימניד תוכרעמ </name><num>094323</num><points>3.5</points></course>
+<course><name>תיתרפס היצלומיס </name><num>094334</num><points>3.0</points></course>
+<course><name>'ת תיטרקסיד הקיטמתמ </name><num>094344</num><points>3.0</points></course>
+<course><name>'ת תורבתסה </name><num>094411</num><points>4.0</points></course>
+<course><name>מ תורבתסה </name><num>094412</num><points>4.0</points></course>
+<course><name>הקיטסיטטסל אובמ </name><num>094423</num><points>3.5</points></course>
+<course><name>הקיטסיטטסו תורבתסהל אובמ </name><num>094480</num><points>3.5</points></course>
+<course><name>1הלכלכ ורקימ </name><num>094503</num><points>3.5</points></course>
+<course><name>הלכלכ ורקאמ </name><num>094513</num><points>3.5</points></course>
+<course><name>יסנניפ לוהינל אובמ </name><num>094564</num><points>2.5</points></course>
+<course><name>תועקשההו ןוהה קוש </name><num>094569</num><points>3.5</points></course>
+<course><name>הלכלכל אובמ </name><num>094591</num><points>3.5</points></course>
+<course><name>הדובע יסחיו תינוגרא היגולויצוס </name><num>094607</num><points>3.5</points></course>
+<course><name>םייגולונכט םימזימל קוויש </name><num>094816</num><points>2.0</points></course>
+<course><name>תילוהינו תיסנניפ תואנובשח </name><num>094821</num><points>3.5</points></course>
+<course><name>תמדקתמ תילוהינ תואנובשח </name><num>094822</num><points>2.5</points></course>
+<course><name>קוושה תונורקע </name><num>094831</num><points>2.5</points></course>
+<course><name>םילהנמ קחשמ </name><num>094851</num><points>3.5</points></course>
+<course><name>תוטיש רופישו םיעוציב תדידמ </name><num>095112</num><points>3.5</points></course>
+<course><name>הקוזחתו ןוירפ תוכיא </name><num>095113</num><points>3.5</points></course>
+<course><name>תורשו רוציי .עמב רנימס </name><num>095120</num><points>3.5</points></course>
+<course><name>םלוהינו םיטקיורפ ןונכת </name><num>095140</num><points>3.5</points></course>
+<course><name>תיתישעת היגולוכיספ </name><num>095605</num><points>2.5</points></course>
+<course><name>שונא יעוציב </name><num>095618</num><points>3.0</points></course>
+<course><name>תישיאניב תונמוימל הנדס </name><num>095648</num><points>2.0</points></course>
+<course><name>תורחת יאנתב יקסע ןונכתו תומזי </name><num>095815</num><points>1.5</points></course>
+<course><name>תוכיא תסדנה </name><num>096120</num><points>3.5</points></course>
+<course><name>הימושיו תיתוכאלמ הניב תודוסי </name><num>096210</num><points>3.5</points></course>
+<course><name>םינותנ ידסמ תסדנה </name><num>096220</num><points>3.0</points></course>
+<course><name>הנכות תוכרעמ תומיאו הקידב </name><num>096229</num><points>3.5</points></course>
+<course><name>עדימ תוכרעמב םירחבנ םיאשונ </name><num>096261</num><points>2.5</points></course>
+<course><name>עדימ רוזחא </name><num>096262</num><points>3.5</points></course>
+<course><name>הקיגולב םימתירוגלא </name><num>096265</num><points>3.0</points></course>
+<course><name>היצלומיסב תומדקתמ תוטיש </name><num>096320</num><points>2.5</points></course>
+<course><name>תוריש תוכרעמ תסדנה </name><num>096324</num><points>3.5</points></course>
+<course><name>תיתיישעת הקיטסיטטס </name><num>096414</num><points>3.5</points></course>
+<course><name>יוזיחו תויתע תורדס </name><num>096425</num><points>2.5</points></course>
+<course><name>תוכרעמ יסדנהמל הלכלכ </name><num>096501</num><points>3.0</points></course>
+<course><name>1 תילכלכ ורקימ הירואת </name><num>096520</num><points>3.5</points></course>
+<course><name>תילכלכ תוגהנתהו םיקחשמה תרות </name><num>096570</num><points>3.5</points></course>
+<course><name>םיזרכמה תרות </name><num>096573</num><points>2.5</points></course>
+<course><name>הלכלכב םימדקתמ םיאשונ </name><num>096582</num><points>3.5</points></course>
+<course><name>הקירטמונוקא </name><num>096586</num><points>3.5</points></course>
+<course><name>תילכלכ ורקאמ הירואת </name><num>096590</num><points>3.0</points></course>
+<course><name>תוטלחה תלבקו הבישח </name><num>096617</num><points>2.5</points></course>
+<course><name>לוהינב םימדקתמ םיאשונ </name><num>096809</num><points>3.5</points></course>
+<course><name>ינחור ןינקו תומזי </name><num>096815</num><points>2.0</points></course>
+<course><name>תוחוקל ירשק לוהינ תוכרעמ </name><num>096820</num><points>3.5</points></course>
+<course><name>תונימא לוהינ </name><num>097122</num><points>3.5</points></course>
+<course><name>תויקסע תוכרעמ יבאשמ לוהינו לודימ </name><num>097130</num><points>3.5</points></course>
+<course><name>םדקתמ הקפסא תוארשרש לוהינ </name><num>097139</num><points>3.5</points></course>
+<course><name>םדקתמ רוציי תוכרעמ לועפת </name><num>097142</num><points>3.5</points></course>
+<course><name>םייפותישה םיקחשמה תרות </name><num>097317</num><points>2.5</points></course>
+<course><name>םתמשהו םידבוע תריחב </name><num>097616</num><points>3.0</points></course>
+<course><name>תורקבו תוגוצת -הנוכמ םדא 'רעמ </name><num>097638</num><points>3.0</points></course>
+<course><name>1 היצזימטפוא </name><num>098311</num><points>3.0</points></course>
+<course><name>1 תוכרעמ ןונכתו חותינ </name><num>098313</num><points>3.0</points></course>
+<course><name>ירוטניבמוקו יראניל תונכת </name><num>098331</num><points>2.5</points></course>
+<course><name>תורבתסהה תרות </name><num>098416</num><points>3.0</points></course>
+<course><name>תוגהנתהה יעדמב רקחמו םינותנ ףוסיא </name><num>098603</num><points>2.5</points></course>
+<course><name>םילהנמל עדימ תוכרעמ לוהינל אובמ </name><num>098720</num><points>1.5</points></course>
+<course><name>1 תויתומכ תוטיש </name><num>098730</num><points>1.5</points></course>
+<course><name>דיגאתה תיגטרטסא </name><num>098736</num><points>1.5</points></course>
+<course><name>םיקסע להנמל תינוגריא תוגהנתה </name><num>098760</num><points>1.5</points></course>
+<course><name>שונא יבאשמ לוהינ </name><num>098762</num><points>1.5</points></course>
+<course><name>יתוברתניב לוהינ </name><num>098763</num><points>1.5</points></course>
+<course><name>םיסנניפ םירזגנ יקושל אובמ </name><num>098778</num><points>1.5</points></course>
+<course><name>תיתורחת היגטרטסא </name><num>098782</num><points>1.5</points></course>
+<course><name>1 קווישה לוהינ </name><num>098783</num><points>1.5</points></course>
+<course><name>יקסע חותיפו תומזי </name><num>098788</num><points>1.5</points></course>
+<course><name>םישדח םירצומ חותפב םיקוויש םיטביה </name><num>098790</num><points>1.5</points></course>
+<course><name>יתורחת ןיעידומ לוהינ </name><num>098792</num><points>1.0</points></course>
+<course><name>לארשיב תיגטרטסא תיקסיע תוגיהנמ </name><num>098795</num><points>1.5</points></course>
+<course><name>תינוגרא תוגהנתהב תוברת ילדבה </name><num>098870</num><points>2.5</points></course>
+<course><name>תמדקתמ תיתישעת היגולוכיספב רנימס </name><num>099601</num><points>2.0</points></course>
+<course><name>עוציב תוליעי לע ץחל תעפשה </name><num>099611</num><points>2.0</points></course>
+<course><name>תוחוקל ירשק לוהינ </name><num>099742</num><points>1.5</points></course>
+<course><name>קווישב תורחבנ תויגוס </name><num>099743</num><points>1.5</points></course>
+<course><name>יגטרטסא לוהינב םירחבנ םיאשונ </name><num>099746</num><points>1.5</points></course>
+<course><name>תיפותיש היגטרטסא </name><num>099749</num><points>1.5</points></course>
+<course><name>ןתמו אשמב הנדס </name><num>099760</num><points>2.0</points></course>
+<course><name>םייתצובק םיכילהתו תוגיהנמ </name><num>099766</num><points>1.5</points></course>
+<course><name>ילבולג יגטרטסא לוהינב טקיורפ </name><num>099768</num><points>6.0</points></course>
+<course><name>תויצפוא יקוש </name><num>099773</num><points>1.5</points></course>
+<course><name>םילהנמ קחשמ </name><num>099780</num><points>3.0</points></course>
+<course><name>1 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104003</num><points>5.0</points></course>
+<course><name>2 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104004</num><points>5.0</points></course>
+<course><name>תיראניל הרבגלא </name><num>104006</num><points>4.0</points></course>
+<course><name>'מ תיראיניל הרבגלא </name><num>104009</num><points>4.0</points></course>
+<course><name>'ת1 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104012</num><points>5.5</points></course>
+<course><name>'ת2 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104014</num><points>5.0</points></course>
+<course><name>בחרומ/1 הרבגלא </name><num>104016</num><points>5.0</points></course>
+<course><name>1'מ1 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104017</num><points>5.0</points></course>
+<course><name>2/'מ1 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104018</num><points>5.0</points></course>
+<course><name>1/'מ2 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104020</num><points>5.0</points></course>
+<course><name>2/'מ2 ילרגטניאו ילאיצנרפיד ןובשח </name><num>104022</num><points>5.0</points></course>
+<course><name>תויקלח תוילאיצנרפיד תואוושמל אובמ </name><num>104030</num><points>3.5</points></course>
+<course><name>'ח תורבתסהל אובמ </name><num>104034</num><points>3.5</points></course>
+<course><name>םייחה יעדמל הקיטמתמ </name><num>104090</num><points>5.0</points></course>
+<course><name>הירטמיסו הירטמואיג </name><num>104112</num><points>3.0</points></course>
+<course><name>1 תויצקנופה תרות </name><num>104122</num><points>3.5</points></course>
+<course><name>ח/תוליגר תוילאיצנרפיד תואושמ </name><num>104131</num><points>2.5</points></course>
+<course><name>ח תינרדומ הרבגלא </name><num>104134</num><points>2.5</points></course>
+<course><name>'ת תוליגר תוילאיצנרפד תואוושמ </name><num>104135</num><points>2.5</points></course>
+<course><name>םייגולופוטו םיירטמ םיבחרמל אובמ </name><num>104142</num><points>3.5</points></course>
+<course><name>תוישממ תויצקנופ </name><num>104165</num><points>3.5</points></course>
+<course><name>א  הרבגלא </name><num>104167</num><points>5.0</points></course>
+<course><name>'ב תיראיניל הרבגלא </name><num>104171</num><points>3.0</points></course>
+<course><name>תורובחל אובמ </name><num>104172</num><points>2.5</points></course>
+<course><name>1 הכמסהל הרבגלאב רנימס </name><num>104183</num><points>2.0</points></course>
+<course><name>1הכמסהב.נדוטסל רנימס </name><num>104185</num><points>2.0</points></course>
+<course><name>תויעב תרתהב רנימס </name><num>104186</num><points>2.0</points></course>
+<course><name>ףצרה תקינכמ </name><num>104191</num><points>4.0</points></course>
+<course><name>תישומש הקיטמתמל אובמ </name><num>104192</num><points>3.0</points></course>
+<course><name>1 ילמיסטיניפניא ןובשח </name><num>104195</num><points>5.5</points></course>
+<course><name>תוילרגטניא תורמתהו היירופ ירוט </name><num>104214</num><points>2.5</points></course>
+<course><name>תובכורמ תויצקנופ </name><num>104215</num><points>2.5</points></course>
+<course><name>'ח תויקלח תוילאיצנרפיד תואוושמ </name><num>104218</num><points>2.5</points></course>
+<course><name>'ת תויקלח תוילאיצנרפד תואוושמ </name><num>104220</num><points>2.5</points></course>
+<course><name>תורבתסהה תרות </name><num>104222</num><points>3.5</points></course>
+<course><name>1 בשחמ תרזעב הקיטמתמב תויעב ןורתפ </name><num>104250</num><points>2.0</points></course>
+<course><name>.פיד תואוושמב תויטילנא תוטיש </name><num>104270</num><points>4.0</points></course>
+<course><name>תילנויצקנופ הזילנאל אובמ </name><num>104276</num><points>3.5</points></course>
+<course><name>תודשו םיגוחל אובמ </name><num>104279</num><points>2.5</points></course>
+<course><name>תורובחו םיגוח ,םילודומ </name><num>104280</num><points>3.0</points></course>
+<course><name>2 יפניא ןובשח </name><num>104281</num><points>5.0</points></course>
+<course><name>3 יפניא ןובשח </name><num>104282</num><points>4.0</points></course>
+<course><name>תירמונ הזילנאל אובמ </name><num>104283</num><points>3.5</points></course>
+<course><name>תיראניל הרבגלאב תוירמונ תוטיש </name><num>104284</num><points>3.0</points></course>
+<course><name>'א תוליגר תוילאיצנרפיד תואוושמ </name><num>104285</num><points>3.5</points></course>
+<course><name>הקירוטניבמוק </name><num>104286</num><points>2.5</points></course>
+<course><name>תוצובקה תרות </name><num>104290</num><points>3.5</points></course>
+<course><name>םיירוטניבמוק םימתירוגלא </name><num>104291</num><points>3.5</points></course>
+<course><name>םיקחשמה תרות </name><num>106173</num><points>3.0</points></course>
+<course><name>יל תוארבגלא </name><num>106306</num><points>3.0</points></course>
+<course><name>1 תינרדומ הרבגלא </name><num>106380</num><points>3.0</points></course>
+<course><name>תירבגלא היגולופוט </name><num>106383</num><points>3.0</points></course>
+<course><name>1 תילנויצקנופ הזילנאב רנימס </name><num>106386</num><points>2.0</points></course>
+<course><name>תוצירטמה תרות </name><num>106393</num><points>3.0</points></course>
+<course><name>תויצאירו ןובשח </name><num>106394</num><points>3.0</points></course>
+<course><name>תורובחה תרות </name><num>106411</num><points>3.0</points></course>
+<course><name>תויקלח תוילאיצנרפיד תואוושמ </name><num>106413</num><points>3.0</points></course>
+<course><name>םירוטרפואה תרותב םיאשונ </name><num>106435</num><points>3.0</points></course>
+<course><name>תוילאיביצנרפיד תועירי </name><num>106723</num><points>3.0</points></course>
+<course><name>2 הקירוטניבמוקב םירחבנ םיאשונ </name><num>106928</num><points>3.0</points></course>
+<course><name>תורבתסהב םירחבנ םיאשונ </name><num>106935</num><points>3.0</points></course>
+<course><name>תילנויצקנופ הזילנא </name><num>106942</num><points>3.0</points></course>
+<course><name>למשח נהל תינרדומה הזילנאה תודוסי </name><num>108324</num><points>2.5</points></course>
+<course><name>היגולופוטב םירחבנ םיאשונ </name><num>108911</num><points>3.0</points></course>
+<course><name>תישומיש הקיטמתמב םירחבנ םיאשונ </name><num>197008</num><points>3.0</points></course>
+<course><name>םיגולויבל 2 הקיסיפ </name><num>114004</num><points>3.5</points></course>
+<course><name>תיטסיטטס.סיפו הקימנידומרתל אובמ </name><num>114016</num><points>2.5</points></course>
+<course><name>תויטפוא תוכרעמ ןונכת </name><num>114017</num><points>2.5</points></course>
+<course><name>'פמ1 הקיסיפל הדבעמ </name><num>114018</num><points>3.5</points></course>
+<course><name>'פמ2 הקיסיפל הדבעמ </name><num>114019</num><points>3.5</points></course>
+<course><name>'מ1 הקיסיפל הדבעמ </name><num>114020</num><points>1.5</points></course>
+<course><name>מ2  הקיסיפל הדבעמ </name><num>114021</num><points>1.5</points></course>
+<course><name>'חמ4 הקיסיפל הדבעמ </name><num>114025</num><points>2.0</points></course>
+<course><name>5 הקיסיפל הדבעמ </name><num>114027</num><points>4.5</points></course>
+<course><name>6 הקיסיפל הדבעמ </name><num>114028</num><points>4.5</points></course>
+<course><name>'חמ 2 הקיסיפל הדבעמ </name><num>114030</num><points>1.0</points></course>
+<course><name>'ח1 הקיסיפל הדבעמ </name><num>114032</num><points>1.0</points></course>
+<course><name>'ח2 הקיסיפל הדבעמ </name><num>114033</num><points>1.0</points></course>
+<course><name>1 הקיסיפ </name><num>114051</num><points>2.5</points></course>
+<course><name>2 הקיסיפ </name><num>114052</num><points>3.5</points></course>
+<course><name>3 הקיסיפ </name><num>114053</num><points>3.0</points></course>
+<course><name>מ1 הקיסיפ </name><num>114071</num><points>3.5</points></course>
+<course><name>'ח3 הקיסיפ </name><num>114073</num><points>3.5</points></course>
+<course><name>ממ2 הקיסיפ </name><num>114075</num><points>5.0</points></course>
+<course><name>ל1 הקיסיפ </name><num>114077</num><points>2.5</points></course>
+<course><name>1 הקיסיפל הדבעמ </name><num>114081</num><points>1.5</points></course>
+<course><name>2 הקיסיפל הדבעמ </name><num>114082</num><points>1.5</points></course>
+<course><name>תיטילנא הקינכמ </name><num>114101</num><points>4.0</points></course>
+<course><name>תויטפוא תודידמב הדבעמ </name><num>114208</num><points>3.0</points></course>
+<course><name>קצומ בצמ לש הקיסיפ </name><num>114217</num><points>3.5</points></course>
+<course><name>ויתס רקחמ לגס ח"וד </name><num>114226</num><points>1.0</points></course>
+<course><name>טקיורפ </name><num>114229</num><points>4.5</points></course>
+<course><name>תיטנגמורטקלא הרות </name><num>114245</num><points>4.0</points></course>
+<course><name>ר 2 הקיסיפ </name><num>114249</num><points>3.5</points></course>
+<course><name>ת5 הקיסיפל הדבעמ </name><num>114250</num><points>3.0</points></course>
+<course><name>ת6 הקיסיפל הדבעמ </name><num>114251</num><points>3.0</points></course>
+<course><name>ת טקיורפ </name><num>114252</num><points>3.0</points></course>
+<course><name>1 תיטנווק הקיסיפ </name><num>115203</num><points>5.0</points></course>
+<course><name>2 תיטנווק הקיסיפ </name><num>115204</num><points>5.0</points></course>
+<course><name>תימרתו תיטסיטטס הקיסיפ </name><num>115211</num><points>4.0</points></course>
+<course><name>םירזייל לש הקיסיפ </name><num>116003</num><points>3.5</points></course>
+<course><name>ףרוח הקיסיפב םירחבנ םיקרפב רנימס </name><num>116028</num><points>2.0</points></course>
+<course><name>הקיסיפויבל אובמ </name><num>116029</num><points>3.5</points></course>
+<course><name>ביבא-הקיסיפב םירחבנ םיקרפב רנימס </name><num>116030</num><points>2.0</points></course>
+<course><name>2 קצומ בצמ </name><num>116140</num><points>3.0</points></course>
+<course><name>היגולומסוקו הקיסיפורטסא </name><num>116354</num><points>3.5</points></course>
+<course><name>3 םיטנווקה תרות </name><num>117007</num><points>3.5</points></course>
+<course><name>הקימנידורטקלא </name><num>117014</num><points>3.5</points></course>
+<course><name>תוילזונ-לעו תוכילומ-לע </name><num>117021</num><points>3.0</points></course>
+<course><name>תמדקתמ הקיטפוא </name><num>117066</num><points>3.0</points></course>
+<course><name>יטנווקו יסלק #ינאינוטלימה סואכ </name><num>117098</num><points>3.0</points></course>
+<course><name>הקיסיפורטסאב םיילקיסיפ םיכילהת </name><num>117118</num><points>3.0</points></course>
+<course><name>תמדקתמ הדבעמ </name><num>118076</num><points>4.0</points></course>
+<course><name>תוכומנ תורוטרפמטו קיר </name><num>118088</num><points>2.0</points></course>
+<course><name>תוהובג תויגרנא לש הקיסיפורטסא </name><num>118090</num><points>2.5</points></course>
+<course><name>תיבושיח הקיסיפ </name><num>118094</num><points>2.0</points></course>
+<course><name>תינויע הקיסיפב םירחבנ םיאשונ </name><num>118114</num><points>2.0</points></course>
+<course><name>הימיכב הדימל יכרדו תונורקע </name><num>124099</num><points>2.0</points></course>
+<course><name>'פמ2 הימיכ </name><num>124106</num><points>2.5</points></course>
+<course><name>הימיכה תודוסי </name><num>124114</num><points>4.0</points></course>
+<course><name>'א הימיכה תודוסי </name><num>124115</num><points>2.5</points></course>
+<course><name>תולוקלומ לש הירטמיסה תודוסי </name><num>124201</num><points>2.5</points></course>
+<course><name>בחרומ 1 תיטילנא הימיכב הדבעמ </name><num>124212</num><points>2.0</points></course>
+<course><name>בחרומ 2 תיטילנא הימיכב הדבעמ </name><num>124214</num><points>2.0</points></course>
+<course><name>תינגרוא-יא-ויב הימיכ </name><num>124300</num><points>5.0</points></course>
+<course><name>תינגרוא-יא הימיכ </name><num>124305</num><points>2.5</points></course>
+<course><name>הימיכב רקחמ טקיורפ </name><num>124353</num><points>4.0</points></course>
+<course><name>1 תיטנווק הימיכ </name><num>124400</num><points>5.0</points></course>
+<course><name>הימיכב הימושייו םיטנווקה תרות </name><num>124408</num><points>3.5</points></course>
+<course><name>חטשה תימיכו תימיכ הקיטניק </name><num>124414</num><points>2.5</points></course>
+<course><name>תימיכ הקימנידומרת </name><num>124415</num><points>4.0</points></course>
+<course><name>רמוחו תויטנגמורטקלא </name><num>124416</num><points>2.5</points></course>
+<course><name>'ב1 תילקיסיפ הימיכ </name><num>124503</num><points>2.5</points></course>
+<course><name>תילקיסיפ הימיכ </name><num>124510</num><points>4.0</points></course>
+<course><name>1 תילקיסיפ הימיכב הדבעמ </name><num>124601</num><points>2.5</points></course>
+<course><name>םיאמיכל 2 תילקיסיפ הימיכב .עמ </name><num>124605</num><points>2.5</points></course>
+<course><name>.קלומ.יכויבל תילקיסיפ הימיכב .עמ </name><num>124607</num><points>2.0</points></course>
+<course><name>תינגרוא הימיכב תוליעפו הנבמ </name><num>124703</num><points>2.5</points></course>
+<course><name>1 בחרומ תינגרוא הימיכ </name><num>124708</num><points>5.0</points></course>
+<course><name>2 תינגרוא הימיכב הדבעמ </name><num>124902</num><points>2.5</points></course>
+<course><name>1 תינגרוא הימיכ הדבעמ </name><num>124911</num><points>3.0</points></course>
+<course><name>תיללכ הימיכ </name><num>125001</num><points>3.0</points></course>
+<course><name>הדבעמ + תיללכ הימיכ </name><num>125011</num><points>3.5</points></course>
+<course><name>םיסדנהמל 1 תיטילנא הימיכ הדבעמ </name><num>125102</num><points>2.0</points></course>
+<course><name>תימיכויב.נהל 1 תיטילנא הימיכב.עמ </name><num>125105</num><points>1.0</points></course>
+<course><name>יתביבס רוטינב תמדקתמ תיטילנא 'בעמ </name><num>126302</num><points>2.0</points></course>
+<course><name>תכתמונגרואו תינגרוא-יא הימיכב .עמ </name><num>126303</num><points>3.0</points></course>
+<course><name>תילקיסיפ הימיכב תמדקתמ הדבעמ </name><num>126600</num><points>1.5</points></course>
+<course><name>תמדקתמ תינגרוא הימיכ </name><num>126700</num><points>3.0</points></course>
+<course><name>3 תמדקתמ תינגרוא הימיכ </name><num>126703</num><points>3.0</points></course>
+<course><name>תינגרוא הימיכב תמדקתמ הדבעמ </name><num>126901</num><points>3.0</points></course>
+<course><name>םירזייל תועצמאב תיטילנא הימיכ </name><num>127206</num><points>2.0</points></course>
+<course><name>תירלוקלומ היפוקסורטקפס </name><num>127405</num><points>2.0</points></course>
+<course><name>(בחרומ) םיאמיכל קצומ בצמ </name><num>127427</num><points>3.5</points></course>
+<course><name>םירמילופ לש הימיכל אובמ </name><num>127724</num><points>2.0</points></course>
+<course><name>תיביטקלסוארטס הזתניס </name><num>127729</num><points>2.0</points></course>
+<course><name>תוילקיסיפ תוטישב הנבמ תעיבק </name><num>127730</num><points>2.5</points></course>
+<course><name>תינגומוה הזילטקב םירחבנ םיאשונ </name><num>127735</num><points>2.0</points></course>
+<course><name>ורטינ תובוכרת לש הימיכה </name><num>127736</num><points>2.0</points></course>
+<course><name>'א חמוצהו יחה תרכה </name><num>134014</num><points>2.5</points></course>
+<course><name>םינובלח לש הימיכויב </name><num>134019</num><points>2.5</points></course>
+<course><name>תיללכ הקיטנג </name><num>134020</num><points>3.5</points></course>
+<course><name>םיקרח לש היגולויב </name><num>134037</num><points>2.0</points></course>
+<course><name>תירלוקלומ היגולוריו </name><num>134039</num><points>2.0</points></course>
+<course><name>היגולויבב רקחמ טקיורפ </name><num>134049</num><points>4.0</points></course>
+<course><name>1 היגולויב </name><num>134058</num><points>3.0</points></course>
+<course><name>1 תורפס רקס </name><num>134064</num><points>2.0</points></course>
+<course><name>תליא ץרפמ לש תיגולוקאה תכרעמה </name><num>134076</num><points>3.0</points></course>
+<course><name>תירלוקלומ היגולויב </name><num>134082</num><points>2.5</points></course>
+<course><name>היגולויבב תמדקתמ הדבעמ </name><num>134088</num><points>2.0</points></course>
+<course><name>היגולואוז </name><num>134111</num><points>3.0</points></course>
+<course><name>יחה םלועב הדבעמ </name><num>134112</num><points>1.0</points></course>
+<course><name>םילובטמ םילולסמ </name><num>134113</num><points>3.5</points></course>
+<course><name>םזילובטמו הימיכויבב הדבעמ </name><num>134114</num><points>2.0</points></course>
+<course><name>היגולויזיפו תיאת היגולויב-רנימס </name><num>134124</num><points>2.0</points></course>
+<course><name>תימושיי היגולויב-היגולויבב רנימס </name><num>134125</num><points>2.0</points></course>
+<course><name>היצולובאו תוחתפתה ינונגנמ-רנימס </name><num>134126</num><points>2.0</points></course>
+<course><name>היגולויבב םיאשונ </name><num>134127</num><points>2.0</points></course>
+<course><name>ןטרסה תלחמ לש היגולויבה </name><num>134129</num><points>2.0</points></course>
+<course><name>תיטנג הסדנה </name><num>134132</num><points>2.5</points></course>
+<course><name>םימזינגרואורקימב השיח ילולסמ </name><num>136022</num><points>2.0</points></course>
+<course><name>הקיטנגיפא </name><num>136030</num><points>2.0</points></course>
+<course><name>םונגה תיצולובא </name><num>136031</num><points>2.5</points></course>
+<course><name>חמצה תלידגו תוחתפתהב םינונגנמ </name><num>136033</num><points>2.0</points></course>
+<course><name>היגולונכטוננל תיטנג הסדנהב הדבעמ </name><num>136035</num><points>2.5</points></course>
+<course><name>םדאה לש תירלוקלומ הקיטנג </name><num>136088</num><points>3.0</points></course>
+<course><name>תוחתפתהה לש היגולויב </name><num>136105</num><points>2.5</points></course>
+<course><name>ןטרסה תלחמ לש ירלוקלומה סיסבה </name><num>138002</num><points>3.0</points></course>
+<course><name>אתב םינובלח לש טרופסנרטה ןונגנמ </name><num>138017</num><points>3.0</points></course>
+<course><name>הקימואיטורפ </name><num>138018</num><points>4.0</points></course>
+<course><name>תילנומרוה תרושקתב תוערפה </name><num>138022</num><points>2.0</points></course>
+<course><name>תילאיבורקימ היגולוקא </name><num>138023</num><points>2.0</points></course>
+<course><name>תירלוקלומ היגולוטזירפ </name><num>138027</num><points>2.0</points></course>
+<course><name>הרבחו עדמב ןוירנימס </name><num>138050</num><points>1.0</points></course>
+<course><name>יטוירקואא לש הקיטנגב םירחבנ םיקרפ </name><num>138081</num><points>3.0</points></course>
+<course><name>ףונ תולכירדאל אובמ </name><num>204000</num><points>2.0</points></course>
+<course><name>הביבסו ףונ </name><num>204002</num><points>2.0</points></course>
+<course><name>1 ףונ תולכירדא תודלות </name><num>204090</num><points>3.0</points></course>
+<course><name>םיירוטסיה םינג רומישו דועתב רנימס </name><num>204093</num><points>3.0</points></course>
+<course><name>היחמצב ןונכת תודוסי#2 ףונב היחמצ </name><num>204202</num><points>3.0</points></course>
+<course><name>םכסמ טקיורפ-3 םינג יטרפו הנבמ </name><num>204403</num><points>4.0</points></course>
+<course><name>ףונ ילכירדאל הנבמה תרות </name><num>204406</num><points>3.0</points></course>
+<course><name>20 ףונ ןונכת </name><num>204621</num><points>5.0</points></course>
+<course><name>30 ףונ ןונכת </name><num>204622</num><points>5.0</points></course>
+<course><name>60 ףונ ןונכת </name><num>204625</num><points>5.0</points></course>
+<course><name>'א 70 ףונ ןונכת </name><num>204626</num><points>2.0</points></course>
+<course><name>ףונ גוציי </name><num>204652</num><points>2.0</points></course>
+<course><name>תישונאה תוברתה תודלותו 'כראל.במ </name><num>205002</num><points>2.0</points></course>
+<course><name>ןונכתב המרגורפ םושייו חותיפ </name><num>205032</num><points>2.5</points></course>
+<course><name>1 היגולופרומ </name><num>205071</num><points>3.0</points></course>
+<course><name>השדח תעבו םייניב ימיב כראה תודלות </name><num>205091</num><points>3.0</points></course>
+<course><name>הרוטקטיכראב שדחה ןדיעה לש תוירואת </name><num>205094</num><points>3.0</points></course>
+<course><name>םירתאו םיניינב רומישל אובמ </name><num>205097</num><points>3.0</points></course>
+<course><name>ןנכתמל היגולוכיספ </name><num>205154</num><points>2.0</points></course>
+<course><name>טוהירו םינפ בוציעל אובמ </name><num>205251</num><points>2.5</points></course>
+<course><name>םירע יוניבל אובמ </name><num>205252</num><points>2.5</points></course>
+<course><name>לארשיב תוינברוא תומקר </name><num>205255</num><points>2.0</points></course>
+<course><name>תירוביצ הינבב ינוריע בוציע 'פתה </name><num>205256</num><points>3.0</points></course>
+<course><name>ןונכתה תקיחת </name><num>205301</num><points>2.5</points></course>
+<course><name>1 יתיישעת בוציע </name><num>205406</num><points>2.5</points></course>
+<course><name>1 ןיינב יטרפו הנבמ </name><num>205421</num><points>3.5</points></course>
+<course><name>3 ןיינב יטרפו הנבמ </name><num>205423</num><points>3.5</points></course>
+<course><name>ןיינב יטרפל אובמ </name><num>205425</num><points>3.5</points></course>
+<course><name>םייוק םיביכר - םינבמ ןכת </name><num>205453</num><points>3.0</points></course>
+<course><name>םייחטשמ םיביכר - םינבמ ןכת </name><num>205454</num><points>3.0</points></course>
+<course><name>הרוטקטיכראו היגרנא ,םילקא </name><num>205492</num><points>3.0</points></course>
+<course><name>למשחו רואמ - ביבסה תרקב </name><num>205501</num><points>2.0</points></course>
+<course><name>אובמ - האורבת תוכרעמ </name><num>205505</num><points>1.5</points></course>
+<course><name>עונישו םיניינבב תוחיטב </name><num>205508</num><points>1.5</points></course>
+<course><name>'א2 דחוימ טקיורפ </name><num>205618</num><points>4.0</points></course>
+<course><name>'ב3 דחוימ טקיורפ </name><num>205621</num><points>3.0</points></course>
+<course><name>'א4 דחוימ טקיורפ </name><num>205623</num><points>2.0</points></course>
+<course><name>1 ללוכ ןונכת </name><num>205653</num><points>5.0</points></course>
+<course><name>2 ללוכ ןונכת </name><num>205654</num><points>5.0</points></course>
+<course><name>4 ללוכ ןונכת </name><num>205656</num><points>5.0</points></course>
+<course><name>7 ללוכ ןונכת </name><num>205659</num><points>5.0</points></course>
+<course><name>ןונכתל אובמ </name><num>205661</num><points>5.0</points></course>
+<course><name>'א2 'יכראב םידחוימ םיאשונ </name><num>205693</num><points>2.0</points></course>
+<course><name>'ב2 'יכראב םידחוימ םיאשונ </name><num>205694</num><points>2.0</points></course>
+<course><name>א3 'יכראב םידחוימ םיאשונ </name><num>205696</num><points>1.0</points></course>
+<course><name>'כראב הירואיתו הירוטסיהב םיאשונ </name><num>205707</num><points>2.0</points></course>
+<course><name>הרבחה יעדמב םיינונכת םיאשונ </name><num>205711</num><points>2.0</points></course>
+<course><name>'ג3 הרוטקטיכראב םידחוימ םיאשונ </name><num>205720</num><points>1.0</points></course>
+<course><name>תירואת הירטמואיג </name><num>205812</num><points>3.5</points></course>
+<course><name>4 יסיסב בוציע </name><num>205873</num><points>3.0</points></course>
+<course><name>1 תייוסינ תונמוא </name><num>205874</num><points>2.0</points></course>
+<course><name>2 תייוסינ תונמוא </name><num>205875</num><points>2.0</points></course>
+<course><name>5 יסיסב בוציע </name><num>205877</num><points>3.0</points></course>
+<course><name>1 יסיסב בוציע </name><num>205883</num><points>3.0</points></course>
+<course><name>הרוטקטיכראב  םירחבנ םיאשונ </name><num>205980</num><points>2.0</points></course>
+<course><name>םינבמ לש ינויער ןכת </name><num>206046</num><points>3.0</points></course>
+<course><name>20-ה האמב םיטלוב םילכירדא </name><num>206160</num><points>3.0</points></course>
+<course><name>עבצה תרות </name><num>206180</num><points>3.0</points></course>
+<course><name>הרוטקטיכראב הרואת </name><num>206561</num><points>3.0</points></course>
+<course><name>ינוטקטיכרא ןונכתל םיבשחוממ םילדומ </name><num>206571</num><points>3.0</points></course>
+<course><name>ילהת לש םייביטינגוק םיטביהב רנימס </name><num>206710</num><points>3.0</points></course>
+<course><name>ןונכת ,תולכירדא #בחרמה לע קבאמה </name><num>206730</num><points>3.0</points></course>
+<course><name>ינרוצ ינוטקטיכרא עדי לש ובושחמ </name><num>206810</num><points>3.0</points></course>
+<course><name>יתיישעת בוציעב םירחבנ םיאשונ </name><num>206816</num><points>1.5</points></course>
+<course><name>הביבס-םדא יסחי לש .גולויסיפ .טביה </name><num>206818</num><points>2.0</points></course>
+<course><name>1 יתיישעתה בוציעה תירוטסיה </name><num>206820</num><points>3.0</points></course>
+<course><name>1 הרוטקטיכראב םירחבנ םיאשונ </name><num>206913</num><points>3.0</points></course>
+<course><name>2 הרוטקטיכראב םירחבנ םיאשונ </name><num>206914</num><points>3.0</points></course>
+<course><name>4 הרוטקטיכראב םירחבנ םיאשונ </name><num>206916</num><points>2.0</points></course>
+<course><name>ןונכתב םיטקילפנוק םע תודדומתה </name><num>207004</num><points>3.0</points></course>
+<course><name>(עדימ תוכרעמ) תומדקתמ ןונכת תוטיש </name><num>207020</num><points>3.0</points></course>
+<course><name>ןונכתב רובצה ףותשב רנימס </name><num>207044</num><points>3.0</points></course>
+<course><name>ן"לדנ ןומימ </name><num>207050</num><points>3.0</points></course>
+<course><name>ןיעקרקמב םיקחשמה תרות ימושיי </name><num>207065</num><points>3.0</points></course>
+<course><name>תומיכו תונורקע #עקרק ישומיש ןונכת </name><num>207070</num><points>3.0</points></course>
+<course><name>יתביבס ןונכתל אובמ </name><num>207090</num><points>2.0</points></course>
+<course><name>תירוזאו תינוריע היפרגואיג </name><num>207342</num><points>2.0</points></course>
+<course><name>ינוריעה בוציעה תודוסי </name><num>207343</num><points>3.0</points></course>
+<course><name>תיתביבס תוינידמ לוהנו ןונכת רנימס </name><num>207407</num><points>3.0</points></course>
+<course><name>ינוריע #1 ןפלוא </name><num>207700</num><points>4.0</points></course>
+<course><name>ןונכתב הקיטסיטטסו תיתומכ הבישח </name><num>207800</num><points>3.0</points></course>
+<course><name>ארשיב םייברע םיבושיב חותיפו ןונכת </name><num>207807</num><points>3.0</points></course>
+<course><name>2 םירע ןונכתב םימדקתמ םיאשונ </name><num>207901</num><points>3.0</points></course>
+<course><name>םייתביבס םיכילהתו םיבאשמ </name><num>207955</num><points>3.0</points></course>
+<course><name>1 יתיישעת בוציע וידוטס </name><num>208310</num><points>3.0</points></course>
+<course><name>יתיישעת בוציעב םייטפשמ םיטביה </name><num>208342</num><points>1.5</points></course>
+<course><name>םיבצעמלו םיננכתמל רקחמ תוטיש </name><num>208355</num><points>2.5</points></course>
+<course><name>םירע יונבב טקיורפ </name><num>208702</num><points>4.0</points></course>
+<course><name>תינוריע הלכלכ </name><num>209050</num><points>3.0</points></course>
+<course><name>ןונכתו תיתרבח תוינידמ </name><num>209250</num><points>3.0</points></course>
+<course><name>1 תיכוניח היגולוכיספ </name><num>214096</num><points>2.0</points></course>
+<course><name>2 תיכוניח היגולוכיספ </name><num>214097</num><points>2.0</points></course>
+<course><name>הארוה תוטישו תויונמוימ </name><num>214103</num><points>3.0</points></course>
+<course><name>ךוניחה לש היפוסוליפ </name><num>214110</num><points>2.0</points></course>
+<course><name>הארוהב תוסנתה לע היצקלפר תנדס </name><num>214122</num><points>1.0</points></course>
+<course><name>'א הקיטמתמב תורחבנ תויעב </name><num>214200</num><points>2.0</points></course>
+<course><name>(ט-ז) ב"הטחב הירטמואיגה תארוה </name><num>214207</num><points>3.0</points></course>
+<course><name>ל"חי 4-5 - ע"הטחב הקיטמיתמה תארוה </name><num>214209</num><points>3.0</points></course>
+<course><name>בי-י ע"טחב הקיטמתמ תארוהב תוסנתה </name><num>214224</num><points>3.0</points></course>
+<course><name>םילגו הקינכמ/הקיסיפה תארוה יכרד </name><num>214302</num><points>3.0</points></course>
+<course><name>1 הקיסיפב תורחבנ תויעב </name><num>214304</num><points>2.0</points></course>
+<course><name>1 הביבס-הימיכ תארוה יכרד </name><num>214401</num><points>3.0</points></course>
+<course><name>הביבסהו הימיכה תארוהב תוסנתה </name><num>214403</num><points>2.0</points></course>
+<course><name>הימיכ - הארוה תדבעמ </name><num>214407</num><points>1.0</points></course>
+<course><name>ע"טחב היגולונכט-עדמ תארוה יכרד </name><num>214409</num><points>2.0</points></course>
+<course><name>הביבסהו היגולויבה תארוהב תוסנתה </name><num>214500</num><points>2.0</points></course>
+<course><name>1 הביבס-היגולויב תארוה יכרד </name><num>214501</num><points>3.0</points></course>
+<course><name>הקינורטקלאה תארוהב תוסנתה </name><num>214603</num><points>2.0</points></course>
+<course><name>(ט-ז)ב"טחב .ולונכט-עדמ תארוה יכרד </name><num>214607</num><points>3.0</points></course>
+<course><name>(בי-י) ע"הטחב היגולונכט תארוה </name><num>214608</num><points>3.0</points></course>
+<course><name>תיסדנה הקינכמ-היגולונכט 'רוה יכרד </name><num>214701</num><points>3.0</points></course>
+<course><name>תונוכמ-היגולונכט תארוהב תוסנתה </name><num>214703</num><points>2.0</points></course>
+<course><name>בשחמה יעדמ תארוהב תוסנתה </name><num>214903</num><points>2.0</points></course>
+<course><name>תבשחוממ הביבסב הדימל-אטוז תומלוע </name><num>214907</num><points>2.0</points></course>
+<course><name>הארוה יחרפל םייבושיח םילדומ </name><num>214912</num><points>3.0</points></course>
+<course><name>םושייו רקחמ תויעב ןורתפב םיכילהת </name><num>216113</num><points>2.0</points></course>
+<course><name>השעמו הירואית תרושקתב עדמ </name><num>216117</num><points>2.0</points></course>
+<course><name>יטמתמ ךוניחב הכרעהל תומדקתמ תושיג </name><num>216125</num><points>2.5</points></course>
+<course><name>הלועפ רקחמ יוולב עדמב תוסנתה תנדס </name><num>216126</num><points>3.0</points></course>
+<course><name>עדמ ינואיזומב הארוה תוטיש </name><num>216127</num><points>2.0</points></course>
+<course><name>'נכטו עדמב ילאמרופ יתלב ךוניח </name><num>216131</num><points>2.0</points></course>
+<course><name>הארוהל ויתוכלשה-יטמתמ ךוניחב רקחמ </name><num>216133</num><points>2.0</points></course>
+<course><name>יכוניח רקחמב ישיא טקיורפ </name><num>216150</num><points>2.0</points></course>
+<course><name>םייכוניח םיטקיורפ תכרעה </name><num>218113</num><points>2.0</points></course>
+<course><name>1 יכוניח רקחמב רנימס </name><num>218122</num><points>1.0</points></course>
+<course><name>היגולויבב ל"ות חותיפ טקיורפ </name><num>218135</num><points>3.0</points></course>
+<course><name>ב תובשקותמ תוביבסב הייחנהו הדימל </name><num>218146</num><points>2.0</points></course>
+<course><name>ךוניחב תוינתוכיא רקחמ תוטיש </name><num>218322</num><points>2.5</points></course>
+<course><name>ידוסי לעה רפסה תיבב עדמה תוהמ </name><num>218326</num><points>2.0</points></course>
+<course><name>1 תירמונ הזילנא </name><num>234107</num><points>4.0</points></course>
+<course><name>בשחמה יעדמל אובמ </name><num>234111</num><points>4.0</points></course>
+<course><name>יס תפש - בשחמל אובמ </name><num>234112</num><points>4.0</points></course>
+<course><name>'מ בשחמה יעדמל אובמ </name><num>234114</num><points>4.0</points></course>
+<course><name>'ח בשחמה יעדמל אובמ </name><num>234117</num><points>4.0</points></course>
+<course><name>בשחמה תונכתו ןוגרא </name><num>234118</num><points>3.0</points></course>
+<course><name>תוכרעמ תונכתל אובמ </name><num>234122</num><points>3.0</points></course>
+<course><name>הלעפה תוכרעמ </name><num>234123</num><points>4.5</points></course>
+<course><name>באלטמ תפשב בשחמל אובמ </name><num>234127</num><points>4.0</points></course>
+<course><name>בשחמה יעדמל הקירוטניבמוק </name><num>234141</num><points>3.0</points></course>
+<course><name>1 םינותנ ינבמ </name><num>234218</num><points>3.0</points></course>
+<course><name>1 תימצע תומלתשה </name><num>234230</num><points>2.0</points></course>
+<course><name>1 םימתירוגלא </name><num>234247</num><points>3.0</points></course>
+<course><name>יגול ןכת </name><num>234262</num><points>3.0</points></course>
+<course><name>םייתרפס םיבשחמ הנבמ </name><num>234267</num><points>3.0</points></course>
+<course><name>בשחמה יעדמב 2 טקיורפ </name><num>234291</num><points>1.0</points></course>
+<course><name>בשחמה יעדמל תוצובקה תרותו הקיגול </name><num>234293</num><points>4.0</points></course>
+<course><name>'ה םינותנ דוביעב טקיורפ </name><num>234301</num><points>3.0</points></course>
+<course><name>'ה הלעפה תוכרעמב טקיורפ </name><num>234303</num><points>3.0</points></course>
+<course><name>'א בלש-הנכת תסדנהב יתנש טקיורפ </name><num>234311</num><points>3.0</points></course>
+<course><name>יתיישעת טקיורפ </name><num>234313</num><points>3.0</points></course>
+<course><name>תונכת תופש </name><num>234319</num><points>3.0</points></course>
+<course><name>הנכות תסדנהב תוטיש </name><num>234321</num><points>3.0</points></course>
+<course><name>םיצבק תוכרעמ </name><num>234322</num><points>3.0</points></course>
+<course><name>1 תבשחוממ הקיפרג </name><num>234325</num><points>3.0</points></course>
+<course><name>תונומת חותינו דוביעב טקיורפ </name><num>234329</num><points>4.0</points></course>
+<course><name>יתורחת תונכתב הנדס </name><num>234900</num><points>2.0</points></course>
+<course><name>תויעבט תופש דוביעב טקיורפ </name><num>236303</num><points>3.0</points></course>
+<course><name>הניפצה תרותל אובמ </name><num>236309</num><points>3.0</points></course>
+<course><name>הנכות תסדנהב תוטיש </name><num>236321</num><points>3.0</points></course>
+<course><name>בשחמב תותואו תונומת דוביע </name><num>236327</num><points>3.0</points></course>
+<course><name>םיבשחמ תותשרל אובמ </name><num>236334</num><points>3.0</points></course>
+<course><name>םיביטרטיא םיכילהת לש תוסנכתה תשחה </name><num>236339</num><points>2.0</points></course>
+<course><name>םיבשחמ תרושקתב טקיורפ </name><num>236340</num><points>3.0</points></course>
+<course><name>הנכות תומיאל אובמ </name><num>236342</num><points>3.0</points></course>
+<course><name>תויבושיחה תרות </name><num>236343</num><points>3.0</points></course>
+<course><name>עדימ תחטבאב טקיורפ </name><num>236349</num><points>3.0</points></course>
+<course><name>תותנכותמ תוכרעמב הנגה </name><num>236350</num><points>3.0</points></course>
+<course><name>תורזובמ תוכרעמ </name><num>236351</num><points>3.0</points></course>
+<course><name>תוילמרופ תופשו םיטמוטוא </name><num>236353</num><points>3.0</points></course>
+<course><name>'א םירזובמ םימתירוגלא </name><num>236357</num><points>3.0</points></course>
+<course><name>היצליפמוקה תרות </name><num>236360</num><points>3.0</points></course>
+<course><name>םינותנ דסמ תוכרעמ </name><num>236363</num><points>3.0</points></course>
+<course><name>'מ הלעפה תוכרעמב טקיורפ </name><num>236366</num><points>3.0</points></course>
+<course><name>רזובמו יליבקמ תונכת </name><num>236370</num><points>3.0</points></course>
+<course><name>רזובמו יליבקמ תונכתב טקיורפ </name><num>236371</num><points>3.0</points></course>
+<course><name>תוינאיסייב תותשר </name><num>236372</num><points>3.0</points></course>
+<course><name>םימתירוגלאו תויתורבתסה תוטיש </name><num>236374</num><points>2.0</points></course>
+<course><name>'ב .יא.סא.לא.יו -ב טקיורפ </name><num>236381</num><points>4.0</points></course>
+<course><name>תיתוכאלמ הניבל אובמ </name><num>236501</num><points>3.0</points></course>
+<course><name>'א םדקתמ תונכתב טקיורפ </name><num>236503</num><points>3.0</points></course>
+<course><name>תינרדומ היגולוטפירק </name><num>236506</num><points>3.0</points></course>
+<course><name>'ב םדקתמ תונכתב טקיורפ </name><num>236512</num><points>3.0</points></course>
+<course><name>הקיטמרופניאויבל אובמ </name><num>236523</num><points>2.5</points></course>
+<course><name>הקיטמרופניאויבב טקייורפ </name><num>236524</num><points>3.0</points></course>
+<course><name>1 בשחמה יעדמב םימדקתמ םיאשונ </name><num>236601</num><points>2.0</points></course>
+<course><name>2 בשחמה יעדמב םימדקתמ םיאשונ </name><num>236602</num><points>2.0</points></course>
+<course><name>5 בשחמה יעדמב םימדקתמ םיאשונ </name><num>236605</num><points>3.0</points></course>
+<course><name>'ה םימתירוגלאב םימדקתמ םיאשונ </name><num>236620</num><points>2.0</points></course>
+<course><name>'ה תרושקת תותשרב םימדקתמ םיאשונ </name><num>236634</num><points>2.0</points></course>
+<course><name>תרושקת תותשרב םימדקתמ םיאשונ </name><num>236635</num><points>3.0</points></course>
+<course><name>הנכות תוכיא תחטבה </name><num>236698</num><points>2.0</points></course>
+<course><name>םימצע החנומ תונכת </name><num>236703</num><points>3.0</points></course>
+<course><name>תונובנ תוכרעמב טקיורפ </name><num>236754</num><points>3.0</points></course>
+<course><name>תודמול תוכרעמב טקיורפ </name><num>236757</num><points>3.0</points></course>
+<course><name>תיבושיח הדימל </name><num>236760</num><points>2.0</points></course>
+<course><name>ימניד ןורכיז לוהינל םימתירוגלא </name><num>236780</num><points>2.0</points></course>
+<course><name>1 בשחמה יעדמב רנימס </name><num>236801</num><points>2.0</points></course>
+<course><name>2 בשחמה יעדמב רנימס </name><num>236802</num><points>2.0</points></course>
+<course><name>םימתירוגלאב רנימס </name><num>236813</num><points>2.0</points></course>
+<course><name>תיבושיח תונשלבב רנימס </name><num>236817</num><points>2.0</points></course>
+<course><name>הקיטמרופניאויבב רנימס </name><num>236818</num><points>2.0</points></course>
+<course><name>םינותנ ידסמב רנימס </name><num>236826</num><points>2.0</points></course>
+<course><name>תונומת לש תירמונ הירטמואג </name><num>236861</num><points>3.0</points></course>
+<course><name>תויבצע תותשרל אובמ </name><num>236941</num><points>3.0</points></course>
+<course><name>םיבושיח לש הירואתב רקחמ ןוירנימס </name><num>238900</num><points>2.0</points></course>
+<course><name>פוקסורקמו תיפוקסורקימ מוטנאל אובמ </name><num>274001</num><points>2.0</points></course>
+<course><name>ע"פרל הימוטנאל אובמו היגולוטסיה </name><num>274018</num><points>3.0</points></course>
+<course><name>ע"פרל היגולותפוריונו היגולוריונ </name><num>274024</num><points>3.0</points></course>
+<course><name>ע"פרל תיתוחתפתה-היגולוריונ </name><num>274025</num><points>2.0</points></course>
+<course><name>ע"פרל הידפוטרוא </name><num>274026</num><points>2.0</points></course>
+<course><name>ע"פרל הירטאיכיספ </name><num>274027</num><points>4.0</points></course>
+<course><name>ע"פרל היגולותפ </name><num>274028</num><points>3.0</points></course>
+<course><name>ע"פרל היגולויזניק </name><num>274030</num><points>2.5</points></course>
+<course><name>ע"פרל הימיכ/היגולויב-םיעדמל אובמ </name><num>274032</num><points>3.5</points></course>
+<course><name>דועיס- הימיכה תודוסי </name><num>274033</num><points>3.0</points></course>
+<course><name>דועיס אתה לש היגולויב </name><num>274034</num><points>2.0</points></course>
+<course><name>(ס) ףוגה תוכרעמ לש היגולויסיפ </name><num>274043</num><points>5.0</points></course>
+<course><name>(ס) היגולותפ </name><num>274045</num><points>2.0</points></course>
+<course><name>(ס) היגולוקמרפ </name><num>274047</num><points>4.0</points></course>
+<course><name>(ס) תיללכ הקיטנג </name><num>274048</num><points>2.0</points></course>
+<course><name>'א ילוח יבצמ </name><num>274062</num><points>8.0</points></course>
+<course><name>'ג ילוח יבצמ </name><num>274064</num><points>6.0</points></course>
+<course><name>'ה ילוח יבצמ </name><num>274066</num><points>6.0</points></course>
+<course><name>תיתדבעמ האופרל אובמ </name><num>274070</num><points>3.5</points></course>
+<course><name>תיתדבעמ האופר - תיללכ היגולותפ </name><num>274073</num><points>3.0</points></course>
+<course><name>תיתדבעמ.פרל תיגולונומיא הדבעמ </name><num>274074</num><points>1.0</points></course>
+<course><name>תינילקה הדבעמה יעדמ תויונמוימ </name><num>274075</num><points>12</points></course>
+<course><name>1-ויביכרמו אתה </name><num>274108</num><points>3.5</points></course>
+<course><name>הפוחד האופרל אובמ </name><num>274109</num><points>2.0</points></course>
+<course><name>א"ת דוקפתו הנבמ אתה </name><num>274112</num><points>4.0</points></course>
+<course><name>1 - הימוטנא </name><num>274113</num><points>4.0</points></course>
+<course><name>א"ת-םדאה לש תינוירבמאה תוחתפתהה </name><num>274123</num><points>2.0</points></course>
+<course><name>א"ת בצעה יעדמו הקיסיפויב </name><num>274124</num><points>5.5</points></course>
+<course><name>א"ת 1 הימוטנא </name><num>274125</num><points>4.0</points></course>
+<course><name>א"ת 1 תינילקו תיללכ הימיכויב </name><num>274126</num><points>3.5</points></course>
+<course><name>א"ת ינאופרל יאופר טפשמו הקיתא </name><num>274130</num><points>2.0</points></course>
+<course><name>1 האופרה עוצקמל הפישח-אפור תויהל </name><num>274131</num><points>0.5</points></course>
+<course><name>םדאה לש היגולוירבמא </name><num>274202</num><points>3.0</points></course>
+<course><name>םדאה תשרות </name><num>274223</num><points>4.5</points></course>
+<course><name>םינאופרל תיללכ הימיכויב </name><num>274226</num><points>5.0</points></course>
+<course><name>םינאופרל תיללכ תימיכויב הדבעמ </name><num>274227</num><points>1.5</points></course>
+<course><name>םינאופרל 1 היגולויצוסו היגולוכיספ </name><num>274232</num><points>1.5</points></course>
+<course><name>3 האופרה עוצקמל הפישח-אפור תויהל </name><num>274234</num><points>1.0</points></course>
+<course><name>א"ת תיללכ היגולותפ </name><num>274306</num><points>4.0</points></course>
+<course><name>א"ת הדבעמ תיללכ היגולותפ </name><num>274307</num><points>1.0</points></course>
+<course><name>א"ת היגולויבונומיא.סיסב.גולונומיא </name><num>274310</num><points>5.0</points></course>
+<course><name>א"ת היגולוריו </name><num>274313</num><points>2.0</points></course>
+<course><name>א"ת היגולוטיזרפ </name><num>274314</num><points>1.0</points></course>
+<course><name>א"ת היגולוירטקב </name><num>274315</num><points>3.0</points></course>
+<course><name>א"ת היגולוקימ </name><num>274316</num><points>1.0</points></course>
+<course><name>היגולוימדיפא </name><num>274318</num><points>2.0</points></course>
+<course><name>יאופר טפשמו הקיתא </name><num>274320</num><points>2.0</points></course>
+<course><name>א"ת 1 תינילק האופרל אובמ </name><num>274321</num><points>5.0</points></course>
+<course><name>םדו בל המישנ - 1 היגולויסיפ </name><num>274323</num><points>4.5</points></course>
+<course><name>תוסיו תוכרעמ - 2 היגולויסיפ </name><num>274324</num><points>3.5</points></course>
+<course><name>5תויתא תויתוברת תויגוס-אפור תויהל </name><num>274326</num><points>1.0</points></course>
+<course><name>תיללכ היגולונירקודנא </name><num>274328</num><points>3.0</points></course>
+<course><name>היגולוירטקב </name><num>274331</num><points>5.0</points></course>
+<course><name>א"ת הקיטסיטטסויבו רקחמ תוטיש </name><num>274345</num><points>3.0</points></course>
+<course><name>א"ת 1 היגולוקמרפ </name><num>274407</num><points>3.0</points></course>
+<course><name>הקינילק- הקינילק-הרפ תוכרעמ בוליש </name><num>274425</num><points>22</points></course>
+<course><name>א"ת תיללכ היגרוריכ תאופר </name><num>274523</num><points>6.0</points></course>
+<course><name>'ח1 היגרוריכ </name><num>274526</num><points>7.0</points></course>
+<course><name>א"ת תימינפ האופר </name><num>274527</num><points>12</points></course>
+<course><name>א"ת תמדקתמ תינילק הריחב </name><num>274529</num><points>12</points></course>
+<course><name>היגולוריונ </name><num>274530</num><points>3.0</points></course>
+<course><name>הירטאיכיספ </name><num>274531</num><points>6.0</points></course>
+<course><name>'ח1 םידלי תאופר </name><num>274533</num><points>7.0</points></course>
+<course><name>א"ת היגולוריונ </name><num>274601</num><points>3.0</points></course>
+<course><name>א"ת הירטאיכיספ </name><num>274602</num><points>5.0</points></course>
+<course><name>הליהקהו החפשמה תאופר </name><num>274604</num><points>4.0</points></course>
+<course><name>םידליב תמדקתמ האייחה </name><num>274606</num><points>1.0</points></course>
+<course><name>תמדקתמ האייחה סרוק </name><num>274607</num><points>1.0</points></course>
+<course><name>א"ת ןורג ןזוא ףא תולחמ </name><num>274614</num><points>2.0</points></course>
+<course><name>הליהקהו החפשמה תאופר </name><num>274618</num><points>6.0</points></course>
+<course><name>(ט) 2 םידלי תאופר </name><num>274622</num><points>4.0</points></course>
+<course><name>(ט) 2 היגרוריכ </name><num>274623</num><points>4.0</points></course>
+<course><name>יאופר להנימב תודוסי </name><num>274631</num><points>1.0</points></course>
+<course><name>2 םידלי תאופר </name><num>274632</num><points>3.0</points></course>
+<course><name>'ת2 תימינפ האופר </name><num>274633</num><points>4.0</points></course>
+<course><name>תיאקירמא 'כת תינילק תיטלוקפ הריחב </name><num>274654</num><points>4.0</points></course>
+<course><name>רמג ןחבמ-היגרוריכוריונ היגולוריונ </name><num>274715</num><points>2.0</points></course>
+<course><name>רמג ןחבמ - תודלימו םישנ תאופר </name><num>274716</num><points>3.0</points></course>
+<course><name>א"ת-הירטאיכיספ תאופרב רמג תניחב </name><num>274720</num><points>2.0</points></course>
+<course><name>האופרה תודלות </name><num>275200</num><points>2.0</points></course>
+<course><name>1 היגולוידוא </name><num>275310</num><points>2.0</points></course>
+<course><name>האופרו תורפס </name><num>275317</num><points>2.0</points></course>
+<course><name>א"ת תסלו הפ היגרוריכ </name><num>275618</num><points>2.0</points></course>
+<course><name>1 רקחמ תודבעמב תוחיטב </name><num>276000</num><points>0.0</points></course>
+<course><name>תולחמ דעו היגולויזיפמ-הניש תאופר </name><num>276001</num><points>3.0</points></course>
+<course><name>םיסדנהמל ףוגה תוכרעמ תיגולויזיפ </name><num>276011</num><points>3.0</points></course>
+<course><name>היגולוטסיה </name><num>276200</num><points>4.5</points></course>
+<course><name>ודוקפתו חמה הנבמ </name><num>276203</num><points>5.5</points></course>
+<course><name>תיסיסב היגולונומיא </name><num>276413</num><points>4.0</points></course>
+<course><name>תוימוהז תולחמ לש הזנגותפ </name><num>276416</num><points>2.0</points></course>
+<course><name>היגולונירקודנא </name><num>276450</num><points>3.0</points></course>
+<course><name>1 היגולויצוסו היגולוכיספ </name><num>276451</num><points>1.5</points></course>
+<course><name>םדו בל ,המישנ - היגולויסיפ </name><num>277003</num><points>4.5</points></course>
+<course><name>תוסו תוכרעמ לש היגולויסיפ </name><num>277004</num><points>3.5</points></course>
+<course><name>בלה רירש לש היגולויזיפורטקלא </name><num>277311</num><points>2.0</points></course>
+<course><name>ינכדע ינירקודנא רקחמב םירנימס </name><num>277430</num><points>1.0</points></course>
+<course><name>תילנומרוה תרושקת </name><num>277450</num><points>2.0</points></course>
+<course><name>תינרדומ היגולונומיאב םיקרפ </name><num>278005</num><points>3.0</points></course>
+<course><name>הקיסיפויבב תינוירנימס הדובע </name><num>278300</num><points>2.0</points></course>
+<course><name>היגולויסיפב תינוירנימס הדובע </name><num>278301</num><points>2.0</points></course>
+<course><name>ח"עבב םיינמוה םייוסינב תונורקע </name><num>278306</num><points>2.0</points></course>
+<course><name>ב+א תויבצע תוכרעמ לש רקחמב תוסנתה </name><num>278307</num><points>2.0</points></course>
+<course><name>תיפוקסורקאמו'סורקימ הימוטנאל אובמ </name><num>278408</num><points>2.0</points></course>
+<course><name>היגולוירבמא </name><num>278411</num><points>3.0</points></course>
+<course><name>תימונוטוא תכרעמו המדקה-היגולוקמרפ </name><num>278414</num><points>3.0</points></course>
+<course><name>1 היגולונומיאב רנימס </name><num>278415</num><points>1.0</points></course>
+<course><name>האופרה יעדמב םיינכדע םיאשונ </name><num>278419</num><points>1.0</points></course>
+<course><name>היגולוימדיפא </name><num>278420</num><points>2.0</points></course>
+<course><name>היגולותפו היגולויזיפ-םינובלח קורפ </name><num>278460</num><points>3.0</points></course>
+<course><name>ילקיטרוק תת -ילקטירוק הלועפ ףותיש </name><num>278462</num><points>2.0</points></course>
+<course><name>םיאת ןוימו הקירס </name><num>278471</num><points>2.0</points></course>
+<course><name>םיקצומה תקינכמל אובמ </name><num>314003</num><points>2.5</points></course>
+<course><name>'ח םייסדנה םירמוחב הדבעמ </name><num>314009</num><points>1.5</points></course>
+<course><name>םירמוח .נהב הדימל יכרדו תונורקע </name><num>314100</num><points>1.0</points></course>
+<course><name>ללחו הפועתל םירמוח.נהל אובמ </name><num>314200</num><points>2.5</points></course>
+<course><name>רזייל ינרק תרזעב םירמוח דובע </name><num>314306</num><points>2.5</points></course>
+<course><name>םירמוח תריחב </name><num>314310</num><points>2.5</points></course>
+<course><name>הנגה תוטישו היזורוק ,הימיכורטקלא </name><num>314532</num><points>2.5</points></course>
+<course><name>1'מ םירמוח תסדנהל אובמ </name><num>314533</num><points>3.5</points></course>
+<course><name>םירמוח תסדנהל אובמ </name><num>314535</num><points>2.5</points></course>
+<course><name>'ח1 תמדקתמ םירמוח תדבעמ </name><num>315001</num><points>2.0</points></course>
+<course><name>םירמוחב םדקתמ טקיורפ </name><num>315014</num><points>4.0</points></course>
+<course><name>הקינורטקלאורקימב םיכילהת </name><num>315015</num><points>2.5</points></course>
+<course><name>2 םירמוחב םדקתמ טקיורפ </name><num>315025</num><points>3.0</points></course>
+<course><name>םיימרק םיינורטקלא םירמוח </name><num>315031</num><points>2.5</points></course>
+<course><name>םירמוח תסדנהב הריחב טקיורפ </name><num>315035</num><points>3.0</points></course>
+<course><name>םייתכתמ םירמוח לש םישומישו תונוכת </name><num>315037</num><points>2.5</points></course>
+<course><name>םירמוח תסדנהל הסמו םוח ,ענת רבעמ </name><num>315039</num><points>4.0</points></course>
+<course><name>רמוח ןולשכ שונא תואיגש יסדנה לשכ </name><num>315043</num><points>2.0</points></course>
+<course><name>םייטפוא םירמוח </name><num>315044</num><points>2.5</points></course>
+<course><name>םירמוחב תויצמרופסנרט תקיטניק </name><num>315052</num><points>2.5</points></course>
+<course><name>היפרגולטסירקה תודוסי </name><num>316240</num><points>2.0</points></course>
+<course><name>הקיצי תיגולונכט תוקצמתה </name><num>316424</num><points>2.0</points></course>
+<course><name>תיטסלפ היצמרופד תרות </name><num>318235</num><points>2.0</points></course>
+<course><name>תרדוח םינורטקלא תיפוקסורקימ </name><num>318525</num><points>2.0</points></course>
+<course><name>טילנא תקרוס םינורטקלא תיפוקסורקימ </name><num>318529</num><points>2.0</points></course>
+<course><name>רטקלאורקימ ינקתהל היצזילטמו םיעגמ </name><num>318627</num><points>2.0</points></course>
+<course><name>םידומיל תשפוח </name><num>320000</num><points>0.0</points></course>
+<course><name>1 ינפוג ךונח </name><num>320003</num><points>1.0</points></course>
+<course><name>2 ינפוג ךונח </name><num>320004</num><points>1.0</points></course>
+<course><name>תורישו רוציי תמגמ </name><num>320091</num><points>0.0</points></course>
+<course><name>עדי תסדנהו עדימ תמגמ </name><num>320092</num><points>0.0</points></course>
+<course><name>הלכלכ תמגמ </name><num>320093</num><points>0.0</points></course>
+<course><name>םיטנדוטס יפוליח </name><num>320099</num><points>0.0</points></course>
+<course><name>תינכט תילגנא </name><num>324012</num><points>3.0</points></course>
+<course><name>1 תיעדמ תילגנא </name><num>324021</num><points>0.0</points></course>
+<course><name>2 תיעדמ תילגנא </name><num>324022</num><points>0.0</points></course>
+<course><name>2 םיליחתמל תירבע </name><num>324049</num><points>3.0</points></course>
+<course><name>1 תירבע </name><num>324051</num><points>0.0</points></course>
+<course><name>2 תירבע </name><num>324052</num><points>3.0</points></course>
+<course><name>לארשי תודלותב םירחבנ םיקרפ </name><num>324055</num><points>1.5</points></course>
+<course><name>1 םיליחתמ - האופרל תירבע </name><num>324061</num><points>0.0</points></course>
+<course><name>2 םיליחתמ - האופרל תירבע </name><num>324062</num><points>0.0</points></course>
+<course><name>3 תינוניב המר - האופרל תירבע </name><num>324063</num><points>0.0</points></course>
+<course><name>4 םימדקתמ האופרל תירבע </name><num>324064</num><points>0.0</points></course>
+<course><name>ארקמב םלועה תישאר </name><num>324118</num><points>1.5</points></course>
+<course><name>הרבח,הכלה,דמעמ-ב"מיב תוידוהי םישנ </name><num>324174</num><points>1.5</points></course>
+<course><name>3 לארשי תבשחמ </name><num>324183</num><points>1.5</points></course>
+<course><name>5 שרדמ תיב </name><num>324195</num><points>1.5</points></course>
+<course><name>האושה תפוקתב תילאוזיו תונמא </name><num>324221</num><points>1.5</points></course>
+<course><name>םיליחתמל זא'ג רותלא </name><num>324227</num><points>1.5</points></course>
+<course><name>זא'ג בכרהב רותלאו הניגנ </name><num>324228</num><points>1.5</points></course>
+<course><name>הקיזומה לש היגולוכיספ </name><num>324239</num><points>1.5</points></course>
+<course><name>יהמ היפוסוליפ </name><num>324300</num><points>1.5</points></course>
+<course><name>1 עדמה לש היפוסוליפ </name><num>324329</num><points>2.0</points></course>
+<course><name>הקיטמתמו היפוסוליפ </name><num>324351</num><points>1.5</points></course>
+<course><name>תילגנאב בתכבו הפ-לעב תרושקת </name><num>324385</num><points>3.0</points></course>
+<course><name>ירמאק בכרהב הניגנ </name><num>324390</num><points>1.5</points></course>
+<course><name>תיתוזחה הסיפתה לש היגולוכיספה </name><num>324408</num><points>2.0</points></course>
+<course><name>תילגנאב החישל אשונכ תילגנא תרופיס </name><num>324417</num><points>2.0</points></course>
+<course><name>1 20-ה האמה דע הקיסומל ירוטסיה.מ </name><num>324422</num><points>1.5</points></course>
+<course><name>םיליחתמל םושיר </name><num>324481</num><points>2.0</points></course>
+<course><name>עבצו רויצ םושיר </name><num>324495</num><points>2.0</points></course>
+<course><name>1 ירמאק ילקוו לבמסנא </name><num>324497</num><points>1.5</points></course>
+<course><name>תינרדומ תונמאל אובמ </name><num>324503</num><points>1.5</points></course>
+<course><name>הפוריא ןופצב סנאסנר </name><num>324505</num><points>1.5</points></course>
+<course><name>ןפי תונמאב תודוסי </name><num>324516</num><points>1.5</points></course>
+<course><name>הקיסומה תודוסי </name><num>324519</num><points>1.5</points></course>
+<course><name>ריפסקייש לש תיטמרדה ותריציל אובמ </name><num>324522</num><points>1.5</points></course>
+<course><name>1 תפרצ תוברת </name><num>324532</num><points>1.5</points></course>
+<course><name>ילארשיה עונלוקב םוקמו בחרמ </name><num>324538</num><points>1.5</points></course>
+<course><name>םילכו הפש #םוליצ תנדס </name><num>324567</num><points>1.5</points></course>
+<course><name>ןיול ךונחמ דחפמ ימ </name><num>324587</num><points>1.5</points></course>
+<course><name>קורב רטיפ לש יומיבה תדובע </name><num>324588</num><points>1.5</points></course>
+<course><name>תיטמרדה הביתכל םייחרכהה םיביכרמה </name><num>324589</num><points>1.5</points></course>
+<course><name>םימדקתמל ןורטאית תנדס </name><num>324590</num><points>1.5</points></course>
+<course><name>2 םימדקתמל ןורטאית תנדס </name><num>324593</num><points>1.5</points></course>
+<course><name>3 םימדקתמל ןורטאית תנדס </name><num>324597</num><points>1.5</points></course>
+<course><name>1 םיליחתמל תינמרג </name><num>324600</num><points>2.0</points></course>
+<course><name>םיליחתמל תינפי </name><num>324602</num><points>2.0</points></course>
+<course><name>2 םיליחתמל תינמרג </name><num>324603</num><points>2.0</points></course>
+<course><name>(םיינוניב) 3 תינמרג </name><num>324605</num><points>2.0</points></course>
+<course><name>11 תיתפרצ </name><num>324609</num><points>2.5</points></course>
+<course><name>22 תיתפרצ </name><num>324611</num><points>2.5</points></course>
+<course><name>1 םיליחתמל תיסור </name><num>324621</num><points>2.0</points></course>
+<course><name>1 (הרז הפשכ) תיברע </name><num>324626</num><points>2.0</points></course>
+<course><name>1 םיליחתמל תיקלטיא </name><num>324630</num><points>1.5</points></course>
+<course><name>שידיא </name><num>324634</num><points>1.5</points></course>
+<course><name>םיליחתמל תידרפס </name><num>324675</num><points>1.5</points></course>
+<course><name>תינוניב המרב תידרפס </name><num>324679</num><points>1.5</points></course>
+<course><name>םימדקתמל תילגנאב החיש </name><num>324685</num><points>2.0</points></course>
+<course><name>םיליחתמל תיניס </name><num>324692</num><points>2.0</points></course>
+<course><name>תילארשי םינמיס תפש </name><num>324696</num><points>1.5</points></course>
+<course><name>ץחל יבצמל תולגתסה </name><num>324726</num><points>1.5</points></course>
+<course><name>לארשיב הדובעה טפשמ </name><num>324766</num><points>1.5</points></course>
+<course><name>םלסיאה תודלות </name><num>324792</num><points>1.5</points></course>
+<course><name>היגולואיכראה יארב לארשי ץרא </name><num>324863</num><points>1.5</points></course>
+<course><name>1 תומזי </name><num>324864</num><points>1.0</points></course>
+<course><name>עדימ תמחולל הלומעתמ#'לוכיספ המחול </name><num>324868</num><points>1.5</points></course>
+<course><name>חוכיוה תונמא </name><num>324897</num><points>1.5</points></course>
+<course><name>לוק חותיפ </name><num>394580</num><points>1.5</points></course>
+<course><name>המרדל גוח </name><num>394581</num><points>1.5</points></course>
+<course><name>תרומזת </name><num>394582</num><points>2.0</points></course>
+<course><name>ןורטאתב יומיבו קחשמ </name><num>394584</num><points>2.0</points></course>
+<course><name>3 הלהקמ </name><num>394587</num><points>2.0</points></course>
+<course><name>םייגולויב םימרוז תקינכמ </name><num>334009</num><points>4.0</points></course>
+<course><name>ילמשח-ויב ןכת תודוסי </name><num>334011</num><points>4.0</points></course>
+<course><name>2 תיאופר-ויב הסדנהב הדבעמ </name><num>334013</num><points>2.0</points></course>
+<course><name>תיאופר-ויב הסדנהב תומגמ </name><num>334021</num><points>1.0</points></course>
+<course><name>בשחמהו חמה </name><num>334303</num><points>2.0</points></course>
+<course><name>1 תיאופר-ויב הסדנהב טקיורפ </name><num>335014</num><points>3.0</points></course>
+<course><name>המקרל אתמ </name><num>336022</num><points>2.5</points></course>
+<course><name>םייגולויב תותוא לש הזילנאב תוטיש </name><num>336208</num><points>2.5</points></course>
+<course><name>םמושיו תונורקע-האופרב דנואסרטלוא </name><num>336325</num><points>2.5</points></course>
+<course><name>םירמוחויב </name><num>336401</num><points>2.0</points></course>
+<course><name>תימוקיש הקינכמויב </name><num>336506</num><points>2.5</points></course>
+<course><name>אתה לש הסדנה ויב </name><num>336517</num><points>2.5</points></course>
+<course><name>תויגולויב תוכרעמב םוח רבעמ </name><num>336518</num><points>3.0</points></course>
+<course><name>תויאופר ויב תוכרעמב הרקבל אובמ </name><num>336522</num><points>3.0</points></course>
+<course><name>תוחיטבו םיטרדנטס ,יאופר רושכמ </name><num>336523</num><points>2.5</points></course>
+<course><name>םייגולויב םיפילחתו תומקר תסדנה </name><num>336529</num><points>2.5</points></course>
+<course><name>תיאופר-ויב הקינוטופו הקיטפוא </name><num>336533</num><points>3.0</points></course>
+<course><name>דנואסארטלוא לש תומדקתמ תוטיש </name><num>338328</num><points>2.0</points></course>
+<course><name>בלה ירירשב ינכמ-ילמשחה דומיצה </name><num>338515</num><points>2.0</points></course>
+<course><name>תונטק תוכרעמ לש הימיכו הקיסיפ </name><num>648002</num><points>3.5</points></course>
+<course><name>םינב רשוכ-ינפוג ךוניח </name><num>394800</num><points>1.0</points></course>
+<course><name>תונב תיללכ תולמעתה - ינפוג ךוניח </name><num>394801</num><points>1.0</points></course>
+<course><name>היחש - ינפוג ךוניח </name><num>394802</num><points>1.0</points></course>
+<course><name>רודכ יקחשמ - ינפוג ךוניח </name><num>394803</num><points>1.0</points></course>
+<course><name>טבחמ יקחשמ - ינפוג ךוניח </name><num>394804</num><points>1.0</points></course>
+<course><name>הלק הקיטלתאו םירישכמ תולמעתה-ג"ח </name><num>394805</num><points>1.0</points></course>
+<course><name>תימצע הנגה - ינפוג ךוניח </name><num>394806</num><points>1.0</points></course>
+<course><name>לוחמו העונת - ינפוג ךוניח </name><num>394820</num><points>1.0</points></course>
+<course><name>טרופס-יגוח </name><num>394900</num><points>1.0</points></course>
+<course><name>טרופס תורחבנ </name><num>394902</num><points>1.5</points></course>

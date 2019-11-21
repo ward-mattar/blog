@@ -1,0 +1,14 @@
+body {
+
+}
+
+#original_text, #pure_text {
+	width: 850px;
+	height: 300px;
+	overflow-y:auto;
+	word-wrap:break-word;
+}
+
+#words_list {
+	width: 300px;
+}

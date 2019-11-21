@@ -1,0 +1,197 @@
+document  { 
+    direction:rtl;
+  }
+
+.semester ul , #courseList ul {
+  direction:rtl;
+  list-style-type :  none;
+  width:100%;
+  display:table-row;
+}
+
+.semester li, #courseList li{
+  direction:rtl;
+  padding:3px;
+  border:1px solid #fff;
+  border-right:none;
+  display: table-cell;
+  padding-left:10px;
+}
+.course li, .binary li {
+  background-color: #036;
+  color:#fff;
+}
+
+.course input, .non-complete input, .binary input {
+  color:black;
+}
+
+.course span, .non-complete span {
+  width:100%;
+}
+
+.non-complete li {
+  background-color: #336;
+  color:#fff;
+}
+
+#courseList > .non-complete li  {
+    background-color: #ddd;
+    color: #111;
+}
+
+#courseList > .non-complete > li.grade-li {
+    display:none;
+}
+
+.semesterTitle li, .semesterSum li {
+  background-color: #369;
+  font-weight:bold;
+  color: #fff;
+}
+.semester, #courseList {
+  display:table;
+  width:100%;
+  margin-bottom:20px;
+  list-style-type :  none;
+}
+
+#courseListFrame {
+  position:fixed;
+  left:30%;
+  top:30px;
+  bottom:30px;
+  overflow-y:scroll;
+  z-index:9;
+  border: 1px solid #bbb;
+  width:40%;
+  background-color:#ddd;
+  text-align:center;
+}
+
+
+li.hide{
+  background-color: #fff;
+}
+
+li.plus{
+  background-color: #fff;
+  text-align:center;
+  font-weight:bold;
+  font-size:120%;
+}
+
+.plus a {
+    text-decoration:none;
+}
+
+#right {
+  direction:rtl;
+  /*position:absolute;*/
+  width:48%;
+  /*top:10px;
+  right:10px;
+  bottom:20px;*/
+  padding:5px;
+  border:1px solid #bbb;
+  overflow-x:hidden;
+  overflow-y:auto;
+  }
+
+#footer {
+  position:absolute;
+  font-size:80%;
+  color: #999;
+  width:100%;
+  padding: 0px;
+  text-align:center;
+  direction:rtl;
+  z-index:9;
+  bottom:2px;
+}
+a, a.visited {
+  color: #48f;
+}
+#content {
+  display:block;
+  position:absolute;
+  padding:0px;
+  direction:rtl;
+  top:10px;
+  left:10px;
+  bottom:20px;
+  right:10px;
+  /*overflow:hidden;*/
+}
+
+#topLeft {
+    border:1px solid #bbb;
+    margin-bottom:10px;
+    padding:5px;
+}
+
+#bottomLeft {
+    /*border:1px solid #bbb;
+    padding:0px;*/
+    overflow-x:hidden;
+    overflow-y:auto;
+    max-height:auto;
+}
+h2 {
+  margin-top: 5px;
+}
+
+body {
+  direction:rtl;
+}
+
+
+ul.Total, ul.TotalTitle {
+  direction:rtl;
+  list-style-type :  none;
+  display:table-row;
+}
+
+.Total li, .TotalTitle li {
+  direction:rtl;
+  text-align: center;
+  padding:5px;
+  padding-left:12px;
+  padding-right:12px;    
+  font-weight:bold;
+  border:1px solid #fff;
+  font-size:125%;
+  color:#fff;
+  border-right:none;
+  border-left:5px solid #fff;
+  display: table-cell;
+}
+
+.Total li {
+  background-color:#036;
+}
+
+.TotalTitle li {
+  background-color:#369;
+}
+
+.course a {
+        text-decoration:none;
+}
+
+
+#hint {
+  display:none;
+  position:fixed;
+  top:-2px;
+  right:50px;
+  padding:12px;
+  background-color: #ffd;
+  border: 1px solid #fd6;
+  z-index:99;
+  overflow:hidden;
+}
+ #courseListMsg {
+    margin:auto;
+    font-size:large;
+}

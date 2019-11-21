@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Bible Code</title>
+		<meta name="author" content="gadial" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Date: 2012-03-30 -->
+	</head>
+	<body>
+		<script type="text/javascript" src="jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="funcs.js"></script>
+		<script type="text/javascript" src="bible.js"></script>
+		<input type="text" id="word_search_field" />
+		<input type="button" value="Search word" onclick="BIBLE_MAIN.findWord($('#word_search_field')[0].value)" />
+		<div id="lists">
+			<select id="word_list" size="6"></select>
+			<select id="els_list" size="6"></select>			
+		</div>
+		<pre id="pure_text"></pre>
+		<input type="range" min="0" max="50" value="0" step="1" onchange="BIBLE_MAIN.changePureTextJumpSize(this.value);" />
+		<pre id="original_text"></pre>
+		
+		
+	</body>
+</html>
