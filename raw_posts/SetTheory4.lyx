@@ -3159,5 +3159,577 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Standard
+בואו נוסיף עוד הגדרות שקשורות ליחסי סדר כי זו הסיבה העיקרית שהזכרתי אותם
+ כאן.
+ בדרך כלל קוראים לזוג 
+\begin_inset Formula $\left(P,\le\right)$
+\end_inset
+
+ שכולל קבוצה 
+\begin_inset Formula $P$
+\end_inset
+
+ ויחס סדר 
+\begin_inset Formula $\le$
+\end_inset
+
+ מעליה בשם 
+\begin_inset Quotes eld
+\end_inset
+
+קבוצה סדורה
+\begin_inset Quotes erd
+\end_inset
+
+.
+ בואו ניקח תת-קבוצה 
+\begin_inset Formula $A\subseteq P$
+\end_inset
+
+ ונגיד כל מני דברים על איברים גדולים וקטנים ביותר שם.
+\end_layout
+
+\begin_layout Standard
+אני אומר ש-
+\begin_inset Formula $x\in A$
+\end_inset
+
+ הוא 
+\series bold
+מינימלי
+\series default
+ ב-
+\begin_inset Formula $A$
+\end_inset
+
+ אם לא קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ששונה מ-
+\begin_inset Formula $x$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $a\le x$
+\end_inset
+
+.
+ אני אומר ש-
+\begin_inset Formula $x\in A$
+\end_inset
+
+ הוא 
+\series bold
+איבר ראשון
+\series default
+ ב-
+\begin_inset Formula $A$
+\end_inset
+
+ אם לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $x\le a$
+\end_inset
+
+.
+ מה ההבדל בין שתי ההגדרות? הן נשמעות כמעט זהות, והן אכן זהות אם 
+\begin_inset Formula $A$
+\end_inset
+
+ היא קבוצה סדורה בסדר מלא.
+ אבל אם 
+\begin_inset Formula $A$
+\end_inset
+
+ לא סדורה בסדר מלא בהחלט יכולים להיות איברים מינימליים שאינם ראשונים.
+ למשל, נסתכל על 
+\begin_inset Formula $A=\mathbb{N}\backslash\left\{ 0,1\right\} $
+\end_inset
+
+ עם יחס החלוקה )כלומר, הסרנו מ-
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ את האיברים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0,1
+\numeric off
+(.
+ גם 
+\begin_inset Formula $3$
+\end_inset
+
+ וגם 
+\begin_inset Formula $5$
+\end_inset
+
+ הם איברים מינימליים - אין אף מספר ב-
+\begin_inset Formula $A$
+\end_inset
+
+ שמחלק אותם.
+ מצד שני,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא בוודאי לא איבר ראשון ב-
+\begin_inset Formula $A$
+\end_inset
+
+ כי לא מתקיים 
+\begin_inset Formula $3|5$
+\end_inset
+
+, ואם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+היה ראשון ב-
+\begin_inset Formula $A$
+\end_inset
+
+ אז היה צריך להתקיים 
+\begin_inset Formula $3|a$
+\end_inset
+
+ 
+\series bold
+לכל
+\series default
+ 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ אם לעומת זאת אני אסתכל על הקבוצה 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ עם יחס החלוקה, אז יש בה איבר ראשון -
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+.
+ שימו לב שהוא יחיד; זה לא במקרה.
+ אם בקבוצה 
+\begin_inset Formula $A$
+\end_inset
+
+ יש שני איברים ראשונים 
+\begin_inset Formula $x,y$
+\end_inset
+
+ אז מהגדרת איבר ראשון מתקיים 
+\begin_inset Formula $x\le y$
+\end_inset
+
+ )כשחושבים על 
+\begin_inset Formula $x$
+\end_inset
+
+ בתור איבר ראשון ועל 
+\begin_inset Formula $y$
+\end_inset
+
+ בתור איזה שהוא איבר של 
+\begin_inset Formula $A$
+\end_inset
+
+( וגם 
+\begin_inset Formula $y\le x$
+\end_inset
+
+ )כשמחליפים את התפקידים שלהם( ומאנטי-סימטריות, 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+באופן דומה להגדרות של איבר מינימלי וראשון אפשר להגדיר איבר 
+\series bold
+מקסימלי
+\series default
+ 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ ככזה שלא קיים 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ ששונה מ-
+\begin_inset Formula $x$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $x\le a$
+\end_inset
+
+, ואפשר להגדיר 
+\series bold
+איבר אחרון
+\series default
+ ב-
+\begin_inset Formula $A$
+\end_inset
+
+ ככזה שמקיים 
+\begin_inset Formula $a\le x$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+ למשל, בקבוצה 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ עם יחס החלוקה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הוא 
+\series bold
+איבר אחרון
+\series default
+ )כן, זה קצת מפתיע - אנחנו חושבים על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בתור משהו 
+\begin_inset Quotes eld
+\end_inset
+
+קטן
+\begin_inset Quotes erd
+\end_inset
+
+ אבל הנה, ביחס הסדר הזה הוא הכי 
+\begin_inset Quotes eld
+\end_inset
+
+גדול
+\begin_inset Quotes erd
+\end_inset
+
+(.
+\end_layout
+
+\begin_layout Standard
+אם 
+\begin_inset Formula $A\subseteq P$
+\end_inset
+
+ היא תת-קבוצה של 
+\begin_inset Formula $P$
+\end_inset
+
+ אומרים שהיא 
+\series bold
+חסומה מלעיל
+\series default
+ )דרך מתוחכמת לומר 
+\begin_inset Quotes eld
+\end_inset
+
+חסומה מלמעלה
+\begin_inset Quotes erd
+\end_inset
+
+( אם קיים 
+\begin_inset Formula $b\in P$
+\end_inset
+
+ כך שלכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $a\le b$
+\end_inset
+
+.
+ בדומה, 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\series bold
+חסומה מלרע
+\series default
+ אם קיים 
+\begin_inset Formula $b$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $b\le a$
+\end_inset
+
+ לכל 
+\begin_inset Formula $a\in A$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
