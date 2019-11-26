@@ -7,6 +7,7 @@ url: "http://gadial.net" # the base hostname & protocol for your site, e.g. http
 facebook_username: לא-מדויק-163347110378474
 facebook_linkame: "לא מדויק"
 permalink: /:year/:month/:day/:title/
+timezone: UTC
 disqus:
   shortname: "not-precise"
 post_images: /assets/img

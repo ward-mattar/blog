@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>אז מדוע קשה להוכיח ש-P שונה מ-NP? (בלכסון) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="אז מדוע קשה להוכיח ש-P שונה מ-NP? (בלכסון)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="אם תבקשו ממני לתארך את הולדת מדעי המחשב התיאורטיים, אגיד שזה היה במאמר של טיורינג מ-1936 שבו הוא הציג את המודל החישובי שלו והוכיח שבעיית העצירה אינה ניתנת לפתרון על ידו. אמנם, מודלים חישוביים הוצעו קודם ותוצאות אי אפשרות הוכחו קודם, אך המאמר של טיורינג (לדעתי הלא מלומדת) הוא הראשון שתפס בצורה פשוטה ואינטואיטיבית אך מתמטית את הרעיון של חישוב; ויש משהו אירוני אך הולם בכך שלידתם של מדעי המחשב הייתה בדיוק בעיסוק בגבולותיהם - בדברים שלא ניתנים כלל לחישוב. זה כמובן אינו מקרי - הצורך להגדיר באופן מדוייק את מושג החישוב נבע בדיוק מהרצון להראות שמשהו בלתי ניתן לחישוב - שכן כדי להראות זאת צריך לומר תוצאה כללית על כל החישובים האפשריים, ולשם כך חייבים להגדיר במדוייק מה נקרא בכלל “חישוב”." />
+<meta property="og:description" content="אם תבקשו ממני לתארך את הולדת מדעי המחשב התיאורטיים, אגיד שזה היה במאמר של טיורינג מ-1936 שבו הוא הציג את המודל החישובי שלו והוכיח שבעיית העצירה אינה ניתנת לפתרון על ידו. אמנם, מודלים חישוביים הוצעו קודם ותוצאות אי אפשרות הוכחו קודם, אך המאמר של טיורינג (לדעתי הלא מלומדת) הוא הראשון שתפס בצורה פשוטה ואינטואיטיבית אך מתמטית את הרעיון של חישוב; ויש משהו אירוני אך הולם בכך שלידתם של מדעי המחשב הייתה בדיוק בעיסוק בגבולותיהם - בדברים שלא ניתנים כלל לחישוב. זה כמובן אינו מקרי - הצורך להגדיר באופן מדוייק את מושג החישוב נבע בדיוק מהרצון להראות שמשהו בלתי ניתן לחישוב - שכן כדי להראות זאת צריך לומר תוצאה כללית על כל החישובים האפשריים, ולשם כך חייבים להגדיר במדוייק מה נקרא בכלל “חישוב”." />
+<link rel="canonical" href="http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/" />
+<meta property="og:url" content="http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-08-16T22:18:02+00:00" />
+<script type="application/ld+json">
+{"dateModified":"2010-08-16T22:18:02+00:00","datePublished":"2010-08-16T22:18:02+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/"},"url":"http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/","description":"אם תבקשו ממני לתארך את הולדת מדעי המחשב התיאורטיים, אגיד שזה היה במאמר של טיורינג מ-1936 שבו הוא הציג את המודל החישובי שלו והוכיח שבעיית העצירה אינה ניתנת לפתרון על ידו. אמנם, מודלים חישוביים הוצעו קודם ותוצאות אי אפשרות הוכחו קודם, אך המאמר של טיורינג (לדעתי הלא מלומדת) הוא הראשון שתפס בצורה פשוטה ואינטואיטיבית אך מתמטית את הרעיון של חישוב; ויש משהו אירוני אך הולם בכך שלידתם של מדעי המחשב הייתה בדיוק בעיסוק בגבולותיהם - בדברים שלא ניתנים כלל לחישוב. זה כמובן אינו מקרי - הצורך להגדיר באופן מדוייק את מושג החישוב נבע בדיוק מהרצון להראות שמשהו בלתי ניתן לחישוב - שכן כדי להראות זאת צריך לומר תוצאה כללית על כל החישובים האפשריים, ולשם כך חייבים להגדיר במדוייק מה נקרא בכלל “חישוב”.","headline":"אז מדוע קשה להוכיח ש-P שונה מ-NP? (בלכסון)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/random">דף אקראי</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list/" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <div class="PageNavigation">
+    
+      <a class="prev" href="/2010/08/15/p_vs_np_overview/">&laquo; אז מה זה עניין P=NP, בעצם?</a>
+    
+    
+      <a class="next" href="/2010/08/31/oracles_and_p_vs_np/">כיצד אורקלים מנבאים שקשה להוכיח ש-P שונה מ-NP &raquo;</a>
+    
+  </div>
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">אז מדוע קשה להוכיח ש-P שונה מ-NP? (בלכסון)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-08-16T22:18:02+00:00" itemprop="datePublished">Aug 16, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אם תבקשו ממני לתארך את הולדת מדעי המחשב התיאורטיים, אגיד שזה היה ב<a href="http://www.google.com/url?sa=t&amp;source=web&amp;cd=1&amp;ved=0CBcQFjAA&amp;url=http%3A%2F%2Fwww.thocp.net%2Fbiographies%2Fpapers%2Fturing_oncomputablenumbers_1936.pdf&amp;ei=NYppTJ2mDc-fONmQwbgF&amp;usg=AFQjCNHLCPE7ZMMOfz6ZUP2gDQYZGCoxIA&amp;sig2=VkKRrxKmGZBD-j04nHYVFw">מאמר של טיורינג</a> מ-1936 שבו הוא הציג את המודל החישובי שלו והוכיח שבעיית העצירה אינה ניתנת לפתרון על ידו. אמנם, מודלים חישוביים הוצעו קודם ותוצאות אי אפשרות הוכחו קודם, אך המאמר של טיורינג (לדעתי הלא מלומדת) הוא הראשון שתפס בצורה פשוטה ואינטואיטיבית אך מתמטית את הרעיון של חישוב; ויש משהו אירוני אך הולם בכך שלידתם של מדעי המחשב הייתה בדיוק בעיסוק בגבולותיהם - בדברים שלא ניתנים כלל לחישוב. זה כמובן אינו מקרי - הצורך להגדיר באופן מדוייק את מושג החישוב נבע בדיוק מהרצון להראות שמשהו בלתי ניתן לחישוב - שכן כדי להראות זאת צריך לומר תוצאה <strong>כללית</strong> על כל החישובים האפשריים, ולשם כך חייבים להגדיר במדוייק מה נקרא בכלל “חישוב”.</p>
+
+<p>ההוכחה של טיורינג (שאת הגרסה המקובלת שלה כיום <a href="http://www.gadial.net/2007/09/27/halting_problem_proof/">הצגתי כבר בעבר</a>. אמנם עסקה במודל קונקרטי, אך למעשה היא כמעט ולא השתמשה בפרטים קונקרטיים הקשורים למודל זה. התכונה המרכזית שבה נעשה שימוש הייתה העובדה שמכונת טיורינג ניתנת לתיאור באמצעות מחרוזת (רצף תווים) סופית, ושבהינתן מחרוזת תווים שכזו, מכונת טיורינג אחרת מסוגלת <strong>לבצע סימולציה</strong> של המכונה המקודדת. כל מי שמקיים תכונות אלו (ומאפשר לנו בנוסף לכך לבצע חישובים מאוד בסיסיים) חשוף להוכחה של טיורינג.</p>
+
+<p>אזכיר אותה בקצרה (כפי שכל מי שיביט במאמר של טיורינג יראה, זה “לא בדיוק” מה שטיורינג אמר, אבל ביד חופשית שכזו נהוג להשתמש כל הזמן כל עוד לא מתיימרים לעסוק בהיסטוריה של המתמטיקה): נניח שיש לנו מכונה <span>$latex Q$</span> שבהינתן מכונה אחרת <span>$latex M$</span> וקלט עבורה <span>$latex x$</span> אומרת האם <span>$latex M$</span> עוצרת בריצתה על <span>$latex x$</span> או שלא. כעת נבנה מכונה <span>$latex U$</span> שעל קלט <span>$latex x$</span> מזינה ל-<span>$latex Q$</span> את הזוג <span>$latex \left(x,x\right)$</span> (כלומר, שואלת את <span>$latex Q$</span> “מה עושה המכונה המקודדת בתור <span>$latex x$</span> כשמריצים אותה על עצמה?”) ופועלת <strong>הפוך</strong> ממה ש-<span>$latex Q$</span> אמרה - אם <span>$latex Q$</span> אמרה ש-<span>$latex x$</span> עוצרת על <span>$latex x$</span>, אז <span>$latex U$</span> נכנסת ללולאה אינסופית; ואחרת, <span>$latex U$</span> עוצרת. בבירור ההתנהגות של <span>$latex U$</span> כשיריצו אותה על הקלט <span>$latex U$</span> תהיה פרדוקסלית, וזה סוף הסיפור.</p>
+
+<p>ההוכחה הקצרצרה הזו מתארת אי שוויון בין מחלקות של בעיות חישוביות - במקרה הזה, בין המחלקה <span>$latex \mbox{R}$</span> של בעיות שניתנות לפתרון, ו<a href="http://www.gadial.net/2007/09/18/r_and_re/">המחלקה</a> <span>$latex \mbox{RE}$</span> של בעיות שניתנות לפתרון “חד צדדי”- בעיות שעבורן קיימת מכונה שעוצרת ועונה “כן” אם התשובה היא אכן כן, אך אחרת ייתכן שהיא לא תעצור כלל (או שתעצור ותגיד “לא”). אף שזה לא ברור מייד, שאלת <span>$latex \mbox{P} \ne \mbox{NP}$</span> היא האנלוג הקשור ל”זמן ריצה יעיל” של תוצאת ה-<span>$latex \mbox{R}\ne\mbox{RE}$</span> הזו. (אם לוקחים את הגדרת <span>$latex \mbox{P}$</span> ומחלישים את הדרישה של “זמן ריצה פולינומי” על ידי החלפתה ב”זמן ריצה כלשהו, העיקר שהמכונה תעצור”, מקבלים את <span>$latex \mbox{R}$</span>; ואם עושים את אותו הדבר ל-<span>$latex \mbox{NP}$</span> מקבלים את <span>$latex \mbox{RE}$</span> - זה תרגיל נחמד שאולי גם אדבר עליו פעם בבלוג).</p>
+
+<p>ההוכחה הזו מחוכמת למדי - במקום לנסות ולתפוס את כל הדרכים האפשריות שבהן אפשר, אולי, להכריע את בעיית העצירה ולהראות שבכל אחת מהן יש כשל כלשהו, ההוכחה הזו הולכת בדלת האחורית - היא מניחה שאפשר להכריע את בעיית העצירה, ומראה אילו דברים אבסורדיים נובעים מכך. אם כן, מדוע לא ניתן להשתמש בהוכחה הזו גם כדי להראות ש-<span>$latex \mbox{P}$</span> שונה מ-<span>$latex \mbox{NP}$</span>?</p>
+
+<p>הבעיה היא שלא ברור באיזו בעיה כדאי להשתמש בתור הבעיה-חסומת-הזמן שאנלוגית לבעיית העצירה. אפשר להגדיר כל מני שפות דומות אבל אני מעדיף להציג גישה שונה מעט להוכחה שהצגתי לעיל - גישה שבפועל היא שימושית מאוד, ואולי מבהירה מעט יותר טוב מדוע להוכחה הזו קוראים <strong>לכסון</strong>.</p>
+
+<p>הרעיון בהוכחה הוא זה: אם יש לנו שתי מחלקות <span>$latex A,B$</span> של שפות (“שפה”היא פשוט אוסף של קלטים - נניח, אוסף הקלטים שעליהם המכונה עוצרת ואומרת “כן”) ואנו רוצים להראות כי <span>$latex A\ne B$</span>, וכמו כן <span>$latex A$</span> בבירור מוכל ב-<span>$latex B$</span>, אז דרך אחת להראות זאת היא על ידי הצגת מכונה ששפתה נמצאת ב-<span>$latex B$</span>, אבל היא מתנהגת באופן שונה מאשר <strong>כל</strong> מכונה ששפתה ב-<span>$latex A$</span>. מה ה”לכסון”כאן? ובכן, זכרו שבהוכחת <a href="http://www.gadial.net/2007/08/29/cantor_diagonal/">האלכסון של קנטור</a> התעלול היה לבנות מספר ממשי ש”מתנהג באופן שונה” מאשר כל מספר ממשי שהיה קיים במספור של הממשיים - כלומר, הוא נבדל מכל אחד מהמספרים הללו באחד מהמקומות בפיתוח העשרוני שלהם. כאן זה אותו רעיון: אם <span>$latex U$</span> היא המכונה שאנו בונים ו-<span>$latex M$</span> היא מכונה כלשהי ששפתה ב-<span>$latex A$</span>, אז יהיה קיים קלט <span>$latex x$</span> שעליו <span>$latex U$</span> ו-<span>$latex M$</span> יתנהגו שונה (ובפרט לכל <span>$latex M$</span> יהיה מדובר על <span>$latex x$</span> אחר).</p>
+
+<p>כאשר <span>$latex A=\mbox{R}$</span> ו-<span>$latex B=\mbox{RE}$</span>, אז המכונות ששפתן ב-<span>$latex A$</span> הן “מכונות שעוצרות תמיד” ואילו מכונות ששפתן ב-<span>$latex B$</span> הן “מכונות שעוצרות תמיד אם התשובה היא “כן”, ואחרת יכולות לא לעצור”. במילים אחרות, המכונה <span>$latex U$</span> שנבנה יכולה לא לעצור על קלטים מסויימים, ואז מובטח שהם לא יהיו בשפה שלה.</p>
+
+<p>כעת הבניה של <span>$latex U$</span> היא פשוטה ביותר: בהינתן קלט <span>$latex x$</span>, <span>$latex U$</span> <strong>מפרשת</strong> אותו כמכונה <span>$latex M_{x}$</span>, מריצה את <span>$latex M_{x}$</span> על הקלט <span>$latex x$</span> עצמו, ואם <span>$latex M_{x}$</span> עצרה וענתה - היא עונה הפוך ממנה. מכיוון שכל <span>$latex M$</span> ששפתה ב-<span>$latex \mbox{R}$</span> מחוייבת לעצור, מובטח לנו ש-<span>$latex U$</span> תענה הפוך מכל <span>$latex M$</span> כזו על הקלט <span>$latex \left\langle M\right\rangle $</span> עצמו (הסוגריים המשולשים באים לציין שמדובר על <strong>הקידוד</strong> של <span>$latex M$</span> כמחרוזת). כמובן ש-<span>$latex U$</span> עלולה לא לעצור כלל אם המכונה <span>$latex M_{x}$</span> שהיא מסמלצת היא מהסוג שלא עונה אף פעם - אבל זה בסדר, כי הרשינו ל-<span>$latex B$</span> להתנהג כך.</p>
+
+<p>מכיוון שלא ממש ברור איך נראית השפה ש-<span>$latex U$</span> מקבלת, תוצאה זו לא נותנת לנו שפה קונקרטית שלא ניתן להכריע (ועל כן ההוכחה הראשונה שהצגתי עדיפה על פניה באספקט זה) אך היא מראה כי המחלקות <span>$latex \mbox{R}$</span> ו-<span>$latex \mbox{RE}$</span> הן שונות; וחשוב מכך, ניתן להכליל אותה לסיטואציות רבות אחרות. אדגים כעת את אחת מהפשוטות שבהן: נניח שאנו רוצים להוכיח כי <span>$latex \mbox{P} \ne \mbox{R}$</span>, דהיינו שיש בעיות שניתן להכריע אך אינן פתירות בזמן פולינומי - ההוכחה תעבוד כמעט באותו האופן, למעט תוספת טכנית חשובה אחת. אני מזהיר מראש - ההוכחה אינה פשוטה לגמרי וחלקכם כנראה יאבד אותי - אפשר לעבור לסוף ההוכחה בלי לפגוע מהותית בקריאת הפוסט.</p>
+
+<p>שימו לב שכעת <span>$latex U$</span> שלנו צריכה לעצור תמיד, אחרת ייתכן ששפתה לא תשתייך ל-<span>$latex \mbox{R}$</span>. במילים אחרות, תמו ימי הנעורים הפרועים שבהם <span>$latex U$</span> יכלה פשוט להריץ כל מכונת טיורינג עם כל קידוד שהוא, כי ייתכן שחלק מהמכונות שהיא מריצה לא יעצרו לעולם. כאן נכנס לתמונה התעלול הטכני - <span>$latex U$</span> תפרש את הקלט <span>$latex x$</span> כמכונה כמו קודם, אבל תריץ את <span>$latex M_{x}$</span> על <span>$latex x$</span> רק במשך <span>$latex 2^{\left|x\right|}$</span> צעדים - שתיים בחזקת האורך של <span>$latex x$</span> צעדים (זכרו - <span>$latex x$</span> היא מחרוזת). אם בפרק הזמן הזה <span>$latex M_{x}$</span> עצרה על <span>$latex x$</span>, הרי ש-<span>$latex U$</span> תענה הפוך ממנה; ואחרת, פשוט תדחה. מה שאנו מתבססים עליו כאן הוא שלכל מכונה יש אינסוף קידודים מאורכים שונים ומשונים, כי תמיד אפשר להכריז שאם תו מסויים מופיע בקידוד פשוט מתעלמים ממנו (למי שזה מפריע לו - יש עוד דרכים, טיפה פחות אלגנטיות, לעקוף את הבעיה הזו).</p>
+
+<p>כעת מגיע החלק המסובך - נניח שיש מכונה <span>$latex M$</span> שפועלת בזמן ריצה פולינומי, נניח עם פולינום <span>$latex p\left(n\right)$</span>. אז קיים <span>$latex m$</span> טבעי כלשהו כך ש-<span>$latex p\left(m\right)&lt;2^{m}$</span> - זה מכיוון שפונקציה מעריכית כמו <span>$latex 2^{x}$</span> גדלה מהר יותר מכל פולינום (טענה שדורשת הוכחה אך אינה מסובכת). בואו ניקח בתור <span>$latex x$</span> עותק של <span>$latex M$</span> שאורכו לפחות <span>$latex m$</span> - כעת מובטח לנו שכאשר <span>$latex U$</span> תרוץ על <span>$latex x$</span> היא תסמלץ את ריצת <span>$latex M$</span> על <span>$latex x$</span> למשך מספר צעדים כה גדול עד כי מובטח ש-<span>$latex M$</span> תעצור על <span>$latex x$</span>, ולכן <span>$latex U$</span> תענה הפוך מ-<span>$latex M$</span>. מכאן שאף מכונה פולינומית אינה מקבלת את אותה שפה בדיוק כמו <span>$latex U$</span>, וזהו סוף הסיפור.</p>
+
+<p>את ההוכחה הזו ניתן להמשיך ולשכלל, ולקבל את מה שמכונה “משפטי ההיררכייה” של תורת הסיבוכיות. הם מראים, למשל, שיש בעיות שניתן לפתור בסיבוכיות זמן <span>$latex O\left(n^{2}\right)$</span> אך לא בסיבוכיות זמן <span>$latex O\left(n\right)$</span>, וכדומה. אפשר להחיל את אותו רעיון גם על מחלקות סיבוכיות אי דטרמיניסטיות (הדבר דורש עוד תעלולים לא פשוטים), וישנן עוד הוכחות לכסון מחוכמות אף יותר - המפורסם ביותר מבין התוצאות המחוכמות הוא ככל הנראה <a href="http://en.wikipedia.org/wiki/NP-Intermediate">משפט לדנר</a>, שמראה שאם <span>$latex \mbox{P} \ne \mbox{NP}$</span> אז קיימות “שפות ביניים” שאינן ב-<span>$latex \mbox{P}$</span> וגם אינן <span>$latex \mbox{NP}$</span>-שלמות, אך נעזוב את זה.</p>
+
+<p>הפאנץ’ המרכזי בכל הוכחות הלכסון הללו הוא המיעוט בהנחות קונקרטיות שהן דורשות מאיתנו; הרעיון שחוזר שוב ושוב בכולן הוא שאפשר לקודד מכונת טיורינג קידוד סופי, כך שמכונה אחרת יכולה לקרוא את הקידוד הזה ולסמלץ אותה בלי תוספת משאבים משמעותית. זה הכל. הוכחות שמתבססות רק על תכונות אלו מכונות “הוכחות רלטביסטיות”. באופן ציורי אפשר לומר שאלו הן הוכחות שמתייחסות למכונת הטיורינג כאל “קופסה שחורה”- אפשר להריץ אותה על קלט מספר כלשהו של צעדים, וזהו. זה כל מה שעושים איתה. אין שום התייחסות לתכונות אחרות של המכונה או לסיטואציות שעשויות לצוץ בזמן הריצה. זו הוכחה מופשטת שכמעט ואינה תלויה בפרטי המודל - והבעיה היא ככל הנראה שהיא מופשטת <strong>מדי</strong>.</p>
+
+<p>האם גם את <span>$latex \mbox{P} \ne \mbox{NP}$</span> ניתן להוכיח בדרך זאת? נסיון נאיבי לעשות זאת ייכשל - היתרון היחיד שיש למכונות ששפתן ב-<span>$latex \mbox{NP}$</span> על פני מכונות ב-<span>$latex \mbox{P}$</span> הוא שהן יכולות להיות אי-דטרמיניסטיות; לא אכנס להגדרה המדוייקת של המושג (שכבר עסקתי בה בעבר) כי זה לא קריטי כרגע - הנקודה היא שעל פניו זה לא מאפשר למכונה לבצע סימולציה “עד הסוף” של כל המכונות הפולינומיות הדטרמיניסטיות; במשפטי הלכסון הקלאסיים הבעיה הזו נפתרת על ידי כך ש-<span>$latex U$</span> רצה <strong>הרבה</strong> זמן ביחס למכונות שהיא מנסה לענות שונה מהן - כאן ל-<span>$latex U$</span> אין שום יתרון כזה.</p>
+
+<p>כמובן שבעיה אינטואיטיבית שכזו לא אמורה לעצור אף אחד. מה שעצר אנשים היה מאמר משנת 1975 של Baker-Gill-Solovay שהראה שפשוט לא ניתן להשתמש בשיטות רלטביסטיות כדי להוכיח ש-<span>$latex \mbox{P} \ne \mbox{NP}$</span>. איך מוכיחים דבר כזה? להוכחה המדוייקת אקדיש פוסט נפרד וכעת אסתפק בתיאור הרעיון. המושג החדש שהם מכניסים לתמונה הוא זה של <a href="http://he.wikipedia.org/wiki/%D7%90%D7%95%D7%A8%D7%A7%D7%9C_%28%D7%9E%D7%93%D7%A2%D7%99_%D7%94%D7%9E%D7%97%D7%A9%D7%91%29">אורקל</a>. אורקל, בפשטות, הוא כוח שמיימי שמסוגל לענות על שאלות מסויימות באופן מושלם ומבלי שהדבר ייקח זמן. באופן קצת יותר פורמלי מדברים תמיד על אורקל לשפות מסויימות. אורקל לשפה יכול, בהינתן מילה כלשהי, לומר מייד אם היא שייכת לשפה או לא. למשל - אורקל לבעיית העצירה יכול, בהינתן זוג <span>$latex M,x$</span>, להגיד מייד אם <span>$latex M$</span> עוצרת על <span>$latex x$</span> או שאינה עוצרת. זהו כמובן מושג תיאורטי לחלוטין; במציאות אפילו חישובים פשוטים דורשים זמן. עם זאת, התועלת שצומחת משימוש תיאורטי ביצור הזה היא עצומה, והדבר דומה לשימושיות הרבה של מושג המכונה האי-דטרמיניסטית, למרות שמכונה כזו אינה קיימת במציאות.</p>
+
+<p>כעת, בהינתן מודל כלשהו של מכונות טיורינג (למשל - מכונות דטרמיניסטיות פולינומיות) אפשר “לחזק” את המודל על ידי כך שמרשים למכונות בו גישה לאורקל מסויים (כלומר, אורקל עבור שפה ספציפית נתונה). למשל, את המודל של “מכונות דטרמיניסטיות פולינומיות”אפשר לחזק ולהפוך למודל של “מכונות דטרמיניסטיות פולינומיות עם אורקל לבעיית העצירה”.</p>
+
+<p>אלא מה? הוכחות רלטיביסטיות הן “עיוורות” לחיזוק שכזה. אם אנחנו מצליחים להוכיח באופן רלטיביסטי ששתי מחלקות <span>$latex A,B$</span> שונות זו מזו, ואנו מחזקים את המכונות <strong>בשתי</strong> המחלקות באמצעות אותו אורקל, ההוכחה ממשיכה לעבוד באותו האופן; בכל פעם שסימולציה של מכונה <span>$latex M$</span> מתוך <span>$latex A$</span> תדרוש קריאה לאורקל, <span>$latex U$</span> תוכל לבצע את הקריאה הזו כי גם ל-<span>$latex B$</span> הוספנו גישה לאותו אורקל. באופן פורמלי זה אומר שאם הוכחנו רלטיביסטית ש-<span>$latex A\ne B$</span> אז גם <span>$latex A^{L}\ne B^{L}$</span>, כאשר <span>$latex A^{L}$</span> אומר, כצפוי, “המחלקה <span>$latex A$</span> כשמוסיפים למכונות בה גישה לאורקל לשפה <span>$latex L$</span>”.</p>
+
+<p>ומה שהראו באותו מאמר משנת 1975 היה שקיימות שתי שפות, <span>$latex L_{1},L_{2}$</span>, כך ש-<span>$latex \mbox{P}^{L_{1}}\ne\mbox{NP}^{L_{1}}$</span>, אבל <span>$latex \mbox{P}^{L_{2}}=\mbox{NP}^{L_{2}}$</span>. זה מראה מייד שלא ניתן להוכיח לא ש-<span>$latex \mbox{P}\ne\mbox{NP}$</span> בשיטות רלטביסטיות, וגם לא ש-<span>$latex \mbox{P}=\mbox{NP}$</span>.</p>
+
+<p>מהן השפות <span>$latex L_{1},L_{2}$</span> המסתוריות הללו ואיך הולכת ההוכחה? מכיוון שהיא טכנית יחסית, אדחה אותה לפוסט נפרד.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/';
+      this.page.identifier = 'http://gadial.net/2010/08/16/p_vs_np_hard_to_diagonalize/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2010/08/16/p_vs_np_hard_to_diagonalize/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>משפט השלמות של גדל, ההוכחה (חלק א’) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="משפט השלמות של גדל, ההוכחה (חלק א’)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים $latex \Phi$ בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק $latex \varphi$כך ש-$latex \Phi\not\vdash\varphi$ וגם $latex \Phi\not\vdash\neg\varphi$ - כלומר, $latex \Phi$ לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם $latex \Phi\models\varphi$ עבור $latex \Phi,\varphi$ כלשהם, אז $latex \Phi\vdash\varphi$ - כלומר, כל מה שנובע לוגית גם יכיח." />
+<meta property="og:description" content="בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים $latex \Phi$ בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק $latex \varphi$כך ש-$latex \Phi\not\vdash\varphi$ וגם $latex \Phi\not\vdash\neg\varphi$ - כלומר, $latex \Phi$ לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם $latex \Phi\models\varphi$ עבור $latex \Phi,\varphi$ כלשהם, אז $latex \Phi\vdash\varphi$ - כלומר, כל מה שנובע לוגית גם יכיח." />
+<link rel="canonical" href="http://gadial.net/2013/02/25/godel_completeness_proof_1/" />
+<meta property="og:url" content="http://gadial.net/2013/02/25/godel_completeness_proof_1/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-02-25T22:52:55+00:00" />
+<script type="application/ld+json">
+{"dateModified":"2013-02-25T22:52:55+00:00","datePublished":"2013-02-25T22:52:55+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2013/02/25/godel_completeness_proof_1/"},"url":"http://gadial.net/2013/02/25/godel_completeness_proof_1/","description":"בפוסט הקודם הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של תורות: על כך שאם קבוצה של פסוקים $latex \\Phi$ בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק $latex \\varphi$כך ש-$latex \\Phi\\not\\vdash\\varphi$ וגם $latex \\Phi\\not\\vdash\\neg\\varphi$ - כלומר, $latex \\Phi$ לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של מערכת ההוכחה, והוא אומר שאם $latex \\Phi\\models\\varphi$ עבור $latex \\Phi,\\varphi$ כלשהם, אז $latex \\Phi\\vdash\\varphi$ - כלומר, כל מה שנובע לוגית גם יכיח.","headline":"משפט השלמות של גדל, ההוכחה (חלק א’)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/random">דף אקראי</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list/" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  
+  <div class="PageNavigation">
+    
+      <a class="prev" href="/2013/02/23/first_order_logic_proof_system/">&laquo; מערכת הוכחה ללוגיקה מסדר ראשון</a>
+    
+    
+      <a class="next" href="/2013/02/26/godel_completeness_proof_2/">משפט השלמות של גדל, ההוכחה (חלק ב') &raquo;</a>
+    
+  </div>
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">משפט השלמות של גדל, ההוכחה (חלק א&#39;)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-02-25T22:52:55+00:00" itemprop="datePublished">Feb 25, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>ב<a href="http://www.gadial.net/2013/02/23/first_order_logic_proof_system/">פוסט הקודם</a> הצגתי מערכת הוכחה ללוגיקה מסדר ראשון, והפעם אני רוצה להתחיל את ההוכחה שהמערכת הזו היא שלמה ונאותה. למעשה, אני הולך לדלג על הוכחת הנאותות כי די כיסיתי אותה בפוסט הקודם - שכנעתי אתכם (אני מקווה) שהאקסיומות של המערכת הן אמיתות לוגיות, ושכללי ההיסק משמרים נביעה לוגית, ומכאן ההוכחה היא שגרתית. אם כן, החלק המעניין פה הוא הוכחת השלמות. משפט השלמות הוכח במקור על ידי קורט גדל בשנת 1930 ולכן הוא נקרא “משפט השלמות של גדל” (עם זאת, ההוכחה שאראה היא לא של גדל אלא של הנקין מ-1949); צריך כמובן להיזהר ולא לבלבל את זה עם משפטי אי השלמות של גדל שהוכחו ב-1931 ומדברים על סוג שונה של שלמות. משפטי אי השלמות מדברים על אי-שלמות של <strong>תורות</strong>: על כך שאם קבוצה של פסוקים <span>$latex \Phi$</span> בלוגיקה מסדר ראשון מקיימת אי-אילו תכונות, אז קיים פסוק <span>$latex \varphi$</span>כך ש-<span>$latex \Phi\not\vdash\varphi$</span> וגם <span>$latex \Phi\not\vdash\neg\varphi$</span> - כלומר, <span>$latex \Phi$</span> לא מוכיחה לא אותו ואת שלילתו. משפט השלמות מדבר על שלמות של <strong>מערכת ההוכחה</strong>, והוא אומר שאם <span>$latex \Phi\models\varphi$</span> עבור <span>$latex \Phi,\varphi$</span> כלשהם, אז <span>$latex \Phi\vdash\varphi$</span> - כלומר, כל מה שנובע לוגית גם יכיח.</p>
+
+<p>משטיפלנו בבלבול הזה אפשר לגשת לעבודה. בואו נתחיל בלהיזכר באופן שבו הוכחנו את משפט השלמות עבור תחשיב הפסוקים, כי הרעיון הבסיסי עדיין עובד גם כאן: הוכחנו טענה שנראית ממבט ראשון שונה לגמרי - שאם קבוצה <span>$latex \Phi$</span> היא עקבית, אז קיים לה מודל, כאשר “עקבית” פירושו שהיא אינה מוכיחה דבר והיפוכו. הטענה הזו גוררת מיידית את משפט השלמות באופן הבא: נניח כי <span>$latex \Phi\models\varphi$</span> ונניח בשלילה ש-<span>$latex \Phi\cup\left\{ \neg\varphi\right\} $</span> עקבית, אז קיים ל-<span>$latex \Phi\cup\left\{ \neg\varphi\right\} $</span> מודל <span>$latex \mathcal{M}$</span>, ובפרט <span>$latex \mathcal{M}\models\Phi$</span> ולכן <span>$latex \mathcal{M}\models\varphi$</span> (זו המשמעות של הטענה ש-<span>$latex \varphi$</span> נובע לוגית מ-<span>$latex \Phi$</span>). מצד שני, <span>$latex \mathcal{M}\models\neg\varphi$</span> וזו סתירה (בהינתן מודל ופסוק, ערך האמת של הפסוק נקבע בצורה יחידה והוא תמיד הפוך מזה של שלילתו). לכן נובע ש-<span>$latex \Phi\cup\left\{ \neg\varphi\right\} $</span> אינה עקבית, ומכך נובע ש-<span>$latex \Phi\vdash\varphi$</span>. את השלב האחרון (“משפט ההוכחה בדרך השלילה”) הוכחתי עבור תחשיב הפסוקים וההוכחה תקפה באותה מידה גם בלוגיקה מסדר ראשון, עד כדי נקודה קטנה אך מהותית: המשפט הזה מתבסס על מה שנקרא <strong>משפט הדדוקציה</strong>, וההוכחה של משפט הדדוקציה ללוגיקה מסדר ראשון דורשת עוד טיפה עבודה.</p>
+
+<p>משפט הדדוקציה אומר, כזכור, שאם <span>$latex \Phi\cup\left\{ \alpha\right\} \vdash\beta$</span> אז <span>$latex \Phi\vdash\alpha\to\beta$</span>. בתחשיב הפסוקים ראינו כיצד להוכיח זאת במקרה שבו <span>$latex \beta$</span> היא אקסיומה, הנחה מתוך <span>$latex \Phi$</span>, <span>$latex \alpha$</span> בעצמה, או מתקבלת על ידי MP מפסוקים שעבורם אנו כבר יודעים שמשפט הדדוקציה נכון. עם זאת, בלוגיקה מסדר ראשון צריך גם להתייחס למקרה שבו <span>$latex \beta$</span> מתקבלת מהפעלת GEN, כלומר <span>$latex \beta=\forall x\gamma$</span> כאשר <span>$latex \gamma$</span> כבר מקיימת את משפט הדדוקציה, כלומר <span>$latex \Phi\vdash\alpha\to\gamma$</span>.</p>
+
+<p>אם כן, מה עושים? למרבה המזל, יש לנו תבנית אקסיומה שנבחרה בדיוק כדי להתמודד עם הסיטואציה הזו - תבנית אקסיומה מס’ 5, <span>$latex \forall x\left(\varphi\to\psi\right)\to\left(\varphi\to\forall x\psi\right)$</span>. הדרישה של תבנית האקסיומה הזו היא ש-<span>$latex x$</span> לא יהיה משתנה חופשי ב-<span>$latex \varphi$</span>. במקרה שלנו <span>$latex \varphi$</span> הוא <span>$latex \alpha$</span>, והרי <span>$latex \beta$</span> מתקבל על ידי הוכחה מ-<span>$latex \Phi\cup\left\{ \alpha\right\} $</span> ודרשתי במפורש שאם GEN יופעל, אז זה יהיה רק עם משתנה שאינו מופיע חופשי ב-<span>$latex \Phi\cup\left\{ \alpha\right\} $</span>, ומכאן ש-<span>$latex x$</span> אינו חופשי ב-<span>$latex \alpha$</span>. לכן אפשר לכתוב את ההוכחה הפורמלית הבאה:</p>
+<ol>
+	<li><span>$latex \alpha\to\gamma$</span> (הנחה).</li>
+	<li><span>$latex \forall x\left(\alpha\to\gamma\right)$</span> (GEN על 1 עם משתנה שאינו מופיע חופשי ב-<span>$latex \Phi$</span>)</li>
+	<li><span>$latex \forall x\left(\alpha\to\gamma\right)\to\left(\alpha\to\forall x\gamma\right)$</span> (תבנית אקסיומה 5).</li>
+	<li><span>$latex \alpha\to\forall x\gamma$</span> (MP על 2,3).</li>
+</ol>
+<p>וקיבלנו בדיוק את <span>$latex \alpha\to\beta$</span> כפי שרצינו. זה מסיים את ההעברה של המשפטים מתחשיב הפסוקים ללוגיקה מסדר ראשון ומאפשר לנו להתמקד בעיקר.</p>
+
+<p>אם כן, מעתה היעד שלנו הוא להוכיח שלקבוצה עקבית <span>$latex \Phi$</span> של פסוקים קיים מודל. בתחשיב הפסוקים “מודל” היה דבר פשוט למדי - השמה של ערכי אמת לכל המשתנים, וחסל. בלוגיקה מסדר ראשון מודל הוא עסק מסובך הרבה יותר - צריך להגדיר עולם שהוא קבוצה כלשהי של איברים, ולכל הסימנים במילון של <span>$latex \Phi$</span> צריך להתאים יחסים, פונקציות וקבועים מתוך העולם. על פניו בכלל לא ברור <strong>מאיפה</strong> אנחנו הולכים להמציא את העולם הזה. כאן נכנס לתמונה התעלול הראשון: האיברים של העולם שלנו יהיו (בערך - אני משקר כאן כרגע) הקבועים של המילון של <span>$latex \Phi$</span>. אלא שזה נשמע על פניו מטופש - מה אם במילון אין בכלל קבועים?</p>
+
+<p>ובכן, בתחשיב הפסוקים האופן שבו התמודדנו עם בעיית ה”ממש לא ברור לי מאיפה להתחיל” היה לקחת את קבוצת הפסוקים שלנו ו<strong>להרחיב</strong> אותה כך שנקבל קבוצה שבה יהיה לנו מעט מאוד חופש פעולה - קבוצה כזו שאם קיים לה מודל, אז די ברור לנו איך הוא <strong>חייב</strong> להיראות. צמצום חופש הבחירה עזר לנו מאוד. אותו הדבר יקרה גם כאן - אנחנו ניקח את <span>$latex \Phi$</span> ונרחיב אותה, אבל גם ניקח אתצ <span>$latex \tau$</span>, המילון של <span>$latex \Phi$</span>, ונרחיב גם אותו על ידי הוספה של המון סימני קבועים. אחרי שנקבל את <span>$latex \Phi$</span> המורחבת מעל המילון המורחב כבר יהיה די ברור איך המודל חייב להיראות, וכל מה שיישאר הוא לטפל בפרטים הטכניים.</p>
+
+<p>מה שנרצה לעשות הוא להרחיב את אוסף הקבועים של <span>$latex \tau$</span> ואת <span>$latex \Phi$</span> כך שהם יקיימו את התכונה הבאה: ש-<span>$latex \Phi$</span> המורחבת תוכל להוכיח שלכל נוסחה <span>$latex \varphi\left(x\right)$</span> עם משתנה חופשי יחיד <span>$latex x$</span>, אם <span>$latex \exists x\varphi\left(x\right)$</span> מתקיים אז קיים קבוע ש”מוכיח” את זה, כלומר יש קבוע <span>$latex c$</span> כך ש-<span>$latex \varphi\left(c\right)$</span> מתקיים. פורמלית אנו אומרים שקבוצת סימני קבועים <span>$latex C$</span> היא קבוצת <strong>עדים</strong> עבור <span>$latex \Phi$</span> אם לכל נוסחה <span>$latex \varphi\left(x\right)$</span> עם משתנה חופשי יחיד קיים <span>$latex c\in C$</span> כך שמתקיים</p>
+
+<p><span>$latex \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)$</span></p>
+
+<p>כאן <span>$latex \varphi\left(c\right)$</span> פירושו מה שמקבלים כאשר מציבים ב-<span>$latex \varphi$</span> את הקבוע <span>$latex c$</span> במקום <span>$latex x$</span>.</p>
+
+<p>אז כמו בתחשיב הפסוקים, יש לנו שני שלבים: שלב ההרחבה של <span>$latex \Phi$</span> ו-<span>$latex \tau$</span>, ושלב ההוכחה שלתורה המורחבת יש מודל. מכיוון שמודל לתורה המורחבת מעל המילון המורחב הוא עדיין מודל גם לתורה המקורית מעל המילון המקורי, זה יסיים את ההוכחה.</p>
+
+<p>למרות שמבחינה מעשית שלב ההרחבה קודם לשלב בניית המודל, אני מעדיף לבצע אותם בסדר הפוך, מכיוון ששלב ההרחבה בעייתי יותר טכנית מסיבות שאתאר בהמשך, והרעיון היפה המרכזי בהוכחה נמצא בשלב בניית המודל. אם כן, אני מניח כרגע שנתונה לי תורה (קבוצת פסוקים עקבית) <span>$latex \Phi$</span> מעל מילון <span>$latex \tau$</span> כך שמתקיימות שתי התכונות הבאות:</p>
+<ol>
+	<li><span>$latex \Phi$</span> עקבית מקסימלית, במובן זה שהוספת כל פסוק ל-<span>$latex \Phi$</span> יהפוך את <span>$latex \Phi$</span> ללא-עקבית.</li>
+	<li>קיימת קבוצת עדים <span>$latex C$</span> עבור <span>$latex \Phi$</span>, כלומר לכל נוסחה <span>$latex \varphi\left(x\right)$</span> עם משתנה חופשי יחיד <span>$latex x$</span> קיים קבוע <span>$latex c\in C$</span> כך ש-<span>$latex \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)$</span>.</li>
+</ol>
+<p>בואו נבנה ל-<span>$latex \Phi$</span> מודל <span>$latex \mathcal{M}$</span>. מודל כולל <strong>עולם</strong> שהוא קבוצה של איברים, ו<strong>פרשנויות</strong> לסימני היחס, הפונקציות והקבועים של <span>$latex \tau$</span>. הרעיון האינטואיטיבי הוא לעשות את הדבר הבא: להגדיר את העולם להיות שווה לקבוצת הקבועים של <span>$latex \tau$</span>, כלומר לקחת את האובייקט ה<strong>סינטקטי</strong> של סימני קבועים, ולהגדיר את המודל <strong>באמצעותו</strong>. אחר כך, בהינתן סימן יחס <span>$latex R\left(x,y\right)$</span> (נניח לצורך הדוגמה שהוא דו-מקומי) להגדיר יחס <span>$latex R^{\mathcal{M}}\left(x,y\right)$</span> במודל על ידי כך שלכל שני איברים <span>$latex c,d$</span> של העולם, <span>$latex \left(c,d\right)\in R^{\mathcal{M}}$</span> אם ורק אם הפסוק <span>$latex R\left(c,d\right)$</span> יכיח מתוך <span>$latex \Phi$</span>. זה הרעיון, והוא פשוט ומבריק ויפהפה. כמובן שהפרטים הטכניים קצת מסתבכים עכשיו.</p>
+
+<p>ההוכחה מתפצלת כאן למעשה לשתי אפשרויות, בהתאם לשאלה אם הגדרנו לוגיקה מסדר ראשון עם סימן השוויון או בלעדיו. אני בחרתי להגדיר עם; כפי שנראה, זה גורם לנו לאי-אלו קשיים, אבל אסביר בהמשך אילו קשיים היו נוצרים אם הייתי בוחר לעבוד בלעדיו (זה היה מוביל לבניית מודל שמרגיש לי מלאכותי יותר).</p>
+
+<p>אז נניח שאנחנו עובדים בלוגיקה עם סימן השוויון. הנה הבעיה - הביטו לרגע בפסוק <span>$latex c=d$</span> כאשר <span>$latex c,d$</span> הם שני איברים של <span>$latex C$</span>. נניח שהוא יכיח מתוך <span>$latex \Phi$</span> (וזה בהחלט יכול לקרות). פירוש הדבר הוא ש<strong>אסור</strong> לנו להגדיר את <span>$latex c,d$</span> בתור איברים שונים בעולם של <span>$latex \mathcal{M}$</span>, כי אז הפסוק <span>$latex c=d$</span> לא יהיה ספיק במודל הזה (ומכיוון שמערכת ההוכחה שלנו נאותה, ינבע מכך ש-<span>$latex \mathcal{M}$</span> אינו מודל של <span>$latex \Phi$</span>). הבעיה הזו מכריחה אותנו להגדיר את העולם של <span>$latex \mathcal{M}$</span> באופן קצת יותר מחוכם. מה שנעשה הוא להגדיר <strong>יחס שקילות</strong> על אברי <span>$latex C$</span>, כך ש-<span>$latex c\equiv d$</span> אם ורק אם <span>$latex \Phi\vdash c=d$</span>. כלומר, אנחנו אומרים שכל הקבועים של <span>$latex C$</span> ש-<span>$latex \Phi$</span> “מוכיחה שהם שווים” יהיו שקולים האחד לשני.</p>
+
+<p>צריך להוכיח שהיחס הזה הוא אכן יחס שקילות. לצורך כך נצטרך להוכיח דברים על יחס השוויון, אז בואו ניזכר באקסיומות שהיו קשורות אליו והכנסנו למערכת ההוכחה שלנו:</p>
+<ol>
+	<li><span>$latex x=x$</span></li>
+	<li><span>$latex x=y\to t=s$</span> כאשר <span>$latex s$</span> מתקבל מ-<span>$latex t$</span> על ידי החלפת מופע אחד או יותר של <span>$latex x$</span> ב-<span>$latex y$</span>.</li>
+	<li><span>$latex x=y\to\left[\varphi\to\psi\right]$</span> כאשר <span>$latex \psi$</span> מתקבל מ-<span>$latex \varphi$</span> על ידי החלפת מופע אחד או יותר של <span>$latex x$</span> ב-<span>$latex y$</span>.</li>
+</ol>
+<p>בואו נתחיל. ראשית, אם <span>$latex c\in C$</span> כלשהו צריך להראות ש-<span>$latex \Phi\vdash c=c$</span>. הנה הוכחה פורמלית:</p>
+<ol>
+	<li><span>$latex x=x$</span> (אקסיומת שוויון מס' 1)</li>
+	<li><span>$latex x=x\to c=c$</span> (אקסיומת שוויון מס' 2 עם <span>$latex t=s=c$</span>)</li>
+	<li><span>$latex c=c$</span> (MP על 1,2).</li>
+</ol>
+<p>עכשיו, אם <span>$latex c,d\in C$</span> הם איברים כלשהם כך ש-<span>$latex \Phi\vdash c=d$</span> צריך להוכיח שגם <span>$latex \Phi\vdash d=c$</span>:</p>
+<ol>
+	<li><span>$latex x=y\to\left(x=x\to y=x\right)$</span> (אקסיומת שוויון מס' 3 עם <span>$latex \varphi=\left(x=x\right)$</span> ו-<span>$latex \psi=\left(y=x\right)$</span>).</li>
+	<li><span>$latex \forall x\forall y\left(x=y\right)\to\left(x=x\to y=x\right)$</span> (Gen על 1).</li>
+	<li><span>$latex \left[\forall x\forall y\left(x=y\right)\to\left(x=x\to y=x\right)\right]\to\left[\left(c=d\right)\to\left(c=c\to d=c\right)\right]$</span> (תבנית אקסיומה 4)</li>
+	<li><span>$latex c=d\to\left(c=c\to d=c\right)$</span> (MP על 2,3).</li>
+	<li><span>$latex c=d$</span> (יכיח מ-<span>$latex \Phi$</span>).</li>
+	<li><span>$latex c=c\to d=c$</span> (MP על 4,5).</li>
+	<li><span>$latex c=c$</span> (יכיח מ-<span>$latex \Phi$</span>).</li>
+	<li><span>$latex d=c$</span> (MP על 6,7).</li>
+</ol>
+<p>זה היה מבעית למדי, מה שמעלה את החשש שהוכחת טרנזיטיביות תהיה גרועה עוד יותר. נניח ש-<span>$latex c,d,e\in C$</span> מקיימים <span>$latex \Phi\vdash c=d$</span> וגם <span>$latex \Phi\vdash d=e$</span>, אז צריך להוכיח ש-<span>$latex \Phi\vdash c=e$</span>. כפי שאולי הבנתם מההוכחה הקודמת, מספיק להוכיח ש-<span>$latex x=y\to\left(y=z\to x=z\right)$</span> כדי לסיים, אבל זו הרי בדיוק אקסיומת שוויון מס’ 3 עם <span>$latex \varphi=\left(x=z\right)$</span> ו-<span>$latex \psi=\left(y=z\right)$</span>, כך שאחסוך מכם את המשך ההוכחה המפלצתית. זה מוכיח לנו שהיחס שהגדרתי לעיל הוא אכן יחס שקילות, ולכן אפשר לדבר על <strong>מחלקות השקילות</strong> שלו. כזכור, אם <span>$latex c\in C$</span> הוא איבר כלשהו, אז מסמנים <span>$latex \left[c\right]=\left\{ d\in C\ |\ c\equiv d\right\} $</span>. הקבוצה <span>$latex \left[c\right]$</span> נקראת <strong>מחלקת השקילות</strong> של <span>$latex c$</span> ולא קשה לראות ש-<span>$latex C$</span> מתפרקת לאיחוד זר של מחלקות שקילות של איברים בה.</p>
+
+<p>כעת אפשר להתחיל את הגדרת המודל <span>$latex \mathcal{M}$</span>. ראשית נגדיר את העולם שלו: <span>$latex D^{\mathcal{M}}=\left\{ \left[c\right]\ |\ c\in C\right\} $</span>. כעת נותר לתת פרשנויות לסימני היחס, הקבועים והפונקציות.</p>
+
+<p>נתחיל מסימני היחס. יהא <span>$latex R\left(x_{1},\dots,x_{n}\right)\in\tau$</span> סימן יחס <span>$latex n$</span>-מקומי. נגדיר יחס <span>$latex R^{\mathcal{M}}\subseteq\left(D^{\mathcal{M}}\right)^{n}$</span> באופן הבא: לכל <span>$latex c_{1},\dots,c_{n}\in C$</span>, <span>$latex \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}$</span> אם ורק אם <span>$latex \Phi\vdash R\left(c_{1},\dots,c_{n}\right)$</span>. זו הגדרה שנראית הגיונית, אבל כמו כל הגדרה שמערבת מחלקות שקילות, יש סכנה שהיא <strong>לא מוגדרת היטב</strong>. למה הכוונה? ייתכן שיש <span>$latex d_{1},\dots,d_{n}\in C$</span> כך ש-<span>$latex \left[c_{i}\right]=\left[d_{i}\right]$</span> (כלומר, מחלקת השקילות של <span>$latex c_{i}$</span> ו-<span>$latex d_{i}$</span> זהות, לכל <span>$latex 1\le i\le n$</span>) ועם זאת <span>$latex \Phi\vdash R\left(c_{1},\dots,c_{n}\right)$</span> אבל <span>$latex \Phi\not\vdash R\left(d_{1},\dots,d_{n}\right)$</span>, מה שאומר שההחלטה אם <span>$latex \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}$</span> אינה תלויה במחלקות השקילות בלבד אלא ממש ב<strong>נציגים</strong> שאנחנו בוחרים להן, ואסור לנו לעשות את זה - אנחנו חייבים לקבוע באופן חד משמעי עבור כל מחלקת שקילות מה יקרה איתה.</p>
+
+<p>במקרה שלנו אין בעיה אמיתית שכזו. נניח ש-<span>$latex \Phi\vdash R\left(c_{1},\dots,c_{n}\right)$</span> וכמו כן ש-<span>$latex c_{1}\equiv d_{1}$</span>, כלומר <span>$latex \Phi\vdash c_{1}=d_{1}$</span>. אז מהאקסיומה <span>$latex x=y\to R\left(x,c_{2},\dots,c_{n}\right)=R\left(y,c_{2},\dots,c_{n}\right)$</span> אפשר לקבל חיש קל ש-<span>$latex \Phi\vdash R\left(d_{1},\dots,c_{n}\right)$</span> וכך להחליף בהדרגתיות את כל ה-<span>$latex c$</span>-ים ב-<span>$latex d$</span>-ים. עם זאת, חשוב היה לי להדגיש שזו נקודה שיש לשים לב אליה במהלך ההגדרה, וזה חלק מהסיבוך הנוסף שנגרם לנו מכך שהלוגיקה מסדר ראשון שלנו כוללת שוויון.</p>
+
+<p>נעבור לקבועים. מפתה להגיד שלכל סימן קבוע <span>$latex c\in\tau$</span>, נגדיר את הפרשנות שלו להיות <span>$latex c^{\mathcal{M}}=\left[c\right]$</span>, וזה אכן הרעיון הכללי, אבל זה <strong>לא מספיק</strong>. הבעיה היא שאולי יש סימני קבועים שבכלל לא שייכים ל-<span>$latex C$</span>. הפואנטה היא שגם במקרה זה, הפרשנות שנותנים לסימנים הללו <strong>חייבת</strong> להיות זהה לפרשנות שנותנים לפחות לאחד מהקבועים. למה? או, זו הזדמנות לראות את עניין ה”<span>$latex C$</span> היא קבוצת עדים” בפעולה.</p>
+
+<p>נניח ש-<span>$latex d\in\tau$</span> הוא סימן קבוע כלשהו. אז אנחנו יודעים שהפסוק הבא הוא אמת לוגית: <span>$latex \exists x\left(x=d\right)$</span>. עכשיו, <span>$latex \Phi$</span> היא קבוצה עקבית מקסימלית, מה שאומר (ואת זה אנחנו יודעים עוד מתחשיב הפסוקים) שלכל פסוק היא מוכיחה אותו או את שלילתו (אחרת היה אפשר להוסיף את הפסוק אליה ולקבל קבוצה גדולה יותר שעדיין עקבית). בגלל נאותות מערכת ההוכחה לא ייתכן שהיא תוכיח דבר שהוא סתירה לוגית, ולכן <span>$latex \Phi\vdash\exists x\left(x=d\right)$</span>, ומכיוון ש-<span>$latex C$</span> היא קבוצת עדים, אז קיים <span>$latex c\in C$</span> כך ש-<span>$latex \Phi\vdash\exists x\left(x=d\right)\to\left(c=d\right)$</span>, ומשילוב שני אלו נקבל ש-<span>$latex \Phi\vdash c=d$</span>, וקיבלנו את מה שצריכה להיות הפרשנות של <span>$latex d$</span>: <span>$latex d^{\mathcal{M}}=\left[c\right]$</span>. גם כאן, התהליך היה מוגדר היטב: אם במקום <span>$latex c$</span> היינו מוצאים עד אחר, היינו מקבלים גם עבורו שהוא שווה ל-<span>$latex d$</span> ומהטרנזיטיביות שכבר ראינו של השוויון היינו מקבלים ש-<span>$latex \Phi$</span> מוכיחה את הפסוק שאומר ששני העדים שווים ולכן מחלקת השקילות שלהם שווה.</p>
+
+<p>בפונקציות מטפלים באופן דומה. אם <span>$latex f\left(x_{1},\dots,x_{n}\right)\in\tau$</span> הוא סימן פונקציה <span>$latex n$</span> מקומי, ואנחנו צריכים להגדיר את <span>$latex f^{\mathcal{M}}\left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)$</span> אז נתבונן בפסוק <span>$latex \exists x\left(f\left(c_{1},\dots,c_{n}\right)=x\right)$</span>, ניקח עד <span>$latex c$</span> עבורו ונגדיר <span>$latex f^{\mathcal{M}}\left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)=\left[c\right]$</span>. גם פה צריך להוכיח שהכל מוגדר היטב אבל נדמה לי שכבר הבנתם את הרעיון. זה מסיים את הגדרת המודל <span>$latex \mathcal{M}$</span>.</p>
+
+<p>כמובן שהגדרת המודל היא רק חלק מהעבודה, עכשיו צריך גם להוכיח שהמודל “עובד”, כלומר שהוא מספק כל פסוק ב-<span>$latex \Phi$</span>. איך נראים פסוקים באופן כללי? ובכן, פסוק הוא נוסחה שאין בה משתנים חופשיים. אז אפשר להתחיל מנוסחאות שאין בהן משתנים בכלל - כל שמות העצם שמופיעים בהן מורכבים רק מקבועים וסימני פונקציות. פסוק בסיסי מסוג זה חייב לכלול יחס (שם עצם לבדו אינו פסוק; פסוק מורכב מיחסים על שמות עצם, שמעורבבים האחד עם השני עם קשרים וכמתים). אז ראשית כל יש לנו פסוקים מהצורה</p>
+
+<p><span>$latex t_{1}=t_{2}\in\Phi$</span></p>
+
+<p>כאשר <span>$latex t_{1},t_{2}$</span> שמות עצם שאינם כוללים משתנים. אנחנו רוצים לחשב את הערך של שני שמות העצם הללו במודל ולראות שהוא זהה. לא ממש ברור איך לעשות את זה באופן ישיר, אבל קל לעשות את זה באופן עקיף: נסתכל על הפסוק <span>$latex \exists x\left(t_{1}=x\right)$</span> ונקבל, כרגיל, שיש <span>$latex c\in C$</span> כך ש-<span>$latex t_{1}=c\in\Phi$</span>. בדומה נקבל ש-<span>$latex t_{2}=d\in\Phi$</span> עבור <span>$latex d\in C$</span> כלשהו, וכבר ראינו שאפשר להוכיח טרנזיטיביות, כלומר ש-<span>$latex c=d\in\Phi$</span> ולכן <span>$latex \left[c\right]=\left[d\right]$</span> וזהו הערך שהמודל מעניק לשני שמות העצם <span>$latex t_{1},t_{2}$</span> כך שבמקרה הזה טיפלנו.</p>
+
+<p>כעת, הסוג הנוסף של פסוק בסיסי הוא פסוק מהצורה</p>
+
+<p><span>$latex R\left(t_{1},\dots,t_{n}\right)\in\Phi$</span></p>
+
+<p>כאשר <span>$latex R$</span> סימן יחס כלשהו ו-<span>$latex t_{1},\dots,t_{n}$</span> שמות עצם כלשהם שאינם כוללים משתנים. כמקודם, מוצאים <span>$latex c_{1},\dots,c_{n}$</span> כך ש-<span>$latex t_{i}=c_{i}\in\Phi$</span> ומכאן נוכל להוכיח ש-<span>$latex R\left(c_{1},\dots,c_{n}\right)\in\Phi$</span>, מה שיגרור ש-<span>$latex \left(\left[c_{1}\right],\dots,\left[c_{n}\right]\right)\in R^{\mathcal{M}}$</span>, מה שמסיים את המקרה הזה. כדאי לשים לב שבגלל ש-<span>$latex \Phi$</span> עקבית מקסימלית הרי שבשני המקרים הוכחנו יותר מאשר את מה שרצינו - הוכחנו גם שאם <span>$latex t_{1}=t_{2}\notin\Phi$</span> אז הערכים שהמודל מעניק לשמות העצם הללו שונים (אחרת אפשר היה להוסיף את <span>$latex t_{1}=t_{2}$</span> ל-<span>$latex \Phi$</span> מבלי לפגוע בעקביות) וכך גם עבור ה-<span>$latex R$</span>-ים. זה יועיל לנו בהמשך.</p>
+
+<p>כעת אפשר להמשיך באינדוקציה על מבנה יתר הפסוקים הקיימים. לכל פסוק <span>$latex \varphi$</span> נרצה להראות ש-<span>$latex \mathcal{M}\models\varphi$</span> אם ורק אם <span>$latex \varphi\in\Phi$</span>. נתחיל עם פסוקים מהצורה <span>$latex \neg\varphi$</span> כאשר <span>$latex \varphi$</span> הוא פסוק שעליו כבר הוכחנו את הטענה. אז מכיוון ש-<span>$latex \Phi$</span> עקבית מקסימלית, <span>$latex \neg\varphi\in\Phi$</span> אם ורק אם <span>$latex \varphi\notin\Phi$</span> אם ורק אם <span>$latex \mathcal{M}\not\models\varphi$</span>, אם ורק אם <span>$latex \mathcal{M}\models\varphi$</span>. זה היה קל.</p>
+
+<p>עבור פסוק מהצורה <span>$latex \varphi\to\psi$</span> הנימוק ארוך יותר אבל לא באמת מסובך יותר. מכיוון שלמשהו כמו <span>$latex \varphi\to\psi$</span> יש רק השמה לא מספקת אחת, יהיה קל יותר להוכיח ש-<span>$latex \varphi\to\psi\notin\Phi$</span> אם ורק אם <span>$latex \mathcal{M}\models\varphi$</span> וגם <span>$latex \mathcal{M}\not\models\psi$</span>. אם כן, <span>$latex \varphi\to\psi\notin\Phi$</span> אם ורק אם <span>$latex \neg\left(\varphi\to\psi\right)\in\Phi$</span>. כעת, תעלול: הבה ונסתכל על הפסוקים <span>$latex \neg\left(\varphi\to\psi\right)\to\varphi$</span> ו-<span>$latex \neg\left(\varphi\to\psi\right)\to\neg\psi$</span>. בדיקה ישירה תראה לנו שהם טאוטולוגיות, ולכן יכיחים מ-<span>$latex \Phi$</span> בלי הנחות כלל, רק על ידי אקסיומות 1-3 ו-MP. לכן נקבל ש-<span>$latex \Phi\vdash\varphi$</span> ו-<span>$latex \Phi\vdash\neg\psi$</span>, מה שקורה אם ורק אם <span>$latex \mathcal{M}\models\varphi$</span> וגם <span>$latex \mathcal{M}\not\models\psi$</span>, כנדרש.</p>
+
+<p>מה נותרו? כמתים. יהיה יותר פשוט רעיונית לטפל ב-<span>$latex \exists$</span>; הטיפול ב-<span>$latex \forall$</span> יהיה זהה מכיוון ש-<span>$latex \exists x\varphi\left(x\right)$</span> שקול לפסוק <span>$latex \neg\forall x\neg\varphi\left(x\right)$</span>.</p>
+
+<p>אם כן, נוכיח ש-<span>$latex \exists x\varphi\left(x\right)\in\Phi$</span> אם ורק אם <span>$latex \mathcal{M}\models\exists x\varphi\left(x\right)$</span>. הבעיה היא ש-<span>$latex \varphi\left(x\right)$</span> הוא לא פסוק, כי <span>$latex x$</span> חופשי בו, ולכן אי אפשר להשתמש עליו בהנחת האינדוקציה והכל קורס, <strong>אלמלא</strong> היה לנו את התכונה המוזרה והכל כך לא ברורה במבט ראשון של “עד להוכחה”. בגלל ש-<span>$latex C$</span> היא קבוצת עדים, אז קיים קבוע <span>$latex c$</span> כך ש-<span>$latex \Phi\vdash\exists x\varphi\left(x\right)\to\varphi\left(c\right)$</span>, ולכן <span>$latex \varphi\left(c\right)\in\Phi$</span> ו-<span>$latex \varphi\left(c\right)$</span> הוא פסוק כך שהנחת האינדוקציה פועלת עליו, ו-<span>$latex \mathcal{M}\models\varphi\left(c\right)$</span>, כלומר <span>$latex \mathcal{M}\models\exists x\varphi\left(x\right)$</span> (פורמלית: אם <span>$latex z$</span> היא השמה כלשהי, אז <span>$latex \mathcal{M}\models_{z\left[x\leftarrow\left[c\right]\right]}\varphi\left(x\right)$</span> ולכן <span>$latex \mathcal{M}\models_{z}\exists x\varphi\left(x\right)$</span>). הטיעון עובד באותו האופן בכיוון השני עד שמגיעים לכך ש-<span>$latex \varphi\left(c\right)\in\Phi$</span> ורוצים להסיק מכך ש-<span>$latex \exists x\varphi\left(x\right)\in\Phi$</span>; את זה עושים באמצעות הפסוק <span>$latex \varphi\left(c\right)\to\exists x\varphi\left(x\right)$</span> שיכיח מ-<span>$latex \Phi$</span>. אם אתם תוהים למה הוא יכיח, הנה הוכחה פורמלית:</p>
+<ol>
+	<li><span>$latex \forall x\neg\varphi\left(x\right)\to\neg\varphi\left(c\right)$</span> (תבנית אקסיומה 4).</li>
+	<li><span>$latex \left[\forall x\neg\varphi\left(x\right)\to\neg\varphi\left(c\right)\right]\to\left[\neg\neg\varphi\left(c\right)\to\neg\forall x\neg\varphi\left(x\right)\right]$</span> (תבנית אקסיומה 3).</li>
+	<li><span>$latex \neg\neg\varphi\left(c\right)\to\neg\forall x\neg\varphi\left(x\right)$</span> (MP על 1,2).</li>
+	<li><span>$latex \neg\neg\varphi\left(c\right)\to\exists x\varphi\left(x\right)$</span> (סתם שינוי סימון שיהיה קריא).</li>
+	<li><span>$latex \left[\neg\neg\varphi\left(c\right)\to\exists x\varphi\left(x\right)\right]\to\left[\varphi\left(c\right)\to\exists x\varphi\left(x\right)\right]$</span> (טאוטולוגיה של תחשיב הפסוקים: <span>$latex \left(\neg\neg A\to B\right)\to\left(A\to B\right)$</span>).</li>
+	<li><span>$latex \varphi\left(c\right)\to\exists x\varphi\left(x\right)$</span> (MP על 4,5).</li>
+</ol>
+<p>וזה <strong>מסיים את ההוכחה</strong>! רק שכמובן, זה לא מסיים את הוכחת משפט השלמות של גדל; זה מסיים את ההוכחה לכך שאם יש לנו תורה <span>$latex \Phi$</span> שהיא עקבית מקסימלית וקיימת לה קבוצת עדים, אז יש לה מודל. עוד נשאר לנו להוכיח שכל תורה עקבית אפשר להרחיב לתורה שכזו, ואת זה נעשה בפוסט הבא.</p>
+
+<p>כעת אפשר לחשוב על האופן שבו ההוכחה מתקלקלת (או הופכת לפשוטה יותר) אם שוויון הוא לא חלק מהלוגיקה שלנו. כדאי להעיר שאנחנו <strong>רוצים</strong> שוויון בלוגיקה שלנו מהרבה סיבות ולכן גם אם הוספת שוויון רק מקשה עלינו חבל לוותר עליו. עדיין, מבחינה רעיונית אולי פשוט יותר להציג קודם כל את ההוכחה עבור לוגיקה ללא שוויון כדי להימנע מיחסי שקילות ואקשן שכזה; מצד שני, במקרה הזה לא מספיק לבנות את המודל מתוך הקבועים של <span>$latex C$</span> - <strong>כל שם עצם</strong> של השפה שלנו יהיה חייב להיות איבר בעולם של המודל. לי זה מרגיש מעט יותר מלאכותי, כאמור, אבל כל אחד ואיך שנוח לו. גם כך וגם כך הרעיון הזה, של בניה של המודל (האובייקט הסמנטי) מתוך השפה עצמה (האובייקט הסינטקטי) הוא אחד מהרעיונות החביבים עלי במתמטיקה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2013/02/25/godel_completeness_proof_1/';
+      this.page.identifier = 'http://gadial.net/2013/02/25/godel_completeness_proof_1/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2013/02/25/godel_completeness_proof_1/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username"></span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script></body>
+
+</html>
