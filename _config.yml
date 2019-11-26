@@ -5,11 +5,12 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gadial.net" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: לא-מדויק-163347110378474
-facebook_linkame: "לא מדויק"
+facebook_linkname: "לא מדויק"
 permalink: /:year/:month/:day/:title/
 timezone: UTC
 disqus:
   shortname: "not-precise"
+rss: "RSS"
 post_images: /assets/img
 environment: production
 # Build settings
