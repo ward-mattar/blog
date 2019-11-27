@@ -15,7 +15,9 @@
     <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon">
     <link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon">
 
-
+    {%- if site.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+    {%- endif -%}
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;

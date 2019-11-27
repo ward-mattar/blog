@@ -13,6 +13,14 @@ disqus:
 rss: "RSS"
 post_images: /assets/img
 environment: production
+
+# Trackers
+google_analytics: "UA-3924539-2"
+statcounter:
+  id: 5444342
+  security: 4a89cbe4
+  invisible: 1
+
 # Build settings
 markdown: kramdown
 kramdown:
