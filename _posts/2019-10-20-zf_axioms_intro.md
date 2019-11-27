@@ -98,4 +98,29 @@ tags:
 
 לדוגמא, אם {% equation %}A=\left\{ 1,2\right\} {% endequation %} אז {% equation %}\mathcal{P}\left(A\right)=\left\{ \emptyset,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 1,2\right\} \right\} {% endequation %}. באופן כללי אם ב-{% equation %}A{% endequation %} יש {% equation %}n{% endequation %} איברים אז ב-{% equation %}\mathcal{P}\left(A\right){% endequation %} יש {% equation %}2^{n}{% endequation %} איברים (תרגיל בקומבינטוריקה - להסביר למה) ולכן אני לא אכתוב עוד דוגמאות מפורשות כי זו פשוט הרבה כתיבה. אנחנו הולכים להתעסק כל כך הרבה עם קבוצות חזקה בהמשך שאני לא רואה סיבה להרחיב עליהן יותר מדי כרגע, אז אני אקפוץ ישר לאקסיומה: <strong>אקסיומת קבוצת החזקה</strong> פשוט אומרת שאם {% equation %}A{% endequation %} קיימת את {% equation %}\mathcal{P}\left(A\right){% endequation %} קיימת. זה, יחד עם שאר האקסיומות שיש לנו כרגע, מאפשר לנו לבנות יקום מתמטי כביר בגודלו, אבל לפרטים של הבניה הזו אכנס רק בשלב מאוחר בהרבה.
 
-בואו נסכם את האקסיומות שראינו: <ol><li><strong>אקסיומת ההיקפיות</strong>: שתי קבוצות הן שוות אם הן בעלות אותם איברים: {% equation %}A=B{% endequation %} אם ורק אם {% equation %}a\in A\iff a\in B{% endequation %}.</li> <li><strong>אקסיומת הקבוצה הריקה</strong>: הקבוצה {% equation %}\emptyset{% endequation %} קיימת.</li> <li><strong>אקסיומת הזיווג</strong>: אם {% equation %}a,b{% endequation %} קיימים אז {% equation %}\left\{ a,b\right\} {% endequation %} קיימת.</li> <li><strong>אקסיומת האיחוד</strong>: אם {% equation %}X{% endequation %} קיימת אז {% equation %}\bigcup X{% endequation %} קיימת.</li> <li><strong>אקסיומת האינסוף: </strong>{% equation %}\mathbb{N}{% endequation %} קיימת.</li> <li><strong>אקסיומת ההפרדה</strong>: אם {% equation %}A{% endequation %} קיימת ו-{% equation %}\varphi{% endequation %} הוא "קריטריון קונקרטי" אז {% equation %}\left\{ a\in A\ |\ \varphi\left(a\right)\right\} {% endequation %} קיימת.</li> <li><strong>אקסיומת קבוצת החזקה</strong>: אם {% equation %}A{% endequation %} קיימת אז {% equation %}\mathcal{P}\left(A\right){% endequation %} קיימת.</li> </ol> זהו, זה מסיים את כל מה שרציתי לומר על צרמלו-פרנקל בשלב הזה. החל מהפוסט הבא גם נתחיל לעשות עם זה דברים מעניינים יותר מ"לנסות לבנות את קבוצת המספרים הטבעיים, להיכשל ואז להכריז שפשוט נוסיף אקסיומה מיוחדת בשביל זה". 
+
+בואו נסכם את האקסיומות שראינו:
+
+<ol> <li><strong>אקסיומת ההיקפיות</strong>: שתי קבוצות הן שוות אם הן בעלות אותם איברים: {% equation %}A=B{% endequation %} אם ורק אם {% equation %}a\in A\iff a\in B{% endequation %}.</li>
+
+
+<li><strong>אקסיומת הקבוצה הריקה</strong>: הקבוצה {% equation %}\emptyset{% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת הזיווג</strong>: אם {% equation %}a,b{% endequation %} קיימים אז {% equation %}\left\{ a,b\right\} {% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת האיחוד</strong>: אם {% equation %}X{% endequation %} קיימת אז {% equation %}\bigcup X{% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת האינסוף: </strong>{% equation %}\mathbb{N}{% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת ההפרדה</strong>: אם {% equation %}A{% endequation %} קיימת ו-{% equation %}\varphi{% endequation %} הוא "קריטריון קונקרטי" אז {% equation %}\left\{ a\in A\ |\ \varphi\left(a\right)\right\} {% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת קבוצת החזקה</strong>: אם {% equation %}A{% endequation %} קיימת אז {% equation %}\mathcal{P}\left(A\right){% endequation %} קיימת.</li>
+
+</ol>
+
+זהו, זה מסיים את כל מה שרציתי לומר על צרמלו-פרנקל בשלב הזה. החל מהפוסט הבא גם נתחיל לעשות עם זה דברים מעניינים יותר מ"לנסות לבנות את קבוצת המספרים הטבעיים, להיכשל ואז להכריז שפשוט נוסיף אקסיומה מיוחדת בשביל זה". 

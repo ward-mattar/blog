@@ -18,9 +18,9 @@ TAGS = {
     "textbf{}": r'<strong>\1</strong>',
     "href{}{}": r'<a href="\1">\2</a>',
     (r'\{\\beginL', r'\\endL\}'): r'\1',
-    (r'\\item', r'(?=(?=\n\\item)|(?=\n\\end\{))'): r'<li>\1</li>',
-    (r'\\begin{itemize}', r'\\end{itemize}'): r'<ul>\1</ul>',
-    (r'\\begin{enumerate}', r'\\end{enumerate}'): r'<ol>\1</ol>',
+    (r'\\item', r'(?=(?=\n\\item)|(?=\n\\end\{))'): r'\n<li>\1</li>\n',
+    (r'\\begin{itemize}', r'\\end{itemize}'): r'\n<ul>\1</ul>\n',
+    (r'\\begin{enumerate}', r'\\end{enumerate}'): r'\n<ol>\1</ol>\n',
     (r'\\begin{quote}', r'\\end{quote}'): r'<blockquote>\1</blockquote>',
     "section{}": r'<h2>\1</h2>',
     "section\*{}": r'<h2>\1</h2>',
@@ -54,7 +54,7 @@ def get_content(text):
     return re_search(r'(?<=begin\{document\})(.*)(?=\\end\{document\})', text, re.DOTALL) or text
 
 def find_problems(text):
-    for bad_line in re.findall(r'^.*\\ensuremath.*$', text):
+    for bad_line in re.findall(r'.*ensuremath.*', text):
         print("WARNING: ensuremath found in line {}".format(bad_line))
     return text
 
