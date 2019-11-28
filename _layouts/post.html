@@ -3,14 +3,7 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   
-  <div class="PageNavigation">
-    {% if page.previous.url %}
-      <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-    {% endif %}
-    {% if page.next.url %}
-      <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-    {% endif %}
-  </div>
+  {%- include post-navigation.html -%}
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -33,6 +26,8 @@ layout: default
     נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
   </p>
   <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+  
+  {%- include post-navigation.html -%}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
