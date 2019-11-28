@@ -39,14 +39,18 @@ tags:
 אין כאן שום גאונות חדשה, אלא רק הרחבה פשוטה של הבניה שכבר ראינו. נוסיף את הקוד של המכונה {% equation %}T{% endequation %} למשחק, כך שהיא תתחיל לפעול אחרי {% equation %}B{% endequation %}, ולכן הקוד של המכונה ה"משולשת" יהיה {% equation %}\left\langle ABT\right\rangle {% endequation %}. מה ש-{% equation %}A{% endequation %} יעשה הפעם יהיה לכתוב {% equation %}\left\langle BT\right\rangle {% endequation %} על הסרט, ואילו {% equation %}B{% endequation %} יעשה בדיוק את אותו הדבר כמו קודם ויחשב את {% equation %}\left\langle A\right\rangle {% endequation %}. כש-{% equation %}B{% endequation %} יסיים את ריצתו על הסרט יהיה כתוב {% equation %}\left\langle ABT\right\rangle {% endequation %} וזה בדיוק מה ש-{% equation %}T{% endequation %} תראה כאשר היא תתחיל את ריצתה (ואיפה הקלט של {% equation %}T{% endequation %} נמצא? אפשר להניח שכבר {% equation %}A{% endequation %} שמרה אותו בצד - זה לא גורר שינוי משמעותי בהגדרות שלנו).
 
 ועכשיו - לקוד בפועל, בשפת רובי, שמשתמש בדיוק ברעיונות שתיארתי כאן:
-<pre dir="ltr">b = "\n\ndef q(w)\n\t\"b = \#{w.inspect}\"\nend\n\nprint q(b) + b"
+<div class="code-block">
+{% highlight ruby %}
+b = "\n\ndef q(w)\n\t\"b = \#{w.inspect}\"\nend\n\nprint q(b) + b"
 
 def q(w)
     "b = #{w.inspect}"
 end
 
 print q(b) + b
-</pre>
+{% endhighlight %}
+</div>
+
 <p dir="rtl">לא צריך לדעת יותר מדי רובי כדי להבין מה קורה כאן. הדבר המחוכם ביותר הוא האופן שבו אני מתאר מחרוזת: בתוך מחרוזת אני יכול לכתוב ביטויים כמו n\ ו-t\ שמתפרשים בתור התווים המתאימים לירידת שורה או לטאבים. מה שכתוב בתוך השורה הראשונה בקובץ הוא פשוט כל יתר השורות בקובץ. כל זה מושם בתוך המשתנה b; חשבו על זה בתור הריצה של {% equation %}A{% endequation %}, שכותבת את המחרוזת שמתארת את {% equation %}B{% endequation %} לא על ה"סרט" (כי אין סרט) אלא לתוך המשתנה b.</p>
 החל מהשורה השניה מגיע התיאור של {% equation %}B{% endequation %}. ראשית, הפונקציה {% equation %}q{% endequation %} שמקבלת {% equation %}w{% endequation %} ופולטת תוכנית שמה שהיא עושה בחיים הוא להדפיס את {% equation %}w{% endequation %}. האופן שבו היא עושה את זה הוא המקום העיקרי שבו צריך להבין טיפה רובי. ראשית, ברובי לא חייבים לכתוב במפורש return כדי להחזיר ערך מפונקציה; הערך האחרון שמחושב בתוך פונקציה הוא אוטומטית ערך ההחזרה שלה. לכן הפונקציה בת השורה הבודדת הזו כוללת רק מחרוזת, והמחרוזת הזו אוטומטית תהיה הפלט של הפונקציה.
 
