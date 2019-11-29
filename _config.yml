@@ -6,6 +6,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gadial.net" # the base hostname & protocol for your site, e.g. http://example.com
 facebook_username: לא-מדויק-163347110378474
 facebook_linkname: "לא מדויק"
+twitter:
+  card: summary_large_image
 permalink: /:year/:month/:day/:title/
 timezone: UTC
 disqus:
@@ -13,6 +15,12 @@ disqus:
 rss: "RSS"
 post_images: /assets/img
 environment: production
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/main/default-card.png
 
 # Trackers
 google_analytics: "UA-3924539-2"
