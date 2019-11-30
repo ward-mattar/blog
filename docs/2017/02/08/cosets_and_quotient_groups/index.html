@@ -7,8 +7,8 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="קוסטים, משפט לגראנז’ וחבורות מנה" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \left|H\right||\left|G\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה." />
-<meta property="og:description" content="בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \left|H\right||\left|G\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה." />
+<meta name="description" content="בלוג על מתמטיקה ומדעי המחשב" />
+<meta property="og:description" content="בלוג על מתמטיקה ומדעי המחשב" />
 <link rel="canonical" href="http://gadial.net/2017/02/08/cosets_and_quotient_groups/" />
 <meta property="og:url" content="http://gadial.net/2017/02/08/cosets_and_quotient_groups/" />
 <meta property="og:site_name" content="לא מדויק" />
@@ -20,7 +20,7 @@
 <meta property="twitter:title" content="קוסטים, משפט לגראנז’ וחבורות מנה" />
 <meta name="twitter:site" content="@" />
 <script type="application/ld+json">
-{"dateModified":"2017-02-08T10:44:02+00:00","datePublished":"2017-02-08T10:44:02+00:00","@type":"BlogPosting","image":"http://gadial.net/assets/img/main/default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2017/02/08/cosets_and_quotient_groups/"},"url":"http://gadial.net/2017/02/08/cosets_and_quotient_groups/","description":"בפוסט הקודם של תורת החבורות דיברנו על תתי-חבורות והזכרתי את משפט לגראנז&#39;. המשפט אומר שאם $latex G$ היא חבורה סופית, ו-$latex H$ היא תת-חבורה שלה, אז $latex \\left|H\\right||\\left|G\\right|$ - הסדר של $latex H$ מחלק את הסדר של $latex G$ (“סדר” של חבורה הוא מספר האיברים בה). כבר ראינו למשפט שני שימושים לא טריוויאליים - שכל חבורה מסדר ראשוני היא בהכרח ציקלית, ושאם לחבורה יש לכל היותר תת-חבורה אחת מכל סדר שמחלק את סדר החבורה, אז היא ציקלית. בפוסט הזה אני רוצה להוכיח את המשפט. ההוכחה תהיה מהסוג הטוב ביותר שאפשר - הוכחה שאנחנו נזקקים למושג חדש בשבילה, ומושג שיתגלה כשימושי, מועיל וחשוב מאין כמוהו בהמשך - המושג של קוסט (coset) של תת-חבורה.","headline":"קוסטים, משפט לגראנז’ וחבורות מנה","@context":"https://schema.org"}</script>
+{"dateModified":"2017-02-08T10:44:02+00:00","datePublished":"2017-02-08T10:44:02+00:00","@type":"BlogPosting","image":"http://gadial.net/assets/img/main/default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2017/02/08/cosets_and_quotient_groups/"},"url":"http://gadial.net/2017/02/08/cosets_and_quotient_groups/","description":"בלוג על מתמטיקה ומדעי המחשב","headline":"קוסטים, משפט לגראנז’ וחבורות מנה","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/main.css">
