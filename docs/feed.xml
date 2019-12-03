@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://gadial.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://gadial.net/" rel="alternate" type="text/html" /><updated>2019-12-02T09:15:18+00:00</updated><id>http://gadial.net/feed.xml</id><title type="html">לא מדויק</title><subtitle>בלוג על מתמטיקה ומדעי המחשב</subtitle><entry><title type="html">תורת הקבוצות - מבוא ליחסים</title><link href="http://gadial.net/2019/10/21/intro_to_relations/" rel="alternate" type="text/html" title="תורת הקבוצות - מבוא ליחסים" /><published>2019-10-21T00:00:00+00:00</published><updated>2019-10-21T00:00:00+00:00</updated><id>http://gadial.net/2019/10/21/intro_to_relations</id><content type="html" xml:base="http://gadial.net/2019/10/21/intro_to_relations/">&lt;p&gt;המטרה הנוכחית שלי בסדרת הפוסטים על תורת הקבוצות היא “לבנות את המתמטיקה מאפס”. לצורך כך גייסתי לי כמה מושגים בסיסיים בקבוצות וכמה אקסיומות, ובינתיים זה הפיק לי בצורה קצת עקומה את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; - המספרים הטבעיים. מה השלב הבא? האם אבנה את &lt;span&gt;$latex \mathbb{Z}$&lt;/span&gt;, המספרים השלמים? ובכן, לא. יש במתמטיקה עוד דברים מלבד מספרים! בואו נטפל בהם קודם.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://gadial.net/feed.xml" rel="self" type="application/atom+xml" /><link href="http://gadial.net/" rel="alternate" type="text/html" /><updated>2019-12-03T09:09:22+00:00</updated><id>http://gadial.net/feed.xml</id><title type="html">לא מדויק</title><subtitle>בלוג על מתמטיקה ומדעי המחשב</subtitle><entry><title type="html">תורת הקבוצות - מבוא ליחסים</title><link href="http://gadial.net/2019/10/21/intro_to_relations/" rel="alternate" type="text/html" title="תורת הקבוצות - מבוא ליחסים" /><published>2019-10-21T00:00:00+00:00</published><updated>2019-10-21T00:00:00+00:00</updated><id>http://gadial.net/2019/10/21/intro_to_relations</id><content type="html" xml:base="http://gadial.net/2019/10/21/intro_to_relations/">&lt;p&gt;המטרה הנוכחית שלי בסדרת הפוסטים על תורת הקבוצות היא “לבנות את המתמטיקה מאפס”. לצורך כך גייסתי לי כמה מושגים בסיסיים בקבוצות וכמה אקסיומות, ובינתיים זה הפיק לי בצורה קצת עקומה את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; - המספרים הטבעיים. מה השלב הבא? האם אבנה את &lt;span&gt;$latex \mathbb{Z}$&lt;/span&gt;, המספרים השלמים? ובכן, לא. יש במתמטיקה עוד דברים מלבד מספרים! בואו נטפל בהם קודם.&lt;/p&gt;
 
 &lt;p&gt;מה אנחנו עושים עם מספרים טבעיים? ובכן, אנחנו מחברים ומחסרים וכופלים ומחלקים אותם וכאלה, אבל עוד לפני זה אנחנו &lt;strong&gt;משווים&lt;/strong&gt; אותם. כנראה שנלמד ש-2 גדול מ-1 עוד לפני שנלמד ש-1 ועוד 2 שווה 3. במתמטיקה אנחנו מסמנים השוואה כזו ב-&lt;span&gt;$latex \le$&lt;/span&gt;. בדוגמא שלנו, &lt;span&gt;$latex 1\le2$&lt;/span&gt;. מה זה ה-&lt;span&gt;$latex \le$&lt;/span&gt; הזה באופן כללי? איך אני קורא לו? איך אני מגדיר אותו?&lt;/p&gt;
 
@@ -86,7 +86,25 @@
 
 &lt;p&gt;האם האקסיומות שיש לנו יכולות לבנות את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; בדרך קצת יותר חכמה? לא אוכיח את זה כרגע, אבל &lt;strong&gt;לא&lt;/strong&gt;. אני חייב אקסיומה נוספת כדי לקבל את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; עצמה. לעת עתה בואו פשוט נניח ש-&lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; קיימת וזו תהיה האקסיומה שלנו - היא נקראת &lt;strong&gt;אקסיומת האינסוף&lt;/strong&gt;, מכיוון שהיא מוכיחה את הקיום של קבוצה אינסופית. יש לה עוד ניסוחים שונים ומשונים בתורת הקבוצות האקסיומטית אבל המשמעות של כולן היא אותה משמעות.&lt;/p&gt;
 
-&lt;p&gt;בואו נעשה סיכום ביניים של האקסיומות שיש לנו עד כה: &amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;&lt;strong&gt;אקסיומת ההיקפיות&lt;/strong&gt;: שתי קבוצות הן שוות אם הן בעלות אותם איברים: &lt;span&gt;$latex A=B$&lt;/span&gt; אם ורק אם &lt;span&gt;$latex a\in A\iff a\in B$&lt;/span&gt;.&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&lt;strong&gt;אקסיומת הקבוצה הריקה&lt;/strong&gt;: הקבוצה &lt;span&gt;$latex \emptyset$&lt;/span&gt; קיימת.&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;אם האיבר &lt;span&gt;$latex a$&lt;/span&gt; קיים אז הקבוצה &lt;span&gt;$latex \left\{ a\right\} $&lt;/span&gt; קיימת.&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;אם &lt;span&gt;$latex A,B$&lt;/span&gt; קיימות אז &lt;span&gt;$latex A\cup B$&lt;/span&gt; קיימת ו-&lt;span&gt;$latex A\cap B$&lt;/span&gt; קיימת.&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&lt;strong&gt;אקסיומת האינסוף: &lt;/strong&gt;&lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; קיימת.&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; עכשיו שראינו אותן, אני רוצה לשנות את אקסיומות 3-4 כדי שיתאימו למה שיש בצרמלו-פרנקל. העניין הבסיסי שאני בא להתמודד איתו הוא שאני &lt;strong&gt;כן&lt;/strong&gt; רוצה לדבר על איחודים אינסופיים. איחוד אינסופי הוא חלק מהותי מהמתמטיקה. אני לא יכול בלעדיו. אז נתחיל מלהגדיר אותו, אבל נגדיר אותו בצורה שבה אני עדיין יכול “לשלוט” על מה שקורה בו וזה לא מייצר לי קבוצות משוגעות.&lt;/p&gt;
+&lt;p&gt;בואו נעשה סיכום ביניים של האקסיומות שיש לנו עד כה:&lt;/p&gt;
+
+&lt;ol&gt; &lt;li&gt;&lt;strong&gt;אקסיומת ההיקפיות&lt;/strong&gt;: שתי קבוצות הן שוות אם הן בעלות אותם איברים: &lt;span&gt;$latex A=B$&lt;/span&gt; אם ורק אם &lt;span&gt;$latex a\in A\iff a\in B$&lt;/span&gt;.&lt;/li&gt;
+
+
+&lt;li&gt;&lt;strong&gt;אקסיומת הקבוצה הריקה&lt;/strong&gt;: הקבוצה &lt;span&gt;$latex \emptyset$&lt;/span&gt; קיימת.&lt;/li&gt;
+
+
+&lt;li&gt;אם האיבר &lt;span&gt;$latex a$&lt;/span&gt; קיים אז הקבוצה &lt;span&gt;$latex \left\{ a\right\} $&lt;/span&gt; קיימת.&lt;/li&gt;
+
+
+&lt;li&gt;אם &lt;span&gt;$latex A,B$&lt;/span&gt; קיימות אז &lt;span&gt;$latex A\cup B$&lt;/span&gt; קיימת ו-&lt;span&gt;$latex A\cap B$&lt;/span&gt; קיימת.&lt;/li&gt;
+
+
+&lt;li&gt;&lt;strong&gt;אקסיומת האינסוף: &lt;/strong&gt;&lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; קיימת.&lt;/li&gt;
+
+&lt;/ol&gt;
+
+&lt;p&gt;עכשיו שראינו אותן, אני רוצה לשנות את אקסיומות 3-4 כדי שיתאימו למה שיש בצרמלו-פרנקל. העניין הבסיסי שאני בא להתמודד איתו הוא שאני &lt;strong&gt;כן&lt;/strong&gt; רוצה לדבר על איחודים אינסופיים. איחוד אינסופי הוא חלק מהותי מהמתמטיקה. אני לא יכול בלעדיו. אז נתחיל מלהגדיר אותו, אבל נגדיר אותו בצורה שבה אני עדיין יכול “לשלוט” על מה שקורה בו וזה לא מייצר לי קבוצות משוגעות.&lt;/p&gt;
 
 &lt;p&gt;בואו נניח ש-&lt;span&gt;$latex X$&lt;/span&gt; היא קבוצה שכל האיברים שלה הן קבוצות בעצמן - דבר כזה נקרא &lt;strong&gt;משפחה של קבוצות&lt;/strong&gt;. אני אגדיר איחוד על כל האיברים של &lt;span&gt;$latex X$&lt;/span&gt;, ואסמן זאת &lt;span&gt;$latex \bigcup X$&lt;/span&gt;, באופן הבא: &lt;span&gt;$latex a$&lt;/span&gt; שייך ל-&lt;span&gt;$latex \bigcup X$&lt;/span&gt; אם &lt;strong&gt;קיימת&lt;/strong&gt; קבוצה &lt;span&gt;$latex A\in X$&lt;/span&gt; כך ש-&lt;span&gt;$latex a\in A$&lt;/span&gt;. פורמלית, תוך שימוש בסימן &lt;span&gt;$latex \exists$&lt;/span&gt; שמתאר “קיים”, אני מגדיר זאת כך:&lt;/p&gt;
 
@@ -104,7 +122,16 @@
 
 &lt;p&gt;&lt;span&gt;$latex \bigcap X=\left\{ a\ |\ \forall A\in X:a\in A\right\} $&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;ההגדרה היא סבבה וסימטרית להגדרה של &lt;span&gt;$latex \bigcup X$&lt;/span&gt; והכל, אבל עולות ממנה שתי שאלות: &amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;מה מבטיח לנו ש-&lt;span&gt;$latex \bigcap X$&lt;/span&gt; קיימת?&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;למה דרשתי ש-&lt;span&gt;$latex X\ne\emptyset$&lt;/span&gt;?&amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; בואו נענה על 1 קודם: שום דבר כרגע לא מבטיח לנו את זה. אנחנו צריכים עוד אקסיומה, שהיא הדבר החשוב ביותר שנדבר עליו בפוסט הזה. אחרי שנסיים איתה גם יהיה ברור יחסית למה &lt;span&gt;$latex X=\emptyset$&lt;/span&gt; הוא מקרה שאנחנו לא יכולים להרשות בשום פנים ואופן.&lt;/p&gt;
+&lt;p&gt;ההגדרה היא סבבה וסימטרית להגדרה של &lt;span&gt;$latex \bigcup X$&lt;/span&gt; והכל, אבל עולות ממנה שתי שאלות:&lt;/p&gt;
+
+&lt;ol&gt; &lt;li&gt;מה מבטיח לנו ש-&lt;span&gt;$latex \bigcap X$&lt;/span&gt; קיימת?&lt;/li&gt;
+
+
+&lt;li&gt;למה דרשתי ש-&lt;span&gt;$latex X\ne\emptyset$&lt;/span&gt;?&lt;/li&gt;
+
+&lt;/ol&gt;
+
+&lt;p&gt;בואו נענה על 1 קודם: שום דבר כרגע לא מבטיח לנו את זה. אנחנו צריכים עוד אקסיומה, שהיא הדבר החשוב ביותר שנדבר עליו בפוסט הזה. אחרי שנסיים איתה גם יהיה ברור יחסית למה &lt;span&gt;$latex X=\emptyset$&lt;/span&gt; הוא מקרה שאנחנו לא יכולים להרשות בשום פנים ואופן.&lt;/p&gt;
 
 &lt;p&gt;בואו נדבר לרגע על קבוצת &lt;strong&gt;המספרים הטבעיים הזוגיים&lt;/strong&gt;, כלומר הקבוצה &lt;span&gt;$latex \left\{ 0,2,4,\dots\right\} $&lt;/span&gt;. זו ללא ספק קבוצה פשוטה וטבעית וכרגע אין לי מושג איך לבנות אותה. מכיוון שזו קבוצה אינסופית אני לא יכול ליצור אותה בעזרת אקסיומות הזיווג והאיחוד, בדיוק כפי שלא יכלתי ליצור את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt;. מצד שני, אקסיומת האינסוף שנותנת לי את &lt;span&gt;$latex \mathbb{N}$&lt;/span&gt; לא נותנת לי קבוצות אינסופיות אחרות. חסר לי משהו שיכול לייצר קבוצות אינסופיות “פשוטות יותר”. עכשיו, האינטואיציה שתנחה אותי היא שאם כבר הצלחתי לבנות קבוצה &lt;span&gt;$latex A$&lt;/span&gt; ולא נגרמו מכך פרדוקסים, אז גם לקחת תת-קבוצה של &lt;span&gt;$latex A$&lt;/span&gt; לא הולך ליצור לי פרדוקסים - כלומר, שהקושי שלי יהיה ליצור קבוצות “גדולות מדי” ולא בגזירה של קבוצות קטנות יותר מתוך הקיימות. זו האינטואיציה שמאחורי האקסיומה עם הניסוח הכי מתירני עד כה, שבאופן לא מדויק אפשר לתאר בתור “אם &lt;span&gt;$latex A$&lt;/span&gt; קיימת אז כל תת-קבוצה שלה &lt;strong&gt;שאני יודע לתאר&lt;/strong&gt; קיימת”. ה”שאני יודע לתאר” הוא מילת המפתח כאן; אני לא אוכל להסביר פורמלית מה זה אומר עד שנגיע לתורת הקבוצות האקסיומטית, אבל זה בהחלט לא מרשה לי &lt;strong&gt;כל דבר&lt;/strong&gt;.&lt;/p&gt;
 

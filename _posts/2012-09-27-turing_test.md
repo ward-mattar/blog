@@ -125,7 +125,7 @@ tags:
 <p>
 הבעיה בטיעון הזה, כרגיל, היא שגם מחשב שפועל על פי תוכנית מחשב מדוקדקת שהכתבנו לו עדיין עשוי לעשות דברים שכלל לא חשבנו שיעשה, ולגלות דברים שאנחנו לא העלינו בדעתנו. אומר טיורינג, באחד מהציטוטים האהובים עלי ביותר שנוגעים למדעי המחשב -
 </p>
-<blockquote style="text-align: left;">The view that machines cannot give rise to surprises is due, I believe, to a fallacy to which philosophers and mathematicians are particularly subject. This is the assumption that as soon as a fact is presented to a mind all consequences of that fact spring into the mind simultaneously with it. It is a very useful assumption under many circumstances, but one too easily forgets that it is false. A natural consequence of doing so is that one then assumes that there is no virtue in the mere working out of consequences from data and general principles.</blockquote>
+<blockquote style="text-align: left; direction:ltr;">The view that machines cannot give rise to surprises is due, I believe, to a fallacy to which philosophers and mathematicians are particularly subject. This is the assumption that as soon as a fact is presented to a mind all consequences of that fact spring into the mind simultaneously with it. It is a very useful assumption under many circumstances, but one too easily forgets that it is false. A natural consequence of doing so is that one then assumes that there is no virtue in the mere working out of consequences from data and general principles.</blockquote>
 <p>
 לי אישית קרה לא פעם ולא פעמיים שבמהלך בדיקה של דבר מה מתמטי כתבתי תוכנית מחשב פשוטה שתעזור לי בחיפושים, והיא מצאה דברים שאני בכלל לא העליתי בדעתי. וכאן מדובר על תוכניות מחשב אלמנטריות; תוכנית מחשב שתעבור את מבחן טיורינג תהיה כנראה מורכבת יותר בסדרי גודל רבים, ואני בספק אם היא תיכתב במלואה על ידי אדם.
 </p>
@@ -152,7 +152,7 @@ tags:
 <p>
 הטיעון של תפיסה על-חושית: כאן טיורינג הולך לכיוון הזוי למדי. אצטט את ההתחלה:
 </p>
-<blockquote style="text-align: left;">I assume that the reader is familiar with the idea of extrasensory perception, and the meaning of the four items of it, viz., telepathy, clairvoyance, precognition and psychokinesis. These disturbing phenomena seem to deny all our usual scientic ideas. How we should like to discredit them! Unfortunately the statistical evidence, at least for telepathy, is overwhelming
+<blockquote style="text-align: left; direction:ltr;">I assume that the reader is familiar with the idea of extrasensory perception, and the meaning of the four items of it, viz., telepathy, clairvoyance, precognition and psychokinesis. These disturbing phenomena seem to deny all our usual scientic ideas. How we should like to discredit them! Unfortunately the statistical evidence, at least for telepathy, is overwhelming
 </blockquote>
 <p>
 אין לי מושג על אילו ראיות סטטיסטיות טיורינג מדבר; למיטב ידיעתי, כל התופעות שהוא מדבר עליו מעולם לא הוכחו בצורה משכנעת דיו, ואת המתעניינים אפנה לבלוג "<a href="http://sharp-thinking.com/">חשיבה חדה</a>" שעוסק בדיוק בעניינים הללו. אפשר לסיים את הדיון כאן; עם זאת, אם אכן <strong>יש</strong> לאנשים יכולות טלפתיות זה ללא ספק יקשה על מחשב לעבור את המבחן גם אם הוא אכן חושב. מצד שני, למה שמחשב לא יהיה גם כן בעל יכולות טלפתיות? (וכמובן, לאסימוב יש סיפור <a href="http://en.wikipedia.org/wiki/Liar!">בדיוק על זה</a>).

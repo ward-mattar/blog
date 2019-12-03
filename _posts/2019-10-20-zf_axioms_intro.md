@@ -48,7 +48,25 @@ tags:
 
 האם האקסיומות שיש לנו יכולות לבנות את {% equation %}\mathbb{N}{% endequation %} בדרך קצת יותר חכמה? לא אוכיח את זה כרגע, אבל <strong>לא</strong>. אני חייב אקסיומה נוספת כדי לקבל את {% equation %}\mathbb{N}{% endequation %} עצמה. לעת עתה בואו פשוט נניח ש-{% equation %}\mathbb{N}{% endequation %} קיימת וזו תהיה האקסיומה שלנו - היא נקראת <strong>אקסיומת האינסוף</strong>, מכיוון שהיא מוכיחה את הקיום של קבוצה אינסופית. יש לה עוד ניסוחים שונים ומשונים בתורת הקבוצות האקסיומטית אבל המשמעות של כולן היא אותה משמעות.
 
-בואו נעשה סיכום ביניים של האקסיומות שיש לנו עד כה: <ol><li><strong>אקסיומת ההיקפיות</strong>: שתי קבוצות הן שוות אם הן בעלות אותם איברים: {% equation %}A=B{% endequation %} אם ורק אם {% equation %}a\in A\iff a\in B{% endequation %}.</li> <li><strong>אקסיומת הקבוצה הריקה</strong>: הקבוצה {% equation %}\emptyset{% endequation %} קיימת.</li> <li>אם האיבר {% equation %}a{% endequation %} קיים אז הקבוצה {% equation %}\left\{ a\right\} {% endequation %} קיימת.</li> <li>אם {% equation %}A,B{% endequation %} קיימות אז {% equation %}A\cup B{% endequation %} קיימת ו-{% equation %}A\cap B{% endequation %} קיימת.</li> <li><strong>אקסיומת האינסוף: </strong>{% equation %}\mathbb{N}{% endequation %} קיימת.</li> </ol> עכשיו שראינו אותן, אני רוצה לשנות את אקסיומות 3-4 כדי שיתאימו למה שיש בצרמלו-פרנקל. העניין הבסיסי שאני בא להתמודד איתו הוא שאני <strong>כן</strong> רוצה לדבר על איחודים אינסופיים. איחוד אינסופי הוא חלק מהותי מהמתמטיקה. אני לא יכול בלעדיו. אז נתחיל מלהגדיר אותו, אבל נגדיר אותו בצורה שבה אני עדיין יכול "לשלוט" על מה שקורה בו וזה לא מייצר לי קבוצות משוגעות.
+בואו נעשה סיכום ביניים של האקסיומות שיש לנו עד כה:
+
+<ol> <li><strong>אקסיומת ההיקפיות</strong>: שתי קבוצות הן שוות אם הן בעלות אותם איברים: {% equation %}A=B{% endequation %} אם ורק אם {% equation %}a\in A\iff a\in B{% endequation %}.</li>
+
+
+<li><strong>אקסיומת הקבוצה הריקה</strong>: הקבוצה {% equation %}\emptyset{% endequation %} קיימת.</li>
+
+
+<li>אם האיבר {% equation %}a{% endequation %} קיים אז הקבוצה {% equation %}\left\{ a\right\} {% endequation %} קיימת.</li>
+
+
+<li>אם {% equation %}A,B{% endequation %} קיימות אז {% equation %}A\cup B{% endequation %} קיימת ו-{% equation %}A\cap B{% endequation %} קיימת.</li>
+
+
+<li><strong>אקסיומת האינסוף: </strong>{% equation %}\mathbb{N}{% endequation %} קיימת.</li>
+
+</ol>
+
+עכשיו שראינו אותן, אני רוצה לשנות את אקסיומות 3-4 כדי שיתאימו למה שיש בצרמלו-פרנקל. העניין הבסיסי שאני בא להתמודד איתו הוא שאני <strong>כן</strong> רוצה לדבר על איחודים אינסופיים. איחוד אינסופי הוא חלק מהותי מהמתמטיקה. אני לא יכול בלעדיו. אז נתחיל מלהגדיר אותו, אבל נגדיר אותו בצורה שבה אני עדיין יכול "לשלוט" על מה שקורה בו וזה לא מייצר לי קבוצות משוגעות.
 
 בואו נניח ש-{% equation %}X{% endequation %} היא קבוצה שכל האיברים שלה הן קבוצות בעצמן - דבר כזה נקרא <strong>משפחה של קבוצות</strong>. אני אגדיר איחוד על כל האיברים של {% equation %}X{% endequation %}, ואסמן זאת {% equation %}\bigcup X{% endequation %}, באופן הבא: {% equation %}a{% endequation %} שייך ל-{% equation %}\bigcup X{% endequation %} אם <strong>קיימת</strong> קבוצה {% equation %}A\in X{% endequation %} כך ש-{% equation %}a\in A{% endequation %}. פורמלית, תוך שימוש בסימן {% equation %}\exists{% endequation %} שמתאר "קיים", אני מגדיר זאת כך:
 
@@ -66,7 +84,16 @@ tags:
 
 {% equation %}\bigcap X=\left\{ a\ |\ \forall A\in X:a\in A\right\} {% endequation %}
 
-ההגדרה היא סבבה וסימטרית להגדרה של {% equation %}\bigcup X{% endequation %} והכל, אבל עולות ממנה שתי שאלות: <ol><li>מה מבטיח לנו ש-{% equation %}\bigcap X{% endequation %} קיימת?</li> <li>למה דרשתי ש-{% equation %}X\ne\emptyset{% endequation %}?</li> </ol> בואו נענה על 1 קודם: שום דבר כרגע לא מבטיח לנו את זה. אנחנו צריכים עוד אקסיומה, שהיא הדבר החשוב ביותר שנדבר עליו בפוסט הזה. אחרי שנסיים איתה גם יהיה ברור יחסית למה {% equation %}X=\emptyset{% endequation %} הוא מקרה שאנחנו לא יכולים להרשות בשום פנים ואופן.
+ההגדרה היא סבבה וסימטרית להגדרה של {% equation %}\bigcup X{% endequation %} והכל, אבל עולות ממנה שתי שאלות:
+
+<ol> <li>מה מבטיח לנו ש-{% equation %}\bigcap X{% endequation %} קיימת?</li>
+
+
+<li>למה דרשתי ש-{% equation %}X\ne\emptyset{% endequation %}?</li>
+
+</ol>
+
+בואו נענה על 1 קודם: שום דבר כרגע לא מבטיח לנו את זה. אנחנו צריכים עוד אקסיומה, שהיא הדבר החשוב ביותר שנדבר עליו בפוסט הזה. אחרי שנסיים איתה גם יהיה ברור יחסית למה {% equation %}X=\emptyset{% endequation %} הוא מקרה שאנחנו לא יכולים להרשות בשום פנים ואופן.
 
 בואו נדבר לרגע על קבוצת <strong>המספרים הטבעיים הזוגיים</strong>, כלומר הקבוצה {% equation %}\left\{ 0,2,4,\dots\right\} {% endequation %}. זו ללא ספק קבוצה פשוטה וטבעית וכרגע אין לי מושג איך לבנות אותה. מכיוון שזו קבוצה אינסופית אני לא יכול ליצור אותה בעזרת אקסיומות הזיווג והאיחוד, בדיוק כפי שלא יכלתי ליצור את {% equation %}\mathbb{N}{% endequation %}. מצד שני, אקסיומת האינסוף שנותנת לי את {% equation %}\mathbb{N}{% endequation %} לא נותנת לי קבוצות אינסופיות אחרות. חסר לי משהו שיכול לייצר קבוצות אינסופיות "פשוטות יותר". עכשיו, האינטואיציה שתנחה אותי היא שאם כבר הצלחתי לבנות קבוצה {% equation %}A{% endequation %} ולא נגרמו מכך פרדוקסים, אז גם לקחת תת-קבוצה של {% equation %}A{% endequation %} לא הולך ליצור לי פרדוקסים - כלומר, שהקושי שלי יהיה ליצור קבוצות "גדולות מדי" ולא בגזירה של קבוצות קטנות יותר מתוך הקיימות. זו האינטואיציה שמאחורי האקסיומה עם הניסוח הכי מתירני עד כה, שבאופן לא מדויק אפשר לתאר בתור "אם {% equation %}A{% endequation %} קיימת אז כל תת-קבוצה שלה <strong>שאני יודע לתאר</strong> קיימת". ה"שאני יודע לתאר" הוא מילת המפתח כאן; אני לא אוכל להסביר פורמלית מה זה אומר עד שנגיע לתורת הקבוצות האקסיומטית, אבל זה בהחלט לא מרשה לי <strong>כל דבר</strong>.
 
@@ -97,7 +124,6 @@ tags:
 {% equation %}\mathcal{P}\left(A\right)\triangleq\left\{ B\ |\ B\subseteq A\right\} {% endequation %}
 
 לדוגמא, אם {% equation %}A=\left\{ 1,2\right\} {% endequation %} אז {% equation %}\mathcal{P}\left(A\right)=\left\{ \emptyset,\left\{ 1\right\} ,\left\{ 2\right\} ,\left\{ 1,2\right\} \right\} {% endequation %}. באופן כללי אם ב-{% equation %}A{% endequation %} יש {% equation %}n{% endequation %} איברים אז ב-{% equation %}\mathcal{P}\left(A\right){% endequation %} יש {% equation %}2^{n}{% endequation %} איברים (תרגיל בקומבינטוריקה - להסביר למה) ולכן אני לא אכתוב עוד דוגמאות מפורשות כי זו פשוט הרבה כתיבה. אנחנו הולכים להתעסק כל כך הרבה עם קבוצות חזקה בהמשך שאני לא רואה סיבה להרחיב עליהן יותר מדי כרגע, אז אני אקפוץ ישר לאקסיומה: <strong>אקסיומת קבוצת החזקה</strong> פשוט אומרת שאם {% equation %}A{% endequation %} קיימת את {% equation %}\mathcal{P}\left(A\right){% endequation %} קיימת. זה, יחד עם שאר האקסיומות שיש לנו כרגע, מאפשר לנו לבנות יקום מתמטי כביר בגודלו, אבל לפרטים של הבניה הזו אכנס רק בשלב מאוחר בהרבה.
-
 
 בואו נסכם את האקסיומות שראינו:
 
