@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>האם התגלתה שיטה חדשה לפתרון משוואה ריבועית? (לא) | לא מדויק</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="האם התגלתה שיטה חדשה לפתרון משוואה ריבועית? (לא)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="בלוג על מתמטיקה ומדעי המחשב" />
+<meta property="og:description" content="בלוג על מתמטיקה ומדעי המחשב" />
+<link rel="canonical" href="http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/" />
+<meta property="og:url" content="http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/" />
+<meta property="og:site_name" content="לא מדויק" />
+<meta property="og:image" content="http://gadial.net/assets/img/main/default-card.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="http://gadial.net/assets/img/main/default-card.png" />
+<meta property="twitter:title" content="האם התגלתה שיטה חדשה לפתרון משוואה ריבועית? (לא)" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"dateModified":"2019-12-11T00:00:00+00:00","datePublished":"2019-12-11T00:00:00+00:00","@type":"BlogPosting","image":"http://gadial.net/assets/img/main/default-card.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/"},"url":"http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/","description":"בלוג על מתמטיקה ומדעי המחשב","headline":"האם התגלתה שיטה חדשה לפתרון משוואה ריבועית? (לא)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"><link type="application/atom+xml" rel="alternate" href="http://gadial.net/feed.xml" title="לא מדויק" /><script>
+if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3924539-2', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+  
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$latex','$'] ],
+        processEscapes: true
+      },
+      TeX: {extensions: ["AMSmath.js","AMSsymbols.js"]},
+      "HTML-CSS": { 
+        linebreaks: { automatic: true }
+      },
+      SVG: { 
+        linebreaks: { automatic: true } 
+      }
+    });
+  </script>
+  <!-- "https://www.gadial.net/wp-includes/js/xypic.js" -->
+
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+<body><header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">לא מדויק</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/whats_going_on">מה הולך פה?</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">דף הבית</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/categories">קטגוריות</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/random">דף אקראי</a>
+            </li>
+            
+        
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">אודות</a>
+            </li>
+            
+        
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" action="/post_list/" method="get">
+        <input class="form-control mr-sm-2" type="text" placeholder="חיפוש" aria-label="חיפוש" name="s">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">חיפוש</button>
+      </form>
+    </div>
+  </nav>
+</header><main class="page-content" aria-label="Content" role="main">
+      <div class="wrapper text-right">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting"><div class="PageNavigation">
+    
+      <a class="prev" href="/2019/10/21/intro_to_relations/">&laquo; תורת הקבוצות - מבוא ליחסים</a>
+    
+    
+  </div><header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">האם התגלתה שיטה חדשה לפתרון משוואה ריבועית? (לא)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-11T00:00:00+00:00" itemprop="datePublished">Dec 11, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>אם יש לי מלבן ששטחו הוא 60 ואני יודע שאחת מצלעותיו ארוכה ב-7 מהשניה, מה אורך הצלעות של המלבן? בואו נפתח עם הבעיה הקונקרטית הזו. איך תלמידת תיכון תפתור אותה בימינו? ובכן, דרך אחת היא לסמן את אורך הצלע האחת של המלבן ב-<span>$latex x$</span> ואז אורך הצלע השניה הוא <span>$latex x+7$</span>, והמכפלה שלהם (שהיא שטח המלבן) מקיימת <span>$latex x\left(x+7\right)=60$</span>. אם נפתח סוגריים ונעביר אגפים נקבל את <strong>המשוואה הריבועית</strong> <span>$latex x^{2}+7x-60=0$</span>. בשלב הזה ייתכן שהתלמידה תשתמש בכלי העזר הבסיסי לפתרון משוואות ריבועיות שנלמד בתיכון: <strong>נוסחת השורשים</strong>.</p>
+
+<p>נוסחת השורשים אומרת דבר כזה: אם יש לנו את המשוואה <span>$latex Ax^{2}+Bx+C=0$</span>, אז הפתרונות שלה (אם קיימים) נתונים על ידי הנוסחה <span>$latex x_{1,2}=\frac{-B\pm\sqrt{B^{2}-4AC}}{2A}$</span>. כתבתי את הנוסחה הזו כרגע “מהראש” - אני זוכר אותה בעל פה עוד מימי התיכון. אחד מהדברים היחידים במתמטיקה שהבנתי על ידי שינון ותו לא. האם זה טוב, שאני זוכר ככה נוסחאות על ידי שינון? ובכן, לא לגמרי, ובזה יעסוק הפוסט.</p>
+
+<p>נוסחת השורשים פותרת את המשוואה הקונקרטית <span>$latex x^{2}+7x-60=0$</span> כך: <span>$latex A=1,B=7,C=-60$</span> ולכן</p>
+
+<p><span>$latex x_{1,2}=\frac{-7\pm\sqrt{49+240}}{2}=\frac{-7\pm\sqrt{289}}{2}$</span></p>
+
+<p>עכשיו, מה השורש של 289? קשה לי למצוא דבר כזה בלי מחשבון למרות שאפשר פשוט לנחש ערכים ולבדוק, אבל מחשבון יגיד לנו מייד שהתשובה היא 17. לכן <span>$latex x_{1,2}=\frac{-7\pm17}{2}$</span> ולכן שני הפתרונות האפשריים למשוואה הם <span>$latex x=5$</span> ו-<span>$latex x=-12$</span>; הפתרון השני לא יכול לתאר צלע של מלבן ולכן התשובה לשאלה המקורית היא שצלעות המלבן הם מהאורך 5 (זהו <span>$latex x$</span>) ו-12 (זוהי הצלע השניה שגדולה מ-<span>$latex x$</span> ב-7).</p>
+
+<p>אבל נשאלת השאלה - האם אין לתלמידה עוד דרכים לפתור את התרגיל הזה? מה אם היא לא זוכרת את נוסחת השורשים? ובכן, בוודאי <strong>שיש</strong>. כדי לראות מה עוד אפשר לעשות, אני רוצה להזכיר כאן משהו שידוע לגבי משוואות ריבועיות ונקרא <strong>נוסחאות וייטה</strong> (הוא נכון גם למשוואות יותר מסובכות אבל בהן לא נעסוק פה). כדי לנסח את נוסחאות וייטה בצורה פשוטה, נניח שהמשוואה שלנו היא מהצורה <span>$latex x^{2}+bx+c$</span> (כלומר, אני מניח ש-<span>$latex A=1$</span>; זה המצב במקרה שלנו ותמיד אפשר להעביר את המשוואה לצורה הזו על ידי חילוק ב-<span>$latex A$</span> אם הוא שונה מאפס). אם הפתרונות של המשוואה הריבועית <span>$latex x^{2}+bx+c$</span> הם <span>$latex s,t$</span> אז מתקיים ש-<span>$latex s+t=-b$</span> ו-<span>$latex st=c$</span>. במילים: <strong>מכפלת הפתרונות</strong> שווה למה שנקרא <strong>המקדם החופשי</strong> של הנוסחה, <span>$latex c$</span>, ואילו <strong>סכום הפתרונות</strong> שווה דווקא למינוס <span>$latex b$</span>.</p>
+
+<p>כדי לראות למה נוסחאות וייטה עובדות נשתמש בעובדה הבאה: אם <span>$latex s,t$</span> הם פתרונות המשוואה <span>$latex x^{2}+bx+c$</span> אז <span>$latex x^{2}+bx+c=\left(x-s\right)\left(x-t\right)$</span>. עכשיו צריך רק לפתוח את הסוגריים באגף ימין, להשוות מקדמים ולראות שזה עובד. איך זה עוזר לנו?</p>
+
+<p>ובכן, דרך אחת שבה זה עוזר לנו מכונה בבית הספר “טרינום” והיא אומרת - בואו פשוט ננסה <strong>לנחש</strong> מה הפתרונות, תוך הנחה שהם מספרים שלמים כי נתנו לנו תרגיל נחמד וכיפי. במקרה הנוכחי של <span>$latex x^{2}+7x-60$</span> המקדם החופשי הוא <span>$latex -60$</span>, כך שאם הפתרונות הם שלמים, הם צריכים להיות מספרים שמכפלתם היא מינוס שישים. למשל <span>$latex -4$</span> ו-<span>$latex 15$</span>, או <span>$latex 10$</span> ו-<span>$latex -6$</span> וכדומה. <strong>בנוסף לכך</strong> הסכום שלהם צריך להיות <span>$latex -7$</span>; בדרך הזו עם קצת ניחושים נגיע אל הפתרונות <span>$latex -12$</span> ו-<span>$latex 5$</span> שעונים לשתי הדרישות הללו.</p>
+
+<p>מצד שני, דרך של ניחושים שכזו יכולה להיות קצת מעצבנת, למרות שהיא מהירה למדי ואפשר לעשות את הניחושים בראש די בקלות (גם היום זו דרך מועדפת עלי לפתרון משוואות ריבועיות). אז הנה תעלול נחמד שמאפשר פתרון שיטתי יותר: אם <span>$latex s+t=-b$</span>, אז <strong>הממוצע</strong> של <span>$latex s,t$</span> הוא פשוט הדבר הזה לחלק ל-2, כלומר הממוצע הוא <span>$latex -\frac{b}{2}$</span>. הממוצע של שני מספרים הוא הנקודה שנמצאת בדיוק ביניהם, מה שאומר שאפשר לכתוב את שני הפתרונות בתור <span>$latex -\frac{b}{2}\pm z$</span> כאשר <span>$latex z$</span> הוא המרחק של הממוצע מהפתרונות. עכשיו האתגר שלי השתנה - למצוא את <span>$latex z$</span>.</p>
+
+<p>מה אני יודע על <span>$latex z$</span>? אני יודע שמכפלת הפתרונות היא <span>$latex c$</span>, ולכן <span>$latex \left(-\frac{b}{2}+z\right)\left(-\frac{b}{2}-z\right)=c$</span>. את המכפלה של הסוגריים הזו קל לפתוח - באופן כללי, <span>$latex \left(x+y\right)\left(x-y\right)=x^{2}-y^{2}$</span>. במקרה שלנו נקבל</p>
+
+<p><span>$latex \frac{b^{2}}{4}-z^{2}=c$</span></p>
+
+<p>עכשיו נעביר אגפים ונקבל <span>$latex z^{2}=\frac{b^{2}}{4}-c$</span>, כלומר <span>$latex z=\pm\sqrt{\frac{b^{2}}{4}-c}$</span>, ולכן הפתרונות למשוואה הם <span>$latex -\frac{b}{2}\pm\sqrt{\frac{b^{2}}{4}-c}$</span>. הדבר הזה הוא פשוט נוסחת השורשים בתחפושת - אם נעשה בתוך השורש מכנה משותף ונוציא את החלוקה ב-4 החוצה, נקבל בדיוק את נוסחת השורשים המקורית. במילים אחרות, כרגע הראינו דרך להגיע לנוסחת השורשים בעזרת התעלול הזה של כתיבת השורשים באמצעות המרחק מהממוצע.</p>
+
+<p>איך זה פותר את התרגיל הנוכחי שלנו? ובכן, אנחנו אומרים שהפתרונות שאנחנו מחפשים הם <span>$latex -\frac{7}{2}\pm z$</span>. נכפול אותם, נשווה למינוס 60 ונקבל <span>$latex \frac{49}{4}-z^{2}=-60$</span>. נעביר אגפים ונקבל <span>$latex \frac{49}{4}+60=z^{2}$</span>. נבצע את החיבור באגף שמאל ונקבל <span>$latex \frac{289}{4}$</span>, לזה נוציא שורש ונקבל <span>$latex \pm\frac{17}{2}$</span> ועכשיו הפתרונות הם <span>$latex -\frac{7}{2}\pm\frac{17}{2}$</span> שהופכים להיות <span>$latex -12,5$</span> המוכרים לנו.</p>
+
+<p>האם זה היה עדיף, לעשות את זה ככה? לגמרי עניין של טעם. מבחינה חישובית עשינו כמעט את אותם דברים; במקום להעלות בריבוע את <span>$latex b$</span> העלינו בריבוע את <span>$latex -\frac{b}{2}$</span> ובמקום להוציא שורש ל-<span>$latex b^{2}-4c$</span> הוצאנו שורש ל-<span>$latex \frac{b^{2}}{4}-c$</span>. לפעמים זה יוצא פשוט יותר, מספרית; לפעמים זה יוצא מסובך יותר.</p>
+
+<p>היתרון בשיטה הזו הוא שנחמד <strong>לזכור</strong> אותה: זוכרים את הרעיון של “ההפרש מהממוצע” ומזה אפשר כבר להתקדם. אם לא זוכרים בעל פה את נוסחת השורשים, זו בהחלט דרך אלטרנטיבית טובה ללכת בה. אם כן, האם מראים את זה בבית הספר? ובכן, אולי? בספרי הלימוד שבדקתי לא מזכירים את גישת “ההפרש מהממוצע”; מתארים את גישת הטרינום לפתרון משוואות ואת גישת ההשלמה לריבוע שתכף אדבר עליה ואת נוסחת השורשים שמתקבלת מהשלמה לריבוע; לא ראיתי שמציגים את הרעיון של מרחק מהממוצע.</p>
+
+<p>עד כאן המתמטיקה החדשה לפוסט הזה. עכשיו, למה בכלל דיברתי על זה? כי שיטת “המרחק מהממוצע” עלתה לתקשורת בימים האחרונים - ובאופן לא מפתיע, התקשורת עשתה אנדרלמוסיה מוחלטת מהסיפור והתעסקה בעיקר בלהציג 4,000 שנים של מתמטיקאים בתור אידיוטים שלא שמו לב לשיטה הזו מעולם. זה מזכיר לי מאוד את <a href="http://gadial.net/2017/08/29/plimpton_322/">המהומה סביב פלימפטון 322</a> שהייתה לפני שנתיים. אז הסיטואציה הוצגה בתור “הבבלים גילו שיטה גאונית לחישובים טריגונומטריים שיותר חכמה מכל דבר אחר שהומצא עד היום” והפעם זה מוצג בתור “אפילו הבבלים פספסו את השיטה הגאונית הזו לפתרון משוואה ריבועית שאף אחד לא גילה עד היום”.</p>
+
+<p>זה, כמובן, שגוי לגמרי.</p>
+
+<p>מאיפה המהומה הזו צצה בכלל? המקור למהומה הוא מתמטיקאי בשם Po-Shen Loh שניסה להנגיש מתמטיקה לתלמידי בית ספר ועלה על דרך ההצגה הזו, והתלהב ממנה מספיק כדי לכתוב עליה מאמר קטן שאותו העלה ל-arxiv (למעוניינים - arXiv:1910.06709, או פשוט דרך הלינק <a href="https://arxiv.org/pdf/1910.06709">הזה</a>). קראתי את המאמר - הוא די נלהב מדי לטעמי, אבל מקפיד לסייג את עצמו בכל הנוגע ל”חדשנות” של השיטה, אז אין לי רצון להתנצח איתו. הוא גם העלה <a href="https://www.youtube.com/watch?v=ZBalWWHYFQc">סרטון יוטיוב</a> בנושא שלא ראיתי אז בוודאי שאין לי כוונה להתנצח איתו. יותר מעניין לדבר על איך הדבר הזה מתווך לציבור הרחב דרך אתרי חדשות למיניהם. ההצגה המגוחכת ביותר וגם הנפוצה ביותר שראיתי הייתה זו של ה-MIT Technology Review, ולכן עליה אני אדבר. אפשר לראות אותה <a href="http://technologyreview.com/s/614775/a-new-way-to-make-quadratic-equations-easy/">כאן</a>.</p>
+
+<p>המאמר הזה מציג את הטריק ככזה ש”התעלמו ממנו 4,000 שנה” עד שהגיע Loh וגילה לנו את האור - זה בוודאי לא נכון, כי הטריק היה מוכר כבר קודם (גם בתגובות לסרטון שלו וגם <a href="https://twitter.com/PoShenLoh/status/1202765493192548352">בתגובות אליו בטוויטר</a> צצו אנשים שהכירו אותו - וגם אני, כאמור, נתקלתי בו ולא חושב שזכיתי להשכלה מיוחדת). זו שאלה מאוד מעניינת מתי בעצם התחילו לדבר במפורש על השיטה הזו. האם הבבלים, למשל, דיברו עליה? אני אחזור לשאלה הזו בסוף הפוסט כי לטעמי זה באמת הדבר הכי מעניין פה (התשובה: כן ולא, אבל בעיקר כן).</p>
+
+<p>המאמר של ה-Technology Review ממשיך לטענות הזויות עוד יותר, למשל שכדי להגיע לפתרון של משוואה ריבועית צריך טריק שנקרא “השלמה לריבוע” שהוא (לדבריהם) “מאוד לא אינטואיטיבי” ואכן “אחרי הבבלים לקח למתמטיקאים מאות שנים לעלות על ההוכחה”. זה מסוג הדברים שאומרים עליהם Not Even Wrong. כל המושג של “הוכחה” של “נוסחה לפתרון כללי” של משוואה ממעלה שניה לא היה רלוונטי לא לבבלים ולא לדורות רבים של מתמטיקאים שבאו אחריהם. במידה רבה הרעיון הזה של נוסחה כללית לפתרון של משוואה ממעלה שניה נולד רק עם הולדת האלגברה הסימבולית במאה ה-16, למרות שהתורה של פתרון משוואות כאלו הייתה מוכרת למתמטיקאים למשך כל התקופה עד אז.</p>
+
+<p>המאמר ממשיך לטעון ש<strong>כל</strong> דרך שהמתמטיקאים מצאו כדי להגיע אל הנוסחה היא “טריקית ולא אינטואיטיבית”. זו חלוקת ציונים שמאוד לא ברורה לי, וממש חבל שבכלל גולשים אליה. אני ממש לא אוהב את הרעיון של לחלק ציוני “אינטואיטיבי/לא אינטואיטיבי” לגישות שונות למתמטיקה (אם כי אני בטוח שאני חוטא בזה בעצמי לפעמים). ככל שיש יותר גישות, אנחנו מרוויחים; כל אחד ומה שעוזר לאינטואיציה האישית שלו. למה לרומם גישה אחת על ידי השפלת גישה אחרת?</p>
+
+<p>אחרי כל הדיון הזה, אולי אטרח לספר מה בעצם הגישה שרואים בבית הספר בימינו, גישת <strong>ההשלמה לריבוע</strong>? <a href="https://gadial.net/2008/01/26/solving_quadratic_equations/">יש לי פוסט על זה</a>, אבל למה לא לדבר על זה שוב. זוכרים שבגישה של המרחק מהממוצע התבססו על הנוסחה <span>$latex \left(x+y\right)\left(x-y\right)=x^{2}-y^{2}$</span>? אז בגישת ההשלמה לריבוע מסתמכים על הנוסחה <span>$latex \left(x+y\right)^{2}=\left(x+y\right)\left(x+y\right)=x^{2}+2xy+y^{2}$</span>. נניח שאנחנו רוצים לפתור את המשוואה <span>$latex x^{2}+bx+c=0$</span>, אז נכתוב לשניה <span>$latex \left(x+\frac{b}{2}\right)^{2}=x^{2}+bx+\frac{b^{2}}{4}$</span>. קיבלנו משהו שמאוד <strong>דומה</strong> למשוואה <span>$latex x^{2}+bx+c$</span> שאנחנו רוצים לפתור. אם נוסיף לביטוי <span>$latex x^{2}+bx+c$</span> את <span>$latex \frac{b^{2}}{4}$</span> ונחסר אותו, נקבל את הדבר הבא:</p>
+
+<p><span>$latex x^{2}+bx+c=x^{2}+bx+\frac{b^{2}}{4}+\left(c-\frac{b^{2}}{4}\right)=\left(x+\frac{b}{2}\right)^{2}+\left(c-\frac{b^{2}}{4}\right)$</span></p>
+
+<p>אם נשווה את זה לאפס ונעביר אגפים נקבל:</p>
+
+<p><span>$latex \left(x+\frac{b}{2}\right)^{2}=-\left(c-\frac{b^{2}}{4}\right)=\frac{b^{2}-4c}{4}$</span></p>
+
+<p>עכשיו נוציא שורש משני האגפים ונקבל</p>
+
+<p><span>$latex x+\frac{b}{2}=\pm\frac{\sqrt{b^{2}-4c}}{2}$</span></p>
+
+<p>נעביר את ה-<span>$latex \frac{b}{2}$</span> אגף ונקבל את הנוסחה המוכרת לנו:</p>
+
+<p><span>$latex x=\frac{-b\pm\sqrt{b^{2}-4c}}{2}$</span></p>
+
+<p>מכאן להגיע לפתרון של המשוואה הכללית <span>$latex Ax^{2}+Bx+C=0$</span> כאשר <span>$latex A\ne0$</span> זה קל: מחלקים ב-<span>$latex A$</span> ומקבלים את המשוואה <span>$latex x^{2}+\frac{B}{A}x+\frac{C}{A}$</span> ואז משתמשים בנוסחה שכבר מצאנו עם <span>$latex b=\frac{B}{A}$</span>, <span>$latex c=\frac{C}{A}$</span> ומגיעים לנוסחה הכללית שתיארתי קודם גם עבור המקרה הזה. צריך להעיר שגם בשיטת המרחק-מהממוצע, השיטה הוצגה במקרה שבו <span>$latex A=1$</span> והפתרון של המקרה הכללי מתבסס על אותו תעלול חלוקה.</p>
+
+<p>האם לדעתכם שיטת ההשלמה לריבוע אינה אינטואיטיבית? לי היא הייתה אינטואיטיבית בזכות ההיכרות שלי עם <span>$latex \left(x+y\right)^{2}=x^{2}+2xy+y^{2}$</span> והרצון “להתאים” את התבנית <span>$latex x^{2}+bx+c$</span> אליו. אבל זה בוודאי לא יהיה אינטואיבי לכולם; לכן יש כאן שאלה מצויינת בפדגוגיה מתמטית - איך כדאי להציג את השיטה, עם איזו הכנה מקדימה, אילו עוד גישות אחרות להראות וכדומה.</p>
+
+<p>דעתי האישית בנושא היא די פשוטה: הבעיה העיקרית בגישת המרחק-מהממוצע היא שקודם כל צריך להכיר את נוסחאות וייטה (כלומר, שסכום הפתרונות הוא <span>$latex -b$</span> ומכפלתם היא <span>$latex c$</span>). אם לא מכירים את נוסחאות וייטה, לכל הפחות צריך להכיר את הפירוק <span>$latex x^{2}+bx+c=\left(x-r\right)\left(x-s\right)$</span>. מאיפה תלמידי התיכון יכירו את הפירוק הזה, אם טרם למדו על הנוסחה הכללית לפתרון משוואה ריבועית? הרבה ספרים מראים קודם את העובדה שאם <strong>מצאנו</strong> פירוק מהצורה <span>$latex x^{2}+bx+c=\left(x-r\right)\left(x-s\right)$</span> למשוואה אז <span>$latex r,s$</span> הם פתרונות המשוואה - אבל כאן חסר את הכיוון השני, לפיו לכל משוואה יש פירוק כזה. במילים אחרות, גם בשיטה של המרחק מהממוצע יש הסתכמות על ידע כלשהו, והשאלה אם השיטה תהיה אינטואיטיבית או לא תלויה מאוד בשאלה כמה מהידע הזה כבר שקע. זו הסיבה שבגללה אם הייתי כותב עכשיו ספר, הייתי כנראה קודם כל מציג את שיטת ההשלמה לריבוע ורק אחר כך את שיטת המרחק מהממוצע.</p>
+
+<p>האם יש הבדל בין השיטות מבחינה “חישובית”? ובכן, בואו וננסה לפרק את השיטות לגורמים. מה אנחנו עושים, טכנית, בשיטת ההשלמה לריבוע?</p>
+
+<ol> <li>לוקחים את <span>$latex b$</span> ומחלקים ב-2 לקבלת <span>$latex \frac{b}{2}$</span>.</li>
+
+
+<li>מעלים את התוצאה בריבוע לקבלת <span>$latex \frac{b^{2}}{4}$</span>.</li>
+
+
+<li>מוסיפים ומחסרים את זה לביטוי שלנו.</li>
+
+
+<li>מעבירים אגף בביטוי שלנו.</li>
+
+
+<li>משתמשים בנוסחה <span>$latex x^{2}+2xy+y^{2}=\left(x+y\right)^{2}$</span> כדי לכווץ את אגף שמאל בביטוי שלנו.</li>
+
+
+<li>מחשבים את ההפרש <span>$latex \frac{b^{2}}{4}-c$</span>.</li>
+
+
+<li>מוציאים שורש להפרש הזה: <span>$latex \pm\sqrt{\frac{b^{2}}{4}-c}$</span></li>
+
+
+<li>מחסרים מההפרש את <span>$latex \frac{b}{2}$</span>: <span>$latex \pm\sqrt{\frac{b^{2}}{4}-c}-\frac{b}{2}$</span></li>
+
+</ol>
+
+<p>שלבים 3-5 בכל זה הם “קונספטואליים”; אנחנו לא באמת מבצעים בהם חישוב, אלא מניפולציות של משוואה. אם נתכנת עכשיו במחשב קוד שפותר את המשוואה, הם לא יתורגמו לשורות קוד אלא ל”הערות”.</p>
+
+<p>מה קורה בשיטת המרחק מהממוצע?</p>
+
+<ol> <li>לוקחים את <span>$latex b$</span>, כופלים במינוס 1 ומחלקים ב-<span>$latex 2$</span> לקבלת <span>$latex -\frac{b}{2}$</span>.</li>
+
+
+<li>מסתכלים על הביטויים <span>$latex -\frac{b}{2}\pm z$</span> וכופלים אותם זה בזה לקבלת <span>$latex c$</span> תוך שימוש בנוסחה <span>$latex \left(x+y\right)\left(x-y\right)=x^{2}-y^{2}$</span></li>
+
+
+<li>מחשבים את <span>$latex \left(-\frac{b}{2}\right)^{2}=\frac{b^{2}}{4}$</span>.</li>
+
+
+<li>מעבירים את <span>$latex z$</span> ואת <span>$latex c$</span> אגפים בביטוי שלנו.</li>
+
+
+<li>מחשבים את ההפרש <span>$latex \frac{b^{2}}{4}-c$</span>.</li>
+
+
+<li>מוציאים שורש להפרש הזה: <span>$latex \pm\sqrt{\frac{b^{2}}{4}-c}$</span></li>
+
+
+<li>מחסרים את <span>$latex \frac{b}{2}$</span> מההפרש: <span>$latex \pm\sqrt{\frac{b^{2}}{4}-c}-\frac{b}{2}$</span></li>
+
+</ol>
+
+<p>כלומר, מה שקורה בפועל הוא שהשלבים החישוביים הם זהים לגמרי - ההבדל היחיד בין השיטות הוא קונספטואלי - איך זוכרים את הטריק שמוביל אליהן. אני לא רוצה לזלזל בחשיבות של ההבדל הזה! רק להבהיר שמבחינה חישובים טהורה אלו שיטות <strong>שקולות</strong> לגמרי.</p>
+
+<p>זה מחזיר אותי אל הבבלים שהבטחתי קודם להגיע אליהם, ועכשיו אני יכול לגלות את הסוד הגדול: התרגיל הזה עם המלבן ששטחו 60? הוא לקוח הישר מהבבלים. ואיך שהם פותרים אותו <strong>זהה</strong> לשלבים החישוביים שכתבתי זה הרגע. אפילו דיברתי על זה פעם בבלוג, בפוסט על פלימפטון 322, אבל בואו נחזור לזה שוב.</p>
+
+<p>מה שאנחנו יודעים על המתמטיקה של הבבלים מגיע אלינו מלוחות חרס עם טקסטים בכתב יתדות שהצליחו לשרוד את פגעי הזמן ושודדי העתיקות. לוח אחד כזה מכונה בימינו YBC 6967 (ה-YBC פירושו “Yale Babylonian Collection” והמספר הוא פשוט המספר הסידורי של הלוח). הנה איור שמראה את הכיתוב על הלוח (משני צדדיו):</p>
+
+<p><img src="/assets/img/2019/12/ybc6967.png" alt="" /></p>
+
+<p>הלוח תורגם לראשונה בידי אוטו נויגבאואר ואברהם זקס בספרם שעסק ספציפית בטקסים מתמטיים בבליים - אותו ספר שבו צץ גם פלימפטון 322 המפורסם יותר (ובפוסט עליו הרחבתי על נויגבאואר וזקס).</p>
+
+<p>מה כתוב בלוח? אני כמובן לא יודע לקרוא את זה ולכן מסתמך על תרגום קיים שאביא פה ואחר כך אסביר מה הולך בו. כמה נקודות שכדאי לציין כבר עכשיו: ראשית, המספרים כתובים פה בשיטה הבבלית, של ספירה על בסיס 60. זה אומר שכשכתוב “1,0” הכוונה היא למספר 60 (פעם אחת 60 ועוד אפס פעמים 1), כשכתוב 30;3 הכוונה ל-<span>$latex 3.5$</span> (כי 30 הוא חצי מ-60) וכן הלאה. אם השיטה הזו מבלבלת אתכם פשוט תתעלמו; אני אשתמש במספרים “רגילים” בהמשך. שנית, בתרגום מופיעים הביטויים igum ו-igibum בתור המספרים שמנסים למצוא - מה שאצלנו היו אורכי הצלעות של המלבן. <strong>ייתכן</strong> שפירוש המילים הללו הו “הצלע הקצרה של המלבן” ו”הצלע הארוכה של המלבן”, אבל כנראה יש להן הקשר רחב יותר ומשמעויות נוספות (במקומות אחרים תרגמו את זה בתור “הופכיים” - כלומר, אלו שני מספרים שהופכיים זה לזה במובן זה שהכפולה שלהם היא חזקה של 60). כמו כן בסוגריים מרובעים מופיע טקסט שלא השתמר בלוח וזה הניחוש לגבי מה השחזור שלו אמור להיות. לבסוף, צריך לזכור שאצל הבבלים לא היו מספרים שליליים, ולכן כשהם מוציאים שורש למספר, מבחינתם יש לו רק שורש יחיד - החיובי.</p>
+
+<blockquote style="text-align: left; direction:ltr;">
+<p>
+[The igib]um exceeded the igum by 7. 
+</p>
+<p>
+What are [the igum and] the igibum? 
+</p>
+<p>
+As for you---halve 7, by which the igibum exceeded the igum, and (the result is) 3;30. 
+</p>
+<p>
+Multiply together 3;30 with 3;30, and (the result is) 12;15. 
+</p>
+<p>
+To 12;15, which resulted for you, 
+</p>
+<p>
+add [1,0, the produ]ct, and (the result is) 1,12;15. 
+</p>
+<p>
+What is [the square root of 1],12;15?
+</p>
+<p>
+(Answer:) 8;30. Lay down [8;30 and] 8;30, its equal, and then 
+</p>
+<p>
+Subtract 3;30, the item, from the one, 
+</p>
+<p>
+add (it) to the other. 
+</p>
+<p>
+One is 12, the other 5. 
+</p>
+<p>
+12 is the igibum, 5 the igum. 
+</p>
+</blockquote>
+
+<p>מה שיש לנו כאן הוא לימוד של שיטה כללית באמצעות פתרון של תרגיל ספציפי. ה-igum, יהיה אשר יהיה פירוש המילה הזו, הוא ה-<span>$latex x$</span> שאנחנו מחפשים; השורה הראשונה אומרת שה-igibum הוא <span>$latex x+7$</span>. השורה השניה מבקשת מאיתנו למצוא אותם - זו הגדרת התרגיל. מהשורה השלישית כבר מגיע הפתרון עצמו; בואו נכתוב אותו בלשון מודרנית. כזכור, בתרגיל הזה <span>$latex b=7$</span> ו-<span>$latex c=-60$</span>, אז אני אכתוב בסוגריים גם את התיאור-באמצעות-סימבולים של הדבר הקונקרטי שהלוח הבבלי עושה:</p>
+
+<ol> <li>(שורה שלישית) מחלקים את 7 ב-<span>$latex 2$</span> לקבלת <span>$latex 3.5$</span> (<span>$latex \frac{b}{2}$</span>) </li>
+
+
+<li>(שורה רביעית) מעלים את <span>$latex 3.5$</span> בריבוע לקבלת 12.25 (<span>$latex \frac{b^{2}}{4}$</span>)</li>
+
+
+<li>(שורות חמישית ושישית) לתוצאה 12.25 מחברים את 60 (<span>$latex \frac{b^{2}}{4}-c$</span>) ומקבלים <span>$latex 72.25$</span>.</li>
+
+
+<li>(שורות שביעית ושמינית) עכשיו מוציאים שורש ל-72.25 (בלי הסבר איך) ומקבלים 8.5 (<span>$latex \sqrt{\frac{b^{2}}{4}-c}$</span>)</li>
+
+
+<li>(שורות תשיעית ועשירית) מחסרים מהתוצאה הזו את <span>$latex 3.5$</span> שחישבנו קודם ומקבלים 5 (<span>$latex \sqrt{\frac{b^{2}}{4}-c}-\frac{b}{2}$</span>)</li>
+
+
+<li>(שורות אחד-עשר ושנים-עשר) מציגים את התוצאה: 5 ו-12.</li>
+
+</ol>
+
+<p>מה הולך פה? השלבים תואמים <strong>במדויק</strong> את החישוב של… של… של מה בעצם? של שיטת ההשלמה לריבוע, או של שיטת המרחק מהממוצע? התשובה היא, כמובן, שאת שניהם. <strong>מבחינה מתמטית כל השיטות הללו זהות</strong>. הטקסט הבבלי לא נותן לנו רמזים לגבי <strong>איך</strong> הגיעו לעשות את החישובים הללו - הוא מציג רק את האלגוריתם עצמו, בלי ה”הערות בקוד”. מה שאפשר לעשות הוא רק להעלות השערות ולבסס אותן על דברים אחרים שידועים על הבבלים והמתמטיקה הבבלית ולא נמצאים בתוך הלוח הזה עצמו. ההיסטוריון של המתמטיקה Jens Høyrup הציע פרשות אחת כזו שהיא נחמדה מאוד והצגתי אותה כבר פעמיים בבלוג - בפוסט על המשוואה הריבועית ובפוסט על פלימפטון 322, אבל למה לא פעם שלישית. הנה התמונה שבה השתמשתי בעבר:</p>
+
+<p><img src="/assets/img/2019/12/completion_to_square.png" alt="" /></p>
+
+<p>מה הולך פה? באיור הזה סימנתי את המלבן המדובר, ששטחו 60, בתור <span>$latex A$</span>. את אורכי הצלעות סימנתי ב-<span>$latex x,y$</span>. זה אומר ש-<span>$latex y-x$</span> הוא ה-<span>$latex b$</span> שלנו: ההפרש בין אורכי הצלעות. עכשיו, הרעיון הוא שהשיטה עובדת כך: את <span>$latex A$</span> חותכים לשני חלקים - אחד הוא ריבוע שאורך צלעו <span>$latex x$</span> ומסומן <span>$latex B$</span>, והשני הוא מלבן שמסומן <span>$latex C$</span> שאורך צלעו האחת הוא <span>$latex x$</span> ואורך צלעו השניה הוא “מה שנשאר” אחרי שחתכנו מהצלע הארוכה חתיכה באורך <span>$latex x$</span> - כלומר, נשאר <span>$latex b$</span>. סכום השטחים של שני המרובעים הללו הוא עדיין 60.</p>
+
+<p>עכשיו מגיע הטריק: לוקחים את <span>$latex C$</span> וחוצים אותו לשני חצאים, ואת אחד מהחצאים מדביקים על החלק התחתון של <span>$latex B$</span>. קיבלנו שהוא משהו שהוא “כמעט ריבוע” חדש, וכדי לקבל ריבוע אנחנו <strong>משלימים אותו לריבוע</strong> על ידי הוספת ריבוע קטן יותר, <span>$latex D$</span>.</p>
+
+<p>אם זו אכן הטכניקה שהבבלים נקטו בה (ואין לדעת) אז שיטת הפתרון באמת צצה מאליה באופן טבעי לגמרי. לוקחים את ההפרש, <span>$latex b=7$</span> ומחלקים אותו ב-2 - זה בדיוק שלב הפירוק של <span>$latex C$</span> לשני החלקים שלה. עכשיו מחשבים את השטח של <span>$latex D$</span>, שהוא מה שנוסיף לצורה שלנו כדי להשלים אותה לריבוע - השטח הזה הוא בדיוק <span>$latex \frac{b}{2}$</span> בריבוע, כי אורך צלעו הוא <span>$latex \frac{b}{2}$</span>. עכשיו מוסיפים לשטח של <span>$latex D$</span> את השטח של <span>$latex A$</span> המקורי - כלומר 60, והתוצאה היא השטח של הריבוע “הגדול”. עכשיו מוציאים שורש כדי לגלות את אורך צלע הריבוע הגדול - ומכיוון שאורך הצלע הזו הוא בדיוק <span>$latex x+\frac{b}{2}$</span>, נשאר לחסר <span>$latex \frac{b}{2}$</span> מהתוצאה וסיימנו.</p>
+
+<p>אני לא יודע אם הבבלים אכן חשבו על זה בצורה הזו, אבל אני יודע ש<strong>בסטנדרטים של היום</strong> התיאור הזה הוא יפהפה ואינטואיטיבי ולי הוא בהחלט עזר להפיל אסימון לגבי שיטת ההשלמה לריבוע - עכשיו אנחנו רואים <strong>בדיוק</strong> למה להוסיף <span>$latex \left(\frac{b}{2}\right)^{2}$</span> ורואים בעיניים איך זה “משלים לריבוע” משהו. אני בהחלט חושב שזה משהו שיכול להיות נחמד מאוד אם יופיע בכל ספרי הלימוד, ולא רק ההסבר “האלגברי”.</p>
+
+<p>ואיך ההסבר הגאומטרי הזה משתלב עם שיטת “המרחק מהממוצע”? ובכן, נתחיל מכך שבשיטת “המרחק מהממוצע” אנחנו מסתכלים כאן על המקרה שבו הממוצע <strong>שלילי</strong>, כי <span>$latex b$</span> אצלנו חיובי והממוצע הוא <span>$latex -\frac{b}{2}$</span>. הבבלים, כזכור, לא מתעניינים בפתרון השלילי בכלל אלא רק בחיובי, אבל זה לא אומר שהפתרון השלילי לא נוכח בתמונה: סימנתי בתור <span>$latex y$</span> את אורך הצלע הארוכה יותר; לא קשה להשתכנע שבמקרה הזה <span>$latex -y$</span> הוא הפתרון השלילי של המשוואה <span>$latex x^{2}+bx+c$</span> (כי <span>$latex x\cdot y=-c=60$</span> במקרה שלנו ו-<span>$latex b=y-x$</span> ולכן <span>$latex -b=x+\left(-y\right)$</span>). אז “הממוצע של הפתרונות” הוא במקרה הזה מינוס אורך הצלעות של ה-<span>$latex C$</span>-ים אחרי הפיצול, ומה שקראנו לו <span>$latex z$</span> - “המרחק מהממוצע” הוא במקרה הנוכחי אורך צלע הריבוע הגדול שצריך להוסיף לממוצע כדי לקבל את <span>$latex x$</span>. האינטואיציה של שיטת ממוצע הפתרונות נשמרת, לטעמי, בפתרון הגאומטרי - “שוברים” את המלבן <span>$latex y-x$</span> לשני חלקים שווי גודל; אם לוקחים את התוצאה ומחסירים ממנה את החלק שעוד מחובר אליה מקבלים את הצלע הקטנה יותר, ואם מוסיפים לה את מה שהסרנו ממנה מקבלים את אורך הצלע השניה.</p>
+
+<p>האם זה אומר שהבבלים “ידעו” את השיטה הזו? אני מקווה שבשלב הזה ברור למה השאלה הזו היא קצת חסרת משמעות. הבבלים לא ניסו לפתור משוואה ממעלה שניה; הם ניסו לפתור בעיה של מציאת צלעות של מלבן. מושג כמו “משוואה ממעלה שניה” היה זר להם; מושג כמו פתרונות שליליים של משוואה ממעלה שניה היה זר להם. לקח למתמטיקה זמן להתחיל להסתכל על השאלות הללו כך ולנסות לפתור אותן - וזה אנכרוניזם לנסות לחשוב על כך בצורה אחרת, ובטח שזה אנכרוניזם לומר ש-4,000 שנה אף אחד לא שם לב למשהו שנמצא מתחת לאף.</p>
+
+<p>מצד שני, הטכניקות שעליהן מדובר פה? אנחנו רואים כאן היטב שהבבלים שלטו בהן, וקרוב לודאי שהייתה להם אינטואיציה טובה לגביהן בדיוק כמונו. את <strong>האלגוריתם החישובי</strong> שהשיטות האלגבריות שלנו מציעות הם בוודאי ידעו בצורה מדויקת לגמרי. כל מה שנשאר הוא ה”הערות בקוד” - וכאן הבבלים עוזרים לנו עם הגישה הגאומטרית בדיוק כפי שאנחנו אולי היינו יכולים לעזור להם עם הגישה האלגברית. ככה זה: מרבה שיטות, מרבה אינטואיציות, מרבה שמחה.</p>
+
+  </div>
+
+  <hr />
+  <p>
+    נהניתם? התעניינתם? אם תרצו, אתם מוזמנים לתת טיפ:
+  </p>
+  <a href='https://ko-fi.com/H2H5XFBQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a><div class="PageNavigation">
+    
+      <a class="prev" href="/2019/10/21/intro_to_relations/">&laquo; תורת הקבוצות - מבוא ליחסים</a>
+    
+    
+  </div><div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/';
+      this.page.identifier = 'http://gadial.net/2019/12/11/new_quadratic_formula_proof_not/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://not-precise.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><a class="u-url" href="/2019/12/11/new_quadratic_formula_proof_not/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">לא מדויק</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">לא מדויק</li><li><a class="u-email" href="mailto:gadial@gmail.com">gadial@gmail.com</a></li><li>&copy; כל הזכויות שמורות לגדי אלכסנדרוביץ'</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.facebook.com/%D7%9C%D7%90-%D7%9E%D7%93%D7%95%D7%99%D7%A7-163347110378474"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#facebook"></use></svg> <span class="username">לא מדויק</span></a></li><li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg> <span>RSS</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>בלוג על מתמטיקה ומדעי המחשב</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-slim.min.js"><\/script>')</script><script src="/assets/js/bootstrap.bundle.js"></script><!-- Default Statcounter code for New blog
+http://www.gadial.net/ -->
+<script type="text/javascript">
+  var sc_project=5444342; 
+  var sc_invisible=1; 
+  var sc_security="4a89cbe4"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics"
+  href="https://statcounter.com/" target="_blank"><img
+  class="statcounter"
+  src="https://c.statcounter.com/5444342/0/4a89cbe4/1/"
+  alt="Web Analytics"></a></div></noscript>
+  <!-- End of Statcounter Code --></body>
+
+</html>
