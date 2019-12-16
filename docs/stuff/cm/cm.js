@@ -284,8 +284,10 @@ function parseInput() {
 
 
     if (count) {
-	dijit.byId("bottomLeft").addChild(new dijit.layout.ContentPane({title:"אפשרויות", href:"options.html", id:"options"}));
-	dijit.byId("bottomLeft").addChild(new dijit.layout.ContentPane({title:"גרפים", href:"graphs.html", id:"charts", /*onShow:function(){setTimeout("makeCharts()", 300);}*/}));
+    new dijit.layout.ContentPane({title:"אפשרויות", href:"options.html", id:"options"}).placeAt("bottomLeftOptions").startup();
+    new dijit.layout.ContentPane({title:"גרפים", href:"graphs.html", id:"charts", /*onShow:function(){setTimeout("makeCharts()", 300);}*/}).placeAt("bottomLeftGraphs").startup();;
+	//dijit.byId("bottomLeft").addChild(new dijit.layout.ContentPane({title:"אפשרויות", href:"options.html", id:"options"}));
+	//dijit.byId("bottomLeft").addChild(new dijit.layout.ContentPane({title:"גרפים", href:"graphs.html", id:"charts", /*onShow:function(){setTimeout("makeCharts()", 300);}*/}));
         createSum();
         sumTotal();
         displayHint();
@@ -298,9 +300,10 @@ function parseInput() {
 function createSum() {
     var div=dojo.doc.createElement('div');
     div.innerHTML=/* Totals */'<span style="display:table; margin: 0 auto;" class="totals"><ul class="TotalTitle"><li>ממוצע כללי</li><li>סה"כ נקודות</li></ul><ul class="Total"><li id="TotalAvarage">1</li><li id="TotalPoints">1</li></ul></span>';
-    dijit.byId("content").domNode.appendChild(div);
-    Panel = new dijit.layout.ContentPane({region:'top', id: 'topLeft'}, div);
-    dijit.byId("content").addChild(Panel);
+    content.appendChild(div);
+    //dijit.byId("content").domNode.appendChild(div);
+    new dijit.layout.ContentPane({region:'top', id: 'topLeft'}, div).placeAt("contentPanel").startup();;
+    //dijit.byId("content").addChild(Panel);
 }
 
 
